@@ -213,23 +213,37 @@
     .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
     .cols { row-gap:16px; }
 
-    .tile { flex:1 1 45% !important; }
-    .tiles { row-gap:8px; }
+    .tiles { flex-wrap:wrap !important; row-gap:8px; }
+    .tile { flex:1 1 45% !important; min-width:0 !important; }
 
     div[style*="flex:1 1 44%"] { flex:1 1 100% !important; }
     div[style*="flex:1 1 30%"] { flex:1 1 45% !important; }
 
-    table.t, table.fit, table.peer {
-      display:block !important; overflow-x:auto !important; -webkit-overflow-scrolling:touch;
-      white-space:nowrap; max-width:100%;
+    table.t:not(.prose), table.fit, table.peer {
+      display:table !important; width:100% !important; table-layout:fixed !important;
+      white-space:normal !important; overflow-x:visible !important; max-width:100%;
     }
-    table.t tr, table.fit tr, table.peer tr { display:table-row; }
-    table.prose { display:table !important; white-space:normal !important; overflow-x:visible !important; table-layout:fixed !important; }
-    table.prose td { white-space:normal !important; word-wrap:break-word; }
-    table.prose td[style*="width:90px"] { width:70px !important; }
+    table.t:not(.prose) td, table.t:not(.prose) th,
+    table.fit td, table.fit th,
+    table.peer td, table.peer th { white-space:normal !important; word-wrap:break-word; padding:4px 3px !important; font-size:9.6px !important; }
+    table.peer td:first-child, table.peer th:first-child { width:26% !important; }
+    table.prose { display:block !important; }
+    table.prose tr:first-child { display:none !important; }
+    table.prose tr { display:block !important; padding:10px 0 !important; border-bottom:1px solid #e4e8ef; }
+    table.prose tr:last-child { border-bottom:none !important; }
+    table.prose td { display:inline !important; padding:0 !important; border:none !important; text-align:left !important; white-space:normal !important; width:auto !important; word-wrap:break-word; }
+    table.prose td:first-child { font-weight:900; font-size:13px; color:#1a2a4a; }
+    table.prose td:nth-child(2) { margin-left:8px; }
+    table.prose td:nth-child(3) { display:block !important; margin-top:6px; font-size:12.5px; line-height:1.55; color:#2a3342; }
 
-    .krow { flex-wrap:wrap; }
-    .krow .kval { text-align:right; }
+    .metric-strip { flex-wrap:wrap !important; }
+    .metric-strip > div { flex:1 1 50% !important; box-sizing:border-box; border-bottom:1px solid #e7ebf1 !important; }
+    .metric-strip > div:nth-child(even) { border-right:none !important; }
+
+    .krow { flex-wrap:wrap; align-items:flex-start !important; }
+    .krow .klab { flex:1 1 auto !important; }
+    .krow .kval { display:contents !important; }
+    .krow .kval small { flex:1 1 100% !important; order:3; display:block !important; text-align:left !important; margin-top:3px !important; }
 
     h1 { font-size:21px !important; }
     .price { font-size:22px !important; }
@@ -239,8 +253,6 @@
   }
 
   @media (max-width: 480px) {
-    .tile { flex:1 1 100% !important; }
-    div[style*="flex:1 1 45%"] { flex:1 1 100% !important; }
   }
 </style>
 </head>
@@ -275,7 +287,7 @@
       <div style="flex:1.5">
         <div class="microhead">What They Do</div>
         <p>CFF Fluid Control Limited (CIN U28990MH2012PLC227023), headquartered and manufacturing out of Khopoli, Raigad (Maharashtra), designs and builds <b>fluid, mechanical, hydraulic, sonar and electronic systems for Indian Navy submarines and warships</b>. Its model &#8212; the company calls it "Indigineering" &#8212; is to take Transfer-of-Technology (ToT) from foreign naval OEMs and manufacture the resulting systems to spec inside India. The product range spans sonar (VDS/LFVDS, ACTAS active towed array sonar), buoyant wire antennas, high-pressure air and hydraulic power systems, submarine air-conditioning, weapon-handling gear, steering systems, infrared-suppression technology, and valves/hull-penetrators/pressure-reducer valves fitted to Scorpene-class (P-75) submarines.</p>
-        <p style="margin-top:7px">FY26 revenue was <b>&#8377;208.74 Cr (+43.4% YoY)</b> and PAT was <b>&#8377;39.20 Cr (+64.4% YoY, 18.78% margin)</b> &#8212; the fourth consecutive year of accelerating growth on a ~70% five-year sales CAGR. A second, higher-value manufacturing facility (~1,950 sq.m) is being developed at Chakan Industrial Area, Pune, aimed at electronics/sonar work, alongside the existing ~6,000 sq.m Khopoli plant.</p>
+        <p style="margin-top:7px">FY26 revenue was <b>&#8377;209 Cr (+43.4% YoY)</b> and PAT was <b>&#8377;39.20 Cr (+64.4% YoY, 18.78% margin)</b> &#8212; the fourth consecutive year of accelerating growth on a ~70% five-year sales CAGR. A second, higher-value manufacturing facility (~1,950 sq.m) is being developed at Chakan Industrial Area, Pune, aimed at electronics/sonar work, alongside the existing ~6,000 sq.m Khopoli plant.</p>
         <div class="notebox blue" style="margin-top:10px"><b>Key Competitive Advantage:</b> Multi-year Navy/shipyard qualification and type-approval cycles create a genuine re-qualification barrier &#8212; CFF is already an embedded, qualified vendor across the MDL, GRSE and Cochin Shipyard supply chains, with a 15 Jul 2025 strategic MoU with GRSE to jointly develop subsea sonar systems and a &#8377;267.60 Cr Cochin Shipyard LOI for LFVDS units. That sunk relationship capital, not any consumer brand or patent, is the moat.</div>
       </div>
       <div style="flex:0.95">
@@ -318,7 +330,7 @@
 
   <div class="sec">
     <div class="sec-title" id="sec03"><span class="num">03</span><h2>Event Read-Through &amp; Way Forward (24 Aug 2026)</h2></div>
-    <div style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px">
+    <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px">
       <div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Fresh MDL Order</div><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;27.85 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Announced 13 Aug 2026</div></div>
       <div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Delivery</div><div style="font-size:18px;font-weight:900;color:#1a2a4a">Aug 2027</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">12-month execution window</div></div>
       <div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Move, 13 Aug</div><div style="font-size:18px;font-weight:900;color:#2e7d32">+1.9% to +4.8%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Range across intraday sources</div></div>
@@ -433,7 +445,7 @@
         <div class="microhead" style="margin-top:0">&#9733; FY26 (Mar'26) &#183; Results approved 5 May 2026</div>
         <div style="border:2px solid #2e7d32;border-radius:8px;padding:8px 14px;background:linear-gradient(135deg,#eaf7ea,#f6fff4 60%,#eefaf0);box-shadow:0 2px 8px rgba(46,125,50,0.12);flex:1">
           <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
-            <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;208.74 Cr</div><div style="font-size:10.5px;color:#5a6475">Revenue &nbsp;<b class="pos">+43.4% YoY</b></div></div>
+            <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;209 Cr</div><div style="font-size:10.5px;color:#5a6475">Revenue &nbsp;<b class="pos">+43.4% YoY</b></div></div>
             <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;59 Cr</div><div style="font-size:10.5px;color:#5a6475">Op. Profit &nbsp;<b class="pos">~+44% YoY</b></div></div>
             <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#2e7d32">28.2%</div><div style="font-size:10.5px;color:#5a6475">OPM &nbsp;roughly flat YoY</div></div>
             <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;39.20 Cr</div><div style="font-size:10.5px;color:#5a6475">PAT &nbsp;<b class="pos">+64.4% YoY</b></div></div>
@@ -466,18 +478,17 @@
           <tr><td>FY23</td><td>71</td><td>18</td><td>26%</td><td>~13</td><td>10</td><td>7.10</td></tr>
           <tr><td>FY24</td><td>107</td><td>31</td><td>29%</td><td>~23</td><td>17</td><td>8.78</td></tr>
           <tr><td>FY25</td><td>146</td><td>41</td><td>28%</td><td>~32</td><td>24</td><td>12.25</td></tr>
-          <tr><td><b>FY26</b></td><td><b>208.74</b></td><td><b>59</b></td><td><b class="pos">28%</b></td><td><b class="pos">52.0</b></td><td><b class="pos">39.20</b></td><td><b class="pos">18.69</b></td></tr>
+          <tr><td><b>FY26</b></td><td><b>209</b></td><td><b>59</b></td><td><b class="pos">28%</b></td><td><b class="pos">52.0</b></td><td><b class="pos">39.20</b></td><td><b class="pos">18.69</b></td></tr>
         </table>
         <div class="chartcap" style="margin-top:4px">PBT for FY22&#8211;FY25 is <b>not separately disclosed</b> in the sources reviewed and is modeled here (~) assuming the same ~25% effective tax rate confirmed for FY26 (&#8377;52.0 Cr PBT &#8594; &#8377;39.20 Cr PAT). FY22 EPS is not available pre-listing capital structure and is left blank rather than estimated.</div>
         <div class="microhead" style="margin-top:9px">Half-Yearly Trend &#8212; Screener publishes H1/H2, not quarterly, for CFF</div>
         <table class="t fit">
           <tr><th>Period</th><th>Revenue</th><th>Op Profit</th><th>OPM%</th><th>PBT</th><th>Net Profit</th><th>EPS (&#8377;)</th></tr>
-          <tr><td>H1 FY25 (Sep'24)</td><td>80</td><td>23</td><td>29%</td><td>n/d</td><td>14</td><td>n/d</td></tr>
           <tr><td>H2 FY25 (Mar'25)</td><td>66</td><td>18</td><td>27%</td><td>n/d</td><td>10</td><td>n/d</td></tr>
-          <tr><td>H1 FY26 (Sep'25)</td><td>104.13</td><td>29</td><td>28%</td><td>n/d</td><td>19.13</td><td>n/d</td></tr>
+          <tr><td>H1 FY26 (Sep'25)</td><td>104</td><td>29</td><td>28%</td><td>n/d</td><td>19.13</td><td>n/d</td></tr>
           <tr><td><b>H2 FY26 (Mar'26)</b></td><td><b>105</b></td><td><b>30</b></td><td><b class="pos">28.5%</b></td><td>n/d</td><td><b>20</b></td><td>n/d</td></tr>
         </table>
-        <div class="chartcap" style="margin-top:4px">n/d = not separately disclosed for the half. H1+H2 sums (209.13 revenue, 39.13 PAT) are close to, but not identical to, the company's reported full-year FY26 figures (208.74 / 39.20) &#8212; the small gap reflects rounding/aggregation across sources and is left visible rather than force-reconciled.</div>
+        <div class="chartcap" style="margin-top:4px">n/d = not separately disclosed for the half. H1+H2 revenue sums to &#8377;209 Cr, matching the reported FY26 figure. PAT sums to &#8377;39.13 Cr, close to but not identical to the reported &#8377;39.20 Cr &#8212; the small PAT gap reflects rounding/aggregation across sources and is left visible rather than force-reconciled.</div>
       </div>
       <div style="flex:0 0 calc(50% - 7px);min-width:0">
         <div class="microhead">Revenue (bars) with YoY Growth % (line) &#8212; 5 Years</div>
@@ -548,7 +559,7 @@
     <table class="t">
       <tr><th style="text-align:left">Period / Snapshot</th><th style="text-align:left">Order Book (&#8377; Cr)</th><th style="text-align:left">Revenue Delivered (FY, &#8377; Cr)</th><th>Coverage (Book &#247; TTM Revenue)</th></tr>
       <tr><td style="text-align:left">Sep/Dec 2024 (older snapshot)</td><td style="text-align:left">~&#8377;551 Cr</td><td style="text-align:left">FY25: &#8377;146 Cr</td><td><span class="badge b-neut">~3.8x</span></td></tr>
-      <tr><td style="text-align:left">May 2025 (latest confirmed)</td><td style="text-align:left">~&#8377;514 Cr</td><td style="text-align:left">FY26: &#8377;208.74 Cr</td><td><span class="badge b-neut">~2.5x</span></td></tr>
+      <tr><td style="text-align:left">May 2025 (latest confirmed)</td><td style="text-align:left">~&#8377;514 Cr</td><td style="text-align:left">FY26: &#8377;209 Cr</td><td><span class="badge b-neut">~2.5x</span></td></tr>
       <tr><td style="text-align:left">Aug 2026 (fresh orders only, not a book total)</td><td style="text-align:left">+&#8377;27.85 Cr (MDL) since 13 Aug</td><td style="text-align:left">n/a &#8212; in progress</td><td><span class="badge b-warn">No updated total available</span></td></tr>
     </table>
     <div class="notebox red" style="margin-top:10px"><b>&#9888; Discrepancy flagged, not resolved:</b> the commonly-cited "&#8377;551 Cr" order-book figure is actually <b>older</b> (Sep/Dec 2024) than the &#8377;514 Cr figure (May 2025) that is the more recent confirmed number &#8212; i.e. the book <i>declined</i> between these two snapshots even as revenue grew, consistent with backlog converting into delivered revenue, but no fresher total order-book figure (post-Aug 2026 orders) was found to confirm the trend continued. Both numbers are shown rather than silently picking one.</div>
@@ -654,11 +665,11 @@
         <div style="font-size:11px;color:#5a6475;margin:2px 0 8px">Out of 99 &#8212; <b class="pos">GREAT / Top decile</b></div>
         <p style="font-size:11.5px">MarketSmith's O'Neil methodology scores Price Strength on the same 1&#8211;99 scale as a conventional Relative Strength Rating, so the 91 reading here is that number. The stock trades <b>~7% above its 50-day</b> and <b>~41% above its 200-day moving average</b>, and the on-chart annotation shows roughly <b>+20% over the prior ~245 trading days</b> &#8212; a leader profile, not a laggard being dragged up by the sector.</p>
         <div class="notebox blue" style="margin-top:10px"><b>Synthesis:</b> Master Score <b>B</b>. MarketSmith's own summary text (24 Aug 2026 snapshot, price &#8377;1,028.85, +4.76% intraday) reads: EPS strength GREAT, Price strength GREAT, Buyer demand GREAT, but <b>Group Rank POOR</b> &#8212; CFF is outperforming as an individual name inside a defense-electronics peer group MarketSmith itself ranks weakly (93rd percentile, i.e. poor), which is consistent with this report's Section 14 finding that CFF has no clean direct listed peer.</div>
-        <div class="chartcap" style="margin-top:8px"><b>&#9888; Revenue-figure discrepancy flagged:</b> the MarketSmith snapshot cites "operating revenue of &#8377;395.63 Cr on a trailing 12-month basis," which does not match this report's FY26 (Mar'26) revenue of &#8377;208.74 Cr used throughout. The gap likely reflects a different TTM window, a different revenue definition (e.g. gross vs. net of other income), or a data-vendor lag/error &#8212; it is not reconciled here and both figures are shown rather than one being silently discarded. Other MarketSmith summary figures (annual revenue growth ~43%, pre-tax margin ~25%, ROE ~14%, debt/equity ~1%) are directionally consistent with, though not numerically identical to, this report's Section 08/09 figures (43.4% revenue growth, PBT/PAT-derived ~24.6% effective tax rate, ROE 19.0%, D/E ~0.07&#8211;0.08x) &#8212; small vendor-to-vendor variance is expected and is not treated as an error requiring resolution.</div>
+        <div class="chartcap" style="margin-top:8px"><b>&#9888; Revenue-figure discrepancy flagged:</b> the MarketSmith snapshot cites "operating revenue of &#8377;395.63 Cr on a trailing 12-month basis," which does not match this report's FY26 (Mar'26) revenue of &#8377;209 Cr used throughout. The gap likely reflects a different TTM window, a different revenue definition (e.g. gross vs. net of other income), or a data-vendor lag/error &#8212; it is not reconciled here and both figures are shown rather than one being silently discarded. Other MarketSmith summary figures (annual revenue growth ~43%, pre-tax margin ~25%, ROE ~14%, debt/equity ~1%) are directionally consistent with, though not numerically identical to, this report's Section 08/09 figures (43.4% revenue growth, PBT/PAT-derived ~24.6% effective tax rate, ROE 19.0%, D/E ~0.07&#8211;0.08x) &#8212; small vendor-to-vendor variance is expected and is not treated as an error requiring resolution.</div>
       </div>
       <div style="flex:0 0 calc(50% - 10px);min-width:0">
         <div class="microhead">William O'Neil Score Breakdown</div>
-        <div style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc)">
+        <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc)">
           <div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">EPS Strength</div><div style="font-size:21px;font-weight:900;color:#2e7d32">96</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">GREAT</div></div>
           <div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Price Strength</div><div style="font-size:21px;font-weight:900;color:#2e7d32">91</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">GREAT</div></div>
           <div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Buyer Demand</div><div style="font-size:21px;font-weight:900;color:#2e7d32">A-</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">GREAT</div></div>
