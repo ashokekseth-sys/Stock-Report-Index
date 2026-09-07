@@ -111,27 +111,31 @@
 
   /* one column grid shared by the header row and every data row */
   .head,.row{display:grid;
-    grid-template-columns:96px minmax(0,1fr) 76px 104px 14px;
-    align-items:center;gap:11px;}
+    grid-template-columns:34px minmax(0,1fr) 58px 104px 14px;
+    align-items:center;gap:12px;}
 
   .head{padding:0 13px 7px;border-bottom:1px solid var(--hair);margin-bottom:8px;}
   .head span{font-size:9.5px;font-weight:700;letter-spacing:.11em;
     text-transform:uppercase;color:var(--muted);}
   .head .r{text-align:right;}
+  .head i{font-style:normal;}
+  .head .sm{display:none;}
 
   .row{background:var(--surface);border:1px solid var(--hair);
     border-left:3px solid var(--gold-bright);border-radius:9px;padding:11px 13px;
     text-decoration:none;color:inherit;box-shadow:var(--shadow);}
   .row.arch{border-left-color:#9aa7bd;}
   a.row:hover{border-color:var(--gold);}
-  .tick{font-size:10px;font-weight:700;letter-spacing:.05em;background:var(--surface-2);
-    border:1px solid var(--hair);border-radius:5px;padding:4px 6px;color:var(--muted);
-    white-space:nowrap;min-width:86px;text-align:center;}
   .name{min-width:0;}
   .name b{display:block;font-weight:600;font-size:15px;color:var(--ink-strong);
     overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   .col{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;
     text-align:right;white-space:nowrap;}
+  /* left gutter: reserved always, filled only while a report is <3 days old */
+  .flag{min-width:0;}
+  .flag b{display:inline-block;font-size:8px;font-weight:700;letter-spacing:.07em;
+    text-transform:uppercase;background:#f0b429;color:#3d2c00;
+    padding:2px 4px;border-radius:3px;line-height:1.15;}
 
   .go{font-size:16px;color:var(--muted);}
   a.row:hover .go{color:var(--gold);}
@@ -146,14 +150,20 @@
   footer a{color:var(--gold);}
 
   @media (max-width:620px){
-    .head{display:none;}
-    .row{grid-template-columns:1fr auto;gap:2px 10px;}
-    .tick{grid-column:1;grid-row:1;justify-self:start;min-width:0;}
-    .go,.pdfonly{grid-column:2;grid-row:1;justify-self:end;}
-    .name{grid-column:1 / -1;grid-row:2;}
-    .col{grid-row:3;text-align:left;font-size:11.5px;}
-    .col.ver{grid-column:1;}
-    .col.date{grid-column:2;justify-self:end;}
+    .head{padding:0 11px 6px;}
+    .head span{font-size:8.5px;letter-spacing:.08em;white-space:nowrap;}
+    .head .lg{display:none;} .head .sm{display:inline;}
+    .head,.row{grid-template-columns:28px minmax(0,1fr) 40px 80px 10px;gap:7px;}
+    .row{padding:11px 11px;}
+    .name b{font-size:14px;}
+    .col{font-size:11.5px;}
+    .go{font-size:14px;}
+    .pdfonly{font-size:8.5px;letter-spacing:.04em;}
+  }
+  @media (max-width:360px){
+    .head,.row{grid-template-columns:26px minmax(0,1fr) 36px 72px 8px;gap:5px;}
+    .name b{font-size:13px;}
+    .col{font-size:10.5px;}
   }
   @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
 </style>
@@ -189,7 +199,7 @@
       <h2>Published reports</h2><span class="n">15</span>
       <p>Full HTML reports. Tap to open.</p>
     </div>
-    <div class="head" aria-hidden="true"><span>Ticker</span><span>Name</span><span class="r">Version No</span><span class="r">Date</span><span></span></div>
+    <div class="head" aria-hidden="true"><span></span><span>Name</span><span class="r"><i class="lg">Version No</i><i class="sm">Ver</i></span><span class="r">Date</span><span></span></div>
     <div class="list" id="live"></div>
   </section>
 
@@ -198,7 +208,7 @@
       <h2>Archive</h2><span class="n">17</span>
       <p>Earlier reports held as PDFs only. Not yet republished in this format.</p>
     </div>
-    <div class="head" aria-hidden="true"><span>Ticker</span><span>Name</span><span class="r">Version No</span><span class="r">Date</span><span></span></div>
+    <div class="head" aria-hidden="true"><span></span><span>Name</span><span class="r"><i class="lg">Version No</i><i class="sm">Ver</i></span><span class="r">Date</span><span></span></div>
     <div class="list" id="archive"></div>
   </section>
 
@@ -211,23 +221,23 @@
 </div>
 
 <script>
-// [ticker, company, report date, report version, filename]
+// [ticker, title, report date, report version, filename, last-updated ISO date]
 var LIVE = [
-  ["PINELABS","Pine Labs Limited","7 Sep 2026","1.0","PINELABS_Equity_Report.html"],
-  ["KSHINTL","KSH International Limited","6 Sep 2026","1.0","KSHINTL_Equity_Report.html"],
-  ["PTCIL","PTC Industries Limited","30 Aug 2026","1.0","PTCIL_Equity_Report.html"],
-  ["CFF","CFF Fluid Control Limited","24 Aug 2026","1.0","CFF_Equity_Report.html"],
-  ["YASHHV","Yash Highvoltage Limited","20 Aug 2026","1.0","YASHHV_Equity_Report.html"],
-  ["VESUVIUS","Vesuvius India Limited","18 Aug 2026","1.0","VESUVIUS_Equity_Report.html"],
-  ["BALUFORGE","Balu Forge Industries Limited","18 Aug 2026","1.0","BALUFORGE_Equity_Report.html"],
-  ["MAXGROW","Maxgrow India Limited","18 Aug 2026","1.1","MAXGROW_Equity_Report.html"],
-  ["PREMEXPLN","Premier Explosives Limited","15 Aug 2026","1.0","PREMEXPLN_Equity_Report.html"],
-  ["VAML","Vedanta Aluminium Metal Limited","10 Aug 2026","1.0","VAML_Equity_Report.html"],
-  ["SHRIRAMFIN","Shriram Finance Limited","6 Aug 2026","1.0","SHRIRAMFIN_Equity_Report.html"],
-  ["AZAD","Azad Engineering Limited","4 Aug 2026","1.1","AZAD_Equity_Report.html"],
-  ["PRIVISCL","Privi Speciality Chemicals Limited","1 Aug 2026","1.0","PRIVISCL_Equity_Report.html"],
-  ["POWERINDIA","Hitachi Energy India Limited","30 Jul 2026","1.0","POWERINDIA_Equity_Report.html"],
-  ["MTARTECH","MTAR Technologies Limited","29 Jul 2026","1.0","MTAR_Equity_Report.html"]
+  ["PINELABS","Pine Labs Limited","7 Sep 2026","1.0","PINELABS_Equity_Report.html","2026-09-07"],
+  ["KSHINTL","KSH International Limited","6 Sep 2026","1.0","KSHINTL_Equity_Report.html","2026-09-06"],
+  ["PTCIL","PTC Industries Limited","30 Aug 2026","1.0","PTCIL_Equity_Report.html","2026-08-30"],
+  ["CFF","CFF Fluid Control Limited","24 Aug 2026","1.0","CFF_Equity_Report.html","2026-08-24"],
+  ["YASHHV","Yash Highvoltage Limited","20 Aug 2026","1.0","YASHHV_Equity_Report.html","2026-08-20"],
+  ["VESUVIUS","Vesuvius India Limited","18 Aug 2026","1.0","VESUVIUS_Equity_Report.html","2026-08-18"],
+  ["BALUFORGE","Balu Forge Industries Limited","18 Aug 2026","1.0","BALUFORGE_Equity_Report.html","2026-08-18"],
+  ["MAXGROW","Maxgrow India Limited","18 Aug 2026","1.1","MAXGROW_Equity_Report.html","2026-09-07"],
+  ["PREMEXPLN","Premier Explosives Limited","15 Aug 2026","1.0","PREMEXPLN_Equity_Report.html","2026-08-15"],
+  ["VAML","Vedanta Aluminium Metal Limited","10 Aug 2026","1.0","VAML_Equity_Report.html","2026-08-10"],
+  ["SHRIRAMFIN","Shriram Finance Limited","6 Aug 2026","1.0","SHRIRAMFIN_Equity_Report.html","2026-08-06"],
+  ["AZAD","Azad Engineering Limited","4 Aug 2026","1.1","AZAD_Equity_Report.html","2026-09-07"],
+  ["PRIVISCL","Privi Speciality Chemicals Limited","1 Aug 2026","1.0","PRIVISCL_Equity_Report.html","2026-08-01"],
+  ["POWERINDIA","Hitachi Energy India Limited","30 Jul 2026","1.0","POWERINDIA_Equity_Report.html","2026-07-30"],
+  ["MTARTECH","MTAR Technologies Limited","29 Jul 2026","1.0","MTAR_Equity_Report.html","2026-07-29"]
 ];
 
 var ARCHIVE = [
@@ -250,6 +260,17 @@ var ARCHIVE = [
   ["AEROFLEX","Aeroflex Industries","24 May 2026"]
 ];
 
+// A report shows the yellow NEW flag for 3 days after its last update.
+// Computed at page load, so it clears itself without any edit here.
+var NEW_DAYS = 3;
+function isRecent(iso){
+  if (!iso) return false;
+  var t = Date.parse(iso + "T00:00:00");
+  if (isNaN(t)) return false;
+  var age = Date.now() - t;
+  return age >= 0 && age < NEW_DAYS * 86400000;
+}
+
 function el(tag, cls){ var e=document.createElement(tag); if(cls) e.className=cls; return e; }
 
 function liveRow(r){
@@ -257,13 +278,13 @@ function liveRow(r){
   a.href = r[4];
   a.dataset.s = (r[0]+" "+r[1]).toLowerCase();
   a.innerHTML =
-    '<span class="tick"></span>' +
+    '<span class="flag"></span>' +
     '<span class="name"><b></b></span>' +
     '<span class="col ver"></span>' +
     '<span class="col date"></span>' +
     '<span class="go" aria-hidden="true">&rsaquo;</span>';
-  a.querySelector(".tick").textContent = r[0];
-  a.querySelector("b").textContent = r[1];
+  if (isRecent(r[5])) a.querySelector(".flag").innerHTML = '<b>New</b>';
+  a.querySelector(".name b").textContent = r[1];
   a.querySelector(".ver").textContent = "v" + r[3];
   a.querySelector(".date").textContent = r[2];
   return a;
@@ -273,13 +294,12 @@ function archiveRow(r){
   var d = el("div","row arch");
   d.dataset.s = (r[0]+" "+r[1]).toLowerCase();
   d.innerHTML =
-    '<span class="tick"></span>' +
+    '<span class="flag"></span>' +
     '<span class="name"><b></b></span>' +
     '<span class="col ver">&mdash;</span>' +
     '<span class="col date"></span>' +
     '<span class="pdfonly">PDF</span>';
-  d.querySelector(".tick").textContent = r[0];
-  d.querySelector("b").textContent = r[1];
+  d.querySelector(".name b").textContent = r[1];
   d.querySelector(".date").textContent = r[2];
   return d;
 }
