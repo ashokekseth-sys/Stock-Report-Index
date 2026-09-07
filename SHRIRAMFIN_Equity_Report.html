@@ -1,3 +1,4 @@
+<!-- REPORT VERSION: v1.0 (7 Sep 2026) | TEMPLATE: v1.1 | structural pass 7 Sep 2026 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,6 +55,9 @@
   .tile .note { font-size:10.3px; color:#5a6475; line-height:1.35; }
   /* callout notes */
   .notebox { border-left:4px solid #f9a825; background:#fffbe8; padding:9px 13px; font-size:11.8px; margin-top:11px; border-radius:0 5px 5px 0; }
+  .moat-boost .klab { font-size:11.3px !important; }
+  .moat-boost .kval { font-size:14.5px !important; }
+  .moat-boost .notebox { font-size:13.8px !important; }
   .notebox.green { border-left-color:#2e7d32; background:#f0f7f0; }
   .notebox.red { border-left-color:#c62828; background:#fdf0f0; }
   .notebox.blue { border-left-color:#1565c0; background:#eef4fc; }
@@ -243,9 +247,9 @@
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-start;
     text-align:center;
-    padding:20px 60px 40px 60px;
+    padding:36px 60px 40px 60px;
   }
   .logo-wrap{
     width:260px;
@@ -253,7 +257,7 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    margin-bottom:34px;
+    margin-bottom:44px;
   }
   .logo-wrap img{
     max-width:100%;
@@ -296,13 +300,15 @@
     letter-spacing:0.3px;
   }
   .ticker-row{
-    margin-top:10px;
-    display:flex;
-    gap:14px;
-    align-items:center;
-    justify-content:center;
-    flex-wrap:wrap;
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 14px;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
   }
+  .ticker-chip{ text-align:center; }
   .ticker-chip{
     font-size:13px;
     font-weight:600;
@@ -314,14 +320,14 @@
     padding:6px 14px;
   }
   .sector-line{
-    margin-top:18px;
+    margin-top:28px;
     font-size:14px;
     color:var(--muted);
     letter-spacing:0.3px;
     font-style:italic;
   }
   .meta-block{
-    margin-top:46px;
+    margin-top:64px;
     display:flex;
     gap:70px;
     justify-content:center;
@@ -371,6 +377,10 @@
   @media (max-width: 860px) {
     .footer { padding:14px 20px !important; text-align:left !important; }
     .footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .main { padding-top:14px !important; padding-bottom:14px !important; }
+    .logo-wrap { margin-bottom:20px !important; }
+    .meta-block { margin-top:30px !important; }
   }
   .bottom-band{
     height:8px;
@@ -382,10 +392,7 @@
   <div class="cover-page">
   <div class="top-band"></div>
 
-  <div class="brand-bar">
-    <div class="doc-type">Equity Research</div>
-    <div class="doc-date">Confidential — For Educational Use</div>
-  </div>
+  <div class="brand-bar"></div>
 
   <div class="main">
     <div class="logo-wrap">
@@ -405,19 +412,14 @@
     </div>
     <div class="sector-line">India's Largest Retail-Asset NBFC — Vehicle, Gold, MSME &amp; Personal Finance</div>
 
-    <div class="meta-block">
-      <div class="meta-item">
-        <div class="meta-label">Generated On</div>
-        <div class="meta-value">06 August 2026</div>
-      </div>
-      <div class="meta-item">
-        <div class="meta-label">Report Type</div>
-        <div class="meta-value">Technical + Fundamental</div>
-      </div>
+    <div class="meta-block" style="display:block">
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
+      <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">06 August 2026</span>
     </div>
   </div>
 
   <div class="footer">
+    <p style="margin-bottom:4px;letter-spacing:0.5px;text-transform:uppercase;font-size:9.5px;color:#8a94a6">Confidential — For Educational Use</p>
     <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
   </div>
 
@@ -453,32 +455,31 @@
   <div class="sec">
     <div class="sec-title" id="sec01"><span class="num">01</span><h2>Company Overview</h2></div>
     <div class="cols">
-      <div style="flex:1.5">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
         <div class="microhead">What They Do</div>
         <p>Shriram Finance is India's <b>largest retail-asset NBFC</b>, formed from the December 2022 merger of Shriram Transport Finance and Shriram City Union Finance. Its four-decade legacy core is <b>pre-owned commercial vehicle financing</b> — lending to self-employed truckers and small fleet owners banks won't touch — where it holds roughly a quarter of the organized used-truck market. Post-merger it has diversified into passenger vehicles, two-wheelers, gold loans, personal loans, MSME and farm/construction equipment finance, all delivered through a relationship-driven, feet-on-the-street model across <b>3,225 branches</b> serving <b>10.3 million customers</b> — 77.3% of them first-time formal-credit borrowers.</p>
         <p style="margin-top:7px">Consolidated AUM reached <b>&#8377;3.14 lakh Cr in Q1 FY27 (+15.3% YoY)</b>, with PAT of <b>&#8377;3,453 Cr (+60% YoY)</b> on NIM that has climbed from 8.11% to <b>9.04%</b> over the past year. The single biggest change to the story in 2026: <b>MUFG Bank bought a fresh 20% stake for &#8377;39,618 Cr</b> in April, pushing capital adequacy to 34.17% and triggering AAA/Stable rating upgrades from CRISIL, ICRA and India Ratings.</p>
         <div class="notebox blue" style="margin-top:10px"><b>Key Competitive Advantage:</b> A four-decade relationship-lending franchise to India's self-employed, rural and semi-urban borrowers — first-time truckers, small fleet owners, MSMEs — that mainstream banks structurally can't underwrite profitably. The branch network (3,225, largest in the space) and field-collection infrastructure are the real moat; historically the cost-of-funds disadvantage this created is now closing fast on the back of the MUFG capital infusion and AAA re-rating.</div>
       </div>
-      <div style="flex:1">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
         <div class="microhead">AUM Mix (Q1 FY27)</div>
         <div class="donut-desktop" style="display:flex;align-items:flex-start;gap:20px">
-  <div style="width:190px;height:190px;border-radius:50%;flex:0 0 auto;background:conic-gradient(#1a2a4a 0% 46%, #2e7d32 46% 67%, #e67e22 67% 81%, #6a4c93 81% 86%, #1565c0 86% 91%, #c62828 91% 95%, #8a94a6 95% 97%, #f0b429 97% 99%);position:relative">
-    <div style="position:absolute;inset:32px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center">
-      <div><div style="font-size:17px;font-weight:900;color:#1a2a4a">&#8377;3.14L Cr</div><div style="font-size:8px;letter-spacing:0.5px;color:#8a94a6">CONSOL. AUM</div></div>
+  <div style="width:247px;height:247px;border-radius:50%;flex:0 0 auto;background:conic-gradient(#1a2a4a 0% 46%, #2e7d32 46% 67%, #e67e22 67% 81%, #6a4c93 81% 86%, #1565c0 86% 91%, #c62828 91% 95%, #8a94a6 95% 97%, #f0b429 97% 99%);position:relative">
+    <div style="position:absolute;inset:42px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center">
+      <div><div style="font-size:21px;font-weight:900;color:#1a2a4a">&#8377;3.14L Cr</div><div style="font-size:9px;letter-spacing:0.5px;color:#8a94a6">CONSOL. AUM</div></div>
     </div>
   </div>
-  <div style="flex:1;min-width:0;display:grid;grid-template-columns:1fr 1fr;gap:0 14px">
-<div style="margin-bottom:8px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#1a2a4a;flex:0 0 auto"></span><span style="font-size:10.5px;font-weight:700;color:#2a3342">Commercial Vehicles</span></div><div style="font-size:8.6px;color:#8a94a6;margin-left:16px">46% — used-CV leadership, 4-decade legacy</div></div>
-<div style="margin-bottom:8px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#2e7d32;flex:0 0 auto"></span><span style="font-size:10.5px;font-weight:700;color:#2a3342">Passenger Vehicles</span></div><div style="font-size:8.6px;color:#8a94a6;margin-left:16px">21% — new + used PV financing</div></div>
-<div style="margin-bottom:8px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#e67e22;flex:0 0 auto"></span><span style="font-size:10.5px;font-weight:700;color:#2a3342">MSME Loans</span></div><div style="font-size:8.6px;color:#8a94a6;margin-left:16px">14% — small-business working capital</div></div>
-<div style="margin-bottom:8px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#6a4c93;flex:0 0 auto"></span><span style="font-size:10.5px;font-weight:700;color:#2a3342">Construction Equip.</span></div><div style="font-size:8.6px;color:#8a94a6;margin-left:16px">5% — CE financing</div></div>
-<div style="margin-bottom:8px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#1565c0;flex:0 0 auto"></span><span style="font-size:10.5px;font-weight:700;color:#2a3342">Two-Wheeler Loans</span></div><div style="font-size:8.6px;color:#8a94a6;margin-left:16px">5% — 2W retail financing</div></div>
-<div style="margin-bottom:8px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#c62828;flex:0 0 auto"></span><span style="font-size:10.5px;font-weight:700;color:#2a3342">Personal Loans</span></div><div style="font-size:8.6px;color:#8a94a6;margin-left:16px">4% — unsecured retail</div></div>
-<div style="margin-bottom:8px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#8a94a6;flex:0 0 auto"></span><span style="font-size:10.5px;font-weight:700;color:#2a3342">Farm Equipment</span></div><div style="font-size:8.6px;color:#8a94a6;margin-left:16px">2% — tractor/farm-equipment finance</div></div>
-<div style="margin-bottom:8px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#f0b429;flex:0 0 auto"></span><span style="font-size:10.5px;font-weight:700;color:#2a3342">Gold Loans</span></div><div style="font-size:8.6px;color:#8a94a6;margin-left:16px">2% — targeting ~5% share in 3 yrs</div></div>
+  <div style="flex:1;min-width:0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 10px">
+<div style="margin-bottom:10px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#1a2a4a;flex:0 0 auto"></span><span style="font-size:10px;font-weight:700;color:#2a3342">Commercial Vehicles</span></div><div style="font-size:8.3px;color:#8a94a6;margin-left:16px">46% — used-CV leadership, 4-decade legacy</div></div>
+<div style="margin-bottom:10px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#2e7d32;flex:0 0 auto"></span><span style="font-size:10px;font-weight:700;color:#2a3342">Passenger Vehicles</span></div><div style="font-size:8.3px;color:#8a94a6;margin-left:16px">21% — new + used PV financing</div></div>
+<div style="margin-bottom:10px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#e67e22;flex:0 0 auto"></span><span style="font-size:10px;font-weight:700;color:#2a3342">MSME Loans</span></div><div style="font-size:8.3px;color:#8a94a6;margin-left:16px">14% — small-business working capital</div></div>
+<div style="margin-bottom:10px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#6a4c93;flex:0 0 auto"></span><span style="font-size:10px;font-weight:700;color:#2a3342">Construction Equip.</span></div><div style="font-size:8.3px;color:#8a94a6;margin-left:16px">5% — CE financing</div></div>
+<div style="margin-bottom:10px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#1565c0;flex:0 0 auto"></span><span style="font-size:10px;font-weight:700;color:#2a3342">Two-Wheeler Loans</span></div><div style="font-size:8.3px;color:#8a94a6;margin-left:16px">5% — 2W retail financing</div></div>
+<div style="margin-bottom:10px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#c62828;flex:0 0 auto"></span><span style="font-size:10px;font-weight:700;color:#2a3342">Personal Loans</span></div><div style="font-size:8.3px;color:#8a94a6;margin-left:16px">4% — unsecured retail</div></div>
+<div style="margin-bottom:10px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#8a94a6;flex:0 0 auto"></span><span style="font-size:10px;font-weight:700;color:#2a3342">Farm Equipment</span></div><div style="font-size:8.3px;color:#8a94a6;margin-left:16px">2% — tractor/farm-equipment finance</div></div>
+<div style="margin-bottom:10px;min-width:0"><div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#f0b429;flex:0 0 auto"></span><span style="font-size:10px;font-weight:700;color:#2a3342">Gold Loans</span></div><div style="font-size:8.3px;color:#8a94a6;margin-left:16px">2% — targeting ~5% share in 3 yrs</div></div>
   </div>
 </div>
-<div class="chartcap" style="margin-top:4px">AUM +15.3% YoY &#183; 3,225 branches &#183; 10.3M customers</div>
         <div class="donut-mobile" style="display:none;align-items:flex-start;gap:12px">
   <div style="width:150px;height:150px;border-radius:50%;flex:0 0 auto;background:conic-gradient(#1a2a4a 0% 46%, #2e7d32 46% 67%, #e67e22 67% 81%, #6a4c93 81% 86%, #1565c0 86% 91%, #c62828 91% 95%, #8a94a6 95% 97%, #f0b429 97% 99%);position:relative">
     <div style="position:absolute;inset:24px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center">
@@ -496,14 +497,13 @@
 <div style="display:flex;align-items:center;gap:5px;margin-bottom:5px;min-width:0"><span style="width:8px;height:8px;border-radius:2px;background:#f0b429;flex:0 0 auto"></span><span style="font-size:8.3px;min-width:0"><b>Gold Loans</b> <span style="color:#8a94a6">2%</span></span></div>
   </div>
 </div>
-  </div>
-      <div style="flex:1.05">
 
-<div class="microhead">Product-Mix Diversification Away From Used-CV</div>
+<div class="microhead" style="margin-top:14px">Product-Mix Diversification Away From Used-CV</div>
 <div style="border:1px solid #dde2ea;border-radius:6px;padding:11px 14px;background:#f8f9fb">
   <div style="font-size:15px;font-weight:900;color:#1a2a4a">Rated 3 / 5
     <span style="letter-spacing:2px;color:#2e7d32;font-size:13px">&#9632;&#9632;&#9632;</span><span style="letter-spacing:2px;color:#cdd5e0;font-size:13px">&#9632;&#9632;</span></div>
-  <p style="font-size:11px;margin-top:5px">Genuine, ongoing diversification: commercial vehicles have fallen from a near-total share of the book (pre-2022) to <b>46% of AUM</b>, with passenger vehicles now 21%, MSME 14%, and gold loans — management's newest growth lever — targeted to roughly double from 2% to ~5% of AUM within three years.</p>
+  <div style="font-size:9px;color:#8a94a6;margin-top:4px">AUM +15.3% YoY &#183; 3,225 branches &#183; 10.3M customers</div>
+  <p style="font-size:11px;margin-top:7px">Genuine, ongoing diversification: commercial vehicles have fallen from a near-total share of the book (pre-2022) to <b>46% of AUM</b>, with passenger vehicles now 21%, MSME 14%, and gold loans — management's newest growth lever — targeted to roughly double from 2% to ~5% of AUM within three years.</p>
   <p style="font-size:11px;margin-top:5px"><b>Why not higher:</b> management is separately signalling a strategic pivot toward <b>new</b>-vehicle financing (per a Jan 2026 Business Standard report) to redraw the FY27 mix further — a genuine strategic shift, but one that could dilute the very used-CV underwriting expertise that is Shriram's core differentiation if execution lags peers like Cholamandalam.</p>
 </div>
       </div>
@@ -526,7 +526,7 @@
   <!-- ================= 03 MOAT | 04 SENTIMENT SIDE-BY-SIDE ================= -->
   <div class="sec">
     <div class="cols">
-      <div style="flex:1">
+      <div style="flex:1" class="moat-boost">
         <div class="sec-title" id="sec03"><span class="num">03</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
         <div class="krow"><span class="klab">Brand Strength</span><span class="kval" style="color:#2e7d32">STRONG</span></div>
         <div class="krow"><span class="klab">Network Effects</span><span class="kval" style="color:#e07c00">MODERATE</span></div>
@@ -534,6 +534,21 @@
         <div class="krow"><span class="klab">Cost Advantage</span><span class="kval" style="color:#b07716">WEAK-TO-MODERATE</span></div>
         <div class="krow"><span class="klab">Patents / Proprietary Tech</span><span class="kval" style="color:#c62828">WEAK</span></div>
         <div class="notebox blue" style="margin-top:10px"><b>Synthesis:</b> This is a <b>relationship and reach moat, not a cost or IP moat</b> — the largest branch network and a 4-decade trust relationship with informal-sector borrowers protect existing origination extremely well. It does little to prevent well-capitalized diversified peers like Cholamandalam from out-growing Shriram in adjacent segments, and until recently the moat was actually taxed by a funding-cost disadvantage that the MUFG capital infusion has now materially closed.</div>
+        <div class="microhead" style="margin-top:7px">12-Month Relative Performance</div>
+        <svg viewBox="0 0 480 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+<line x1="36" y1="115.0" x2="474" y2="115.0" stroke="#eceff4"/><text x="32" y="118.0" text-anchor="end" font-size="8" fill="#8a94a6">0%</text>
+<line x1="36" y1="81.7" x2="474" y2="81.7" stroke="#eceff4"/><text x="32" y="84.7" text-anchor="end" font-size="8" fill="#8a94a6">30%</text>
+<line x1="36" y1="48.3" x2="474" y2="48.3" stroke="#eceff4"/><text x="32" y="51.3" text-anchor="end" font-size="8" fill="#8a94a6">60%</text>
+<line x1="36" y1="15.0" x2="474" y2="15.0" stroke="#eceff4"/><text x="32" y="18.0" text-anchor="end" font-size="8" fill="#8a94a6">90%</text>
+<path d="M36.0,115.0 L43.2,118.3 L51.6,115.7 L58.8,116.7 L67.2,122.4 L72.0,121.7 L79.2,116.9 L86.4,116.3 L93.6,115.3 L100.8,118.3 L109.2,107.8 L114.0,108.9 L121.2,107.6 L129.6,101.1 L136.8,96.0 L144.0,85.8 L152.4,79.5 L159.6,82.0 L164.4,81.0 L171.6,73.2 L178.8,80.2 L186.0,76.9 L193.2,75.4 L198.0,67.2 L206.4,56.9 L213.6,46.4 L220.8,50.6 L228.0,53.6 L235.2,48.1 L240.0,49.3 L248.4,46.4 L255.6,51.3 L262.8,39.9 L270.0,36.7 L277.2,38.5 L282.0,35.9 L290.4,48.6 L297.6,44.3 L304.8,46.1 L312.0,66.9 L321.6,67.4 L330.0,45.8 L338.4,46.2 L345.6,41.9 L352.8,54.4 L357.6,61.0 L364.8,47.2 L372.0,63.9 L379.2,62.7 L386.4,56.6 L391.2,59.2 L398.4,64.7 L405.6,68.0 L412.8,48.9 L420.0,51.2 L424.8,44.3 L432.0,38.2 L439.2,47.4 L446.4,47.5 L453.6,43.7 L458.4,49.0 L465.6,45.1 L472.8,28.3 L474.0,25.6 L474.0,115.0 L36.0,115.0 Z" fill="#c6282814" stroke="none"/>
+<path d="M36.0,115.0 L43.2,115.4 L51.6,113.2 L58.8,113.2 L67.2,114.8 L72.0,114.2 L79.2,113.0 L86.4,111.6 L93.6,112.3 L100.8,114.7 L109.2,112.7 L114.0,111.8 L121.2,110.4 L129.6,109.0 L136.8,108.3 L144.0,110.4 L152.4,109.9 L159.6,108.5 L164.4,108.2 L171.6,107.6 L178.8,108.6 L186.0,109.3 L193.2,108.4 L198.0,108.7 L206.4,108.4 L213.6,107.9 L220.8,107.9 L228.0,109.8 L236.4,112.0 L244.8,112.3 L252.0,112.7 L256.8,109.9 L264.0,109.4 L271.2,109.4 L278.4,111.2 L285.6,113.7 L294.0,117.5 L298.8,121.4 L306.0,122.1 L313.2,120.7 L322.8,123.4 L331.2,118.6 L339.6,116.7 L346.8,115.9 L354.0,117.6 L362.4,117.4 L369.6,118.4 L374.4,119.2 L381.6,119.2 L388.8,118.0 L397.2,120.3 L404.4,121.0 L411.6,118.3 L416.4,117.5 L423.6,117.3 L432.0,116.8 L439.2,118.1 L446.4,117.4 L453.6,116.5 L458.4,118.6 L465.6,116.2 L472.8,114.8 L474.0,114.6" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-dasharray="4 3"/>
+<path d="M36.0,115.0 L43.2,116.0 L51.6,114.1 L58.8,115.3 L67.2,117.6 L72.0,117.0 L79.2,115.8 L86.4,114.2 L93.6,114.2 L100.8,116.5 L109.2,113.6 L114.0,113.0 L121.2,110.7 L129.6,110.0 L136.8,109.9 L144.0,111.5 L152.4,111.2 L159.6,109.6 L164.4,110.0 L171.6,108.4 L178.8,109.7 L186.0,110.0 L193.2,109.8 L198.0,110.8 L206.4,110.5 L214.8,108.6 L222.0,109.5 L229.2,110.2 L237.6,112.5 L246.0,110.9 L253.2,109.5 L260.4,107.5 L265.2,107.6 L272.4,107.8 L279.6,106.7 L288.0,112.3 L295.2,114.3 L302.4,118.6 L307.2,121.7 L315.6,123.4 L327.6,122.4 L332.4,115.7 L340.8,114.4 L348.0,115.5 L355.2,116.9 L363.6,114.9 L370.8,120.2 L378.0,119.3 L382.8,118.5 L391.2,119.3 L398.4,120.6 L405.6,119.9 L412.8,114.7 L420.0,114.1 L428.4,114.0 L433.2,112.9 L440.4,114.5 L447.6,113.6 L474.0,112.7" fill="none" stroke="#6a7fa0" stroke-width="1.1" stroke-dasharray="2 3"/>
+<path d="M36.0,115.0 L43.2,115.3 L51.6,109.4 L58.8,110.8 L67.2,115.1 L72.0,112.3 L79.2,111.9 L86.4,106.0 L93.6,102.1 L100.8,104.6 L109.2,101.3 L114.0,102.8 L121.2,98.7 L129.6,97.5 L136.8,95.5 L144.0,92.8 L152.4,93.1 L159.6,96.3 L164.4,99.4 L171.6,94.4 L178.8,98.7 L186.0,93.9 L193.2,93.7 L198.0,100.2 L206.4,96.4 L213.6,94.4 L220.8,89.7 L228.0,96.2 L235.2,96.3 L240.0,100.6 L248.4,101.5 L255.6,94.6 L262.8,94.5 L270.0,93.8 L277.2,97.1 L282.0,93.9 L290.4,101.9 L297.6,109.6 L304.8,109.7 L312.0,117.7 L321.6,121.2 L330.0,107.4 L338.4,107.7 L345.6,104.7 L352.8,106.9 L357.6,106.8 L364.8,97.1 L372.0,105.9 L379.2,110.7 L386.4,104.6 L391.2,108.7 L398.4,112.6 L405.6,113.6 L412.8,97.8 L420.0,94.8 L424.8,88.7 L432.0,89.5 L439.2,91.0 L446.4,90.8 L453.6,90.0 L458.4,94.4 L465.6,90.6 L472.8,82.5 L474.0,78.0" fill="none" stroke="#9aa8bd" stroke-width="1.1" stroke-dasharray="6 3"/>
+<path d="M36.0,115.0 L43.2,118.3 L51.6,115.7 L58.8,116.7 L67.2,122.4 L72.0,121.7 L79.2,116.9 L86.4,116.3 L93.6,115.3 L100.8,118.3 L109.2,107.8 L114.0,108.9 L121.2,107.6 L129.6,101.1 L136.8,96.0 L144.0,85.8 L152.4,79.5 L159.6,82.0 L164.4,81.0 L171.6,73.2 L178.8,80.2 L186.0,76.9 L193.2,75.4 L198.0,67.2 L206.4,56.9 L213.6,46.4 L220.8,50.6 L228.0,53.6 L235.2,48.1 L240.0,49.3 L248.4,46.4 L255.6,51.3 L262.8,39.9 L270.0,36.7 L277.2,38.5 L282.0,35.9 L290.4,48.6 L297.6,44.3 L304.8,46.1 L312.0,66.9 L321.6,67.4 L330.0,45.8 L338.4,46.2 L345.6,41.9 L352.8,54.4 L357.6,61.0 L364.8,47.2 L372.0,63.9 L379.2,62.7 L386.4,56.6 L391.2,59.2 L398.4,64.7 L405.6,68.0 L412.8,48.9 L420.0,51.2 L424.8,44.3 L432.0,38.2 L439.2,47.4 L446.4,47.5 L453.6,43.7 L458.4,49.0 L465.6,45.1 L472.8,28.3 L474.0,25.6" fill="none" stroke="#c62828" stroke-width="1.8"/>
+<text x="474.0" y="19.6" text-anchor="end" font-size="9" font-weight="700" fill="#c62828">+80.5%</text>
+<text x="36" y="140" text-anchor="middle" font-size="8" fill="#8a94a6">Aug25</text><text x="255" y="140" text-anchor="middle" font-size="8" fill="#8a94a6">Feb26</text><text x="474" y="140" text-anchor="middle" font-size="8" fill="#8a94a6">Aug26</text>
+</svg>
+        <div class="chartcap" style="text-align:center;margin-top:2px">&#9644; <b style="color:#c62828">SHRIRAMFIN</b> &nbsp; &#9644; <b style="color:#1565c0">Nifty 50</b> &nbsp; &#9644; <b style="color:#6a7fa0">Nifty Fin. Svcs</b> &nbsp; &#9644; <b style="color:#9aa8bd">Cholamandalam</b></div>
       </div>
       <div style="flex:1">
         <div class="sec-title" id="sec04"><span class="num">04</span><h2>Overall Sentiment &amp; Momentum Prediction</h2></div>
@@ -595,21 +610,7 @@
         </table>
         <div class="krow"><span class="klab">52-Wk High</span><span class="kval">&#8377;1,153.70<small>6 Aug 2026 &#183; today's session, new all-time high</small></span></div>
         <div class="krow"><span class="klab">52-Wk Low</span><span class="kval">&#8377;566.50<small>~Aug/Sep 2025 &#183; +101% off low</small></span></div>
-        <div class="microhead" style="margin-top:7px">12-Month Relative Performance</div>
-        <svg viewBox="0 0 480 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
-<line x1="36" y1="115.0" x2="474" y2="115.0" stroke="#eceff4"/><text x="32" y="118.0" text-anchor="end" font-size="8" fill="#8a94a6">0%</text>
-<line x1="36" y1="81.7" x2="474" y2="81.7" stroke="#eceff4"/><text x="32" y="84.7" text-anchor="end" font-size="8" fill="#8a94a6">30%</text>
-<line x1="36" y1="48.3" x2="474" y2="48.3" stroke="#eceff4"/><text x="32" y="51.3" text-anchor="end" font-size="8" fill="#8a94a6">60%</text>
-<line x1="36" y1="15.0" x2="474" y2="15.0" stroke="#eceff4"/><text x="32" y="18.0" text-anchor="end" font-size="8" fill="#8a94a6">90%</text>
-<path d="M36.0,115.0 L43.2,118.3 L51.6,115.7 L58.8,116.7 L67.2,122.4 L72.0,121.7 L79.2,116.9 L86.4,116.3 L93.6,115.3 L100.8,118.3 L109.2,107.8 L114.0,108.9 L121.2,107.6 L129.6,101.1 L136.8,96.0 L144.0,85.8 L152.4,79.5 L159.6,82.0 L164.4,81.0 L171.6,73.2 L178.8,80.2 L186.0,76.9 L193.2,75.4 L198.0,67.2 L206.4,56.9 L213.6,46.4 L220.8,50.6 L228.0,53.6 L235.2,48.1 L240.0,49.3 L248.4,46.4 L255.6,51.3 L262.8,39.9 L270.0,36.7 L277.2,38.5 L282.0,35.9 L290.4,48.6 L297.6,44.3 L304.8,46.1 L312.0,66.9 L321.6,67.4 L330.0,45.8 L338.4,46.2 L345.6,41.9 L352.8,54.4 L357.6,61.0 L364.8,47.2 L372.0,63.9 L379.2,62.7 L386.4,56.6 L391.2,59.2 L398.4,64.7 L405.6,68.0 L412.8,48.9 L420.0,51.2 L424.8,44.3 L432.0,38.2 L439.2,47.4 L446.4,47.5 L453.6,43.7 L458.4,49.0 L465.6,45.1 L472.8,28.3 L474.0,25.6 L474.0,115.0 L36.0,115.0 Z" fill="#c6282814" stroke="none"/>
-<path d="M36.0,115.0 L43.2,115.4 L51.6,113.2 L58.8,113.2 L67.2,114.8 L72.0,114.2 L79.2,113.0 L86.4,111.6 L93.6,112.3 L100.8,114.7 L109.2,112.7 L114.0,111.8 L121.2,110.4 L129.6,109.0 L136.8,108.3 L144.0,110.4 L152.4,109.9 L159.6,108.5 L164.4,108.2 L171.6,107.6 L178.8,108.6 L186.0,109.3 L193.2,108.4 L198.0,108.7 L206.4,108.4 L213.6,107.9 L220.8,107.9 L228.0,109.8 L236.4,112.0 L244.8,112.3 L252.0,112.7 L256.8,109.9 L264.0,109.4 L271.2,109.4 L278.4,111.2 L285.6,113.7 L294.0,117.5 L298.8,121.4 L306.0,122.1 L313.2,120.7 L322.8,123.4 L331.2,118.6 L339.6,116.7 L346.8,115.9 L354.0,117.6 L362.4,117.4 L369.6,118.4 L374.4,119.2 L381.6,119.2 L388.8,118.0 L397.2,120.3 L404.4,121.0 L411.6,118.3 L416.4,117.5 L423.6,117.3 L432.0,116.8 L439.2,118.1 L446.4,117.4 L453.6,116.5 L458.4,118.6 L465.6,116.2 L472.8,114.8 L474.0,114.6" fill="none" stroke="#1565c0" stroke-width="1.1" stroke-dasharray="4 3"/>
-<path d="M36.0,115.0 L43.2,116.0 L51.6,114.1 L58.8,115.3 L67.2,117.6 L72.0,117.0 L79.2,115.8 L86.4,114.2 L93.6,114.2 L100.8,116.5 L109.2,113.6 L114.0,113.0 L121.2,110.7 L129.6,110.0 L136.8,109.9 L144.0,111.5 L152.4,111.2 L159.6,109.6 L164.4,110.0 L171.6,108.4 L178.8,109.7 L186.0,110.0 L193.2,109.8 L198.0,110.8 L206.4,110.5 L214.8,108.6 L222.0,109.5 L229.2,110.2 L237.6,112.5 L246.0,110.9 L253.2,109.5 L260.4,107.5 L265.2,107.6 L272.4,107.8 L279.6,106.7 L288.0,112.3 L295.2,114.3 L302.4,118.6 L307.2,121.7 L315.6,123.4 L327.6,122.4 L332.4,115.7 L340.8,114.4 L348.0,115.5 L355.2,116.9 L363.6,114.9 L370.8,120.2 L378.0,119.3 L382.8,118.5 L391.2,119.3 L398.4,120.6 L405.6,119.9 L412.8,114.7 L420.0,114.1 L428.4,114.0 L433.2,112.9 L440.4,114.5 L447.6,113.6 L474.0,112.7" fill="none" stroke="#6a7fa0" stroke-width="1.1" stroke-dasharray="2 3"/>
-<path d="M36.0,115.0 L43.2,115.3 L51.6,109.4 L58.8,110.8 L67.2,115.1 L72.0,112.3 L79.2,111.9 L86.4,106.0 L93.6,102.1 L100.8,104.6 L109.2,101.3 L114.0,102.8 L121.2,98.7 L129.6,97.5 L136.8,95.5 L144.0,92.8 L152.4,93.1 L159.6,96.3 L164.4,99.4 L171.6,94.4 L178.8,98.7 L186.0,93.9 L193.2,93.7 L198.0,100.2 L206.4,96.4 L213.6,94.4 L220.8,89.7 L228.0,96.2 L235.2,96.3 L240.0,100.6 L248.4,101.5 L255.6,94.6 L262.8,94.5 L270.0,93.8 L277.2,97.1 L282.0,93.9 L290.4,101.9 L297.6,109.6 L304.8,109.7 L312.0,117.7 L321.6,121.2 L330.0,107.4 L338.4,107.7 L345.6,104.7 L352.8,106.9 L357.6,106.8 L364.8,97.1 L372.0,105.9 L379.2,110.7 L386.4,104.6 L391.2,108.7 L398.4,112.6 L405.6,113.6 L412.8,97.8 L420.0,94.8 L424.8,88.7 L432.0,89.5 L439.2,91.0 L446.4,90.8 L453.6,90.0 L458.4,94.4 L465.6,90.6 L472.8,82.5 L474.0,78.0" fill="none" stroke="#9aa8bd" stroke-width="1.1" stroke-dasharray="6 3"/>
-<path d="M36.0,115.0 L43.2,118.3 L51.6,115.7 L58.8,116.7 L67.2,122.4 L72.0,121.7 L79.2,116.9 L86.4,116.3 L93.6,115.3 L100.8,118.3 L109.2,107.8 L114.0,108.9 L121.2,107.6 L129.6,101.1 L136.8,96.0 L144.0,85.8 L152.4,79.5 L159.6,82.0 L164.4,81.0 L171.6,73.2 L178.8,80.2 L186.0,76.9 L193.2,75.4 L198.0,67.2 L206.4,56.9 L213.6,46.4 L220.8,50.6 L228.0,53.6 L235.2,48.1 L240.0,49.3 L248.4,46.4 L255.6,51.3 L262.8,39.9 L270.0,36.7 L277.2,38.5 L282.0,35.9 L290.4,48.6 L297.6,44.3 L304.8,46.1 L312.0,66.9 L321.6,67.4 L330.0,45.8 L338.4,46.2 L345.6,41.9 L352.8,54.4 L357.6,61.0 L364.8,47.2 L372.0,63.9 L379.2,62.7 L386.4,56.6 L391.2,59.2 L398.4,64.7 L405.6,68.0 L412.8,48.9 L420.0,51.2 L424.8,44.3 L432.0,38.2 L439.2,47.4 L446.4,47.5 L453.6,43.7 L458.4,49.0 L465.6,45.1 L472.8,28.3 L474.0,25.6" fill="none" stroke="#c62828" stroke-width="1.8"/>
-<text x="474.0" y="19.6" text-anchor="end" font-size="9" font-weight="700" fill="#c62828">+80.5%</text>
-<text x="36" y="140" text-anchor="middle" font-size="8" fill="#8a94a6">Aug25</text><text x="255" y="140" text-anchor="middle" font-size="8" fill="#8a94a6">Feb26</text><text x="474" y="140" text-anchor="middle" font-size="8" fill="#8a94a6">Aug26</text>
-</svg>
-        <div class="chartcap" style="text-align:center;margin-top:2px">&#9644; <b style="color:#c62828">SHRIRAMFIN</b> &nbsp; &#9644; <b style="color:#1565c0">Nifty 50</b> &nbsp; &#9644; <b style="color:#6a7fa0">Nifty Fin. Svcs</b> &nbsp; &#9644; <b style="color:#9aa8bd">Cholamandalam</b></div>
+        
       </div>
     </div>
   </div>
@@ -919,7 +920,7 @@
   </div>
 
   <div class="disclaim">Sources: NSE, BSE, Screener.in, MarketSmith India, CARE Ratings, CRISIL Ratings, ICRA, India Ratings, Trendlyne, MoneyControl, Business Standard, EquityBulls, MarketsMojo, Motilal Oswal/ICICI Securities/Axis Direct/Nomura broker notes, Shriram Finance's investor presentations and Q1 FY27 earnings-call commentary, and other public web sources as of 6 Aug 2026, plus the author's own MotiveWave Elliott Wave analysis. Shriram Finance is a high-beta NBFC trading at a fresh all-time high with daily/hourly RSI in deep overbought territory, AUM growth currently running below its own FY27 guidance, and some cross-source data discrepancies (PAT series, dividend history) not yet independently reconciled — these are discussed where relevant throughout this report. Price, volume and financial figures should be independently verified. All figures in &#8377; Crore unless stated otherwise.</div>
-  <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice.</div>
+  <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice. &nbsp;|&nbsp; <span style="opacity:0.6">Report v1.0 &nbsp;|&nbsp; Template v1.1</span></div>
 </div>
 </div>
 
