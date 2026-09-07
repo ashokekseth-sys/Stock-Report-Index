@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equity Research Reports — Ashoke Kumar Seth</title>
+<meta name="description" content="Index of independent equity research reports on Indian listed companies by Ashoke Kumar Seth.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a2a4a'/%3E%3Cpath d='M6 22l6-7 5 4 9-11' stroke='%23c9a24b' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
+<style>
+  :root{
+    --ground:#eaeef4;
+    --surface:#ffffff;
+    --surface-2:#f5f8fc;
+    --ink:#16223a;
+    --ink-strong:#0d1729;
+    --muted:#5c6b85;
+    --hair:#d7dfeb;
+    --navy:#1a2a4a;
+    --gold:#a8802c;
+    --gold-bright:#c9a24b;
+    --green:#2e7d32;
+    --green-soft:#e4f0e5;
+    --shadow:0 1px 2px rgba(22,34,58,.05), 0 8px 22px rgba(22,34,58,.06);
+    --focus:#2c62c4;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#0d1420; --surface:#161e2c; --surface-2:#1b2434;
+      --ink:#e3e9f4; --ink-strong:#f3f6fb; --muted:#93a1ba; --hair:#28334a;
+      --navy:#1d2c49; --gold:#d7b163; --gold-bright:#d7b163;
+      --green:#6cc072; --green-soft:#1a2f1e;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 22px rgba(0,0,0,.28);
+      --focus:#6f9dff;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0d1420; --surface:#161e2c; --surface-2:#1b2434;
+    --ink:#e3e9f4; --ink-strong:#f3f6fb; --muted:#93a1ba; --hair:#28334a;
+    --navy:#1d2c49; --gold:#d7b163; --gold-bright:#d7b163;
+    --green:#6cc072; --green-soft:#1a2f1e;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 22px rgba(0,0,0,.28);
+    --focus:#6f9dff;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    background:var(--ground); color:var(--ink);
+    font-family:'Source Sans 3','Segoe UI',system-ui,sans-serif;
+    font-size:15px; line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---- masthead: navy band, mirrors the report header ---- */
+  .band{
+    background:linear-gradient(135deg,#101c36 0%,var(--navy) 55%,#2b4570 100%);
+    border-bottom:4px solid;
+    border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1;
+    color:#fff; padding:34px 0 30px;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 16px;}
+  .eyebrow{
+    font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--gold-bright);margin-bottom:9px;
+  }
+  h1{
+    font-family:'Source Serif 4',Georgia,serif;
+    font-size:clamp(28px,6.5vw,40px);font-weight:600;line-height:1.1;
+    letter-spacing:-.015em;color:#fff;text-wrap:balance;
+  }
+  .band p{color:#b9c6de;margin-top:10px;max-width:60ch;font-size:14.5px;}
+
+  .counts{display:flex;flex-wrap:wrap;gap:0;margin-top:22px;
+    border:1px solid rgba(255,255,255,.16);border-radius:9px;overflow:hidden;}
+  .counts div{flex:1 1 25%;min-width:84px;padding:10px 13px;
+    border-right:1px solid rgba(255,255,255,.16);}
+  .counts div:last-child{border-right:none;}
+  .counts b{display:block;font-family:'Source Serif 4',Georgia,serif;
+    font-size:22px;font-weight:600;color:#fff;font-variant-numeric:tabular-nums;line-height:1.1;}
+  .counts span{display:block;font-size:9.5px;font-weight:700;letter-spacing:.1em;
+    text-transform:uppercase;color:#9fb0cf;margin-top:3px;}
+
+  /* ---- controls ---- */
+  .controls{position:sticky;top:0;z-index:20;background:var(--ground);
+    padding:14px 0 11px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+    border-bottom:1px solid var(--hair);}
+  #q{flex:1 1 190px;min-width:0;font:inherit;color:var(--ink);
+    background:var(--surface);border:1px solid var(--hair);border-radius:8px;padding:9px 12px;}
+  #q::placeholder{color:var(--muted);}
+  #q:focus-visible,.seg button:focus-visible,.row:focus-visible{
+    outline:2px solid var(--focus);outline-offset:2px;}
+  .seg{display:flex;background:var(--surface);border:1px solid var(--hair);
+    border-radius:8px;overflow:hidden;}
+  .seg button{font:inherit;font-size:13px;font-weight:600;border:none;
+    background:transparent;color:var(--muted);padding:9px 13px;cursor:pointer;
+    border-right:1px solid var(--hair);}
+  .seg button:last-child{border-right:none;}
+  .seg button[aria-pressed="true"]{background:var(--surface-2);color:var(--ink-strong);}
+
+  /* ---- groups + rows ---- */
+  .group{margin:26px 0 10px;display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;}
+  .group h2{font-family:'Source Serif 4',Georgia,serif;font-size:18px;
+    font-weight:600;color:var(--ink-strong);flex:0 0 auto;white-space:nowrap;}
+  .group .n{font-size:11px;font-weight:700;color:var(--muted);
+    font-variant-numeric:tabular-nums;}
+  .group p{flex:1 1 100%;font-size:13px;color:var(--muted);}
+
+  .list{display:flex;flex-direction:column;gap:7px;}
+  .row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:11px;
+    background:var(--surface);border:1px solid var(--hair);
+    border-left:3px solid var(--gold-bright);border-radius:9px;padding:11px 13px;
+    text-decoration:none;color:inherit;box-shadow:var(--shadow);}
+  .row.arch{border-left-color:#9aa7bd;}
+  a.row:hover{border-color:var(--gold);}
+  .tick{font-size:10px;font-weight:700;letter-spacing:.05em;background:var(--surface-2);
+    border:1px solid var(--hair);border-radius:5px;padding:4px 6px;color:var(--muted);
+    white-space:nowrap;min-width:86px;text-align:center;}
+  .name{min-width:0;}
+  .name b{display:block;font-weight:600;font-size:15px;color:var(--ink-strong);
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .meta{display:flex;flex-wrap:wrap;gap:4px 9px;margin-top:2px;font-size:11.5px;
+    color:var(--muted);font-variant-numeric:tabular-nums;}
+  .ver{background:var(--green-soft);color:var(--green);padding:0 5px;
+    border-radius:4px;font-weight:600;}
+  .go{font-size:16px;color:var(--muted);}
+  a.row:hover .go{color:var(--gold);}
+  .pdfonly{font-size:9.5px;font-weight:700;letter-spacing:.07em;
+    text-transform:uppercase;color:var(--muted);white-space:nowrap;}
+  .empty{padding:24px 4px;color:var(--muted);font-style:italic;display:none;}
+
+  footer{margin-top:36px;padding:18px 0 46px;border-top:1px solid var(--hair);
+    font-size:12px;color:var(--muted);}
+  footer b{color:var(--ink-strong);font-weight:600;}
+  footer .disc{margin-top:9px;line-height:1.55;}
+  footer a{color:var(--gold);}
+
+  @media (max-width:520px){
+    .row{grid-template-columns:1fr auto;}
+    .tick{grid-column:1;grid-row:1;justify-self:start;margin-bottom:2px;min-width:0;}
+    .name{grid-column:1 / -1;grid-row:2;}
+    .go,.pdfonly{grid-column:2;grid-row:1;justify-self:end;}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+</style>
+</head>
+<body>
+
+<div class="band">
+  <div class="wrap">
+    <div class="eyebrow">Independent Equity Research &middot; Indian Listed Companies</div>
+    <h1>Equity Research Reports</h1>
+    <p>Written and published by Ashoke Kumar Seth. Each report covers business model, moat, financials, guidance credibility, peers, risk and an Elliott Wave technical read. Open any report below — they read on phone or desktop.</p>
+    <div class="counts">
+      <div><b>31</b><span>Reports</span></div>
+      <div><b>14</b><span>Published</span></div>
+      <div><b>17</b><span>Archive</span></div>
+      <div><b>2026</b><span>May&ndash;Sep</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="controls">
+    <input id="q" type="search" placeholder="Search company or ticker" aria-label="Search reports">
+    <div class="seg" role="group" aria-label="Filter reports">
+      <button data-f="all" aria-pressed="true">All</button>
+      <button data-f="live" aria-pressed="false">Published</button>
+      <button data-f="archive" aria-pressed="false">Archive</button>
+    </div>
+  </div>
+
+  <section data-grp="live">
+    <div class="group">
+      <h2>Published reports</h2><span class="n">14</span>
+      <p>Full HTML reports. Tap to open.</p>
+    </div>
+    <div class="list" id="live"></div>
+  </section>
+
+  <section data-grp="archive">
+    <div class="group">
+      <h2>Archive</h2><span class="n">17</span>
+      <p>Earlier reports held as PDFs only. Not yet republished in this format.</p>
+    </div>
+    <div class="list" id="archive"></div>
+  </section>
+
+  <p class="empty" id="empty">No report matches that search.</p>
+
+  <footer>
+    <b>Ashoke Kumar Seth</b> &nbsp;|&nbsp; <a href="mailto:ashokekseth@gmail.com">ashokekseth@gmail.com</a> &nbsp;|&nbsp; Index updated 7 September 2026
+    <div class="disc">Disclosure: I am not SEBI registered. These reports are for educational purposes only and are neither advice nor an endorsement. I will not be responsible for any profit or loss arising from them. Consult your financial advisor before making any investment decision. Do your own research.</div>
+  </footer>
+</div>
+
+<script>
+// [ticker, company, report date, report version, filename]
+var LIVE = [
+  ["KSHINTL","KSH International","6 Sep 2026","1.0","KSHINTL_Equity_Report.html"],
+  ["PTCIL","PTC Industries","30 Aug 2026","1.0","PTCIL_Equity_Report.html"],
+  ["CFF","CFF Fluid Control","24 Aug 2026","1.0","CFF_Equity_Report.html"],
+  ["YASHHV","Yash Highvoltage","20 Aug 2026","1.0","YASHHV_Equity_Report.html"],
+  ["VESUVIUS","Vesuvius India","18 Aug 2026","1.0","VESUVIUS_Equity_Report.html"],
+  ["BALUFORGE","Balu Forge Industries","18 Aug 2026","1.0","BALUFORGE_Equity_Report.html"],
+  ["MAXGROW","Maxgrow India","18 Aug 2026","1.1","MAXGROW_Equity_Report.html"],
+  ["PREMEXPLN","Premier Explosives","15 Aug 2026","1.0","PREMEXPLN_Equity_Report.html"],
+  ["VAML","Vedanta Aluminium Metal","10 Aug 2026","1.0","VAML_Equity_Report.html"],
+  ["SHRIRAMFIN","Shriram Finance","6 Aug 2026","1.0","SHRIRAMFIN_Equity_Report.html"],
+  ["AZAD","Azad Engineering","4 Aug 2026","1.1","AZAD_Equity_Report.html"],
+  ["PRIVISCL","Privi Speciality Chemicals","1 Aug 2026","1.0","PRIVISCL_Equity_Report.html"],
+  ["POWERINDIA","Hitachi Energy India","30 Jul 2026","1.0","POWERINDIA_Equity_Report.html"],
+  ["MTARTECH","MTAR Technologies","29 Jul 2026","1.0","MTAR_Equity_Report.html"]
+];
+
+var ARCHIVE = [
+  ["LAKSHMIMIL","Lakshmi Mills","22 Jul 2026"],
+  ["NEULANDLAB","Neuland Laboratories","9 Jul 2026"],
+  ["AFCOM","AFCOM Holdings","7 Jul 2026"],
+  ["MANORAMA","Manorama Industries","30 Jun 2026"],
+  ["APARINDS","APAR Industries","27 Jun 2026"],
+  ["JYOTICNC","Jyoti CNC Automation","25 Jun 2026"],
+  ["CEMPRO","Cemindia Projects","19 Jun 2026"],
+  ["PATELENG","Patel Engineering","18 Jun 2026"],
+  ["SUZLON","Suzlon Energy","17 Jun 2026"],
+  ["TITANBIO","Titan Biotech","14 Jun 2026"],
+  ["APOLLO","Apollo Micro Systems","12 Jun 2026"],
+  ["SANSERA","Sansera Engineering","9 Jun 2026"],
+  ["PRIZOR","Prizor Viztech","9 Jun 2026"],
+  ["PARAS","Paras Defence & Space","7 Jun 2026"],
+  ["CPPLUS","Aditya Infotech (CP Plus)","5 Jun 2026"],
+  ["BCCFUBA","BCC Fuba India","4 Jun 2026"],
+  ["AEROFLEX","Aeroflex Industries","24 May 2026"]
+];
+
+function el(tag, cls){ var e=document.createElement(tag); if(cls) e.className=cls; return e; }
+
+function liveRow(r){
+  var a = el("a","row");
+  a.href = r[4];
+  a.dataset.s = (r[0]+" "+r[1]).toLowerCase();
+  a.innerHTML =
+    '<span class="tick"></span>' +
+    '<span class="name"><b></b><span class="meta">' +
+      '<span class="d"></span><span class="ver"></span>' +
+    '</span></span>' +
+    '<span class="go" aria-hidden="true">&rsaquo;</span>';
+  a.querySelector(".tick").textContent = r[0];
+  a.querySelector("b").textContent = r[1];
+  a.querySelector(".d").textContent = r[2];
+  a.querySelector(".ver").textContent = "v" + r[3];
+  return a;
+}
+
+function archiveRow(r){
+  var d = el("div","row arch");
+  d.dataset.s = (r[0]+" "+r[1]).toLowerCase();
+  d.innerHTML =
+    '<span class="tick"></span>' +
+    '<span class="name"><b></b><span class="meta"><span class="d"></span></span></span>' +
+    '<span class="pdfonly">PDF only</span>';
+  d.querySelector(".tick").textContent = r[0];
+  d.querySelector("b").textContent = r[1];
+  d.querySelector(".d").textContent = r[2];
+  return d;
+}
+
+var liveEl = document.getElementById("live");
+var archEl = document.getElementById("archive");
+LIVE.forEach(function(r){ liveEl.appendChild(liveRow(r)); });
+ARCHIVE.forEach(function(r){ archEl.appendChild(archiveRow(r)); });
+
+var q = document.getElementById("q");
+var empty = document.getElementById("empty");
+var filter = "all";
+
+function apply(){
+  var term = q.value.trim().toLowerCase();
+  var shown = 0;
+  Array.prototype.forEach.call(document.querySelectorAll("section[data-grp]"), function(sec){
+    var grp = sec.getAttribute("data-grp"), n = 0;
+    Array.prototype.forEach.call(sec.querySelectorAll(".row"), function(row){
+      var ok = (filter === "all" || filter === grp) && row.dataset.s.indexOf(term) !== -1;
+      row.hidden = !ok;
+      if (ok) n++;
+    });
+    sec.hidden = (n === 0);
+    sec.querySelector(".n").textContent = n;
+    shown += n;
+  });
+  empty.style.display = shown ? "none" : "block";
+}
+
+q.addEventListener("input", apply);
+Array.prototype.forEach.call(document.querySelectorAll(".seg button"), function(b){
+  b.addEventListener("click", function(){
+    filter = b.getAttribute("data-f");
+    Array.prototype.forEach.call(document.querySelectorAll(".seg button"), function(x){
+      x.setAttribute("aria-pressed", String(x === b));
+    });
+    apply();
+  });
+});
+apply();
+</script>
+</body>
+</html>
