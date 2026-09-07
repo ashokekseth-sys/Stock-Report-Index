@@ -12,23 +12,23 @@ All reports are HTML and read on phone or desktop.
 
 ## Published reports
 
-| # | Company | Ticker | Report | Version | Date |
+| # | Title | Ticker | Report | Version | Date |
 |---|---------|--------|--------|---------|------|
-| 1 | Pine Labs | PINELABS | [Open](https://ashokekseth-sys.github.io/Stock-Reports/PINELABS_Equity_Report.html) | v1.0 | 7 Sep 2026 |
-| 2 | KSH International | KSHINTL | [Open](https://ashokekseth-sys.github.io/Stock-Reports/KSHINTL_Equity_Report.html) | v1.0 | 6 Sep 2026 |
-| 3 | PTC Industries | PTCIL | [Open](https://ashokekseth-sys.github.io/Stock-Reports/PTCIL_Equity_Report.html) | v1.0 | 30 Aug 2026 |
-| 4 | CFF Fluid Control | CFF | [Open](https://ashokekseth-sys.github.io/Stock-Reports/CFF_Equity_Report.html) | v1.0 | 24 Aug 2026 |
-| 5 | Yash Highvoltage | YASHHV | [Open](https://ashokekseth-sys.github.io/Stock-Reports/YASHHV_Equity_Report.html) | v1.0 | 20 Aug 2026 |
-| 6 | Vesuvius India | VESUVIUS | [Open](https://ashokekseth-sys.github.io/Stock-Reports/VESUVIUS_Equity_Report.html) | v1.0 | 18 Aug 2026 |
-| 7 | Balu Forge Industries | BALUFORGE | [Open](https://ashokekseth-sys.github.io/Stock-Reports/BALUFORGE_Equity_Report.html) | v1.0 | 18 Aug 2026 |
-| 8 | Maxgrow India | MAXGROW | [Open](https://ashokekseth-sys.github.io/Stock-Reports/MAXGROW_Equity_Report.html) | v1.1 | 18 Aug 2026 |
-| 9 | Premier Explosives | PREMEXPLN | [Open](https://ashokekseth-sys.github.io/Stock-Reports/PREMEXPLN_Equity_Report.html) | v1.0 | 15 Aug 2026 |
-| 10 | Vedanta Aluminium Metal | VAML | [Open](https://ashokekseth-sys.github.io/Stock-Reports/VAML_Equity_Report.html) | v1.0 | 10 Aug 2026 |
-| 11 | Shriram Finance | SHRIRAMFIN | [Open](https://ashokekseth-sys.github.io/Stock-Reports/SHRIRAMFIN_Equity_Report.html) | v1.0 | 6 Aug 2026 |
-| 12 | Azad Engineering | AZAD | [Open](https://ashokekseth-sys.github.io/Stock-Reports/AZAD_Equity_Report.html) | v1.1 | 4 Aug 2026 |
-| 13 | Privi Speciality Chemicals | PRIVISCL | [Open](https://ashokekseth-sys.github.io/Stock-Reports/PRIVISCL_Equity_Report.html) | v1.0 | 1 Aug 2026 |
-| 14 | Hitachi Energy India | POWERINDIA | [Open](https://ashokekseth-sys.github.io/Stock-Reports/POWERINDIA_Equity_Report.html) | v1.0 | 30 Jul 2026 |
-| 15 | MTAR Technologies | MTARTECH | [Open](https://ashokekseth-sys.github.io/Stock-Reports/MTAR_Equity_Report.html) | v1.0 | 29 Jul 2026 |
+| 1 | Pine Labs Limited | PINELABS | [Open](https://ashokekseth-sys.github.io/Stock-Reports/PINELABS_Equity_Report.html) | v1.0 | 7 Sep 2026 |
+| 2 | KSH International Limited | KSHINTL | [Open](https://ashokekseth-sys.github.io/Stock-Reports/KSHINTL_Equity_Report.html) | v1.0 | 6 Sep 2026 |
+| 3 | PTC Industries Limited | PTCIL | [Open](https://ashokekseth-sys.github.io/Stock-Reports/PTCIL_Equity_Report.html) | v1.0 | 30 Aug 2026 |
+| 4 | CFF Fluid Control Limited | CFF | [Open](https://ashokekseth-sys.github.io/Stock-Reports/CFF_Equity_Report.html) | v1.0 | 24 Aug 2026 |
+| 5 | Yash Highvoltage Limited | YASHHV | [Open](https://ashokekseth-sys.github.io/Stock-Reports/YASHHV_Equity_Report.html) | v1.0 | 20 Aug 2026 |
+| 6 | Vesuvius India Limited | VESUVIUS | [Open](https://ashokekseth-sys.github.io/Stock-Reports/VESUVIUS_Equity_Report.html) | v1.0 | 18 Aug 2026 |
+| 7 | Balu Forge Industries Limited | BALUFORGE | [Open](https://ashokekseth-sys.github.io/Stock-Reports/BALUFORGE_Equity_Report.html) | v1.0 | 18 Aug 2026 |
+| 8 | Maxgrow India Limited | MAXGROW | [Open](https://ashokekseth-sys.github.io/Stock-Reports/MAXGROW_Equity_Report.html) | v1.1 | 18 Aug 2026 |
+| 9 | Premier Explosives Limited | PREMEXPLN | [Open](https://ashokekseth-sys.github.io/Stock-Reports/PREMEXPLN_Equity_Report.html) | v1.0 | 15 Aug 2026 |
+| 10 | Vedanta Aluminium Metal Limited | VAML | [Open](https://ashokekseth-sys.github.io/Stock-Reports/VAML_Equity_Report.html) | v1.0 | 10 Aug 2026 |
+| 11 | Shriram Finance Limited | SHRIRAMFIN | [Open](https://ashokekseth-sys.github.io/Stock-Reports/SHRIRAMFIN_Equity_Report.html) | v1.0 | 6 Aug 2026 |
+| 12 | Azad Engineering Limited | AZAD | [Open](https://ashokekseth-sys.github.io/Stock-Reports/AZAD_Equity_Report.html) | v1.1 | 4 Aug 2026 |
+| 13 | Privi Speciality Chemicals Limited | PRIVISCL | [Open](https://ashokekseth-sys.github.io/Stock-Reports/PRIVISCL_Equity_Report.html) | v1.0 | 1 Aug 2026 |
+| 14 | Hitachi Energy India Limited | POWERINDIA | [Open](https://ashokekseth-sys.github.io/Stock-Reports/POWERINDIA_Equity_Report.html) | v1.0 | 30 Jul 2026 |
+| 15 | MTAR Technologies Limited | MTARTECH | [Open](https://ashokekseth-sys.github.io/Stock-Reports/MTAR_Equity_Report.html) | v1.0 | 29 Jul 2026 |
 
 ## Archive — awaiting rebuild as HTML
 

@@ -122,8 +122,7 @@
     overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   .meta{display:flex;flex-wrap:wrap;gap:4px 9px;margin-top:2px;font-size:11.5px;
     color:var(--muted);font-variant-numeric:tabular-nums;}
-  .ver{background:var(--green-soft);color:var(--green);padding:0 5px;
-    border-radius:4px;font-weight:600;}
+
   .go{font-size:16px;color:var(--muted);}
   a.row:hover .go{color:var(--gold);}
   .pdfonly{font-size:9.5px;font-weight:700;letter-spacing:.07em;
@@ -198,21 +197,21 @@
 <script>
 // [ticker, company, report date, report version, filename]
 var LIVE = [
-  ["PINELABS","Pine Labs","7 Sep 2026","1.0","PINELABS_Equity_Report.html"],
-  ["KSHINTL","KSH International","6 Sep 2026","1.0","KSHINTL_Equity_Report.html"],
-  ["PTCIL","PTC Industries","30 Aug 2026","1.0","PTCIL_Equity_Report.html"],
-  ["CFF","CFF Fluid Control","24 Aug 2026","1.0","CFF_Equity_Report.html"],
-  ["YASHHV","Yash Highvoltage","20 Aug 2026","1.0","YASHHV_Equity_Report.html"],
-  ["VESUVIUS","Vesuvius India","18 Aug 2026","1.0","VESUVIUS_Equity_Report.html"],
-  ["BALUFORGE","Balu Forge Industries","18 Aug 2026","1.0","BALUFORGE_Equity_Report.html"],
-  ["MAXGROW","Maxgrow India","18 Aug 2026","1.1","MAXGROW_Equity_Report.html"],
-  ["PREMEXPLN","Premier Explosives","15 Aug 2026","1.0","PREMEXPLN_Equity_Report.html"],
-  ["VAML","Vedanta Aluminium Metal","10 Aug 2026","1.0","VAML_Equity_Report.html"],
-  ["SHRIRAMFIN","Shriram Finance","6 Aug 2026","1.0","SHRIRAMFIN_Equity_Report.html"],
-  ["AZAD","Azad Engineering","4 Aug 2026","1.1","AZAD_Equity_Report.html"],
-  ["PRIVISCL","Privi Speciality Chemicals","1 Aug 2026","1.0","PRIVISCL_Equity_Report.html"],
-  ["POWERINDIA","Hitachi Energy India","30 Jul 2026","1.0","POWERINDIA_Equity_Report.html"],
-  ["MTARTECH","MTAR Technologies","29 Jul 2026","1.0","MTAR_Equity_Report.html"]
+  ["PINELABS","Pine Labs Limited","7 Sep 2026","1.0","PINELABS_Equity_Report.html"],
+  ["KSHINTL","KSH International Limited","6 Sep 2026","1.0","KSHINTL_Equity_Report.html"],
+  ["PTCIL","PTC Industries Limited","30 Aug 2026","1.0","PTCIL_Equity_Report.html"],
+  ["CFF","CFF Fluid Control Limited","24 Aug 2026","1.0","CFF_Equity_Report.html"],
+  ["YASHHV","Yash Highvoltage Limited","20 Aug 2026","1.0","YASHHV_Equity_Report.html"],
+  ["VESUVIUS","Vesuvius India Limited","18 Aug 2026","1.0","VESUVIUS_Equity_Report.html"],
+  ["BALUFORGE","Balu Forge Industries Limited","18 Aug 2026","1.0","BALUFORGE_Equity_Report.html"],
+  ["MAXGROW","Maxgrow India Limited","18 Aug 2026","1.1","MAXGROW_Equity_Report.html"],
+  ["PREMEXPLN","Premier Explosives Limited","15 Aug 2026","1.0","PREMEXPLN_Equity_Report.html"],
+  ["VAML","Vedanta Aluminium Metal Limited","10 Aug 2026","1.0","VAML_Equity_Report.html"],
+  ["SHRIRAMFIN","Shriram Finance Limited","6 Aug 2026","1.0","SHRIRAMFIN_Equity_Report.html"],
+  ["AZAD","Azad Engineering Limited","4 Aug 2026","1.1","AZAD_Equity_Report.html"],
+  ["PRIVISCL","Privi Speciality Chemicals Limited","1 Aug 2026","1.0","PRIVISCL_Equity_Report.html"],
+  ["POWERINDIA","Hitachi Energy India Limited","30 Jul 2026","1.0","POWERINDIA_Equity_Report.html"],
+  ["MTARTECH","MTAR Technologies Limited","29 Jul 2026","1.0","MTAR_Equity_Report.html"]
 ];
 
 var ARCHIVE = [
@@ -243,14 +242,11 @@ function liveRow(r){
   a.dataset.s = (r[0]+" "+r[1]).toLowerCase();
   a.innerHTML =
     '<span class="tick"></span>' +
-    '<span class="name"><b></b><span class="meta">' +
-      '<span class="d"></span><span class="ver"></span>' +
-    '</span></span>' +
+    '<span class="name"><b></b><span class="meta"><span class="d"></span></span></span>' +
     '<span class="go" aria-hidden="true">&rsaquo;</span>';
   a.querySelector(".tick").textContent = r[0];
   a.querySelector("b").textContent = r[1];
-  a.querySelector(".d").textContent = r[2];
-  a.querySelector(".ver").textContent = "v" + r[3];
+  a.querySelector(".d").textContent = r[2] + "  \u00b7  v" + r[3];
   return a;
 }
 
