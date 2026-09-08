@@ -26,7 +26,7 @@ All reports are HTML and read on phone or desktop.
 | 10 | CFF Fluid Control Limited | CFF | [Open](https://ashokekseth-sys.github.io/Stock-Report-Index/CFF_Equity_Report.html) | v1 | 24 Aug 2026 |
 | 11 | Yash Highvoltage Limited | YASHHV | [Open](https://ashokekseth-sys.github.io/Stock-Report-Index/YASHHV_Equity_Report.html) | v1 | 20 Aug 2026 |
 | 12 | Vesuvius India Limited | VESUVIUS | [Open](https://ashokekseth-sys.github.io/Stock-Report-Index/VESUVIUS_Equity_Report.html) | v1 | 18 Aug 2026 |
-| 13 | Balu Forge Industries Limited | BALUFORGE | [Open](https://ashokekseth-sys.github.io/Stock-Report-Index/BALUFORGE_Equity_Report.html) | v1 | 18 Aug 2026 |
+| 13 | Balu Forge Industries Limited | BALUFORGE | [Open](https://ashokekseth-sys.github.io/Stock-Report-Index/BALUFORGE_Equity_Report.html) | v2 | 18 Aug 2026 |
 | 14 | Maxgrow India Limited | MAXGROW | [Open](https://ashokekseth-sys.github.io/Stock-Report-Index/MAXGROW_Equity_Report.html) | v2 | 18 Aug 2026 |
 | 15 | Premier Explosives Limited | PREMEXPLN | [Open](https://ashokekseth-sys.github.io/Stock-Report-Index/PREMEXPLN_Equity_Report.html) | v1 | 15 Aug 2026 |
 | 16 | Vedanta Aluminium Metal Limited | VAML | [Open](https://ashokekseth-sys.github.io/Stock-Report-Index/VAML_Equity_Report.html) | v1 | 10 Aug 2026 |
