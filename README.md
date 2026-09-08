@@ -14,7 +14,7 @@ All reports are HTML and read on phone or desktop.
 
 | # | Title | Ticker | Report | Version | Date |
 |---|---------|--------|--------|---------|------|
-| 1 | Aditya Infotech Limited | CPPLUS | [Open](https://ashokekseth-sys.github.io/Stock-Report-Index/CPPLUS_Equity_Report.html) | v1 | 8 Sep 2026 |
+| 1 | Aditya Infotech Limited | CPPLUS | [Open](https://ashokekseth-sys.github.io/Stock-Report-Index/CPPLUS_Equity_Report.html) | v2 | 8 Sep 2026 |
 | 2 | Paras Defence and Space Technologies Limited | PARAS | [Open](https://ashokekseth-sys.github.io/Stock-Report-Index/PARAS_Equity_Report.html) | v1 | 8 Sep 2026 |
 | 3 | Apollo Micro Systems Limited | APOLLO | [Open](https://ashokekseth-sys.github.io/Stock-Report-Index/APOLLO_Equity_Report.html) | v1 | 8 Sep 2026 |
 | 4 | Manorama Industries Limited | MANORAMA | [Open](https://ashokekseth-sys.github.io/Stock-Report-Index/MANORAMA_Equity_Report.html) | v1 | 8 Sep 2026 |
