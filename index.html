@@ -176,9 +176,9 @@
     <h1>Stock Report Index</h1>
     <p>Written and published by Ashoke Kumar Seth. Each report covers business model, moat, financials, guidance credibility, peers, risk and an Elliott Wave technical read. Open any report below — they read on phone or desktop.</p>
     <div class="counts">
-      <div><b>32</b><span>Reports</span></div>
-      <div><b>16</b><span>Published</span></div>
-      <div><b>16</b><span>Archive</span></div>
+      <div><b id="cTotal">0</b><span>Reports</span></div>
+      <div><b id="cLive">0</b><span>Published</span></div>
+      <div><b id="cArch">0</b><span>Archive</span></div>
       <div><b>2026</b><span>May&ndash;Sep</span></div>
     </div>
   </div>
@@ -323,6 +323,11 @@ var liveEl = document.getElementById("live");
 var archEl = document.getElementById("archive");
 LIVE.forEach(function(r){ liveEl.appendChild(liveRow(r)); });
 ARCHIVE.forEach(function(r){ archEl.appendChild(archiveRow(r)); });
+
+// Headline counts are derived from the data, never hand-maintained.
+document.getElementById("cLive").textContent  = LIVE.length;
+document.getElementById("cArch").textContent  = ARCHIVE.length;
+document.getElementById("cTotal").textContent = LIVE.length + ARCHIVE.length;
 
 var q = document.getElementById("q");
 var empty = document.getElementById("empty");
