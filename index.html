@@ -272,6 +272,18 @@ function isRecent(iso){
   return age >= 0 && age < NEW_DAYS * 86400000;
 }
 
+// The displayed date is always derived from the same ISO field that drives
+// the New flag (r[5]), not a separately-hardcoded string — a report's shown
+// date and its "New" freshness can never drift apart again this way.
+var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function formatIso(iso){
+  if (!iso) return "";
+  var t = Date.parse(iso + "T00:00:00");
+  if (isNaN(t)) return "";
+  var d = new Date(t);
+  return d.getDate() + " " + MONTHS[d.getMonth()] + " " + d.getFullYear();
+}
+
 function el(tag, cls){ var e=document.createElement(tag); if(cls) e.className=cls; return e; }
 
 function liveRow(r){
@@ -287,7 +299,7 @@ function liveRow(r){
   if (isRecent(r[5])) a.querySelector(".flag").innerHTML = '<b>New</b>';
   a.querySelector(".name b").textContent = r[1];
   a.querySelector(".ver").textContent = "v" + r[3];
-  a.querySelector(".date").textContent = r[2];
+  a.querySelector(".date").textContent = formatIso(r[5]) || r[2];
   return a;
 }
 
