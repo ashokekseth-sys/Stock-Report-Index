@@ -402,6 +402,24 @@
     gap:70px;
     justify-content:center;
   }
+  .rev-history{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .rev-history-title{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:8px;
+  }
+  .rev-history-table{ border-collapse:collapse; font-size:13px; }
+  .rev-history-table th{
+    text-align:left; padding:2px 28px 4px 0; font-size:10px; letter-spacing:1px;
+    text-transform:uppercase; color:var(--muted); font-weight:600;
+    border-bottom:1px solid #e2e6ee;
+  }
+  .rev-history-table td{ padding:4px 28px 4px 0; color:var(--navy); font-weight:600; }
+  .rev-history-table td.rev-note{ color:var(--muted); font-weight:400; }
   .meta-item{
     text-align:center;
   }
@@ -485,8 +503,15 @@
     <div class="meta-block" style="display:block">
       <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
       <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">8 September 2026</span>
-    <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600;margin-left:20px">Report Version</span>
-    <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">2</span>
+    </div>
+
+    <div class="rev-history">
+      <div class="rev-history-title">Revision History</div>
+      <table class="rev-history-table">
+        <tr><th>Date</th><th>Version</th></tr>
+        <tr><td>30 Jul 2026</td><td class="rev-note">v1 &mdash; Original</td></tr>
+        <tr><td>8 Sep 2026</td><td class="rev-note">v2 &mdash; Updated</td></tr>
+      </table>
     </div>
   </div>
 
