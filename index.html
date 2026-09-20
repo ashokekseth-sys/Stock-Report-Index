@@ -129,6 +129,8 @@
   .name{min-width:0;}
   .name b{display:block;font-weight:600;font-size:15px;color:var(--ink-strong);
     overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .name .note{display:block;font-size:11px;font-weight:400;color:var(--muted);
+    margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
   .col{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;
     text-align:right;white-space:nowrap;}
   /* left gutter: reserved always, filled only while a report is <3 days old */
@@ -156,6 +158,7 @@
     .head,.row{grid-template-columns:28px minmax(0,1fr) 40px 80px 10px;gap:7px;}
     .row{padding:11px 11px;}
     .name b{font-size:14px;}
+    .name .note{font-size:10px;}
     .col{font-size:11.5px;}
     .go{font-size:14px;}
     .pdfonly{font-size:8.5px;letter-spacing:.04em;}
@@ -163,6 +166,7 @@
   @media (max-width:360px){
     .head,.row{grid-template-columns:26px minmax(0,1fr) 36px 72px 8px;gap:5px;}
     .name b{font-size:13px;}
+    .name .note{display:none;}
     .col{font-size:10.5px;}
   }
   @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
@@ -221,38 +225,41 @@
 </div>
 
 <script>
-// [ticker, title, report date, report version, filename, last-updated ISO date]
+// [ticker, title, report date, report version, filename, last-updated ISO date, what-changed note]
+// The note is shown only for reports with a real update (version > 1); left "" for first-time (v1) builds.
+// It persists across index rebuilds until that specific report gets a newer update — do not blank it out
+// on a routine refresh, only replace it when v(n+1) actually ships.
 var LIVE = [
-  ["URBANCO", "Urban Company Limited", "20 Sep 2026", "1", "URBANCO_Equity_Report.html", "2026-09-20"],
-  ["QPOWER", "Quality Power Electrical Equipments Limited", "14 Sep 2026", "1", "QPOWER_Equity_Report.html", "2026-09-14"],
-  ["MNM", "Mahindra & Mahindra Limited", "12 Sep 2026", "1", "MNM_Equity_Report.html", "2026-09-12"],
-  ["ANTHEM", "Anthem Biosciences Limited", "11 Sep 2026", "2", "ANTHEM_Equity_Report.html", "2026-09-11"],
-  ["ACUTAAS", "Acutaas Chemicals Limited", "11 Sep 2026", "1", "ACUTAAS_Equity_Report.html", "2026-09-11"],
-  ["TDPOWER", "TD Power Systems Limited", "11 Sep 2026", "3", "TDPOWER_Equity_Report.html", "2026-09-13"],
-  ["ADANIPORTS","Adani Ports and Special Economic Zone Limited","9 Sep 2026","1","ADANIPORTS_Equity_Report.html","2026-09-09"],
-  ["NALCO", "National Aluminium Company Limited", "9 Sep 2026", "1", "NALCO_Equity_Report.html", "2026-09-09"],
-  ["AEROFLEX", "Aeroflex Industries Limited", "8 Sep 2026", "1", "AEROFLEX_Equity_Report.html", "2026-09-08"],
-  ["MOTHERSON","Samvardhana Motherson International Limited","8 Sep 2026","1","MOTHERSON_Equity_Report.html","2026-09-08"],
-  ["CPPLUS","Aditya Infotech Limited","8 Sep 2026","3","CPPLUS_Equity_Report.html","2026-09-08"],
-  ["PARAS","Paras Defence and Space Technologies Limited","8 Sep 2026","2","PARAS_Equity_Report.html","2026-09-11"],
-  ["APOLLO","Apollo Micro Systems Limited","8 Sep 2026","1","APOLLO_Equity_Report.html","2026-09-08"],
-  ["MANORAMA","Manorama Industries Limited","8 Sep 2026","1","MANORAMA_Equity_Report.html","2026-09-08"],
-  ["SOLARINDS","Solar Industries India Limited","7 Sep 2026","3","SOLARINDS_Equity_Report.html","2026-09-15"],
-  ["PINELABS","Pine Labs Limited","7 Sep 2026","1","PINELABS_Equity_Report.html","2026-09-07"],
-  ["KSHINTL","KSH International Limited","6 Sep 2026","1","KSHINTL_Equity_Report.html","2026-09-06"],
-  ["PTCIL","PTC Industries Limited","30 Aug 2026","1","PTCIL_Equity_Report.html","2026-08-30"],
-  ["CFF","CFF Fluid Control Limited","24 Aug 2026","1","CFF_Equity_Report.html","2026-08-24"],
-  ["YASHHV","Yash Highvoltage Limited","20 Aug 2026","1","YASHHV_Equity_Report.html","2026-08-20"],
-  ["VESUVIUS","Vesuvius India Limited","18 Aug 2026","1","VESUVIUS_Equity_Report.html","2026-08-18"],
-  ["BALUFORGE","Balu Forge Industries Limited","18 Aug 2026","2","BALUFORGE_Equity_Report.html","2026-09-08"],
-  ["MAXGROW","Maxgrow India Limited","18 Aug 2026","2","MAXGROW_Equity_Report.html","2026-09-07"],
-  ["PREMEXPLN","Premier Explosives Limited","15 Aug 2026","1","PREMEXPLN_Equity_Report.html","2026-08-15"],
-  ["VAML","Vedanta Aluminium Metal Limited","10 Aug 2026","1","VAML_Equity_Report.html","2026-08-10"],
-  ["SHRIRAMFIN","Shriram Finance Limited","6 Aug 2026","1","SHRIRAMFIN_Equity_Report.html","2026-08-06"],
-  ["AZAD","Azad Engineering Limited","4 Aug 2026","3","AZAD_Equity_Report.html","2026-09-08"],
-  ["PRIVISCL","Privi Speciality Chemicals Limited","1 Aug 2026","2","PRIVISCL_Equity_Report.html","2026-09-08"],
-  ["POWERINDIA","Hitachi Energy India Limited","30 Jul 2026","2","POWERINDIA_Equity_Report.html","2026-09-08"],
-  ["MTARTECH","MTAR Technologies Limited","29 Jul 2026","2","MTAR_Equity_Report.html","2026-09-08"]
+  ["URBANCO", "Urban Company Limited", "20 Sep 2026", "1", "URBANCO_Equity_Report.html", "2026-09-20", ""],
+  ["QPOWER", "Quality Power Electrical Equipments Limited", "14 Sep 2026", "1", "QPOWER_Equity_Report.html", "2026-09-14", ""],
+  ["MNM", "Mahindra & Mahindra Limited", "12 Sep 2026", "1", "MNM_Equity_Report.html", "2026-09-12", ""],
+  ["ANTHEM", "Anthem Biosciences Limited", "11 Sep 2026", "2", "ANTHEM_Equity_Report.html", "2026-09-11", "GLP-1/pipeline detail, legal & governance findings, new peer data"],
+  ["ACUTAAS", "Acutaas Chemicals Limited", "11 Sep 2026", "1", "ACUTAAS_Equity_Report.html", "2026-09-11", ""],
+  ["TDPOWER", "TD Power Systems Limited", "11 Sep 2026", "3", "TDPOWER_Equity_Report.html", "2026-09-13", "Promoter allotment confirmed + CANSLIM read-through"],
+  ["ADANIPORTS","Adani Ports and Special Economic Zone Limited","9 Sep 2026","1","ADANIPORTS_Equity_Report.html","2026-09-09", ""],
+  ["NALCO", "National Aluminium Company Limited", "9 Sep 2026", "1", "NALCO_Equity_Report.html", "2026-09-09", ""],
+  ["AEROFLEX", "Aeroflex Industries Limited", "8 Sep 2026", "1", "AEROFLEX_Equity_Report.html", "2026-09-08", ""],
+  ["MOTHERSON","Samvardhana Motherson International Limited","8 Sep 2026","1","MOTHERSON_Equity_Report.html","2026-09-08", ""],
+  ["CPPLUS","Aditya Infotech Limited","8 Sep 2026","3","CPPLUS_Equity_Report.html","2026-09-08", "Certified-model counts corrected, market data added"],
+  ["PARAS","Paras Defence and Space Technologies Limited","8 Sep 2026","2","PARAS_Equity_Report.html","2026-09-11", "17th AGM voting results added"],
+  ["APOLLO","Apollo Micro Systems Limited","8 Sep 2026","1","APOLLO_Equity_Report.html","2026-09-08", ""],
+  ["MANORAMA","Manorama Industries Limited","8 Sep 2026","1","MANORAMA_Equity_Report.html","2026-09-08", ""],
+  ["SOLARINDS","Solar Industries India Limited","7 Sep 2026","3","SOLARINDS_Equity_Report.html","2026-09-15", ""],
+  ["PINELABS","Pine Labs Limited","7 Sep 2026","1","PINELABS_Equity_Report.html","2026-09-07", ""],
+  ["KSHINTL","KSH International Limited","6 Sep 2026","1","KSHINTL_Equity_Report.html","2026-09-06", ""],
+  ["PTCIL","PTC Industries Limited","30 Aug 2026","1","PTCIL_Equity_Report.html","2026-08-30", ""],
+  ["CFF","CFF Fluid Control Limited","24 Aug 2026","1","CFF_Equity_Report.html","2026-08-24", ""],
+  ["YASHHV","Yash Highvoltage Limited","20 Aug 2026","1","YASHHV_Equity_Report.html","2026-08-20", ""],
+  ["VESUVIUS","Vesuvius India Limited","18 Aug 2026","1","VESUVIUS_Equity_Report.html","2026-08-18", ""],
+  ["BALUFORGE","Balu Forge Industries Limited","18 Aug 2026","2","BALUFORGE_Equity_Report.html","2026-09-08", "Technical + shareholding refresh"],
+  ["MAXGROW","Maxgrow India Limited","18 Aug 2026","2","MAXGROW_Equity_Report.html","2026-09-07", "Data refresh"],
+  ["PREMEXPLN","Premier Explosives Limited","15 Aug 2026","1","PREMEXPLN_Equity_Report.html","2026-08-15", ""],
+  ["VAML","Vedanta Aluminium Metal Limited","10 Aug 2026","1","VAML_Equity_Report.html","2026-08-10", ""],
+  ["SHRIRAMFIN","Shriram Finance Limited","6 Aug 2026","1","SHRIRAMFIN_Equity_Report.html","2026-08-06", ""],
+  ["AZAD","Azad Engineering Limited","4 Aug 2026","3","AZAD_Equity_Report.html","2026-09-08", "Technical section refresh"],
+  ["PRIVISCL","Privi Speciality Chemicals Limited","1 Aug 2026","2","PRIVISCL_Equity_Report.html","2026-09-08", "Rebuilt on locked template"],
+  ["POWERINDIA","Hitachi Energy India Limited","30 Jul 2026","2","POWERINDIA_Equity_Report.html","2026-09-08", "Rebuilt on locked template"],
+  ["MTARTECH","MTAR Technologies Limited","29 Jul 2026","2","MTAR_Equity_Report.html","2026-09-08", "Rebuilt on locked template"]
 ];
 
 var ARCHIVE = [
@@ -303,12 +310,13 @@ function liveRow(r){
   a.dataset.s = (r[0]+" "+r[1]).toLowerCase();
   a.innerHTML =
     '<span class="flag"></span>' +
-    '<span class="name"><b></b></span>' +
+    '<span class="name"><b></b><small class="note"></small></span>' +
     '<span class="col ver"></span>' +
     '<span class="col date"></span>' +
     '<span class="go" aria-hidden="true">&rsaquo;</span>';
   if (isRecent(r[5])) a.querySelector(".flag").innerHTML = '<b>New</b>';
   a.querySelector(".name b").textContent = r[1];
+  if (r[6]) a.querySelector(".name .note").textContent = r[6];
   a.querySelector(".ver").textContent = "v" + r[3];
   a.querySelector(".date").textContent = formatIso(r[5]) || r[2];
   return a;
