@@ -1,0 +1,955 @@
+<!-- TEMPLATE VERSION: v6 (8 Sep 2026) — Replaced the single "Report Version" cover-page field with a growable "Revision History" table (Date | Version columns, one row per version so far, e.g. "29 Jul 2026 | v1 — Original", "8 Sep 2026 | v2 — Updated") — per user instruction "because there will be more changes": a fixed two-line display would not have scaled to a 3rd/4th future refresh, a table does. Sits directly below the "Generated On" meta-block. On any future refresh, append one new <tr> row with that refresh's date and next integer version — never overwrite/remove prior rows. -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Siemens Energy India Limited — Equity Research Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#ffffff; font-family:'Source Sans 3',Arial,sans-serif; color:#2a3342; font-size:12.5px; line-height:1.5; }
+  .page-wrap { background:#e9edf3; display:flex; justify-content:center; padding:24px 12px 40px; }
+  .page { width:1400px; max-width:100%; margin:0; background:#fff; box-shadow:0 6px 24px rgba(26,42,74,0.18); }
+  /* header */
+  .hdr { background:linear-gradient(135deg,#101c36 0%,#1a2a4a 55%,#2b4570 100%); border-bottom:4px solid; border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1; color:#fff; padding:16px 26px 13px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .hdr .meta { font-size:10.5px; letter-spacing:0.6px; color:#9fb0cf; text-transform:uppercase; }
+  .hdr h1 { font-size:26px; font-weight:900; letter-spacing:0.2px; margin:2px 0 3px; }
+  .hdr .tagline { font-size:11.5px; color:#c7d2e8; }
+  .hdr .pricebox { text-align:right; }
+  .hdr .price { font-size:26px; font-weight:900; }
+  .hdr .chg { color:#ff8a80; font-weight:700; font-size:14px; }
+  .hdr .sub { font-size:10.5px; color:#9fb0cf; margin-top:3px; }
+  .tagstrip { display:flex; gap:0; border-bottom:1px solid #dde2ea; }
+  .tagstrip div { flex:1; text-align:center; padding:6px 4px; font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; border-right:1px solid #dde2ea; }
+  .tagstrip div:last-child { border-right:none; }
+  /* sections */
+  .sec { padding:16px 26px 20px; border-bottom:1px solid #e4e8ef; }
+  .sec-title { display:flex; align-items:center; gap:9px; margin-bottom:12px; padding-bottom:7px; border-bottom:2px solid #f0b429; }
+  .sec-title .num { background:linear-gradient(135deg,#f7b733,#e67e22); color:#1a2a4a; font-size:11px; font-weight:900; padding:2px 7px; border-radius:3px; }
+  .sec-title h2 { font-size:14.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#1a2a4a; }
+  .microhead { font-size:10px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#b07716; margin:10px 0 6px; }
+  /* generic table */
+  table.t { width:100%; border-collapse:collapse; }
+  table.t th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase; padding:6px 9px; text-align:right; font-weight:700; }
+  table.t th:first-child { text-align:left; }
+  table.t td { padding:5.5px 9px; border-bottom:1px solid #edf0f5; text-align:right; font-size:12px; }
+  table.t td:first-child { text-align:left; font-weight:600; }
+  table.t tr:nth-child(even) td { background:#f8f9fb; }
+  .pos { color:#2e7d32; font-weight:700; } .neg { color:#c62828; font-weight:700; }
+  .warn { color:#f57f17; font-weight:700; }
+  /* tiles */
+  .tiles { display:flex; gap:10px; }
+  .tile { flex:1; border:1px solid #dde2ea; border-top:3px solid #2b4570; border-radius:6px; padding:9px 12px; background:linear-gradient(180deg,#fdfefe,#f7f9fc); }
+  .tile .lab { font-size:9.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#8a94a6; }
+  .tile .val { font-size:19px; font-weight:900; margin:2px 0 1px; color:#1a2a4a; }
+  .tile .note { font-size:10.3px; color:#5a6475; line-height:1.35; }
+  /* callout notes */
+  .notebox { border-left:4px solid #f9a825; background:#fffbe8; padding:9px 13px; font-size:11.8px; margin-top:11px; border-radius:0 5px 5px 0; }
+  .notebox.green { border-left-color:#2e7d32; background:#f0f7f0; }
+  .notebox.red { border-left-color:#c62828; background:#fdf0f0; }
+  .notebox.blue { border-left-color:#1565c0; background:#eef4fc; }
+  .badge { display:inline-block; font-size:9.5px; font-weight:900; letter-spacing:0.5px; padding:1.5px 7px; border-radius:9px; text-transform:uppercase; vertical-align:middle; }
+  .new-tag { display:inline-block; font-size:9px; font-weight:900; letter-spacing:0.7px; text-transform:uppercase; background:#f0b429; color:#3d2c00; padding:2px 6px; border-radius:3px; line-height:1.2; vertical-align:middle; margin-left:6px; }
+  .b-bull { background:#e8f5e9; color:#2e7d32; } .b-bear { background:#ffebee; color:#c62828; }
+  .b-neut { background:#e3f2fd; color:#1565c0; } .b-warn { background:#fff9c4; color:#f57f17; }
+  .cols { display:flex; gap:20px; }
+  .panel { flex:1; border:1px solid #dde2ea; border-radius:6px; padding:12px 15px; }
+  .panel .plab { font-size:9.5px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#8a94a6; margin-bottom:3px; }
+  .panel .pval { font-size:21px; font-weight:900; }
+  .chartcap { font-size:10px; color:#8a94a6; margin-top:5px; line-height:1.4; }
+  .imgwrap img { width:100%; border-radius:5px; border:1px solid #23304a; display:block; }
+  .footer-blue { border-top:3px solid #f0b429; background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570); color:#fff; text-align:center; padding:10px 16px; font-size:11px; letter-spacing:0.4px; }
+  .disclaim { font-size:9.8px; color:#8a94a6; padding:12px 26px; line-height:1.5; }
+  table.t[style*='--pad'] td { padding:9px; }
+  .compact { padding:13px 26px 14px; }
+  .compact table.t td { padding:3.5px 8px; font-size:11.3px; }
+  .compact table.t th { padding:5px 8px; }
+  .compact .notebox { padding:7px 11px; font-size:10.8px; margin-top:0; }
+  .compact .microhead { margin:8px 0 4px; }
+  .compact .tile { padding:6px 10px; }
+  .compact .tile .val { font-size:15.5px; margin:1px 0 0; }
+  .compact .tile .note { font-size:9.6px; }
+  .compact .cols { gap:14px; }
+  table.fit { width:100%; table-layout:fixed; }
+  table.fit td, table.fit th { padding:3.5px 11px; white-space:nowrap; overflow:hidden; }
+  table.fit th:first-child, table.fit td:first-child { width:24%; }
+  .krow { display:flex; justify-content:space-between; align-items:baseline; gap:8px; border-bottom:1px solid #edf0f5; padding:5px 2px; }
+  .krow .klab { color:#8a94a6; font-weight:900; font-size:9.3px; text-transform:uppercase; letter-spacing:0.5px; flex:0 0 auto; }
+  .krow .kval { font-weight:900; color:#1a2a4a; font-size:12.5px; text-align:right; }
+  .krow .kval small { display:block; font-weight:600; color:#8a94a6; font-size:9.3px; }
+  .mininote { font-size:10px; color:#5a6475; line-height:1.45; margin-top:8px; padding:7px 9px; border-radius:4px; }
+  table.peer { width:100%; border-collapse:collapse; }
+  table.peer th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:8.6px; letter-spacing:0.3px; text-transform:uppercase; padding:4px 3px; text-align:right; }
+  table.peer th:first-child { text-align:left; }
+  table.peer td { padding:4px 3px; border-bottom:1px solid #edf0f5; text-align:right; font-size:10px; }
+  table.peer td:first-child { text-align:left; font-weight:700; }
+
+  /* ===================== RESPONSIVE / MOBILE ===================== */
+  .mobile-jump { display:none; }
+  @media (max-width: 860px) {
+    html { -webkit-text-size-adjust:100%; }
+    body { overflow-x:hidden; }
+    .page { width:100% !important; max-width:100% !important; }
+    .sec, .hdr { padding-left:16px !important; padding-right:16px !important; }
+    .disclaim { padding-left:16px !important; padding-right:16px !important; }
+    .footer-blue { padding-left:16px !important; padding-right:16px !important; }
+
+    .hdr { flex-direction:column !important; align-items:stretch !important; gap:10px; }
+    .hdr .pricebox { text-align:left !important; }
+
+    .tagstrip { flex-direction:column !important; }
+    .tagstrip div { border-right:none !important; border-bottom:1px solid #dde2ea; text-align:left !important; padding:8px 4px !important; }
+    .tagstrip div:last-child { border-bottom:none; }
+
+    .mobile-jump {
+      display:flex !important; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      position:sticky; top:0; z-index:20; background:#1a2a4a; padding:10px 12px;
+      border-bottom:3px solid #f0b429; white-space:nowrap; scrollbar-width:none;
+    }
+    .mobile-jump::-webkit-scrollbar { display:none; }
+    .mobile-jump a {
+      color:#c7d2e8; font-size:11.5px; font-weight:700; text-decoration:none;
+      padding:6px 10px; border-radius:14px; background:rgba(255,255,255,0.08); flex:0 0 auto;
+    }
+    .sec-title { scroll-margin-top:56px; }
+
+    .cols { flex-wrap:wrap !important; }
+    .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
+    .cols { row-gap:16px; }
+
+    .tiles { flex-wrap:wrap !important; row-gap:8px; }
+    .tile { flex:1 1 45% !important; min-width:0 !important; }
+
+    div[style*="flex:1 1 44%"] { flex:1 1 100% !important; }
+    div[style*="flex:1 1 30%"] { flex:1 1 45% !important; }
+
+    table.t:not(.prose), table.fit, table.peer {
+      display:table !important; width:100% !important; table-layout:fixed !important;
+      white-space:normal !important; overflow-x:visible !important; max-width:100%;
+    }
+    table.t:not(.prose) td, table.t:not(.prose) th,
+    table.fit td, table.fit th,
+    table.peer td, table.peer th { white-space:normal !important; word-wrap:break-word; padding:4px 3px !important; font-size:9.6px !important; }
+    table.peer td:first-child, table.peer th:first-child { width:26% !important; }
+    table.prose { display:block !important; }
+    table.prose tr:first-child { display:none !important; }
+    table.prose tr { display:block !important; padding:10px 0 !important; border-bottom:1px solid #e4e8ef; }
+    table.prose tr:last-child { border-bottom:none !important; }
+    table.prose td { display:inline !important; padding:0 !important; border:none !important; text-align:left !important; white-space:normal !important; width:auto !important; word-wrap:break-word; }
+    table.prose td:first-child { font-weight:900; font-size:13px; color:#1a2a4a; }
+    table.prose td:nth-child(2) { margin-left:8px; }
+    table.prose td:nth-child(3) { display:block !important; margin-top:6px; font-size:12.5px; line-height:1.55; color:#2a3342; }
+
+    .metric-strip { flex-wrap:wrap !important; }
+    .metric-strip > div { flex:1 1 50% !important; box-sizing:border-box; border-bottom:1px solid #e7ebf1 !important; }
+    .metric-strip > div:nth-child(even) { border-right:none !important; }
+
+    .krow { flex-wrap:wrap; align-items:flex-start !important; }
+    .krow .klab { flex:1 1 auto !important; }
+    .krow .kval { display:contents !important; }
+    .krow .kval small { flex:1 1 100% !important; order:3; display:block !important; text-align:left !important; margin-top:3px !important; }
+
+    h1 { font-size:21px !important; }
+    .price { font-size:22px !important; }
+  }
+
+  @media (max-width: 480px) {
+    .tile { flex:1 1 100% !important; }
+    div[style*="flex:1 1 45%"] { flex:1 1 100% !important; }
+  }
+</style>
+</head>
+<body>
+<style>
+  :root{
+    --navy:#1a2a4a;
+    --navy-2:#243a63;
+    --gold:#c9a24b;
+    --ink:#1a2a4a;
+    --muted:#5c6b85;
+    --hair:#dde2ea;
+    --page-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .cover-wrap{
+    font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    background:#e9edf3;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px;
+  }
+  .cover-page{
+    width:1400px;
+    max-width:100%;
+    min-height:900px;
+    background:var(--page-bg);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 6px 24px rgba(26,42,74,0.18);
+    overflow:hidden;
+  }
+  .top-band{
+    height:14px;
+    background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--gold) 100%);
+    flex-shrink:0;
+  }
+  .brand-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:26px 56px 0 56px;
+    flex-shrink:0;
+  }
+  .brand-bar .doc-type{
+    font-size:12px;
+    letter-spacing:3px;
+    color:var(--muted);
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .brand-bar .doc-date{
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.4px;
+  }
+  .main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    padding:36px 60px 40px 60px;
+  }
+  .logo-wrap{
+    width:auto;
+    max-width:92%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:44px;
+  }
+  .logo-wrap img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .text-logo{
+    font-size:clamp(20px, 6.2vw, 40px);
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--navy);
+    white-space:normal;
+    word-break:break-word;
+    text-align:center;
+    line-height:1.15;
+  }
+  .text-logo span{ color:var(--gold); }
+  .kicker{
+    font-size:15px;
+    letter-spacing:6px;
+    color:var(--gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  h1.report-title{
+    font-size:46px;
+    letter-spacing:1px;
+    color:var(--navy);
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.15;
+  }
+  .divider{
+    width:120px;
+    height:3px;
+    background:var(--gold);
+    margin:26px 0;
+  }
+  .company-name{
+    font-size:34px;
+    font-weight:700;
+    color:var(--navy);
+    letter-spacing:0.3px;
+  }
+  .ticker-row{
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 14px;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .ticker-chip{ text-align:center; }
+  .ticker-chip{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:var(--navy);
+    background:#eef1f7;
+    border:1px solid var(--hair);
+    border-radius:4px;
+    padding:6px 14px;
+  }
+  .sector-line{
+    margin-top:28px;
+    font-size:14px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+    font-style:italic;
+  }
+  .meta-block{
+    margin-top:64px;
+    display:flex;
+    gap:70px;
+    justify-content:center;
+  }
+  .rev-history{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .rev-history-title{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:8px;
+  }
+  .rev-history-table{ border-collapse:collapse; font-size:13px; }
+  .rev-history-table th{
+    text-align:left; padding:2px 28px 4px 0; font-size:10px; letter-spacing:1px;
+    text-transform:uppercase; color:var(--muted); font-weight:600;
+    border-bottom:1px solid #e2e6ee;
+  }
+  .rev-history-table td{ padding:4px 28px 4px 0; color:var(--navy); font-weight:600; }
+  .rev-history-table td.rev-note{ color:var(--muted); font-weight:400; }
+  .meta-item{
+    text-align:center;
+  }
+  .meta-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .meta-value{
+    font-size:16px;
+    color:var(--navy);
+    font-weight:700;
+  }
+  .prepared-by{
+    margin-top:60px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+  }
+  .prepared-by strong{
+    color:var(--navy);
+  }
+  .footer{
+    flex-shrink:0;
+    background:#ffffff;
+    border-top:1px solid var(--hair);
+    padding:16px 56px;
+    text-align:center;
+  }
+  .footer p{
+    font-size:10.5px;
+    line-height:1.6;
+    color:#8992a6;
+    letter-spacing:0.2px;
+  }
+  .footer strong{
+    color:var(--muted);
+  }
+  @media (max-width: 860px) {
+    .footer { padding:14px 20px !important; text-align:left !important; }
+    .footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .main { padding-top:14px !important; padding-bottom:14px !important; }
+    .logo-wrap { margin-bottom:20px !important; }
+    .meta-block { margin-top:30px !important; }
+  }
+  .bottom-band{
+    height:8px;
+    background:var(--navy);
+    flex-shrink:0;
+  }
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+  <div class="top-band"></div>
+
+  <div class="brand-bar"></div>
+
+  <div class="main">
+    <div class="logo-wrap">
+      <div class="text-logo">SIEMENS <span>ENERGY</span></div>
+    </div>
+
+    <div class="kicker">Equity Research Report</div>
+    <h1 class="report-title">Siemens Energy India Limited</h1>
+
+    <div class="divider"></div>
+
+    <div class="ticker-row">
+      <div class="ticker-chip">NSE: ENRIN</div>
+      <div class="ticker-chip">BSE: 544390</div>
+      <div class="ticker-chip">Mkt Cap: &#8377;1,14,507 Cr</div>
+      <div class="ticker-chip">Master Score: B</div>
+    </div>
+    <div class="sector-line">Power Transmission &amp; Generation Equipment — South Asia Agency for the Siemens Energy Global Portfolio</div>
+
+    <div class="meta-block" style="display:block">
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
+      <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">25 September 2026</span>
+    </div>
+
+    <div class="rev-history">
+      <div class="rev-history-title">Revision History</div>
+      <table class="rev-history-table">
+        <tr><th>Date</th><th>Version</th></tr>
+        <tr><td>25 Sep 2026</td><td class="rev-note">v1 &mdash; Initial report</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p style="margin-bottom:4px;letter-spacing:0.5px;text-transform:uppercase;font-size:9.5px;color:#8a94a6">Confidential — For Educational Use</p>
+    <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
+  </div>
+
+  <div class="bottom-band"></div>
+</div>
+</div>
+
+
+<div class="page-wrap">
+<div class="page">
+
+  <!-- ================= HEADER ================= -->
+  <div class="hdr">
+    <div>
+      <div class="meta">BSE: 544390 &nbsp;·&nbsp; NSE: ENRIN &nbsp;·&nbsp; Power Transmission &amp; Generation Equipment &nbsp;·&nbsp; Exclusive South Asia Agency (India, Bhutan, Nepal, Sri Lanka, Maldives)</div>
+      <h1>Siemens Energy India Limited</h1>
+      <div class="tagline">Demerged from Siemens Ltd, listed 19 Jun 2025 &nbsp;·&nbsp; Functionally debt-free, first-ever dividend paid FY25 &nbsp;·&nbsp; Order book &#8377;19,331 Cr (+16.4% YoY) &nbsp;·&nbsp; Trading at a rich 76&ndash;77x TTM P/E on a &ldquo;rented&rdquo; brand-and-IP moat from the German parent</div>
+    </div>
+    <div class="pricebox">
+      <div class="price">&#8377;3,285.40 <span class="chg" style="color:#8bc34a">&#9650; +2.23%</span></div>
+      <div class="sub">Report date: 25 Sep 2026 &nbsp;|&nbsp; Mkt Cap: &#8377;1,14,507 Cr (MarketSmith) &nbsp;|&nbsp; Book Value/sh: &#8377;135 &nbsp;|&nbsp; MarketSmith Master Score: B</div>
+    </div>
+  </div>
+  <div class="tagstrip">
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Technical: Wave-2 correction at 61.8% fib / support 3,058</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Momentum: Daily flat (0v0) &middot; Hourly turning bullish (Buy 1)</div>
+    <div style="color:#c62828;background:#fdeef0">&#9679; Valuation: Rich (76&ndash;77x TTM P/E)</div>
+    <div style="color:#2e7d32;background:#ecf6ec">&#9679; First-Ever Dividend Paid (&#8377;4/sh, FY25)</div>
+    <div style="color:#2e7d32;background:#ecf6ec">&#9679; Order Book &#8377;19,331 Cr (+16.4% YoY)</div>
+  </div>
+
+  <nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Moat</a><a href="#sec03">Event</a><a href="#sec04">Sentiment</a><a href="#sec05">Sector Size</a><a href="#sec06">Shareholding</a><a href="#sec07">Performance</a><a href="#sec08">Financials</a><a href="#sec09">Ratios</a><a href="#sec10">Management</a><a href="#sec11">Guidance</a><a href="#sec12">Consensus</a><a href="#sec13">Volume</a><a href="#sec14">Sector Rotation</a><a href="#sec15">Peers</a><a href="#sec16">Risk</a><a href="#sec17">Technical Ratings</a><a href="#sec18">Elliott Wave</a><a href="#sec19">Recommendation</a></nav>
+
+  <!-- ================= 01 COMPANY OVERVIEW ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec01"><span class="num">01</span><h2>Company Overview</h2></div>
+    <div class="cols">
+      <div style="flex:1.4">
+        <div class="microhead">What They Do</div>
+        <p>Siemens Energy India Limited (SEIL) was demerged from Siemens Limited's Energy Business — incorporated as a wholly-owned subsidiary of Siemens Ltd on <b>7 Feb 2024</b>, with the NCLT-sanctioned Scheme of Arrangement effective <b>25 Mar 2025</b> (appointed date <b>1 Mar 2025</b> per ICICI Direct's Sep-2025 report — <b>a minor appointed-vs-effective date discrepancy flagged, not resolved</b>). Siemens Ltd shareholders received a 1:1 share entitlement (record date 7 Apr 2025), and SEIL listed on the NSE and BSE on <b>19 Jun 2025</b>, hitting the 5% upper circuit on its trading debut.</p>
+        <p style="margin-top:7px">SEIL holds the <b>exclusive South Asia rights</b> (India, Bhutan, Nepal, Sri Lanka, Maldives) to the entire global Siemens Energy portfolio via a <b>March 2020 Agency and Distributorship Agreement</b>. Its business spans two roughly equal halves as of FY24 (Oct23&ndash;Sep24): <b>Power Transmission (~50%)</b> and <b>Power Generation (~50%)</b>, with services contributing ~25% of total revenue.</p>
+        <div class="notebox red" style="margin-top:10px"><b>Fiscal-year convention — read carefully:</b> SEIL's own investor-relations page confirms its fiscal year runs <b>October&ndash;September</b>, not the calendar/April&ndash;March convention many news outlets default to. This report uses SEIL's own Oct&ndash;Sep labeling throughout. A Business Standard piece was found mislabeling the Jan&ndash;Mar 2026 quarter as &ldquo;Q4 FY26&rdquo; when by SEIL's own convention it is <b>Q2 FY26</b>; a &ldquo;Q1 FY26&rdquo; headline elsewhere was actually <b>Q3 FY26</b>. Treat any externally-sourced quarter label with caution and cross-check against the Oct&ndash;Sep calendar used here.</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Revenue Mix vs Order-Book Mix — The Pivot</div>
+        <div style="border:1px solid #dde2ea;border-radius:6px;padding:12px 14px;background:#f8f9fb">
+          <div style="font-size:10.3px;font-weight:900;letter-spacing:0.5px;text-transform:uppercase;color:#8a94a6;margin-bottom:4px">Revenue Mix — FY24 (carve-out)</div>
+          <div style="display:flex;height:22px;border-radius:4px;overflow:hidden;margin-bottom:3px">
+            <div style="width:50%;background:#1a2a4a;color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center">Transmission 50%</div>
+            <div style="width:50%;background:#8fa3c4;color:#1a2a4a;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center">Generation 50%</div>
+          </div>
+          <div style="font-size:10.3px;font-weight:900;letter-spacing:0.5px;text-transform:uppercase;color:#8a94a6;margin:12px 0 4px">Unexecuted Order Backlog — Jun 2026</div>
+          <div style="display:flex;height:22px;border-radius:4px;overflow:hidden">
+            <div style="width:70%;background:#e67e22;color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center">Transmission ~70%</div>
+            <div style="width:30%;background:#f0c896;color:#1a2a4a;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center">Gen ~30%</div>
+          </div>
+          <p style="font-size:10.8px;margin-top:9px">The pipeline has skewed hard toward transmission — consistent with India's grid-capex supercycle (Green Energy Corridor Phase II, HVDC pipeline) pulling disproportionately more orders than the historic 50/50 revenue split would suggest.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:12px">
+      <div style="flex:1">
+        <div class="notebox blue"><b>Key Competitive Advantage (full detail in &sect;02):</b> Sole South Asia distribution rights to Siemens Energy AG's global technology portfolio, backed by eight running manufacturing-technology license agreements from the German parent group — but both the brand and the core IP are <b>licensed in, not owned</b>. TTM revenue &#8377;9,436 Cr, TTM PAT &#8377;1,488 Cr.</div>
+      </div>
+      <div style="flex:1">
+        <div class="notebox"><b>Nifty Next 50 inclusion</b> effective ~30 Sep 2025, roughly three months after listing — a passive-flow tailwind alongside the FII accumulation discussed in &sect;06.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 02 COMPETITIVE ADVANTAGE (MOAT) ANALYSIS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec02"><span class="num">02</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
+    <table class="t prose">
+      <tr><th style="text-align:left">Dimension</th><th>Rating</th><th style="text-align:left">Commentary</th></tr>
+      <tr><td style="text-align:left">Brand Strength</td><td><span class="badge b-bear">Rented</span></td><td style="text-align:left">SEIL does <b>not own</b> its brand — it operates under a non-exclusive, non-transferable, royalty-bearing sub-license from Siemens AG (11 Feb 2025 Trademark and Name Use Sub-License Agreement). Every investor document footnotes &ldquo;Siemens Energy is a trademark licensed by Siemens AG,&rdquo; and the company's own risk factors flag reputational spillover risk from unrelated Siemens Group/Siemens Energy Group news. SEIL's own commissioned industry SWOT self-admits: <i>&ldquo;German brands are more expensive than locally available equipment in India&rdquo;</i> — i.e. no cost-based pricing power; it competes on technology/quality at a premium.</td></tr>
+      <tr><td style="text-align:left">Network Effects</td><td><span class="badge b-warn">Weak / Not Classic</span></td><td style="text-align:left">Absent in the classic sense. There is a modest, unquantified installed-base service/aftermarket annuity (retrofit, life-extension, digitalization services recur over a grid asset's multi-decade life) — best treated as a <b>switching-cost dynamic</b>, not a true network effect.</td></tr>
+      <tr><td style="text-align:left">Switching Costs</td><td><span class="badge b-bull">Strong</span></td><td style="text-align:left">The strongest moat dimension. Once specified into a utility/grid asset (multi-decade life), spares/retrofits/service naturally flow back to the OEM. SEIL's own commissioned Frost&amp;Sullivan-style industry report cites market-entry barriers: high capital costs (&#8377;6&ndash;8 Cr/MW for coal plants), scale, technology capability, patents, brand, and complex distribution/after-sales-service networks protecting incumbents. <b>No specific vendor-requalification cycle length is publicly disclosed</b> — stated as a genuine data gap, not an estimate.</td></tr>
+      <tr><td style="text-align:left">Cost Advantage</td><td><span class="badge b-bear">Negative</span></td><td style="text-align:left">SEIL explicitly self-discloses it is the <b>higher-cost, not lower-cost</b>, option versus local/BHEL competition. Chinese transmission-equipment makers (Dongfang, Harbin, Shanghai Electric) are commonly cited externally as emerging low-cost entrants but are <b>not mentioned anywhere in SEIL's own listing-disclosure competitor analysis</b> — a gap between market commentary and company self-disclosure, flagged and left unresolved.</td></tr>
+      <tr><td style="text-align:left">Patents / Proprietary Tech</td><td><span class="badge b-bear">Rented — The Key Finding</span></td><td style="text-align:left">SEIL's manufacturing technology is <b>licensed in</b> from the Siemens Energy Group via <b>eight separate running license/technical-assistance agreements</b> (industrial steam turbines; bushings/instrument transformers; circuit breakers; generators &amp; steam turbines; transformers &amp; reactors; three separate switchgear agreements) &mdash; several with <b>no fixed expiry or automatic perpetual renewal</b>, all non-exclusive/non-transferable/non-sublicensable, with royalty flowing to Germany indefinitely. No SEIL-specific patent count or R&amp;D-spend ratio is disclosed (the only patent figure found in research, 543, belongs to peer <b>BHEL</b>, not SEIL — not conflated here). License fees paid to Siemens AG + Siemens Energy Global: <b>&#8377;619mn and &#8377;385mn</b> across the two demerger-IM reporting periods (~1.3&ndash;1.5% of segment revenue each). Purchases of goods/services from the same entities: <b>&#8377;2,789mn and &#8377;1,410mn</b> (~5&ndash;6% of revenue). Related-party payables: &#8377;1,311mn (Sep24) &rarr; &#8377;1,625mn (Mar25).</td></tr>
+    </table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">What This Moat Does NOT Protect Against</div>
+        <p style="font-size:11.3px">A change in the German parent's own strategy, financial standing, or willingness to keep renewing these license and brand-sublicense agreements on current terms. Competitors who out-execute on service and local-content cost, since SEIL itself concedes it is not the low-cost option. Policy-cycle risk — the switching-cost moat only matters if new grid capex keeps flowing (see &sect;16).</p>
+      </div>
+      <div style="flex:1">
+        <div class="notebox blue" style="margin-top:0"><b>Bottom-line verdict &mdash; a &ldquo;rented&rdquo; moat:</b> SEIL's moat is substantially <b>rented, not owned</b>. Both the brand (royalty-bearing trademark sub-license) and the core manufacturing IP (eight open-ended, royalty-bearing license/TA agreements) flow from binding agreements with the German Siemens Energy Group, not from assets SEIL holds outright. This should be read together with the parent-dependency risk discussed in &sect;16 — it is the single most important through-line in this report.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 03 RECENT EVENTS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec03"><span class="num">03</span><h2>Recent Events — Q3 FY26 Results, TCS &ldquo;HyperVault&rdquo; Tie-up &amp; RPT Approval (Sep 2026)</h2></div>
+    <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px">
+      <div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Q3 FY26 Revenue (Apr&ndash;Jun'26)</div><div style="font-size:18px;font-weight:900;color:#2e7d32">&#8377;2,486 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">+39.3% YoY vs &#8377;1,785 Cr</div></div>
+      <div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Q3 FY26 EBITDA</div><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;586 Cr (24%)</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">vs &#8377;340 Cr (19%) a year ago</div></div>
+      <div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Q3 FY26 PAT</div><div style="font-size:18px;font-weight:900;color:#2e7d32">&#8377;441 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">+67.8% YoY vs &#8377;263 Cr</div></div>
+      <div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">MarketSmith Cross-Check</div><div style="font-size:18px;font-weight:900;color:#1a2a4a">EPS 12.38</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">+68% YoY, Sales +39% — corroborates</div></div>
+    </div>
+    <div class="cols">
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">Quarter-Labeling Flag — Cross-Source Data-Quality Note</div>
+        <div class="notebox red" style="margin-top:0">A sentiment-research pass on this stock cited figures as &ldquo;Q1 FY27&rdquo; (PAT &#8377;441 Cr +67.8% YoY, revenue &#8377;2,486 Cr +39.3% YoY) — these are <b>numerically identical</b> to the figures above for <b>Q3 FY26 (Apr&ndash;Jun 2026)</b> under SEIL's own Oct&ndash;Sep fiscal convention. This report uses <b>Q3 FY26</b> as the correct label and flags the mislabeling explicitly rather than silently picking one.</div>
+        <div class="notebox" style="margin-top:8px"><b>Entity-disambiguation flag:</b> some &ldquo;margin squeeze&rdquo; search results encountered during sentiment research actually refer to the sibling entity <b>Siemens Limited (NSE: SIEMENS)</b> — the demerged &ldquo;rump&rdquo; company — <b>not Siemens Energy India (ENRIN)</b>. Flagged here so the two entities' results are not conflated.</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">Other September 2026 Items</div>
+        <div class="krow"><span class="klab">TCS &ldquo;HyperVault&rdquo; AI Data-Centre Tie-up</span><span class="kval" style="font-size:11px">Date conflict: Apr vs Jul 2026<small>Different sources cite different launch dates — both stated, unresolved</small></span></div>
+        <div class="krow"><span class="klab">Large 400kV GIS Order</span><span class="kval" style="font-size:11px">Major solar park (unnamed)<small>Specific counterparty/value not independently confirmed</small></span></div>
+        <div class="krow"><span class="klab">RPT Approval — SEGG Transactions</span><span class="kval" style="font-size:11px">Up to &#8377;17,500mn sought FY25-26<small>22.4% of FY24-25 turnover, above 10% LODR threshold — shareholder approval obtained w/ independent arm's-length confirmation</small></span></div>
+        <div class="krow"><span class="klab">₹2,060 Cr Transformer Capex</span><span class="kval" style="font-size:11px">~30,000 MVA<small>Board-approved; commissioning 2030&ndash;2032</small></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 04 SENTIMENT & MOMENTUM ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec04"><span class="num">04</span><h2>Overall Sentiment &amp; Momentum Prediction</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border-top:3px solid #e67e22">
+        <div class="plab">Key Watch-Item</div>
+        <div class="pval" style="color:#e67e22;font-size:16px">&#9888; Rented Moat &amp; Valuation Dispersion</div>
+        <p style="font-size:11.3px;margin-top:5px">Brand and core manufacturing IP both flow from the German parent (&sect;02); P/E estimates range widely (76&ndash;100x+ depending on source/date). The June-2025 listing benchmark was a 60x target multiple (MOFSL, vs Hitachi Energy's then-74x) — Hitachi Energy has since been cited anywhere from ~151x to ~181x, a wide, directional-only range that shows precedent for further re-rating, not a guarantee of it.</p>
+      </div>
+      <div class="panel" style="border-top:3px solid #8a94a6">
+        <div class="plab">Overall Sentiment</div>
+        <div class="pval" style="color:#5a6475;font-size:16px">MIXED / BUY-LEANING</div>
+        <p style="font-size:11.3px;margin-top:5px">Analyst coverage broadened to ~15 analysts, genuinely split but Buy-leaning (8 Strong Buy / 1 Buy vs 3 Hold / 2 Sell / 1 Strong Sell), with rising price targets over time. Working against this: DII holding has declined (~9.1% &rarr; ~6.5% since listing) while FIIs accumulated (~4.8% &rarr; ~7.6&ndash;7.7%) — a genuine divergence in institutional conviction, not a one-sided story.</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#f0f7f0);border-top:3px solid #2e7d32">
+        <div class="plab">Momentum Prediction (MotiveWave, AKS Confluence [v166])</div>
+        <div class="pval" style="color:#2e7d32;font-size:16px">EARLY-STAGE REVERSAL ATTEMPT — NOT CONFIRMED</div>
+        <p style="font-size:11.3px;margin-top:5px">1H Trend Momentum has just flipped bullish (Buy 1 / Sell 0) while the <b>1D gauge remains flat (0 / 0)</b> — daily trend undecided, hourly ticking positive first. Price is bouncing off an RSI-7 extreme low of 2,970, sitting almost exactly on the 61.8% Fibonacci retracement (&#8377;3,074.53) of the wave-1 advance, just above the &#8377;3,058 daily support that keeps the broader bullish wave-1 structure technically intact. Full read in &sect;18.</p>
+      </div>
+    </div>
+    <div class="notebox"><b>Framing note (house style — two-sided):</b> This is a <b>debt-free, first-dividend-paying grid-capex compounder trading at a rich, widely-dispersed multiple, with a rented rather than owned moat</b> — not a clean value or clean momentum story either way. Sentiment will move on evidence of order-to-revenue conversion and continued FII accumulation, not on any single data point.</div>
+  </div>
+
+  <!-- ================= 05 SECTOR SIZE + 06 SHAREHOLDING ================= -->
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1">
+        <div class="sec-title" id="sec05"><span class="num">05</span><h2>Sector Market Size</h2></div>
+        <div class="krow"><span class="klab">Parent FY2025 Revenue (Global)</span><span class="kval">&euro;39.1bn<small>+15.2% YoY &middot; record order backlog &euro;138bn</small></span></div>
+        <div class="krow"><span class="klab">Parent Grid Technologies Segment</span><span class="kval">&gt;&euro;11bn<small>+25.4% YoY &middot; most comparable to SEIL's transmission business</small></span></div>
+        <div class="krow"><span class="klab">SEIL Revenue as % of Parent Global</span><span class="kval">~2%<small>SEIL revenue ~&euro;0.83bn equivalent</small></span></div>
+        <div class="krow"><span class="klab">Green Energy Corridor Phase II Target</span><span class="kval">27.5 GVA / ~10,500km<small>Substation capacity + transmission lines, targeted FY26&ndash;27</small></span></div>
+        <div class="krow"><span class="klab">Additional Coal Capacity Needed</span><span class="kval">~280 GW<small>Potentially by FY32 (policy estimate)</small></span></div>
+        <div class="krow"><span class="klab">National HVDC Pipeline</span><span class="kval" style="color:#f57f17">14.5 of 32.3 GW tendered<small>Just 1&ndash;2 HVDC awards/year — slow, lumpy, policy-paced</small></span></div>
+        <div class="chartcap">A large, policy-paced runway (Green Energy Corridor, HVDC pipeline, coal-capacity build-out) — but the constraint is award cadence and execution, not headline market size. SEIL's TTM revenue (&#8377;9,436 Cr / ~&euro;1bn equivalent) is a sliver of the global Grid Technologies opportunity its parent already captures.</div>
+      </div>
+      <div style="flex:1.1">
+        <div class="sec-title" id="sec06"><span class="num">06</span><h2>Shareholding</h2></div>
+        <table class="t">
+          <tr><th>Category</th><th>At Listing (Jun'25)</th><th>Latest (Sep'26)</th><th>&#916;</th></tr>
+          <tr><td>Promoters</td><td>75.0%</td><td>75.0%</td><td>Flat</td></tr>
+          <tr><td>FIIs</td><td>~4.8%</td><td>~7.6&ndash;7.7%</td><td class="pos">&#9650; ~2.8&ndash;2.9pp</td></tr>
+          <tr><td>DIIs</td><td>~9.1%</td><td>~6.5%</td><td class="neg">&#9660; ~2.6pp</td></tr>
+          <tr><td>Public &amp; Others*</td><td>~11.1%</td><td>~10.9%</td><td>~Flat</td></tr>
+        </table>
+        <div class="chartcap">*Public &amp; Others is a derived residual (100% &minus; Promoter &minus; FII &minus; DII) — not independently sourced; flagged as such. Only two data points (listing vs latest) were available in research, not a full quarterly cadence — a genuine data gap versus the usual 4-quarter view.</div>
+        <div class="microhead" style="margin-top:9px">Promoter Breakdown (5 German-Domiciled Entities, 75.00% Total)</div>
+        <table class="t" style="font-size:11px">
+          <tr><td>Siemens International Holding B.V.</td><td style="text-align:right">47.70%</td></tr>
+          <tr><td>Siemens Aktiengesellschaft (Germany)</td><td style="text-align:right">18.00%</td></tr>
+          <tr><td>Siemens Energy Holdco B.V.</td><td style="text-align:right">5.00%</td></tr>
+          <tr><td>Siemens Metals Technologies Verm&ouml;gensverwaltungs GmbH</td><td style="text-align:right">3.30%</td></tr>
+          <tr><td>Siemens Energy Holding B.V.</td><td style="text-align:right">1.00%</td></tr>
+        </table>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0">Dec 2025 saw intra-group reshuffling — transfers between the Siemens AG/Siemens Metals Technologies side and Siemens Energy Holding B.V./a new &ldquo;Siemens Energy Investment B.V.&rdquo; entity (5% stake, ~&#8377;5,857cr) plus a separate 1% transfer (~&#8377;11,408cr) — aggregate promoter holding unchanged at 75%. Reads as the global Siemens AG &rarr; Siemens Energy AG carve-out being completed at the India shareholding level. No pledge/encumbrance identified (not independently verified against the live NSE/BSE encumbrance page — flagged unconfirmed-but-no-adverse-finding). No IPO-style lock-in (demerger, not IPO).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 07 STOCK PERFORMANCE ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec07"><span class="num">07</span><h2>Stock Performance</h2></div>
+    <div class="cols">
+      <div style="flex:1">
+        <div class="krow"><span class="klab">Listing Price (19 Jun 2025)</span><span class="kval">&#8377;2,840<small>5% upper circuit on debut</small></span></div>
+        <div class="krow"><span class="klab">52-Week High</span><span class="kval">&#8377;3,968<small>~+40% from listing</small></span></div>
+        <div class="krow"><span class="klab">52-Week Low</span><span class="kval">&#8377;2,115<small>User-brief range: &#8377;2,115&ndash;3,968</small></span></div>
+        <div class="krow"><span class="klab">CMP (25 Sep 2026)</span><span class="kval">&#8377;3,285.40<small>MarketSmith; MotiveWave chart shows &#8377;3,214.50&ndash;3,286.20 intraday</small></span></div>
+        <div class="krow"><span class="klab">Inferred Trajectory (caveat: not a continuous verified series)</span><span class="kval" style="font-size:11px">Listed &#8594; peak +40% &#8594; corrected ~&minus;17% &#8594; net ~+16% since listing</span></div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">1-Year Return — Three-Way Unresolved Conflict</div>
+        <table class="t">
+          <tr><th style="text-align:left">Source Reading</th><th>1-Yr Return</th></tr>
+          <tr><td style="text-align:left">Reading A</td><td class="neg">&minus;9%</td></tr>
+          <tr><td style="text-align:left">Reading B</td><td class="pos">+14.53%</td></tr>
+          <tr><td style="text-align:left">Reading C</td><td class="pos">+19.67%</td></tr>
+        </table>
+        <div class="mininote" style="background:#fdf0f0;border-left:3px solid #c62828">All three figures were found in research and are presented without picking a winner — genuinely conflicting, unresolved. <b>Nifty Next 50 inclusion</b> effective ~30 Sep 2025.</div>
+        <div class="mininote" style="background:#fff9e0;border-left:3px solid #f9a825"><b>Explicit data gaps (not fabricated):</b> 1/3/6-month returns not found &middot; Nifty 50 index comparison not found &middot; next-results date not found &middot; F&amp;O ban status not found &middot; retail sentiment not found.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 08 KEY FINANCIALS ================= -->
+  <div class="sec compact">
+    <div class="sec-title" id="sec08"><span class="num">08</span><h2>Key Financials — &#8377; Crore (Fiscal Year Oct&ndash;Sep, per SEIL's Own Convention)</h2></div>
+    <div class="tiles" style="flex-wrap:wrap">
+      <div class="tile"><div class="lab">TTM Revenue</div><div class="val">&#8377;9,436 Cr</div><div class="note">Last 4 quarters</div></div>
+      <div class="tile"><div class="lab">TTM EBITDA</div><div class="val">&#8377;2,024 Cr <span style="font-size:11px;color:#5a6475">(21.4%)</span></div><div class="note">Margin expanding qtr-on-qtr</div></div>
+      <div class="tile"><div class="lab">TTM PAT</div><div class="val pos">&#8377;1,488 Cr</div><div class="note">15.8% PAT margin</div></div>
+      <div class="tile"><div class="lab">P/E (TTM)</div><div class="val warn">75.9&ndash;77.0x</div><div class="note">Range across sources</div></div>
+      <div class="tile"><div class="lab">Market Cap</div><div class="val" style="font-size:16px">&#8377;1.13&ndash;1.17 lakh Cr</div><div class="note">User &#8377;1,12,979cr &middot; MarketSmith &#8377;1,14,507cr &middot; aggregators up to &#8377;1,17,000cr</div></div>
+      <div class="tile"><div class="lab">P/B</div><div class="val warn">23.5&ndash;24.4x</div><div class="note">INDmoney's &ldquo;P/B 135.11&rdquo; is a misreport of book value/share &#8377;135 — not the P/B ratio</div></div>
+      <div class="tile"><div class="lab">ROE / ROCE (TTM)</div><div class="val warn">50% / 67.8%</div><div class="note">Flagged as inflated by demerger-accounting denominator + short ~5-quarter standalone history — not steady-state</div></div>
+      <div class="tile"><div class="lab">Debt</div><div class="val pos">Functionally Debt-Free</div><div class="note">Borrowings &#8377;148&ndash;216cr vs net worth ~&#8377;4,700&ndash;4,800cr; LTDebt/Equity: N.A (MarketSmith)</div></div>
+    </div>
+
+    <div class="cols" style="margin-top:12px">
+      <div style="flex:1">
+        <div class="microhead">Annual P&amp;L — FY24 Carve-out, FY25 Actual &amp; TTM</div>
+        <table class="t fit">
+          <tr><th>Period</th><th>Revenue</th><th>EBITDA</th><th>EBITDA%</th><th>PAT</th><th>EPS (&#8377;)</th></tr>
+          <tr><td>FY24 (carve-out, Oct23&ndash;Sep24)</td><td>6,345</td><td>993</td><td>15.7%</td><td>710</td><td>19.9</td></tr>
+          <tr><td><b>FY25 (actual, Oct24&ndash;Sep25)</b></td><td><b>~7,827&ndash;7,830</b></td><td><b>~1,532</b></td><td><b class="pos">~19.6%</b></td><td><b>~1,100</b></td><td><b>~41.8</b></td></tr>
+          <tr><td><b>TTM</b></td><td><b>9,436</b></td><td><b>2,024</b></td><td><b class="pos">21.4%</b></td><td><b>1,488</b></td><td><b>&mdash;</b></td></tr>
+        </table>
+        <div class="mininote" style="background:#fff9e0;border-left:3px solid #f9a825">FY22/FY23 carve-out figures surfaced in some search results (&#8377;47,341cr / &#8377;53,710cr revenue) are <b>implausible and excluded</b> — they exceed Siemens Ltd's total consolidated revenue in those years.</div>
+        <div class="microhead" style="margin-top:9px">Order Backlog Trajectory</div>
+        <table class="t fit">
+          <tr><th>Period</th><th>Backlog (&#8377;Cr)</th><th>YoY / QoQ Growth</th></tr>
+          <tr><td>9M FY25</td><td>~15,827</td><td>&mdash;</td></tr>
+          <tr><td>FY25 (Sep'25)</td><td>16,205</td><td class="pos">+47%</td></tr>
+          <tr><td>H1 FY26 (Dec'25)</td><td>~18,400</td><td class="pos">+22.2% &middot; book-to-bill 1.5x</td></tr>
+          <tr><td><b>Q3 FY26 (Jun'26)</b></td><td><b>19,331</b></td><td><b class="pos">+16.4%</b></td></tr>
+        </table>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Quarterly Trend — 8 Quarters (Fiscal Oct&ndash;Sep)</div>
+        <table class="t fit">
+          <tr><th>Quarter</th><th>Revenue</th><th>EBITDA</th><th>EBITDA%</th><th>PAT</th></tr>
+          <tr><td>Q3 FY24 (Apr&ndash;Jun'24)</td><td>1,484</td><td>213</td><td>14%</td><td>146</td></tr>
+          <tr><td>Q1 FY25 (Oct&ndash;Dec'24)</td><td>1,517</td><td>335</td><td>22%</td><td>232</td></tr>
+          <tr><td>Q2 FY25 (Jan&ndash;Mar'25)</td><td>1,880</td><td>358</td><td>19%</td><td>246</td></tr>
+          <tr><td>Q3 FY25 (Apr&ndash;Jun'25)</td><td>1,785</td><td>340</td><td>19%</td><td>263</td></tr>
+          <tr><td>Q4 FY25 (Jul&ndash;Sep'25)</td><td>2,646</td><td>479</td><td>18&ndash;19.3%</td><td>360</td></tr>
+          <tr><td>Q1 FY26 (Oct&ndash;Dec'25)</td><td>1,911</td><td>461</td><td>24%</td><td>313</td></tr>
+          <tr><td>Q2 FY26 (Jan&ndash;Mar'26)</td><td>2,394</td><td>498</td><td>21%</td><td>375</td></tr>
+          <tr><td><b>Q3 FY26 (Apr&ndash;Jun'26)</b></td><td><b>2,486</b></td><td><b>586</b></td><td><b class="pos">24%</b></td><td><b>441</b></td></tr>
+        </table>
+        <div class="chartcap">MarketSmith's own quarterly-earnings panel independently corroborates the three most recent quarters (Jun-26 EPS 12.38 +68% / Sales +39%; Mar-26 EPS 10.52 +52% / Sales +27%; Dec-25 EPS 8.79 +35% / Sales +26%) — good cross-source confidence on the recent trend.</div>
+      </div>
+    </div>
+
+    <div class="cols" style="margin-top:9px">
+      <div style="flex:1">
+        <div class="notebox red"><b>&#9888; Cash-flow conflict — genuinely unresolved:</b> Screener shows FY25 operating cash flow of <b>~&#8377;3,670 Cr</b>, while ICICI Direct's own model projects only <b>~&#8377;835 Cr FY25E</b>, driven by a large modelled working-capital drag (&minus;&#8377;351cr FY25E, &minus;&#8377;1,015cr FY26E, &minus;&#8377;1,645cr FY27E). Both figures are stated here; they are not reconciled.</div>
+      </div>
+      <div style="flex:1">
+        <div class="notebox"><b>Capex — two figures, likely not additive:</b> ICICI Direct (Sep 2025) cites ~&#8377;1,100 Cr across Kalwa/Goa/Aurangabad. A newer, larger <b>&#8377;2,060 Cr board-approved transformer expansion</b> (~30,000 MVA, commissioning 2030&ndash;2032) was announced subsequently — the larger figure likely supersedes or expands on the smaller one rather than the two simply summing. <b>First-ever dividend</b> of &#8377;4/share (200% of &#8377;2 FV) was recommended with FY25 results, record date 30 Jan 2026, paid from 18 Feb 2026 — no capital raises (no QIP/preferential allotment) since listing.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 09 KEY RATIOS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Ratios — Industry-Contextualized</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fdf0f0;border-color:#c62828">
+        <div class="plab">Operating Cash Flow &nbsp;&middot;&nbsp; Two Conflicting Reads <span class="badge b-bear">Unresolved</span></div>
+        <div class="pval" style="font-size:22px">Screener ~&#8377;3,670 Cr <span style="font-size:13px;font-weight:600;color:#5a6475">vs ICICI Direct model ~&#8377;835 Cr FY25E</span></div>
+        <p style="font-size:11.3px;margin-top:6px">The gap is large enough to matter for any cash-based valuation approach. ICICI Direct's lower figure is driven by a modelled working-capital drag that steepens each forecast year (&minus;&#8377;351cr &rarr; &minus;&#8377;1,015cr &rarr; &minus;&#8377;1,645cr, FY25E&ndash;FY27E). Screener's figure, if accurate, would make the balance sheet even stronger than the &ldquo;functionally debt-free&rdquo; headline already suggests. This report does not pick a winner — both numbers are on the table for the reader to weigh.</p>
+      </div>
+      <div class="panel" style="background:#fffbe8;border-color:#f9a825">
+        <div class="plab">ROE 50% / ROCE 67.8% (TTM) <span class="badge b-warn">Inflated — Read With Caution</span></div>
+        <div class="pval" style="font-size:26px">50% <span style="font-size:13px;font-weight:600;color:#5a6475">/ 67.8%</span></div>
+        <p style="font-size:11.3px;margin-top:6px"><b>Note:</b> These headline returns are almost certainly overstated as a steady-state read. Demerger accounting sets a relatively low starting equity base, which mechanically inflates ROE/ROCE in the first few reporting periods, and SEIL has only ~5 quarters of standalone reporting history to smooth against. Treat these as a snapshot of an unusually favourable denominator, not a durable double-digit-forever return profile — the peer table in &sect;15 gives useful cross-checks (e.g. Hitachi Energy India ROE 21.9%, GE Vernova T&amp;D ROE 57.4%).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 10 MANAGEMENT METRICS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec10"><span class="num">10</span><h2>Management Metrics</h2></div>
+    <div class="tiles" style="flex-wrap:wrap">
+      <div class="tile">
+        <div class="lab">Board Composition &amp; Independence</div>
+        <div class="val" style="font-size:15px">9 Directors, 4 Unpaid</div>
+        <div class="note">Chairman Sunil Mathur is Non-Exec Non-Independent and <b>concurrently MD&amp;CEO of Siemens Ltd</b> (the demerged &ldquo;rump&rdquo;) — a notable dual-role independence point given ongoing related-party dealings on both sides of many legacy contracts. The four Siemens-affiliated non-independent directors (Mathur, Seibert, Wagner, Holt) opted <b>not</b> to accept sitting fees or commission — serve unpaid.</div>
+      </div>
+      <div class="tile">
+        <div class="lab">Executive Comp — Ratio to Median Pay</div>
+        <div class="val warn">41.4x / 24.5x</div>
+        <div class="note">MD&amp;CEO Guilherme Vieira De Mendonca: 41.38x median; ED&amp;CFO Harish Shekar: 24.48x median (FY25, a stub/transition year — disclosed only as a ratio, not an absolute figure). A third-party (Simply Wall St) estimate of ~US$600K total comp for Mendonca is <b>unverified against primary filing</b> — flagged as lower-confidence only.</div>
+      </div>
+      <div class="tile">
+        <div class="lab">Employees &amp; Auditor</div>
+        <div class="val" style="font-size:16px">4,539 Employees</div>
+        <div class="note">As of Sep 2025. Auditor: <b>Price Waterhouse Chartered Accountants LLP</b> (5-yr first term), unmodified/clean opinion (24 Nov 2025) with one Emphasis of Matter — not a qualification — on Ind AS 103 Appendix C common-control demerger accounting; restated Feb&ndash;Sep 2024 prior-period info was not audited by PW. Secretarial Auditor: Parikh Parekh &amp; Associates, also clean.</div>
+      </div>
+      <div class="tile">
+        <div class="lab">Full Board Roster</div>
+        <div class="val" style="font-size:13px">See note</div>
+        <div class="note">Mendonca (MD&amp;CEO, ex-Head of Siemens Ltd's Energy Business); Shekar (ED&amp;CFO, term Mar'25&ndash;Feb'30); Ketan Dalal, Subodh Kumar Jaiswal (ex-CBI Director), Swati Salgaocar (sole woman director, CSR Chair) — Independent; Karl-Heinz Seibert, Dr. Juergen Wagner, Tim Holt — Siemens-affiliated Non-Exec. Company Secretary: Vishal Tembe.</div>
+      </div>
+    </div>
+    <div class="notebox blue" style="margin-top:4px"><b>Related-party structure — a possible internal disclosure inconsistency:</b> the technology license fee flows to <b>Siemens Energy Global GmbH &amp; Co KG</b> (a fellow subsidiary under Siemens Energy AG), <b>not</b> to Siemens AG — SEIL explicitly discloses Siemens AG does not provide technology or charge license fees, and one disclosure section separately shows &ldquo;Nil&rdquo; for brand-usage royalty. This appears to sit alongside the brand sub-license fee described in &sect;02. Flagged as a possible internal inconsistency in the disclosure — not silently resolved either way.</div>
+  </div>
+
+  <!-- ================= 11 GUIDANCE ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec11"><span class="num">11</span><h2>Company Guidance &amp; Capital-Allocation Credibility</h2></div>
+    <div class="notebox red"><b>Data gap, stated plainly:</b> unlike mature-listed peers that issue formal quarterly revenue/margin guidance, <b>no explicit forward guidance statement was found</b> for SEIL in this report's research. Rather than fabricate a &ldquo;guided vs delivered&rdquo; table, this section uses the closest disclosed forward-looking metric — order-book conversion — plus a capital-allocation and execution-risk checklist.</div>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1.2">
+        <div class="microhead">Order-Book Conversion — The Metric Consistently Disclosed</div>
+        <table class="t">
+          <tr><th style="text-align:left">Period</th><th style="text-align:left">Backlog</th><th style="text-align:left">Signal</th></tr>
+          <tr><td style="text-align:left">9M FY25 &rarr; FY25 (Sep'25)</td><td style="text-align:left">~15,827 &rarr; 16,205</td><td style="text-align:left" class="pos">+47%</td></tr>
+          <tr><td style="text-align:left">FY25 &rarr; H1 FY26 (Dec'25)</td><td style="text-align:left">16,205 &rarr; ~18,400</td><td style="text-align:left" class="pos">+22.2%, book-to-bill 1.5x</td></tr>
+          <tr><td style="text-align:left">H1 FY26 &rarr; Q3 FY26 (Jun'26)</td><td style="text-align:left">~18,400 &rarr; 19,331</td><td style="text-align:left" class="pos">+16.4%</td></tr>
+        </table>
+        <div class="notebox" style="margin-top:10px"><b>Capital allocation record:</b> first-ever dividend &#8377;4/share (FV &#8377;2) for FY24-25 — a genuine capital-return commitment from a newly-listed entity. No QIP/preferential allotment since listing; &#8377;7,400mn (&#8377;740cr) capex commitment at Kalwa and Chhatrapati Sambhajinagar appears funded via internal accruals (consistent with no external capital raise, though the funding source is not explicitly disclosed).</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Execution-Risk Checklist</div>
+        <table class="t">
+          <tr><th style="text-align:left">Warning Sign</th><th>Present?</th></tr>
+          <tr><td style="text-align:left">Backlog growing faster than new order intake</td><td><span class="badge b-warn">&#10003; One quarter — not conclusive</span></td></tr>
+          <tr><td style="text-align:left">Long-lag capex commitment (2030&ndash;2032)</td><td><span class="badge b-warn">&#10003; Yes (&#8377;2,060cr)</span></td></tr>
+          <tr><td style="text-align:left">Customer-concentration % disclosed</td><td><span class="badge b-bear">&#10007; Not disclosed — data gap</span></td></tr>
+          <tr><td style="text-align:left">Related-party export concentration</td><td><span class="badge b-warn">&#10003; &#8377;5,294mn / &#8377;2,835mn to sister entities</span></td></tr>
+          <tr><td style="text-align:left">ESG/BRSR filing status</td><td><span class="badge b-neut">N/A for FY24-25 — likely mandatory from FY25-26</span></td></tr>
+        </table>
+        <div class="chartcap" style="margin-top:6px">Order backlog grew +37.6% YoY in one cited quarter while new order intake grew only +3.7% YoY the same quarter — an early, single-quarter signal of possible order-conversion lag, not conclusive. Related-party export sales to Siemens Energy Global, Siemens Energy Inc (USA) and Siemens Energy Sdn Bhd (Malaysia) totaled &#8377;5,294mn and &#8377;2,835mn across the two IM periods — a meaningful slice of &ldquo;revenue&rdquo; is intra-group.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 12 STREET CONSENSUS + 13 VOLUME ================= -->
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1">
+        <div class="sec-title" id="sec12"><span class="num">12</span><h2>Street Consensus</h2></div>
+        <div class="krow"><span class="klab">Analysts Covering</span><span class="kval">~15<small>Broadened from a much smaller base at listing</small></span></div>
+        <div class="krow"><span class="klab">Rating Split</span><span class="kval" style="color:#2e7d32">8 SB + 1 B vs 3 H + 2 S + 1 SS<small>Genuinely split but Buy-leaning consensus</small></span></div>
+        <div class="krow"><span class="klab">Price-Target Trend</span><span class="kval">Rising over time<small>No single consolidated average target figure found in research</small></span></div>
+        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Listing-benchmark context:</b> at SEIL's June 2025 listing, MOFSL benchmarked a 60x target multiple against Hitachi Energy India's then-74x P/E. Hitachi Energy has since been cited anywhere from ~151x to ~181x P/E — a wide, directional-only range, but it shows a precedent pattern of newly-listed premium power-equipment names re-rating further upward. Worth noting as context, not a guarantee for ENRIN.</div>
+      </div>
+      <div style="flex:1">
+        <div class="sec-title" id="sec13"><span class="num">13</span><h2>Share Volume &amp; Profile</h2></div>
+        <div class="krow"><span class="klab">Volume — Latest (MarketSmith)</span><span class="kval">302,939<small>&minus;19.79% vs prior</small></span></div>
+        <div class="krow"><span class="klab">U/D Volume Ratio</span><span class="kval">1.2<small>MarketSmith</small></span></div>
+        <div class="krow"><span class="klab">Beta</span><span class="kval">0.86<small>MarketSmith</small></span></div>
+        <div class="krow"><span class="klab">Shares in Float</span><span class="kval">8.90 Cr<small>MarketSmith</small></span></div>
+        <div class="krow"><span class="klab">Funds Holding</span><span class="kval">679 funds (+15.67%)<small>Shares held by funds: 5.05 Cr (&minus;0.25%)</small></span></div>
+        <div class="mininote" style="background:#fff9e0;border-left:3px solid #f9a825"><b>Explicit data gaps:</b> F&amp;O ban status not found &middot; retail sentiment not found &middot; next-results date not found.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 14 SECTOR ROTATION ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec14"><span class="num">14</span><h2>Sector Rotation</h2></div>
+    <div class="cols">
+      <div style="flex:1.3">
+        <p style="font-size:11.5px">ENRIN's sector — power transmission &amp; generation capital equipment — typically leads in the <b>early-to-mid expansion</b> phase of a capex cycle, when grid and generation infrastructure spending accelerates ahead of the broader industrial cycle. India's current phase (Green Energy Corridor Phase II, HVDC pipeline, ~280GW additional coal capacity need by FY32) places ENRIN's order book squarely in this window — but the award cadence (just 1&ndash;2 HVDC tenders/year, only 14.5 of 32.3 GW tendered so far) means the cycle is policy-paced and lumpy, not a smooth early-expansion ramp.</p>
+        <div style="display:flex;gap:0;margin-top:14px;border-radius:6px;overflow:hidden;border:1px solid #dde2ea">
+          <div style="flex:1;text-align:center;padding:14px 6px;background:#eef7ee;border-right:1px solid #dde2ea"><div style="font-size:10px;font-weight:900;letter-spacing:0.5px;color:#2e7d32;text-transform:uppercase">Early Expansion</div><div style="font-size:9.5px;color:#5a6475;margin-top:3px">Capex acceleration</div></div>
+          <div style="flex:1;text-align:center;padding:14px 6px;background:#fff8ea;border-right:1px solid #dde2ea;border:2px solid #e67e22"><div style="font-size:10px;font-weight:900;letter-spacing:0.5px;color:#b07716;text-transform:uppercase">&#9733; ENRIN — Mid Expansion</div><div style="font-size:9.5px;color:#5a6475;margin-top:3px">Grid capex supercycle</div></div>
+          <div style="flex:1;text-align:center;padding:14px 6px;background:#fdf0f0;border-right:1px solid #dde2ea"><div style="font-size:10px;font-weight:900;letter-spacing:0.5px;color:#c62828;text-transform:uppercase">Late Expansion</div><div style="font-size:9.5px;color:#5a6475;margin-top:3px">Multiple peaks</div></div>
+          <div style="flex:1;text-align:center;padding:14px 6px;background:#eef4fc"><div style="font-size:10px;font-weight:900;letter-spacing:0.5px;color:#1565c0;text-transform:uppercase">Slowdown / Recovery</div><div style="font-size:9.5px;color:#5a6475;margin-top:3px">Policy-dependent</div></div>
+        </div>
+      </div>
+      <div style="flex:1">
+        <div class="notebox blue"><b>Whole-peer-set read:</b> BHEL, GE Vernova T&amp;D, Hitachi Energy and CG Power all show strong simultaneous order-book growth alongside ENRIN — this reads as a <b>broad capex-cycle tailwind lifting all competitors</b>, not ENRIN-specific outperformance (see &sect;15/&sect;16 for the lost-HVDC-tender counter-evidence).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 15 PEER COMPARISON ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec15"><span class="num">15</span><h2>Peer Comparison (TTM, ~Sep 2026)</h2></div>
+    <table class="peer">
+      <tr><th>Company</th><th>MCap (&#8377;Cr)</th><th>Revenue</th><th>PAT</th><th>P/E</th><th>P/B</th><th>ROE%</th><th>ROCE%</th></tr>
+      <tr style="background:#eef4fc"><td>&#9733; Siemens Energy India</td><td><b>1,13&ndash;1,17k</b></td><td><b>9,436</b></td><td><b>1,488</b></td><td><b>76&ndash;77x</b></td><td><b>23.5&ndash;24.4x</b></td><td><b>50</b></td><td><b>67.8</b></td></tr>
+      <tr><td>Hitachi Energy India</td><td>1,38&ndash;1,39k</td><td>9,162</td><td>1,150</td><td>116&ndash;151x</td><td>27.1x</td><td>21.9</td><td>29.4</td></tr>
+      <tr><td>GE Vernova T&amp;D India</td><td>1,10&ndash;1,12k</td><td>&mdash;</td><td>&mdash;</td><td>82&ndash;85x</td><td>&mdash;</td><td>57.4</td><td>77.4</td></tr>
+      <tr><td>BHEL</td><td>1,44&ndash;1,47k</td><td>35,993</td><td>2,432</td><td>59.0x</td><td>5.57x</td><td>6.2</td><td>9.1</td></tr>
+      <tr><td>CG Power</td><td>1,39k</td><td>12,821</td><td>1,240</td><td>109&ndash;111x</td><td>17.5x</td><td>20.5</td><td>&mdash;</td></tr>
+      <tr><td>ABB India</td><td>1,49&ndash;1,51k</td><td>13,477&ndash;13,611</td><td>2,988</td><td>50&ndash;97x</td><td>&mdash;</td><td>22.4</td><td>&mdash;</td></tr>
+      <tr><td>Triveni Turbine</td><td>17&ndash;18k</td><td>&mdash;</td><td>&mdash;</td><td>50.2x</td><td>&mdash;</td><td>25.2</td><td>&mdash;</td></tr>
+      <tr><td>TD Power Systems</td><td>23k</td><td>&mdash;</td><td>&mdash;</td><td>84.3x</td><td>&mdash;</td><td>24.7</td><td>&mdash;</td></tr>
+      <tr><td>Thermax</td><td>47&ndash;48k</td><td>&mdash;</td><td>&mdash;</td><td>72&ndash;77x</td><td>&mdash;</td><td>11.35</td><td>&mdash;</td></tr>
+    </table>
+    <div class="chartcap">&mdash; denotes a figure not disclosed/found for that peer in this report's research, not zero. All market cap figures rounded to nearest &#8377;'000 Cr band where sources diverged.</div>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="notebox"><b>Reading it:</b> ENRIN trades at a <b>discount to its closest comp Hitachi Energy India on P/E</b> (76&ndash;77x vs 116&ndash;151x) but roughly <b>in line on P/B</b>. BHEL is the low-multiple outlier (59.0x P/E, 5.57x P/B) but with dramatically weaker returns (ROE 6.2%, ROCE 9.1%) — a legacy-PSU quality gap, not a directly comparable value opportunity.</div>
+      </div>
+      <div style="flex:1">
+        <div class="notebox blue"><b>Parent-vs-subsidiary premium:</b> ENRIN trades at ~76&ndash;77x P/E vs its German parent Siemens Energy AG's ~32.7x — roughly a 2.5x premium. This pattern (India-listed subsidiary trading at a large premium to its global parent) is consistent with how the market has treated Hitachi Energy India as well — a sector-wide phenomenon, not a SEIL-specific anomaly.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 16 RISK ANALYSIS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec16"><span class="num">16</span><h2>Risk Analysis</h2></div>
+    <table class="t prose">
+      <tr><th style="text-align:left">Category</th><th>Severity</th><th style="text-align:left">Detail</th></tr>
+      <tr><td style="text-align:left">Parent Dependency</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">The single most important risk category. As detailed in &sect;02, brand and core manufacturing IP both flow from binding, royalty-bearing, largely open-ended agreements with the German Siemens Energy Group — this is a <b>rented, not owned, moat</b>. SEIL's own risk factors state adverse developments at the Siemens Energy Group (competitiveness, financial standing) could pass through to SEIL; first-year-as-standalone-listed-entity cost/governance transition risk is also explicitly flagged.</td></tr>
+      <tr><td style="text-align:left">Valuation</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">P/E ranges <b>76&ndash;100x+</b> depending on source/date (Screener 76.7x; Multiples.vc EV/Revenue 11.5x, EV/EBITDA 58.3x; other commentary cites 80x and 100.29x trailing). Precedent exists for further re-rating (Hitachi Energy India cited from ~74x at ENRIN's listing to ~151&ndash;181x since) but that is context, not a guarantee.</td></tr>
+      <tr><td style="text-align:left">Competitive Intensity</td><td><span class="badge b-warn">Medium-High</span></td><td style="text-align:left">SEIL's own commissioned SWOT self-admits: <i>&ldquo;Yet to establish as a strong player in the Indian Renewable energy market&rdquo;</i> and <i>&ldquo;Lack of long term/considerable work done for the Indian Government and Indian customer&rdquo;</i> — i.e. less embedded with govt/PSU buyers than BHEL despite a 100-year India presence. Recent marquee HVDC tenders <b>bypassed SEIL</b>: Khavda&ndash;Nagpur and Bhadla&ndash;Fatehpur (6GW each) went to Hitachi Energy+BHEL consortia — a concrete recent data point against a simple &ldquo;Siemens is pulling away&rdquo; narrative. Market share: Hitachi Energy ~10% transformer share vs SEIL and GE Vernova T&amp;D each ~5%.</td></tr>
+      <tr><td style="text-align:left">Execution</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Backlog growing faster than new order intake in one cited quarter (+37.6% vs +3.7% YoY) — an early signal, not conclusive. The &#8377;2,060cr transformer capex has a long 2030&ndash;2032 commissioning lag. No customer-concentration % is publicly disclosed (demerger-listing regime doesn't require it, unlike a fresh IPO) — a genuine data gap. Related-party export sales to sister entities abroad totaled &#8377;5,294mn and &#8377;2,835mn across the two IM periods — worth flagging alongside any customer-concentration discussion.</td></tr>
+      <tr><td style="text-align:left">Litigation (Demerger-Inherited)</td><td><span class="badge b-bear">Medium-High</span></td><td style="text-align:left">Two material items, both inherited via the Scheme — detailed in the notebox below. Aggregate disclosed litigation ~&#8377;1,157mn across 2 matters (threshold &#8377;300mn+). Mitigant: Siemens Ltd India's tax proceedings explicitly do <b>not</b> transfer to SEIL — a clean tax firewall was drawn at demerger.</td></tr>
+      <tr><td style="text-align:left">Regulatory / Policy</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Growth thesis tied to policy-paced capex cycles (Green Energy Corridor Phase II; ~280GW additional coal capacity potentially needed by FY32). Of India's 32.3GW National Electricity Plan HVDC pipeline, only ~14.5GW is tendered/awarded, at just 1&ndash;2 HVDC awards/year — a slow, lumpy pipeline, not steady-state demand.</td></tr>
+      <tr><td style="text-align:left">Currency / Import</td><td><span class="badge b-warn">Medium (Unsized)</span></td><td style="text-align:left">Material recurring cross-border purchase flows from the German parent group (&#8377;2,789mn + &#8377;1,410mn across the two IM periods) confirm real EUR/USD-linked cost exposure, but no specific import-%-of-COGS or hedging-policy disclosure was found — a genuine gap; the exposure is real but unsized publicly.</td></tr>
+    </table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="notebox red"><b>Litigation detail:</b> <b>(1) PCTL (Paharpur Cooling Towers)</b> arbitration, originating 2010&ndash;2014 — award required payment of &#8377;208.40mn + 6% interest; cheques for &#8377;246.90mn issued Oct 2019/accepted Feb 2020. <b>(2) Russia arbitration — the more serious one:</b> a 2020 contract with Siemens Energy LLC Russia (Ruppur Nuclear Power Plant GIS equipment supply) was terminated by SEIL in Oct 2022 citing EU sanctions; the Russian counterparty (bankrupt, renamed Neftegaz &amp; Energetika LLC) sued. On <b>17 Jul 2025</b> the St. Petersburg Arbitration Court ruled <b>against SEIL</b> — declared the July 2021 supply contract and advance payments invalid, awarded the Russian claimant &#8377;443.76mn (~US$5.17mn) plus 8% p.a. interest from 30 May 2025. SEIL intends to appeal, calling the ruling &ldquo;unsustainable in law and contract.&rdquo; Already provisioned in FY25 accounts (&#8377;347mn advance carried as liability + &#8377;104mn additional interest provision).</div>
+      </div>
+      <div style="flex:1">
+        <div class="notebox"><b>Governance cross-reference &amp; institutional divergence:</b> the Chairman's dual role at Siemens Ltd (&sect;10) sits directly alongside this section's parent-dependency risk — the same related-party dynamic runs through governance, moat and risk. Separately, no SEBI enforcement action was confirmed against SEIL specifically (a generic SEBI interim order surfaced in search could not be confirmed to relate to SEIL and is excluded as a false positive). FII holding has risen steadily since listing while DII holding has declined over the same period (&sect;06) — an institutional-conviction divergence worth monitoring alongside these risk categories.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570);border-top:3px solid #f0b429;border-bottom:3px solid #f0b429;color:#f0b429;padding:9px 26px;font-weight:900;letter-spacing:2.5px;font-size:14px;text-transform:uppercase">Technical Analysis</div>
+
+  <!-- ================= 17 TECHNICAL RATINGS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec17"><span class="num">17</span><h2>Technical Ratings &amp; Momentum (MarketSmith India)</h2></div>
+    <div class="cols">
+      <div style="flex:1">
+        <div class="microhead">Master Score &amp; Component Ratings</div>
+        <div style="font-size:56px;font-weight:900;color:#1a2a4a;line-height:1">B</div>
+        <div style="font-size:11px;color:#5a6475;margin:2px 0 8px">MarketSmith Master Score — <b class="warn">a mixed profile, not a clean leader read</b></div>
+        <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc)">
+          <div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">EPS Strength</div><div style="font-size:21px;font-weight:900;color:#c62828">56</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">POOR</div></div>
+          <div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Price Strength</div><div style="font-size:21px;font-weight:900;color:#c62828">56</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">POOR</div></div>
+          <div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Buyer Demand</div><div style="font-size:21px;font-weight:900;color:#2e7d32">B-</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">GOOD</div></div>
+          <div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Group Rank</div><div style="font-size:21px;font-weight:900;color:#c62828">100</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">POOR, of 197</div></div>
+        </div>
+        <div class="notebox" style="margin-top:10px"><b>Reading the mix:</b> Good Buyer Demand (B-) alongside Poor EPS/Price Strength and a Poor Group Rank is not the classic O'Neil leadership signature — it reads as a stock accumulation is starting to notice within a weak-ranked group, not yet a rated leader.</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Guru Screens — Strategy Fit</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 18px">
+          <div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">CUSTOM</b><b style="color:#7b1fa2">64%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:64%"></div></div></div>
+          <div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">WILLIAM J. O'NEIL</b><b style="color:#7b1fa2">44%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:44%"></div></div></div>
+          <div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">PETER LYNCH</b><b style="color:#7b1fa2">12%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:12%"></div></div></div>
+        </div>
+        <div class="krow" style="margin-top:12px"><span class="klab">Beta</span><span class="kval">0.86</span></div>
+        <div class="krow"><span class="klab">U/D Volume Ratio</span><span class="kval">1.2</span></div>
+        <div class="notebox blue" style="margin-top:10px"><b>MotiveWave technical read (AKS Confluence [v166]):</b> Daily Trend Momentum gauge is flat (Buy 0 / Sell 0) while the 1-Hour gauge has flipped bullish (Buy 1 / Sell 0) — a near-term momentum tick that the daily timeframe has not yet confirmed. Full Elliott Wave interpretation in &sect;18.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 18 ELLIOTT WAVE ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec18"><span class="num">18</span><h2>Elliott Wave Analysis (MotiveWave)</h2></div>
+    <div class="cols">
+      <div class="imgwrap" style="flex:1"><img src="ENRIN_chart.jpg" alt="ENRIN 1-Hour and 1-Day MotiveWave charts with AKS Confluence [v166] Elliott Wave labeling"></div>
+    </div>
+    <div class="chartcap">ENRIN_BSE, 1-Hour (left) and 1-Day (right), AKS Confluence [v166] indicator. Chart captured 25 Sep 2026.</div>
+    <div class="microhead" style="margin-top:12px">Wave Structure Interpretation</div>
+    <table class="t prose">
+      <tr><td style="width:90px;vertical-align:top"><b>1D Chart</b></td><td style="text-align:left">A clean 5-wave impulse up from a wave (0) low near <b>&#8377;2,900</b> in early 2026, through wave (1) top and wave (2) pullback, into a large internal (i)&ndash;(ii)&ndash;(iii)&ndash;(iv)&ndash;(v) structure &mdash; wave (iii) around &#8377;3,375&ndash;3,450 and wave (v) peaking near <b>&#8377;4,125</b> (labeled &ldquo;1&rdquo; at top, ~Jun 2026). Since that high, price has been correcting in a <b>w-x-y (double-three) pattern</b> labeled wave &ldquo;2&rdquo; &mdash; currently in the <b>y-leg</b>, sitting almost exactly on the <b>61.8% Fibonacci retracement</b> of the wave-1 advance (&#8377;3,074.53, drawn from &#8377;2,466.30 to &#8377;4,413.80). Note: the fib anchor tool shows 100% at &#8377;4,413.80, slightly above the visible wave-v peak — flagged as a chart-tool anchor point, not necessarily the exact swing high. Support is explicitly marked at <b>&#8377;3,058</b>, resistance at <b>&#8377;3,421</b> (1D). Current price (&#8377;3,214&ndash;3,311) is still trading <b>above</b> the 61.8% retracement support &mdash; the broader bullish wave-1 structure remains technically intact as long as &#8377;3,058 holds.</td></tr>
+      <tr><td style="vertical-align:top"><b>1H Chart</b></td><td style="text-align:left">Short-term momentum has just flipped bullish &mdash; the Trend Momentum panel reads <b>BUY 1 / SELL 0</b> (vs BUY 0 / SELL 0 on the 1D, i.e. daily trend is neutral/undecided while hourly has ticked positive). Price recently bounced off an <b>RSI-7 extreme low reading of 2,970</b> (labeled wave &ldquo;y&rdquo; / &ldquo;2&rdquo; &mdash; the bottom of the corrective leg), and the AKS Confluence oscillator panel shows a shift from red/bearish shading toward the neutral/green zone on the 1H, consistent with a short-term bounce attempt off oversold. Resistance on the hourly is marked at <b>&#8377;3,475</b>.</td></tr>
+      <tr><td style="vertical-align:top"><b>Synthesis (Two-Sided)</b></td><td style="text-align:left">This reads as a <b>wave-2 (or y-of-2) corrective low</b> forming just above key fib/support confluence (&#8377;3,058&ndash;3,074), with 1H momentum turning up first &mdash; but the daily trend gauge itself is still flat (0 vs 0), so this is best framed as an <b>early-stage reversal attempt, not a confirmed one</b>. The <b>invalidation level</b> for the bullish read is a daily close below <b>&#8377;3,058</b> support, which would open a deeper retracement toward <b>&#8377;2,970</b> and put the wave-2-as-simple-correction count in question. Per the two-stage discipline used in this report series: this is the <b style="color:#d81b60">PINK anticipation zone</b> (oversold + fib confluence + hourly momentum turn), <b>not yet the GREEN confirmation</b> (which requires the daily gauge itself to turn positive).</td></tr>
+    </table>
+  </div>
+
+  <!-- ================= 19 RECOMMENDATION ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec19"><span class="num">19</span><h2>Recommendation, Support &amp; Resistance</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fff8f0;border-color:#e67e22;flex:1.2">
+        <div class="plab" style="color:#e67e22">&#9733; Recommendation</div>
+        <div class="pval" style="color:#e67e22;font-size:18px">ANTICIPATE — BUY ONLY ON DAILY CONFIRMATION</div>
+        <p style="font-size:11.4px;margin-top:6px">A debt-free, first-dividend-paying grid-capex name with a genuinely rented (licensed-in) brand-and-IP moat and a rich, widely-dispersed valuation multiple. Technically, price sits in a wave-2/y-of-2 correction just above key fib/support confluence, with hourly momentum turning up first but the daily trend gauge still flat. The setup rewards patience: watch for daily confirmation rather than positioning purely off the hourly turn.</p>
+        <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#fce4ec;border-radius:5px"><b style="color:#d81b60">&#9679; PINK (now):</b> Bounce off RSI-7 extreme low (2,970) at 61.8% fib (&#8377;3,074.53) / support &#8377;3,058, with 1H momentum Buy 1 vs SELL 0 — no confirmed position yet.</div>
+        <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#e8f5e9;border-radius:5px"><b style="color:#2e7d32">&#9679; GREEN (trigger):</b> Daily close reclaiming <b>&#8377;3,421</b> resistance with the daily Trend Momentum gauge turning positive (Buy &gt; 0). Invalidation: daily close below <b>&#8377;3,058</b>, opening a deeper move toward &#8377;2,970.</div>
+        <div style="font-size:11.3px;margin-top:6px"><b>Two-sided synthesis:</b> Bull case &mdash; order book growth (+16.4% YoY to &#8377;19,331cr), debt-free balance sheet, first-ever dividend, steady FII accumulation, and a technical structure still bullish above &#8377;3,058. Bear case &mdash; a rented moat with real parent dependency, a rich valuation with wide multiple dispersion (76&ndash;100x+), lost recent HVDC tenders (Khavda&ndash;Nagpur, Bhadla&ndash;Fatehpur), the Russia arbitration loss, and declining DII holding. Both cases are live; this report does not resolve them for the reader.</div>
+      </div>
+      <div class="panel" style="border-color:#1565c0">
+        <div class="plab" style="color:#1565c0">&#128313; Key Support Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>&#8377;3,058</td><td style="text-align:left">1D support — count-intact line</td><td><span class="badge b-bull">Critical</span></td></tr>
+          <tr><td>&#8377;3,074.53</td><td style="text-align:left">61.8% fib retracement of wave-1</td><td><span class="badge b-neut">Fib</span></td></tr>
+          <tr><td>&#8377;2,970</td><td style="text-align:left">RSI-7 extreme low / wave-y bottom</td><td><span class="badge b-bear">Deeper target</span></td></tr>
+          <tr><td>&#8377;2,900</td><td style="text-align:left">Wave (0) origin — early 2026</td><td><span class="badge b-bear">Floor</span></td></tr>
+        </table>
+      </div>
+      <div class="panel" style="border-color:#2e7d32">
+        <div class="plab" style="color:#2e7d32">&#128312; Key Resistance Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>&#8377;3,421</td><td style="text-align:left">1D resistance / <b>GREEN confirmation trigger</b></td><td><span class="badge b-bull">Signal</span></td></tr>
+          <tr><td>&#8377;3,475</td><td style="text-align:left">1H structural resistance</td><td><span class="badge b-neut">Near</span></td></tr>
+          <tr><td>&#8377;4,125</td><td style="text-align:left">Wave 1 top (Jun 2026 peak)</td><td><span class="badge b-bull">Major</span></td></tr>
+          <tr><td>&#8377;4,413.80</td><td style="text-align:left">Fib anchor 100% (chart-tool anchor, not confirmed exact swing high)</td><td><span class="badge b-warn">Anchor</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, BSE, Screener.in, MarketSmith India, ICICI Direct, Trendlyne, MoneyControl, Business Standard, company investor-relations filings/presentations and other public web sources as of 25 Sep 2026, and from the author's own MotiveWave Elliott Wave analysis. Price, volume and financial figures should be independently verified, and several figures in this report are stated as ranges or conflicting readings across sources by design — see the specific flags in each section. Siemens Energy India Limited is a recently-listed (Jun 2025) demerger entity with a short standalone reporting history; valuation and return ratios should be read with that context. Ashoke Kumar Seth is not a SEBI-registered research analyst. This is not investment advice; always consult a licensed financial adviser before making investment decisions. All figures in &#8377; Crore unless stated otherwise.</div>
+  <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice. &nbsp;|&nbsp; <span style="opacity:0.6">Template v6</span></div>
+</div>
+</div>
+<script>
+// In-report "New" tags: mark recently-changed content post-publish, auto-hide after 3 days.
+// Usage: <span class="new-tag" data-new-since="YYYY-MM-DD">New</span> right next to the changed content.
+(function(){
+  var NEW_DAYS = 3;
+  function isRecent(iso){
+    if (!iso) return false;
+    var t = Date.parse(iso + "T00:00:00");
+    if (isNaN(t)) return false;
+    var age = Date.now() - t;
+    return age >= 0 && age < NEW_DAYS * 86400000;
+  }
+  var tags = document.querySelectorAll('.new-tag[data-new-since]');
+  for (var i = 0; i < tags.length; i++){
+    if (!isRecent(tags[i].getAttribute('data-new-since'))) tags[i].style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
