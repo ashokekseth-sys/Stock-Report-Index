@@ -1,4 +1,3 @@
-<!-- TEMPLATE VERSION: v6 (8 Sep 2026) — Replaced the single "Report Version" cover-page field with a growable "Revision History" table (Date | Version columns, one row per version so far, e.g. "29 Jul 2026 | v1 — Original", "8 Sep 2026 | v2 — Updated") — per user instruction "because there will be more changes": a fixed two-line display would not have scaled to a 3rd/4th future refresh, a table does. Sits directly below the "Generated On" meta-block. On any future refresh, append one new <tr> row with that refresh's date and next integer version — never overwrite/remove prior rows. -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,96 +85,6 @@
   table.peer td { padding:4px 3px; border-bottom:1px solid #edf0f5; text-align:right; font-size:10px; }
   table.peer td:first-child { text-align:left; font-weight:700; }
 
-    .sector-wheel-compact{width:600px;height:700px;margin:50px auto 0 110px;overflow:visible}
-    .sector-wheel-compact > div{width:540px!important;transform:scale(0.93);transform-origin:top left}
-    .sector-wheel-compact .mt-16,.sector-wheel-compact .md\:mt-\[80px\]{margin-top:0!important}
-    .sector-wheel-compact .mt-8{display:none}
-    .sector-wheel-compact .relative{position:relative}
-    .sector-wheel-compact .absolute{position:absolute}
-    .sector-wheel-compact .inset-0{top:0;right:0;bottom:0;left:0}
-    .sector-wheel-compact .pointer-events-none{pointer-events:none}
-    .sector-wheel-compact .z-10{z-index:10}
-    .sector-wheel-compact .flex{display:flex}
-    .sector-wheel-compact .flex-col{flex-direction:column}
-    .sector-wheel-compact .items-center{align-items:center}
-    .sector-wheel-compact .items-start{align-items:flex-start}
-    .sector-wheel-compact .items-end{align-items:flex-end}
-    .sector-wheel-compact .justify-center{justify-content:center}
-    .sector-wheel-compact .whitespace-nowrap{white-space:nowrap}
-    .sector-wheel-compact .leading-none{line-height:1}
-    .sector-wheel-compact .font-black{font-weight:900}
-    .sector-wheel-compact .opacity-90{opacity:.9}
-    .sector-wheel-compact .overflow-visible{overflow:visible}
-    .sector-wheel-compact .aspect-square{aspect-ratio:1/1}
-    .sector-wheel-compact .w-full,.sector-wheel-compact .md\:w-full{width:100%}
-    .sector-wheel-compact .h-full{height:100%}
-    .sector-wheel-compact .mx-auto{margin-left:auto;margin-right:auto}
-    .sector-wheel-compact .ml-\[1px\]{margin-left:1px}
-    .sector-wheel-compact .mr-\[1px\]{margin-right:1px}
-    .sector-wheel-compact .w-\[86vw\]{width:100%}
-    .sector-wheel-compact .max-w-\[540px\]{max-width:540px}
-    .sector-wheel-compact .max-w-\[760px\]{max-width:540px}
-    .sector-wheel-compact .w-\[72px\]{width:72px}
-    .sector-wheel-compact .h-\[1px\]{height:1px}
-    .sector-wheel-compact .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
-    .sector-wheel-compact .text-\[16px\]{font-size:15px}
-    .sector-wheel-compact .md\:text-\[21px\]{font-size:15px}
-    .sector-wheel-compact .md\:text-\[22px\]{font-size:16px}
-    .sector-wheel-compact .tracking-\[0\.12em\]{letter-spacing:.12em}
-    .sector-wheel-compact .tracking-\[0\.14em\]{letter-spacing:.14em}
-    .sector-wheel-compact .text-\[\#0f2f5c\]{color:#0f2f5c}
-    .sector-wheel-compact .text-\[\#8b2e00\]{color:#8b2e00}
-    .sector-wheel-compact .text-\[\#4c2e8a\]{color:#4c2e8a}
-    .sector-wheel-compact .text-\[\#115e5f\]{color:#115e5f}
-    .sector-wheel-compact .gap-\[7px\]{gap:7px}
-    .sector-wheel-compact .gap-\[8px\]{gap:8px}
-    .sector-wheel-compact svg text{font-family:'Inter','Source Sans 3',sans-serif}
-    .sector-wheel .relative{position:relative}
-    .sector-wheel .absolute{position:absolute}
-    .sector-wheel .inset-0{top:0;right:0;bottom:0;left:0}
-    .sector-wheel .pointer-events-none{pointer-events:none}
-    .sector-wheel .z-10{z-index:10}
-    .sector-wheel .flex{display:flex}
-    .sector-wheel .flex-col{flex-direction:column}
-    .sector-wheel .items-center{align-items:center}
-    .sector-wheel .items-start{align-items:flex-start}
-    .sector-wheel .items-end{align-items:flex-end}
-    .sector-wheel .justify-center{justify-content:center}
-    .sector-wheel .whitespace-nowrap{white-space:nowrap}
-    .sector-wheel .leading-none{line-height:1}
-    .sector-wheel .font-black{font-weight:900}
-    .sector-wheel .opacity-90{opacity:.9}
-    .sector-wheel .overflow-visible{overflow:visible}
-    .sector-wheel .aspect-square{aspect-ratio:1/1}
-    .sector-wheel .w-full,.sector-wheel .md\:w-full{width:100%}
-    .sector-wheel .h-full{height:100%}
-    .sector-wheel .mx-auto{margin-left:auto;margin-right:auto}
-    .sector-wheel .mt-16{margin-top:64px}
-    .sector-wheel .mt-8{margin-top:32px}
-    .sector-wheel .md\:mt-10{margin-top:40px}
-    .sector-wheel .md\:mt-\[80px\]{margin-top:64px}
-    .sector-wheel .ml-\[1px\]{margin-left:1px}
-    .sector-wheel .mr-\[1px\]{margin-right:1px}
-    .sector-wheel .w-\[86vw\]{width:100%}
-    .sector-wheel .max-w-\[540px\]{max-width:540px}
-    .sector-wheel .max-w-\[760px\]{max-width:540px}
-    .sector-wheel .w-\[72px\]{width:72px}
-    .sector-wheel .h-\[1px\]{height:1px}
-    .sector-wheel .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
-    .sector-wheel .text-\[16px\]{font-size:15px}
-    .sector-wheel .md\:text-\[21px\]{font-size:15px}
-    .sector-wheel .md\:text-\[22px\]{font-size:16px}
-    .sector-wheel .tracking-\[0\.12em\]{letter-spacing:.12em}
-    .sector-wheel .tracking-\[0\.14em\]{letter-spacing:.14em}
-    .sector-wheel .text-\[\#0f2f5c\]{color:#0f2f5c}
-    .sector-wheel .text-\[\#8b2e00\]{color:#8b2e00}
-    .sector-wheel .text-\[\#4c2e8a\]{color:#4c2e8a}
-    .sector-wheel .text-\[\#115e5f\]{color:#115e5f}
-    .sector-wheel .gap-\[7px\]{gap:7px}
-    .sector-wheel .gap-\[8px\]{gap:8px}
-    .sector-wheel svg text{font-family:'Inter','Source Sans 3',sans-serif}
-    .sector-wheel .hub-name{font-family:'Fraunces',Georgia,serif}
-
   /* ===================== RESPONSIVE / MOBILE ===================== */
   .mobile-jump { display:none; }
   @media (max-width: 860px) {
@@ -243,9 +152,6 @@
 
     h1 { font-size:21px !important; }
     .price { font-size:22px !important; }
-
-    .sector-wheel-compact { width:270px !important; height:290px !important; margin:20px auto 0 32px !important; overflow:visible !important; }
-    .sector-wheel-compact > div { width:540px !important; transform:scale(0.5); transform-origin:top left; }
   }
 
   @media (max-width: 480px) {
@@ -494,11 +400,11 @@
 
     <div class="ticker-row">
       <div class="ticker-chip">NSE: REMSONSIND</div>
-      <div class="ticker-chip">BSE: 530919</div>
+      <div class="ticker-chip">Auto Ancillary — Control Cables</div>
       <div class="ticker-chip">Mkt Cap: &#8377;387&ndash;453 Cr</div>
       <div class="ticker-chip">CMP: &#8377;129&ndash;130</div>
     </div>
-    <div class="sector-line">Consumer Discretionary — Automobiles &amp; Components — Auto Parts &amp; Equipment (Control Cables / Mechanical Linkages)</div>
+    <div class="sector-line">Consumer Discretionary &#8594; Automobiles &amp; Components &#8594; Auto Parts &amp; Equipment</div>
 
     <div class="meta-block" style="display:block">
       <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
@@ -530,24 +436,24 @@
   <!-- ================= HEADER ================= -->
   <div class="hdr">
     <div>
-      <div class="meta">BSE: 530919 &nbsp;·&nbsp; NSE: REMSONSIND &nbsp;·&nbsp; Auto Parts &amp; Equipment — Control Cables / Mechanical Linkages &nbsp;·&nbsp; Mumbai, Maharashtra</div>
+      <div class="meta">NSE: REMSONSIND &nbsp;·&nbsp; Auto Parts &amp; Equipment (Auto Ancillary) &nbsp;·&nbsp; Control Cables / Flexible Shafts / Gear-Shift Systems &nbsp;·&nbsp; Mumbai, Maharashtra</div>
       <h1>Remsons Industries Limited</h1>
-      <div class="tagline">Tier-1/2 control-cable &amp; mechanical-linkage supplier to Hero MotoCorp, Ford, Tata Motors, Ashok Leyland &amp; Mahindra &nbsp;·&nbsp; New Stellantis &amp; UK pedal-box export wins &nbsp;·&nbsp; Stock up sharply on a still-unexplained 22&ndash;25 Sep 2026 spike</div>
+      <div class="tagline">Kejriwal-family Tier-1/2 auto-cable supplier since 1971 &nbsp;·&nbsp; Stellantis / Ford / Hero MotoCorp / Mahindra / Tata Motors / Ashok Leyland accounts &nbsp;·&nbsp; Stock spiked 11&ndash;17% (source-dependent) 22&ndash;25 Sep 2026 with no confirmed trigger</div>
     </div>
     <div class="pricebox">
-      <div class="price">&#8377;129&ndash;130 <span class="chg">&#9650; +11% to +17% (22&ndash;25 Sep, source-dependent)</span></div>
-      <div class="sub">Report date: 25 Sep 2026 &nbsp;|&nbsp; Mkt Cap: &#8377;387&ndash;453 Cr (conflicting) &nbsp;|&nbsp; Book Value: &#8377;42.7/sh &nbsp;|&nbsp; No sell-side / MarketSmith coverage identified</div>
+      <div class="price">&#8377;129&ndash;130 <span class="chg" style="color:#a5d6a7">&#9650; +10.9% to +17.2%</span></div>
+      <div class="sub">Report date: 25 Sep 2026 &nbsp;|&nbsp; Mkt Cap: &#8377;387&ndash;453 Cr (source-dependent) &nbsp;|&nbsp; Book Value: &#8377;42.7/sh &nbsp;|&nbsp; P/B: 2.6&ndash;3.0x</div>
     </div>
   </div>
   <div class="tagstrip">
-    <div style="color:#c62828;background:#fdeef0">&#9679; Sentiment: Unresolved spike — high caution</div>
-    <div style="color:#e07c00;background:#fff6e6">&#9679; Momentum: Vertical near-term / decelerating quarterly print</div>
-    <div style="color:#e07c00;background:#fff6e6">&#9679; Valuation: ~22&ndash;25x TTM P/E, source-dependent</div>
-    <div style="color:#c62828;background:#fdeef0">&#9679; Institutional Ownership: Near-zero (FII 2.79%, DII 1.10%)</div>
-    <div style="color:#2e7d32;background:#ecf6ec">&#9679; FY26 Sales +25.6%, zero promoter pledge</div>
+    <div style="color:#f57f17;background:#fff6e6">&#9679; Sentiment: Unresolved spike — high risk</div>
+    <div style="color:#c62828;background:#fdeef0">&#9679; Float: ~1.29 Cr shares, near-zero institutional</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Valuation: P/E 21.5&ndash;25.4x (range)</div>
+    <div style="color:#2e7d32;background:#ecf6ec">&#9679; Zero promoter pledge</div>
+    <div style="color:#c62828;background:#fdeef0">&#9679; Q1 FY27 margin deceleration</div>
   </div>
 
-  <nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Moat</a><a href="#sec03">Price Spike</a><a href="#sec04">Sentiment</a><a href="#sec05">Sector Size</a><a href="#sec06">Shareholding</a><a href="#sec07">Performance</a><a href="#sec08">Financials</a><a href="#sec09">Ratios</a><a href="#sec10">Management</a><a href="#sec11">Guidance</a><a href="#sec12">Consensus</a><a href="#sec13">Volume</a><a href="#sec14">Sector Rotation</a><a href="#sec15">Peers</a><a href="#sec16">Risk</a><a href="#sec17">Technical Ratings</a><a href="#sec18">Elliott Wave</a><a href="#sec19">Recommendation</a></nav>
+  <nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Moat</a><a href="#sec03">Spike</a><a href="#sec04">Sentiment</a><a href="#sec05">Sector Size</a><a href="#sec06">Shareholding</a><a href="#sec07">Performance</a><a href="#sec08">Financials</a><a href="#sec09">Ratios</a><a href="#sec10">Management</a><a href="#sec11">Guidance</a><a href="#sec12">Consensus</a><a href="#sec13">Volume</a><a href="#sec14">Sector Rotation</a><a href="#sec15">Peers</a><a href="#sec16">Risk</a><a href="#sec17">Technical Ratings</a><a href="#sec18">Elliott Wave</a><a href="#sec19">Recommendation</a></nav>
 
   <!-- ================= 01 COMPANY OVERVIEW ================= -->
   <div class="sec">
@@ -555,80 +461,64 @@
     <div class="cols">
       <div style="flex:1.5">
         <div class="microhead">What They Do</div>
-        <p>Remsons Industries (incorporated 11 May 1971 as Remsons Cables, listed 1986) is a Mumbai-based, promoter-run <b>auto-component manufacturer</b> making <b>control cables (Bowden cables), flexible shafts, gear-shift systems, push-pull cables and parking-brake mechanisms</b>. It is a <b>B2B Tier-1/2 supplier to OEMs — not an OEM itself</b> — selling into 2-wheelers (Hero MotoCorp), passenger vehicles (Ford, plus exports), commercial vehicles (Ashok Leyland, Tata Motors) and farm/tractor equipment (Mahindra &amp; Mahindra, a 50+ year relationship). The Kejriwal family has run the company since inception; current leadership is Krishna Kejriwal (CMD), Chand Kejriwal (WTD) and Rahul Kejriwal (WTD).</p>
-        <p style="margin-top:7px">FY26 consolidated sales were <b>&#8377;469 Cr (Screener) / &#8377;474&ndash;489 Cr (other sources)</b>, PAT <b>&#8377;21 Cr (Screener) / &#8377;18.05 Cr (company press release, +25.6% YoY)</b> — the two PAT figures conflict by ~15% and are both stated here rather than averaged. 7 plants (India + UK), 20+ OEM customers across 20+ countries (UK, Europe, North America, Brazil, Mexico, SAARC).</p>
-        <div class="notebox blue" style="margin-top:10px"><b>Key Competitive Advantage:</b> Multi-decade OEM qualification relationships (50+ years with Mahindra; long tenure with Hero MotoCorp, Tata Motors, Ashok Leyland, Ford, JLR) inside an industry where APQP/PPAP validation cycles run 12&ndash;24 months — this is a switching-cost moat shared by every qualified Tier-1/2 supplier, not a Remsons-specific fortress (see &sect;02). Recent order wins &mdash; a &#8377;300 Cr/7-yr Stellantis contract, a &#8377;80 Cr/10-yr Ford Turkey order and a &#8377;160 Cr/10-yr UK pedal-box order (production from late 2028) &mdash; show this qualification base is still converting into new business.</div>
+        <p>Remsons Industries Limited (incorporated 11 May 1971 as Remsons Cables, listed 1986) is a Mumbai-based, promoter-family-run (Kejriwal family, since inception) <b>Tier-1/2 auto-component manufacturer</b> — it makes mechanical linkage products: <b>control cables (Bowden cables), flexible shafts, gear-shift systems, push-pull cables and parking-brake mechanisms</b>. It is a B2B supplier, not an OEM or a consumer brand — the end customer never sees the "Remsons" name on the product.</p>
+        <p style="margin-top:7px">Multi-segment exposure diversifies against any single vehicle cycle: <b>2W</b> (Hero MotoCorp, ~34% of FY25 revenue), <b>PV</b> (Ford, export, ~39%), <b>CV</b> (Ashok Leyland, Tata Motors) and <b>Farm/tractor</b> (Mahindra &amp; Mahindra, 50+ year relationship). Exports reach the UK, Europe, North America, Brazil, Mexico and SAARC via 7 plants (India + UK) to 20+ OEMs in 20+ countries. A material recent win is a &gt;&#8377;300 Cr, 7-year Stellantis (North America) control-cable contract, deliveries starting FY27; a newer Stanley Black &amp; Decker (US, power-tool cables) account is a non-auto diversification that reduces pure auto-cycle dependence.</p>
+        <div class="notebox blue" style="margin-top:10px"><b>Narrow-niche sector fit:</b> Remsons sits inside Consumer Discretionary &#8594; Automobiles &amp; Components &#8594; Auto Parts &amp; Equipment, but within that broad category there is no tight, same-niche listed comparator — mechanical cable/linkage makers are a thin slice of the auto-ancillary universe. Peer comparisons in this report (&#167;15) are directional small/mid-cap context only, not like-for-like.</div>
       </div>
       <div style="flex:1">
-        <div class="microhead">Revenue Mix (FY25)</div>
-        <svg viewBox="0 0 480 386" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
-<path d="M240.0,0.0 A96,96 0 0 1 301.2,170.0 L278.2,142.2 A60,60 0 0 0 240.0,36.0 Z" fill="#1a2a4a"/><path d="M301.2,170.0 A96,96 0 0 1 144.8,108.0 L180.5,103.5 A60,60 0 0 0 278.2,142.2 Z" fill="#8fa3c4"/><path d="M144.8,108.0 A96,96 0 0 1 240.0,0.0 L240.0,36.0 A60,60 0 0 0 180.5,103.5 Z" fill="#2e7d32"/><text x="313.4" y="69.6" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">39%</text><text x="211.3" y="168.5" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">34%</text><text x="181.5" y="44.4" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">27%</text>
-<text x="240" y="232" text-anchor="middle" font-size="19" font-weight="900" fill="#1a2a4a">&#8377;377 Cr</text>
-<text x="240" y="248" text-anchor="middle" font-size="9" letter-spacing="1.5" fill="#8a94a6">FY25 REVENUE</text>
-<rect x="26" y="272" width="11" height="11" rx="2" fill="#1a2a4a"/><text x="43" y="282" font-size="10.5" fill="#2a3342" font-weight="700">Passenger Vehicles (PV)</text><text x="43" y="295" font-size="9.3" fill="#8a94a6">39% &#183; anchored by Ford</text><rect x="252" y="272" width="11" height="11" rx="2" fill="#8fa3c4"/><text x="269" y="282" font-size="10.5" fill="#2a3342" font-weight="700">Two-Wheelers (2W)</text><text x="269" y="295" font-size="9.3" fill="#8a94a6">34% &#183; anchored by Hero MotoCorp</text><rect x="26" y="316" width="11" height="11" rx="2" fill="#2e7d32"/><text x="43" y="326" font-size="10.5" fill="#2a3342" font-weight="700">CV + Farm/Tractor + Exports</text><text x="43" y="339" font-size="9.3" fill="#8a94a6">27% residual &#183; Ashok Leyland, Tata Motors, Mahindra</text>
-<text x="240" y="374" text-anchor="middle" font-size="9.3" fill="#8a94a6">FY25 mix per company disclosure; exact CV/Farm/export split within the 27% residual not separately disclosed &mdash; stated as a gap</text>
-</svg>
+        <div class="microhead">FY25 Revenue Mix by End-Market</div>
+        <div class="krow"><span class="klab">Passenger Vehicles</span><span class="kval">39%<small>Anchored by Ford</small></span></div>
+        <div class="krow"><span class="klab">Two-Wheelers</span><span class="kval">34%<small>Anchored by Hero MotoCorp</small></span></div>
+        <div class="krow"><span class="klab">Commercial Vehicles</span><span class="kval">Balance<small>Ashok Leyland, Tata Motors</small></span></div>
+        <div class="krow"><span class="klab">Farm / Tractor</span><span class="kval">Balance<small>Mahindra &amp; Mahindra, 50-yr tenure</small></span></div>
+        <div class="chartcap" style="margin-top:8px">No source discloses an exact top-customer revenue % — MarketsMojo flagged "client concentration risks materialising through major customer losses" as a live Q2 FY26 concern without naming the customer(s). Treated as a disclosure gap, see &#167;16.</div>
       </div>
       <div style="flex:1.05">
-
-<div class="microhead">Order Wins &amp; Diversification (Disclosed Contracts)</div>
-<div style="border:1px solid #dde2ea;border-radius:6px;padding:11px 14px;background:#f8f9fb">
-  <div style="font-size:15px;font-weight:900;color:#1a2a4a">Multi-segment, multi-geography order book</div>
-  <p style="font-size:11px;margin-top:5px">Disclosed multi-year contracts: <b>Stellantis (North America) &#8377;300 Cr / 7 yrs</b> (control cables, deliveries from FY27, stock reportedly +~11% on the news); <b>Ford Turkey &#8377;80 Cr / 10 yrs</b>; <b>Tata Motors &#8377;30 Cr / 3 yrs</b>; domestic CV gear-shifter &#8377;60 Cr / 5 yrs; <b>UK pedal-box &#8377;160 Cr / 10 yrs</b> (production starts late 2028 &mdash; a long lead time, not near-term revenue); Hood Rod &#8377;30 Cr / 6 yrs.</p>
-  <p style="font-size:11px;margin-top:5px"><b>Non-auto diversification:</b> a new Stanley Black &amp; Decker (US) account supplies power-tool/mechanized cables &mdash; a genuine, if partial, hedge against pure auto-cycle and EV-transition exposure (see &sect;16). Management's FY26 Annual Report (~18 Sep 2026) also disclosed a medium-term target of <b>&#8377;900&ndash;1,000 Cr revenue by 2030</b> and an 80,000 sq ft NCR expansion facility (~&#8377;20 Cr FY27 capex).</p>
-</div>
+        <div class="microhead">Company Snapshot</div>
+        <div style="border:1px solid #dde2ea;border-radius:6px;padding:11px 14px;background:#f8f9fb">
+          <p style="font-size:11px">Incorporated <b>11 May 1971</b>, listed <b>1986</b>. Promoter-family (Kejriwal) run since inception — Krishna Kejriwal (CMD), Chand Kejriwal (WTD), Rahul Kejriwal (WTD). 7 manufacturing plants (India + UK, via the 2020 Magal Cables UK acquisition). FY26 revenue &#8377;469&ndash;489 Cr (source-dependent), 5-yr sales CAGR 16%, 5-yr profit CAGR 47.4%.</p>
+          <p style="font-size:11px;margin-top:6px"><b>52-week range:</b> &#8377;75.23&ndash;152.45 (current, two sources agree). A separate Yahoo-sourced snippet shows &#8377;157.00/&#8377;101.71 — flagged as likely stale. The user's brief cites a 2024 high of ~&#8377;235 and a 2026 low of ~&#8377;75; <b>this &#8377;235 figure was NOT independently corroborated</b> by any research pass — only the 52-week data above could be verified — so it is stated here as unverified, not as fact.</p>
+        </div>
       </div>
     </div>
-    </div>
+  </div>
 
   <!-- ================= 02 COMPETITIVE ADVANTAGE (MOAT) ANALYSIS ================= -->
   <div class="sec">
     <div class="sec-title" id="sec02"><span class="num">02</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
     <table class="t prose">
       <tr><th style="text-align:left">Dimension</th><th>Rating</th><th style="text-align:left">Commentary</th></tr>
-      <tr><td style="text-align:left">Brand Strength</td><td><span class="badge b-warn">Weak-to-Moderate</span></td><td style="text-align:left">Niche B2B recognition only, not consumer brand equity. Long tenure with Mahindra (50+ yrs), Hero MotoCorp, Tata Motors, Ashok Leyland, Ford and JLR signals familiarity, but third-party analysis (MarketsMojo) explicitly states Remsons operates &ldquo;at substantially smaller scale than sector leaders,&rdquo; which &ldquo;limits bargaining power with large automotive OEMs.&rdquo; An unverified claim that Remsons once fully absorbed a US tariff cost without price renegotiation (source itself flags it unverified) would suggest some pricing power if true &mdash; but net, Remsons is the challenger, not the price-setter.</td></tr>
-      <tr><td style="text-align:left">Network Effects</td><td><span class="badge b-bear">Absent</span></td><td style="text-align:left">Does not apply to a mechanical-component manufacturer business model, as expected.</td></tr>
-      <tr><td style="text-align:left">Switching Costs</td><td><span class="badge b-bull">Strongest dimension, but shared</span></td><td style="text-align:left">OEM validation/qualification cycles (APQP/PPAP) run 12&ndash;24 months; once approved, suppliers get multi-year, platform-specific program awards. Remsons&#39; own disclosed contracts corroborate this: &#8377;300 Cr/7-yr Stellantis, &#8377;80 Cr/10-yr Ford Turkey, &#8377;30 Cr/3-yr Tata Motors, &#8377;60 Cr/5-yr domestic CV gear-shifter, &#8377;160 Cr/10-yr UK pedal-box (production from late 2028), &#8377;30 Cr/6-yr Hood Rod. <b>Caveat:</b> this lock-in is platform-specific, not company-specific &mdash; it protects programs already won, not the next RFQ against better-capitalized Suprajit. No source quantifies Remsons&#39; new-RFQ win/loss rate.</td></tr>
-      <tr><td style="text-align:left">Cost Advantage</td><td><span class="badge b-bear">Likely absent / sub-scale</span></td><td style="text-align:left">Suprajit Engineering holds &gt;65% of the organized Indian control-cable market (~75% share in 2W OEM cables, ~32% in 4W) and is the world&#39;s 3rd-largest light-duty control-cable maker &mdash; materially greater scale than Remsons, a fact the company&#39;s own commentary corroborates. Margin evidence is consistent with a thin-margin, commoditized segment: EBITDA margin ~11% (FY25 est.), PAT margin ~4%; Q2 FY26 employee costs rose 46.6% YoY, &ldquo;substantially outpacing revenue growth&rdquo; and compressing margins further. The 2020 Magal Cables (UK) acquisition added capability, not evidence of an existing cost edge.</td></tr>
-      <tr><td style="text-align:left">Patents / Proprietary Tech</td><td><span class="badge b-bear">Thin</span></td><td style="text-align:left"><b>No patent filings or counts were found for Remsons in any source searched.</b> A technology-transfer partnership with Brazil-based AUSUS Automotive Systems has Remsons <i>licensing in</i> technology for the Brazilian market &mdash; not licensing out its own IP. Claims of &ldquo;strong in-house R&amp;D&rdquo; appear only in company-sourced/promotional material and are unverified. The Uni-Automation (sensors) and BEE Lighting (premium lighting) acquisitions are bought-in technology diversification, not organically developed IP.</td></tr>
+      <tr><td style="text-align:left">Brand Strength</td><td><span class="badge b-warn">Weak-to-Moderate</span></td><td style="text-align:left">Niche B2B recognition only, no consumer brand equity. 50+ year Mahindra tractor-segment relationship and long-tenure supply to Hero MotoCorp, Tata Motors, Ashok Leyland, Ford, JLR suggest OEM familiarity. An unverified claim that Remsons "fully absorbed" a US tariff cost with no price renegotiation would imply pricing power if true, but the source itself flags it as unverified. Third-party analysis (MarketsMojo) explicitly describes Remsons as operating "at substantially smaller scale than sector leaders," which "limits bargaining power with large automotive OEMs." Net: tenure exists, but Remsons is the challenger, not the price-setter.</td></tr>
+      <tr><td style="text-align:left">Network Effects</td><td><span class="badge b-bear">Absent</span></td><td style="text-align:left">Does not apply to a mechanical-component Tier-1/2 supplier business model.</td></tr>
+      <tr><td style="text-align:left">Switching Costs</td><td><span class="badge b-bull">Strongest dimension (industry-wide, not Remsons-specific)</span></td><td style="text-align:left">OEM validation/qualification cycles (APQP/PPAP) run 12&ndash;24 months industry-wide; once approved, suppliers get multi-year program awards tied to a specific vehicle platform. Remsons' own disclosed contracts corroborate this: &#8377;300 Cr/7-yr Stellantis (UK subsidiary), 10-yr Ford Turkey (~&#8377;80 Cr), 3-yr Tata Motors (~&#8377;30 Cr), 5-yr domestic CV gear-shifter (&#8377;60 Cr), a 10-yr UK pedal-box order (~&#8377;160 Cr, production starts late 2028 — a long lead time, not near-term revenue), and a 6-yr Hood Rod contract (~&#8377;30 Cr). Caveat: lock-in is platform-specific, not company-specific — it protects programs already won but does not guarantee winning the next platform's RFQ against a better-capitalized Suprajit. No source quantifies Remsons' new-RFQ win/loss rate.</td></tr>
+      <tr><td style="text-align:left">Cost Advantage</td><td><span class="badge b-bear">Likely Absent / Sub-Scale</span></td><td style="text-align:left">Suprajit Engineering holds &gt;65% of the organized Indian cable market (~75% 2W-OEM share, ~32% 4W), and is the world's 3rd-largest light-duty control-cable maker — materially greater scale than Remsons, which itself concedes "substantially smaller scale than sector leaders." Margin evidence is consistent with a thin-margin, commoditized segment: EBITDA margin ~10.7&ndash;11% (FY26), and Q2 FY26 employee costs rose 46.6% YoY, "substantially outpacing revenue growth" and compressing margins further. The 2020 Magal Cables (UK) acquisition added capability, not evidence of an existing cost edge.</td></tr>
+      <tr><td style="text-align:left">Patents / Proprietary Tech</td><td><span class="badge b-bear">Thin</span></td><td style="text-align:left">No patent filings or counts were found for Remsons in any source searched. A technology-transfer partnership with Brazil-based AUSUS Automotive Systems has Remsons <b>licensing in</b> technology for the Brazilian market — not licensing out its own IP. Claims of "strong in-house R&amp;D" appear only in company-sourced/promotional material and are unverified. The Uni-Automation (sensors) and BEE Lighting (premium lighting) acquisitions are bought-in technology diversification, not organically developed IP.</td></tr>
     </table>
     <div class="cols" style="margin-top:10px">
       <div style="flex:1">
         <div class="microhead" style="margin-top:0">What This Moat Does NOT Protect Against</div>
-        <p style="font-size:11.3px">Losing the <i>next</i> platform RFQ to a better-capitalized, larger-scale incumbent (Suprajit) or a more diversified competitor (Minda Corporation) &mdash; the qualification barrier that protects existing programs applies equally to every qualified Tier-1/2 supplier bidding for the next one. It also does not protect against Remsons&#39; own capital-allocation missteps (see the Astro Motors reversal, &sect;16) or against the structural, multi-year EV shift away from mechanical gear-linkage cables specifically (see &sect;16 / Sector).</p>
+        <p style="font-size:11.3px">Losing the next platform RFQ to a better-scaled competitor — every incumbent Tier-1/2 supplier enjoys the same qualification-cycle switching-cost dynamic, so it is not Remsons-specific. It does not protect against margin compression from a sub-scale cost base, customer concentration in a handful of named accounts, or the multi-year secular EV shift-by-wire threat to the gear-shift-cable product line specifically (see &#167;16).</p>
       </div>
       <div style="flex:1">
-        <div class="notebox blue" style="margin-top:0"><b>Moat verdict:</b> rests almost entirely on switching-cost dynamics inherent to the automotive qualification process &mdash; a dynamic every incumbent Tier-1/2 supplier enjoys, not a Remsons-specific advantage. On brand, cost and IP, Remsons is the smaller, less differentiated player relative to market leader Suprajit Engineering and diversified peer Minda Corporation. The company&#39;s edge is tenure and multi-segment OEM relationships, not structural pricing power or scale.</div>
+        <div class="notebox blue" style="margin-top:0"><b>Synthesis:</b> The moat rests almost entirely on switching-cost dynamics inherent to the automotive qualification process — a dynamic every incumbent Tier-1/2 supplier enjoys, not a Remsons-specific fortress. On brand, cost and IP, Remsons is the smaller, less-differentiated player relative to market leader Suprajit Engineering and diversified peer Minda Corporation. Multi-segment (2W/PV/CV/Farm) and multi-geography exposure, plus the non-auto Stanley Black &amp; Decker account, are real diversification positives that partially offset the scale gap.</div>
       </div>
     </div>
   </div>
 
-  
-
-  <!-- ================= 02 SENTIMENT & MOMENTUM ================= -->
-  
-
-
+  <!-- ================= 03 THE SEPTEMBER 2026 PRICE SPIKE ================= -->
   <div class="sec">
-    <div class="sec-title" id="sec03"><span class="num">03</span><h2>The September 2026 Price Spike — An Unexplained Open Question</h2></div>
-    <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Move (Source A)</div><div style="font-size:18px;font-weight:900;color:#2e7d32">+10.9%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">&#8377;123.25 &#183; vol 782,455</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Move (Sources B/C)</div><div style="font-size:18px;font-weight:900;color:#2e7d32">+16.7% to +17.2%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">&#8377;129.60&ndash;130.00 &#183; vol ~2.5M shares</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Confirmed Trigger</div><div style="font-size:18px;font-weight:900;color:#c62828">NONE FOUND</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">3 separate research passes</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Free Float</div><div style="font-size:18px;font-weight:900;color:#c62828">~1.29 Cr sh</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">extremely thin, per brief</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Institutional Holding</div><div style="font-size:18px;font-weight:900;color:#c62828">FII 2.79% / DII 1.10%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">no MF / insurer holdings found</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Block/Bulk Deal</div><div style="font-size:18px;font-weight:900;color:#1a2a4a">NONE (22&ndash;25 Sep)</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">most recent: 29 May 2026</div></div></div>
+    <div class="sec-title" id="sec03"><span class="num">03</span><h2>The September 2026 Price Spike — An Unresolved Open Question</h2></div>
+    <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #c62828;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#fdf5f5);margin-bottom:12px"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">One Source</div><div style="font-size:16px;font-weight:900;color:#1a2a4a">+10.9% to &#8377;123.25</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Volume 782,455 shares</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Other Sources</div><div style="font-size:16px;font-weight:900;color:#1a2a4a">+16.7% to +17.2%, &#8377;129.60&ndash;130.00</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Volume 2,500,107&ndash;2,534,241 shares</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Confirmed Trigger Found</div><div style="font-size:16px;font-weight:900;color:#c62828">NONE</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Across three separate research passes</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Float</div><div style="font-size:16px;font-weight:900;color:#c62828">~1.29 Cr shares</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Near-zero institutional ownership</div></div></div>
     <div class="cols">
-      <div style="flex:0 0 calc(50% - 10px);min-width:0">
-        <div class="microhead" style="margin-top:0">What Actually Happened in the 22&ndash;25 Sep Window</div>
-        <div style="border:2px solid #c62828;border-radius:8px;padding:10px 14px;background:linear-gradient(135deg,#fdf0f0,#fff6f6);height:calc(100% - 24px)">
-          <p style="font-size:11.4px"><b>No company announcement, order win, regulatory filing, or block/bulk deal dated in the 22&ndash;25 Sep 2026 window mechanically explains a same-day double-digit move.</b> This was checked across three independent research passes and none found a smoking gun.</p>
-          <p style="font-size:11.4px;margin-top:7px">The only dated events nearby are routine: the <b>54th AGM</b> (one source says held 23 Sep via video conference, another says scheduled for 30 Sep &mdash; unresolved conflict, both stated), the <b>dividend record date</b> (23 Sep, final dividend &#8377;0.10/share approved), the <b>FY26 Annual Report filing</b> (~18 Sep, disclosing the &#8377;900&ndash;1,000 Cr-by-2030 target and the NCR expansion), and a new <b>ESOP 2026</b> (100,000 options) approved at the AGM.</p>
-          <p style="font-size:11.4px;margin-top:7px"><b>REMSONSIND&#39;s ASM/GSM surveillance status could not be confirmed either way</b> (NSE page fetch failed during research) &mdash; flagged as a strong candidate for post-spike surveillance inclusion, not a confirmed status. No evidence of a broader small-cap/auto-ancillary sector rally on these dates &mdash; this looks stock-specific.</p>
-        </div>
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">What Was — and Was Not — Found</div>
+        <p style="font-size:11.4px"><b>No company announcement, order win, regulatory filing, or block/bulk deal dated 22&ndash;25 Sep 2026 mechanically explains a same-day double-digit move.</b> The closest dated events in the window are routine: the 54th AGM (one source says held 23 Sep 2026 via video conference; another says scheduled for 30 Sep — unresolved conflict, stated as both), the dividend record date (23 Sep, final dividend &#8377;0.10/share approved), the FY26 Annual Report filing (~18 Sep 2026, disclosing a new medium-term target of &#8377;900&ndash;1,000 Cr revenue by 2030 and an 80,000 sq ft NCR expansion facility with ~&#8377;20 Cr FY27 capex), and a new "Remsons Employees Stock Option Scheme 2026" (100,000 options) approved by shareholders at the AGM.</p>
+        <p style="font-size:11.4px;margin-top:7px"><b>Best-supported (still circumstantial) explanation:</b> a delayed market reaction to the AGM/annual-report growth-target disclosure, landing on a stock with an extremely thin free float and near-zero institutional ownership (FII 2.79%, DII 1.10% as of Jun 2026 — no mutual fund or insurance holdings identified at all) — a combination that makes 15&ndash;20% single-day moves mechanically possible on modest absolute volume.</p>
+        <p style="font-size:11.4px;margin-top:7px"><b>No block/bulk deal was found in the 22&ndash;25 Sep window</b> (most recent on record: 29 May 2026, Chand Krishna Kejriwal sold 340,000 shares at ~&#8377;92.02). No evidence of a broader small-cap/auto-ancillary sector rally on those dates — this looks stock-specific, not sector-driven. REMSONSIND's ASM/GSM surveillance status could not be confirmed either way (NSE page fetch failed) — a strong candidate for post-spike surveillance inclusion, not a confirmed status.</p>
       </div>
-      <div style="flex:0 0 calc(50% - 10px);min-width:0">
-        <div class="microhead" style="margin-top:0">Best-Supported (Still Circumstantial) Explanation</div>
-        <div class="krow"><span class="klab">Leading Hypothesis</span><span class="kval" style="font-size:11px">Delayed reaction to AGM / Annual Report growth-target disclosure<small>landing on an illiquid, low-float stock</small></span></div>
-        <div class="krow"><span class="klab">Free Float vs Share Count</span><span class="kval" style="color:#c62828">~18% unreconciled gap<small>Eq. cap &#8377;7 Cr @ &#8377;2 FV implies ~3.5Cr sh; mkt cap &#247; price implies ~2.99Cr sh</small></span></div>
-        <div class="krow"><span class="klab">Mechanism</span><span class="kval" style="font-size:11px">Thin float + near-zero institutional ownership<small>makes 15&ndash;20% single-day moves mechanically possible on modest absolute volume</small></span></div>
-        <div class="krow"><span class="klab">Promoter Activity Into the Rally</span><span class="kval" style="color:#c62828">SELLERS in May&ndash;Jun<small>not buyers ahead of the Sep move &mdash; see &sect;16</small></span></div>
-        <div class="krow"><span class="klab">Recent Quarter</span><span class="kval" style="color:#f57f17">Deceleration, not acceleration<small>Q1 FY27 EPS -21% YoY &mdash; the rally is not an obvious earnings-driven re-rating</small></span></div>
-        <div style="font-size:10.3px;color:#7a1f1f;background:#fdf0f0;border-radius:4px;padding:6px 9px;margin-top:8px"><b>House view:</b> this is a genuinely unexplained (or at best thinly-explained) low-float small-cap price spike, and should be treated as a <b>standalone risk factor in its own right</b> &mdash; not papered over with a speculative narrative. Treat the move with proportionate caution rather than as confirmation of a fundamental re-rating.</div>
+      <div style="flex:1">
+        <div class="notebox red" style="margin-top:0"><b>Stated plainly:</b> this is a genuinely unexplained (or at best thinly-explained) low-float small-cap price spike, and it should be treated as a <b>standalone risk factor in its own right</b>, not papered over with a speculative narrative. The share-count reconciliation gap compounds the uncertainty: equity capital of &#8377;7 Cr at &#8377;2 face value implies ~3.5 Cr shares outstanding, but market cap &#247; price implies ~2.99 Cr shares — an ~18% unreconciled gap (see &#167;08).</div>
+        <div class="notebox" style="margin-top:10px"><b>Cross-reference &#8212; the technical picture (&#167;18):</b> the same spike is the dominant recent feature on the daily Elliott Wave chart — a sharp wave-(iii)-type impulse off an August 2026 base near &#8377;75&ndash;80, running straight into the current &#8377;114.81&ndash;132.80 zone. The chart cannot explain the fundamental "why," only that the move is real, large, and currently in a pullback from its spike high.</div>
       </div>
     </div>
   </div>
@@ -638,25 +528,24 @@
     <div class="cols">
       <div class="panel" style="background:linear-gradient(180deg,#fff,#fdf1f1);border:3px solid #c62828">
         <div class="plab">Key Watch-Item</div>
-        <div class="pval" style="color:#c62828;font-size:16px">&#9888; Unexplained Spike on a Thin, Retail Float</div>
-        <p style="font-size:11.3px;margin-top:5px">A 10.9&ndash;17.2% (source-dependent) price move on 22&ndash;25 Sep with no confirmed trigger, on a stock with ~1.29 Cr free float, near-zero institutional ownership (FII 2.79%, DII 1.10%, no MF/insurer holdings found) and promoters who were net sellers in the months before. <b>This combination is itself the dominant risk</b> &mdash; see &sect;03.</p>
+        <div class="pval" style="color:#c62828;font-size:16px">&#9888; Unexplained Spike + Thin Float</div>
+        <p style="font-size:11.3px;margin-top:5px">A ~1.29 Cr-share free float with FII at 2.79% and DII at 1.10% (no MF/insurance holdings at all) is mechanically capable of 15&ndash;20% single-day moves on modest volume. No SEBI action, no confirmed ASM/GSM status either way. <b>Next dated events:</b> AGM (23 or 30 Sep, conflicting sources) and any post-spike NSE surveillance action.</p>
       </div>
       <div class="panel" style="background:linear-gradient(180deg,#fff,#fdf1f1);border-top:3px solid #c62828">
         <div class="plab">Overall Sentiment</div>
-        <div class="pval" style="color:#c62828">CAUTION <span style="font-size:12px;color:#5a6475;font-weight:600">near-term</span></div>
-        <p style="font-size:11.3px;margin-top:5px">No sell-side brokerage coverage exists (Trendlyne: 0 recent research reports from 0 sources). The only quant/algorithmic signals are mixed-to-negative: TipRanks AI rating Neutral; MarketsMojo downgraded Hold&#8594;Sell (22 May 2026, Mojo Score 58&#8594;42) and separately cut its Quality Grade Good&#8594;Average (15 Dec 2025). The 12-month picture has real positives (zero promoter pledge, order-book momentum, ACMA industry tailwind) but they predate, and do not explain, the September spike.</p>
+        <div class="pval" style="color:#c62828">CAUTIOUS <span style="font-size:12px;color:#5a6475;font-weight:600">high manipulation/reversal risk</span></div>
+        <p style="font-size:11.3px;margin-top:5px">Bull case: genuine multi-segment OEM diversification, real order-book momentum (Stellantis/Ford/CV wins), zero promoter pledge, manageable debt, ACMA industry tailwind (+12.7% FY26 turnover), non-auto diversification via Stanley Black &amp; Decker. Bear case: an unexplained spike on a thin, retail-dominated float with zero institutional sponsorship is the textbook setup for a sharp reversal; no sell-side brokerage covers the stock at all (Trendlyne: "0 recent research reports from 0 sources").</p>
       </div>
       <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border-top:3px solid #e67e22">
         <div class="plab">Momentum Prediction</div>
-        <div class="pval" style="color:#f57f17">VERTICAL, UNCONFIRMED</div>
-        <p style="font-size:11.3px;margin-top:5px">Price momentum is sharply up and, per the MotiveWave count (&sect;18), pierced the 200% Fibonacci extension of the recent impulse in a single session &mdash; a signature that can mean either a genuine wave-3 continuation or a low-float overshoot. <b>Fundamentally, momentum is the opposite of confirmatory:</b> Q1 FY27 showed a real deceleration (EPS -21% YoY on flat EBITDA), so the rally is not obviously being driven by an accelerating quarterly print.</p>
+        <div class="pval" style="color:#f57f17">EXTENDED — AWAITING CONFIRMATION OF TRIGGER</div>
+        <p style="font-size:11.3px;margin-top:5px">Price momentum is extremely strong on the daily chart (a five-fold-plus range move off the ~&#8377;75 low) but fundamental momentum is mixed: Q1 FY27 (Jun'26) showed revenue holding at +20% YoY while EBITDA was roughly flat YoY and net profit fell YoY (a real, sourced deceleration, not the driver of the September rally). Until a confirmed trigger surfaces or NSE surveillance data becomes available, momentum should be read as <b>technically extended, fundamentally unconfirmed</b>.</p>
       </div>
-
     </div>
-    <div class="notebox red"><b>Framing note:</b> This is <b>not, on current evidence, a fundamentals-confirmed re-rating</b> &mdash; it is a large, unexplained price move in a name with genuine multi-segment OEM diversification and real order wins, but also thin float, near-zero institutional sponsorship, a recently decelerating quarter, and an unresolved EPS/financials data conflict (&sect;08). Treat the September move with proportionate skepticism until a mechanical explanation or sustained follow-through emerges.</div>
+    <div class="notebox"><b>Framing note:</b> This is <b>not a clean growth-momentum setup</b> — it is a low-float small-cap in the middle of a large, unexplained price event. At 21.5&ndash;25.4x TTM P/E the market is not obviously paying for accelerating quarterly delivery (the most recent quarter decelerated); it may instead be paying for the FY26 Annual Report's 2030 revenue target, for pure float-driven momentum, or for something not yet visible in public filings. Treat the spike itself, not the valuation multiple, as the central question this report cannot fully answer.</div>
   </div>
 
-  <!-- ================= 03/04 SECTOR + SHAREHOLDING ================= -->
+  <!-- ================= 05/06/07 SECTOR + SHAREHOLDING + PERFORMANCE ================= -->
   <div class="sec">
     <div class="cols">
       <div style="flex:1">
@@ -664,381 +553,319 @@
         <svg viewBox="0 0 610 206" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
 <line x1="46" y1="180.0" x2="602" y2="180.0" stroke="#dde2ea"/>
 <text x="10" y="22" font-size="9.5" fill="#8a94a6">&#8377; Lakh Cr</text>
-<rect x="90" y="40.0" width="130" height="140.0" fill="#1a2a4a" rx="3"/><text x="155.0" y="35.0" text-anchor="middle" font-size="11" font-weight="700" fill="#1a2a4a">6.63</text><text x="155.0" y="199" text-anchor="middle" font-size="10.5" fill="#5a6475">OEM</text>
-<rect x="260" y="157.1" width="130" height="22.9" fill="#2a9d8f" rx="3"/><text x="325.0" y="152.1" text-anchor="middle" font-size="11" font-weight="700" fill="#1a2a4a">1.08</text><text x="325.0" y="199" text-anchor="middle" font-size="10.5" fill="#5a6475">Aftermarket</text>
-<text x="470" y="80" font-size="10.5" fill="#5a6475" text-anchor="middle">Exports</text><text x="470" y="96" font-size="13" font-weight="700" fill="#1a2a4a" text-anchor="middle">US$24 Bn</text><text x="470" y="112" font-size="9" fill="#8a94a6" text-anchor="middle">+5% YoY &#183; Europe strongest</text>
-</svg>
-        <div class="chartcap">ACMA India auto-components industry, FY2025-26 turnover &#8377;7.60 lakh Cr (~US$85.9 Bn), <b>+12.7% YoY</b> &mdash; OEM &#8377;6,62,893 Cr (+16.3%), Aftermarket &#8377;1,08,453 Cr (+9%), Exports US$24 Bn (+5%). 5-yr industry CAGR ~17%. <b>No ACMA-level breakout exists for the narrow control-cable niche</b> Remsons competes in &mdash; a paid commercial vendor (IndexBox) estimates the India control-cable market at &#8377;3,800&ndash;4,200 Cr (2026E), 7&ndash;9% CAGR (2021&ndash;26), but this is <b>low-confidence, not independently corroborated</b>. A reliable primary-sourced niche sizing does not appear to exist publicly.</div>
+<rect x="424" y="12" width="9" height="9" fill="#1a2a4a" rx="2"/><text x="437" y="20" font-size="9.5" fill="#5a6475">ACMA actual</text>
+<rect x="514" y="12" width="9" height="9" fill="#2a9d8f" rx="2"/><text x="527" y="20" font-size="9.5" fill="#5a6475">Growth trend</text>
+<rect x="54" y="140.0" width="75" height="40" fill="#1a2a4a" rx="3"/><text x="92" y="135" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a2a4a">5.9</text><text x="92" y="199" text-anchor="middle" font-size="10" fill="#5a6475">FY23</text><rect x="145" y="130.0" width="75" height="50" fill="#1a2a4a" rx="3"/><text x="183" y="125" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a2a4a">6.7</text><text x="183" y="199" text-anchor="middle" font-size="10" fill="#5a6475">FY24</text><rect x="237" y="112.0" width="75" height="68" fill="#1a2a4a" rx="3"/><text x="274" y="107" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a2a4a">6.75</text><text x="274" y="199" text-anchor="middle" font-size="10" fill="#5a6475">FY25</text><rect x="328" y="76.0" width="75" height="104" fill="#2a9d8f" rx="3"/><text x="366" y="71" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a2a4a">7.60</text><text x="366" y="199" text-anchor="middle" font-size="10" fill="#5a6475">FY26</text></svg>
+        <div class="chartcap">ACMA India auto-components industry turnover: FY2025&ndash;26 &#8377;7.60 lakh Cr (~US$85.9 Bn), +12.7% YoY (OEM &#8377;6,62,893 Cr +16.3%, Aftermarket &#8377;1,08,453 Cr +9%, Exports US$24 Bn +5%, Europe strongest). 5-yr industry CAGR ~17%. No ACMA-level breakout exists for the narrow control-cable niche specifically; a commercial vendor (IndexBox, a paid-report landing page, NOT independently corroborated, low-confidence) estimates the India control-cable market at &#8377;3,800&ndash;4,200 Cr (2026), 7&ndash;9% CAGR (2021&ndash;26). A reliable primary-sourced niche sizing does not exist publicly.</div>
       </div>
       <div style="flex:1.08">
-        <div class="sec-title" id="sec06"><span class="num">06</span><h2>Shareholding Pattern</h2></div>
+        <div class="sec-title" id="sec06"><span class="num">06</span><h2>Shareholding — 4 Qtrs</h2></div>
         <table class="t">
-          <tr><th>Category</th><th>Jun'25</th><th>Jun'26</th><th>&#916;</th></tr>
-          <tr><td>Promoters</td><td>&mdash;</td><td>62.83%</td><td class="neg">&#9660; from ~75% (Sep&#39;23)</td></tr>
-          <tr><td>FIIs</td><td>5.10%</td><td>2.79%</td><td class="neg">&#9660; 2.31pp</td></tr>
-          <tr><td>DIIs</td><td>&mdash;</td><td>1.10%</td><td>no MF / insurer holdings found</td></tr>
-          <tr><td>Public / Retail</td><td>27.76%</td><td>33.30%</td><td class="pos">&#9650; 5.54pp</td></tr>
-          <tr><td>No. of Shareholders</td><td>&mdash;</td><td>~16,500</td><td>(Mar 2026)</td></tr>
+          <tr><th>Category</th><th>Sep'25</th><th>Dec'25</th><th>Mar'26</th><th>Jun'26</th><th>&#916;</th></tr>
+          <tr><td>Promoters</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>62.83%</td><td class="neg">&#9660; from ~75% (Sep'23)</td></tr>
+          <tr><td>FIIs</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>2.79%</td><td class="neg">&#9660; from 5.10% (a year earlier)</td></tr>
+          <tr><td>DIIs</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>1.10%</td><td class="neg">No MF / insurance holdings identified</td></tr>
+          <tr><td>Public / Retail</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>33.30%</td><td class="pos">&#9650; from 27.76% (Jun'25)</td></tr>
+          <tr><td>No. of Shareholders</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>~16,500</td><td>(Mar 2026)</td></tr>
         </table>
-        <div class="chartcap"><b>Data gap:</b> only Jun&#39;25 and Jun&#39;26 datapoints were sourced &mdash; the template&#39;s usual 4-quarter trend could not be populated without fabricating intermediate quarters, so it is shown as-is. <b>Reading it:</b> promoters have been on a steady multi-year decline (~75%&#8594;62.83%), FIIs nearly halved, DIIs are negligible with zero mutual-fund/insurance holdings identified (MarketsMojo flags this as a negative institutional-quality signal), and retail/public holding has risen sharply &mdash; individual investors up to &#8377;2 lakh alone are 23.70% of total shareholding. This is a highly retail-driven float, a structural factor behind the volatility in &sect;03.</div>
+        <div class="chartcap">Quarter-by-quarter series was not available for Sep'25/Dec'25/Mar'26 in the sources checked — only the Jun'26 cross-section and the year-over-year deltas above could be sourced. <b>The dominant multi-year pattern:</b> promoters trimmed steadily (~75% &#8594; 62.83%), FIIs roughly halved, and retail/public absorbed the difference (27.76% &#8594; 33.30%) — a highly retail-driven float that is a structural factor behind the extreme volatility (see &#167;16). Individual investors up to &#8377;2 lakh alone = 23.70% of total shareholding.</div>
       </div>
       <div style="flex:1.05">
         <div class="sec-title" id="sec07"><span class="num">07</span><h2>Stock Performance</h2></div>
-        <div class="krow"><span class="klab">CMP (25 Sep 2026)</span><span class="kval">&#8377;129&ndash;130<small>source-dependent, post-spike</small></span></div>
-        <div class="krow"><span class="klab">22&ndash;25 Sep Move</span><span class="kval" style="color:#2e7d32">+10.9% to +17.2%<small>genuine cross-source conflict &mdash; both stated, see &sect;03</small></span></div>
-        <div class="krow"><span class="klab">52-Wk High</span><span class="kval">&#8377;152.45<small>two sources agree</small></span></div>
-        <div class="krow"><span class="klab">52-Wk Low</span><span class="kval">&#8377;75.23<small>two sources agree</small></span></div>
-        <div class="krow"><span class="klab">Stale Yahoo-Sourced Range</span><span class="kval" style="color:#f57f17">&#8377;157.00 / &#8377;101.71<small>one source only &mdash; flagged as likely outdated, not used above</small></span></div>
-        <div class="krow"><span class="klab">User-Cited 2024 High</span><span class="kval" style="color:#f57f17">~&#8377;235<small>NOT independently corroborated &mdash; stated as unverified, not fact</small></span></div>
-        <div class="krow"><span class="klab">F&amp;O / Index Status</span><span class="kval">Not F&amp;O eligible<small>mkt cap below NSE F&amp;O threshold; no index inclusion identified</small></span></div>
-        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825">No Nifty/Midcap/Smallcap comparative index-return series was available for this small, thinly-covered stock &mdash; omitted rather than estimated.</div>
-        
+        <table class="peer">
+          <tr><th>Metric</th><th>Value</th></tr>
+          <tr style="background:#eef4fc"><td>52-Wk High</td><td class="pos">&#8377;152.45</td></tr>
+          <tr><td>52-Wk Low</td><td class="neg">&#8377;75.23</td></tr>
+          <tr><td>CMP vs 52-Wk High</td><td class="neg">&minus;14.7% (at &#8377;130)</td></tr>
+          <tr><td>CMP vs 52-Wk Low</td><td class="pos">+72.8% (at &#8377;130)</td></tr>
+          <tr><td>Alt. Yahoo-sourced range</td><td class="warn">&#8377;157.00 / &#8377;101.71 (flagged stale)</td></tr>
+        </table>
+        <div class="krow" style="margin-top:6px"><span class="klab">Spike Day Move</span><span class="kval">+10.9% to +17.2%<small>Conflicting across sources, see &#167;03</small></span></div>
+        <div class="krow"><span class="klab">Spike Day Volume</span><span class="kval">782,455 to 2,534,241<small>Wide conflict — genuine data gap</small></span></div>
+        <div class="chartcap" style="margin-top:6px">Not F&amp;O eligible — market cap far below NSE's F&amp;O liquidity/market-cap thresholds. No index inclusion identified.</div>
       </div>
     </div>
   </div>
 
+  <!-- ================= 08 KEY FINANCIALS ================= -->
   <div class="sec compact">
-    <div class="sec-title" id="sec08"><span class="num">08</span><h2>Key Financials — Annual &amp; Quarterly (&#8377; Crore, Consolidated)</h2></div>
+    <div class="sec-title" id="sec08"><span class="num">08</span><h2>Key Financials — Annual &amp; Quarterly (&#8377; Crore, Consolidated, Screener.in unless noted)</h2></div>
+    <div class="notebox red" style="margin-top:0;margin-bottom:10px"><b>&#9888; THE FY2024 EPS DATA CONFLICT — genuinely unresolved, presented as such, not settled:</b> Two research streams reached different conclusions on FY24 EPS and neither is preferred here. <b>Stream A</b> (financials/valuation research) found a 1:5 stock split (face value &#8377;10 &#8594; &#8377;2) approved by the board 27 Feb 2024, and reasoned that the user's own MarketSmith-sourced brief figure of "FY2024 EPS = &#8377;0.90" is the split-adjusted figure, since a pre-split FY2024 EPS of &#8377;4.48 (Business Standard, consolidated) &#247; 5 &#8776; &#8377;0.896 &#8776; &#8377;0.90 &mdash; this was argued to resolve an apparent "EPS collapse." <b>Stream B</b> (management/governance research, reading the actual audited FY2023-24 Annual Report, Note 44, standalone basis) found <b>NO evidence of any EPS collapse</b>: standalone audited EPS grew &#8377;2.71 (FY23) &#8594; &#8377;2.97 (FY24), with continuous profit growth every year FY22&ndash;FY26 across every source checked (Screener, TipRanks, Business Standard). The only FY24 one-off was an immaterial &#8377;38.49 lakh (&#8377;0.038 Cr) exceptional loss from a warehouse fire in Manesar, net of insurance &mdash; nowhere near large enough to explain a "collapse" narrative. Stream B also noted the FY24 Annual Report's own director-shareholding table still shows face value &#8377;10 (not &#8377;2), suggesting the split (if it happened) may postdate FY24's own disclosures &mdash; casting doubt on Stream A's &#8377;4.48&#247;5 reconciliation being the full explanation. Adding to the confusion: Screener.in shows FY24 EPS &#8377;3.82 (yet another figure, consolidated); a Screener standalone view (per Stream B) shows FY22 &#8377;1.0, FY23 &#8377;2.2, FY24 &#8377;3.2 "EPS Adj." with share capital flat at &#8377;7 Cr throughout (no split/bonus visible in that table) &mdash; directly contradicting Stream A's stock-split finding. Trendlyne's own numbers (per Stream A) also showed FY22&ndash;FY26 EPS in the &#8377;1.0&ndash;3.4 range on an "adjusted" basis with flat &#8377;7 Cr share capital. <b>The underlying share-count/face-value history could not be conclusively reconciled from public sources</b> — readers should treat every EPS figure in this report with that caveat and independently verify before acting.</div>
     <div class="cols" style="margin-bottom:10px">
-      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column"><div class="microhead" style="margin-top:0">&#9733; Latest Quarter — Q1 FY27 (Jun&#39;26) &middot; A Genuine Deceleration Quarter</div><div style="border:2px solid #f57f17;border-radius:8px;padding:8px 14px;background:linear-gradient(135deg,#fff9e0,#fffdf4 60%,#fffbe8);box-shadow:0 2px 8px rgba(245,127,23,0.12);flex:1;margin-bottom:0">
-            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
-        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;119.72 Cr</div><div style="font-size:10.5px;color:#5a6475">Revenue &nbsp;<b class="pos">+20% YoY</b></div></div>
-        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;10.4 Cr</div><div style="font-size:10.5px;color:#5a6475">EBITDA &nbsp;<b class="warn">~flat YoY</b> (&#8377;104mn vs &#8377;106mn)</div></div>
-        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#c62828">&#8377;2.9&ndash;3.23 Cr</div><div style="font-size:10.5px;color:#5a6475">PAT &nbsp;<b class="neg">conflicting figures</b></div></div>
-        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#c62828">&minus;21% YoY</div><div style="font-size:10.5px;color:#5a6475">EPS decline &nbsp;(per brief)</div></div>
-        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">Trendlyne/Screener</div><div style="font-size:10.5px;color:#5a6475">PAT &#8377;3.22&ndash;3.23 Cr</div></div>
-        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">Investor Deck</div><div style="font-size:10.5px;color:#5a6475">PAT &#8377;2.9 Cr (Rs 29mn)</div></div>
-      </div>
-      <div style="font-size:10.4px;color:#7a5a00;margin-top:8px">Revenue growth held at +20% YoY but margin/profit decelerated: EBITDA roughly flat YoY and net profit fell YoY on one reading. <b>This is a real, sourced signal that the September rally is not obviously being driven by an accelerating quarterly print</b> &mdash; flagged prominently per house style, not smoothed over.</div>
-    </div></div>
-      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column">
-        <div class="microhead" style="margin-top:0">Valuation &amp; Balance-Sheet Tiles</div>
-    <div class="tiles" style="flex-wrap:wrap;flex:1;align-content:stretch">
-      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">TTM/FY26 Revenue</div><div class="val">&#8377;469&ndash;489 Cr</div><div class="note">Screener vs other sources</div></div>
-      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E (TTM)</div><div class="val warn">21.5&ndash;25.4x</div><div class="note">source-dependent, on EPS &#8377;5.18 FY26</div></div>
-      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Market Cap</div><div class="val warn">&#8377;387&ndash;453 Cr</div><div class="note">Tickertape/brief 387&ndash;388 better corroborated (2 sources) vs Screener 453</div></div>
-      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/B</div><div class="val">2.6&ndash;3.0x</div><div class="note">Book value &#8377;42.7/sh</div></div>
-      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">ROE</div><div class="val">13.5&ndash;17.2%</div><div class="note">wide range: Screener 13.5%, peer-comparison 17.2%, Simply Wall St 15.09%</div></div>
-      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">ROCE</div><div class="val">15&ndash;15.5%</div><div class="note">consistent across sources</div></div>
-      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">D/E (overall)</div><div class="val">0.69x</div><div class="note">Screener, total borrowings/equity</div></div>
-      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">LT Debt/Equity</div><div class="val">30%</div><div class="note">MarketSmith &mdash; likely total-vs-LT-debt distinction, not a true conflict</div></div>
-    </div>
-      </div>
-    </div>
-
-
-
-    <div class="cols" style="margin-top:6px">
-      <div style="flex:0 0 calc(50% - 7px);min-width:0">
-        <div class="microhead">Annual P&amp;L — FY21&ndash;FY26 (Consolidated, Screener.in)</div>
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">Annual P&amp;L — Consolidated (Screener.in)</div>
         <table class="t fit">
           <tr><th>Year</th><th>Sales</th><th>Op Profit</th><th>PAT</th><th>EPS (&#8377;)</th></tr>
           <tr><td>FY21</td><td>226</td><td>10</td><td>4</td><td>1.57</td></tr>
           <tr><td>FY22</td><td>286</td><td>20</td><td>5</td><td>1.87</td></tr>
           <tr><td>FY23</td><td>313</td><td>26</td><td>8</td><td>2.93</td></tr>
-          <tr><td>FY24</td><td>312</td><td>31</td><td>13</td><td class="warn">DISPUTED &mdash; see note below</td></tr>
+          <tr><td>FY24</td><td>312</td><td>31</td><td>13</td><td class="warn">Disputed &mdash; see note above</td></tr>
           <tr><td>FY25</td><td>377</td><td>37</td><td>17</td><td>4.12</td></tr>
-          <tr><td><b>FY26</b></td><td><b>469</b></td><td><b>50</b></td><td><b class="warn">21 (Scr.) / 18.05 (PR)</b></td><td><b class="pos">5.18</b></td></tr>
+          <tr><td><b>FY26</b></td><td><b>469</b><small style="font-weight:400;display:block">473.95&ndash;488.80 (other sources)</small></td><td><b>50</b><small style="font-weight:400;display:block">&#8377;54.78 Cr, press release</small></td><td><b>21</b><small style="font-weight:400;display:block">&#8377;18.05 Cr, press release (+25.6% YoY)</small></td><td><b>5.18</b></td></tr>
         </table>
-        <div class="mininote" style="background:#fdf0f0;border-left:3px solid #c62828;margin-top:6px"><b>&#9888; FY2024 EPS &mdash; genuinely unresolved, multi-source conflict (do not treat as settled):</b> The user&#39;s own MarketSmith-sourced brief gives FY24 EPS = &#8377;0.90. <b>Stream A</b> (financials research) found a 1:5 stock split (FV &#8377;10&#8594;&#8377;2) approved 27 Feb 2024 and reasons that &#8377;0.90 is the split-adjusted figure, since a pre-split FY24 EPS of &#8377;4.48 (Business Standard, consolidated) &#247; 5 &#8776; &#8377;0.90. <b>Stream B</b> (governance research, reading the audited FY23-24 Annual Report Note 44, standalone) found <i>no</i> EPS collapse &mdash; standalone audited EPS grew &#8377;2.71 (FY23) &#8594; &#8377;2.97 (FY24), continuous profit growth FY22-FY26 across Screener/TipRanks/Business Standard, with the only FY24 one-off being an immaterial &#8377;38.49 lakh exceptional loss (Manesar warehouse fire, net of insurance). Stream B also notes the FY24 Annual Report&#39;s own director-shareholding table still shows FV &#8377;10, casting doubt on whether the split predates FY24 disclosures. Screener.in separately shows FY24 EPS &#8377;3.82 (yet another figure), and a Screener standalone table (FY22 &#8377;1.0, FY23 &#8377;2.2, FY24 &#8377;3.2 &ldquo;EPS Adj.&rdquo;) shows share capital flat at &#8377;7 Cr with no visible split &mdash; directly contradicting Stream A. <b>The underlying share-count/face-value history could not be conclusively reconciled from public sources; no single number is presented here as settled fact.</b></div>
-        <div class="microhead" style="margin-top:9px">Quarterly Trend — Last 5 Quarters</div>
+        <div class="chartcap">5-yr Sales CAGR 16% &middot; 5-yr Profit CAGR 47.4%. <b>FY26 PAT conflict:</b> &#8377;21 Cr (Screener) vs &#8377;18.05 Cr (press release) &mdash; an ~15% gap, both stated, neither preferred.</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">Quarterly Trend</div>
         <table class="t fit">
-          <tr><th>Quarter</th><th>Revenue</th><th>PAT</th><th>YoY (Rev/PAT)</th></tr>
-          <tr><td>Q2 FY26 (Sep&#39;25)</td><td>115.59</td><td>4.06</td><td>+27% / +29.71%</td></tr>
-          <tr><td>Q3 FY26 (Dec&#39;25)</td><td>~123.1</td><td>~ (EPS &#8377;1.47 impl.)</td><td>+20% / +29% (per brief, not re-confirmed)</td></tr>
-          <tr><td>Q4 FY26 (Mar&#39;26)</td><td>&mdash;</td><td>5.22</td><td>&mdash; / +23% / +14.73%</td></tr>
-          <tr><td><b>Q1 FY27 (Jun&#39;26)</b></td><td><b>119.72</b></td><td class="warn"><b>2.9&ndash;3.23</b></td><td><b>+20% / EPS &minus;21% (decel)</b></td></tr>
+          <tr><th>Quarter</th><th>Sales</th><th>PAT</th><th>YoY</th></tr>
+          <tr><td>Q2 FY26 (Sep'25)</td><td>115.59</td><td>4.06</td><td class="pos">+27% / +29.71%</td></tr>
+          <tr><td>Q3 FY26 (Dec'25)</td><td>~123.1</td><td>~1.47 EPS (implied)</td><td class="pos">+20% / +29% (per brief, not re-confirmed)</td></tr>
+          <tr><td>Q4 FY26 (Mar'26)</td><td>&mdash;</td><td>5.22</td><td class="pos">+23% / +14.73%</td></tr>
+          <tr><td><b>Q1 FY27 (Jun'26)</b></td><td><b>119.72</b></td><td class="warn"><b>2.9&ndash;3.23</b></td><td class="neg">Revenue +20%; PAT DOWN YoY, EPS &minus;21% cited</td></tr>
         </table>
-        <div class="chartcap" style="margin-top:5px">H1 FY26 total: Revenue &#8377;215.22 Cr vs &#8377;167.82 Cr H1 FY25; PAT &#8377;7.70 Cr vs &#8377;5.83 Cr (+32%).</div>
-      </div>
-      <div style="flex:0 0 calc(50% - 7px);min-width:0">
-        <div class="microhead">Revenue (bars) with YoY Growth % (line) — FY21&ndash;FY26</div>
-        <svg viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
-<line x1="40" y1="146.0" x2="556" y2="146.0" stroke="#dde2ea"/>
-<text x="10" y="24" font-size="9" fill="#8a94a6">Rs Cr</text>
-<rect x="49.0" y="88.2" width="68" height="57.8" fill="#1a2a4a" rx="2"/><text x="83.0" y="84.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">226</text><text x="83.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY21</text>
-<rect x="135.0" y="72.8" width="68" height="73.2" fill="#1a2a4a" rx="2"/><text x="169.0" y="68.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">286</text><text x="169.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text>
-<rect x="221.0" y="65.9" width="68" height="80.1" fill="#1a2a4a" rx="2"/><text x="255.0" y="61.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">313</text><text x="255.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text>
-<rect x="307.0" y="66.2" width="68" height="79.8" fill="#1a2a4a" rx="2"/><text x="341.0" y="62.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">312</text><text x="341.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text>
-<rect x="393.0" y="49.5" width="68" height="96.5" fill="#1a2a4a" rx="2"/><text x="427.0" y="45.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">377</text><text x="427.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text>
-<rect x="479.0" y="26.0" width="68" height="120.0" fill="#5b7bb5" rx="2"/><text x="513.0" y="22.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">469</text><text x="513.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text>
-<path d="M169.0,39.9 L255.0,88.7 L341.0,116.6 L427.0,56.2 L513.0,46.0" fill="none" stroke="#e67e22" stroke-width="2"/><circle cx="169.0" cy="39.9" r="2.8" fill="#e67e22"/><text x="182.0" y="34.9" text-anchor="middle" font-size="9" font-weight="700" fill="#e67e22">26.5%</text><circle cx="255.0" cy="88.7" r="2.8" fill="#e67e22"/><text x="268.0" y="83.7" text-anchor="middle" font-size="9" font-weight="700" fill="#e67e22">9.4%</text><circle cx="341.0" cy="116.6" r="2.8" fill="#e67e22"/><text x="354.0" y="111.6" text-anchor="middle" font-size="9" font-weight="700" fill="#e67e22">-0.3%</text><circle cx="427.0" cy="56.2" r="2.8" fill="#e67e22"/><text x="440.0" y="51.2" text-anchor="middle" font-size="9" font-weight="700" fill="#e67e22">20.8%</text><circle cx="513.0" cy="46.0" r="2.8" fill="#e67e22"/><text x="526.0" y="41.0" text-anchor="middle" font-size="9" font-weight="700" fill="#e67e22">24.4%</text></svg>
-        <div class="microhead" style="margin-top:9px">Operating Profit &amp; PAT Trend — Annual (&#8377; Cr)</div>
-        <svg viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
-<line x1="40" y1="146.0" x2="586" y2="146.0" stroke="#dde2ea"/>
-<text x="10" y="24" font-size="9" fill="#8a94a6">Rs Cr</text>
-<path d="M40.0,122.0 L149.2,98.0 L258.4,83.6 L367.6,71.6 L476.8,57.2 L586.0,26.0" fill="none" stroke="#1a2a4a" stroke-width="2"/>
-<path d="M40.0,136.4 L149.2,134.0 L258.4,126.8 L367.6,114.8 L476.8,105.2 L586.0,95.6" fill="none" stroke="#2e7d32" stroke-width="2"/>
-<circle cx="40.0" cy="122.0" r="2.8" fill="#1a2a4a"/><text x="40.0" y="116.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">10</text><circle cx="149.2" cy="98.0" r="2.8" fill="#1a2a4a"/><text x="149.2" y="92.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">20</text><circle cx="258.4" cy="83.6" r="2.8" fill="#1a2a4a"/><text x="258.4" y="77.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">26</text><circle cx="367.6" cy="71.6" r="2.8" fill="#1a2a4a"/><text x="367.6" y="65.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">31</text><circle cx="476.8" cy="57.2" r="2.8" fill="#1a2a4a"/><text x="476.8" y="51.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">37</text><circle cx="586.0" cy="26.0" r="2.8" fill="#1a2a4a"/><text x="586.0" y="20.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">50</text><circle cx="40.0" cy="136.4" r="2.8" fill="#2e7d32"/><text x="40.0" y="149.4" text-anchor="middle" font-size="9.5" font-weight="700" fill="#2e7d32">4</text><circle cx="149.2" cy="134.0" r="2.8" fill="#2e7d32"/><text x="149.2" y="147.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#2e7d32">5</text><circle cx="258.4" cy="126.8" r="2.8" fill="#2e7d32"/><text x="258.4" y="139.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#2e7d32">8</text><circle cx="367.6" cy="114.8" r="2.8" fill="#2e7d32"/><text x="367.6" y="127.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#2e7d32">13</text><circle cx="476.8" cy="105.2" r="2.8" fill="#2e7d32"/><text x="476.8" y="118.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#2e7d32">17</text><circle cx="586.0" cy="95.6" r="2.8" fill="#2e7d32"/><text x="586.0" y="108.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#2e7d32">21</text><text x="40.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY21</text><text x="149.2" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text><text x="258.4" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text><text x="367.6" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><text x="476.8" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><text x="586.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text></svg>
-        <div class="chartcap" style="text-align:center">&#9644; <b style="color:#1a2a4a">Operating Profit</b> &nbsp;&nbsp; &#9644; <b style="color:#2e7d32">PAT (Screener FY26: &#8377;21 Cr; press release: &#8377;18.05 Cr, +25.6% YoY &mdash; both stated, not averaged)</b></div>
+        <div class="chartcap"><b>Q1 FY27 flag:</b> revenue growth held at +20% YoY but EBITDA was roughly flat YoY (&#8377;104mn vs &#8377;106mn) and net profit fell YoY &mdash; a genuine margin/profit deceleration quarter, sourced from a company investor presentation vs Trendlyne/Screener's higher &#8377;3.22&ndash;3.23 Cr figure (both stated). H1FY26 total: Revenue &#8377;215.22 Cr vs &#8377;167.82 Cr H1FY25; PAT &#8377;7.70 Cr vs &#8377;5.83 Cr, +32%.</div>
       </div>
     </div>
-
-
-
-
-    <div class="cols" style="margin-top:9px">
-      <div style="flex:1"><div class="notebox green"><b>&#9733; 5-yr trend — growth with profit outpacing sales:</b> 5-yr Sales CAGR 16%, 5-yr Profit CAGR 47.4% &mdash; PAT compounding roughly 3x the revenue rate. Balance sheet (FY26, consolidated): Total Assets &#8377;361 Cr, Fixed Assets &#8377;154 Cr, Borrowings &#8377;98 Cr, Reserves &#8377;142 Cr, Equity Capital &#8377;7 Cr, working-capital days improved 26.3&#8594;18.5. No standalone cash-and-bank figure was sourced &mdash; stated as a gap, not estimated.</div></div>
-      <div style="flex:1"><div class="notebox blue"><b>&#9733; Cash flow (FY26, consolidated) — single-year snapshot only:</b> Operating CF &#8377;60 Cr, Investing &minus;&#8377;40 Cr, FCF (implied) &#8377;28 Cr, Net CF &#8377;9 Cr. No FY21&ndash;26 trend was found in the available sources &mdash; stated as a gap rather than estimated. Share-count reconciliation gap: equity capital &#8377;7 Cr at &#8377;2 FV implies ~3.5 Cr shares, but market cap &#247; price implies ~2.99 Cr shares &mdash; an ~18% unreconciled gap (&sect;03), recommend a direct shareholding-pattern check.</div></div>
+    <div class="cols" style="margin-top:6px">
+      <div style="flex:1">
+        <div class="microhead">Balance Sheet — FY26 (Consolidated)</div>
+        <div class="krow"><span class="klab">Total Assets</span><span class="kval">&#8377;361 Cr</span></div>
+        <div class="krow"><span class="klab">Fixed Assets</span><span class="kval">&#8377;154 Cr</span></div>
+        <div class="krow"><span class="klab">Borrowings</span><span class="kval">&#8377;98 Cr</span></div>
+        <div class="krow"><span class="klab">Reserves</span><span class="kval">&#8377;142 Cr</span></div>
+        <div class="krow"><span class="klab">Equity Capital</span><span class="kval">&#8377;7 Cr<small>@&#8377;2 FV implies ~3.5 Cr shares</small></span></div>
+        <div class="krow"><span class="klab">D/E (overall)</span><span class="kval">0.69x<small>Working-capital days improved 26.3&#8594;18.5</small></span></div>
+        <div class="chartcap" style="margin-top:6px"><b>Share-count gap:</b> &#8377;7 Cr equity &#247; &#8377;2 FV implies ~3.5 Cr shares, but market cap &#247; price implies ~2.99 Cr shares &mdash; an ~18% unreconciled gap. Flagged, not resolved; recommend a direct shareholding-pattern check. No standalone cash-and-bank figure was sourced (genuine gap).</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Cash Flow — FY26 (Consolidated, single-year snapshot only)</div>
+        <div class="krow"><span class="klab">Operating CF</span><span class="kval">&#8377;60 Cr</span></div>
+        <div class="krow"><span class="klab">Investing CF</span><span class="kval">&minus;&#8377;40 Cr</span></div>
+        <div class="krow"><span class="klab">FCF (implied)</span><span class="kval">&#8377;28 Cr</span></div>
+        <div class="krow"><span class="klab">Net CF</span><span class="kval">&#8377;9 Cr</span></div>
+        <div class="chartcap" style="margin-top:6px">No FY21&ndash;FY26 cash-flow trend was found &mdash; only this single-year snapshot (a genuine gap, not estimated).</div>
+        <div class="notebox green" style="margin-top:8px"><b>EV/EBITDA de-rating-then-re-rating:</b> 12.76x (Aug'25) &#8594; 12.66x (Nov'25) &#8594; 10.49x (Feb'26) &#8594; 9.40x (May'26) &mdash; multiple compression through the FY26 reporting cycle even as the business grew, consistent with the price decline into the ~&#8377;75 low before the September rally.</div>
+      </div>
     </div>
   </div>
 
-  <!-- ================= 07 KEY RATIOS ================= -->
+  <!-- ================= 09 KEY RATIOS ================= -->
   <div class="sec">
-    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Ratios — Conflicting Figures, Stated Precisely</h2></div>
-    <div class="cols">
-      <div class="panel" style="background:#fffbe8;border-color:#f9a825">
-        <div class="plab">EV/EBITDA &nbsp;&middot;&nbsp; De-Rating, Then Re-Rating Through FY26 <span class="badge b-warn">Multiple Compression Then Reversal</span></div>
-        <div class="pval" style="font-size:22px">12.76x &#8594; 9.40x <span style="font-size:13px;font-weight:600;color:#5a6475">(Aug&#39;25 &#8594; May&#39;26)</span></div>
-        <p style="font-size:11.3px;margin-top:6px"><b>Trajectory:</b> 12.76x (Aug&#39;25) &#8594; 12.66x (Nov&#39;25) &#8594; 10.49x (Feb&#39;26) &#8594; 9.40x (May&#39;26) &mdash; the multiple compressed steadily through the FY26 reporting cycle <i>even as the business grew</i>, consistent with the price decline into the ~&#8377;75 52-week low before the September rally. The subsequent price spike (&sect;03) has presumably re-expanded the multiple again, but no post-spike EV/EBITDA reading was sourced &mdash; stated as a gap.</p>
-      </div>
-      <div class="panel" style="background:#fdf0f0;border-color:#c62828">
-        <div class="plab">ROE / ROCE &amp; Debt &nbsp;&middot;&nbsp; Wide Ranges, Precisely Labeled <span class="badge b-bear">Source-Dependent</span></div>
-        <div class="pval" style="font-size:22px">ROE 13.5&ndash;17.2% <span style="font-size:13px;font-weight:600;color:#5a6475">ROCE 15&ndash;15.5%</span></div>
-        <p style="font-size:11.3px;margin-top:6px"><b>Note:</b> ROE range spans Screener (13.5%), a peer-comparison commentary source (17.19&ndash;17.2%) and Simply Wall St (15.09%) &mdash; presented as a range, not averaged. <b>Debt/Equity is not actually a conflict once labeled precisely:</b> Screener's overall D/E is 0.69x (total borrowings &#8377;98 Cr / equity), while MarketSmith's brief figure of &ldquo;LT Debt/Equity 30%&rdquo; is almost certainly a total-vs-long-term-debt distinction, not a genuine disagreement. OPM (~10.7% FY26) is the <b>lowest of the profitable peer set</b> (&sect;15) &mdash; margin expansion toward management's stated 13&ndash;14% FY29 target is the key re-rating lever if Remsons is to close the valuation gap to peers.</p>
-      </div>
+    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Ratios — Valuation &amp; Returns (~25 Sep 2026)</h2></div>
+    <div class="tiles">
+      <div class="tile"><div class="lab">CMP</div><div class="val">&#8377;129&ndash;130</div><div class="note">Post-spike level</div></div>
+      <div class="tile"><div class="lab">Market Cap</div><div class="val warn">&#8377;387&ndash;453 Cr</div><div class="note">Tickertape/stockanalysis.com (&#8377;387&ndash;388 Cr) vs Screener (&#8377;453 Cr) — the &#8377;387&ndash;388 Cr figure is better-corroborated by two independent sources</div></div>
+      <div class="tile"><div class="lab">P/E (TTM)</div><div class="val warn">21.5&ndash;25.4x</div><div class="note">Source-dependent range</div></div>
+      <div class="tile"><div class="lab">P/B</div><div class="val">2.6&ndash;3.0x</div><div class="note">Book value/share &#8377;42.7</div></div>
+      <div class="tile"><div class="lab">ROE</div><div class="val">13.5&ndash;17.2%</div><div class="note">Screener 13.5% &middot; peer-comparison 17.19&ndash;17.2% &middot; SimplyWall St 15.09% — wide range, all stated</div></div>
+      <div class="tile"><div class="lab">ROCE</div><div class="val">15&ndash;15.5%</div><div class="note">&mdash;</div></div>
+      <div class="tile"><div class="lab">D/E — overall vs long-term</div><div class="val">0.69x / 30%</div><div class="note">Screener's overall D/E 0.69x vs MarketSmith's LTDebt/Equity 30% (brief) — likely a total-vs-long-term-debt distinction, not a true conflict</div></div>
+      <div class="tile"><div class="lab">OPM (FY26)</div><div class="val warn">~10.7%</div><div class="note">Lowest of the profitable peers in &#167;15 — the key re-rating lever if management's 13&ndash;14% FY29 margin target is hit</div></div>
     </div>
   </div>
 
-  <!-- ================= 08 MANAGEMENT METRICS ================= -->
+  <!-- ================= 10 MANAGEMENT METRICS ================= -->
   <div class="sec">
     <div class="sec-title" id="sec10"><span class="num">10</span><h2>Management Metrics</h2></div>
-    
-    
-    
-    
-    
-    
-<div class="tiles">
-  <div class="tile">
-    <div class="lab">CEO Transition</div>
-    <div class="val" style="font-size:15px">RESOLVED, CREDIBLE REPLACEMENT</div>
-    <div class="note">Amit Srivastava (Group CEO) resigned 18 Jun 2026 &ldquo;to pursue new opportunities,&rdquo; served his 90-day notice through 4 Sep 2026 (stock reportedly slid on the resignation news). <b>Rahul Prabhakar Desai</b> appointed CEO effective 3 Aug 2026 &mdash; 30+ years automotive manufacturing experience (ex-ED&amp;CEO Pinnacle Industries, ex-CEO CIE India ~10yrs, earlier GKN Sinter Metals, Inteva Products). Timeline now cleanly reconciled after earlier conflicting reports.</div>
-  </div>
-  <div class="tile">
-    <div class="lab">Promoter Pledge</div>
-    <div class="val pos">ZERO</div>
-    <div class="note">Formal no-encumbrance declaration filed 3 Apr 2026 for all 9 promoter/promoter-group entities &mdash; a genuine positive given the stock&#39;s volatility. <b>But</b> promoters (Kejriwal family, since 1971) hold 62.83% (Jun&#39;26), down from ~75% (Sep&#39;23) &mdash; a steady multi-year decline &mdash; and were net <b>sellers</b> via bulk/block deals in May&ndash;Jun 2026, not buyers ahead of the September rally (see &sect;16).</div>
-  </div>
-  <div class="tile">
-    <div class="lab">Executive Compensation (FY24, last verified)</div>
-    <div class="val pos">Flat pay, 0% rise</div>
-    <div class="note">CMP-to-median ratios: Krishna Kejriwal (CMD) 13.22:1, Chand Kejriwal (WTD) 8.40:1, Rahul Kejriwal (WTD) 22.07:1 (highest). All three froze their own pay (0% increase) that year vs ~8% average for non-managerial staff &mdash; a mild positive governance signal. FY25-26 compensation not yet publicly disclosed.</div>
-  </div>
-  <div class="tile">
-    <div class="lab">Astro Motors Reversal</div>
-    <div class="val warn" style="font-size:15px">CAPITAL-ALLOCATION FLAG</div>
-    <div class="note">Acquired 51.01% of Astro Motors (EV/e-3W bet) Apr 2025 for &#8377;14.22 Cr, then divested most of it (35.86% for &#8377;10 Cr) in Mar 2026 while buying out the remaining 49% of Remsons Edge Technologies (defence-tech). The 23 Mar 2026 disclosure misidentified the buyer, corrected the next day (24 Mar, to Pratik Hasmukh Shah HUF) &mdash; a real, if minor, disclosure-quality lapse for a small-cap with this thin an institutional base.</div>
-  </div>
-</div>
-  
-  
-  
-  
-  
+    <div class="tiles">
+      <div class="tile">
+        <div class="lab">Promoter Holding &amp; Pledge</div>
+        <div class="val pos">62.83% · Zero Pledge</div>
+        <div class="note">Down from ~75% (Sep'23) — a steady multi-year decline. Formal no-encumbrance declaration filed 3 Apr 2026 for all 9 promoter/promoter-group entities — a genuine positive given the stock's volatility.</div>
+      </div>
+      <div class="tile">
+        <div class="lab">Promoter Selling Into Weakness</div>
+        <div class="val warn">May&ndash;Jun 2026 net sellers</div>
+        <div class="note">Chand Krishna Kejriwal sold 340,000 shares @ ~&#8377;92.02 (29 May'26); Krishna Radhakrishna Kejriwal disposed shares on multiple June dates at &#8377;81.7&ndash;160.3 (the &#8377;160.3 print a notable unexplained outlier). Promoters sold in the months <b>before</b> the September rally, not ahead of it — governance-relevant, worth flagging plainly. No SAST/bulk deals found for Aug&ndash;Sep 2026 (gap, disclosures can lag).</div>
+      </div>
+      <div class="tile">
+        <div class="lab">CEO Transition</div>
+        <div class="val" style="font-size:15px">Credible replacement, dates resolved</div>
+        <div class="note">Amit Srivastava (Group CEO) resigned 18 Jun 2026, served 90-day notice through 4 Sep 2026 (stock reportedly slid on the news). Rahul Prabhakar Desai appointed CEO effective 3 Aug 2026 — 30+ yrs auto-manufacturing experience (ex-ED&amp;CEO Pinnacle Industries, ex-CEO CIE India ~10 yrs, GKN Sinter Metals, Inteva Products).</div>
+      </div>
+      <div class="tile">
+        <div class="lab">Executive Compensation (last verified: FY24)</div>
+        <div class="val">13.2&ndash;22.1x median</div>
+        <div class="note">Krishna Kejriwal CMD 13.22:1, Chand Kejriwal WTD 8.40:1, Rahul Kejriwal WTD 22.07:1 (highest) — all flat (0% increase) that year vs 8% average for non-managerial staff, a mild positive signal. FY25&ndash;26 comp not yet publicly disclosed.</div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="notebox red"><b>Astro Motors reversal — capital-allocation/governance-quality concern:</b> Remsons acquired 51.01% of Astro Motors Pvt Ltd in April 2025 (&#8377;14.22 Cr: &#8377;4.22 Cr in preferential shares to Astro's own promoters + &#8377;10 Cr cash) as an EV/e-3-wheeler diversification bet, then divested most of that stake (35.86% sold for &#8377;10 Cr, March 2026) less than a year later, while simultaneously buying out the remaining 49% of Remsons Edge Technologies (defense-tech unit) to make it wholly owned. On the initial 23 March 2026 disclosure the company misidentified the buyer of the Astro Motors stake, then had to file a corrected disclosure the next day (24 March) naming the actual buyer (Pratik Hasmukh Shah HUF, confirmed non-related party). A same-week correction of buyer identity in a material filing is a real, if minor, disclosure-quality lapse for a small-cap with this thin an institutional base.</div>
+      </div>
+      <div style="flex:1">
+        <div class="notebox"><b>Auditor, litigation &amp; compliance:</b> Kanu Doshi Associates LLP, appointed at the 50th AGM (28 Sep 2022) for a 5-year term through FY27, clean/unqualified opinion on FY24 financials, no auditor resignation or change. Only litigation found: a routine disputed income-tax liability of &#8377;534.61 lakh (FY24, essentially unchanged from FY23) — not indicative of fraud. One minor secretarial-audit observation: delayed e-form filings with the RoC, characterized by directors as "inadvertent." No SEBI action/investigation/show-cause notice found.</div>
+      </div>
+    </div>
   </div>
 
-  <!-- ================= 09 GUIDANCE ================= -->
+  <!-- ================= 11 GROWTH TARGETS & CAPITAL ALLOCATION ================= -->
   <div class="sec">
-    <div class="sec-title" id="sec11"><span class="num">11</span><h2>Company Guidance &amp; Management-Quality Checklist</h2></div>
-
-
-
-
-
-
-<div class="microhead">Management's Disclosed Medium-Term Target vs Current Trajectory</div>
-<table class="t">
-  <tr><th>Metric</th><th style="text-align:left">Current (FY26)</th><th style="text-align:left">Disclosed Target</th><th style="text-align:left">Implied Requirement</th><th>Verdict</th></tr>
-  <tr><td>Revenue</td><td style="text-align:left">&#8377;469 Cr (Screener) / &#8377;474&ndash;489 Cr (other)</td><td style="text-align:left">&#8377;900&ndash;1,000 Cr by 2030 (FY26 Annual Report, ~18 Sep 2026)</td><td style="text-align:left">~19% CAGR, FY26&#8594;FY30</td><td><span class="badge b-warn">Aspirational, unproven at this rate</span></td></tr>
-  <tr><td>OPM</td><td style="text-align:left">~10.7% (FY26)</td><td style="text-align:left">13&ndash;14% by FY29 (management commentary, &sect;09)</td><td style="text-align:left">+230&ndash;330bps over 3 yrs</td><td><span class="badge b-warn">Key re-rating lever, not yet visible in Q1 FY27</span></td></tr>
-  <tr><td>Capacity</td><td style="text-align:left">7 plants (India + UK)</td><td style="text-align:left">80,000 sq ft NCR facility, ~&#8377;20 Cr FY27 capex</td><td style="text-align:left">Built ahead of confirmed demand</td><td><span class="badge b-warn">Watch &mdash; execution risk</span></td></tr>
-</table>
-<div class="cols" style="margin-top:12px">
-  <div style="flex:1.2">
-    <div class="microhead">Order Book &amp; Contract Delivery — What's Actually Landed</div>
+    <div class="sec-title" id="sec11"><span class="num">11</span><h2>Growth Targets, Order Book &amp; Capital Allocation</h2></div>
+    <div class="microhead">Disclosed Multi-Year Order Wins (Switching-Cost Evidence)</div>
     <table class="t">
-      <tr><th style="text-align:left">Disclosed Commitment</th><th style="text-align:left">Status</th><th>&#10003;/&#10007;</th></tr>
-      <tr><td style="text-align:left">Stellantis (North America) &#8377;300 Cr / 7-yr control-cable contract</td><td style="text-align:left">Deliveries start FY27 &mdash; not yet landed in reported revenue</td><td><span class="warn">&#8776; Pending</span></td></tr>
-      <tr><td style="text-align:left">Ford Turkey &#8377;80 Cr / 10-yr; Tata Motors &#8377;30 Cr / 3-yr; domestic CV gear-shifter &#8377;60 Cr / 5-yr; Hood Rod &#8377;30 Cr / 6-yr</td><td style="text-align:left">Multi-year programs, phased delivery &mdash; not separately broken out in reported financials</td><td><span class="warn">&#8776; Unverifiable from public P&amp;L</span></td></tr>
-      <tr><td style="text-align:left">UK pedal-box &#8377;160 Cr / 10-yr</td><td style="text-align:left">Production starts <b>late 2028</b> &mdash; a long lead time, explicitly not near-term revenue</td><td><span class="neg">&#10007; Not yet contributing</span></td></tr>
-      <tr><td style="text-align:left">FY26 revenue/PAT growth</td><td style="text-align:left">Sales +25.6% (press release framing); PAT conflicting &#8377;21 Cr (Screener) vs &#8377;18.05 Cr (press release)</td><td><span class="pos">&#10003; Growth delivered, PAT figure disputed</span></td></tr>
+      <tr><th style="text-align:left">Contract</th><th style="text-align:left">Term / Value</th><th style="text-align:left">Timing</th></tr>
+      <tr><td style="text-align:left">Stellantis (North America), control cables</td><td style="text-align:left">7 years, &gt;&#8377;300 Cr</td><td style="text-align:left">Deliveries start FY27; stock reportedly jumped ~11% on this news</td></tr>
+      <tr><td style="text-align:left">Ford Turkey</td><td style="text-align:left">10 years, ~&#8377;80 Cr</td><td style="text-align:left">Ongoing</td></tr>
+      <tr><td style="text-align:left">Tata Motors</td><td style="text-align:left">3 years, ~&#8377;30 Cr</td><td style="text-align:left">Ongoing</td></tr>
+      <tr><td style="text-align:left">Domestic CV gear-shifter</td><td style="text-align:left">5 years, &#8377;60 Cr</td><td style="text-align:left">Ongoing</td></tr>
+      <tr><td style="text-align:left">UK pedal-box order</td><td style="text-align:left">10 years, ~&#8377;160 Cr</td><td style="text-align:left">Production starts late 2028 — long lead time, not near-term revenue</td></tr>
+      <tr><td style="text-align:left">Hood Rod contract</td><td style="text-align:left">6 years, ~&#8377;30 Cr</td><td style="text-align:left">Ongoing</td></tr>
     </table>
-    <div class="notebox red" style="margin-top:10px"><b>Q1 FY27 is the read to weigh most:</b> revenue growth held (+20% YoY) but EBITDA was roughly flat YoY and PAT fell (EPS &minus;21% YoY per the brief) &mdash; a genuine deceleration against a backdrop of a company simultaneously disclosing an ambitious 2030 revenue target. The two don't obviously square yet.</div>
-  </div>
-  <div style="flex:1">
-    <div class="microhead">Management-Quality Red-Flag Checklist</div>
-    <table class="t">
-      <tr><th style="text-align:left">Warning Sign</th><th>Present?</th></tr>
-      <tr><td style="text-align:left">Material disclosure error requiring same-week correction</td><td><span class="badge b-bear">&#10003; Yes</span></td></tr>
-      <tr><td style="text-align:left">Capacity/M&amp;A built then reversed within a year (Astro Motors)</td><td><span class="badge b-bear">&#10003; Yes</span></td></tr>
-      <tr><td style="text-align:left">Promoters selling into weakness ahead of a rally</td><td><span class="badge b-bear">&#10003; Yes (May&ndash;Jun 2026)</span></td></tr>
-      <tr><td style="text-align:left">Dividend cut despite rising profits</td><td><span class="badge b-warn">&#10003; Yes, but EPS-conflict-linked</span></td></tr>
-      <tr><td style="text-align:left">Promoter pledge</td><td><span class="badge b-bull">&#10007; No &mdash; zero pledge</span></td></tr>
-      <tr><td style="text-align:left">Auditor change / qualified opinion</td><td><span class="badge b-bull">&#10007; No &mdash; clean opinion, same auditor since 2022</span></td></tr>
-    </table>
-    <div class="chartcap" style="margin-top:6px">Dividend/share has trended sharply down since FY23 even as reported profits grew (FY22-23 &#8377;1.00&#8594;&#8377;1.50, FY23-24 &#8377;0.30, FY24-25 &#8377;0.30, FY25-26 interim &#8377;0.20 + final &#8377;0.10 recommended at the 23 Sep AGM) &mdash; likely reflects the disputed stock split diluting the per-share metric (cross-ref &sect;08 EPS conflict, unreconciled) plus capital redirected to growth/M&amp;A rather than payout. New ESOP 2026 (100,000 options) approved at the AGM is a future dilution source. No rights issue or QIP found. Only litigation found: a routine disputed income-tax liability of &#8377;534.61 lakh (FY24, essentially unchanged from FY23) &mdash; not indicative of fraud. One minor secretarial-audit observation: delayed e-form filings with the RoC, characterized by directors as &ldquo;inadvertent.&rdquo;</div>
-  </div>
-</div>
-
-
-
-
-
+    <div class="cols" style="margin-top:12px">
+      <div style="flex:1.2">
+        <div class="microhead">FY26 Annual Report Disclosures (~18 Sep 2026)</div>
+        <div class="notebox blue"><b>Medium-term target:</b> &#8377;900&ndash;1,000 Cr revenue by 2030 (vs FY26's &#8377;469&ndash;489 Cr — roughly a doubling). <b>Capex:</b> 80,000 sq ft NCR expansion facility, ~&#8377;20 Cr FY27 capex. <b>New ESOP 2026:</b> 100,000 options approved at the AGM — a future dilution source, not yet a raise. This is the AGM/AR disclosure cluster that, per &#167;03, is the best-supported (though still circumstantial) candidate explanation for the September price spike.</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Dividend History — Trending Down Despite Profit Growth</div>
+        <table class="t">
+          <tr><th style="text-align:left">Year</th><th>DPS</th></tr>
+          <tr><td style="text-align:left">FY22&ndash;23</td><td>&#8377;1.00 &#8594; &#8377;1.50</td></tr>
+          <tr><td style="text-align:left">FY23&ndash;24</td><td class="neg">&#8377;0.30</td></tr>
+          <tr><td style="text-align:left">FY24&ndash;25</td><td class="neg">&#8377;0.30</td></tr>
+          <tr><td style="text-align:left">FY25&ndash;26 interim + final</td><td class="neg">&#8377;0.20 + &#8377;0.10</td></tr>
+        </table>
+        <div class="chartcap">Likely reflects the disputed stock split diluting the per-share metric (see &#167;08 EPS conflict — flagged, not asserted as fact) plus capital redirected toward growth/M&amp;A (Astro Motors, Edge Technologies) rather than payout. No rights issue or QIP found.</div>
+      </div>
+    </div>
   </div>
 
-    <!-- ================= 10 STREET CONSENSUS ================= -->
+  <!-- ================= 12/13 STREET CONSENSUS + VOLUME ================= -->
   <div class="sec">
     <div class="cols">
       <div style="flex:0 0 calc(50% - 10px);min-width:0">
         <div class="sec-title" id="sec12"><span class="num">12</span><h2>Street Consensus</h2></div>
-        <div class="krow"><span class="klab">Analysts Covering</span><span class="kval" style="color:#c62828">0<small>Trendlyne: &ldquo;0 recent research reports from 0 sources&rdquo;</small></span></div>
-        <div class="krow"><span class="klab">Buy / Hold / Sell</span><span class="kval">No sell-side coverage<small>no brokerage Buy/Hold/Sell ratings identified</small></span></div>
-        <div class="krow"><span class="klab">TipRanks AI Rating</span><span class="kval">Neutral<small>algorithmic, not brokerage &mdash; PT &#8377;155, ~3&ndash;19% implied upside (reference price inconsistent across snippets)</small></span></div>
-        <div class="krow"><span class="klab">MarketsMojo Quant Score</span><span class="kval" style="color:#c62828">Downgraded Hold&#8594;Sell<small>22 May 2026, Mojo Score 58&#8594;42</small></span></div>
-        <div class="krow"><span class="klab">MarketsMojo Quality Grade</span><span class="kval" style="color:#c62828">Downgraded Good&#8594;Average<small>15 Dec 2025</small></span></div>
-        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>No formal sell-side/institutional coverage exists</b> for this stock. Only algorithmic/quant scoring signals are available, and the two independent ones on record (TipRanks, MarketsMojo) skew neutral-to-negative, not bullish &mdash; a material data point against reading the September spike as a fundamentals-driven re-rating.</div>
+        <div class="krow"><span class="klab">Sell-Side Coverage</span><span class="kval" style="color:#c62828">NONE<small>Trendlyne: "0 recent research reports from 0 sources"</small></span></div>
+        <div class="krow"><span class="klab">TipRanks AI Rating</span><span class="kval">Neutral<small>Price target &#8377;155 — reference price inconsistent across snippets, ~3&ndash;19% implied upside</small></span></div>
+        <div class="krow"><span class="klab">MarketsMojo (quant score)</span><span class="kval" style="color:#c62828">Downgraded Hold&#8594;Sell, 22 May'26<small>Mojo Score fell 58&#8594;42</small></span></div>
+        <div class="krow"><span class="klab">Quality Grade</span><span class="kval" style="color:#c62828">Downgraded Good&#8594;Average<small>15 Dec 2025</small></span></div>
+        <div class="mininote" style="background:#fdf0f0;border-left:3px solid #c62828"><b>No institutional brokerage covers this stock.</b> Every rating above is algorithmic/quant scoring, not analyst coverage — a real information gap for a name that just moved 11&ndash;17% in a session.</div>
       </div>
-            <div style="flex:0 0 calc(50% - 10px);min-width:0">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
         <div class="sec-title" id="sec13"><span class="num">13</span><h2>Share Volume &amp; Profile</h2></div>
-        <div class="krow"><span class="klab">Volume, 22&ndash;25 Sep (Source A)</span><span class="kval">782,455<small>on the +10.9% reading</small></span></div>
-        <div class="krow"><span class="klab">Volume, 22&ndash;25 Sep (Sources B/C)</span><span class="kval">~2.5 million<small>2,534,241 / 2,500,107 shares, on the +16.7&ndash;17.2% readings</small></span></div>
-        <div class="krow"><span class="klab">Institutional Ownership</span><span class="kval" style="color:#c62828">Near-zero<small>FII 2.79%, DII 1.10%, no MF/insurer holdings found</small></span></div>
-        <div class="krow"><span class="klab">Public / Retail Holding</span><span class="kval" style="color:#f57f17">33.30% (Jun&#39;26)<small>up from 27.76% (Jun&#39;25); ~16,500 shareholders (Mar&#39;26)</small></span></div>
-        <div class="krow"><span class="klab">Retail Concentration</span><span class="kval">23.70% of total<small>individual investors holding up to &#8377;2 lakh, alone</small></span></div>
-        <div class="mininote" style="background:#fdf0f0;border-left:3px solid #c62828"><b>&#9888; Float is the biggest practical risk:</b> ~1.29 Cr free float (per brief), near-zero institutional sponsorship, and a highly retail-driven shareholder base is exactly the combination that makes 15&ndash;20% single-day moves mechanically possible on modest absolute volume (&sect;03). No block/bulk deal was found for the 22&ndash;25 Sep window itself. Not F&amp;O eligible; ASM/GSM surveillance status unconfirmed (NSE page fetch failed).</div>
-      </div>
-          </div>
-  </div>
-
-  <!-- ================= 13 SECTOR ROTATION / PEER COMPARISON ================= -->
-  <div class="sec">
-    <div class="cols">
-      <div style="flex:0 0 calc(50% - 10px);min-width:0">
-        <div class="sec-title" id="sec14"><span class="num">14</span><h2>Sector Rotation</h2></div>
-        <p style="font-size:11px">Remsons' sector &#8212; Consumer Discretionary / Auto Parts &amp; Equipment &#8212; typically tracks <b>early-to-mid expansion</b>, when household discretionary spending and vehicle-purchase confidence rise. 2W and PV domestic sales are both growing double-digit (Apr&ndash;Jun FY27: 2W +22% YoY, PV +25% YoY), while CV growth is described as muted (SIAM) &mdash; Remsons&#39; multi-segment exposure (2W, PV, CV, Farm) diversifies against any single vehicle-category's cycle.</p>
-        <div class="sector-wheel-compact">
-<div class="relative mt-16 md:mt-[80px] mx-auto w-full max-w-[760px] overflow-visible"><div class="relative mx-auto w-[86vw] md:w-full max-w-[540px] aspect-square overflow-visible"><svg viewBox="-40 -40 620 620" class="absolute inset-0 w-full h-full overflow-visible"><path d="M 270 22 A 248 248 0 0 1 518 270" fill="none" stroke="#0f2f5c" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 518 270 A 248 248 0 0 1 270 518" fill="none" stroke="#8b2e00" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 270 518 A 248 248 0 0 1 22 270.00000000000006" fill="none" stroke="#4c2e8a" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 22 270.00000000000006 A 248 248 0 0 1 269.99999999999994 22" fill="none" stroke="#115e5f" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><g transform="translate(270 22)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#0f2f5c" stroke="#0f2f5c" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(518 270) rotate(90)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#8b2e00" stroke="#8b2e00" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(270 518) rotate(180)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#4c2e8a" stroke="#4c2e8a" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(22 270) rotate(270)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#115e5f" stroke="#115e5f" stroke-width="0.8" stroke-linejoin="round"></path></g><defs><path id="label-early" d="M 93.23 59.34 A 275 275 0 0 1 446.77 59.34"></path><path id="label-late" d="M 480.66 93.23 A 275 275 0 0 1 480.66 446.77"></path><path id="label-slow" d="M 93.23 480.66 A 275 275 0 0 0 446.77 480.66"></path><path id="label-recov" d="M 59.34 446.77 A 275 275 0 0 1 59.34 93.23"></path></defs><text fill="#0f2f5c" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-early" startOffset="50%" text-anchor="middle">EARLY EXPANSION</textPath></text><text fill="#8b2e00" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-late" startOffset="50%" text-anchor="middle">LATE EXPANSION</textPath></text><text fill="#4c2e8a" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-slow" startOffset="50%" text-anchor="middle">SLOWDOWN</textPath></text><text fill="#115e5f" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-recov" startOffset="50%" text-anchor="middle">RECOVERY</textPath></text><g><path d="M 270.0 35.0 A 235 235 0 0 1 408.1295342887312 79.88100632188736 L 334.65637775217203 181.00813061875579 A 110 110 0 0 0 270.0 160.0 Z" fill="#43A047" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.15092303249094 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #43A047; stroke-width: 2.4; stroke-linejoin: round;">TECHNOLOGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">TECHNOLOGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Innovation-led</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">growth</text></g></g><g><path d="M 408.1295342887312 79.88100632188736 A 235 235 0 0 1 493.4982813293611 197.38100632188736 L 374.6162167924669 236.00813061875579 A 110 110 0 0 0 334.65637775217203 181.00813061875579 Z" fill="#C0CA33" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 168.90093660569462)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">DISCRETIONARY</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DISCRETIONARY</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising confidence</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& spending</text></g></g><g><path d="M 493.4982813293611 197.38100632188736 A 235 235 0 0 1 493.49828132936113 342.61899367811264 L 374.6162167924669 303.9918693812442 A 110 110 0 0 0 374.6162167924669 236.00813061875579 Z" fill="#F0A93B" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(442.0 270.0)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F0A93B; stroke-width: 2.4; stroke-linejoin: round;">INDUSTRIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">INDUSTRIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Capital investment</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& infrastructure</text></g></g><g><path d="M 493.49828132936113 342.61899367811264 A 235 235 0 0 1 408.1295342887312 460.1189936781126 L 334.65637775217203 358.9918693812442 A 110 110 0 0 0 374.6162167924669 303.9918693812442 Z" fill="#B5651D" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 371.09906339430535)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #B5651D; stroke-width: 2.4; stroke-linejoin: round;">DEFENSE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DEFENSE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Government spending</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& indigenization</text></g></g><g><path d="M 408.1295342887312 460.1189936781126 A 235 235 0 0 1 270.00000000000006 505.0 L 270.0 380.0 A 110 110 0 0 0 334.65637775217203 358.9918693812442 Z" fill="#2E6DA4" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.150923032491 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #2E6DA4; stroke-width: 2.4; stroke-linejoin: round;">AEROSPACE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">AEROSPACE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Order backlogs</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& export growth</text></g></g><g><path d="M 270.00000000000006 505.0 A 235 235 0 0 1 131.87046571126885 460.11899367811264 L 205.34362224782797 358.9918693812442 A 110 110 0 0 0 270.0 380.0 Z" fill="#F4791A" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.84907696750906 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F4791A; stroke-width: 2.4; stroke-linejoin: round;">ENERGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">ENERGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Commodity cycles</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& inflation</text></g></g><g><path d="M 131.87046571126885 460.11899367811264 A 235 235 0 0 1 46.50171867063892 342.6189936781127 L 165.3837832075331 303.9918693812442 A 110 110 0 0 0 205.34362224782797 358.9918693812442 Z" fill="#9163CB" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.84907696750906 371.0990633943054)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #9163CB; stroke-width: 2.4; stroke-linejoin: round;">UTILITIES</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">UTILITIES</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Defensive demand</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& stability</text></g></g><g><path d="M 46.50171867063892 342.6189936781127 A 235 235 0 0 1 46.501718670638894 197.3810063218874 L 165.3837832075331 236.0081306187558 A 110 110 0 0 0 165.3837832075331 303.9918693812442 Z" fill="#299BD1" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(98.0 270.00000000000006)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">STAPLES</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">STAPLES</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Essential needs</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& resilience</text></g></g><g><path d="M 46.501718670638894 197.3810063218874 A 235 235 0 0 1 131.87046571126876 79.88100632188738 L 205.34362224782794 181.00813061875579 A 110 110 0 0 0 165.3837832075331 236.0081306187558 Z" fill="#16A398" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.849076967509 168.90093660569465)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #16A398; stroke-width: 2.4; stroke-linejoin: round;">HEALTH CARE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">HEALTH CARE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Demographics</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& innovation.</text></g></g><g><path d="M 131.87046571126876 79.88100632188738 A 235 235 0 0 1 269.99999999999994 35.0 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="#7CB342" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.849076967509 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #7CB342; stroke-width: 2.4; stroke-linejoin: round;">FINANCIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">FINANCIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising rates</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& lending growth.</text></g></g><path d="M 408.1295342887312 79.88100632188736 A 235 235 0 0 1 493.4982813293611 197.38100632188736 L 374.6162167924669 236.00813061875579 A 110 110 0 0 0 334.65637775217203 181.00813061875579 Z" fill="none" stroke="#0a2342" stroke-width="3.2" stroke-linejoin="round"></path><circle cx="270" cy="270" r="108.5" fill="#ffffff" stroke="#e7e0d1" stroke-width="1.2"></circle><circle cx="270" cy="270" r="108.5" fill="none" stroke="#000" stroke-opacity="0.04" stroke-width="6"></circle><g transform="translate(270 270)"><text x="0" y="-8" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.5" fill="#0a2342">REMSONS</text><text x="0" y="7" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.3" fill="#0a2342">INDUSTRIES</text><text x="0" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400" letter-spacing="0.1">Mapped to consumer discretionary</text><text x="0" y="32.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400">early-expansion phase</text><path d="M 81.56,49.37 L 72.15,62.31 L 89.80,65.24 Z" fill="#0a2342"></path></g></svg></div><div class="mt-8 md:mt-10 flex justify-center"><div class="h-[1px] w-[72px] bg-[#d9d0bb]/70"></div></div></div>
-        </div>
-        <div class="chartcap" style="text-align:center;margin-top:2px">BSE: 530919 &middot; mapped: consumer discretionary / auto parts &amp; equipment &middot; phase: early expansion</div>
-      </div>
-      <div style="flex:0 0 calc(50% - 10px);min-width:0">
-        <div class="sec-title" id="sec15"><span class="num">15</span><h2>Peer Comparison</h2></div>
-        <table class="peer">
-          <tr><th>Company</th><th>MCap</th><th>Rev</th><th>P/E</th><th>ROE</th></tr>
-          <tr style="background:#eef4fc"><td>&#9733; Remsons</td><td><b>388&ndash;453</b></td><td><b>469&ndash;489</b></td><td><b>~22.5&ndash;25.4x</b></td><td><b>~13.5&ndash;17.2%</b></td></tr>
-          <tr><td>Rico Auto (castings)</td><td>1,758</td><td>2,478</td><td>35&ndash;58x</td><td class="neg">~3%</td></tr>
-          <tr><td>Setco Automotive (CV clutches)</td><td>238&ndash;249</td><td>719&ndash;766</td><td>N/A (loss)</td><td class="neg">~0% (neg. equity)</td></tr>
-          <tr><td>Fiem Industries (lighting)</td><td>5,043&ndash;5,906</td><td>2,932</td><td>~23.1x</td><td class="pos">~20.75%</td></tr>
-          <tr><td>Uno Minda (diversified)</td><td>70,653</td><td>15,339&ndash;16,775</td><td>~75x</td><td>~16%</td></tr>
-          <tr><td>Sundram Fasteners</td><td>25,808</td><td>5,807&ndash;6,602</td><td>~38.65x</td><td>~14%</td></tr>
-          <tr><td>Jamna Auto (leaf springs)</td><td>5,000</td><td>2,620</td><td>~21.4x</td><td class="pos">~18%</td></tr>
-          <tr><td>Autoline Industries (BIW)</td><td>320&ndash;428</td><td>824</td><td>~8.3&ndash;9.6x</td><td class="pos">~19.5%</td></tr>
-          <tr><td>Talbros Auto (gaskets)</td><td>2,594</td><td>902</td><td>~29x</td><td>~7.6%</td></tr>
-        </table>
-        <div class="chartcap" style="margin-top:4px">All figures &#8377; Cr / TTM, source-dependent ranges. <b>No tight operational comp exists</b> for the control-cable/gear-shift niche &mdash; every name above differs materially in product mix and/or scale; this is directional small/mid-cap auto-ancillary context only.</div>
-        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Reading it:</b> on scale, Remsons sits closest to Setco/Autoline; on ROE it compares favorably to most peers except Fiem/Autoline/Jamna Auto. Setco is not a meaningful P/B or ROE comparator (negative equity, book value &minus;&#8377;52.9/share). Remsons' OPM (~10.7% FY26) is the <b>lowest of the profitable peers</b> (Fiem 14%, Sundram 16%, Minda 12%) &mdash; margin expansion toward management's stated 13&ndash;14% FY29 target is the key re-rating lever if it is to close the valuation gap.</div>
+        <div class="krow"><span class="klab">Spike-Day Volume</span><span class="kval">782,455 to 2,534,241<small>Wide cross-source conflict, both stated</small></span></div>
+        <div class="krow"><span class="klab">Free Float</span><span class="kval" style="color:#c62828">~1.29 Cr shares<small>Extremely thin for the moves observed</small></span></div>
+        <div class="krow"><span class="klab">Institutional Presence</span><span class="kval" style="color:#c62828">Near-zero<small>FII 2.79% · DII 1.10% · no MF/insurance</small></span></div>
+        <div class="krow"><span class="klab">F&amp;O Eligibility</span><span class="kval">Not eligible<small>Below NSE liquidity/mkt-cap thresholds</small></span></div>
+        <div class="mininote" style="background:#fdf0f0;border-left:3px solid #c62828"><b>&#9888; Liquidity and float concentration are the practical risk:</b> a ~16,500-shareholder, retail-dominated register with no institutional anchor means both the up-move and any reversal can be outsized relative to genuine news flow. ASM/GSM status unconfirmed (NSE page fetch failed) — flagged as a strong candidate for post-spike surveillance inclusion.</div>
       </div>
     </div>
   </div>
 
+  <!-- ================= 14/15 SECTOR ROTATION + PEERS ================= -->
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1">
+        <div class="sec-title" id="sec14"><span class="num">14</span><h2>Sector Rotation &amp; Segment Trends</h2></div>
+        <p style="font-size:11px">Remsons' auto-ancillary sector typically tracks the broader Consumer Discretionary / Automobiles cycle — order flow follows OEM production schedules across 2W/PV/CV/Farm, giving Remsons a genuinely multi-segment read rather than a single-vehicle-category bet.</p>
+        <div class="krow" style="margin-top:8px"><span class="klab">2W Domestic Sales</span><span class="kval pos">+22% YoY (Apr&ndash;Jun FY27)<small>FY26 full-year growth estimated 6&ndash;9%</small></span></div>
+        <div class="krow"><span class="klab">PV Domestic Sales</span><span class="kval pos">+25% YoY (Apr&ndash;Jun FY27)<small>FY26 growth guided low-single-digit; FY27 outlook mid-single-digit</small></span></div>
+        <div class="krow"><span class="klab">CV Growth</span><span class="kval warn">Muted<small>Per SIAM estimates</small></span></div>
+        <div class="notebox" style="margin-top:8px"><b>EV structural risk — specific to the gear-shift-cable line:</b> BEVs typically use single-speed transmissions or shift-by-wire (electronic buttons/dials), eliminating mechanical gear-linkage cables (throttle/parking-brake cables have less EV-substitution risk). India EV penetration: overall retail ~12% (Jun'26), 2W ~9.3% (May'26)/~6.5% FY26 overall, PV ~7.7% (Jun'26, +108% YoY) — still low but rising fast; &gt;85% manual-transmission penetration in PVs currently. Not yet a near-term P&amp;L risk given current penetration, but a legitimate multi-year secular headwind. The Stanley Black &amp; Decker non-auto account is a plausible, but not fully de-risking, hedge.</div>
+      </div>
+      <div style="flex:1">
+        <div class="sec-title" id="sec15"><span class="num">15</span><h2>Peer Comparison</h2></div>
+        <div class="notebox blue" style="margin-top:0;margin-bottom:8px">No tight operational comp exists for the control-cable/gear-shift niche — every name below differs materially in product mix and/or scale. This is directional small/mid-cap auto-ancillary context only.</div>
+        <table class="peer">
+          <tr><th>Company</th><th>MCap</th><th>Rev (TTM)</th><th>P/E</th><th>ROE</th></tr>
+          <tr style="background:#eef4fc"><td>&#9733; Remsons</td><td><b>388&ndash;453</b></td><td><b>469&ndash;489</b></td><td><b>22.5&ndash;25.4x</b></td><td><b>13.5&ndash;17.2%</b></td></tr>
+          <tr><td>Rico Auto (castings)</td><td>1,758</td><td>2,478</td><td>35&ndash;58x</td><td class="neg">~3%</td></tr>
+          <tr><td>Setco Auto (CV clutches)</td><td>238&ndash;249</td><td>719&ndash;766</td><td>N/A (loss)</td><td class="neg">~0% (neg. equity)</td></tr>
+          <tr><td>Fiem Industries (lighting)</td><td>5,043&ndash;5,906</td><td>2,932</td><td>23.1x</td><td class="pos">20.75%</td></tr>
+          <tr><td>Uno Minda (diversified)</td><td>70,653</td><td>15,339&ndash;16,775</td><td>~75x</td><td>16%</td></tr>
+          <tr><td>Sundram Fasteners</td><td>25,808</td><td>5,807&ndash;6,602</td><td>38.65x</td><td>14%</td></tr>
+          <tr><td>Jamna Auto (leaf springs)</td><td>5,000</td><td>2,620 (+16%)</td><td>21.4x</td><td class="pos">18%</td></tr>
+          <tr><td>Autoline Ind. (BIW/stamping)</td><td>320&ndash;428</td><td>824 (+25%)</td><td>8.3&ndash;9.6x</td><td class="pos">19.5%</td></tr>
+          <tr><td>Talbros Auto (gaskets/forgings)</td><td>2,594</td><td>902</td><td>29x</td><td class="neg">7.6%</td></tr>
+        </table>
+        <div class="chartcap" style="margin-top:4px">Setco's negative book value (&minus;&#8377;52.9/share) makes it not a meaningful comparator on P/B or ROE.</div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Reading it:</b> Remsons sits closest to Setco/Autoline on scale. On ROE it compares favorably to most peers except Fiem/Autoline/Jamna Auto. Remsons' OPM (~10.7%) is the <b>lowest of the profitable peers</b> (Fiem 14%, Sundram 16%, Minda 12%) — margin expansion toward management's stated 13&ndash;14% FY29 target is the key re-rating lever if Remsons is to close the valuation gap to better-margined names.</div>
+      </div>
+    </div>
+  </div>
 
   <!-- ================= 16 RISK ANALYSIS ================= -->
   <div class="sec">
     <div class="sec-title" id="sec16"><span class="num">16</span><h2>Risk Analysis</h2></div>
     <table class="t prose">
       <tr><th style="text-align:left">Category</th><th>Severity</th><th style="text-align:left">Detail</th></tr>
-      <tr><td style="text-align:left">Liquidity / Unexplained Price Spike</td><td><span class="badge b-bear">High &mdash; #1 Risk</span></td><td style="text-align:left">Extreme volatility on a thin float (~1.29 Cr shares, per brief), near-zero institutional ownership (FII 2.79%, DII 1.10%, no MF/insurer holdings) and a 10.9&ndash;17.2% (source-dependent) unexplained move on 22&ndash;25 Sep 2026 with no confirmed trigger (&sect;03). Treated here as a standalone risk in its own right, not a footnote to a bullish narrative.</td></tr>
-      <tr><td style="text-align:left">Corporate Governance</td><td><span class="badge b-warn">Medium-High</span></td><td style="text-align:left">Promoters (Kejriwal family) hold 62.83% (Jun&#39;26), down from ~75% (Sep&#39;23); zero pledge (positive) but promoters were net <b>sellers</b> via bulk/block deals in May&ndash;Jun 2026, not buyers ahead of the September rally. The Astro Motors acquire-then-reverse-within-a-year episode, plus a same-week buyer-identity correction in a material filing (23&#8594;24 Mar 2026), is a real disclosure-quality lapse for a small-cap this thinly covered. CEO transition (Srivastava out 18 Jun, Desai in 3 Aug 2026) now cleanly resolved with a credible replacement. No SEBI action found; only litigation is a routine, unchanged &#8377;534.61 lakh disputed tax liability.</td></tr>
-      <tr><td style="text-align:left">Competitive Intensity</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">Suprajit Engineering dominant (&gt;65% organized market share, world&#39;s 3rd-largest control-cable maker); Minda Corporation a named direct competitor with a more diversified electronics/mechatronics portfolio; other named competitors: Motherson Sumi Wiring, PPAP Automotive, Jay Ushin, Omax Autos, Him Teknoforge. Remsons is sub-scale with limited OEM bargaining power per third-party commentary (&sect;02).</td></tr>
-      <tr><td style="text-align:left">Customer Concentration</td><td><span class="badge b-warn">Medium, Underdisclosed</span></td><td style="text-align:left">FY25 mix: PV 39% (anchored by Ford), 2W 34% (anchored by Hero MotoCorp), plus CV (Ashok Leyland, Tata Motors) and Farm (Mahindra, 50-yr tenure). MarketsMojo explicitly flagged &ldquo;client concentration risks materialising through major customer losses&rdquo; as a live Q2 FY26 concern &mdash; specific customer(s) not named. No source discloses exact top-customer revenue % &mdash; stated as a disclosure gap.</td></tr>
-      <tr><td style="text-align:left">Industry Disruption (EV Transition)</td><td><span class="badge b-warn">Low Near-Term, Structural Long-Term</span></td><td style="text-align:left">BEVs typically use single-speed transmissions or shift-by-wire, eliminating mechanical gear-linkage cables specifically (less relevant to throttle/parking-brake cables). Current EV penetration is still low but rising fast (PV ~7.7% Jun 2026, +108% YoY; &gt;85% of PVs still manual-transmission) &mdash; not yet a near-term P&amp;L risk, but a legitimate multi-year secular headwind. The Stanley Black &amp; Decker non-auto account is a plausible, partial hedge, not a full de-risking.</td></tr>
-      <tr><td style="text-align:left">Market Structure / Coverage</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">No formal sell-side/institutional brokerage coverage exists (Trendlyne: 0 reports). Not F&amp;O eligible; no index inclusion identified. Capital allocation: dividend/share has trended down since FY23 despite profit growth (cross-ref the disputed EPS/split question, &sect;08 &mdash; unreconciled, not asserted as fact); new ESOP 2026 (100,000 options) is a future dilution source.</td></tr>
+      <tr><td style="text-align:left">Unexplained Spike / Thin Float</td><td><span class="badge b-bear">Critical</span></td><td style="text-align:left">The #1 risk in this report (see &#167;03 for full detail). A ~1.29 Cr-share float, near-zero institutional ownership (FII 2.79%, DII 1.10%, no MF/insurance), and a 15&ndash;17% single-day move with no confirmed trigger is a textbook setup for a sharp reversal. ASM/GSM status unconfirmed. No sell-side coverage exists to anchor expectations.</td></tr>
+      <tr><td style="text-align:left">Data Quality — FY2024 EPS Conflict</td><td><span class="badge b-warn">High (as a caution flag)</span></td><td style="text-align:left">Two research streams disagree on whether FY24 EPS reflects a genuine collapse or a stock-split artifact (full detail in &#167;08). The unresolved share-count/face-value history is itself a signal of thin public disclosure quality for this name, and should make a reader more cautious about every other per-share figure in this report, not less.</td></tr>
+      <tr><td style="text-align:left">Customer Concentration</td><td><span class="badge b-warn">Medium-High</span></td><td style="text-align:left">FY25 mix: PV 39% (anchored by Ford), 2W 34% (anchored by Hero MotoCorp), plus CV (Ashok Leyland, Tata Motors) and Farm (Mahindra, 50-yr tenure). MarketsMojo explicitly flagged "client concentration risks materialising through major customer losses" as a live Q2 FY26 concern; no source discloses the exact top-customer revenue % — a disclosure gap.</td></tr>
+      <tr><td style="text-align:left">Competitive Intensity</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">Suprajit Engineering dominant (&gt;65% organized market share); Minda Corporation a named direct competitor with a more diversified electronics/mechatronics portfolio; also named: Motherson Sumi Wiring, PPAP Automotive, Jay Ushin, Omax Autos, Him Teknoforge. Remsons is sub-scale with limited OEM bargaining power (cross-ref &#167;02).</td></tr>
+      <tr><td style="text-align:left">Corporate Governance</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Zero pledge is a genuine positive, but promoters were net sellers via bulk/block deals in May&ndash;Jun 2026 (before the September rally, not ahead of it), and the Astro Motors reversal included a same-week buyer-identity correction in a material filing (&#167;10). No SEBI action found; the only litigation is a routine, immaterial disputed tax liability.</td></tr>
     </table>
     <div class="cols" style="margin-top:10px">
       <div style="flex:1">
-        <div class="notebox"><b>Data-quality flag, stated plainly:</b> the FY2024 EPS conflict (&sect;08) is itself worth a reader's own caution &mdash; two independent research streams reached different conclusions on whether a stock split happened and when, and the underlying share-count history could not be conclusively reconciled from public sources.</div>
+        <div class="notebox"><b>EV structural risk (product-line specific):</b> the gear-shift-cable line faces a genuine multi-year secular headwind from shift-by-wire/single-speed BEV architectures; throttle/parking-brake cables are less exposed. Current EV penetration (~12% overall retail, Jun'26) means this is not yet a near-term P&amp;L risk, but it is a real long-run diversification imperative (cross-ref &#167;14).</td></div>
       </div>
       <div style="flex:1">
-        <div class="notebox red"><b>Quant signals, not brokerage calls:</b> MarketsMojo downgraded Remsons Hold&#8594;Sell (22 May 2026, Mojo Score 58&#8594;42) and separately cut its Quality Grade Good&#8594;Average (15 Dec 2025) &mdash; both independent/algorithmic research-service calls, not named mainstream brokerages, since none appear to cover the stock. TipRanks&#39; AI rating is Neutral.</div>
+        <div class="notebox red"><b>No sell-side coverage, no clean bill of health on surveillance:</b> MarketsMojo downgraded Hold&#8594;Sell (22 May'26, quant score, not a brokerage call); Trendlyne shows zero analyst reports. The absence of any Aug&ndash;Sep 2026 bulk/block-deal disclosures around the spike is a gap, not evidence of a clean float — disclosures can lag.</div>
       </div>
     </div>
   </div>
 
-  
-
   <div style="background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570);border-top:3px solid #f0b429;border-bottom:3px solid #f0b429;color:#f0b429;padding:9px 26px;font-weight:900;letter-spacing:2.5px;font-size:14px;text-transform:uppercase">Technical Analysis</div>
+
+  <!-- ================= 17 TECHNICAL RATINGS ================= -->
   <div class="sec">
     <div class="sec-title" id="sec17"><span class="num">17</span><h2>Technical Ratings &amp; Momentum</h2></div>
     <div class="cols">
-      <div style="flex:0 0 calc(50% - 10px);min-width:0">
-        <div class="microhead">Price Position vs 52-Week Range</div>
-        <div style="font-size:40px;font-weight:900;color:#2e7d32;line-height:1">~72<span style="font-size:16px;color:#5a6475">nd percentile</span></div>
-        <div style="font-size:11px;color:#5a6475;margin:2px 0 8px">CMP &#8377;129&ndash;130 within a &#8377;75.23&ndash;152.45 52-week range (two-source-corroborated)</div>
-        <p style="font-size:11.5px"><b>No MarketSmith Relative Strength Rating or Master Score was found for REMSONSIND</b> &mdash; stated plainly rather than fabricated, consistent with the absence of any sell-side/institutional research coverage (&sect;12). What is available: the stock ran from near its 52-week low (~&#8377;75) to the current &#8377;129&ndash;130 largely on the back of the still-unexplained 22&ndash;25 Sep spike (&sect;03), not a steadily building RS trend with a track record behind it.</p>
-        <div class="notebox blue" style="margin-top:10px"><b>Synthesis:</b> price strength is real but recent and abrupt, not a multi-month accumulation pattern. The EV/EBITDA de-rating-then-re-rating cycle below (&sect;09 detail) shows the multiple compressing steadily through FY26 even as the business grew &mdash; the September move looks more like a violent re-rating attempt than a continuation of an existing institutional accumulation trend.</div>
-
+      <div style="flex:1">
+        <div class="microhead">Price Action Since the ~&#8377;75 Low (Aug 2026)</div>
+        <p style="font-size:11.5px">The stock has more than doubled off its ~&#8377;75 low over roughly 6&ndash;7 weeks, culminating in the 22&ndash;25 Sep spike into the &#8377;123&ndash;132 zone. That is an unusually steep, near-vertical advance for a stock with no institutional sponsorship — consistent with a thin-float, low-liquidity move rather than a broad-based re-rating.</p>
+        <div class="notebox blue" style="margin-top:10px"><b>Reading the move technically, not fundamentally:</b> the daily chart shows a clean five-wave impulse (0)&ndash;(i)&ndash;(ii)&ndash;(iii) off the August base, with the September spike being the (iii)-wave. Momentum indicators are stretched after such a move; a pullback/consolidation is normal wave-(iv) behaviour, not necessarily a trend break, provided key support (below) holds.</div>
       </div>
-      <div style="flex:0 0 calc(50% - 10px);min-width:0">
-        <div class="microhead">Available Quant/Algorithmic Signals</div>
-        <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc)"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">TipRanks AI Rating</div><div style="font-size:17px;font-weight:900;color:#1a2a4a">Neutral</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">PT &#8377;155 (ref. price inconsistent)</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">MarketsMojo Score</div><div style="font-size:17px;font-weight:900;color:#c62828">58&#8594;42</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Hold&#8594;Sell, 22 May 2026</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Quality Grade</div><div style="font-size:17px;font-weight:900;color:#c62828">Good&#8594;Average</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">MarketsMojo, 15 Dec 2025</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Analyst Coverage</div><div style="font-size:17px;font-weight:900;color:#1a2a4a">0</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Trendlyne: 0 reports, 0 sources</div></div></div>
-        <div class="microhead" style="margin-top:10px">EV/EBITDA Trajectory Through FY26 (De-Rating &#8594; Recovery)</div>
-        <div style="display:flex;gap:8px;margin-top:6px"><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:6px 4px;background:#fafbfd"><div style="font-size:14px;font-weight:900;color:#1a2a4a">12.76x</div><div style="font-size:8.6px;color:#8a94a6">Aug&#39;25</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:6px 4px;background:#fafbfd"><div style="font-size:14px;font-weight:900;color:#1a2a4a">12.66x</div><div style="font-size:8.6px;color:#8a94a6">Nov&#39;25</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:6px 4px;background:#fafbfd"><div style="font-size:14px;font-weight:900;color:#1a2a4a">10.49x</div><div style="font-size:8.6px;color:#8a94a6">Feb&#39;26</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:6px 4px;background:#fafbfd"><div style="font-size:14px;font-weight:900;color:#1a2a4a">9.40x</div><div style="font-size:8.6px;color:#8a94a6">May&#39;26</div></div></div>
-        <div class="chartcap" style="margin-top:6px">Multiple compression through the FY26 reporting cycle, bottoming around the ~&#8377;75 price low, ahead of the September rally. No post-spike EV/EBITDA reading was sourced.</div>
+      <div style="flex:1">
+        <div class="microhead">Momentum Snapshot</div>
+        <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc)"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Off 52-Wk Low</div><div style="font-size:21px;font-weight:900;color:#2e7d32">+72.8%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">From &#8377;75.23</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Off 52-Wk High</div><div style="font-size:21px;font-weight:900;color:#c62828">&minus;14.7%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">From &#8377;152.45</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Spike Move</div><div style="font-size:21px;font-weight:900;color:#1a2a4a">+10.9 to 17.2%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Single session</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">F&amp;O / Index</div><div style="font-size:21px;font-weight:900;color:#1a2a4a">None</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Not eligible</div></div></div>
+        <p style="font-size:11px;margin-top:8px">No RS-rating or O'Neil-style institutional scoring service was found covering REMSONSIND — consistent with its near-total absence of institutional ownership and sell-side coverage (&#167;12/&#167;13).</p>
       </div>
     </div>
   </div>
 
-  <!-- ================= 06 KEY FINANCIALS ================= -->
+  <!-- ================= 18 ELLIOTT WAVE ANALYSIS ================= -->
   <div class="sec">
     <div class="sec-title" id="sec18"><span class="num">18</span><h2>Elliott Wave Analysis (MotiveWave)</h2></div>
     <div class="cols">
-      <div class="imgwrap" style="flex:1"><img src="REMSONS_chart.jpg" alt="REMSONSIND MotiveWave 1H + 1D Elliott Wave chart, 25 Sep 2026"></div>
+      <div class="imgwrap" style="flex:1"><img src="REMSONS_chart.jpg" alt="Remsons Industries MotiveWave Elliott Wave 1H + 1D chart"></div>
     </div>
     <div class="microhead" style="margin-top:12px">Wave Structure Interpretation</div>
     <table class="t prose">
-      <tr><td style="width:90px;vertical-align:top"><b>1D Chart</b></td><td style="text-align:left">The daily panel shows a multi-month corrective structure off a 2026 high (a W&ndash;X&ndash;Y-style double correction: (A)-(B)-(C) legs, X pivot, then a (C)-of-Y decline) bottoming in the &#8377;70&ndash;80 zone in H1 2026 &mdash; consistent with the sourced 52-week low of &#8377;75.23 and with the EV/EBITDA de-rating documented through FY26 (&sect;09). A new advance is now counted (0)-(i)-(ii)-<b>(iii)</b>, and (iii) is the leg that contains the entire 22&ndash;25 Sep 2026 spike (&sect;03): price has driven straight through the 200% Fibonacci extension of (i)-(ii) at <b>&#8377;131.26</b>, printing as high as &#8377;132.80 on the chart, with (iv) and (v) still unconfirmed/projected (261.8% extension &#8377;144.48).</td></tr>
-      <tr><td style="vertical-align:top"><b>1H Chart</b></td><td style="text-align:left">The hourly shows the granular version of the same move: (0) low ~&#8377;80 (28 Aug) &#8594; (i) ~&#8377;102.5 (3 Sep) &#8594; (ii) pullback to ~&#8377;87.04 (14 Sep, a horizontal level the chart marks explicitly) &#8594; an almost vertical (iii) leg into the current &#8377;129&ndash;133 zone. Fibonacci extensions of the (i)-(ii) leg mark 138.2% at &#8377;118.04, 161.8% at &#8377;123.09 (highlighted on the chart) and 200% at &#8377;131.26 &mdash; price has already pierced the 200% level in a single stretch with essentially no intervening consolidation, which is itself the chart's visual signature of the unexplained September spike.</td></tr>
-      <tr><td style="vertical-align:top"><b>Synthesis — Two-Sided</b></td><td style="text-align:left"><b>Bull case:</b> if the wave count is right, this is a genuine impulsive wave (iii) off a completed multi-month correction &mdash; a trend-reversal signal, not noise. A wave-(iv) pullback into the &#8377;118.04&ndash;123.09 pocket would be a textbook, tradeable correction ahead of a wave-(v) push toward the &#8377;144.48 (261.8%) target, still well below the user-cited but unverified ~&#8377;235 2024 high. <b>Bear case:</b> a near-vertical, single-session move that overshoots the 200% extension with no consolidation is also the classic signature of a low-float overshoot or blow-off, not a clean wave 3 &mdash; and &sect;03 found no confirmed fundamental trigger, thin float and near-zero institutional ownership behind this exact move. <b>Levels that decide it:</b> holding &#8377;114.81&ndash;118.04 keeps the constructive count alive; a decisive close back below &#8377;114.81 that keeps falling would invalidate it and open a retest of the &#8377;87.04 wave-(ii) low or the 52-week low near &#8377;75.23. Given the unresolved spike (&sect;03), this report treats the technical structure as informative but <b>not sufficient on its own</b> to call the move real or sustainable.</td></tr>
+      <tr><td style="width:90px;vertical-align:top"><b>1D Chart</b></td><td style="text-align:left">The multi-year picture is a long W&ndash;X&ndash;Y double-three correction down from the 2025 highs — an (A)-(B)-(C) decline into a 2025 (X) peak, then a second (A)-(B)-(C) leg down into a (Y) low around &#8377;70&ndash;75 in August 2026. Off that (Y)/(C) base, the chart marks a fresh five-wave advance: (0)&#8594;(i) up to ~&#8377;104, (ii) pullback to ~&#8377;87 (the 61.8% retracement sits at &#8377;93.18), then a sharp <b>wave-(iii) spike straight into the 200% Fibonacci extension at &#8377;131.26</b> (actual high &#8377;132.80) &mdash; this is the September 22&ndash;25 spike discussed in &#167;03, now visible as the dominant feature on the daily chart. If the count holds, a wave-(iv) pullback toward the 161.8%/138.2% extension pocket (&#8377;123.09/&#8377;118.04) would set up a wave-(v) push toward the 261.8% extension at &#8377;144.48.</td></tr>
+      <tr><td style="vertical-align:top"><b>1H Chart</b></td><td style="text-align:left">The hourly zooms into the same (iii) spike: (0) low ~&#8377;80, (i) up to ~&#8377;104, (ii) pullback to ~&#8377;87, then the explosive (iii) leg to &#8377;132.80 landing just above the 200% extension (&#8377;131.26), with the 161.8% extension (&#8377;123.09) now acting as the first support shelf below. Price is currently pulling back to &#8377;114.81 (per the chart's last printed bar), inside the (iii)-(iv) transition zone — consistent with normal post-spike digestion, not yet a trend failure.</td></tr>
+      <tr><td style="vertical-align:top"><b>Two-Sided Read</b></td><td style="text-align:left"><b>Bull case:</b> if wave (iii) is genuine and (iv) holds above the &#8377;118&ndash;123 fib pocket (and, at worst, above the &#8377;93.18 61.8% retracement of the (0)-(iii) advance), the impulsive structure projects a wave (v) toward &#8377;144.48 and potentially a retest of the &#8377;152.45 52-week high. <b>Bear case / invalidation:</b> this entire advance sits on top of the &#167;03 spike whose fundamental trigger remains unconfirmed and whose float is extremely thin — a break back below the wave-(ii) low (~&#8377;87) would invalidate the impulsive count and open the door to a retest of the (Y)/(C) base near &#8377;75, especially if the eventual trigger (or lack of one) disappoints. <b>Current price (&#8377;129&ndash;130, last printed bar &#8377;114.81) sits between the wave-(iii) high (&#8377;132.80) and the (iv) support pocket (&#8377;118&ndash;123)</b> — the chart alone cannot resolve whether this is healthy consolidation before a fifth wave or the start of a reversal of an unexplained move; that resolution depends on information (a confirmed trigger, an NSE surveillance action, or simply time) this report does not have.</td></tr>
     </table>
   </div>
 
-  <!-- ================= 14 RECOMMENDATION ================= -->
+  <!-- ================= 19 RECOMMENDATION ================= -->
   <div class="sec">
     <div class="sec-title" id="sec19"><span class="num">19</span><h2>Recommendation, Support &amp; Resistance</h2></div>
     <div class="cols">
-      <div class="panel" style="background:#fdf0f0;border-color:#c62828;flex:1.2">
-        <div class="plab" style="color:#c62828">&#9733; Recommendation</div>
-        <div class="pval" style="color:#c62828;font-size:19px">HIGH CAUTION — NOT A CHASE AT CMP</div>
-        <p style="font-size:11.4px;margin-top:6px">Real multi-segment OEM diversification, genuine order wins (Stellantis, Ford Turkey, UK pedal-box), zero promoter pledge and a supportive ACMA industry tailwind &mdash; set against an unexplained 10.9&ndash;17.2% price spike on a thin, near-zero-institutional float, a decelerating latest quarter, an unresolved EPS/financials data conflict, and a capital-allocation red flag (Astro Motors). This combination argues for <b>watching and verifying, not chasing the move</b>.</p>
-        <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#fce4ec;border-radius:5px"><b style="color:#d81b60">&#9679; What would make this more investable:</b> a confirmed, mechanical explanation for the Sep spike (order win, filing, block deal); a return to accelerating quarterly EBITDA/PAT; resolution of the FY24 EPS/split conflict; and/or visible FII/DII re-entry.</div>
-        <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#fdf0f0;border-radius:5px"><b style="color:#c62828">&#9679; What would confirm the bear case:</b> a decisive close back below &#8377;114.81 that keeps falling, a retest of &#8377;87.04 or the 52-week low ~&#8377;75.23, or confirmation of ASM/GSM surveillance inclusion.</div>
-        <div style="font-size:11.3px;margin-top:6px"><b>Next checkpoints:</b> any post-AGM (23 or 30 Sep, per the unresolved date conflict) disclosures, Q2 FY27 results, and whether promoter/FII/DII holdings show fresh buying in the next shareholding-pattern release.</div>
+      <div class="panel" style="background:#fff8f0;border-color:#e67e22;flex:1.2">
+        <div class="plab" style="color:#e67e22">&#9733; Recommendation</div>
+        <div class="pval" style="color:#e67e22;font-size:19px">WATCH ONLY — DO NOT CHASE AN UNEXPLAINED SPIKE</div>
+        <p style="font-size:11.4px;margin-top:6px">A genuine multi-segment OEM supplier with real order wins (Stellantis, Ford) and zero promoter pledge is currently entangled with an unexplained, thin-float price spike, near-zero institutional ownership, no sell-side coverage, a recent quarter's margin deceleration, and an unresolved EPS data conflict. The combination argues for patience, not participation, until at least one of the open questions in &#167;03 and &#167;08 resolves.</p>
+        <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#fce4ec;border-radius:5px"><b style="color:#d81b60">&#9679; Watch zone (now):</b> price consolidating between the wave-(iii) high (&#8377;132.80) and the (iv) support pocket (&#8377;118&ndash;123). No position initiated on the spike alone.</div>
+        <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#fdf0f0;border-radius:5px"><b style="color:#c62828">&#9679; Invalidation:</b> a decisive close below the wave-(ii) low (~&#8377;87) or the 61.8% retracement (&#8377;93.18) would break the impulsive count and open a retest of the ~&#8377;75 base.</div>
+        <div style="font-size:11.3px;margin-top:6px"><b>Next catalysts to watch:</b> confirmation (or resolution of the conflict) on the 54th AGM date (23 vs 30 Sep), any NSE ASM/GSM surveillance action, and the next quarterly result for evidence on whether Q1 FY27's margin deceleration continues or reverses.</div>
       </div>
       <div class="panel" style="border-color:#1565c0">
         <div class="plab" style="color:#1565c0">&#128313; Key Support Levels</div>
         <table class="t" style="margin-top:4px">
-          <tr><td>&#8377;123.09</td><td style="text-align:left">161.8% fib extension (highlighted on chart)</td><td><span class="badge b-neut">Fib</span></td></tr>
+          <tr><td>&#8377;123.09</td><td style="text-align:left">161.8% fib extension / near-term shelf</td><td><span class="badge b-neut">Near</span></td></tr>
           <tr><td>&#8377;118.04</td><td style="text-align:left">138.2% fib extension</td><td><span class="badge b-neut">Fib</span></td></tr>
-          <tr><td>&#8377;114.81</td><td style="text-align:left">Chart-marked level — <b>count invalidation below here</b></td><td><span class="badge b-bear">Critical</span></td></tr>
-          <tr><td>&#8377;87.04</td><td style="text-align:left">1H wave-(ii) low (14 Sep)</td><td><span class="badge b-bull">Strong</span></td></tr>
-          <tr><td>&#8377;75.23</td><td style="text-align:left">52-week low — deep floor</td><td><span class="badge b-bear">Floor</span></td></tr>
+          <tr><td>&#8377;93.18</td><td style="text-align:left">61.8% retrace of (0)&#8594;(iii) advance</td><td><span class="badge b-warn">Watch</span></td></tr>
+          <tr><td>&#8377;87</td><td style="text-align:left">Wave-(ii) low — <b>count invalidation</b></td><td><span class="badge b-bear">Critical</span></td></tr>
+          <tr><td>&#8377;75.23</td><td style="text-align:left">52-week low / (Y)(C) base</td><td><span class="badge b-bear">Floor</span></td></tr>
         </table>
       </div>
       <div class="panel" style="border-color:#2e7d32">
         <div class="plab" style="color:#2e7d32">&#128312; Key Resistance Levels</div>
         <table class="t" style="margin-top:4px">
-          <tr><td>&#8377;129.48&ndash;132.80</td><td style="text-align:left">Current spike high / printed on chart</td><td><span class="badge b-neut">Near</span></td></tr>
-          <tr><td>&#8377;131.26</td><td style="text-align:left">200% fib extension — already pierced intraday</td><td><span class="badge b-warn">Watch</span></td></tr>
-          <tr><td>&#8377;144.48</td><td style="text-align:left">261.8% fib extension — wave-(v) projection</td><td><span class="badge b-bull">Target (if count holds)</span></td></tr>
+          <tr><td>&#8377;129.48</td><td style="text-align:left">Round-number / near-term pivot</td><td><span class="badge b-neut">Near</span></td></tr>
+          <tr><td>&#8377;132.80</td><td style="text-align:left">Wave-(iii) spike high</td><td><span class="badge b-bull">Signal</span></td></tr>
+          <tr><td>&#8377;144.48</td><td style="text-align:left">261.8% fib extension — wave-(v) objective</td><td><span class="badge b-bull">Target</span></td></tr>
           <tr><td>&#8377;152.45</td><td style="text-align:left">52-week high</td><td><span class="badge b-bull">Major</span></td></tr>
-          <tr><td>~&#8377;235</td><td style="text-align:left">User-cited 2024 high — <b>NOT independently corroborated</b></td><td><span class="badge b-warn">Unverified</span></td></tr>
+          <tr><td>&#8377;235 (unverified)</td><td style="text-align:left">User-cited 2024 high — NOT independently corroborated</td><td><span class="badge b-warn">Unverified</span></td></tr>
         </table>
       </div>
     </div>
   </div>
 
-  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, BSE, Screener.in, Tickertape, stockanalysis.com, Trendlyne, TipRanks, MarketsMojo, Simply Wall St, Business Standard and other public web sources as of 25 Sep 2026, and from the author's own MotiveWave Elliott Wave analysis. Price, volume and financial figures should be independently verified — several figures in this report are subject to genuine, unresolved cross-source conflicts, stated explicitly in the text rather than resolved by the author. Remsons Industries is a volatile, thinly-traded, low-float small-cap; its ASM/GSM surveillance status could not be confirmed and should not be assumed either way. Ashoke Kumar Seth is not a SEBI-registered research analyst. This is not investment advice; always consult a licensed financial adviser before making investment decisions. All figures in &#8377; Crore unless stated otherwise.</div>
+  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, Screener.in, Tickertape, stockanalysis.com, Trendlyne, TipRanks, MarketsMojo, Business Standard, SimplyWall St, TradingView, ACMA, SIAM and other public web sources as of 25 Sep 2026, and from the author's own MotiveWave Elliott Wave analysis. Price, volume and financial figures should be independently verified — this report explicitly preserves several unresolved cross-source conflicts (FY2024 EPS, market cap, FY26 PAT, spike-day volume and magnitude, share-count reconciliation, AGM date) rather than silently picking one figure. Remsons Industries is a thinly-traded, low-float, retail-dominated small-cap that saw an unexplained double-digit price move in the days before this report's date; its ASM/GSM surveillance status could not be confirmed. Ashoke Kumar Seth is not a SEBI-registered research analyst. This is not investment advice; always consult a licensed financial adviser before making investment decisions. All figures in &#8377; Crore unless stated otherwise.</div>
   <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice. &nbsp;|&nbsp; <span style="opacity:0.6">Template v6</span></div>
 </div>
 </div>
