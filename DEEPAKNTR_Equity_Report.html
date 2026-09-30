@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deepak Nitrite Limited — Equity Research Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#ffffff; font-family:'Source Sans 3',Arial,sans-serif; color:#2a3342; font-size:12.5px; line-height:1.5; }
+  .page-wrap { background:#e9edf3; display:flex; justify-content:center; padding:24px 12px 40px; }
+  .page { width:1400px; max-width:100%; margin:0; background:#fff; box-shadow:0 6px 24px rgba(26,42,74,0.18); }
+  .hdr { background:linear-gradient(135deg,#101c36 0%,#1a2a4a 55%,#2b4570 100%); border-bottom:4px solid; border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1; color:#fff; padding:16px 26px 13px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .hdr .meta { font-size:10.5px; letter-spacing:0.6px; color:#9fb0cf; text-transform:uppercase; }
+  .hdr h1 { font-size:26px; font-weight:900; letter-spacing:0.2px; margin:2px 0 3px; }
+  .hdr .tagline { font-size:11.5px; color:#c7d2e8; }
+  .hdr .pricebox { text-align:right; }
+  .hdr .price { font-size:26px; font-weight:900; }
+  .hdr .chg { color:#ff8a80; font-weight:700; font-size:14px; }
+  .hdr .sub { font-size:10.5px; color:#9fb0cf; margin-top:3px; }
+  .tagstrip { display:flex; gap:0; border-bottom:1px solid #dde2ea; }
+  .tagstrip div { flex:1; text-align:center; padding:6px 4px; font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; border-right:1px solid #dde2ea; }
+  .tagstrip div:last-child { border-right:none; }
+  .sec { padding:16px 26px 20px; border-bottom:1px solid #e4e8ef; }
+  .sec-title { display:flex; align-items:center; gap:9px; margin-bottom:12px; padding-bottom:7px; border-bottom:2px solid #f0b429; }
+  .sec-title .num { background:linear-gradient(135deg,#f7b733,#e67e22); color:#1a2a4a; font-size:11px; font-weight:900; padding:2px 7px; border-radius:3px; }
+  .sec-title h2 { font-size:14.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#1a2a4a; }
+  .microhead { font-size:10px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#b07716; margin:10px 0 6px; }
+  table.t { width:100%; border-collapse:collapse; }
+  table.t th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase; padding:6px 9px; text-align:right; font-weight:700; }
+  table.t th:first-child { text-align:left; }
+  table.t td { padding:5.5px 9px; border-bottom:1px solid #edf0f5; text-align:right; font-size:12px; }
+  table.t td:first-child { text-align:left; font-weight:600; }
+  table.t tr:nth-child(even) td { background:#f8f9fb; }
+  .pos { color:#2e7d32; font-weight:700; } .neg { color:#c62828; font-weight:700; }
+  .warn { color:#f57f17; font-weight:700; }
+  .tiles { display:flex; gap:10px; }
+  .tile { flex:1; border:1px solid #dde2ea; border-top:3px solid #2b4570; border-radius:6px; padding:9px 12px; background:linear-gradient(180deg,#fdfefe,#f7f9fc); }
+  .tile .lab { font-size:9.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#8a94a6; }
+  .tile .val { font-size:19px; font-weight:900; margin:2px 0 1px; color:#1a2a4a; }
+  .tile .note { font-size:10.3px; color:#5a6475; line-height:1.35; }
+  .notebox { border-left:4px solid #f9a825; background:#fffbe8; padding:9px 13px; font-size:11.8px; margin-top:11px; border-radius:0 5px 5px 0; }
+  .notebox.green { border-left-color:#2e7d32; background:#f0f7f0; }
+  .notebox.red { border-left-color:#c62828; background:#fdf0f0; }
+  .notebox.blue { border-left-color:#1565c0; background:#eef4fc; }
+  .badge { display:inline-block; font-size:9.5px; font-weight:900; letter-spacing:0.5px; padding:1.5px 7px; border-radius:9px; text-transform:uppercase; vertical-align:middle; }
+  .new-tag { display:inline-block; font-size:9px; font-weight:900; letter-spacing:0.7px; text-transform:uppercase; background:#f0b429; color:#3d2c00; padding:2px 6px; border-radius:3px; line-height:1.2; vertical-align:middle; margin-left:6px; }
+  .b-bull { background:#e8f5e9; color:#2e7d32; } .b-bear { background:#ffebee; color:#c62828; }
+  .b-neut { background:#e3f2fd; color:#1565c0; } .b-warn { background:#fff9c4; color:#f57f17; }
+  .cols { display:flex; gap:20px; }
+  .panel { flex:1; border:1px solid #dde2ea; border-radius:6px; padding:12px 15px; }
+  .panel .plab { font-size:9.5px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#8a94a6; margin-bottom:3px; }
+  .panel .pval { font-size:21px; font-weight:900; }
+  .chartcap { font-size:10px; color:#8a94a6; margin-top:5px; line-height:1.4; }
+  .imgwrap img { width:100%; border-radius:5px; border:1px solid #23304a; display:block; }
+  .footer-blue { border-top:3px solid #f0b429; background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570); color:#fff; text-align:center; padding:10px 16px; font-size:11px; letter-spacing:0.4px; }
+  .disclaim { font-size:9.8px; color:#8a94a6; padding:12px 26px; line-height:1.5; }
+  table.t[style*='--pad'] td { padding:9px; }
+  .compact { padding:13px 26px 14px; }
+  .compact table.t td { padding:3.5px 8px; font-size:11.3px; }
+  .compact table.t th { padding:5px 8px; }
+  .compact .notebox { padding:7px 11px; font-size:10.8px; margin-top:0; }
+  .compact .microhead { margin:8px 0 4px; }
+  .compact .tile { padding:6px 10px; }
+  .compact .tile .val { font-size:15.5px; margin:1px 0 0; }
+  .compact .tile .note { font-size:9.6px; }
+  .compact .cols { gap:14px; }
+  table.fit { width:100%; table-layout:fixed; }
+  table.fit td, table.fit th { padding:3.5px 11px; white-space:nowrap; overflow:hidden; }
+  table.fit th:first-child, table.fit td:first-child { width:24%; }
+  .krow { display:flex; justify-content:space-between; align-items:baseline; gap:8px; border-bottom:1px solid #edf0f5; padding:5px 2px; }
+  .krow .klab { color:#8a94a6; font-weight:900; font-size:9.3px; text-transform:uppercase; letter-spacing:0.5px; flex:0 0 auto; }
+  .krow .kval { font-weight:900; color:#1a2a4a; font-size:12.5px; text-align:right; }
+  .krow .kval small { display:block; font-weight:600; color:#8a94a6; font-size:9.3px; }
+  .mininote { font-size:10px; color:#5a6475; line-height:1.45; margin-top:8px; padding:7px 9px; border-radius:4px; }
+  table.peer { width:100%; border-collapse:collapse; }
+  table.peer th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:8.6px; letter-spacing:0.3px; text-transform:uppercase; padding:4px 3px; text-align:right; }
+  table.peer th:first-child { text-align:left; }
+  table.peer td { padding:4px 3px; border-bottom:1px solid #edf0f5; text-align:right; font-size:10px; }
+  table.peer td:first-child { text-align:left; font-weight:700; }
+
+    .sector-wheel-compact{width:600px;height:700px;margin:50px auto 0 110px;overflow:visible}
+    .sector-wheel-compact > div{width:540px!important;transform:scale(0.93);transform-origin:top left}
+    .sector-wheel-compact .mt-16,.sector-wheel-compact .md\:mt-\[80px\]{margin-top:0!important}
+    .sector-wheel-compact .mt-8{display:none}
+    .sector-wheel-compact .relative{position:relative}
+    .sector-wheel-compact .absolute{position:absolute}
+    .sector-wheel-compact .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel-compact .pointer-events-none{pointer-events:none}
+    .sector-wheel-compact .z-10{z-index:10}
+    .sector-wheel-compact .flex{display:flex}
+    .sector-wheel-compact .flex-col{flex-direction:column}
+    .sector-wheel-compact .items-center{align-items:center}
+    .sector-wheel-compact .items-start{align-items:flex-start}
+    .sector-wheel-compact .items-end{align-items:flex-end}
+    .sector-wheel-compact .justify-center{justify-content:center}
+    .sector-wheel-compact .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel-compact .leading-none{line-height:1}
+    .sector-wheel-compact .font-black{font-weight:900}
+    .sector-wheel-compact .opacity-90{opacity:.9}
+    .sector-wheel-compact .overflow-visible{overflow:visible}
+    .sector-wheel-compact .aspect-square{aspect-ratio:1/1}
+    .sector-wheel-compact .w-full,.sector-wheel-compact .md\:w-full{width:100%}
+    .sector-wheel-compact .h-full{height:100%}
+    .sector-wheel-compact .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel-compact .ml-\[1px\]{margin-left:1px}
+    .sector-wheel-compact .mr-\[1px\]{margin-right:1px}
+    .sector-wheel-compact .w-\[86vw\]{width:100%}
+    .sector-wheel-compact .max-w-\[540px\]{max-width:540px}
+    .sector-wheel-compact .max-w-\[760px\]{max-width:540px}
+    .sector-wheel-compact .w-\[72px\]{width:72px}
+    .sector-wheel-compact .h-\[1px\]{height:1px}
+    .sector-wheel-compact .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel-compact .text-\[16px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel-compact .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel-compact .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel-compact .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel-compact .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel-compact .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel-compact .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel-compact .gap-\[7px\]{gap:7px}
+    .sector-wheel-compact .gap-\[8px\]{gap:8px}
+    .sector-wheel-compact svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .relative{position:relative}
+    .sector-wheel .absolute{position:absolute}
+    .sector-wheel .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel .pointer-events-none{pointer-events:none}
+    .sector-wheel .z-10{z-index:10}
+    .sector-wheel .flex{display:flex}
+    .sector-wheel .flex-col{flex-direction:column}
+    .sector-wheel .items-center{align-items:center}
+    .sector-wheel .items-start{align-items:flex-start}
+    .sector-wheel .items-end{align-items:flex-end}
+    .sector-wheel .justify-center{justify-content:center}
+    .sector-wheel .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel .leading-none{line-height:1}
+    .sector-wheel .font-black{font-weight:900}
+    .sector-wheel .opacity-90{opacity:.9}
+    .sector-wheel .overflow-visible{overflow:visible}
+    .sector-wheel .aspect-square{aspect-ratio:1/1}
+    .sector-wheel .w-full,.sector-wheel .md\:w-full{width:100%}
+    .sector-wheel .h-full{height:100%}
+    .sector-wheel .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel .mt-16{margin-top:64px}
+    .sector-wheel .mt-8{margin-top:32px}
+    .sector-wheel .md\:mt-10{margin-top:40px}
+    .sector-wheel .md\:mt-\[80px\]{margin-top:64px}
+    .sector-wheel .ml-\[1px\]{margin-left:1px}
+    .sector-wheel .mr-\[1px\]{margin-right:1px}
+    .sector-wheel .w-\[86vw\]{width:100%}
+    .sector-wheel .max-w-\[540px\]{max-width:540px}
+    .sector-wheel .max-w-\[760px\]{max-width:540px}
+    .sector-wheel .w-\[72px\]{width:72px}
+    .sector-wheel .h-\[1px\]{height:1px}
+    .sector-wheel .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel .text-\[16px\]{font-size:15px}
+    .sector-wheel .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel .gap-\[7px\]{gap:7px}
+    .sector-wheel .gap-\[8px\]{gap:8px}
+    .sector-wheel svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .hub-name{font-family:'Fraunces',Georgia,serif}
+
+  .mobile-jump { display:none; }
+  @media (max-width: 860px) {
+    html { -webkit-text-size-adjust:100%; }
+    body { overflow-x:hidden; }
+    .page { width:100% !important; max-width:100% !important; }
+    .sec, .hdr { padding-left:16px !important; padding-right:16px !important; }
+    .disclaim { padding-left:16px !important; padding-right:16px !important; }
+    .footer-blue { padding-left:16px !important; padding-right:16px !important; }
+
+    .hdr { flex-direction:column !important; align-items:stretch !important; gap:10px; }
+    .hdr .pricebox { text-align:left !important; }
+
+    .tagstrip { flex-direction:column !important; }
+    .tagstrip div { border-right:none !important; border-bottom:1px solid #dde2ea; text-align:left !important; padding:8px 4px !important; }
+    .tagstrip div:last-child { border-bottom:none; }
+
+    .mobile-jump {
+      display:flex !important; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      position:sticky; top:0; z-index:20; background:#1a2a4a; padding:10px 12px;
+      border-bottom:3px solid #f0b429; white-space:nowrap; scrollbar-width:none;
+    }
+    .mobile-jump::-webkit-scrollbar { display:none; }
+    .mobile-jump a {
+      color:#c7d2e8; font-size:11.5px; font-weight:700; text-decoration:none;
+      padding:6px 10px; border-radius:14px; background:rgba(255,255,255,0.08); flex:0 0 auto;
+    }
+    .sec-title { scroll-margin-top:56px; }
+
+    .cols { flex-wrap:wrap !important; }
+    .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
+    .cols { row-gap:16px; }
+
+    .tiles { flex-wrap:wrap !important; row-gap:8px; }
+    .tile { flex:1 1 45% !important; min-width:0 !important; }
+
+    div[style*="flex:1 1 44%"] { flex:1 1 100% !important; }
+    div[style*="flex:1 1 30%"] { flex:1 1 45% !important; }
+
+    table.t:not(.prose), table.fit, table.peer {
+      display:table !important; width:100% !important; table-layout:fixed !important;
+      white-space:normal !important; overflow-x:visible !important; max-width:100%;
+    }
+    table.t:not(.prose) td, table.t:not(.prose) th,
+    table.fit td, table.fit th,
+    table.peer td, table.peer th { white-space:normal !important; word-wrap:break-word; padding:4px 3px !important; font-size:9.6px !important; }
+    table.peer td:first-child, table.peer th:first-child { width:26% !important; }
+    table.prose { display:block !important; }
+    table.prose tr:first-child { display:none !important; }
+    table.prose tr { display:block !important; padding:10px 0 !important; border-bottom:1px solid #e4e8ef; }
+    table.prose tr:last-child { border-bottom:none !important; }
+    table.prose td { display:inline !important; padding:0 !important; border:none !important; text-align:left !important; white-space:normal !important; width:auto !important; word-wrap:break-word; }
+    table.prose td:first-child { font-weight:900; font-size:13px; color:#1a2a4a; }
+    table.prose td:nth-child(2) { margin-left:8px; }
+    table.prose td:nth-child(3) { display:block !important; margin-top:6px; font-size:12.5px; line-height:1.55; color:#2a3342; }
+
+    .metric-strip { flex-wrap:wrap !important; }
+    .metric-strip > div { flex:1 1 50% !important; box-sizing:border-box; border-bottom:1px solid #e7ebf1 !important; }
+    .metric-strip > div:nth-child(even) { border-right:none !important; }
+
+    .krow { flex-wrap:wrap; align-items:flex-start !important; }
+    .krow .klab { flex:1 1 auto !important; }
+    .krow .kval { display:contents !important; }
+    .krow .kval small { flex:1 1 100% !important; order:3; display:block !important; text-align:left !important; margin-top:3px !important; }
+
+    h1 { font-size:21px !important; }
+    .price { font-size:22px !important; }
+
+    .sector-wheel-compact { width:270px !important; height:290px !important; margin:20px auto 0 32px !important; overflow:visible !important; }
+    .sector-wheel-compact > div { width:540px !important; transform:scale(0.5); transform-origin:top left; }
+  }
+
+  @media (max-width: 480px) {
+    .tile { flex:1 1 100% !important; }
+    div[style*="flex:1 1 45%"] { flex:1 1 100% !important; }
+  }
+</style>
+</head>
+<body>
+<style>
+  :root{
+    --navy:#1a2a4a;
+    --navy-2:#243a63;
+    --gold:#c9a24b;
+    --ink:#1a2a4a;
+    --muted:#5c6b85;
+    --hair:#dde2ea;
+    --page-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .cover-wrap{
+    font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    background:#e9edf3;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px;
+  }
+  .cover-page{
+    width:1400px;
+    max-width:100%;
+    min-height:900px;
+    background:var(--page-bg);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 6px 24px rgba(26,42,74,0.18);
+    overflow:hidden;
+  }
+  .top-band{
+    height:14px;
+    background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--gold) 100%);
+    flex-shrink:0;
+  }
+  .brand-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:26px 56px 0 56px;
+    flex-shrink:0;
+  }
+  .brand-bar .doc-type{
+    font-size:12px;
+    letter-spacing:3px;
+    color:var(--muted);
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .brand-bar .doc-date{
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.4px;
+  }
+  .main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    padding:36px 60px 40px 60px;
+  }
+  .logo-wrap{
+    width:auto;
+    max-width:92%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:44px;
+  }
+  .logo-wrap img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .text-logo{
+    font-size:clamp(20px, 6.2vw, 40px);
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--navy);
+    white-space:normal;
+    word-break:break-word;
+    text-align:center;
+    line-height:1.15;
+  }
+  .text-logo span{ color:var(--gold); }
+  .kicker{
+    font-size:15px;
+    letter-spacing:6px;
+    color:var(--gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  h1.report-title{
+    font-size:46px;
+    letter-spacing:1px;
+    color:var(--navy);
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.15;
+  }
+  .divider{
+    width:120px;
+    height:3px;
+    background:var(--gold);
+    margin:26px 0;
+  }
+  .company-name{
+    font-size:34px;
+    font-weight:700;
+    color:var(--navy);
+    letter-spacing:0.3px;
+  }
+  .ticker-row{
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 14px;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .ticker-chip{ text-align:center; }
+  .ticker-chip{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:var(--navy);
+    background:#eef1f7;
+    border:1px solid var(--hair);
+    border-radius:4px;
+    padding:6px 14px;
+  }
+  .sector-line{
+    margin-top:28px;
+    font-size:14px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+    font-style:italic;
+  }
+  .meta-block{
+    margin-top:64px;
+    display:flex;
+    gap:70px;
+    justify-content:center;
+  }
+  .rev-history{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .rev-history-title{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:8px;
+  }
+  .rev-history-table{ border-collapse:collapse; font-size:13px; }
+  .rev-history-table th{
+    text-align:left; padding:2px 28px 4px 0; font-size:10px; letter-spacing:1px;
+    text-transform:uppercase; color:var(--muted); font-weight:600;
+    border-bottom:1px solid #e2e6ee;
+  }
+  .rev-history-table td{ padding:4px 28px 4px 0; color:var(--navy); font-weight:600; }
+  .rev-history-table td.rev-note{ color:var(--muted); font-weight:400; }
+  .meta-item{
+    text-align:center;
+  }
+  .meta-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .meta-value{
+    font-size:16px;
+    color:var(--navy);
+    font-weight:700;
+  }
+  .prepared-by{
+    margin-top:60px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+  }
+  .prepared-by strong{
+    color:var(--navy);
+  }
+  .footer{
+    flex-shrink:0;
+    background:#ffffff;
+    border-top:1px solid var(--hair);
+    padding:16px 56px;
+    text-align:center;
+  }
+  .footer p{
+    font-size:10.5px;
+    line-height:1.6;
+    color:#8992a6;
+    letter-spacing:0.2px;
+  }
+  .footer strong{
+    color:var(--muted);
+  }
+  @media (max-width: 860px) {
+    .footer { padding:14px 20px !important; text-align:left !important; }
+    .footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .main { padding-top:14px !important; padding-bottom:14px !important; }
+    .logo-wrap { margin-bottom:20px !important; }
+    .meta-block { margin-top:30px !important; }
+  }
+  .bottom-band{
+    height:8px;
+    background:var(--navy);
+    flex-shrink:0;
+  }
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+  <div class="top-band"></div>
+
+  <div class="brand-bar"></div>
+
+  <div class="main">
+    <div class="logo-wrap">
+      <div class="text-logo">DEEPAK <span>NITRITE</span></div>
+    </div>
+
+    <div class="kicker">Equity Research Report</div>
+    <h1 class="report-title">Deepak Nitrite Limited</h1>
+
+    <div class="divider"></div>
+
+    <div class="ticker-row">
+      <div class="ticker-chip">NSE: DEEPAKNTR</div>
+      <div class="ticker-chip">BSE: 506401</div>
+      <div class="ticker-chip">Mkt Cap: &#8377;20,854 Cr</div>
+      <div class="ticker-chip">Master Score: B</div>
+    </div>
+    <div class="sector-line">Specialty / Commodity Chemicals — Phenolics, Advanced Intermediates, DASDA/OBA</div>
+
+    <div class="meta-block" style="display:block">
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
+      <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">30 September 2026</span>
+    </div>
+
+    <div class="rev-history">
+      <div class="rev-history-title">Revision History</div>
+      <table class="rev-history-table">
+        <tr><th>Date</th><th>Version</th></tr>
+        <tr><td>2026-09-30</td><td class="rev-note">v1 &mdash; initial report</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p style="margin-bottom:4px;letter-spacing:0.5px;text-transform:uppercase;font-size:9.5px;color:#8a94a6">Confidential — For Educational Use</p>
+    <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
+  </div>
+
+  <div class="bottom-band"></div>
+</div>
+</div>
+
+
+<div class="page-wrap">
+<div class="page">
+
+  <!-- ================= HEADER ================= -->
+  <div class="hdr">
+    <div>
+      <div class="meta">BSE: 506401 &nbsp;·&nbsp; NSE: DEEPAKNTR &nbsp;·&nbsp; Specialty / Commodity Chemicals &nbsp;·&nbsp; Vadodara, Gujarat</div>
+      <h1>Deepak Nitrite Limited</h1>
+      <div class="tagline">India's largest DASDA/OBA producer (~60% share) &nbsp;·&nbsp; Phenol-acetone commodity cyclicality is 68% of revenue &nbsp;·&nbsp; Q1 FY27 PAT +207% YoY inflection &nbsp;·&nbsp; ~52% below Aug-2024 all-time high</div>
+    </div>
+    <div class="pricebox">
+      <div class="price">&#8377;1,526.70 <span class="chg">&#9660; −0.15%</span></div>
+      <div class="sub">Report date: 30 Sep 2026 &nbsp;|&nbsp; Mkt Cap: &#8377;20,854.49 Cr (MarketSmith, primary) &nbsp;|&nbsp; Book Value: 3.57x &nbsp;|&nbsp; MarketSmith Master Score: B</div>
+    </div>
+  </div>
+  <div class="tagstrip">
+    <div style="color:#c62828;background:#fdeef0">&#9679; Sentiment: Consensus "Hold" — wide analyst dispersion</div>
+    <div style="color:#c62828;background:#fdeef0">&#9679; Technicals: Both timeframes net bearish</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Valuation: Unresolved — P/E 27.6x/40.9x/106.8x conflict</div>
+    <div style="color:#2e7d32;background:#ecf6ec">&#9679; Q1 FY27 PAT +207% YoY, EBITDA margin 21%</div>
+    <div style="color:#2e7d32;background:#ecf6ec">&#9679; Zero promoter pledge, ~49.3% holding</div>
+  </div>
+
+  <nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Moat</a><a href="#sec03">Financials</a><a href="#sec04">Sentiment</a><a href="#sec05">Sector Size</a><a href="#sec06">Shareholding</a><a href="#sec07">Performance</a><a href="#sec08">Financials</a><a href="#sec09">Ratios</a><a href="#sec10">Management</a><a href="#sec11">Guidance</a><a href="#sec12">Consensus</a><a href="#sec13">Volume</a><a href="#sec14">Sector Rotation</a><a href="#sec15">Peers</a><a href="#sec16">Risk</a><a href="#sec17">Technical Ratings</a><a href="#sec18">Elliott Wave</a><a href="#sec19">Recommendation</a></nav>
+
+  <!-- ================= 01 COMPANY OVERVIEW ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec01"><span class="num">01</span><h2>Company Overview</h2></div>
+    <div class="cols">
+      <div style="flex:1.5">
+        <div class="microhead">What They Do</div>
+        <p>Deepak Nitrite Limited (founded 1970 by Chimanlal K. Mehta; current Chairman &amp; MD Deepak C. Mehta) is a Vadodara/Gujarat-based specialty-and-commodity chemicals manufacturer straddling two very different businesses. <b>Phenolics</b> (~68% of FY26 revenue) is a fully backward-integrated phenol/acetone/IPA petrochemical operation at Dahej — a globally-traded commodity with margins set by the benzene/propylene-to-phenol/acetone spread. <b>Advanced Intermediates</b> (~32% of revenue) supplies fine chemicals and pharma/agrochem intermediates to global majors (BASF, Syngenta, Bayer, Corteva) benefiting from China+1 diversification, plus a genuinely dominant DASDA/OBA franchise (~60% domestic DASDA share, ~75% domestic OBA share) built on a fully integrated toluene→PNT→DASDA→OBA chain.</p>
+        <p style="margin-top:7px">Screener.in classifies the company as Materials → Chemicals → <b>Commodity Chemicals</b>; MarketSmith separately labels it "NSE-Chemicals-Specialty" — both are defensible given the genuine commodity/specialty split, and this duality matters for every peer comparison in this report.</p>
+        <div class="notebox blue" style="margin-top:10px"><b>Key inflection:</b> Q1 FY27 (Jun-2026) revenue rose <b>+36.39% YoY to &#8377;2,578 Cr</b> and PAT rose <b>+207.36% YoY to &#8377;345 Cr</b> — cross-confirmed independently by both the MarketSmith stream (Jun-26 quarterly EPS +207% YoY, sales +36%) and the financials stream. EBITDA margin hit a record ~21%, more than double the ~7% trough of Q3 FY25.</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Segment Mix — FY26</div>
+        <svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+          <rect x="40" y="40" width="400" height="46" rx="4" fill="#1a2a4a"/><text x="240" y="68" text-anchor="middle" font-size="15" font-weight="900" fill="#fff">Phenolics — 68%</text>
+          <rect x="40" y="98" width="188" height="46" rx="4" fill="#e67e22"/><text x="134" y="126" text-anchor="middle" font-size="14" font-weight="900" fill="#fff">Adv. Intermediates — 32%</text>
+          <text x="240" y="180" text-anchor="middle" font-size="10.5" fill="#5a6475">FY25: Phenolics 70% / Advanced Intermediates 30% — mix shifted 2pp toward Advanced Intermediates in FY26</text>
+          <text x="240" y="200" text-anchor="middle" font-size="10.5" fill="#5a6475">Legacy 4-way split (Basic Chemicals / Fine &amp; Speciality / Performance Products / Phenolics) is NOT the current disclosure structure</text>
+          <text x="240" y="228" text-anchor="middle" font-size="10" fill="#8a94a6">DASDA/OBA revenue/EBITDA % of consolidated total: not disclosed — data gap</text>
+        </svg>
+      </div>
+      <div style="flex:1.05">
+        <div class="microhead">Q1 FY27 Segment Detail</div>
+        <div style="border:1px solid #dde2ea;border-radius:6px;padding:11px 14px;background:#f8f9fb">
+          <div style="font-size:15px;font-weight:900;color:#1a2a4a">Phenolics EBIT margin: record 24%</div>
+          <p style="font-size:11px;margin-top:5px"><b>Phenolics Q1 FY27:</b> revenue &#8377;1,775 Cr (+36% YoY), EBIT &#8377;418 Cr (+254% YoY), EBIT margin 24% vs 9% a year earlier — the single largest driver of the group inflection.</p>
+          <p style="font-size:11px;margin-top:5px"><b>Q3 FY26 for context:</b> Advanced Intermediates revenue &#8377;652 Cr (+18% YoY) but EBIT &#8377;15 Cr (−11% YoY); Phenolics revenue &#8377;1,334 Cr (flat YoY), EBIT &#8377;145 Cr (+20% YoY) — the margin recovery was already underway before Q1 FY27's acceleration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 02 COMPETITIVE ADVANTAGE (MOAT) ANALYSIS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec02"><span class="num">02</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
+    <table class="t prose">
+      <tr><th style="text-align:left">Dimension</th><th>Rating</th><th style="text-align:left">Commentary</th></tr>
+      <tr><td style="text-align:left">Brand Strength</td><td><span class="badge b-warn">Moderate</span></td><td style="text-align:left">Weak/absent as a consumer brand — this is a B2B commodity-and-intermediates supplier — but a genuinely trusted-supplier reputation exists within the narrow OBA/DASDA buyer set given ~60% domestic DASDA share and ~75% domestic OBA share.</td></tr>
+      <tr><td style="text-align:left">Network Effects</td><td><span class="badge b-bear">Absent</span></td><td style="text-align:left">Does not apply to a chemicals-manufacturing business model.</td></tr>
+      <tr><td style="text-align:left">Switching Costs</td><td><span class="badge b-warn">Bifurcated</span></td><td style="text-align:left">Genuine lock-in exists in Advanced Intermediates/Fine Chemicals — pharma/agrochem customers (BASF, Syngenta, Bayer, Corteva) face costly re-qualification, a real China+1 tailwind. But Phenolics (~68% of revenue, the majority of the business) is a straight commodity price-taker with essentially <b>no</b> switching-cost stickiness — customers buy on price against globally-traded phenol/acetone benchmarks.</td></tr>
+      <tr><td style="text-align:left">Cost Advantage</td><td><span class="badge b-bull">Strongest leg</span></td><td style="text-align:left">Backward integration lowers raw-material costs ~8% vs non-integrated peers; Deepak Phenolics runs ~110% utilization; the Dahej/Nandesari/Roha Gujarat hub gives a logistics/utility advantage. This does <b>not</b> protect against cheaper imported phenol/acetone from Asian/Middle Eastern crackers — the exact risk now under DGTR investigation (see §16).</td></tr>
+      <tr><td style="text-align:left">Patents / Proprietary Tech</td><td><span class="badge b-bear">Largely absent</span></td><td style="text-align:left">No classic patent-based IP moat identified. The real barrier is execution capability in complex hazardous chemistry (fluorination, diazotization, nitration, amination) — the new fluorination platform (EV battery electrolytes, high-performance polymers, refrigerant precursors) reportedly runs 25–35% EBITDA margins because few competitors can execute this chemistry safely at scale.</td></tr>
+    </table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">What This Moat Does NOT Protect Against</div>
+        <p style="font-size:11.3px">The majority of revenue (Phenolics, 68%) sits in a business with essentially no company-specific moat beyond scale/utilization — margins are a direct function of a globally-traded commodity spread the company cannot control. Execution/funding risk on the ~&#8377;11,500 Cr polycarbonate megaproject (undisclosed funding structure) could reproduce Phenolics-style margin exposure at even greater scale if PC pricing turns cyclical/import-competitive.</p>
+      </div>
+      <div style="flex:1">
+        <div class="notebox blue" style="margin-top:0"><b>Synthesis:</b> A genuine but <b>partial</b> moat — strong in cost-advantage/integration and in switching costs for regulated fine-chemical customers, essentially absent in Phenolics, which generates the majority of revenue and profit. The DASDA/OBA franchise is a real defensible niche, but small relative to Phenolics, and its exact share of consolidated revenue/EBITDA is not disclosed (data gap).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 03 VALUATION & FINANCIALS SNAPSHOT ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec03"><span class="num">03</span><h2>Valuation &amp; Financial Snapshot — Unresolved Conflicts Flagged</h2></div>
+    <div class="notebox red"><b>Valuation is genuinely unsettled — no single figure should be treated as current consensus without independent verification.</b> Market Cap: &#8377;20,854.49 Cr (MarketSmith, 30 Sep, most precisely timestamped — treated as primary here) vs &#8377;21,647 Cr (~25 Sep) vs &#8377;23,850–23,861 Cr (~1 Sep). P/E: 27.6x vs 106.82x (both ~Sep-2026, extreme spread, likely different EPS bases) vs a separate Jul-29 GuruFocus 40.91x (26% above its own 10-yr median 32.45x). <b>EV/EBITDA ~18.9x currently vs 3-yr average ~24.32x</b> — suggests de-rating even though the P/E-based read looks closer to median; this divergence is stated, not resolved.</div>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">Balance Sheet — Three Conflicting Debt Figures (FY26)</div>
+        <p style="font-size:11.3px">D/E 0.26. Net debt &#8377;990 Cr. A separately-cited "total debt &#8377;16,377 Cr" looks implausibly large vs the net-debt figure — flagged as a likely data error/unit mismatch. A third figure, "~&#8377;8,500 Cr peak debt," appears in forward guidance about the polycarbonate capex programme. <b>All three (₹16,377cr gross / ₹990cr net / ₹8,500cr forward peak) are stated here without resolution</b> — they are internally inconsistent and need verification against the company's own FY26 balance sheet.</p>
+      </div>
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">Cash Flow — Two Years of Deep Negative FCF</div>
+        <p style="font-size:11.3px">OCF: FY24 &#8377;874 Cr → FY25 &#8377;625 Cr → FY26 &#8377;539 Cr (declining). FCF: FY24 &#8377;1,357 Cr (positive) → FY25 −&#8377;4,974 Cr → FY26 −&#8377;6,457 Cr (deeply negative — capex outrunning cash generation). Note: FY24 FCF exceeding FY24 OCF is unusual for standard FCF=OCF−capex accounting — flagged for verification, not silently corrected.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec04"><span class="num">04</span><h2>Overall Sentiment &amp; Momentum Prediction</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fdf1f1);border:3px solid #c62828">
+        <div class="plab">Key Watch-Item</div>
+        <div class="pval" style="color:#c62828;font-size:16px">&#9888; Phenolics Commodity-Cycle Concentration</div>
+        <p style="font-size:11.3px;margin-top:5px">68% of revenue rides on a globally-traded phenol/acetone/IPA spread with no company-specific insulation. Active 2026 DGTR anti-dumping investigations on Acetone (AD/OI/011/2026) and Phenol (AD/OI/012/2026) target Singapore, South Korea, Taiwan, Thailand, Saudi Arabia, South Africa and the USA — <b>not China</b> — no final ruling as of 30 Sep 2026; genuine open catalyst. Next quarterly results: Q2 FY27, expected ~14 Nov 2026.</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fdf1f1);border-top:3px solid #c62828">
+        <div class="plab">Overall Sentiment</div>
+        <div class="pval" style="color:#c62828">HOLD <span style="font-size:12px;color:#5a6475;font-weight:600">consensus, wide dispersion</span></div>
+        <p style="font-size:11.3px;margin-top:5px">18 analysts cover the stock; consensus rating "Hold" (mixed Buy/Hold/Sell, no clean breakdown found). Real dispersion in targets: stockanalysis.com consensus &#8377;1,893 (~24–25% upside); another aggregator &#8377;1,970.83 average, range &#8377;1,528–2,290; a separate "&#8377;2,650–3,000" figure looks stale/inconsistent with the range multiple sources agree on and should <b>not</b> be treated as current consensus without verification. Individual calls range from Motilal Oswal Sell (target &#8377;1,450–1,500) to DAM Capital Buy (target &#8377;2,142).</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border-top:3px solid #e67e22">
+        <div class="plab">Momentum Prediction</div>
+        <div class="pval" style="color:#f57f17">CORRECTIVE, NOT CONFIRMED TURN</div>
+        <p style="font-size:11.3px;margin-top:5px">Both daily and hourly Elliott Wave technicals read net bearish (daily gauges −3/−3, hourly gauges −1/−1 — much milder). Hourly RSI is deeply oversold (RSI 4 at 1,546.2, RSI 11 at 1,512.3), raising bounce probability without confirming a trend change. Full detail in §18.</p>
+      </div>
+    </div>
+    <div class="notebox"><b>Framing note:</b> This is a <b>margin-inflection stock inside a still-bearish technical structure</b> — the Q1 FY27 fundamental beat (PAT +207% YoY) has not yet been confirmed by price action. General-rating downgrade Buy→Hold occurred 24 Sep 2026 (MarketsMojo, an algorithmic/quant source — treat with caution, not equivalent to formal sell-side coverage), citing ROCE only 10.8% vs a rich EV/Capital-Employed multiple of 3.3x and a 5-yr annualized operating-profit decline of ~4.14%.</div>
+  </div>
+
+  <!-- ================= 03/04 SECTOR + SHAREHOLDING ================= -->
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1">
+        <div class="sec-title" id="sec05"><span class="num">05</span><h2>Sector Market Size</h2></div>
+        <svg viewBox="0 0 610 206" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+          <line x1="46" y1="180.0" x2="602" y2="180.0" stroke="#dde2ea"/>
+          <text x="10" y="22" font-size="9.5" fill="#8a94a6">US$ Bn</text>
+          <rect x="424" y="12" width="9" height="9" fill="#1a2a4a" rx="2"/><text x="437" y="20" font-size="9.5" fill="#5a6475">Est A (2024→2033, ~3.8% CAGR)</text>
+          <rect x="60" y="70" width="230" height="110" fill="#1a2a4a" rx="3"/><text x="175" y="65" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a2a4a">$64.5Bn (2024) &#8594; $92.6Bn (2033)</text>
+          <rect x="320" y="45" width="230" height="135" fill="#2a9d8f" rx="3"/><text x="435" y="40" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a2a4a">$62.78Bn (2024) &#8594; $95.15Bn (2030)</text>
+          <text x="175" y="199" text-anchor="middle" font-size="10" fill="#5a6475">Est A: ~3.8% CAGR</text>
+          <text x="435" y="199" text-anchor="middle" font-size="10" fill="#5a6475">Est B: ~8.67% CAGR</text>
+        </svg>
+        <div class="chartcap"><b>Wide unresolved conflict — over 2x spread in growth-rate estimates, likely different market-definition boundaries, stated explicitly rather than resolved:</b> Indian specialty chemicals market sized at $64.5Bn(2024)→$92.6Bn(2033) at ~3.8% CAGR, vs $62.78Bn(2024)→$95.15Bn(2030) at ~8.67% CAGR, vs a separate ~9.3% CAGR (2023–2030) estimate. China+1: 135+ MNCs reportedly sourcing specialty chemicals from India, but no quantified breakdown of how much of Deepak Nitrite's opportunity specifically is China+1-driven vs domestic demand — genuine data gap, company commentary is qualitative only.</div>
+      </div>
+      <div style="flex:1.08">
+        <div class="sec-title" id="sec06"><span class="num">06</span><h2>Shareholding &amp; Institutional Trend</h2></div>
+        <table class="t">
+          <tr><th>Category</th><th>Jun'25</th><th>Dec'25</th><th>Mar'26</th><th>Jun'26</th><th>&#916;</th></tr>
+          <tr><td>Promoters</td><td colspan="4" style="text-align:center">~49.3% — broadly stable across the year</td><td class="pos">Flat</td></tr>
+          <tr><td>FIIs</td><td>6.7%</td><td>6.2%</td><td>6.19%</td><td>6.25%</td><td class="pos">&#9650; 0.06pp</td></tr>
+          <tr><td>DIIs</td><td>22.6%</td><td>—</td><td>23.47%</td><td>23.76%</td><td class="pos">&#9650; ~1.16pp</td></tr>
+          <tr><td>Promoter Pledge</td><td colspan="4" style="text-align:center">0.00% — confirmed zero pledge</td><td class="pos">Nil</td></tr>
+        </table>
+        <div class="chartcap"><b>Conflicting figure — unreconciled, likely different denominator methodology:</b> a separate source cites "FII 14.8% / DII 16.2%" as of Apr-2026, inconsistent with the quarter-series above. FII trend is broadly flat/marginally recovering; DII shows a steady uptrend. Zero promoter pledge is confirmed clean.</div>
+      </div>
+      <div style="flex:1.05">
+        <div class="sec-title" id="sec07"><span class="num">07</span><h2>Stock Performance</h2></div>
+        <table class="peer">
+          <tr><th>Metric</th><th>Value</th></tr>
+          <tr style="background:#eef4fc"><td>3M Return</td><td class="neg">≈ −1.84%</td></tr>
+          <tr><td>1Y Return</td><td class="neg">≈ −16.26%</td></tr>
+          <tr><td>1M / 6M / YTD</td><td>Not found — data gap</td></tr>
+        </table>
+        <div class="krow"><span class="klab">52-Wk High</span><span class="kval">&#8377;1,898–2,011<small>minor variance across sources</small></span></div>
+        <div class="krow"><span class="klab">52-Wk Low</span><span class="kval">&#8377;1,280</span></div>
+        <div class="krow"><span class="klab">Multi-Year ATH</span><span class="kval">&#8377;3,169<small>1 Aug 2024 — NOT the 2021 spike</small></span></div>
+        <div class="notebox red" style="margin-top:8px"><b>Important correction — state prominently:</b> the true multi-year all-time high was <b>not</b> the well-known COVID-era 2021 spike (&#8377;1,989.20, May-2021, phenol-shortage windfall). The stock went on to an even higher ATH of <b>&#8377;3,169 on 1 Aug 2024</b>, during a later re-rating cycle. From that ATH, today's ~&#8377;1,530 is a decline of roughly <b>52%</b>, not the smaller correction a reader might assume knowing only the 2021 spike. MarketSmith's shown 2026 annual price high (&#8377;1,898) and 2025 high (&#8377;2,527) are recent-fiscal-year windows and do not contradict the &#8377;3,169 multi-year ATH — both are stated, not conflicting.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 08 KEY FINANCIALS ================= -->
+  <div class="sec compact">
+    <div class="sec-title" id="sec08"><span class="num">08</span><h2>Key Financials — Annual &amp; Quarterly (&#8377; Crore)</h2></div>
+    <div class="cols" style="margin-bottom:10px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column"><div class="microhead" style="margin-top:0">&#9733; Latest Quarter — Q1 FY27 (Jun'26)</div><div style="border:2px solid #2e7d32;border-radius:8px;padding:8px 14px;background:linear-gradient(135deg,#eaf7ea,#f6fff4 60%,#eefaf0);box-shadow:0 2px 8px rgba(46,125,50,0.12);flex:1;margin-bottom:0">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+          <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;2,578 Cr</div><div style="font-size:10.5px;color:#5a6475">Revenue &nbsp;<b class="pos">+36.39% YoY</b></div></div>
+          <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;540 Cr</div><div style="font-size:10.5px;color:#5a6475">EBITDA (excl other income) &nbsp;<b class="pos">+184.97% YoY</b></div></div>
+          <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#2e7d32">20.96–21%</div><div style="font-size:10.5px;color:#5a6475">EBITDA margin &nbsp;<b class="pos">+10.93pp YoY, +3.22pp QoQ</b></div></div>
+          <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;345 Cr</div><div style="font-size:10.5px;color:#5a6475">PAT &nbsp;<b class="pos">+207.36% YoY</b></div></div>
+          <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;25.30</div><div style="font-size:10.5px;color:#5a6475">EPS (qtr, MarketSmith) &nbsp;<b class="pos">+207% YoY</b></div></div>
+          <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#2e7d32">Cross-confirmed</div><div style="font-size:10.5px;color:#5a6475">MarketSmith stream and financials stream agree independently</div></div>
+        </div>
+        <div style="font-size:10.4px;color:#33691e;margin-top:8px">Company attributes the margin surge to integration benefits, operating leverage, plus the China-specific anti-dumping duty on DASDA (not phenol/acetone). EBITDA margin bottomed ~7% in Q3 FY25, stayed depressed through FY26, then inflected sharply in Q4 FY26 (17.73–18%) and accelerated further in Q1 FY27.</div>
+      </div></div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead" style="margin-top:0">Valuation &amp; Balance-Sheet Tiles</div>
+        <div class="tiles" style="flex-wrap:wrap;flex:1;align-content:stretch">
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Mkt Cap (primary)</div><div class="val">&#8377;20,854 Cr</div><div class="note">MarketSmith 30 Sep — also cited &#8377;21,647 / &#8377;23,850-23,861 Cr</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E — unresolved</div><div class="val warn">27.6x / 40.9x / 106.8x</div><div class="note">Three conflicting figures — verify independently</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">EV/EBITDA</div><div class="val warn">18.9x</div><div class="note">vs 3-yr avg 24.32x — de-rating signal</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Yield</div><div class="val">0.49%</div><div class="note">MarketSmith; cross-checks 0.46–0.49% dividend-yield figure</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">D/E</div><div class="val">0.26</div><div class="note">FY26; LTDebt/Equity 19% (MarketSmith)</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Net Debt</div><div class="val">&#8377;990 Cr</div><div class="note">FY26 — see 3-way debt-figure conflict §03</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Beta / Alpha</div><div class="val">1.07 / −0.05</div><div class="note">MarketSmith</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Working Capital Days</div><div class="val">61</div><div class="note">FY26</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:6px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Annual P&amp;L — Last 5 Years (&#8377; Cr, EPS &#8377;)</div>
+        <table class="t fit">
+          <tr><th>Year</th><th>Revenue</th><th>PAT</th><th>EPS</th></tr>
+          <tr><td>FY22</td><td>4,360</td><td>776</td><td>78.20</td></tr>
+          <tr><td>FY23</td><td>6,802</td><td>1,067</td><td class="warn">62.46*</td></tr>
+          <tr><td>FY24</td><td>7,972</td><td>852</td><td>59.45</td></tr>
+          <tr><td>FY25</td><td>7,682 / 8,366†</td><td>811</td><td>51.12</td></tr>
+          <tr><td><b>FY26</b></td><td><b>8,282 / 8,574.79‡</b></td><td><b>697</b></td><td><b>40.36</b></td></tr>
+        </table>
+        <div class="chartcap">*FY23 EPS lower than FY22 despite higher PAT — flagged as a likely unreconciled share-count/split adjustment, not silently corrected. †FY25 revenue: financials stream ₹7,682cr vs a separately-cited ₹8,366cr — unreconciled conflict, both stated. ‡FY26 revenue: financials stream ₹8,282cr vs MarketSmith's ₹8,574.79cr — both stated. Trend: revenue grew then dipped FY25 before a fresh high in FY26; PAT/EPS peaked FY23 and declined every year through FY26 — margin compression (phenol-acetone cycle + China-adjacent pricing pressure) outpacing volume growth, before the Q1 FY27 inflection.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Quarterly Trend — Last 4 Quarters (EPS &#8377;, MarketSmith)</div>
+        <table class="t fit">
+          <tr><th>Quarter</th><th>Sales (Cr)</th><th>EPS</th><th>YoY EPS</th></tr>
+          <tr><td>Dec'25</td><td>1,975.0</td><td>7.32</td><td class="pos">+2%</td></tr>
+          <tr><td>Mar'26</td><td>2,120.3</td><td>16.11</td><td class="pos">+9%</td></tr>
+          <tr><td><b>Jun'26</b></td><td><b>2,577.6</b></td><td><b>25.30</b></td><td class="pos"><b>+207%</b></td></tr>
+        </table>
+        <div class="microhead" style="margin-top:9px">EBITDA Margin Trajectory (Quarterly %)</div>
+        <svg viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+          <line x1="40" y1="146.0" x2="586" y2="146.0" stroke="#dde2ea"/>
+          <text x="10" y="24" font-size="9" fill="#8a94a6">%</text>
+          <path d="M40,120 L120,146 L200,58 L280,52 L360,66 L440,20 L520,4" fill="none" stroke="#1a2a4a" stroke-width="2"/>
+          <circle cx="40" cy="120" r="2.8" fill="#1a2a4a"/><text x="40" y="114" text-anchor="middle" font-size="9" fill="#1a2a4a">12.8%</text><text x="40" y="161" text-anchor="middle" font-size="8.5" fill="#5a6475">Q2FY25</text>
+          <circle cx="120" cy="146" r="2.8" fill="#c62828"/><text x="120" y="158" text-anchor="middle" font-size="9" fill="#c62828">7% low</text><text x="120" y="161" text-anchor="middle" font-size="8.5" fill="#5a6475">Q3FY25</text>
+          <circle cx="200" cy="58" r="2.8" fill="#1a2a4a"/><text x="200" y="52" text-anchor="middle" font-size="9" fill="#1a2a4a">10.03%</text><text x="200" y="161" text-anchor="middle" font-size="8.5" fill="#5a6475">Q1FY26</text>
+          <circle cx="280" cy="52" r="2.8" fill="#1a2a4a"/><text x="280" y="46" text-anchor="middle" font-size="9" fill="#8a94a6">gap</text><text x="280" y="161" text-anchor="middle" font-size="8.5" fill="#5a6475">Q2FY26</text>
+          <circle cx="360" cy="66" r="2.8" fill="#1a2a4a"/><text x="360" y="60" text-anchor="middle" font-size="9" fill="#1a2a4a">11%</text><text x="360" y="161" text-anchor="middle" font-size="8.5" fill="#5a6475">Q3FY26</text>
+          <circle cx="440" cy="20" r="2.8" fill="#2e7d32"/><text x="440" y="14" text-anchor="middle" font-size="9" fill="#2e7d32">17.73-18%</text><text x="440" y="161" text-anchor="middle" font-size="8.5" fill="#5a6475">Q4FY26</text>
+          <circle cx="520" cy="4" r="2.8" fill="#2e7d32"/><text x="520" y="-2" text-anchor="middle" font-size="9" fill="#2e7d32">20.96-21%</text><text x="520" y="161" text-anchor="middle" font-size="8.5" fill="#5a6475">Q1FY27</text>
+        </svg>
+        <div class="chartcap" style="text-align:center">Q4 FY26 and Q2 FY26 EBITDA-excl-other-income figures have data gaps in the source — plotted with nearest-available markers, not interpolated silently.</div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:9px">
+      <div style="flex:1"><div class="notebox green"><b>&#9733; Q1 FY27 is the sharpest inflection in the dataset:</b> revenue +36% YoY, PAT +207% YoY, EBITDA margin +10.93pp YoY and +3.22pp QoQ — cross-confirmed by two independent source streams. This is the first strong sign of returns recovering from the FY21–22 peak-cycle compression.</div></div>
+      <div style="flex:1"><div class="notebox blue"><b>&#9733; Not yet a full-year confirmation:</b> the ~21% margin is a single-quarter figure, not a full-year like-for-like comparison (flagged explicitly in the peer table, §15, as "not-like-for-like"). Two straight years of deeply negative FCF (FY25 −&#8377;4,974 Cr, FY26 −&#8377;6,457 Cr) mean the capex programme is still outrunning cash generation even as the P&amp;L inflects.</div></div>
+    </div>
+  </div>
+
+  <!-- ================= 09 KEY RATIOS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Ratios — Returns Compression &amp; Recovery Signals</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fffbe8;border-color:#f9a825">
+        <div class="plab">ROE — Three-Way Conflict <span class="badge b-warn">Unresolved</span></div>
+        <div class="pval" style="font-size:26px">13.69% / 23.64% / 9.43%</div>
+        <p style="font-size:11.3px;margin-top:6px"><b>Note:</b> ROE declined 39.60% (Mar-21) → 13.69% (Mar-25); 10-yr range 9.65–46.23%, median 17.84%. Two separately cited current figures — 23.64% and 9.43% — create a genuine three-way conflict with the 13.69% trend figure, stated here rather than resolved to one number. Theme: returns/margins compressed sharply from the FY21–22 peak cycle even as revenue kept growing; Q1 FY27 is the first strong inflection sign.</p>
+      </div>
+      <div class="panel" style="background:#fdf0f0;border-color:#c62828">
+        <div class="plab">ROCE Trend &nbsp;·&nbsp; Mar-21 to Mar-26 <span class="badge b-bear">Compressed</span></div>
+        <div class="pval" style="font-size:26px">40% &#8594; 11.4%</div>
+        <p style="font-size:11.3px;margin-top:6px"><b>Note:</b> ROCE declined from 40% (Mar-21) to 11% (Mar-26), current figure 11.4%. This aligns with the MarketsMojo downgrade rationale (§04): ROCE of only ~10.8–11.4% against a rich EV/Capital-Employed multiple of 3.3x. P/E: historical FY-end (GuruFocus) FY22 28.70 → FY23 29.49 → FY24 35.69 → FY25 38.79 → FY26 31.90; 10-yr range low 8.48 / high 211.85 (outlier) / median 32.45.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 10 MANAGEMENT METRICS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec10"><span class="num">10</span><h2>Management Metrics &amp; Corporate Structure</h2></div>
+    <div class="tiles">
+      <div class="tile">
+        <div class="lab">Board &amp; Leadership</div>
+        <div class="val" style="font-size:15px">Deepak C. Mehta, Chairman &amp; MD</div>
+        <div class="note">Board (FY25): 12 directors, 8 non-executive, 6 independent (incl. one woman independent director). Independents: Sanjay Asher, Purvi Sheth, Dileep Choksi, Punit Lalbhai, Vipul Shah, Milin Mehta (Audit Committee Chair — spelling variant "Mitin Mehta" also seen, unresolved), Arvind Nath Agrawal (Nomination &amp; Remuneration Chair), Bhumika Batra. Two new independents appointed effective 7 Aug 2026.</div>
+      </div>
+      <div class="tile">
+        <div class="lab">CEO/CFO Succession</div>
+        <div class="val" style="font-size:15px">Maulik Mehta &#8594; Deputy MD</div>
+        <div class="note">Maulik Mehta was Executive Director &amp; CEO through 8 May 2026, elevated to Deputy MD effective 9 May 2026 (5-yr term). Meghav Mehta also reportedly appointed Deputy MD in the same board revamp. <b>Finance leadership — genuine unresolved conflict:</b> one source names Sanjay Upadhyay, Director (Finance) &amp; Group CFO (re-appointed 5 yrs from 1 Aug 2026); another separately names Somsekhar Nanda, CFO of Deepak Nitrite Limited — may reflect Group CFO vs entity-specific CFO, or a stale source. Both stated, not resolved.</div>
+      </div>
+      <div class="tile">
+        <div class="lab">Auditor &amp; Governance</div>
+        <div class="val" style="font-size:15px">Deloitte Haskins &amp; Sells LLP</div>
+        <div class="note">FRN 117366W/W-100018, re-appointed at the 51st AGM (3 Aug 2022) for a second 5-year term through the 56th AGM (FY2027-28). FY25 audit opinion: clean/unqualified. Executive compensation: FY25 KMP disclosure per Sec 197(12)/Rule 5 standard; specific remuneration figures/pay-ratio not found — genuine data gap.</div>
+      </div>
+      <div class="tile">
+        <div class="lab">Deepak Nitrite vs Deepak Fertilisers</div>
+        <div class="val" style="font-size:14px">Separate entities — commonly confused</div>
+        <div class="note">Both trace to founder Chimanlal K. Mehta (Deepak Nitrite founded 1970; Deepak Fertilisers/DFPCL founded 1979). Under 2003-04 family succession, son Deepak Mehta took Deepak Nitrite, another son Sailesh Mehta took Deepak Fertilisers. Now legally/operationally fully separate listed entities — no cross-shareholding, no common directors — related only by family lineage, not current promoter-group identity, though ordinary-course commercial RPTs (goods purchase/sale) continue given shared "Deepak" branding.</div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">Litigation, Contingent Liabilities &amp; RPTs</div>
+        <p style="font-size:11.3px">Contingent liabilities fell sharply: &#8377;77.17 Cr (Mar-23) → &#8377;71.79 Cr (Mar-24) → &#8377;0.53 Cr (Mar-26) — suggests resolution of prior exposures; specific nature of earlier liabilities not found. Corporate guarantee to Bank Muscat for a USD 78.43mn term loan to Oman-based subsidiary Deepak Oman Industries is itself a contingent liability. RPTs with the Deepak Group: ~&#8377;75–80 Cr annual purchases from DFPCL; ~&#8377;15–20 Cr annual sales/conversion with Deepak Novochem Technologies Ltd; &#8377;135 Cr OCRPS (9% Optionally Convertible Redeemable Preference Shares) issued by wholly-owned subsidiary Deepak Chem Tech Ltd (DCTL) to parent/sister concerns (disclosed 26 Mar 2026), stated arm's-length.</p>
+      </div>
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">SEBI/Surveillance &amp; Capital Allocation</div>
+        <p style="font-size:11.3px">SEBI Informal Guidance matter (not enforcement), Jul-2022, under Insider Trading Regulations, clarified that CMD/Executive Director/CEO are "connected persons"/insiders, reportedly re: a planned QIP — whether the QIP completed is not confirmed, stated as a gap. ASM: BSE ASM Stage I (Long Term) 24 Feb 2021, exited 4 Mar 2021 — no more recent placement found. Dividends: &#8377;7.50/share (FY25, FY24, FY23), &#8377;7.00 (FY22), &#8377;5.50 (FY21) — steady increases, current yield ~0.46–0.49%. No buyback found. No preferential allotment/rights issue at the parent level found — only the &#8377;135 Cr OCRPS at the DCTL subsidiary level (intra-group financing, not a public capital raise).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 11 GUIDANCE / CAPEX ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec11"><span class="num">11</span><h2>Capex Programme &amp; Guidance Credibility</h2></div>
+    <div class="microhead">Polycarbonate Megaproject (via Deepak Chem Tech Ltd, DCTL, Dahej)</div>
+    <table class="t">
+      <tr><th style="text-align:left">Item</th><th style="text-align:left">Detail</th></tr>
+      <tr><td style="text-align:left">Total Outlay</td><td style="text-align:left">~&#8377;11,500 Cr (also cited &#8377;11,000 Cr, minor variance); ~165,000 tpa capacity targeting &gt;50% of domestic PC demand</td></tr>
+      <tr><td style="text-align:left">Spend To Date / Planned</td><td style="text-align:left">~&#8377;1,200 Cr spent to date; &#8377;1,000–1,500 Cr planned rest of FY27, ramping to &#8377;3,000 Cr in FY28</td></tr>
+      <tr><td style="text-align:left">Commissioning Target</td><td style="text-align:left">H2 FY28–FY29</td></tr>
+      <tr><td style="text-align:left">Related Acquisitions</td><td style="text-align:left">Trinseo's German polycarbonate assets (~&#8377;5,000 Cr); onsite HyCO plant with Praxair India; new BPA plant approved, &#8377;2,500 Cr, to follow after the PC resin plant is online</td></tr>
+      <tr><td style="text-align:left">MIBK/MIBC + Acetophenone Plant</td><td style="text-align:left">&#8377;735 Cr, Dahej — <b class="pos">already commissioned 6 Aug 2026</b></td></tr>
+      <tr><td style="text-align:left">Group Capex Guidance</td><td style="text-align:left">~&#8377;1,200–1,300 Cr FY26, ~&#8377;2,500 Cr FY27; DCTL/PC programme potentially scaling to &#8377;14,000 Cr cumulative</td></tr>
+      <tr><td style="text-align:left">Debottlenecking (low-cost, near-term)</td><td style="text-align:left">Phenolics to 400,000 MTPA for only ~&#8377;70 Cr incremental capex — distinct from, and much cheaper than, the PC megaproject</td></tr>
+    </table>
+    <div class="notebox red"><b>Genuine data gap:</b> the funding split (debt/equity/accrual) for the ₹11,500 Cr PC project is not disclosed. Combined with the ₹16,377cr / ₹990cr / ₹8,500cr debt-figure conflict (§03) and two years of deeply negative FCF, this is the single largest unresolved question for anyone assessing balance-sheet risk on this name.</div>
+  </div>
+
+  <!-- ================= 12/13 STREET CONSENSUS & VOLUME ================= -->
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec12"><span class="num">12</span><h2>Street Consensus</h2></div>
+        <div class="krow"><span class="klab">Analysts Covering</span><span class="kval">18<small>Consensus: "Hold" — mixed, no clean B/H/S breakdown found</small></span></div>
+        <div class="krow"><span class="klab">Consensus Target (A)</span><span class="kval">&#8377;1,893<small>stockanalysis.com — ~24-25% upside</small></span></div>
+        <div class="krow"><span class="klab">Consensus Target (B)</span><span class="kval">&#8377;1,970.83 avg<small>range &#8377;1,528 – &#8377;2,290</small></span></div>
+        <div class="krow"><span class="klab">Outlier — DO NOT treat as consensus</span><span class="kval" style="color:#c62828">&#8377;2,650–3,000<small>looks stale/inconsistent with the &#8377;1,528-2,290 range</small></span></div>
+        <div class="krow"><span class="klab">Motilal Oswal</span><span class="kval" style="color:#c62828">Sell · &#8377;1,450-1,500<small>EPS cuts 17% FY26 / 7% FY27</small></span></div>
+        <div class="krow"><span class="klab">DAM Capital</span><span class="kval" style="color:#2e7d32">Buy · &#8377;2,142</span></div>
+        <div class="krow"><span class="klab">Emkay</span><span class="kval" style="color:#2e7d32">Buy (upgraded 19 May'26) · &#8377;2,000<small>"on intermediates recovery"</small></span></div>
+        <div class="krow"><span class="klab">Kotak Institutional Equities</span><span class="kval">Add · &#8377;1,950<small>cut target — called Q1 FY27 "weaker-than-expected" DESPITE the reported profit surge (beat-vs-expectations nuance, not a factual contradiction)</small></span></div>
+        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>General rating downgrade:</b> Buy→Hold, 24 Sep 2026 (MarketsMojo, algorithmic/quant — treat with caution): ROCE only 10.8% vs rich EV/Capital-Employed 3.3x, 5-yr annualized operating-profit decline ~4.14%, weakening weekly technicals even as monthly technicals stayed "cautiously optimistic".</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec13"><span class="num">13</span><h2>Retail/Social Sentiment &amp; Catalysts</h2></div>
+        <div class="krow"><span class="klab">ValuePickr</span><span class="kval" style="font-size:11px">Long-running active threads<small>e.g. "a future wealth creator or a multibagger of past?" captures the bull/bear tension directly</small></span></div>
+        <div class="krow"><span class="klab">Recurring Debate</span><span class="kval" style="font-size:11px">Cyclicality vs China+1/vertical-integration bull case vs valuation-vs-cyclicality bear case</span></div>
+        <div class="krow"><span class="klab">X/Twitter Sentiment</span><span class="kval">Not found<small>genuine data gap</small></span></div>
+        <div class="krow"><span class="klab">Next Results</span><span class="kval">Q2 FY27, ~14 Nov 2026</span></div>
+        <div class="krow"><span class="klab">Open Catalyst</span><span class="kval" style="font-size:11px">DGTR phenol/acetone + IPA(China) rulings pending<small>no timeline found</small></span></div>
+        <div class="mininote" style="background:#fdf0f0;border-left:3px solid #c62828"><b>&#9888; Duty-policy is genuinely unsettled, not one-directional:</b> Govt cut customs duty to 0% on phenol/acetone/IPA/35+ chemicals for the Apr 2–Jun 30 2026 window (Middle East supply-disruption relief) even as it separately runs anti-dumping probes on the same chemicals against other origins, and is reportedly mulling anti-dumping duty on IPA imports from China specifically (stock rallied ~4% on that news).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 14 SECTOR ROTATION / PEER COMPARISON ================= -->
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec14"><span class="num">14</span><h2>Sector Rotation</h2></div>
+        <p style="font-size:11px">There is no dedicated Materials/Chemicals wedge in this sector-rotation model. Deepak Nitrite is mapped here to the <b>Energy</b> wedge as a best-fit, commodity-cycle framing: the phenol/acetone/benzene spread cyclicality that drives Phenolics (68% of revenue) matches Energy's "commodity cycles &amp; inflation" description more closely than any other wedge in this 10-sector model.</p>
+        <div class="sector-wheel-compact">
+<div class="relative mt-16 md:mt-[80px] mx-auto w-full max-w-[760px] overflow-visible"><div class="relative mx-auto w-[86vw] md:w-full max-w-[540px] aspect-square overflow-visible"><svg viewBox="-40 -40 620 620" class="absolute inset-0 w-full h-full overflow-visible"><path d="M 270 22 A 248 248 0 0 1 518 270" fill="none" stroke="#0f2f5c" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 518 270 A 248 248 0 0 1 270 518" fill="none" stroke="#8b2e00" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 270 518 A 248 248 0 0 1 22 270.00000000000006" fill="none" stroke="#4c2e8a" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 22 270.00000000000006 A 248 248 0 0 1 269.99999999999994 22" fill="none" stroke="#115e5f" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><g transform="translate(270 22)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#0f2f5c" stroke="#0f2f5c" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(518 270) rotate(90)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#8b2e00" stroke="#8b2e00" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(270 518) rotate(180)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#4c2e8a" stroke="#4c2e8a" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(22 270) rotate(270)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#115e5f" stroke="#115e5f" stroke-width="0.8" stroke-linejoin="round"></path></g><defs><path id="label-early" d="M 93.23 59.34 A 275 275 0 0 1 446.77 59.34"></path><path id="label-late" d="M 480.66 93.23 A 275 275 0 0 1 480.66 446.77"></path><path id="label-slow" d="M 93.23 480.66 A 275 275 0 0 0 446.77 480.66"></path><path id="label-recov" d="M 59.34 446.77 A 275 275 0 0 1 59.34 93.23"></path></defs><text fill="#0f2f5c" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-early" startOffset="50%" text-anchor="middle">EARLY EXPANSION</textPath></text><text fill="#8b2e00" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-late" startOffset="50%" text-anchor="middle">LATE EXPANSION</textPath></text><text fill="#4c2e8a" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-slow" startOffset="50%" text-anchor="middle">SLOWDOWN</textPath></text><text fill="#115e5f" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-recov" startOffset="50%" text-anchor="middle">RECOVERY</textPath></text><g><path d="M 270.0 35.0 A 235 235 0 0 1 408.1295342887312 79.88100632188736 L 334.65637775217203 181.00813061875579 A 110 110 0 0 0 270.0 160.0 Z" fill="#43A047" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.15092303249094 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #43A047; stroke-width: 2.4; stroke-linejoin: round;">TECHNOLOGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">TECHNOLOGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Innovation-led</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">growth</text></g></g><g><path d="M 408.1295342887312 79.88100632188736 A 235 235 0 0 1 493.4982813293611 197.38100632188736 L 374.6162167924669 236.00813061875579 A 110 110 0 0 0 334.65637775217203 181.00813061875579 Z" fill="#C0CA33" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 168.90093660569462)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">DISCRETIONARY</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DISCRETIONARY</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising confidence</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& spending</text></g></g><g><path d="M 493.4982813293611 197.38100632188736 A 235 235 0 0 1 493.49828132936113 342.61899367811264 L 374.6162167924669 303.9918693812442 A 110 110 0 0 0 374.6162167924669 236.00813061875579 Z" fill="#F0A93B" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(442.0 270.0)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F0A93B; stroke-width: 2.4; stroke-linejoin: round;">INDUSTRIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">INDUSTRIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Capital investment</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& infrastructure</text></g></g><g><path d="M 493.49828132936113 342.61899367811264 A 235 235 0 0 1 408.1295342887312 460.1189936781126 L 334.65637775217203 358.9918693812442 A 110 110 0 0 0 374.6162167924669 303.9918693812442 Z" fill="#B5651D" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 371.09906339430535)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #B5651D; stroke-width: 2.4; stroke-linejoin: round;">DEFENSE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DEFENSE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Government spending</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& indigenization</text></g></g><g><path d="M 408.1295342887312 460.1189936781126 A 235 235 0 0 1 270.00000000000006 505.0 L 270.0 380.0 A 110 110 0 0 0 334.65637775217203 358.9918693812442 Z" fill="#2E6DA4" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.150923032491 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #2E6DA4; stroke-width: 2.4; stroke-linejoin: round;">AEROSPACE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">AEROSPACE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Order backlogs</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& export growth</text></g></g><g><path d="M 270.00000000000006 505.0 A 235 235 0 0 1 131.87046571126885 460.11899367811264 L 205.34362224782797 358.9918693812442 A 110 110 0 0 0 270.0 380.0 Z" fill="#F4791A" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.84907696750906 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F4791A; stroke-width: 2.4; stroke-linejoin: round;">ENERGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">ENERGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Commodity cycles</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& inflation</text></g></g><g><path d="M 131.87046571126885 460.11899367811264 A 235 235 0 0 1 46.50171867063892 342.6189936781127 L 165.3837832075331 303.9918693812442 A 110 110 0 0 0 205.34362224782797 358.9918693812442 Z" fill="#9163CB" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.84907696750906 371.0990633943054)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #9163CB; stroke-width: 2.4; stroke-linejoin: round;">UTILITIES</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">UTILITIES</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Defensive demand</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& stability</text></g></g><g><path d="M 46.50171867063892 342.6189936781127 A 235 235 0 0 1 46.501718670638894 197.3810063218874 L 165.3837832075331 236.0081306187558 A 110 110 0 0 0 165.3837832075331 303.9918693812442 Z" fill="#299BD1" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(98.0 270.00000000000006)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">STAPLES</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">STAPLES</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Essential needs</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& resilience</text></g></g><g><path d="M 46.501718670638894 197.3810063218874 A 235 235 0 0 1 131.87046571126876 79.88100632188738 L 205.34362224782794 181.00813061875579 A 110 110 0 0 0 165.3837832075331 236.0081306187558 Z" fill="#16A398" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.849076967509 168.90093660569465)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #16A398; stroke-width: 2.4; stroke-linejoin: round;">HEALTH CARE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">HEALTH CARE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Demographics</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& innovation.</text></g></g><g><path d="M 131.87046571126876 79.88100632188738 A 235 235 0 0 1 269.99999999999994 35.0 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="#7CB342" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.849076967509 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #7CB342; stroke-width: 2.4; stroke-linejoin: round;">FINANCIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">FINANCIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising rates</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& lending growth.</text></g></g><path d="M 270.00000000000006 505.0 A 235 235 0 0 1 131.87046571126885 460.11899367811264 L 205.34362224782797 358.9918693812442 A 110 110 0 0 0 270.0 380.0 Z" fill="none" stroke="#0a2342" stroke-width="3.2" stroke-linejoin="round"></path><circle cx="270" cy="270" r="108.5" fill="#ffffff" stroke="#e7e0d1" stroke-width="1.2"></circle><circle cx="270" cy="270" r="108.5" fill="none" stroke="#000" stroke-opacity="0.04" stroke-width="6"></circle><g transform="translate(270 270)"><text x="0" y="-8" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.5" fill="#0a2342">DEEPAK</text><text x="0" y="7" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.3" fill="#0a2342">NITRITE</text><text x="0" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400" letter-spacing="0.1">Best-fit mapping to Energy —</text><text x="0" y="32.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400">no dedicated materials wedge</text><path d="M 81.56,49.37 L 72.15,62.31 L 89.80,65.24 Z" fill="#0a2342"></path></g></svg></div><div class="mt-8 md:mt-10 flex justify-center"><div class="h-[1px] w-[72px] bg-[#d9d0bb]/70"></div></div></div>
+        </div>
+        <div class="chartcap" style="text-align:center;margin-top:2px">NSE: DEEPAKNTR &middot; mapped: Energy (best-fit, commodity-cycle framing) &middot; no dedicated Materials/Chemicals wedge exists in this 10-sector model</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec15"><span class="num">15</span><h2>Peer Comparison</h2></div>
+        <table class="peer">
+          <tr><th>Company</th><th>MCap (Cr)</th><th>P/E</th><th>EV/EBITDA</th><th>OpMargin</th><th>ROCE</th></tr>
+          <tr style="background:#eef4fc"><td>&#9733; Deepak Nitrite</td><td>20,854/21,647/23,850-23,861</td><td class="warn">27.6/106.82/40.91</td><td>18.9x (vs 3yr avg 24.32x)</td><td>~21%*</td><td>11.4%</td></tr>
+          <tr><td>SRF Ltd</td><td>81,309</td><td>42.37</td><td>n/f</td><td>22%</td><td>n/f</td></tr>
+          <tr><td>PI Industries</td><td>43,114</td><td>n/f</td><td>n/f</td><td>25%</td><td>n/f</td></tr>
+          <tr><td>Gujarat Fluorochemicals</td><td>40,153</td><td>84.55/54.38</td><td>29.44-29.89x</td><td>26%</td><td>10.35%</td></tr>
+          <tr><td>Navin Fluorine</td><td>37,462</td><td>65.20</td><td>n/f</td><td class="pos">33% (highest)</td><td>n/f</td></tr>
+          <tr><td>Atul Ltd</td><td>19,189</td><td>29.05</td><td>n/f</td><td class="neg">16% (lowest)</td><td>n/f</td></tr>
+          <tr><td>Aarti Industries</td><td>15,978</td><td>41.25</td><td>n/f</td><td>n/f</td><td>n/f</td></tr>
+          <tr><td>Vinati Organics</td><td>13,510</td><td>n/f</td><td>n/f</td><td>29%</td><td>n/f</td></tr>
+        </table>
+        <div class="chartcap" style="margin-top:4px">*Deepak Nitrite's ~21% figure is the Q1 FY27 quarterly EBITDA margin, not a full-year figure — flagged as not-like-for-like against peers' annual OpMargin. n/f = not found; most peer ROCE/ROE/EV-EBITDA data is simply unavailable — stated as a gap, not filled in.</div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Reading it:</b> Deepak Nitrite screens cheaper than Gujarat Fluorochemicals/Navin Fluorine/Aarti Industries on P/E, roughly in line with/below SRF, only Atul clearly cheaper. Mid-pack on operating margin. ROCE close to Gujarat Fluorochemicals — sector-wide capital-efficiency compression, not just company-specific. <b>No tight one-to-one comparator exists</b> for the Phenolics segment among these named peers — none run a large-scale phenol/acetone/IPA commodity-adjacent petrochemical business at comparable scale. Deepak Nitrite is a hybrid — commodity-chemical scale economics (Phenolics) bolted onto specialty/fine-chemicals intermediates (Advanced Intermediates) — most peers are purely one or the other, so these comparisons should be read with caution.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 16 RISK ANALYSIS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec16"><span class="num">16</span><h2>Risk Analysis</h2></div>
+    <table class="t prose">
+      <tr><th style="text-align:left">Category</th><th>Severity</th><th style="text-align:left">Detail</th></tr>
+      <tr><td style="text-align:left">Phenolics Cyclicality</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">The dominant risk given 68% revenue concentration — margins are a direct function of the benzene/propylene-to-phenol/acetone spread, a globally-traded commodity spread with no company-specific insulation beyond scale/utilization.</td></tr>
+      <tr><td style="text-align:left">China/Asian Import Competition</td><td><span class="badge b-warn">High — nuanced</span></td><td style="text-align:left">Active ongoing headwind on Phenolics pricing, but the CURRENT 2026 anti-dumping investigations on phenol/acetone (AD/OI/011 and 012/2026) target Singapore, South Korea, Taiwan, Thailand, Saudi Arabia, South Africa and the USA &mdash; <b>NOT China</b> (a separate earlier case targeted EU and Singapore specifically for phenol). China-specific anti-dumping relief is real and current for DASDA &mdash; protecting ~60% domestic share &mdash; do not conflate the two chains.</td></tr>
+      <tr><td style="text-align:left">Feedstock / Geopolitical Fragility</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">Deepak Phenolics fully shut Dahej phenol (330,000 t/y) / acetone (220,000 t/y) capacity for ~3 weeks in April 2026 due to a propylene feedstock interruption linked to Middle East tensions / Strait of Hormuz disruptions.</td></tr>
+      <tr><td style="text-align:left">Environmental / Regulatory History</td><td><span class="badge b-warn">Medium — weight by source quality</span></td><td style="text-align:left">A 2004 Supreme Court judgment upheld findings of extensive pollution/effluent violations at the Nandesari GIDC site dating to the 1990s, with the company ordered to pay compensation (a confirmed, adjudicated finding). A further complaint of illegal hazardous-effluent discharge was filed Dec 2018 with GPCB/CPCB/state authorities; one advocacy-oriented source calls the company &ldquo;a serial violator&rdquo; &mdash; flagged as coming from a single non-neutral source with an unconfirmed adjudication outcome, weighted accordingly and not treated as adjudicated fact.</td></tr>
+      <tr><td style="text-align:left">Plant Safety</td><td><span class="badge b-bear">Medium-High</span></td><td style="text-align:left">A major fire/explosion at Nandesari in June 2022 evacuated ~700 people, with several hospitalized (no fatalities); the Director of Industrial Safety &amp; Health barred resumption until safety-compliance conditions were met.</td></tr>
+      <tr><td style="text-align:left">Execution / Funding on the Polycarbonate Megaproject</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">A large greenfield programme (~&#8377;11,500 Cr+) with an FY28-29 commissioning target and an undisclosed funding structure &mdash; PC resin itself is globally-traded, cyclical and import-competitive, and could reproduce Phenolics-style margin risk at even greater scale if execution slips.</td></tr>
+    </table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="notebox"><b>Customer/segment concentration:</b> heavy reliance on the single large Phenolics segment. No SEBI enforcement action was found &mdash; stated as "not found," not "confirmed clean."</div>
+      </div>
+      <div style="flex:1">
+        <div class="notebox red"><b>Balance-sheet-figure conflicts require independent verification:</b> the &#8377;16,377cr gross / &#8377;990cr net / &#8377;8,500cr forward-peak debt figures are internally inconsistent (§03), and the funding structure of the ₹11,500cr+ PC megaproject is undisclosed &mdash; together these are the report's single biggest open financial-risk question.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570);border-top:3px solid #f0b429;border-bottom:3px solid #f0b429;color:#f0b429;padding:9px 26px;font-weight:900;letter-spacing:2.5px;font-size:14px;text-transform:uppercase">Technical Analysis</div>
+  <div class="sec">
+    <div class="sec-title" id="sec17"><span class="num">17</span><h2>Technical Ratings &amp; Momentum</h2></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">MarketSmith Composite Ratings</div>
+        <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc)"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">EPS Strength</div><div style="font-size:21px;font-weight:900;color:#1a2a4a">67</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">FAIR</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Price Strength</div><div style="font-size:21px;font-weight:900;color:#c62828">49</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">POOR</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Buyer Demand</div><div style="font-size:21px;font-weight:900;color:#2e7d32">B</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">GOOD</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Group Rank</div><div style="font-size:21px;font-weight:900;color:#1a2a4a">42</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">of 197 · FAIR</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Master Score</div><div style="font-size:21px;font-weight:900;color:#1a2a4a">B</div></div></div>
+        <div class="microhead" style="margin-top:10px">MarketSmith Guru Screens — Strategy Fit</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 18px"><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">WARREN BUFFETT</b><b style="color:#7b1fa2">75%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:75%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">BENJAMIN GRAHAM</b><b style="color:#7b1fa2">69%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:69%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">CUSTOM</b><b style="color:#7b1fa2">58%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:58%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">PETER LYNCH</b><b style="color:#7b1fa2">62%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:62%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">WILLIAM J. O'NEIL</b><b style="color:#7b1fa2">44%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:44%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">JAMES P. O'SHAUGHNESSY</b><b style="color:#7b1fa2">20%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:20%"></div></div></div></div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">Fund Ownership &amp; Volatility</div>
+        <div style="display:flex;gap:8px;margin-top:6px"><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#c62828">204</div><div style="font-size:8.6px;color:#8a94a6">Funds holding &#183; −3.32%</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#2e7d32">4.09 Cr</div><div style="font-size:8.6px;color:#8a94a6">Shares w/ funds &#183; +1.17%</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">1.7</div><div style="font-size:8.6px;color:#8a94a6">U/D Volume Ratio</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">1.07 / −0.05</div><div style="font-size:8.6px;color:#8a94a6">Beta / Alpha</div></div></div>
+        <div class="notebox blue" style="margin-top:10px"><b>Synthesis:</b> Master Score B, EPS Strength FAIR (67), Price Strength POOR (49) — a fair-fundamentals stock in a genuinely weak price trend, consistent with §18's bearish daily/hourly Elliott Wave reading. Fund count fell 3.32% even as shares-held-by-funds rose 1.17% — existing holders adding, new funds not yet entering.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 18 ELLIOTT WAVE ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec18"><span class="num">18</span><h2>Elliott Wave Analysis (MotiveWave)</h2></div>
+    <div class="cols">
+      <div class="imgwrap" style="flex:1"><img src="DEEPAKNTR_chart.jpg" alt="Deepak Nitrite Elliott Wave chart — daily and hourly"></div>
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">Daily (1D) Trend Momentum</div>
+        <div style="display:flex;gap:8px"><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:6px 4px;background:#fdf0f0"><div style="font-size:15px;font-weight:900;color:#c62828">BUY 0 / SELL 1</div><div style="font-size:9px;color:#8a94a6">Daily signal</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:6px 4px;background:#fdf0f0"><div style="font-size:15px;font-weight:900;color:#c62828">−3 / −3</div><div style="font-size:9px;color:#8a94a6">Short-term / Long-term gauge — strong bearish conviction both horizons</div></div></div>
+        <div class="microhead" style="margin-top:10px">Hourly (1H) Trend Momentum</div>
+        <div style="display:flex;gap:8px"><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:6px 4px;background:#fff6e8"><div style="font-size:15px;font-weight:900;color:#f57f17">BUY 1 / SELL 1</div><div style="font-size:9px;color:#8a94a6">Sell 25 Sep 2026 · earlier Buy 18 Sep 2026 (reversed)</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:6px 4px;background:#fff6e8"><div style="font-size:15px;font-weight:900;color:#f57f17">−1 / −1</div><div style="font-size:9px;color:#8a94a6">Mildly net negative — much milder than daily</div></div></div>
+        <div class="microhead" style="margin-top:10px">RSI Readings (Hourly)</div>
+        <p style="font-size:11.3px">RSI 4 at <b>1,546.2</b>, RSI 11 at <b>1,512.3</b> — both deeply oversold. Support &#8377;1,386, resistance &#8377;1,605.</p>
+        <div class="notebox" style="margin-top:10px"><b>Bear case:</b> both timeframes net bearish, daily conviction stronger (−3/−3) than hourly (−1/−1); active hourly Sell signal (25 Sep); price below the &#8377;1,605 resistance.</div>
+        <div class="notebox blue"><b>Countervailing signals:</b> hourly RSI deeply oversold raises bounce probability without confirming a trend change; price still above the &#8377;1,386 support — read as "corrective within a range," not a breakdown.</div>
+      </div>
+    </div>
+    <div class="microhead" style="margin-top:12px">Wave Structure Interpretation</div>
+    <table class="t prose">
+      <tr><td style="width:90px;vertical-align:top"><b>1D Chart</b></td><td style="text-align:left">A completed 5-wave impulse topped near &#8377;1,860–1,900, followed by an A-B-C / w-x-y corrective decline: an a-b-c sequence into a "B" wave bounce, then an a-ii-iii-iv-v decline into a "(2)" wave low, bringing price to the current ~&#8377;1,526–1,555 zone. Support &#8377;1,386, resistance &#8377;1,605. Daily Trend Momentum reads BUY 0 / SELL 1, with both short- and long-term gauges at <b class="neg">−3</b> — strong bearish conviction on both horizons.</td></tr>
+      <tr><td style="vertical-align:top"><b>1H Chart</b></td><td style="text-align:left">Wave "i" rallied to resistance at &#8377;1,700, then declined through ii–iii–iv into a "c" wave low near current levels. A Sell signal was marked on 25 Sep 2026; an earlier Buy signal from 18 Sep 2026 has since reversed. RSI 4 sits at 1,546.2 and RSI 11 at 1,512.3 — both deeply oversold. Hourly Trend Momentum reads BUY 1 / SELL 1, with gauges at −1/−1 — mildly net negative, much milder than the daily reading.</td></tr>
+      <tr><td style="vertical-align:top"><b>Synthesis</b></td><td style="text-align:left">Both timeframes are net bearish, with the daily conviction (−3/−3) far stronger than the hourly (−1/−1) and an active hourly Sell signal from 25 Sep. The countervailing signal is the hourly RSI's deep oversold reading, which raises bounce probability but does not by itself confirm a trend change — especially with price still holding above the &#8377;1,386 support, consistent with a "corrective within a range" read rather than a breakdown. <b>Invalidation levels:</b> a daily close below &#8377;1,386 opens downside toward the multi-year range; a reclaim of &#8377;1,605 would be the first sign that wave (2)/(C) is completing. <b>Explicit recommendation:</b> this is not a "buy the oversold bounce" setup without confirmation — wait for either a reclaim of &#8377;1,605 or a clear daily higher-low before treating this as a turn.</td></tr>
+    </table>
+  </div>
+
+  <!-- ================= 19 RECOMMENDATION ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec19"><span class="num">19</span><h2>Recommendation, Support &amp; Resistance</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fff8f0;border-color:#e67e22;flex:1.2">
+        <div class="plab" style="color:#e67e22">&#9733; Recommendation</div>
+        <div class="pval" style="color:#e67e22;font-size:19px">HOLD — WAIT FOR CONFIRMATION, NOT AN UNCONFIRMED BOUNCE BUY</div>
+        <p style="font-size:11.4px;margin-top:6px">A genuine fundamental inflection (Q1 FY27 PAT +207% YoY, EBITDA margin 21%) sits inside a technically bearish structure on both daily and hourly timeframes, a wide unresolved valuation range (P/E 27.6x–106.8x), and an undisclosed funding structure for the &#8377;11,500 Cr+ polycarbonate megaproject. This is not a "buy the oversold bounce" setup without confirmation.</p>
+        <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#fdf0f0;border-radius:5px"><b style="color:#c62828">&#9679; Bear case:</b> both timeframes net bearish, daily conviction stronger at −3/−3, active Sell signal 25 Sep, price below &#8377;1,605 resistance, two years of deeply negative FCF, three-way ROE conflict, recent Buy→Hold downgrade.</div>
+        <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#e8f5e9;border-radius:5px"><b style="color:#2e7d32">&#9679; Bull case:</b> dramatic Q1 FY27 margin/profit inflection cross-confirmed across sources, genuine niche dominance in DASDA/OBA, credible China+1 tailwind in Advanced Intermediates, zero promoter pledge, steady dividend growth, cheaper-than-most-peers on P/E, transformative PC project that could reduce commodity-cycle exposure if executed well.</div>
+        <div style="font-size:11.3px;margin-top:6px"><b>Wait for:</b> either a reclaim of &#8377;1,605 resistance with hourly RSI &gt; 50, or a clear daily higher-low, before treating this as a confirmed turn. <b>Next catalyst:</b> Q2 FY27 results, ~14 Nov 2026; pending DGTR phenol/acetone and IPA(China) anti-dumping rulings, no timeline found.</div>
+      </div>
+      <div class="panel" style="border-color:#1565c0">
+        <div class="plab" style="color:#1565c0">&#128313; Key Support Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>&#8377;1,546.2</td><td style="text-align:left">Hourly RSI 4 marker — deeply oversold</td><td><span class="badge b-neut">Near</span></td></tr>
+          <tr><td>&#8377;1,526–1,555</td><td style="text-align:left">Current wave "(2)"/"c" low zone</td><td><span class="badge b-neut">Current</span></td></tr>
+          <tr><td>&#8377;1,512.3</td><td style="text-align:left">Hourly RSI 11 marker — deeply oversold</td><td><span class="badge b-neut">Near</span></td></tr>
+          <tr><td>&#8377;1,386</td><td style="text-align:left">Daily support — invalidation level below</td><td><span class="badge b-bear">Critical</span></td></tr>
+        </table>
+      </div>
+      <div class="panel" style="border-color:#2e7d32">
+        <div class="plab" style="color:#2e7d32">&#128312; Key Resistance Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>&#8377;1,605</td><td style="text-align:left">Daily resistance — first confirmation trigger</td><td><span class="badge b-bull">Signal</span></td></tr>
+          <tr><td>&#8377;1,700</td><td style="text-align:left">Hourly wave "i" high</td><td><span class="badge b-neut">Near-term</span></td></tr>
+          <tr><td>&#8377;1,860–1,900</td><td style="text-align:left">Completed 5-wave impulse top</td><td><span class="badge b-bull">Major</span></td></tr>
+          <tr><td>&#8377;1,893–2,290</td><td style="text-align:left">Street consensus target range</td><td><span class="badge b-neut">Consensus</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, BSE, Screener.in, MarketSmith India, Trendlyne, MoneyControl, GuruFocus, stockanalysis.com and other public web sources as of 30 Sep 2026, and from the author's own MotiveWave Elliott Wave analysis. Price, volume and financial figures should be independently verified — this report explicitly preserves several unresolved data conflicts (valuation, debt figures, ROE, revenue) rather than silently resolving them; see the flagged sections above. Ashoke Kumar Seth is not a SEBI-registered research analyst. This is not investment advice; always consult a licensed financial adviser before making investment decisions. All figures in &#8377; Crore unless stated otherwise.</div>
+  <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice. &nbsp;|&nbsp; <span style="opacity:0.6">Template v6</span></div>
+</div>
+</div>
+<script>
+// In-report "New" tags: mark recently-changed content post-publish, auto-hide after 3 days.
+// Usage: <span class="new-tag" data-new-since="YYYY-MM-DD">New</span> right next to the changed content.
+(function(){
+  var NEW_DAYS = 3;
+  function isRecent(iso){
+    if (!iso) return false;
+    var t = Date.parse(iso + "T00:00:00");
+    if (isNaN(t)) return false;
+    var age = Date.now() - t;
+    return age >= 0 && age < NEW_DAYS * 86400000;
+  }
+  var tags = document.querySelectorAll('.new-tag[data-new-since]');
+  for (var i = 0; i < tags.length; i++){
+    if (!isRecent(tags[i].getAttribute('data-new-since'))) tags[i].style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
