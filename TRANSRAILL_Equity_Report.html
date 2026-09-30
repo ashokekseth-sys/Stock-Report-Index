@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transrail Lighting Limited — Equity Research Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#ffffff; font-family:'Source Sans 3',Arial,sans-serif; color:#2a3342; font-size:12.5px; line-height:1.5; }
+  .page-wrap { background:#e9edf3; display:flex; justify-content:center; padding:24px 12px 40px; }
+  .page { width:1400px; max-width:100%; margin:0; background:#fff; box-shadow:0 6px 24px rgba(26,42,74,0.18); }
+  .hdr { background:linear-gradient(135deg,#101c36 0%,#1a2a4a 55%,#2b4570 100%); border-bottom:4px solid; border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1; color:#fff; padding:16px 26px 13px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .hdr .meta { font-size:10.5px; letter-spacing:0.6px; color:#9fb0cf; text-transform:uppercase; }
+  .hdr h1 { font-size:26px; font-weight:900; letter-spacing:0.2px; margin:2px 0 3px; }
+  .hdr .tagline { font-size:11.5px; color:#c7d2e8; }
+  .hdr .pricebox { text-align:right; }
+  .hdr .price { font-size:26px; font-weight:900; }
+  .hdr .chg { color:#ff8a80; font-weight:700; font-size:14px; }
+  .hdr .sub { font-size:10.5px; color:#9fb0cf; margin-top:3px; }
+  .tagstrip { display:flex; gap:0; border-bottom:1px solid #dde2ea; }
+  .tagstrip div { flex:1; text-align:center; padding:6px 4px; font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; border-right:1px solid #dde2ea; }
+  .tagstrip div:last-child { border-right:none; }
+  .sec { padding:16px 26px 20px; border-bottom:1px solid #e4e8ef; }
+  .sec-title { display:flex; align-items:center; gap:9px; margin-bottom:12px; padding-bottom:7px; border-bottom:2px solid #f0b429; }
+  .sec-title .num { background:linear-gradient(135deg,#f7b733,#e67e22); color:#1a2a4a; font-size:11px; font-weight:900; padding:2px 7px; border-radius:3px; }
+  .sec-title h2 { font-size:14.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#1a2a4a; }
+  .microhead { font-size:10px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#b07716; margin:10px 0 6px; }
+  table.t { width:100%; border-collapse:collapse; }
+  table.t th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase; padding:6px 9px; text-align:right; font-weight:700; }
+  table.t th:first-child { text-align:left; }
+  table.t td { padding:5.5px 9px; border-bottom:1px solid #edf0f5; text-align:right; font-size:12px; }
+  table.t td:first-child { text-align:left; font-weight:600; }
+  table.t tr:nth-child(even) td { background:#f8f9fb; }
+  .pos { color:#2e7d32; font-weight:700; } .neg { color:#c62828; font-weight:700; }
+  .warn { color:#f57f17; font-weight:700; }
+  .tiles { display:flex; gap:10px; }
+  .tile { flex:1; border:1px solid #dde2ea; border-top:3px solid #2b4570; border-radius:6px; padding:9px 12px; background:linear-gradient(180deg,#fdfefe,#f7f9fc); }
+  .tile .lab { font-size:9.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#8a94a6; }
+  .tile .val { font-size:19px; font-weight:900; margin:2px 0 1px; color:#1a2a4a; }
+  .tile .note { font-size:10.3px; color:#5a6475; line-height:1.35; }
+  .notebox { border-left:4px solid #f9a825; background:#fffbe8; padding:9px 13px; font-size:11.8px; margin-top:11px; border-radius:0 5px 5px 0; }
+  .notebox.green { border-left-color:#2e7d32; background:#f0f7f0; }
+  .notebox.red { border-left-color:#c62828; background:#fdf0f0; }
+  .notebox.blue { border-left-color:#1565c0; background:#eef4fc; }
+  .badge { display:inline-block; font-size:9.5px; font-weight:900; letter-spacing:0.5px; padding:1.5px 7px; border-radius:9px; text-transform:uppercase; vertical-align:middle; }
+  .new-tag { display:inline-block; font-size:9px; font-weight:900; letter-spacing:0.7px; text-transform:uppercase; background:#f0b429; color:#3d2c00; padding:2px 6px; border-radius:3px; line-height:1.2; vertical-align:middle; margin-left:6px; }
+  .b-bull { background:#e8f5e9; color:#2e7d32; } .b-bear { background:#ffebee; color:#c62828; }
+  .b-neut { background:#e3f2fd; color:#1565c0; } .b-warn { background:#fff9c4; color:#f57f17; }
+  .cols { display:flex; gap:20px; }
+  .panel { flex:1; border:1px solid #dde2ea; border-radius:6px; padding:12px 15px; }
+  .panel .plab { font-size:9.5px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#8a94a6; margin-bottom:3px; }
+  .panel .pval { font-size:21px; font-weight:900; }
+  .chartcap { font-size:10px; color:#8a94a6; margin-top:5px; line-height:1.4; }
+  .imgwrap img { width:100%; border-radius:5px; border:1px solid #23304a; display:block; }
+  .footer-blue { border-top:3px solid #f0b429; background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570); color:#fff; text-align:center; padding:10px 16px; font-size:11px; letter-spacing:0.4px; }
+  .disclaim { font-size:9.8px; color:#8a94a6; padding:12px 26px; line-height:1.5; }
+  table.t[style*='--pad'] td { padding:9px; }
+  .compact { padding:13px 26px 14px; }
+  .compact table.t td { padding:3.5px 8px; font-size:11.3px; }
+  .compact table.t th { padding:5px 8px; }
+  .compact .notebox { padding:7px 11px; font-size:10.8px; margin-top:0; }
+  .compact .microhead { margin:8px 0 4px; }
+  .compact .tile { padding:6px 10px; }
+  .compact .tile .val { font-size:15.5px; margin:1px 0 0; }
+  .compact .tile .note { font-size:9.6px; }
+  .compact .cols { gap:14px; }
+  table.fit { width:100%; table-layout:fixed; }
+  table.fit td, table.fit th { padding:3.5px 11px; white-space:nowrap; overflow:hidden; }
+  table.fit th:first-child, table.fit td:first-child { width:24%; }
+  .krow { display:flex; justify-content:space-between; align-items:baseline; gap:8px; border-bottom:1px solid #edf0f5; padding:5px 2px; }
+  .krow .klab { color:#8a94a6; font-weight:900; font-size:9.3px; text-transform:uppercase; letter-spacing:0.5px; flex:0 0 auto; }
+  .krow .kval { font-weight:900; color:#1a2a4a; font-size:12.5px; text-align:right; }
+  .krow .kval small { display:block; font-weight:600; color:#8a94a6; font-size:9.3px; }
+  .mininote { font-size:10px; color:#5a6475; line-height:1.45; margin-top:8px; padding:7px 9px; border-radius:4px; }
+  table.peer { width:100%; border-collapse:collapse; }
+  table.peer th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:8.6px; letter-spacing:0.3px; text-transform:uppercase; padding:4px 3px; text-align:right; }
+  table.peer th:first-child { text-align:left; }
+  table.peer td { padding:4px 3px; border-bottom:1px solid #edf0f5; text-align:right; font-size:10px; }
+  table.peer td:first-child { text-align:left; font-weight:700; }
+
+    .sector-wheel-compact{width:600px;height:700px;margin:50px auto 0 110px;overflow:visible}
+    .sector-wheel-compact > div{width:540px!important;transform:scale(0.93);transform-origin:top left}
+    .sector-wheel-compact .mt-16,.sector-wheel-compact .md\:mt-\[80px\]{margin-top:0!important}
+    .sector-wheel-compact .mt-8{display:none}
+    .sector-wheel-compact .relative{position:relative}
+    .sector-wheel-compact .absolute{position:absolute}
+    .sector-wheel-compact .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel-compact .pointer-events-none{pointer-events:none}
+    .sector-wheel-compact .z-10{z-index:10}
+    .sector-wheel-compact .flex{display:flex}
+    .sector-wheel-compact .flex-col{flex-direction:column}
+    .sector-wheel-compact .items-center{align-items:center}
+    .sector-wheel-compact .items-start{align-items:flex-start}
+    .sector-wheel-compact .items-end{align-items:flex-end}
+    .sector-wheel-compact .justify-center{justify-content:center}
+    .sector-wheel-compact .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel-compact .leading-none{line-height:1}
+    .sector-wheel-compact .font-black{font-weight:900}
+    .sector-wheel-compact .opacity-90{opacity:.9}
+    .sector-wheel-compact .overflow-visible{overflow:visible}
+    .sector-wheel-compact .aspect-square{aspect-ratio:1/1}
+    .sector-wheel-compact .w-full,.sector-wheel-compact .md\:w-full{width:100%}
+    .sector-wheel-compact .h-full{height:100%}
+    .sector-wheel-compact .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel-compact .ml-\[1px\]{margin-left:1px}
+    .sector-wheel-compact .mr-\[1px\]{margin-right:1px}
+    .sector-wheel-compact .w-\[86vw\]{width:100%}
+    .sector-wheel-compact .max-w-\[540px\]{max-width:540px}
+    .sector-wheel-compact .max-w-\[760px\]{max-width:540px}
+    .sector-wheel-compact .w-\[72px\]{width:72px}
+    .sector-wheel-compact .h-\[1px\]{height:1px}
+    .sector-wheel-compact .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel-compact .text-\[16px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel-compact .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel-compact .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel-compact .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel-compact .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel-compact .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel-compact .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel-compact .gap-\[7px\]{gap:7px}
+    .sector-wheel-compact .gap-\[8px\]{gap:8px}
+    .sector-wheel-compact svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .relative{position:relative}
+    .sector-wheel .absolute{position:absolute}
+    .sector-wheel .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel .pointer-events-none{pointer-events:none}
+    .sector-wheel .z-10{z-index:10}
+    .sector-wheel .flex{display:flex}
+    .sector-wheel .flex-col{flex-direction:column}
+    .sector-wheel .items-center{align-items:center}
+    .sector-wheel .items-start{align-items:flex-start}
+    .sector-wheel .items-end{align-items:flex-end}
+    .sector-wheel .justify-center{justify-content:center}
+    .sector-wheel .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel .leading-none{line-height:1}
+    .sector-wheel .font-black{font-weight:900}
+    .sector-wheel .opacity-90{opacity:.9}
+    .sector-wheel .overflow-visible{overflow:visible}
+    .sector-wheel .aspect-square{aspect-ratio:1/1}
+    .sector-wheel .w-full,.sector-wheel .md\:w-full{width:100%}
+    .sector-wheel .h-full{height:100%}
+    .sector-wheel .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel .mt-16{margin-top:64px}
+    .sector-wheel .mt-8{margin-top:32px}
+    .sector-wheel .md\:mt-10{margin-top:40px}
+    .sector-wheel .md\:mt-\[80px\]{margin-top:64px}
+    .sector-wheel .ml-\[1px\]{margin-left:1px}
+    .sector-wheel .mr-\[1px\]{margin-right:1px}
+    .sector-wheel .w-\[86vw\]{width:100%}
+    .sector-wheel .max-w-\[540px\]{max-width:540px}
+    .sector-wheel .max-w-\[760px\]{max-width:540px}
+    .sector-wheel .w-\[72px\]{width:72px}
+    .sector-wheel .h-\[1px\]{height:1px}
+    .sector-wheel .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel .text-\[16px\]{font-size:15px}
+    .sector-wheel .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel .gap-\[7px\]{gap:7px}
+    .sector-wheel .gap-\[8px\]{gap:8px}
+    .sector-wheel svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .hub-name{font-family:'Fraunces',Georgia,serif}
+
+  /* ===================== RESPONSIVE / MOBILE ===================== */
+  .mobile-jump { display:none; }
+  @media (max-width: 860px) {
+    html { -webkit-text-size-adjust:100%; }
+    body { overflow-x:hidden; }
+    .page { width:100% !important; max-width:100% !important; }
+    .sec, .hdr { padding-left:16px !important; padding-right:16px !important; }
+    .disclaim { padding-left:16px !important; padding-right:16px !important; }
+    .footer-blue { padding-left:16px !important; padding-right:16px !important; }
+
+    .hdr { flex-direction:column !important; align-items:stretch !important; gap:10px; }
+    .hdr .pricebox { text-align:left !important; }
+
+    .tagstrip { flex-direction:column !important; }
+    .tagstrip div { border-right:none !important; border-bottom:1px solid #dde2ea; text-align:left !important; padding:8px 4px !important; }
+    .tagstrip div:last-child { border-bottom:none; }
+
+    .mobile-jump {
+      display:flex !important; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      position:sticky; top:0; z-index:20; background:#1a2a4a; padding:10px 12px;
+      border-bottom:3px solid #f0b429; white-space:nowrap; scrollbar-width:none;
+    }
+    .mobile-jump::-webkit-scrollbar { display:none; }
+    .mobile-jump a {
+      color:#c7d2e8; font-size:11.5px; font-weight:700; text-decoration:none;
+      padding:6px 10px; border-radius:14px; background:rgba(255,255,255,0.08); flex:0 0 auto;
+    }
+    .sec-title { scroll-margin-top:56px; }
+
+    .cols { flex-wrap:wrap !important; }
+    .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
+    .cols { row-gap:16px; }
+
+    .tiles { flex-wrap:wrap !important; row-gap:8px; }
+    .tile { flex:1 1 45% !important; min-width:0 !important; }
+
+    div[style*="flex:1 1 44%"] { flex:1 1 100% !important; }
+    div[style*="flex:1 1 30%"] { flex:1 1 45% !important; }
+
+    table.t:not(.prose), table.fit, table.peer {
+      display:table !important; width:100% !important; table-layout:fixed !important;
+      white-space:normal !important; overflow-x:visible !important; max-width:100%;
+    }
+    table.t:not(.prose) td, table.t:not(.prose) th,
+    table.fit td, table.fit th,
+    table.peer td, table.peer th { white-space:normal !important; word-wrap:break-word; padding:4px 3px !important; font-size:9.6px !important; }
+    table.peer td:first-child, table.peer th:first-child { width:26% !important; }
+    table.prose { display:block !important; }
+    table.prose tr:first-child { display:none !important; }
+    table.prose tr { display:block !important; padding:10px 0 !important; border-bottom:1px solid #e4e8ef; }
+    table.prose tr:last-child { border-bottom:none !important; }
+    table.prose td { display:inline !important; padding:0 !important; border:none !important; text-align:left !important; white-space:normal !important; width:auto !important; word-wrap:break-word; }
+    table.prose td:first-child { font-weight:900; font-size:13px; color:#1a2a4a; }
+    table.prose td:nth-child(2) { margin-left:8px; }
+    table.prose td:nth-child(3) { display:block !important; margin-top:6px; font-size:12.5px; line-height:1.55; color:#2a3342; }
+
+    .metric-strip { flex-wrap:wrap !important; }
+    .metric-strip > div { flex:1 1 50% !important; box-sizing:border-box; border-bottom:1px solid #e7ebf1 !important; }
+    .metric-strip > div:nth-child(even) { border-right:none !important; }
+
+    .krow { flex-wrap:wrap; align-items:flex-start !important; }
+    .krow .klab { flex:1 1 auto !important; }
+    .krow .kval { display:contents !important; }
+    .krow .kval small { flex:1 1 100% !important; order:3; display:block !important; text-align:left !important; margin-top:3px !important; }
+
+    h1 { font-size:21px !important; }
+    .price { font-size:22px !important; }
+
+    .sector-wheel-compact { width:270px !important; height:290px !important; margin:20px auto 0 32px !important; overflow:visible !important; }
+    .sector-wheel-compact > div { width:540px !important; transform:scale(0.5); transform-origin:top left; }
+  }
+
+  @media (max-width: 480px) {
+    .tile { flex:1 1 100% !important; }
+    div[style*="flex:1 1 45%"] { flex:1 1 100% !important; }
+  }
+</style>
+</head>
+<body>
+<style>
+  :root{
+    --navy:#1a2a4a;
+    --navy-2:#243a63;
+    --gold:#c9a24b;
+    --ink:#1a2a4a;
+    --muted:#5c6b85;
+    --hair:#dde2ea;
+    --page-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .cover-wrap{
+    font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    background:#e9edf3;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px;
+  }
+  .cover-page{
+    width:1400px;
+    max-width:100%;
+    min-height:900px;
+    background:var(--page-bg);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 6px 24px rgba(26,42,74,0.18);
+    overflow:hidden;
+  }
+  .top-band{
+    height:14px;
+    background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--gold) 100%);
+    flex-shrink:0;
+  }
+  .brand-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:26px 56px 0 56px;
+    flex-shrink:0;
+  }
+  .brand-bar .doc-type{
+    font-size:12px;
+    letter-spacing:3px;
+    color:var(--muted);
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .brand-bar .doc-date{
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.4px;
+  }
+  .main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    padding:36px 60px 40px 60px;
+  }
+  .logo-wrap{
+    width:auto;
+    max-width:92%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:44px;
+  }
+  .logo-wrap img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .text-logo{
+    font-size:clamp(20px, 6.2vw, 40px);
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--navy);
+    white-space:normal;
+    word-break:break-word;
+    text-align:center;
+    line-height:1.15;
+  }
+  .text-logo span{ color:var(--gold); }
+  .kicker{
+    font-size:15px;
+    letter-spacing:6px;
+    color:var(--gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  h1.report-title{
+    font-size:46px;
+    letter-spacing:1px;
+    color:var(--navy);
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.15;
+  }
+  .divider{
+    width:120px;
+    height:3px;
+    background:var(--gold);
+    margin:26px 0;
+  }
+  .company-name{
+    font-size:34px;
+    font-weight:700;
+    color:var(--navy);
+    letter-spacing:0.3px;
+  }
+  .ticker-row{
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 14px;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .ticker-chip{ text-align:center; }
+  .ticker-chip{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:var(--navy);
+    background:#eef1f7;
+    border:1px solid var(--hair);
+    border-radius:4px;
+    padding:6px 14px;
+  }
+  .sector-line{
+    margin-top:28px;
+    font-size:14px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+    font-style:italic;
+  }
+  .meta-block{
+    margin-top:64px;
+    display:flex;
+    gap:70px;
+    justify-content:center;
+  }
+  .rev-history{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .rev-history-title{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:8px;
+  }
+  .rev-history-table{ border-collapse:collapse; font-size:13px; }
+  .rev-history-table th{
+    text-align:left; padding:2px 28px 4px 0; font-size:10px; letter-spacing:1px;
+    text-transform:uppercase; color:var(--muted); font-weight:600;
+    border-bottom:1px solid #e2e6ee;
+  }
+  .rev-history-table td{ padding:4px 28px 4px 0; color:var(--navy); font-weight:600; }
+  .rev-history-table td.rev-note{ color:var(--muted); font-weight:400; }
+  .meta-item{
+    text-align:center;
+  }
+  .meta-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .meta-value{
+    font-size:16px;
+    color:var(--navy);
+    font-weight:700;
+  }
+  .prepared-by{
+    margin-top:60px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+  }
+  .prepared-by strong{
+    color:var(--navy);
+  }
+  .footer{
+    flex-shrink:0;
+    background:#ffffff;
+    border-top:1px solid var(--hair);
+    padding:16px 56px;
+    text-align:center;
+  }
+  .footer p{
+    font-size:10.5px;
+    line-height:1.6;
+    color:#8992a6;
+    letter-spacing:0.2px;
+  }
+  .footer strong{
+    color:var(--muted);
+  }
+  @media (max-width: 860px) {
+    .footer { padding:14px 20px !important; text-align:left !important; }
+    .footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .main { padding-top:14px !important; padding-bottom:14px !important; }
+    .logo-wrap { margin-bottom:20px !important; }
+    .meta-block { margin-top:30px !important; }
+  }
+  .bottom-band{
+    height:8px;
+    background:var(--navy);
+    flex-shrink:0;
+  }
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+  <div class="top-band"></div>
+
+  <div class="brand-bar"></div>
+
+  <div class="main">
+    <div class="logo-wrap">
+      <div class="text-logo">TRANSRAIL <span>LIGHTING</span></div>
+    </div>
+
+    <div class="kicker">Equity Research Report</div>
+    <h1 class="report-title">Transrail Lighting Limited</h1>
+
+    <div class="divider"></div>
+
+    <div class="ticker-row">
+      <div class="ticker-chip">NSE: TRANSRAILL</div>
+      <div class="ticker-chip">BSE: 545252</div>
+      <div class="ticker-chip">Mkt Cap: &#8377;6,063.67 Cr</div>
+      <div class="ticker-chip">Master Score: C (41)</div>
+    </div>
+    <div class="sector-line">Power Transmission &amp; Distribution EPC — Towers, Conductors &amp; Turnkey Execution (India + Africa/MENA)</div>
+
+    <div class="meta-block" style="display:block">
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
+      <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">30 September 2026</span>
+    </div>
+
+    <div class="rev-history">
+      <div class="rev-history-title">Revision History</div>
+      <table class="rev-history-table">
+        <tr><th>Date</th><th>Version</th></tr>
+        <tr><td>30 Sep 2026</td><td class="rev-note">v1 &mdash; initial report</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p style="margin-bottom:4px;letter-spacing:0.5px;text-transform:uppercase;font-size:9.5px;color:#8a94a6">Confidential — For Educational Use</p>
+    <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
+  </div>
+
+  <div class="bottom-band"></div>
+</div>
+</div>
+
+
+<div class="page-wrap">
+<div class="page">
+
+  <!-- ================= HEADER ================= -->
+  <div class="hdr">
+    <div>
+      <div class="meta">BSE: 545252 &nbsp;·&nbsp; NSE: TRANSRAILL &nbsp;·&nbsp; Power T&amp;D EPC — Towers, Conductors, Turnkey Execution &nbsp;·&nbsp; Mumbai, Maharashtra</div>
+      <h1>Transrail Lighting Limited</h1>
+      <div class="tagline">In-house tower &amp; conductor manufacturing across 5 plants &nbsp;·&nbsp; ~92% order book in Power T&amp;D &nbsp;·&nbsp; Growing Africa/MENA international book &nbsp;·&nbsp; Best-in-peer-group ROCE at a near-bottom-of-group multiple</div>
+    </div>
+    <div class="pricebox">
+      <div class="price">&#8377;476.15 <span class="chg" style="color:#8bd48f">&#9650; +5.30%</span></div>
+      <div class="sub">Report date: 30 Sep 2026 &nbsp;|&nbsp; Mkt Cap: &#8377;6,063.67 Cr &nbsp;|&nbsp; Book Value: 2.66x (MarketSmith) / 2.81x (Screener) &nbsp;|&nbsp; MarketSmith Master Score: C — shown elsewhere as 41</div>
+    </div>
+  </div>
+  <div class="tagstrip">
+    <div style="color:#2e7d32;background:#ecf6ec">&#9679; Sentiment: Oversold bounce / hourly momentum turning</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Momentum: RSI 7 (extreme) — daily trend still mixed</div>
+    <div style="color:#2e7d32;background:#ecf6ec">&#9679; Valuation: Cheapest-in-peer-group P/E (14.5–15.4x)</div>
+    <div style="color:#c62828;background:#fdeef0">&#9679; Governance: &#8377;509.7mn tax demand + penalty, unresolved</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; ~47% drawdown from 52-wk high; earnings ahead of price</div>
+  </div>
+
+  <nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Moat</a><a href="#sec03">Event</a><a href="#sec04">Sentiment</a><a href="#sec05">Sector Size</a><a href="#sec06">Shareholding</a><a href="#sec07">Performance</a><a href="#sec08">Financials</a><a href="#sec09">Ratios</a><a href="#sec10">Management</a><a href="#sec11">Guidance</a><a href="#sec12">Consensus</a><a href="#sec13">Volume</a><a href="#sec14">Sector Rotation</a><a href="#sec15">Peers</a><a href="#sec16">Risk</a><a href="#sec17">Technical Ratings</a><a href="#sec18">Elliott Wave</a><a href="#sec19">Recommendation</a></nav>
+
+  <!-- ================= 01 COMPANY OVERVIEW ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec01"><span class="num">01</span><h2>Company Overview</h2></div>
+    <div class="cols">
+      <div style="flex:1.5">
+        <div class="microhead">What They Do</div>
+        <p>Transrail Lighting is a Mumbai-headquartered <b>power transmission &amp; distribution (T&amp;D) EPC contractor</b> — it designs, manufactures and builds the towers, conductors, substations and turnkey transmission lines that carry electricity across India and a growing set of African/MENA countries. Uniquely among most EPC peers, Transrail is <b>backward-integrated into its own manufacturing</b>: captive plants at Vadodara, Deoli, two Silvassa units and a new Butibori facility (commissioned Q1 FY27) fabricate lattice towers, conductors and monopoles and run a large captive hot-dip galvanizing bath. The company IPO&#39;d in December 2024 (listed 27 Dec 2024) and carries ~4 decades of group T&amp;D EPC execution history, including PGCIL Special Appreciation Awards for 765kV projects and 1200kV UHV-class execution capability &mdash; a capability the company states fewer than five companies globally possess (company-sourced claim, not independently verified here).</p>
+        <p style="margin-top:7px">FY26 (consolidated) revenue was <b>&#8377;6,880 Cr (+30% YoY)</b> with PAT of <b>&#8377;404 Cr</b> (EPS &#8377;30.06 — exactly matching MarketSmith&#39;s independently-sourced FY26 EPS figure). A separate source cites FY26 PAT at &#8377;421 Cr / 6.1% margin, likely an operating-PAT basis rather than Screener&#39;s reported &#8377;404 Cr &mdash; the exact basis of the &#8377;421 Cr figure is unconfirmed; both are stated here.</p>
+        <div class="notebox blue" style="margin-top:10px"><b>Key Competitive Advantage:</b> The strongest, most rapidly improving moat dimension is captive manufacturing / cost advantage — tower capacity <b>doubled</b> from 84,000 to 172,400 MTPA (announced ~21 Apr 2026) and conductor capacity expanded 70% to 40,800 km/annum, insulating execution from third-party supply disruption and capturing fabrication margin in-house. The structural limitation: switching costs in this business are genuinely low — every project is competitively tendered, so Transrail must keep re-winning tenders against the same qualified competitor set (KEC, Kalpataru, Skipper) every cycle; there is no customer lock-in beyond ordinary vendor empanelment.</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Order Book Mix (as of 30 Jun 2026, Q1 FY27)</div>
+        <svg viewBox="0 0 480 386" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+<path d="M240.0,8.0 A96,96 0 1 1 145.9,136.4 L179.9,124.3 A60,60 0 1 0 240.0,44.0 Z" fill="#1a2a4a"/><path d="M145.6,135.6 A96,96 0 0 1 213.4,10.2 L221.5,45.1 A60,60 0 0 0 179.7,123.9 Z" fill="#2e7d32"/><path d="M213.9,10.1 A96,96 0 0 1 239.3,8.0 L239.6,44.0 A60,60 0 0 0 221.9,45.1 Z" fill="#e67e22"/><text x="300.0" y="150.0" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">92%</text><text x="176.0" y="60.0" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">6%</text><text x="222.0" y="26.0" text-anchor="middle" font-size="10" font-weight="900" fill="#fff">2%</text>
+<text x="240" y="232" text-anchor="middle" font-size="19" font-weight="900" fill="#1a2a4a">&#8377;16,035 Cr</text>
+<text x="240" y="248" text-anchor="middle" font-size="9" letter-spacing="1.5" fill="#8a94a6">ORDER BOOK, 30 JUN 2026</text>
+<rect x="26" y="272" width="11" height="11" rx="2" fill="#1a2a4a"/><text x="43" y="282" font-size="10.5" fill="#2a3342" font-weight="700">Power T&amp;D</text><text x="43" y="295" font-size="9.3" fill="#8a94a6">~92% of order book</text><rect x="252" y="272" width="11" height="11" rx="2" fill="#2e7d32"/><text x="269" y="282" font-size="10.5" fill="#2a3342" font-weight="700">Civil</text><text x="269" y="295" font-size="9.3" fill="#8a94a6">~6% of order book</text><rect x="26" y="316" width="11" height="11" rx="2" fill="#e67e22"/><text x="43" y="326" font-size="10.5" fill="#2a3342" font-weight="700">Railways / Pole &amp; Lighting</text><text x="43" y="339" font-size="9.3" fill="#8a94a6">~2-3% of order book</text>
+<text x="240" y="374" text-anchor="middle" font-size="9.3" fill="#8a94a6">Domestic:International mix 61:39 &#183; incl. L1 orders &#8377;400 Cr; core book &#8377;15,635 Cr</text>
+</svg>
+      </div>
+      <div style="flex:1.05">
+        <div class="microhead">Manufacturing Capacity Ramp (FY26 &#8594; Q1 FY27)</div>
+<div style="border:1px solid #dde2ea;border-radius:6px;padding:11px 14px;background:#f8f9fb">
+  <div style="font-size:15px;font-weight:900;color:#1a2a4a">Rated 4 / 5
+    <span style="letter-spacing:2px;color:#2e7d32;font-size:13px">&#9632;&#9632;&#9632;&#9632;</span><span style="letter-spacing:2px;color:#cdd5e0;font-size:13px">&#9632;</span></div>
+  <p style="font-size:11px;margin-top:5px">Tower capacity <b>doubled</b> from 84,000 to 172,400 MTPA across Vadodara/Deoli/Silvassa (x2)/Butibori (greenfield, commissioned Q1 FY27); conductor capacity up 70% to 40,800 km/annum (Silvassa Phase 1 complete, Phase 2 underway). This is a genuine, fast-moving capacity/cost edge versus KEC (372,200 MTPA, 6 locations, largest globally) and KPIL (240,000 MTPA) — Transrail is the smallest of the &ldquo;big three&rdquo; T&amp;D EPC players by scale but has the fastest recent capacity ramp.</p>
+  <p style="font-size:11px;margin-top:5px"><b>The structural caveat:</b> this cost edge does not create customer lock-in — every tender is competitively re-bid, so today&#39;s capacity advantage must keep winning tomorrow&#39;s order flow against the same qualified competitor set, including Chinese-linked bidders now exempted to bid in Indian government power tenders and PowerChina/Chinese state EPC firms in Africa.</p>
+</div>
+      </div>
+    </div>
+    </div>
+
+  <!-- ================= 02 COMPETITIVE ADVANTAGE (MOAT) ANALYSIS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec02"><span class="num">02</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
+    <table class="t prose">
+      <tr><th style="text-align:left">Dimension</th><th>Rating</th><th style="text-align:left">Commentary</th></tr>
+      <tr><td style="text-align:left">Brand Strength</td><td><span class="badge b-warn">Moderate</span></td><td style="text-align:left">Execution/certification-driven, not consumer-style: ~4 decades of group T&amp;D EPC experience, 200+ completed projects, PGCIL Special Appreciation Awards for 765kV projects, Deoli plant rated PGCIL &ldquo;A Grade&rdquo;, ISO 9001/14001/45001/27001 + CE + NABL certified, TBCB pre-qualified, operational footprint across 64 countries (company-sourced). This earns entry into bid lists — it does not itself win bids.</td></tr>
+      <tr><td style="text-align:left">Network Effects</td><td><span class="badge b-bear">Absent</span></td><td style="text-align:left">Confirmed absent, as expected for a project-based EPC business model.</td></tr>
+      <tr><td style="text-align:left">Switching Costs</td><td><span class="badge b-bear">Low</span></td><td style="text-align:left">Genuinely a re-bid/competitive-tender business: no evidence of customer lock-in beyond ordinary vendor-empanelment status; every project is competitively tendered. Transrail&#39;s edge is qualifying for MORE tenders (via 1200kV UHV-class capability &ldquo;fewer than five companies globally possess&rdquo;, per company sources), not contractual stickiness with any given client &mdash; a real, structural moat limitation.</td></tr>
+      <tr><td style="text-align:left">Cost Advantage</td><td><span class="badge b-bull">Strong &amp; Improving</span></td><td style="text-align:left">The strongest dimension: captive manufacturing across Vadodara, Deoli, two Silvassa units and greenfield Butibori (Q1 FY27); tower capacity doubled to 172,400 MTPA; conductor capacity up 70% to 40,800 km/annum; large captive 14.2m galvanizing bath for hot-dip zinc coating per IS standards. CRISIL&#39;s rating upgrade independently cites &ldquo;increasing scale of operations&rdquo; and &ldquo;healthy operating profitability&rdquo; as corroboration. This backward integration insulates execution and captures fabrication margin in-house versus pure EPC players who subcontract tower fabrication/galvanizing.</td></tr>
+      <tr><td style="text-align:left">Patents / Proprietary Tech</td><td><span class="badge b-bear">Absent</span></td><td style="text-align:left">No patent/IP moat; the real barrier is execution-capability and certification (PGCIL vendor approval, TBCB pre-qualification, UHV track record), not IP.</td></tr>
+    </table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">Order Book Concentration — Focus vs Risk</div>
+        <p style="font-size:11.3px">Power T&amp;D is ~92% of the order book — a notably sharper single-segment focus than KEC/Kalpataru&#39;s 40–60% T&amp;D mix (who diversify into civil/railways/oil&amp;gas/water). This is both a focus advantage (deep specialization, capacity purpose-built for one segment) and a concentration risk (less diversified than the larger peers) &mdash; stated two-sided deliberately. Bangladesh exposure, once ~35% of the order book a year before March 2025, has been actively wound down to ~18% by March 2025 and just ~&#8377;300 Cr of an original ~&#8377;4,500 Cr book remained unexecuted as of Q1 FY27; management is not bidding new Bangladesh work until current exposure fully winds down (targeted June-July 2026) &mdash; a governance-positive, self-recognized de-risking.</p>
+      </div>
+      <div style="flex:1">
+        <div class="notebox blue" style="margin-top:0"><b>Synthesis:</b> Cost-advantage/backward-integration is real and improving fast (capacity doubling within a year), but the fundamental business model has structurally low switching costs &mdash; Transrail must keep re-winning tenders against the same qualified competitor set every cycle, so today&#39;s capacity/cost edge does not guarantee tomorrow&#39;s order flow. The India transmission-capex supercycle (~&#8377;9.15 trillion government-committed spend through 2032) is a shared, sector-wide tailwind, not a Transrail-specific moat.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 03 EVENT: TAX SEARCH & CAPACITY NEWS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec03"><span class="num">03</span><h2>Recent Events — Tax Search-and-Seizure &amp; Capacity Milestones</h2></div>
+    <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Tax Demand</div><div style="font-size:18px;font-weight:900;color:#c62828">&#8377;8.23 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">&#8377;82.3 million</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Penalty</div><div style="font-size:18px;font-weight:900;color:#c62828">&#8377;42.74 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">&#8377;427.4 million — ~5x the demand</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Search Dates</div><div style="font-size:18px;font-weight:900;color:#1a2a4a">24–28 Mar 2026</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">ADIT Unit-4(1), Mumbai</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Conductor Capacity</div><div style="font-size:18px;font-weight:900;color:#2e7d32">+70%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">to 40,800 km/annum</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Stock Reaction</div><div style="font-size:18px;font-weight:900;color:#1a2a4a">+12% or +3.5%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">two sources disagree — both stated</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Credit Rating</div><div style="font-size:18px;font-weight:900;color:#2e7d32">IND AA</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">India Ratings upgrade, stable outlook</div></div></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">The Tax Matter — Material, Unresolved</div>
+        <div style="border:2px solid #c62828;border-radius:8px;padding:10px 14px;background:linear-gradient(135deg,#fdeef0,#fff6f6);height:calc(100% - 24px)">
+          <p style="font-size:11.4px">An Income Tax department search-and-seizure operation was conducted by the Assistant Director of Income Tax, Unit-4(1), Mumbai, at company offices/factories 24&ndash;28 March 2026. The company stated full cooperation; as of 30 March 2026 no adverse findings/interim orders had been received at that time.</p>
+          <p style="font-size:11.4px;margin-top:7px"><b>Subsequently</b>, the company received a tax demand of <b>&#8377;82.3 million</b> and a penalty of <b>&#8377;427.4 million</b> &mdash; the penalty is roughly <b>5x</b> the principal demand, an unusually large ratio worth flagging explicitly. The exact assessment year and whether the company is contesting this demand were <b>not found</b> in available sources.</p>
+          <div style="font-size:10.3px;color:#8a1f1f;background:#fdeaea;border-radius:4px;padding:6px 9px;margin-top:8px"><b>Materiality:</b> the combined &#8377;509.7 mn (~&#8377;51 Cr) exposure is not trivial against FY26 PAT of &#8377;404 Cr &mdash; any investor in this name should track this closely. Auditor status (outgoing auditor identity, whether the latest audit opinion carries an Emphasis of Matter on this contingent liability) could not be confirmed from a primary source.</div>
+        </div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">Capacity Expansion &amp; Order Flow (through Sep 2026)</div>
+        <div class="krow"><span class="klab">Tower Capacity</span><span class="kval" style="color:#2e7d32">84,000 &#8594; 172,400 MTPA<small>Announced ~21 Apr 2026 — doubled within a year</small></span></div>
+        <div class="krow"><span class="klab">Conductor Capacity</span><span class="kval" style="color:#2e7d32">+70% to 40,800 km/yr<small>Silvassa Phase 1 complete; Phase 2 underway</small></span></div>
+        <div class="krow"><span class="klab">FY26 Order Inflow</span><span class="kval">&#8377;7,980 Cr (cumulative)<small>Guided to cross &#8377;9,500–10,000 Cr vs ~&#8377;1 lakh Cr pipeline (May&#39;26)</small></span></div>
+        <div class="krow"><span class="klab">Recent Wins</span><span class="kval" style="font-size:11px">Ethiopia, Djibouti, Botswana, ~&#8377;421 Cr Africa win<small>Jun&#39;26: &#8377;459 Cr international (mostly MENA); separate &#8377;1,100 Cr global win milestone</small></span></div>
+        <div class="krow"><span class="klab">World Bank Naming Mix-up</span><span class="kval" style="color:#2e7d32">FALSE ALARM<small>Debarred entity was TARIL (Transformers &amp; Rectifiers), unrelated; Transrail never debarred</small></span></div>
+        <div style="font-size:10.3px;color:#33691e;background:#eef7ee;border-radius:4px;padding:6px 9px;margin-top:8px"><b>Tape:</b> the 70% conductor-capacity announcement produced a same-news stock reaction reported as ~12% by one source and ~3.5% by another &mdash; likely different sessions/timeframes; both figures stated, neither resolved.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec04"><span class="num">04</span><h2>Overall Sentiment &amp; Momentum Prediction</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#f0f7f0);border:3px solid #2e7d32">
+        <div class="plab">Key Watch-Item</div>
+        <div class="pval" style="color:#2e7d32;font-size:16px">&#9888; Daily Trend Not Yet Confirmed</div>
+        <p style="font-size:11.3px;margin-top:5px">RSI at just 7 (near price &#8377;400.6) is about as oversold as this indicator gets, and a Buy signal has fired &mdash; but the daily Trend Momentum gauge reads only <b>BUY 1 / SELL 0</b> at <b>&minus;1 (short-term) / +1 (long-term)</b>, a mixed reading. Only the hourly timeframe has turned convincingly bullish (+4/+3). <b>Next catalyst: Q2 FY27 results, expected early Nov 2026 (estimate, not confirmed).</b></p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#f0f7f0);border-top:3px solid #2e7d32">
+        <div class="plab">Overall Sentiment</div>
+        <div class="pval" style="color:#2e7d32">CAUTIOUSLY BULLISH <span style="font-size:12px;color:#5a6475;font-weight:600">near-term bounce</span></div>
+        <p style="font-size:11.3px;margin-top:5px">A live, developing bounce off genuinely oversold conditions with real near-term momentum behind it (hourly +4/+3, MarketSmith's cross-confirming 471.82%-above-average volume spike on the up-move day). Retail sentiment (ValuePickr) is a mix of bull case (₹1 lakh Cr tendering pipeline) and classic new-listing skepticism ("Untested but worth a good look"). Analyst coverage is thin (1–3 brokers) with wildly inconsistent targets (₹560 to ~₹970).</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border-top:3px solid #e67e22">
+        <div class="plab">Momentum Prediction</div>
+        <div class="pval" style="color:#f57f17">BOUNCING &#8594; NOT YET CONFIRMED</div>
+        <p style="font-size:11.3px;margin-top:5px">Price momentum has flipped from capitulation to a fresh Buy signal with strong hourly cross-confirmation, but the higher-degree daily trend itself remains mixed (&minus;1/+1). Earnings momentum is genuinely ahead of price: EPS Strength is rated GOOD (82) while Price Strength is rated POOR (21) &mdash; a real divergence, the mirror image of a recent CARBORUNIV report in this series where price ran ahead of earnings.</p>
+      </div>
+    </div>
+    <div class="notebox"><b>Framing note:</b> This reads as a technical <b>bounce off oversold, not a confirmed trend reversal</b>. The 47% drawdown from 52-week highs was severe, and mutual funds have been reducing their position (shares held by funds &minus;12.66%, Sep&#8594;latest) even as EPS strength is rated GOOD &mdash; a genuine tension the report does not attempt to resolve.</div>
+  </div>
+
+  <!-- ================= 03/04 SECTOR + SHAREHOLDING ================= -->
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1">
+        <div class="sec-title" id="sec05"><span class="num">05</span><h2>Sector Market Size</h2></div>
+        <svg viewBox="0 0 610 206" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+<line x1="46" y1="180.0" x2="602" y2="180.0" stroke="#dde2ea"/>
+<text x="10" y="22" font-size="9.5" fill="#8a94a6">US$ Bn</text>
+<rect x="424" y="12" width="9" height="9" fill="#1a2a4a" rx="2"/><text x="437" y="20" font-size="9.5" fill="#5a6475">T&amp;D EPC mkt</text>
+<rect x="514" y="12" width="9" height="9" fill="#2a9d8f" rx="2"/><text x="527" y="20" font-size="9.5" fill="#5a6475">Projected</text>
+<rect x="54" y="139.7" width="75" height="40.3" fill="#1a2a4a" rx="3"/><text x="92" y="134.7" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a2a4a">14.68</text><text x="92" y="199" text-anchor="middle" font-size="10" fill="#5a6475">2025</text><rect x="237" y="97.2" width="75" height="82.8" fill="#2a9d8f" rx="3"/><text x="274" y="92.2" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a2a4a">21.5</text><text x="274" y="199" text-anchor="middle" font-size="10" fill="#5a6475">~2030E</text><rect x="419" y="30.0" width="75" height="150.0" fill="#2a9d8f" rx="3"/><text x="457" y="25.0" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1a2a4a">35.20</text><text x="457" y="199" text-anchor="middle" font-size="10" fill="#5a6475">2035E</text></svg>
+        <div class="chartcap">India Power T&amp;D EPC market: US$14.68bn (2025) &#8594; US$35.20bn (2035E), CAGR 9.34% (2026&ndash;2035). Government-committed transmission capex through 2032: ~&#8377;9.15 trillion (~US$96.7&ndash;109bn). Inter-state transmission capacity needed by 2030: 335 GW. FY26 execution check: India added 113,013 MVA of grid transformation capacity, ~90% of CEA&#39;s annual target. This is a sector-wide, government-underwritten tailwind — not Transrail-specific.</div>
+      </div>
+      <div style="flex:1.08">
+        <div class="sec-title" id="sec06"><span class="num">06</span><h2>Shareholding — 6 Qtrs</h2></div>
+        <table class="t">
+          <tr><th>Category</th><th>Dec'24</th><th>Mar'25</th><th>Jun'25</th><th>Sep'25</th><th>Dec'25</th><th>Mar'26</th></tr>
+          <tr><td>Promoters</td><td>~71.1%</td><td>~71.1%</td><td>~71.1%</td><td>~71.1%</td><td>~71.1%</td><td>71.12%</td></tr>
+          <tr><td>FIIs</td><td>1.00%</td><td>0.61%</td><td>1.43%</td><td>1.16%</td><td>1.13%</td><td class="pos">2.17%</td></tr>
+          <tr><td>Mutual Funds</td><td>1.89%</td><td>2.51%</td><td>1.83%</td><td>1.29%</td><td>1.06%</td><td class="neg">0.75%</td></tr>
+          <tr><td>DIIs (total)</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>18.2%</td><td class="neg">~8.1&ndash;8.42%*</td></tr>
+        </table>
+        <div class="chartcap"><b>FII rising steadily; mutual funds declining steadily</b> — cross-confirms MarketSmith&#39;s finding of funds reducing (shares held by funds &minus;12.66%). *DII shows a large, genuinely unresolved conflict: 18.2% (Dec&#39;25) dropping sharply to ~8.1&ndash;8.42% (Mar&#39;26, two slightly different aggregator figures) &mdash; stated as-is, recommend primary-filing verification; aggregators sometimes misclassify DII vs &ldquo;public&rdquo;. Promoter holding ~71.12%, essentially unchanged since listing through Mar&#39;26; pledge 0.0% as of Sep 2025 (latest confirmed reading, no 2026 update found).</div>
+      </div>
+      <div style="flex:1.05">
+        <div class="sec-title" id="sec07"><span class="num">07</span><h2>Stock Performance</h2></div>
+        <table class="peer">
+          <tr><th>Metric</th><th>Value</th></tr>
+          <tr style="background:#eef4fc"><td>&#9733; CMP (30 Sep&#39;26)</td><td><b>&#8377;476.15</b></td></tr>
+          <tr><td>IPO Issue Band</td><td>&#8377;410&ndash;432</td></tr>
+          <tr><td>Listing Day (27 Dec&#39;24)</td><td>&#8377;590 NSE (+36.6%) / &#8377;585.15 BSE (+35.45%)*</td></tr>
+          <tr><td>52-Wk High (3 figures, unresolved)</td><td>&#8377;767 / &#8377;800.90 / &#8377;856</td></tr>
+          <tr><td>52-Wk Low</td><td>&#8377;400.65&ndash;401 (touched ~16 Sep 2026)</td></tr>
+        </table>
+        <div class="krow"><span class="klab">1M/3M/6M/1Y/YTD Returns</span><span class="kval" style="font-size:11px">Not found<small>Gap — no reliable period-return series located</small></span></div>
+        <div class="chartcap">*Listing-day gains pared back ~6% intraday from the day's high. CMP is now BELOW the ₹590 listing price and roughly back in line with (slightly above) the ₹410–432 issue band — the stock has given back its entire listing-day gain over ~21 months. Post-listing round-trip: ~₹590 listing → ~₹800 high (Sep 2025) → ~₹400 low (Sep 2026) → current recovery attempt.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec compact">
+    <div class="sec-title" id="sec08"><span class="num">08</span><h2>Key Financials — Annual &amp; Quarterly (&#8377; Crore, Consolidated)</h2></div>
+    <div class="cols" style="margin-bottom:10px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column"><div class="microhead" style="margin-top:0">&#9733; Latest Quarter — Q1 FY27 (Jun&#39;26)</div><div style="border:2px solid #1565c0;border-radius:8px;padding:8px 14px;background:linear-gradient(135deg,#eef4fc,#f6faff 60%,#eefaf0);box-shadow:0 2px 8px rgba(21,101,192,0.12);flex:1;margin-bottom:0">
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;1,736 Cr</div><div style="font-size:10.5px;color:#5a6475">Revenue &nbsp;<b class="pos">+5% YoY</b></div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">~11.7&ndash;12%</div><div style="font-size:10.5px;color:#5a6475">OPM</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;108 Cr</div><div style="font-size:10.5px;color:#5a6475">PAT</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;8.04</div><div style="font-size:10.5px;color:#5a6475">EPS (qtr) &nbsp;<b class="pos">+2% YoY</b></div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;16,035 Cr</div><div style="font-size:10.5px;color:#5a6475">Order Book (30 Jun)</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;1,034 Cr</div><div style="font-size:10.5px;color:#5a6475">Q1 Order Inflow &nbsp;88% Power T&amp;D</div></div>
+      </div>
+      <div style="font-size:10.4px;color:#1a3a6b;margin-top:8px">Q1 FY27 EPS ₹8.04 exactly matches MarketSmith's independently-sourced figure — a strong cross-confirmation. Revenue growth was a soft +5% YoY (management attributes to supply-chain disruption/global uncertainty) against a reiterated ~20% FY27 guidance — though guidance has also been cited elsewhere as 26–27%+, a genuine inconsistency across sources/dates, both stated, not resolved.</div>
+    </div></div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column">
+        <div class="microhead" style="margin-top:0">Valuation &amp; Balance-Sheet Tiles</div>
+    <div class="tiles" style="flex-wrap:wrap;flex:1;align-content:stretch">
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">FY26 Revenue</div><div class="val">&#8377;6,880 Cr</div><div class="note">+30% YoY</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E (TTM)</div><div class="val pos">14.5&ndash;15.4x</div><div class="note">Cheapest-in-peer-group</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/B</div><div class="val">2.81x</div><div class="note">Screener; MarketSmith shows 2.66x</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">ROE / ROCE</div><div class="val pos">20.0% / 33.6%</div><div class="note">ROCE highest of full peer set</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">D/E (Total)</div><div class="val">~0.30x</div><div class="note">FY26 — down from ~0.71x FY22</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">LT Debt/Equity</div><div class="val pos">4%</div><div class="note">MarketSmith — likely narrower basis than total D/E; both stated</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Market Cap</div><div class="val">&#8377;6,061&ndash;6,401 Cr</div><div class="note">Screener range; MarketSmith &#8377;6,063.67 Cr</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Beta</div><div class="val warn">1.58</div><div class="note">High-beta name; Alpha &minus;0.14</div></div>
+    </div>
+      </div>
+    </div>
+
+    <div class="cols" style="margin-top:6px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Annual P&amp;L — Last 5 Years (Consolidated, FY ending Mar)</div>
+        <table class="t fit">
+          <tr><th>Year</th><th>Revenue</th><th>EBITDA</th><th>EBITDA%</th><th>PAT</th><th>EPS (&#8377;)</th></tr>
+          <tr><td>FY22</td><td>2,338</td><td>247</td><td>10.6%</td><td>65</td><td>28.49</td></tr>
+          <tr><td>FY23</td><td>3,152</td><td>364</td><td>11.5%</td><td>108</td><td>47.18</td></tr>
+          <tr><td>FY24</td><td>4,077</td><td>559</td><td>13.7%</td><td>233</td><td class="warn">18.81*</td></tr>
+          <tr><td>FY25</td><td>5,308</td><td>776</td><td>14.6%</td><td>329</td><td>24.48</td></tr>
+          <tr><td><b>FY26</b></td><td><b>6,880</b></td><td><b>941</b></td><td><b class="warn">13.7%</b></td><td><b>404</b></td><td><b>30.06</b></td></tr>
+        </table>
+        <div class="chartcap">*FY23&#8594;FY24 EPS fell despite PAT more than doubling — reflects share-count dilution from a pre-IPO fundraise/bonus/split, not an earnings decline. FY26 margin (13.7%) is a mild compression vs FY25 (14.6%) even as revenue grew 30%. A separate source cites FY26 PAT as &#8377;421 Cr / 6.1% margin — basis unconfirmed, both stated.</div>
+        <div class="microhead" style="margin-top:9px">Quarterly Trend — Last 8 Quarters</div>
+        <table class="t fit">
+          <tr><th>Quarter</th><th>Revenue</th><th>OPM%</th><th>PAT</th><th>EPS (&#8377;)</th></tr>
+          <tr><td>Q2 FY25 (Sep'24)</td><td>1,088</td><td>13%</td><td>55</td><td>4.41</td></tr>
+          <tr><td>Q3 FY25 (Dec'24)</td><td>1,358</td><td>13%</td><td>93</td><td>6.94</td></tr>
+          <tr><td>Q4 FY25 (Mar'25)</td><td>1,946</td><td>12%</td><td>127</td><td>9.43</td></tr>
+          <tr><td>Q1 FY26 (Jun'25)</td><td>1,660</td><td>12%</td><td>106</td><td>7.88</td></tr>
+          <tr><td>Q2 FY26 (Sep'25)</td><td>1,561</td><td>12%</td><td>91</td><td>6.78</td></tr>
+          <tr><td>Q3 FY26 (Dec'25)</td><td>1,796</td><td>13%</td><td>110</td><td>8.17</td></tr>
+          <tr><td>Q4 FY26 (Mar'26)</td><td>1,863</td><td>11%</td><td>96</td><td class="warn">7.19</td></tr>
+          <tr><td><b>Q1 FY27 (Jun'26)</b></td><td><b>1,736</b></td><td><b>11.7&ndash;12%</b></td><td><b>108</b></td><td><b>8.04</b></td></tr>
+        </table>
+      </div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Revenue (bars) with YoY Growth % (line) — 5 Years</div>
+        <svg viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+<line x1="40" y1="146.0" x2="556" y2="146.0" stroke="#dde2ea"/>
+<text x="10" y="24" font-size="9" fill="#8a94a6">Rs Cr</text>
+<rect x="49.0" y="118.7" width="68.0" height="27.3" fill="#1a2a4a" rx="2"/><text x="83.0" y="114.7" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">2338</text><text x="83.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text><rect x="135.0" y="109.2" width="68.0" height="36.8" fill="#1a2a4a" rx="2"/><text x="169.0" y="105.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">3152</text><text x="169.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text><rect x="221.0" y="98.4" width="68.0" height="47.6" fill="#1a2a4a" rx="2"/><text x="255.0" y="94.4" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">4077</text><text x="255.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><rect x="307.0" y="84.0" width="68.0" height="62.0" fill="#1a2a4a" rx="2"/><text x="341.0" y="80.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">5308</text><text x="341.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><rect x="393.0" y="65.6" width="68.0" height="80.4" fill="#5b7bb5" rx="2"/><text x="427.0" y="61.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">6880</text><text x="427.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text><path d="M169.0,120.0 L255.0,113.1 L341.0,100.2 L427.0,73.5" fill="none" stroke="#e67e22" stroke-width="2"/><circle cx="169.0" cy="120.0" r="2.8" fill="#e67e22"/><text x="182.0" y="115.0" text-anchor="middle" font-size="9" font-weight="700" fill="#e67e22">34.8%</text><circle cx="255.0" cy="113.1" r="2.8" fill="#e67e22"/><text x="268.0" y="108.1" text-anchor="middle" font-size="9" font-weight="700" fill="#e67e22">29.3%</text><circle cx="341.0" cy="100.2" r="2.8" fill="#e67e22"/><text x="354.0" y="95.2" text-anchor="middle" font-size="9" font-weight="700" fill="#e67e22">30.2%</text><circle cx="427.0" cy="73.5" r="2.8" fill="#e67e22"/><text x="440.0" y="68.5" text-anchor="middle" font-size="9" font-weight="700" fill="#e67e22">29.6%</text></svg>
+        <div class="microhead" style="margin-top:9px">Operating Cash Flow — Annual (&#8377; Cr)</div>
+        <svg viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+<line x1="40" y1="146.0" x2="586" y2="146.0" stroke="#dde2ea"/>
+<text x="10" y="24" font-size="9" fill="#8a94a6">Rs Cr</text>
+<path d="M40.0,127.4 L176.5,88.0 L313.0,131.2 L449.5,63.0 L586.0,37.0" fill="none" stroke="#2e7d32" stroke-width="2"/>
+<circle cx="40.0" cy="127.4" r="2.8" fill="#2e7d32"/><text x="40.0" y="121.4" text-anchor="middle" font-size="9.5" font-weight="700" fill="#2e7d32">46</text><text x="40.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text><circle cx="176.5" cy="88.0" r="2.8" fill="#2e7d32"/><text x="176.5" y="82.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#2e7d32">143</text><text x="176.5" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text><circle cx="313.0" cy="131.2" r="2.8" fill="#2e7d32"/><text x="313.0" y="125.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#2e7d32">35</text><text x="313.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><circle cx="449.5" cy="63.0" r="2.8" fill="#2e7d32"/><text x="449.5" y="57.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#2e7d32">287</text><text x="449.5" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><circle cx="586.0" cy="37.0" r="2.8" fill="#2e7d32"/><text x="586.0" y="31.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#2e7d32">643</text><text x="586.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text></svg>
+        <div class="chartcap" style="text-align:center">Operating CF collapsed FY24 (₹35 Cr, working-capital build during rapid scale-up) then recovered strongly FY25→FY26 (₹287→₹643 Cr), consistent with collections catching up.</div>
+      </div>
+    </div>
+
+    <div class="cols" style="margin-top:9px">
+      <div style="flex:1"><div class="notebox green"><b>&#9733; Order book &amp; margin stability — the rare combination:</b> outstanding order book ₹16,313–16,361 Cr (Mar'26, two sources) / ₹16,035 Cr (Jun'26); derived book-to-bill (calculated, not company-stated) ~2.2–2.3x. EBITDA margin has held in a tight 11–13% band over two years — notably stable for an EPC business, hovering near management's ~11% guidance floor.</div></div>
+      <div style="flex:1"><div class="notebox blue"><b>&#9733; Data gaps to flag:</b> precise net debt/cash figure not found (only gross borrowings, ₹678 Cr FY26). Working capital days/receivables detail not found. Free cash flow (capex-adjusted) not cleanly separable from other investing-activity lines — no estimate attempted. EV/EBITDA for Transrail itself not found cleanly.</div></div>
+    </div>
+  </div>
+
+  <!-- ================= 07 KEY RATIOS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Ratios — Industry-Contextualized</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#f0f7f0;border-color:#2e7d32">
+        <div class="plab">ROCE &nbsp;·&nbsp; Return on Capital Employed <span class="badge b-bull">Best-in-Group</span></div>
+        <div class="pval" style="font-size:26px">33.6% <span style="font-size:13px;font-weight:600;color:#5a6475">vs KEC 16.5% &#183; KPIL 18.3% &#183; Skipper 23.6%</span></div>
+        <p style="font-size:11.3px;margin-top:6px"><b>Note:</b> This is the highest ROCE of the entire seven-company peer set (Transrail, KEC, KPIL, Skipper, Voltamp, Genus Power, Techno Electric) — yet the stock trades at 14.5&ndash;15.4x P/E, the near-cheapest multiple in the group (only Genus Power at 13.6x is lower). This combination — best-in-group capital efficiency at a near-bottom-of-group multiple — is a genuine valuation anomaly, discussed further in §15.</p>
+      </div>
+      <div class="panel" style="background:#fdf0f0;border-color:#c62828">
+        <div class="plab">D/E Basis Discrepancy &nbsp;·&nbsp; Total D/E vs LT Debt/Equity <span class="badge b-warn">Two Bases, Not Reconciled</span></div>
+        <div class="pval" style="font-size:26px">~0.30x <span style="font-size:13px;font-weight:600;color:#5a6475">vs MarketSmith's LT Debt/Equity of 4%</span></div>
+        <p style="font-size:11.3px;margin-top:6px"><b>Note:</b> Borrowings roughly flat FY22&#8594;FY26 (₹469→₹678 Cr) while equity nearly quadrupled (₹663→₹2,281 Cr, IPO proceeds + retained earnings), driving total D/E down from ~0.71x (FY22) to ~0.30x (FY26). MarketSmith's own LT Debt/Equity reading of just 4% may be measuring a narrower "long-term debt only" basis vs total D/E — both figures stated, not force-reconciled.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 08 MANAGEMENT METRICS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec10"><span class="num">10</span><h2>Management Metrics</h2></div>
+<div class="tiles">
+  <div class="tile">
+    <div class="lab">Board &amp; Key Executives</div>
+    <div class="val" style="font-size:14px">Bagde (Chairman) · Narang (MD/CEO)</div>
+    <div class="note">Digambar Chunnilal Bagde — Executive Chairman (promoter). Randeep Narang — MD &amp; CEO. Sanjay Verma — Vice Chairman. Six independent directors incl. Vinod Dasari, Ranjit Jatar. Audit Committee chaired by Ranjit Jatar; NRC chaired by Vinod Dasari.</div>
+  </div>
+  <div class="tile">
+    <div class="lab">Exec Comp as % of FY26 PAT</div>
+    <div class="val warn">2.7%</div>
+    <div class="note">FY25 KMP pay: Bagde ₹7.174 Cr + Narang ₹3.844 Cr = ₹11.02 Cr vs FY26 PAT ₹404 Cr. CFO Deepak Khandelwal's pay not found (appointed mid-FY26).</div>
+  </div>
+  <div class="tile">
+    <div class="lab">Recent KMP Change</div>
+    <div class="val" style="font-size:15px">CFO CHANGED MAR 2025</div>
+    <div class="note">CFO Ajit Pratap Singh resigned (personal reasons) 8 Mar 2025; Deepak Khandelwal (CA, 28+ yrs) appointed same date. An unconfirmed headline suggests a Deputy MD resignation ~Jun 2026 alongside the Gactel RPT — name/reason not confirmed from a primary source, stated as a gap, not a name.</div>
+  </div>
+  <div class="tile">
+    <div class="lab">Auditor Transition</div>
+    <div class="val" style="font-size:15px">NEW JOINT AUDITOR, 5-YR TERM</div>
+    <div class="note">G.M. Kapadia &amp; Co. appointed joint statutory auditor from the 19th AGM (28 Sep 2026) through the 24th AGM (2031). Outgoing auditor identity and whether the FY25/FY26 opinion was clean/qualified not confirmed — recommend checking for an Emphasis of Matter given the pending tax demand.</div>
+  </div>
+</div>
+<div class="cols" style="margin-top:10px">
+  <div style="flex:1">
+    <div class="microhead" style="margin-top:0">Related-Party Transaction — Gactel Acquisition</div>
+    <p style="font-size:11.3px">Board approved (~22 Jun 2026) 100% acquisition of Gactel Turnkey Projects Ltd from Ajanma Holdings Private Limited (the promoter entity) for consideration not exceeding ₹10 Cr — an explicit RPT since Gactel and Transrail are fellow subsidiaries of Ajanma Holdings. Company states arm's-length pricing per an independent valuation report. Gactel's FY25-26 turnover was only ₹0.58 Cr (industrial cooling/engineering) — small in absolute size, but worth flagging for reader scrutiny given it coincides with the unconfirmed Deputy MD departure headline above.</p>
+  </div>
+  <div style="flex:1">
+    <div class="notebox blue" style="margin-top:0"><b>Other governance items:</b> BSE/NSE issued a warning for "wrong employee-status disclosure" — nature/date/resolution not detailed beyond the headline. No SEBI enforcement, insider-trading case, or IPO-process irregularity found; no evidence found of ASM/GSM listing in the sources searched (stated as "not found," not confirmed clean, since live exchange lists weren't directly checked). Founding-year discrepancy: CIN indicates 2008 incorporation, some sources cite 1984 for a predecessor entity — unresolved, not picked.</div>
+  </div>
+</div>
+  </div>
+
+  <!-- ================= 09 GUIDANCE ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec11"><span class="num">11</span><h2>Company Guidance &amp; Capital Allocation</h2></div>
+<div class="microhead">FY27 Guidance — Inconsistent Across Sources, Both Stated</div>
+<table class="t">
+  <tr><th style="text-align:left">Metric</th><th style="text-align:left">Figure A</th><th style="text-align:left">Figure B</th><th>Verdict</th></tr>
+  <tr><td style="text-align:left">FY27 Revenue Growth Guidance</td><td style="text-align:left">~20% (reiterated post Q1, despite soft +5% print)</td><td style="text-align:left">26–27%+ (raised from 24–25%, per ValuePickr/sentiment stream)</td><td><span class="badge b-warn">Both stated — unresolved</span></td></tr>
+  <tr><td style="text-align:left">Order Book (31 Mar 2026)</td><td style="text-align:left">₹16,313 Cr</td><td style="text-align:left">₹16,361 Cr</td><td><span class="badge b-warn">Minor variance — rounding/date</span></td></tr>
+  <tr><td style="text-align:left">52-Week High</td><td style="text-align:left">₹767 (Screener) / ₹800.90 (22 Sep'25, sentiment stream)</td><td style="text-align:left">₹856 (MarketSmith annual table, 2025)</td><td><span class="badge b-bear">Three figures — unresolved</span></td></tr>
+</table>
+<div class="cols" style="margin-top:12px">
+  <div style="flex:1.2">
+    <div class="microhead">Order Book &amp; Pipeline — Time Series (Inconsistently Reported)</div>
+    <table class="t">
+      <tr><th style="text-align:left">Snapshot Date</th><th style="text-align:left">Order Book</th><th>Source</th></tr>
+      <tr><td style="text-align:left">31 Mar 2025</td><td style="text-align:left">~₹14,551 Cr</td><td>CRISIL (Aug 2025)</td></tr>
+      <tr><td style="text-align:left">31 Mar 2026</td><td style="text-align:left">₹16,313 Cr / ₹16,361 Cr</td><td>Two sources</td></tr>
+      <tr><td style="text-align:left">30 Jun 2026 (Q1 FY27)</td><td style="text-align:left">₹16,035 Cr (incl. L1 ₹400 Cr; core ₹15,635 Cr)</td><td>Company</td></tr>
+    </table>
+    <div class="notebox" style="margin-top:10px"><b>Recommend verification:</b> the reported order-book time series is inconsistently reported across outlets and no single authoritative series was assembled here — verify the exact current figure against the company's own latest investor presentation before finalizing any headline order-book number. Bidding pipeline >₹20,000 Cr expected to convert Q2/Q3 FY27; broader tendering pipeline cited at ~₹1 lakh Cr (~60% domestic/~40% international) as of ~May 2026.</div>
+  </div>
+  <div style="flex:1">
+    <div class="microhead">Capital Allocation — Dividends &amp; Pending QIP</div>
+    <table class="t">
+      <tr><th style="text-align:left">Item</th><th style="text-align:left">Detail</th></tr>
+      <tr><td style="text-align:left">Final Div FY25</td><td style="text-align:left">₹0.80/share</td></tr>
+      <tr><td style="text-align:left">Interim Div FY27</td><td style="text-align:left">₹3.00/share (28 Jul'26, record 3 Aug'26)</td></tr>
+      <tr><td style="text-align:left">Final Div FY26</td><td style="text-align:left">₹2/share (100% of face value), approved 19th AGM 28 Sep'26</td></tr>
+      <tr><td style="text-align:left">QIP (pending)</td><td style="text-align:left">Up to ₹600 Cr, board-approved only, "tech and green energy" — completion/pricing/allottees not found</td></tr>
+    </table>
+    <div class="chartcap" style="margin-top:6px">Yield 1.11% (MarketSmith). No buyback history — consistent with a company that IPO'd under 2 years ago and is now raising, not returning, capital. One aggregator's "dividend since Aug 2023" phrasing predates the Dec 2024 listing — flagged as a likely data error, not resolved.</div>
+  </div>
+</div>
+  </div>
+
+    <!-- ================= 10 STREET CONSENSUS ================= -->
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec12"><span class="num">12</span><h2>Street Consensus</h2></div>
+        <div class="krow"><span class="klab">Analysts Covering</span><span class="kval">1&ndash;3 (varies by aggregator)<small>Sparse coverage — Trendlyne shows 3, others show 1</small></span></div>
+        <div class="krow"><span class="klab">Rating</span><span class="kval" style="color:#2e7d32">Buy / Strong Buy<small>Axis Direct (23 Apr'25): Buy, target ₹560</small></span></div>
+        <div class="krow"><span class="klab">Price Targets — Wildly Inconsistent</span><span class="kval" style="font-size:11px">₹560 to ~₹969&ndash;997.5<small>Also seen: ₹950 (1 analyst, "Strong Buy"); ₹842.50 (range ₹835–850)</small></span></div>
+        <div class="krow"><span class="klab">Most Recent Dated Action</span><span class="kval">Axis Direct, 23 Apr 2025<small>No specific dated upgrade/downgrade found since</small></span></div>
+        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Explicit caveat:</b> analyst coverage is sparse and price targets range from ₹560 to ~₹970 — likely reflecting different report dates spanning a period when the stock itself moved from ~₹800 to ~₹400. No single consensus figure should be treated as reliable without this caveat.</div>
+      </div>
+            <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec13"><span class="num">13</span><h2>Share Volume &amp; Profile</h2></div>
+        <div class="krow"><span class="klab">Volume — 30 Sep (MarketSmith)</span><span class="kval">5,833,306<small>+471.82% above average — a genuine spike</small></span></div>
+        <div class="krow"><span class="klab">U/D Volume Ratio</span><span class="kval">3.4<small>MarketSmith — favors up-volume days</small></span></div>
+        <div class="krow"><span class="klab">Shares in Float</span><span class="kval">3.89 Cr<small>Beta 1.58 — a high-beta name</small></span></div>
+        <div class="krow"><span class="klab">Most Recent Bulk Deal</span><span class="kval">11 Feb 2025<small>718,119 shares @ avg ₹603.34 — no 2026 bulk deal found (possible search gap)</small></span></div>
+        <div class="krow"><span class="klab">F&amp;O Eligibility</span><span class="kval" style="font-size:11px">Unconfirmed<small>Retail platforms appear to show an option chain, not verified from an exchange source</small></span></div>
+        <div class="mininote" style="background:#fdf0f0;border-left:3px solid #c62828"><b>&#9888; Lock-up overhang, partially unresolved:</b> a 27,017,950-share lock-up (23 Dec'24, 550 days) expired 26 Jun 2026 — whether post-expiry selling materialized was not confirmed. A SEPARATE, much larger 77,847,307-share lock-up was also referenced with its exact expiry date NOT confirmed — a potentially significant unresolved supply overhang needing direct verification against BSE/NSE lock-in disclosures.</div>
+      </div>
+          </div>
+  </div>
+
+  <!-- ================= 13 SECTOR ROTATION / PEER COMPARISON ================= -->
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec14"><span class="num">14</span><h2>Sector Rotation</h2></div>
+        <p style="font-size:11px">Transrail's sector &#8212; Construction &amp; Engineering / Power T&amp;D EPC, classified within Industrials (dominant convention; a minority source, Research360, instead uses "General Industrials → Heavy Electrical Equipment") &#8212; is a genuinely accurate fit for the Industrials wedge: capital investment and infrastructure spending, here anchored on India's ~₹9.15 trillion government-committed transmission-capex supercycle through 2032.</p>
+        <div class="sector-wheel-compact">
+<div class="relative mt-16 md:mt-[80px] mx-auto w-full max-w-[760px] overflow-visible"><div class="relative mx-auto w-[86vw] md:w-full max-w-[540px] aspect-square overflow-visible"><svg viewBox="-40 -40 620 620" class="absolute inset-0 w-full h-full overflow-visible"><path d="M 270 22 A 248 248 0 0 1 518 270" fill="none" stroke="#0f2f5c" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 518 270 A 248 248 0 0 1 270 518" fill="none" stroke="#8b2e00" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 270 518 A 248 248 0 0 1 22 270.00000000000006" fill="none" stroke="#4c2e8a" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 22 270.00000000000006 A 248 248 0 0 1 269.99999999999994 22" fill="none" stroke="#115e5f" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><g transform="translate(270 22)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#0f2f5c" stroke="#0f2f5c" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(518 270) rotate(90)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#8b2e00" stroke="#8b2e00" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(270 518) rotate(180)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#4c2e8a" stroke="#4c2e8a" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(22 270) rotate(270)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#115e5f" stroke="#115e5f" stroke-width="0.8" stroke-linejoin="round"></path></g><defs><path id="label-early" d="M 93.23 59.34 A 275 275 0 0 1 446.77 59.34"></path><path id="label-late" d="M 480.66 93.23 A 275 275 0 0 1 480.66 446.77"></path><path id="label-slow" d="M 93.23 480.66 A 275 275 0 0 0 446.77 480.66"></path><path id="label-recov" d="M 59.34 446.77 A 275 275 0 0 1 59.34 93.23"></path></defs><text fill="#0f2f5c" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-early" startOffset="50%" text-anchor="middle">EARLY EXPANSION</textPath></text><text fill="#8b2e00" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-late" startOffset="50%" text-anchor="middle">LATE EXPANSION</textPath></text><text fill="#4c2e8a" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-slow" startOffset="50%" text-anchor="middle">SLOWDOWN</textPath></text><text fill="#115e5f" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-recov" startOffset="50%" text-anchor="middle">RECOVERY</textPath></text><g><path d="M 270.0 35.0 A 235 235 0 0 1 408.1295342887312 79.88100632188736 L 334.65637775217203 181.00813061875579 A 110 110 0 0 0 270.0 160.0 Z" fill="#43A047" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.15092303249094 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #43A047; stroke-width: 2.4; stroke-linejoin: round;">TECHNOLOGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">TECHNOLOGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Innovation-led</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">growth</text></g></g><g><path d="M 408.1295342887312 79.88100632188736 A 235 235 0 0 1 493.4982813293611 197.38100632188736 L 374.6162167924669 236.00813061875579 A 110 110 0 0 0 334.65637775217203 181.00813061875579 Z" fill="#C0CA33" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 168.90093660569462)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">DISCRETIONARY</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DISCRETIONARY</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising confidence</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& spending</text></g></g><g><path d="M 493.4982813293611 197.38100632188736 A 235 235 0 0 1 493.49828132936113 342.61899367811264 L 374.6162167924669 303.9918693812442 A 110 110 0 0 0 374.6162167924669 236.00813061875579 Z" fill="#F0A93B" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(442.0 270.0)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F0A93B; stroke-width: 2.4; stroke-linejoin: round;">INDUSTRIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">INDUSTRIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Capital investment</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& infrastructure</text></g></g><g><path d="M 493.49828132936113 342.61899367811264 A 235 235 0 0 1 408.1295342887312 460.1189936781126 L 334.65637775217203 358.9918693812442 A 110 110 0 0 0 374.6162167924669 303.9918693812442 Z" fill="#B5651D" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 371.09906339430535)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #B5651D; stroke-width: 2.4; stroke-linejoin: round;">DEFENSE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DEFENSE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Government spending</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& indigenization</text></g></g><g><path d="M 408.1295342887312 460.1189936781126 A 235 235 0 0 1 270.00000000000006 505.0 L 270.0 380.0 A 110 110 0 0 0 334.65637775217203 358.9918693812442 Z" fill="#2E6DA4" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.150923032491 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #2E6DA4; stroke-width: 2.4; stroke-linejoin: round;">AEROSPACE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">AEROSPACE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Order backlogs</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& export growth</text></g></g><g><path d="M 270.00000000000006 505.0 A 235 235 0 0 1 131.87046571126885 460.11899367811264 L 205.34362224782797 358.9918693812442 A 110 110 0 0 0 270.0 380.0 Z" fill="#F4791A" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.84907696750906 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F4791A; stroke-width: 2.4; stroke-linejoin: round;">ENERGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">ENERGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Commodity cycles</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& inflation</text></g></g><g><path d="M 131.87046571126885 460.11899367811264 A 235 235 0 0 1 46.50171867063892 342.6189936781127 L 165.3837832075331 303.9918693812442 A 110 110 0 0 0 205.34362224782797 358.9918693812442 Z" fill="#9163CB" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.84907696750906 371.0990633943054)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #9163CB; stroke-width: 2.4; stroke-linejoin: round;">UTILITIES</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">UTILITIES</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Defensive demand</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& stability</text></g></g><g><path d="M 46.50171867063892 342.6189936781127 A 235 235 0 0 1 46.501718670638894 197.3810063218874 L 165.3837832075331 236.0081306187558 A 110 110 0 0 0 165.3837832075331 303.9918693812442 Z" fill="#299BD1" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(98.0 270.00000000000006)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">STAPLES</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">STAPLES</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Essential needs</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& resilience</text></g></g><g><path d="M 46.501718670638894 197.3810063218874 A 235 235 0 0 1 131.87046571126876 79.88100632188738 L 205.34362224782794 181.00813061875579 A 110 110 0 0 0 165.3837832075331 236.0081306187558 Z" fill="#16A398" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.849076967509 168.90093660569465)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #16A398; stroke-width: 2.4; stroke-linejoin: round;">HEALTH CARE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">HEALTH CARE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Demographics</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& innovation.</text></g></g><g><path d="M 131.87046571126876 79.88100632188738 A 235 235 0 0 1 269.99999999999994 35.0 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="#7CB342" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.849076967509 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #7CB342; stroke-width: 2.4; stroke-linejoin: round;">FINANCIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">FINANCIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising rates</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& lending growth.</text></g></g><path d="M 493.49828132936113 342.61899367811264 A 235 235 0 0 1 408.1295342887312 460.1189936781126 L 334.65637775217203 358.9918693812442 A 110 110 0 0 0 374.6162167924669 303.9918693812442 Z" fill="none" stroke="#0a2342" stroke-width="3.2" stroke-linejoin="round"></path><circle cx="270" cy="270" r="108.5" fill="#ffffff" stroke="#e7e0d1" stroke-width="1.2"></circle><circle cx="270" cy="270" r="108.5" fill="none" stroke="#000" stroke-opacity="0.04" stroke-width="6"></circle><g transform="translate(270 270)"><text x="0" y="-8" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.5" fill="#0a2342">TRANSRAIL</text><text x="0" y="7" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.3" fill="#0a2342">LIGHTING</text><text x="0" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400" letter-spacing="0.1">Mapped to industrials sector —</text><text x="0" y="32.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400">capital investment & infrastructure</text><path d="M 95.00,-8.01 L 94.99,8.00 L 111.00,-0.00 Z" fill="#0a2342"></path></g></svg></div><div class="mt-8 md:mt-10 flex justify-center"><div class="h-[1px] w-[72px] bg-[#d9d0bb]/70"></div></div></div>
+        </div>
+        <div class="chartcap" style="text-align:center;margin-top:2px">BSE: 545252 &middot; mapped: industrials &middot; wedge: capital investment &amp; infrastructure</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec15"><span class="num">15</span><h2>Peer Comparison</h2></div>
+        <table class="peer">
+          <tr><th>Company</th><th>MCap (₹Cr)</th><th>P/E</th><th>P/B</th><th>ROE%</th><th>ROCE%</th></tr>
+          <tr style="background:#eef4fc"><td>&#9733; Transrail</td><td><b>6,061&ndash;6,401</b></td><td><b>14.5&ndash;15.4x</b></td><td><b>2.81</b></td><td><b>20.0</b></td><td><b class="pos">33.6</b></td></tr>
+          <tr><td>KEC Intl</td><td>10,126</td><td>16.8x</td><td>~1.65</td><td>11.4</td><td>16.5</td></tr>
+          <tr><td>Kalpataru (KPIL)</td><td>23,585</td><td>21.2x</td><td>3.03</td><td>13.7</td><td>18.3</td></tr>
+          <tr><td>Skipper Ltd</td><td>6,060</td><td>26.1x</td><td>4.07</td><td>16.6</td><td>23.6</td></tr>
+          <tr><td>Voltamp Transf.</td><td>~10,700</td><td>31&ndash;34x</td><td>~5.9</td><td>17.4</td><td>23.5</td></tr>
+          <tr><td>Genus Power</td><td>8,837</td><td class="pos">13.6x</td><td>3.98</td><td class="pos">30.9</td><td>25.3</td></tr>
+          <tr><td>Techno Electric</td><td>11,745</td><td>27.2x</td><td>~2.83</td><td>12.0</td><td>14.9</td></tr>
+        </table>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>The central valuation anomaly:</b> Transrail trades at the near-cheapest P/E in this peer set (only Genus Power, 13.6x, is lower) — well below KPIL (21x), Skipper (26x), Techno Electric (27x) and Voltamp (31&ndash;34x) — yet its ROCE (33.6%) is the HIGHEST of the entire group, and its ROE (20.0%) is second only to Genus Power (30.9%). Best-in-group capital efficiency at a near-bottom-of-group multiple. Plausible (unproven) explanations: smaller scale, newer/thinner-float listing, the FY26 order-inflow guidance miss, and the tax-demand/search-and-seizure overhang — offered as hypotheses, not the definitive answer.</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= 16 RISK ANALYSIS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec16"><span class="num">16</span><h2>Risk Analysis</h2></div>
+    <table class="t prose">
+      <tr><th style="text-align:left">Category</th><th>Severity</th><th style="text-align:left">Detail</th></tr>
+      <tr><td style="text-align:left">Governance / Tax</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">Income Tax search-and-seizure (24&ndash;28 Mar 2026) followed by a ₹82.3mn tax demand plus ₹427.4mn penalty (~5x the demand, unusually large) &mdash; assessment year and contest status not found; combined ~₹51 Cr exposure vs FY26 PAT of ₹404 Cr. Separately, an unresolved RBI FEMA show-cause notice (disclosed in the DRHP) warns that inability to realize/repatriate foreign dues could have a material adverse impact &mdash; outcome not found, an open item, not dismissed as resolved.</td></tr>
+      <tr><td style="text-align:left">Business Model / Competition</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">Structurally low switching costs &mdash; every project is competitively tendered, no customer lock-in. Competes against KEC (far larger scale, 372,200 MTPA), KPIL (largest order book, ₹65,457 Cr), Skipper and Techno Electric domestically, plus Chinese-linked bidders now exempted to bid in Indian government power tenders and PowerChina/Chinese state EPC firms in Africa (China's edge: "scale and bundled money").</td></tr>
+      <tr><td style="text-align:left">Execution / Project Risk</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">CRISIL explicitly flags EPC-standard operational/execution risk, time/cost overruns and litigation exposure. One documented instance: the Bangladesh river-crossing project saw delays from late consultant/design approvals plus 15&ndash;20 days from Bangladesh political unrest &mdash; management states it now executes at a healthy pace with on-time payments. No other specific arbitration/overrun/payment-dispute instance found &mdash; stated as "not found," not "clean."</td></tr>
+      <tr><td style="text-align:left">International / Sovereign</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">A brokerage-sourced (unverified at primary-filing level) claim states the international book is "largely insulated" via multilateral (World Bank/ADB) funding. A Nov 2026 World Bank debarment naming mix-up (unrelated entity TARIL) caused market confusion but was confirmed a false alarm, not an actual Transrail action.</td></tr>
+      <tr><td style="text-align:left">Raw Material / Input</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Steel-intensive tower fabrication is exposed to commodity price volatility; NO source confirmed Transrail's specific contractual price-escalation clause mechanics (threshold pass-through, indexation %) &mdash; a genuine, important data gap. Standard PGCIL/discom practice typically includes price-variation clauses, but this should not be assumed for Transrail specifically without verification.</td></tr>
+    </table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="notebox red"><b>Institutional selling amid earnings strength:</b> mutual fund holding has declined for six straight quarters (2.51%→0.75%, Mar'25→Mar'26) even as EPS Strength is rated GOOD (82) — a real tension between the fundamental and the flow data, stated plainly, not resolved.</div>
+      </div>
+      <div style="flex:1">
+        <div class="notebox"><b>Lock-in overhang:</b> the smaller 27.0mn-share lock-up expired 26 Jun 2026 (outcome unconfirmed); a separate, much larger 77.8mn-share lock-up's exact expiry was NOT confirmed in any source found &mdash; investors should verify this directly against BSE/NSE lock-in disclosures before sizing a position.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570);border-top:3px solid #f0b429;border-bottom:3px solid #f0b429;color:#f0b429;padding:9px 26px;font-weight:900;letter-spacing:2.5px;font-size:14px;text-transform:uppercase">Technical Analysis</div>
+  <div class="sec">
+    <div class="sec-title" id="sec17"><span class="num">17</span><h2>Technical Ratings &amp; Momentum</h2></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">Master Score — an Internal Inconsistency</div>
+        <div style="font-size:56px;font-weight:900;color:#f57f17;line-height:1">C <span style="font-size:24px;color:#8a94a6">/ 41</span></div>
+        <div style="font-size:11px;color:#5a6475;margin:2px 0 8px">Headline grade "C" (MarketSmith) vs a separately-shown numeric Master Score of <b>41</b> &mdash; two different scales/panels on the same MarketSmith page, both stated here, not reconciled.</div>
+        <p style="font-size:11.5px">EPS Rating <b>82 (GOOD)</b> vs Price Strength <b>21 (POOR)</b> — a genuine divergence worth flagging: earnings have been strong (EPS Strength GOOD) but price action has badly lagged (consistent with the ~47% drawdown from highs). This is the mirror image of a recent CARBORUNIV report in this series where price ran ahead of earnings — here it is earnings ahead of price.</p>
+        <div class="notebox blue" style="margin-top:10px"><b>Synthesis:</b> Buyer Demand <b>B-</b>, Group Rank <b>FAIR: 58 of 197</b>. Guru screens: William J. O'Neil 55%, James P. O'Shaughnessy 40%, Custom 52%, Peter Lynch 12%; Benjamin Graham and Warren Buffett both N/A. No single screen shows a strong fit — consistent with a name in an oversold-bounce, not an established-quality setup.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">MarketSmith Ratings Panel &amp; Fundamentals (30 Sep 2026)</div>
+        <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc)"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">EPS Strength</div><div style="font-size:21px;font-weight:900;color:#2e7d32">82</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">GOOD</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Price Strength</div><div style="font-size:21px;font-weight:900;color:#c62828">21</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">POOR</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Buyer Demand</div><div style="font-size:21px;font-weight:900;color:#1a2a4a">B-</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">GOOD</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Group Rank</div><div style="font-size:21px;font-weight:900;color:#1a2a4a">58</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">of 197 — FAIR</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Master Score</div><div style="font-size:21px;font-weight:900;color:#1a2a4a">C</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">also shown as 41</div></div></div>
+        <div class="microhead" style="margin-top:10px">MarketSmith Guru Screens — Strategy Fit</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 18px"><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">WILLIAM J. O'NEIL</b><b style="color:#7b1fa2">55%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:55%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">CUSTOM</b><b style="color:#7b1fa2">52%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:52%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">JAMES P. O'SHAUGHNESSY</b><b style="color:#7b1fa2">40%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:40%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">PETER LYNCH</b><b style="color:#7b1fa2">12%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:12%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">BENJAMIN GRAHAM / BUFFETT</b><b style="color:#8a94a6">N/A</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#cdd5e0;height:5px;border-radius:2px;width:0%"></div></div></div></div>
+        <div style="display:flex;gap:8px;margin-top:11px"><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">71</div><div style="font-size:8.6px;color:#8a94a6">Funds holding &#183; &minus;11.25% QoQ</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#c62828">1.21 Cr</div><div style="font-size:8.6px;color:#8a94a6">Shares w/ funds &#183; &minus;12.66% QoQ</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">3.4</div><div style="font-size:8.6px;color:#8a94a6">U/D Volume Ratio</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">1.58</div><div style="font-size:8.6px;color:#8a94a6">Beta</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 18 ELLIOTT WAVE ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec18"><span class="num">18</span><h2>Elliott Wave Analysis (MotiveWave)</h2></div>
+    <div class="cols">
+      <div class="imgwrap" style="flex:1"><img src="TRANSRAILL_chart.jpg" alt="Transrail Lighting 1H and 1D Elliott Wave chart"></div>
+    </div>
+    <div class="microhead" style="margin-top:12px">Wave Structure Interpretation</div>
+    <table class="t prose">
+      <tr><td style="width:90px;vertical-align:top"><b>1D Chart</b></td><td style="text-align:left">A long, multi-month corrective decline from a prior high near ₹750 (mid-2025) unfolds through a complex structure — labeled wave (i)-(ii)-(iii)-(iv)-(v) into an "X" bounce peak near ₹625 (~Nov 2025), then a further a-b-c decline into a "W" low, another i-ii-iii-iv-v impulsive-looking leg down, then a final a-b-c(Y) sequence bottoming in a wave "(2)" — this reads as a large, drawn-out corrective (2) wave of higher degree, now potentially completing. Current price sits around ₹448.80–481.45 (two reference levels on the chart). RSI is marked at just <b>7 at a price of ₹400.6</b> — extremely oversold, near the 52-week low. A green Buy signal has just fired (late Sep 2026). Support ₹458 (1D), resistance ₹501 (1D). Fibonacci: 61.8% retracement ₹437.07, 50% ₹448.15. Daily Trend Momentum reads <b>BUY 1 / SELL 0</b> with gauges at <b>&minus;1 (short-term) / +1 (long-term)</b> — mixed/transitional, not yet strongly bullish, though the headline signal has flipped to Buy.</td></tr>
+      <tr><td style="vertical-align:top"><b>1H Chart</b></td><td style="text-align:left">A more granular recent rally structure off the daily's wave-(2) low — labeled (iv)-(i)-(ii)-(iii)-(iv) climbing from support ₹456 through a sharp spike to wave (iii) near the session high, then pulling back to a wave (iv). Fibonacci retracements at ₹448.15 (50%) and ₹445.59/₹437.07 (61.8%, two separate swings measured). Support ₹456, resistance ₹512. Hourly Trend Momentum reads <b>BUY 1 / SELL 0</b> with gauges at <b>+4 (short-term) / +3 (long-term)</b> — genuinely strong, both-positive bullish momentum, notably stronger than the daily reading.</td></tr>
+      <tr><td style="vertical-align:top"><b>Synthesis</b></td><td style="text-align:left">This looks like a capitulation/oversold-bounce setup: RSI near 7 is about as oversold as this indicator gets, a Buy signal has fired, and hourly momentum is strongly positive on both gauges (+4/+3), cross-confirmed by MarketSmith's volume spike of 471.82% above average on the up-move day. The caution: the <b>daily timeframe itself is only mixed</b> (&minus;1/+1), not confirmed-bullish — the primary/higher-degree trend has not yet flipped, only the near-term hourly structure has. This multi-month decline was severe, ~₹750 to ~₹400, roughly a 47% drawdown — a single oversold bounce does not by itself confirm wave (2) is complete. <b>Invalidation:</b> a daily close back below the ₹437 fibonacci/support confluence would suggest the bounce has failed and the decline could resume. <b>Confirmation:</b> a daily close above ₹501 resistance would be the first real signal that the corrective phase is ending. Recommendation: treat this as a live, developing bounce off genuinely oversold conditions with real near-term momentum behind it — a trading opportunity to watch, not yet a confirmed trend reversal, until the daily timeframe itself turns unambiguously positive.</td></tr>
+    </table>
+  </div>
+
+  <!-- ================= 19 RECOMMENDATION ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec19"><span class="num">19</span><h2>Recommendation, Support &amp; Resistance</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fff8f0;border-color:#e67e22;flex:1.2">
+        <div class="plab" style="color:#e67e22">&#9733; Recommendation</div>
+        <div class="pval" style="color:#e67e22;font-size:19px">WATCH — TRADING OPPORTUNITY, NOT YET CONFIRMED REVERSAL</div>
+        <p style="font-size:11.4px;margin-top:6px">Best-in-peer-group ROCE (33.6%) and second-best ROE (20.0%) at a near-cheapest peer multiple (14.5–15.4x P/E), a large and growing order book with genuine international diversification, rapidly-doubling manufacturing capacity, zero promoter pledge (as last confirmed), and a genuinely oversold technical setup with a fresh Buy signal and strong hourly momentum — set against structurally low switching costs, a ~47% drawdown with price badly lagging strong earnings, an unresolved ₹509.7mn tax demand-plus-penalty following an actual search-and-seizure raid, a promoter-affiliated RPT coinciding with an unconfirmed Deputy MD departure, an unresolved 77.8mn-share lock-in question, sparse/inconsistent analyst coverage, and mutual funds reducing their position even as EPS strength is rated GOOD.</p>
+        <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#fce4ec;border-radius:5px"><b style="color:#d81b60">&#9679; Now:</b> RSI 7, fresh daily Buy signal, hourly momentum +4/+3 — a live bounce off capitulation, not yet a confirmed daily-trend reversal.</div>
+        <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#e8f5e9;border-radius:5px"><b style="color:#2e7d32">&#9679; Confirmation trigger:</b> daily close above <b>₹501</b> resistance with the daily momentum gauge turning positive. <b>Invalidation:</b> daily close below <b>₹437</b> (fib/support confluence).</div>
+        <div style="font-size:11.3px;margin-top:6px"><b>Next catalyst:</b> Q2 FY27 earnings, expected early November 2026 (estimate, not a confirmed date). Watch for order-book clarity, FY27 guidance reconciliation (20% vs 26–27%+), and any update on the tax demand/lock-in overhang.</div>
+      </div>
+      <div class="panel" style="border-color:#1565c0">
+        <div class="plab" style="color:#1565c0">&#128313; Key Support Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>&#8377;458</td><td style="text-align:left">1D chart support</td><td><span class="badge b-neut">Near</span></td></tr>
+          <tr><td>&#8377;456</td><td style="text-align:left">1H support</td><td><span class="badge b-neut">Near</span></td></tr>
+          <tr><td>&#8377;448.15</td><td style="text-align:left">50% fib retracement</td><td><span class="badge b-neut">Fib</span></td></tr>
+          <tr><td>&#8377;437.07</td><td style="text-align:left">61.8% fib — <b>invalidation confluence</b></td><td><span class="badge b-bear">Critical</span></td></tr>
+          <tr><td>&#8377;400.6</td><td style="text-align:left">52-week-low zone / RSI-7 print</td><td><span class="badge b-bear">Floor</span></td></tr>
+        </table>
+      </div>
+      <div class="panel" style="border-color:#2e7d32">
+        <div class="plab" style="color:#2e7d32">&#128312; Key Resistance Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>&#8377;501</td><td style="text-align:left">1D resistance / <b>confirmation trigger</b></td><td><span class="badge b-bull">Signal</span></td></tr>
+          <tr><td>&#8377;512</td><td style="text-align:left">1H resistance</td><td><span class="badge b-neut">Near</span></td></tr>
+          <tr><td>~&#8377;560</td><td style="text-align:left">Axis Direct target (Apr 2025)</td><td><span class="badge b-neut">Consensus (dated)</span></td></tr>
+          <tr><td>&#8377;767 / ₹800.90 / ₹856</td><td style="text-align:left">52-week high — three unresolved figures</td><td><span class="badge b-warn">Unresolved</span></td></tr>
+          <tr><td>&#8377;969&ndash;997.5</td><td style="text-align:left">Higher end of inconsistent analyst target range</td><td><span class="badge b-warn">Unreliable</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, BSE, Screener.in, MarketSmith India, Trendlyne, ValuePickr, CRISIL, India Ratings, company filings/DRHP and other public web sources as of 30 Sep 2026, and from the author's own MotiveWave Elliott Wave analysis. Price, volume and financial figures should be independently verified. Transrail Lighting is a smaller-cap, high-beta (1.58) name with sparse analyst coverage, an unresolved tax demand/penalty and unresolved lock-in questions — these should be independently verified before making any decision. Ashoke Kumar Seth is not SEBI registered; this report is for educational purposes only and is neither advice nor endorsement — do your own research.</div>
+  <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice. &nbsp;|&nbsp; <span style="opacity:0.6">Template v6</span></div>
+</div>
+</div>
+<script>
+// In-report "New" tags: mark recently-changed content post-publish, auto-hide after 3 days.
+// Usage: <span class="new-tag" data-new-since="YYYY-MM-DD">New</span> right next to the changed content.
+(function(){
+  var NEW_DAYS = 3;
+  function isRecent(iso){
+    if (!iso) return false;
+    var t = Date.parse(iso + "T00:00:00");
+    if (isNaN(t)) return false;
+    var age = Date.now() - t;
+    return age >= 0 && age < NEW_DAYS * 86400000;
+  }
+  var tags = document.querySelectorAll('.new-tag[data-new-since]');
+  for (var i = 0; i < tags.length; i++){
+    if (!isRecent(tags[i].getAttribute('data-new-since'))) tags[i].style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
