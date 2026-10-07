@@ -417,8 +417,8 @@
     text-transform:uppercase; color:var(--muted); font-weight:600;
     border-bottom:1px solid #e2e6ee;
   }
-  .rev-history-table td{ padding:4px 28px 4px 0; color:var(--navy); font-weight:600; }
-  .rev-history-table td.rev-note{ color:var(--muted); font-weight:400; }
+  .rev-history-table td{ white-space:nowrap; padding:4px 28px 4px 0; color:var(--navy); font-weight:600; }
+  .rev-history-table td.rev-note{ white-space:normal; color:var(--muted); font-weight:400; }
   .meta-item{
     text-align:center;
   }
@@ -508,7 +508,7 @@
       <div class="rev-history-title">Revision History</div>
       <table class="rev-history-table">
         <tr><th>Date</th><th>Version</th></tr>
-        <tr><td>14 Sep 2026</td><td class="rev-note">v1 &mdash; Original</td></tr>
+        <tr><td>14/09/26</td><td class="rev-note">v1 &mdash; Original</td></tr>
       </table>
     </div>
   </div>
@@ -541,7 +541,7 @@
   <div class="tagstrip">
     <div style="color:#e07c00;background:#fff6e6">&#9679; Sentiment: Mixed — growth story vs. FY27 guidance deceleration</div>
     <div style="color:#c62828;background:#fdeef0">&#9679; Momentum: Pulled back from ATH into &quot;W5?&quot; resistance — active Sell signal 8 Sep</div>
-    <div style="color:#c62828;background:#fdeef0">&#9679; Valuation: Rich &amp; conflicting (36.9x&ndash;82.9x P/E)</div>
+    <div style="color:#c62828;background:#fdeef0">&#9679; Valuation: Rich — 82.9x P/E, ~2.4x transformer peers</div>
     <div style="color:#2e7d32;background:#ecf6ec">&#9679; RS Rating: 95</div>
     <div style="color:#e07c00;background:#fff6e6">&#9679; Promoter lock-in expired ~19 Aug 2026 — no post-expiry disclosure yet</div>
   </div>
@@ -643,7 +643,7 @@
       <div class="panel" style="background:linear-gradient(180deg,#fff,#f6fff4);border-top:3px solid #2e7d32">
         <div class="plab">Overall Sentiment</div>
         <div class="pval" style="color:#e67e22">MIXED <span style="font-size:12px;color:#5a6475;font-weight:600">bullish growth story, cautious on financing/valuation</span></div>
-        <p style="font-size:11.3px;margin-top:5px">Bullish: elite technical profile (Master Score A, EPS/Price Strength GREAT/98/90), ~80% export orientation, near-zero debt, promoter dividend waiver to conserve cash, RS rating 95, strong order-book growth. Cautionary: FY27 guidance of 15&ndash;20% growth is a sharp step-down from FY26's acquisition-distorted 150%+; valuation readings conflict 36.9x&ndash;82.9x P/E; WSIL financing/dilution outcome and post-lock-in promoter behaviour are both unresolved; general financial-media framing has stayed constructive through 2026 even across each pullback, characterising drops as &ldquo;profit booking&rdquo; rather than a thesis change.</p>
+        <p style="font-size:11.3px;margin-top:5px">Bullish: elite technical profile (Master Score A, EPS/Price Strength GREAT/98/90), ~80% export orientation, near-zero debt, promoter dividend waiver to conserve cash, RS rating 95, strong order-book growth. Cautionary: FY27 guidance of 15&ndash;20% growth is a sharp step-down from FY26's acquisition-distorted 150%+; valuation is rich at 82.9x P/E (~2.4x TARIL/Voltamp, &sect;15); WSIL financing/dilution outcome and post-lock-in promoter behaviour are both unresolved; general financial-media framing has stayed constructive through 2026 even across each pullback, characterising drops as &ldquo;profit booking&rdquo; rather than a thesis change.</p>
       </div>
       <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border-top:3px solid #e67e22">
         <div class="plab">Momentum Prediction</div>
@@ -711,9 +711,9 @@
       <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column">
         <div class="microhead" style="margin-top:0">Valuation &amp; Balance-Sheet Tiles</div>
     <div class="tiles" style="flex-wrap:wrap;flex:1;align-content:stretch">
-      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E — Range</div><div class="val warn">36.9x&ndash;82.9x</div><div class="note">Screener 82.9x; ~13 Sep source 36.93x — see &sect;09 for full spread</div></div>
-      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/B</div><div class="val warn">16.8x&ndash;20.4x</div><div class="note">Comparatively consistent; MarketSmith Book Value 20.38x corroborates</div></div>
-      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">ROE / ROCE</div><div class="val pos">23.6&ndash;42% / 18.7&ndash;42%</div><div class="note">Wide spread — trailing vs TTM-adjusted EPS, standalone vs consol.</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E (TTM)</div><div class="val warn">82.9x</div><div class="note">Price &divide; TTM EPS &#8377;17.21 (owners&rsquo; share) — see &sect;09</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/B</div><div class="val warn">20.4x</div><div class="note">On Mar 2026 net worth &#8377;542 Cr; MarketSmith Book Value 20.38x agrees</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">ROE / ROCE</div><div class="val pos">25.1% / 31.5%</div><div class="note">Screener, latest year; ROE on owners&rsquo; profit, net of Endoks minority</div></div>
       <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Div Yield</div><div class="val">0.07&ndash;0.09%</div><div class="note">Consistent across sources; promoters waived their own FY26 dividend (&sect;03)</div></div>
       <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Borrowings</div><div class="val pos">&#8377;40 Cr</div><div class="note">vs &#8377;542 Cr net worth (FY26); D/E ~0.02 (Tijori) — very low across all sources</div></div>
       <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">EV/EBITDA</div><div class="val warn">47.34x</div><div class="note">stockanalysis.com — single source, not cross-checked</div></div>
@@ -778,17 +778,17 @@
 
   <!-- ================= 09 KEY RATIOS ================= -->
   <div class="sec">
-    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Ratios — Valuation Conflict, Presented as a Range</h2></div>
+    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Ratios — Valuation</h2></div>
     <div class="cols">
       <div class="panel" style="background:#fdf0f0;border-color:#c62828">
-        <div class="plab">P/E (TTM) &nbsp;·&nbsp; Wide Cross-Source Spread <span class="badge b-bear">36.9x&ndash;82.9x</span></div>
-        <div class="pval" style="font-size:24px">Not silently reconciled</div>
-        <p style="font-size:11.3px;margin-top:6px">Screener (11 Sep 2026): P/E 82.9x, ROE 25.1%, ROCE 31.5%. Tijori Finance: P/E 82.79, ROE 23.60%, ROCE 18.69%. An earlier Screener snippet (10 Aug 2026, price &#8377;1,180): P/E 68.46, ROE ~42%, ROCE ~41&ndash;42%. An unnamed ~13 Sep 2026 source: P/E 36.93. A separate sector-workstream table shows P/E 53.83x (Mar'25 KRChoksey IPO note) and 64.96x/161x elsewhere. <b>Almost certainly reflects</b> trailing vs TTM-adjusted EPS, standalone vs consolidated PAT, reported-vs-Ind-AS-29-adjusted PAT differences, and genuine price volatility (52-week range &#8377;581.85&ndash;&#8377;1,569.80 mechanically swings P/E). Stated as a range with this caveat, not picked.</p>
+        <div class="plab">P/E (TTM) &nbsp;·&nbsp; Reconciled <span class="badge b-bear">Rich</span></div>
+        <div class="pval" style="font-size:24px">82.9x <span style="font-size:12px;font-weight:600;color:#5a6475">&#8377;1,426 &divide; TTM EPS &#8377;17.21</span></div>
+        <p style="font-size:11.3px;margin-top:6px">TTM EPS is the last four quarters added up (&#8377;4.66 + 4.38 + 5.03 + 3.14 = &#8377;17.21), which is <b>&#8377;133 Cr of profit belonging to QPOWER shareholders</b>. Screener (82.9x) and Tijori (82.79x) agree. <b>Why other readings differ:</b> the reported consolidated TTM profit of &#8377;195 Cr includes ~&#8377;62 Cr that belongs to the 49% minority owners of Endoks (Turkey), so MCap &divide; &#8377;195 Cr gives 56.7x, which understates the multiple. The 68.46x figure used the 10 Aug price (&#8377;1,180) on older EPS; 53.83x is from the Mar&rsquo;25 IPO note; the 36.93x reading matches no reported EPS (it would need ~&#8377;38.7) and is discarded. Price swings still move the number: across the 52-week range (&#8377;582&ndash;&#8377;1,570) the same EPS gives 34x&ndash;91x.</p>
       </div>
       <div class="panel" style="background:#fffbe8;border-color:#f9a825">
-        <div class="plab">ROE / ROCE &nbsp;·&nbsp; Also Wide <span class="badge b-warn">23.6&ndash;42% / 18.7&ndash;42%</span></div>
-        <div class="pval" style="font-size:24px">P/B ~16.8x&ndash;20.4x <span style="font-size:12px;font-weight:600;color:#5a6475">(more consistent)</span></div>
-        <p style="font-size:11.3px;margin-top:6px">ROE/ROCE spans the same basis conflicts as P/E above. P/B is comparatively tighter (16.8x&ndash;20.4x across sources) and corroborates MarketSmith's own Book Value field of 20.38x. EV/EBITDA is 47.34x per stockanalysis.com — a single-source figure, not cross-checked elsewhere in this research.</p>
+        <div class="plab">ROE / ROCE &nbsp;·&nbsp; Latest Year <span class="badge b-bull">25.1% / 31.5%</span></div>
+        <div class="pval" style="font-size:24px">P/B 20.4x <span style="font-size:12px;font-weight:600;color:#5a6475">MCap &divide; Mar 2026 net worth &#8377;542 Cr</span></div>
+        <p style="font-size:11.3px;margin-top:6px">ROE 25.1% is FY26 profit to shareholders (&#8377;121 Cr) &divide; average equity; counting the Endoks minority&rsquo;s share as well would give ~38%, which is why older readings as high as ~42% appear in some sources. ROCE 31.5% (Screener) is in line with the 27&ndash;32% it has earned every year since FY22. Tijori&rsquo;s 23.6%/18.7% use a different capital base and are not used here. <b>Highest ROE and ROCE of the &sect;15 peer set</b> (TARIL 19.1%/23.3%, Voltamp 17.4%/23.5%, Hitachi Energy 21.9%/29.4%). P/B 20.4x matches MarketSmith&rsquo;s Book Value field (20.38x). EV/EBITDA 47.34x is from stockanalysis.com only, not cross-checked.</p>
       </div>
     </div>
     <div class="cols" style="margin-top:12px">
@@ -800,7 +800,7 @@
       <div class="panel" style="border-color:#dde2ea">
         <div class="plab">Debt/Equity — Consistently Very Low <span class="badge b-bull">Confirmed</span></div>
         <div class="pval" style="font-size:22px">D/E ~0.02 &middot; LTDebt/Eq 1%</div>
-        <p style="font-size:11.2px;margin-top:6px">Borrowings &#8377;40 Cr vs &#8377;542 Cr net worth (Screener, FY26); Tijori D/E 0.02; net cash ~&#8377;235 Cr (~&#8377;244 Cr cash vs ~&#8377;9 Cr debt, one snippet). MarketSmith's LTDebt/Equity 1% is corroborated and probably conservative — actual ratio looks closer to 2&ndash;7% depending on which debt figure is used. Across every source this is a low-leverage balance sheet, the one figure in &sect;08/&sect;09 that is NOT in material dispute.</p>
+        <p style="font-size:11.2px;margin-top:6px">Borrowings &#8377;40 Cr vs &#8377;542 Cr net worth (Screener, FY26); Tijori D/E 0.02; net cash ~&#8377;235 Cr (~&#8377;244 Cr cash vs ~&#8377;9 Cr debt, one snippet). MarketSmith's LTDebt/Equity 1% is corroborated and probably conservative — actual ratio looks closer to 2&ndash;7% depending on which debt figure is used. Across every source this is a low-leverage balance sheet.</p>
       </div>
     </div>
   </div>
@@ -913,24 +913,23 @@
       <div style="flex:0 0 calc(50% - 10px);min-width:0">
         <div class="sec-title" id="sec15"><span class="num">15</span><h2>Peer Comparison</h2></div>
         <table class="peer">
-          <tr><th>Company</th><th>MCap</th><th>Rev</th><th>PAT</th><th>P/E</th><th>ROE</th><th>ROCE</th></tr>
-          <tr style="background:#eef4fc"><td>&#9733; QPOWER</td><td><b>11,047</b></td><td><b>947&ndash;1,007</b></td><td><b>185.5&ndash;186</b></td><td><b>36.9&ndash;82.9x</b></td><td><b>23.6&ndash;42%</b></td><td><b>18.7&ndash;42%</b></td></tr>
-          <tr><td>TD Power Systems</td><td>25,150</td><td>2,124</td><td>275</td><td>73.6x</td><td>24.7%</td><td>33.4%</td></tr>
-          <tr><td>Transformers &amp; Rectifiers (TARIL)</td><td>8,918&ndash;9,158</td><td>1,986&ndash;2,395</td><td>187&ndash;225</td><td>34.2&ndash;34.4x</td><td>n/a (gap)</td><td>n/a (gap)</td></tr>
-          <tr><td>Voltamp Transformers</td><td>11,346</td><td>1,940</td><td>325</td><td>31.1x</td><td>21.5%</td><td>n/a (gap)</td></tr>
-          <tr><td>Genus Power Infrastructures</td><td>9,918</td><td>2,442&ndash;5,160</td><td>298&ndash;639</td><td>14.9&ndash;24.7x</td><td>24.1&ndash;29.0%</td><td>n/a (gap)</td></tr>
-          <tr><td>Skipper Limited</td><td>5,779</td><td>4,624</td><td>219</td><td>26.8x</td><td>13.7%</td><td>n/a (gap)</td></tr>
-          <tr><td>Kirloskar Electric</td><td>857&ndash;951</td><td>544&ndash;561</td><td>7.5</td><td>55&ndash;127x</td><td>n/a (gap)</td><td>n/a (gap)</td></tr>
-          <tr><td>CG Power &amp; Industrial</td><td>1,42,578&ndash;1,43,208</td><td>11,331&ndash;12,821</td><td>1,199&ndash;1,240</td><td>112&ndash;119x</td><td>15.3&ndash;20.5%</td><td>26.7%</td></tr>
-          <tr><td>Hitachi Energy India</td><td>1,40,113&ndash;1,42,000</td><td>6,385&ndash;8,148</td><td>988&ndash;1,150</td><td>124.8&ndash;136x</td><td>19.1%</td><td>n/a (gap)</td></tr>
-          <tr><td>Siemens Energy India</td><td>1,13,293</td><td>~9,600</td><td>~374.6 (Q4 alone)</td><td>51.3&ndash;75.4x</td><td>29.0%</td><td>n/a (gap)</td></tr>
-          <tr><td>ABB India</td><td>~1,12,000&ndash;1,53,676</td><td>12,500&ndash;13,995</td><td>1,189&ndash;2,096</td><td>50.7&ndash;99.7x</td><td>22.4&ndash;22.6%</td><td>25.1&ndash;29.9%</td></tr>
-          <tr><td>BHEL</td><td>80,401&ndash;1,34,146*</td><td>27,355</td><td>534</td><td>277x</td><td>~0.02&ndash;12.3%*</td><td>n/a (gap)</td></tr>
-          <tr><td>GE Vernova T&amp;D India</td><td>85,000&ndash;95,600*</td><td>6,297</td><td>1,233</td><td>91.4x</td><td>45.8%</td><td>n/a (gap)</td></tr>
-          <tr><td>Apar Industries</td><td>73,277</td><td>24,389</td><td>821&ndash;1,182</td><td>~39x</td><td>21.0%</td><td>19.7% (ROIC)</td></tr>
+          <tr><th>Company</th><th>MCap</th><th>Rev TTM</th><th>PAT TTM</th><th>P/E</th><th>MCap/Sales</th><th>ROE</th><th>ROCE</th></tr>
+          <tr style="background:#eef4fc"><td>&#9733; QPOWER</td><td><b>11,047</b></td><td><b>1,003</b></td><td><b>133&dagger;</b></td><td><b>82.9x</b></td><td><b>11.0x</b></td><td><b>25.1%</b></td><td><b>31.5%</b></td></tr>
+          <tr><td>TARIL</td><td>8,660</td><td>2,552</td><td>259</td><td>33.4x</td><td>3.4x</td><td>19.1%</td><td>23.3%</td></tr>
+          <tr><td>Voltamp Transformers</td><td>11,348</td><td>2,274</td><td>317</td><td>35.8x</td><td>5.0x</td><td>17.4%</td><td>23.5%</td></tr>
+          <tr><td>Hitachi Energy India</td><td>1,40,113</td><td>9,162</td><td>1,150</td><td>121.8x</td><td>15.3x</td><td>21.9%</td><td>29.4%</td></tr>
         </table>
-        <div class="chartcap" style="margin-top:4px">All figures &#8377; Cr except ratios; as of ~11&ndash;14 Sep 2026, ranges preserved where sources disagreed. *BHEL market cap and GE Vernova T&amp;D India market cap both show internal conflicts across sources — not reconciled. Several peer ROCE/EBITDA-margin cells are marked &ldquo;gap&rdquo; — not uniformly available (TARIL, Voltamp precise figure, Genus, Skipper, Kirloskar Electric, GE T&amp;D India, BHEL). <b>Global scale-context only, not valuation peers:</b> Siemens Energy AG (~$140bn mktcap, &euro;39.1bn FY25 revenue), Hitachi Energy (no standalone mktcap, part of Hitachi Ltd), GE Vernova ($263bn mktcap, $43bn 2025 revenue), ABB Group ($177.8bn mktcap, $33.2bn 2025 revenue) — QPOWER's ~$1.3bn market cap is roughly 0.7&ndash;1% the size of Siemens Energy AG and ~6% of ABB Group.</div>
-        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Reading it:</b> QPOWER's P/E (whichever figure used) sits broadly in the same elevated range as Hitachi Energy India, CG Power, and BHEL — the <b>entire domestic power-equipment/grid space</b> is trading at rich multiples (25x&ndash;280x P/E) amid the HVDC/FACTS/grid-modernization theme, not just QPOWER in isolation. TARIL and Genus Power are the two peers trading at comparatively &ldquo;cheap&rdquo; 15&ndash;34x P/E with lower-to-comparable ROE. TARIL is the closest direct product overlap (pure-play power transformer/reactor maker) but at ~2x QPOWER's revenue and materially lower ROE.</div>
+        <div class="chartcap" style="margin-top:4px">&#8377; Cr except ratios. All four from Screener, consolidated, 14 Sep 2026 prices. One basis throughout: TTM to Jun 2026 quarter; P/E = price &divide; TTM EPS, so MCap &divide; PAT reconciles on every row; ROE/ROCE = latest full year. <b>&dagger;</b> QPOWER reports &#8377;195 Cr consolidated TTM PAT, but ~&#8377;62 Cr of it belongs to the 49% minority in Endoks (Turkey); &#8377;133 Cr is the owners&rsquo; share (EPS &#8377;17.21). MCap &divide; 195 = 56.7x understates the multiple. TARIL likewise nets a small minority (reported 269).<br><b>Why these three:</b> TARIL and Voltamp are the same-size listed transformer/reactor makers; Hitachi Energy India is the direct HVDC/FACTS product peer and the sector&rsquo;s valuation ceiling.</div>
+        <div style="font-size:11px;font-weight:700;color:#e65100;text-transform:uppercase;letter-spacing:0.4px;margin:10px 0 4px">What the premium buys</div>
+        <table class="peer">
+          <tr><th>Company</th><th>OPM</th><th>Sales 3Y</th><th>Profit 3Y</th><th>Profit TTM</th><th>Debt/Eq</th><th>Oth.Inc/PAT</th><th>P/B</th></tr>
+          <tr style="background:#eef4fc"><td>&#9733; QPOWER</td><td><b>19%</b></td><td><b>55%</b></td><td><b>81%</b></td><td><b>+90%*</b></td><td><b>0.07</b></td><td><b>34%</b></td><td><b>20.4x</b></td></tr>
+          <tr><td>TARIL</td><td>15%</td><td>22%</td><td>87%</td><td>0%</td><td>0.30</td><td>21%</td><td>5.7x</td></tr>
+          <tr><td>Voltamp Transformers</td><td>16%</td><td>16%</td><td>14%</td><td>&minus;3%</td><td>0.00</td><td>23%</td><td>6.3x</td></tr>
+          <tr><td>Hitachi Energy India</td><td>16%</td><td>22%</td><td>122%</td><td>+136%</td><td>0.02</td><td>20%</td><td>27.1x</td></tr>
+        </table>
+        <div class="chartcap" style="margin-top:4px">Screener, same date and basis. OPM = TTM operating margin; 3Y = compounded growth; Debt/Eq and P/B on Mar 2026 balance sheet; Oth.Inc/PAT = TTM other income &divide; reported TTM PAT. <b>*</b> QPOWER&rsquo;s growth includes the Endoks consolidation (sales TTM +122%), so it is not all organic.</div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Reading it:</b> At <b>82.9x</b>, QPOWER trades at <b>~2.4x the transformer makers</b> (TARIL 33.4x, Voltamp 35.8x) and ~30% below Hitachi Energy (121.8x). Part of that gap is earned: QPOWER has the <b>best ROE, ROCE and operating margin of the four</b>, near-zero debt, and 3-year profit growth (81%) that puts its P/E-to-growth at ~1.0, the same as Hitachi&rsquo;s. Against that: <b>revenue is less than half of TARIL&rsquo;s or Voltamp&rsquo;s</b>, a third of reported profit belongs to Endoks&rsquo; minority holders, <b>other income is 34% of PAT</b> (the highest here), part of the growth came from buying Endoks, and FY27 guidance is only 15&ndash;20%. The market is pricing QPOWER as a small Hitachi Energy, not a transformer maker. On P/B (20.4x) and MCap/Sales (11.0x) it sits beside Hitachi, 3&ndash;4x above TARIL and Voltamp.</div>
       </div>
     </div>
   </div>
@@ -946,7 +945,7 @@
       <tr><td style="text-align:left">Competitive Intensity</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Named competitors: GE Vernova T&amp;D India, Hitachi Energy India, Transformers &amp; Rectifiers India, RIR Power Electronics, plus global majors (Siemens Energy, ABB, GE Vernova, Hitachi Energy). QPOWER positions itself as a scale/technology underdog with a margin/export-orientation advantage, but no independently verified market-share figures (domestic or global) exist for its specific HVDC/FACTS/reactor niches — competitive position is asserted, not quantified, in every source reviewed.</td></tr>
       <tr><td style="text-align:left">Order Book / Revenue Visibility</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Order book progression &#8377;775 Cr (Q1 FY26) &rarr; &gt;&#8377;1,400 Cr (FY26-end, one source) &rarr; &#8377;1,945.5 Cr (30 Jun 2026), described by company/IR as &ldquo;long-cycle, high-engineering-content projects&hellip;well-diversified&rdquo; — an IR characterization, not independently verified project-level disclosure. Inherently lumpy, project-based revenue; ~1.4&ndash;1.9x trailing-revenue coverage gives near-term visibility but is not annuity-like.</td></tr>
       <tr><td style="text-align:left">Working Capital &amp; Execution</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">A recurring theme in aggregated secondary commentary (Substack/blog, <b>not traced to a single authoritative primary source</b>) flags &ldquo;high working capital stress, reliance on other income, declining reserves, and promoter soft loans&rdquo; — the &ldquo;promoter soft loans&rdquo; claim is <b>explicitly unverified</b>, but the general direction (elevated working capital, negative FY26 FCF) is independently corroborated by &sect;08/&sect;09's own CCC and FCF figures. Long-cycle equipment manufacturing inherently carries execution risk (delays, cost overruns) — no specific QPOWER instance of delay/overrun found.</td></tr>
-      <tr><td style="text-align:left">Valuation / Growth-Deceleration Risk</td><td><span class="badge b-bear">High — the largest quantifiable risk</span></td><td style="text-align:left">Market cap ~&#8377;11,047 Cr; P/E readings conflict 36.9x&ndash;82.9x (&sect;09). <b>The single most important valuation fact:</b> management's own FY27 guidance is 15&ndash;20% revenue growth, a sharp step-down from FY26's 150%+ (itself acquisition-distorted, &sect;01). Any valuation extrapolating FY26-style growth is at material risk of disappointment against the guided normalized rate.</td></tr>
+      <tr><td style="text-align:left">Valuation / Growth-Deceleration Risk</td><td><span class="badge b-bear">High — the largest quantifiable risk</span></td><td style="text-align:left">Market cap ~&#8377;11,047 Cr at <b>82.9x TTM P/E</b> (&sect;09) — ~2.4x TARIL and Voltamp, ~30% below Hitachi Energy (&sect;15). <b>The single most important valuation fact:</b> management's own FY27 guidance is 15&ndash;20% revenue growth, a sharp step-down from FY26's 150%+ (itself acquisition-distorted, &sect;01). Any valuation extrapolating FY26-style growth is at material risk of disappointment against the guided normalized rate.</td></tr>
       <tr><td style="text-align:left">Governance</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Chairman/MD roles combined in one person; audit by a relatively small/regional firm (&sect;10). RPT policy exists, quarterly BSE disclosure confirmed, Mehru/Veeral acquisitions were third-party (not promoter) transactions. The unverified &ldquo;promoter soft loans&rdquo;/&ldquo;declining reserves&rdquo; claim above is the main red flag surfaced, cross-check against primary filings recommended. No litigation/regulatory action/restatement found in available time — absence of evidence is not evidence of absence given shallow secondary-source coverage for this name.</td></tr>
     </table>
     <div class="cols" style="margin-top:10px">
@@ -1021,7 +1020,7 @@
       <div class="panel" style="background:#fff8f0;border-color:#e67e22;flex:1.2">
         <div class="plab" style="color:#e67e22">&#9733; Recommendation</div>
         <div class="pval" style="color:#e67e22;font-size:18px">ANTICIPATE — BUY ONLY ON CONFIRMATION</div>
-        <p style="font-size:11.4px;margin-top:6px">Elite technical profile (EPS/Price Strength GREAT 98/90, RS 95), ~80% export orientation, near-zero debt, and a promoter dividend waiver signalling capital discipline — set against a conflicting 36.9x&ndash;82.9x P/E, an explicit FY27 guidance deceleration to 15&ndash;20% growth, an unresolved WSIL financing/dilution overhang, and a promoter lock-in that has just rolled off with no post-expiry data yet. The chart itself is genuinely two-sided: a triggered 1H Sell signal against a 1D &ldquo;BUY ZONE&rdquo; callout, both anchored on the same unresolved &ldquo;W5?&rdquo; question. This setup rewards <b>patience over prediction</b>: it is for watching and alerting, not chasing into an unresolved resistance test.</p>
+        <p style="font-size:11.4px;margin-top:6px">Elite technical profile (EPS/Price Strength GREAT 98/90, RS 95), ~80% export orientation, near-zero debt, and a promoter dividend waiver signalling capital discipline — set against a rich 82.9x P/E (~2.4x transformer peers), an explicit FY27 guidance deceleration to 15&ndash;20% growth, an unresolved WSIL financing/dilution overhang, and a promoter lock-in that has just rolled off with no post-expiry data yet. The chart itself is genuinely two-sided: a triggered 1H Sell signal against a 1D &ldquo;BUY ZONE&rdquo; callout, both anchored on the same unresolved &ldquo;W5?&rdquo; question. This setup rewards <b>patience over prediction</b>: it is for watching and alerting, not chasing into an unresolved resistance test.</p>
         <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#fce4ec;border-radius:5px"><b style="color:#d81b60">&#9679; PINK (now):</b> 1H Sell signal active (2026-09-08 10:00) at Resistance 1494; 1D &ldquo;BUY ZONE&rdquo; framing at the analogous 1510 zone. Both &ldquo;W5?&rdquo; markers remain open. No fresh position on the strength of the chart alone.</div>
         <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#e8f5e9;border-radius:5px"><b style="color:#2e7d32">&#9679; GREEN (trigger):</b> A decisive 1H/1D close back above Resistance 1494/1510 that keeps impulsing toward the 1685.5/1805.2 extension targets, ideally alongside clarity on the WSIL financing structure and a clean 30 Sep 2026 post-lock-in shareholding disclosure.</div>
         <div style="font-size:11.3px;margin-top:6px"><b>Next catalysts:</b> 25th AGM, 29 Sep 2026; 30 Sep 2026-quarter shareholding disclosure (~mid-Oct); WSIL financing/closure announcement; Q2 FY27 results by ~mid-Nov 2026.</div>
@@ -1049,7 +1048,7 @@
     </div>
   </div>
 
-  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, BSE, Screener.in, MarketSmith India, Tijori Finance, stockanalysis.com, ConCallIQ, Whalesbook, EquityBulls, Business Standard, SolarQuarter, and other public web sources as of ~11&ndash;14 Sep 2026, and from the author's own MotiveWave Elliott Wave analysis. Price, volume and financial figures should be independently verified, particularly given the conflicting FY26 revenue/P/E/ROE figures, the unresolved WSIL acquisition financing structure, and the two differently-dated promoter lock-in schedules discussed throughout this report. Quality Power Electrical Equipments is a recently-listed (Feb 2025), thinly-covered small-cap; several data points in this report are presented as ranges or unreconciled conflicts precisely because independent sources disagreed — see the relevant sections rather than treating any single figure as definitive. Ashoke Kumar Seth is not a SEBI-registered research analyst. This is not investment advice; always consult a licensed financial adviser before making investment decisions. All figures in &#8377; Crore unless stated otherwise.</div>
+  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, BSE, Screener.in, MarketSmith India, Tijori Finance, stockanalysis.com, ConCallIQ, Whalesbook, EquityBulls, Business Standard, SolarQuarter, and other public web sources as of ~11&ndash;14 Sep 2026, and from the author's own MotiveWave Elliott Wave analysis. Price, volume and financial figures should be independently verified, particularly given the conflicting FY26 revenue figures, the unresolved WSIL acquisition financing structure, and the two differently-dated promoter lock-in schedules discussed throughout this report. Quality Power Electrical Equipments is a recently-listed (Feb 2025), thinly-covered small-cap; several data points in this report are presented as ranges or unreconciled conflicts precisely because independent sources disagreed — see the relevant sections rather than treating any single figure as definitive. Ashoke Kumar Seth is not a SEBI-registered research analyst. This is not investment advice; always consult a licensed financial adviser before making investment decisions. All figures in &#8377; Crore unless stated otherwise.</div>
   <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice. &nbsp;|&nbsp; <span style="opacity:0.6">Template v6</span></div>
 </div>
 </div>

@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aegis Logistics Limited — Equity Research Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#ffffff; font-family:'Source Sans 3',Arial,sans-serif; color:#2a3342; font-size:12.5px; line-height:1.5; }
+  .page-wrap { background:#e9edf3; display:flex; justify-content:center; padding:24px 12px 40px; }
+  .page { width:1400px; max-width:100%; margin:0; background:#fff; box-shadow:0 6px 24px rgba(26,42,74,0.18); }
+  /* header */
+  .hdr { background:linear-gradient(135deg,#101c36 0%,#1a2a4a 55%,#2b4570 100%); border-bottom:4px solid; border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1; color:#fff; padding:16px 26px 13px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .hdr .meta { font-size:10.5px; letter-spacing:0.6px; color:#9fb0cf; text-transform:uppercase; }
+  .hdr h1 { font-size:26px; font-weight:900; letter-spacing:0.2px; margin:2px 0 3px; }
+  .hdr .tagline { font-size:11.5px; color:#c7d2e8; }
+  .hdr .pricebox { text-align:right; }
+  .hdr .price { font-size:26px; font-weight:900; }
+  .hdr .chg { color:#ff8a80; font-weight:700; font-size:14px; }
+  .hdr .sub { font-size:10.5px; color:#9fb0cf; margin-top:3px; }
+  .tagstrip { display:flex; gap:0; border-bottom:1px solid #dde2ea; }
+  .tagstrip div { flex:1; text-align:center; padding:6px 4px; font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; border-right:1px solid #dde2ea; }
+  .tagstrip div:last-child { border-right:none; }
+  /* sections */
+  .sec { padding:16px 26px 20px; border-bottom:1px solid #e4e8ef; }
+  .sec-title { display:flex; align-items:center; gap:9px; margin-bottom:12px; padding-bottom:7px; border-bottom:2px solid #f0b429; }
+  .sec-title .num { background:linear-gradient(135deg,#f7b733,#e67e22); color:#1a2a4a; font-size:11px; font-weight:900; padding:2px 7px; border-radius:3px; }
+  .sec-title h2 { font-size:14.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#1a2a4a; }
+  .microhead { font-size:10px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#b07716; margin:10px 0 6px; }
+  /* generic table */
+  table.t { width:100%; border-collapse:collapse; }
+  table.t th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase; padding:6px 9px; text-align:right; font-weight:700; }
+  table.t th:first-child { text-align:left; }
+  table.t td { padding:5.5px 9px; border-bottom:1px solid #edf0f5; text-align:right; font-size:12px; }
+  table.t td:first-child { text-align:left; font-weight:600; }
+  table.t tr:nth-child(even) td { background:#f8f9fb; }
+  .pos { color:#2e7d32; font-weight:700; } .neg { color:#c62828; font-weight:700; }
+  .warn { color:#f57f17; font-weight:700; }
+  /* tiles */
+  .tiles { display:flex; gap:10px; }
+  .tile { flex:1; border:1px solid #dde2ea; border-top:3px solid #2b4570; border-radius:6px; padding:9px 12px; background:linear-gradient(180deg,#fdfefe,#f7f9fc); }
+  .tile .lab { font-size:9.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#8a94a6; }
+  .tile .val { font-size:19px; font-weight:900; margin:2px 0 1px; color:#1a2a4a; }
+  .tile .note { font-size:10.3px; color:#5a6475; line-height:1.35; }
+  /* callout notes */
+  .notebox { border-left:4px solid #f9a825; background:#fffbe8; padding:9px 13px; font-size:11.8px; margin-top:11px; border-radius:0 5px 5px 0; }
+  .notebox.green { border-left-color:#2e7d32; background:#f0f7f0; }
+  .notebox.red { border-left-color:#c62828; background:#fdf0f0; }
+  .notebox.blue { border-left-color:#1565c0; background:#eef4fc; }
+  .badge { display:inline-block; font-size:9.5px; font-weight:900; letter-spacing:0.5px; padding:1.5px 7px; border-radius:9px; text-transform:uppercase; vertical-align:middle; }
+  .new-tag { display:inline-block; font-size:9px; font-weight:900; letter-spacing:0.7px; text-transform:uppercase; background:#f0b429; color:#3d2c00; padding:2px 6px; border-radius:3px; line-height:1.2; vertical-align:middle; margin-left:6px; }
+  .b-bull { background:#e8f5e9; color:#2e7d32; } .b-bear { background:#ffebee; color:#c62828; }
+  .b-neut { background:#e3f2fd; color:#1565c0; } .b-warn { background:#fff9c4; color:#f57f17; }
+  .cols { display:flex; gap:20px; }
+  .panel { flex:1; border:1px solid #dde2ea; border-radius:6px; padding:12px 15px; }
+  .panel .plab { font-size:9.5px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#8a94a6; margin-bottom:3px; }
+  .panel .pval { font-size:21px; font-weight:900; }
+  .chartcap { font-size:10px; color:#8a94a6; margin-top:5px; line-height:1.4; }
+  .imgwrap img { width:100%; border-radius:5px; border:1px solid #23304a; display:block; }
+  .footer-blue { border-top:3px solid #f0b429; background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570); color:#fff; text-align:center; padding:10px 16px; font-size:11px; letter-spacing:0.4px; }
+  .disclaim { font-size:9.8px; color:#8a94a6; padding:12px 26px; line-height:1.5; }
+  table.t[style*='--pad'] td { padding:9px; }
+  .compact { padding:13px 26px 14px; }
+  .compact table.t td { padding:3.5px 8px; font-size:11.3px; }
+  .compact table.t th { padding:5px 8px; }
+  .compact .notebox { padding:7px 11px; font-size:10.8px; margin-top:0; }
+  .compact .microhead { margin:8px 0 4px; }
+  .compact .tile { padding:6px 10px; }
+  .compact .tile .val { font-size:15.5px; margin:1px 0 0; }
+  .compact .tile .note { font-size:9.6px; }
+  .compact .cols { gap:14px; }
+  table.fit { width:100%; table-layout:fixed; }
+  table.fit td, table.fit th { padding:3.5px 11px; white-space:nowrap; overflow:hidden; }
+  table.fit th:first-child, table.fit td:first-child { width:24%; }
+  .krow { display:flex; justify-content:space-between; align-items:baseline; gap:8px; border-bottom:1px solid #edf0f5; padding:5px 2px; }
+  .krow .klab { color:#8a94a6; font-weight:900; font-size:9.3px; text-transform:uppercase; letter-spacing:0.5px; flex:0 0 auto; }
+  .krow .kval { font-weight:900; color:#1a2a4a; font-size:12.5px; text-align:right; }
+  .krow .kval small { display:block; font-weight:600; color:#8a94a6; font-size:9.3px; }
+  .mininote { font-size:10px; color:#5a6475; line-height:1.45; margin-top:8px; padding:7px 9px; border-radius:4px; }
+  table.peer { width:100%; border-collapse:collapse; }
+  table.peer th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:8.6px; letter-spacing:0.3px; text-transform:uppercase; padding:4px 3px; text-align:right; }
+  table.peer th:first-child { text-align:left; }
+  table.peer td { padding:4px 3px; border-bottom:1px solid #edf0f5; text-align:right; font-size:10px; }
+  table.peer td:first-child { text-align:left; font-weight:700; }
+
+    .sector-wheel-compact{width:600px;height:700px;margin:50px auto 0 110px;overflow:visible}
+    .sector-wheel-compact > div{width:540px!important;transform:scale(0.93);transform-origin:top left}
+    .sector-wheel-compact .mt-16,.sector-wheel-compact .md\:mt-\[80px\]{margin-top:0!important}
+    .sector-wheel-compact .mt-8{display:none}
+    .sector-wheel-compact .relative{position:relative}
+    .sector-wheel-compact .absolute{position:absolute}
+    .sector-wheel-compact .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel-compact .pointer-events-none{pointer-events:none}
+    .sector-wheel-compact .z-10{z-index:10}
+    .sector-wheel-compact .flex{display:flex}
+    .sector-wheel-compact .flex-col{flex-direction:column}
+    .sector-wheel-compact .items-center{align-items:center}
+    .sector-wheel-compact .items-start{align-items:flex-start}
+    .sector-wheel-compact .items-end{align-items:flex-end}
+    .sector-wheel-compact .justify-center{justify-content:center}
+    .sector-wheel-compact .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel-compact .leading-none{line-height:1}
+    .sector-wheel-compact .font-black{font-weight:900}
+    .sector-wheel-compact .opacity-90{opacity:.9}
+    .sector-wheel-compact .overflow-visible{overflow:visible}
+    .sector-wheel-compact .aspect-square{aspect-ratio:1/1}
+    .sector-wheel-compact .w-full,.sector-wheel-compact .md\:w-full{width:100%}
+    .sector-wheel-compact .h-full{height:100%}
+    .sector-wheel-compact .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel-compact .ml-\[1px\]{margin-left:1px}
+    .sector-wheel-compact .mr-\[1px\]{margin-right:1px}
+    .sector-wheel-compact .w-\[86vw\]{width:100%}
+    .sector-wheel-compact .max-w-\[540px\]{max-width:540px}
+    .sector-wheel-compact .max-w-\[760px\]{max-width:540px}
+    .sector-wheel-compact .w-\[72px\]{width:72px}
+    .sector-wheel-compact .h-\[1px\]{height:1px}
+    .sector-wheel-compact .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel-compact .text-\[16px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel-compact .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel-compact .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel-compact .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel-compact .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel-compact .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel-compact .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel-compact .gap-\[7px\]{gap:7px}
+    .sector-wheel-compact .gap-\[8px\]{gap:8px}
+    .sector-wheel-compact svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .relative{position:relative}
+    .sector-wheel .absolute{position:absolute}
+    .sector-wheel .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel .pointer-events-none{pointer-events:none}
+    .sector-wheel .z-10{z-index:10}
+    .sector-wheel .flex{display:flex}
+    .sector-wheel .flex-col{flex-direction:column}
+    .sector-wheel .items-center{align-items:center}
+    .sector-wheel .items-start{align-items:flex-start}
+    .sector-wheel .items-end{align-items:flex-end}
+    .sector-wheel .justify-center{justify-content:center}
+    .sector-wheel .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel .leading-none{line-height:1}
+    .sector-wheel .font-black{font-weight:900}
+    .sector-wheel .opacity-90{opacity:.9}
+    .sector-wheel .overflow-visible{overflow:visible}
+    .sector-wheel .aspect-square{aspect-ratio:1/1}
+    .sector-wheel .w-full,.sector-wheel .md\:w-full{width:100%}
+    .sector-wheel .h-full{height:100%}
+    .sector-wheel .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel .mt-16{margin-top:64px}
+    .sector-wheel .mt-8{margin-top:32px}
+    .sector-wheel .md\:mt-10{margin-top:40px}
+    .sector-wheel .md\:mt-\[80px\]{margin-top:64px}
+    .sector-wheel .ml-\[1px\]{margin-left:1px}
+    .sector-wheel .mr-\[1px\]{margin-right:1px}
+    .sector-wheel .w-\[86vw\]{width:100%}
+    .sector-wheel .max-w-\[540px\]{max-width:540px}
+    .sector-wheel .max-w-\[760px\]{max-width:540px}
+    .sector-wheel .w-\[72px\]{width:72px}
+    .sector-wheel .h-\[1px\]{height:1px}
+    .sector-wheel .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel .text-\[16px\]{font-size:15px}
+    .sector-wheel .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel .gap-\[7px\]{gap:7px}
+    .sector-wheel .gap-\[8px\]{gap:8px}
+    .sector-wheel svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .hub-name{font-family:'Fraunces',Georgia,serif}
+
+  /* ===================== RESPONSIVE / MOBILE ===================== */
+  .mobile-jump { display:none; }
+  @media (max-width: 860px) {
+    html { -webkit-text-size-adjust:100%; }
+    body { overflow-x:hidden; }
+    .page { width:100% !important; max-width:100% !important; }
+    .sec, .hdr { padding-left:16px !important; padding-right:16px !important; }
+    .disclaim { padding-left:16px !important; padding-right:16px !important; }
+    .footer-blue { padding-left:16px !important; padding-right:16px !important; }
+
+    .hdr { flex-direction:column !important; align-items:stretch !important; gap:10px; }
+    .hdr .pricebox { text-align:left !important; }
+
+    .tagstrip { flex-direction:column !important; }
+    .tagstrip div { border-right:none !important; border-bottom:1px solid #dde2ea; text-align:left !important; padding:8px 4px !important; }
+    .tagstrip div:last-child { border-bottom:none; }
+
+    .mobile-jump {
+      display:flex !important; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      position:sticky; top:0; z-index:20; background:#1a2a4a; padding:10px 12px;
+      border-bottom:3px solid #f0b429; white-space:nowrap; scrollbar-width:none;
+    }
+    .mobile-jump::-webkit-scrollbar { display:none; }
+    .mobile-jump a {
+      color:#c7d2e8; font-size:11.5px; font-weight:700; text-decoration:none;
+      padding:6px 10px; border-radius:14px; background:rgba(255,255,255,0.08); flex:0 0 auto;
+    }
+    .sec-title { scroll-margin-top:56px; }
+
+    .cols { flex-wrap:wrap !important; }
+    .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
+    .cols { row-gap:16px; }
+
+    .tiles { flex-wrap:wrap !important; row-gap:8px; }
+    .tile { flex:1 1 45% !important; min-width:0 !important; }
+
+    div[style*="flex:1 1 44%"] { flex:1 1 100% !important; }
+    div[style*="flex:1 1 30%"] { flex:1 1 45% !important; }
+
+    table.t:not(.prose), table.fit, table.peer {
+      display:table !important; width:100% !important; table-layout:fixed !important;
+      white-space:normal !important; overflow-x:visible !important; max-width:100%;
+    }
+    table.t:not(.prose) td, table.t:not(.prose) th,
+    table.fit td, table.fit th,
+    table.peer td, table.peer th { white-space:normal !important; word-wrap:break-word; padding:4px 3px !important; font-size:9.6px !important; }
+    table.peer td:first-child, table.peer th:first-child { width:26% !important; }
+    table.prose { display:block !important; }
+    table.prose tr:first-child { display:none !important; }
+    table.prose tr { display:block !important; padding:10px 0 !important; border-bottom:1px solid #e4e8ef; }
+    table.prose tr:last-child { border-bottom:none !important; }
+    table.prose td { display:inline !important; padding:0 !important; border:none !important; text-align:left !important; white-space:normal !important; width:auto !important; word-wrap:break-word; }
+    table.prose td:first-child { font-weight:900; font-size:13px; color:#1a2a4a; }
+    table.prose td:nth-child(2) { margin-left:8px; }
+    table.prose td:nth-child(3) { display:block !important; margin-top:6px; font-size:12.5px; line-height:1.55; color:#2a3342; }
+
+    .metric-strip { flex-wrap:wrap !important; }
+    .metric-strip > div { flex:1 1 50% !important; box-sizing:border-box; border-bottom:1px solid #e7ebf1 !important; }
+    .metric-strip > div:nth-child(even) { border-right:none !important; }
+
+    .krow { flex-wrap:wrap; align-items:flex-start !important; }
+    .krow .klab { flex:1 1 auto !important; }
+    .krow .kval { display:contents !important; }
+    .krow .kval small { flex:1 1 100% !important; order:3; display:block !important; text-align:left !important; margin-top:3px !important; }
+
+    h1 { font-size:21px !important; }
+    .price { font-size:22px !important; }
+
+    .sector-wheel-compact { width:270px !important; height:290px !important; margin:20px auto 0 32px !important; overflow:visible !important; }
+    .sector-wheel-compact > div { width:540px !important; transform:scale(0.5); transform-origin:top left; }
+  }
+
+  @media (max-width: 480px) {
+    .tile { flex:1 1 100% !important; }
+    div[style*="flex:1 1 45%"] { flex:1 1 100% !important; }
+  }
+</style>
+</head>
+<body>
+<style>
+  :root{
+    --navy:#1a2a4a;
+    --navy-2:#243a63;
+    --gold:#c9a24b;
+    --ink:#1a2a4a;
+    --muted:#5c6b85;
+    --hair:#dde2ea;
+    --page-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .cover-wrap{
+    font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    background:#e9edf3;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px;
+  }
+  .cover-page{
+    width:1400px;
+    max-width:100%;
+    min-height:900px;
+    background:var(--page-bg);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 6px 24px rgba(26,42,74,0.18);
+    overflow:hidden;
+  }
+  .top-band{
+    height:14px;
+    background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--gold) 100%);
+    flex-shrink:0;
+  }
+  .brand-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:26px 56px 0 56px;
+    flex-shrink:0;
+  }
+  .brand-bar .doc-type{
+    font-size:12px;
+    letter-spacing:3px;
+    color:var(--muted);
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .brand-bar .doc-date{
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.4px;
+  }
+  .main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    padding:36px 60px 40px 60px;
+  }
+  .logo-wrap{
+    width:auto;
+    max-width:92%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:44px;
+  }
+  .logo-wrap img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .text-logo{
+    font-size:clamp(20px, 6.2vw, 40px);
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--navy);
+    white-space:normal;
+    word-break:break-word;
+    text-align:center;
+    line-height:1.15;
+  }
+  .text-logo span{ color:var(--gold); }
+  .kicker{
+    font-size:15px;
+    letter-spacing:6px;
+    color:var(--gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  h1.report-title{
+    font-size:46px;
+    letter-spacing:1px;
+    color:var(--navy);
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.15;
+  }
+  .divider{
+    width:120px;
+    height:3px;
+    background:var(--gold);
+    margin:26px 0;
+  }
+  .company-name{
+    font-size:34px;
+    font-weight:700;
+    color:var(--navy);
+    letter-spacing:0.3px;
+  }
+  .ticker-row{
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 14px;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .ticker-chip{ text-align:center; }
+  .ticker-chip{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:var(--navy);
+    background:#eef1f7;
+    border:1px solid var(--hair);
+    border-radius:4px;
+    padding:6px 14px;
+  }
+  .sector-line{
+    margin-top:28px;
+    font-size:14px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+    font-style:italic;
+  }
+  .meta-block{
+    margin-top:64px;
+    display:flex;
+    gap:70px;
+    justify-content:center;
+  }
+  .rev-history{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .rev-history-title{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:8px;
+  }
+  .rev-history-table{ border-collapse:collapse; font-size:13px; }
+  .rev-history-table th{
+    text-align:left; padding:2px 28px 4px 0; font-size:10px; letter-spacing:1px;
+    text-transform:uppercase; color:var(--muted); font-weight:600;
+    border-bottom:1px solid #e2e6ee;
+  }
+  .rev-history-table td{ white-space:nowrap; padding:4px 28px 4px 0; color:var(--navy); font-weight:600; }
+  .rev-history-table td.rev-note{ white-space:normal; color:var(--muted); font-weight:400; }
+  .meta-item{
+    text-align:center;
+  }
+  .meta-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .meta-value{
+    font-size:16px;
+    color:var(--navy);
+    font-weight:700;
+  }
+  .prepared-by{
+    margin-top:60px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+  }
+  .prepared-by strong{
+    color:var(--navy);
+  }
+  .footer{
+    flex-shrink:0;
+    background:#ffffff;
+    border-top:1px solid var(--hair);
+    padding:16px 56px;
+    text-align:center;
+  }
+  .footer p{
+    font-size:10.5px;
+    line-height:1.6;
+    color:#8992a6;
+    letter-spacing:0.2px;
+  }
+  .footer strong{
+    color:var(--muted);
+  }
+  @media (max-width: 860px) {
+    .footer { padding:14px 20px !important; text-align:left !important; }
+    .footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .main { padding-top:14px !important; padding-bottom:14px !important; }
+    .logo-wrap { margin-bottom:20px !important; }
+    .meta-block { margin-top:30px !important; }
+  }
+  .bottom-band{
+    height:8px;
+    background:var(--navy);
+    flex-shrink:0;
+  }
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+  <div class="top-band"></div>
+  <div class="brand-bar"></div>
+  <div class="main">
+    <div class="logo-wrap"><div class="text-logo">AEGIS <span>LOGISTICS</span></div></div>
+    <div class="kicker">Equity Research Report</div>
+    <h1 class="report-title">Aegis Logistics Limited</h1>
+    <div class="divider"></div>
+    <div class="ticker-row">
+      <div class="ticker-chip">NSE: AEGISLOG</div>
+      <div class="ticker-chip">BSE: 500003</div>
+      <div class="ticker-chip">Mkt Cap: &#8377;48,996 Cr</div>
+      <div class="ticker-chip">Master Score: A (85)</div>
+    </div>
+    <div class="sector-line">Gas Logistics &mdash; LPG &amp; Gas Sourcing / Distribution, Terminals (via listed subsidiary Aegis Vopak Terminals), Autogas</div>
+    <div class="meta-block" style="display:block">
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
+      <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">7 October 2026</span>
+    </div>
+    <div class="rev-history">
+      <div class="rev-history-title">Revision History</div>
+      <table class="rev-history-table">
+        <tr><th>Date</th><th>Version</th></tr>
+        <tr><td>07/10/26</td><td class="rev-note">v1 &mdash; initial report</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+    <p style="margin-bottom:4px;letter-spacing:0.5px;text-transform:uppercase;font-size:9.5px;color:#8a94a6">Confidential — For Educational Use</p>
+    <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
+  </div>
+  <div class="bottom-band"></div>
+</div>
+</div>
+
+<div class="page-wrap">
+<div class="page">
+  <div class="hdr">
+    <div>
+      <div class="meta">BSE: 500003 &nbsp;·&nbsp; NSE: AEGISLOG &nbsp;·&nbsp; Gas logistics (LPG / gas sourcing, terminals, autogas) &nbsp;·&nbsp; Mumbai, Maharashtra</div>
+      <h1>Aegis Logistics Limited</h1>
+      <div class="tagline">Gas logistics company, not just an LPG distributor &nbsp;·&nbsp; Terminal arm Aegis Vopak Terminals is separately listed and consolidated &nbsp;·&nbsp; Record Q1 FY27 &nbsp;·&nbsp; ~3.4% below 52-week high</div>
+    </div>
+    <div class="pricebox">
+      <div class="price">&#8377;1,467.00 <span class="chg" style="color:#a5d6a7">&#9650; +5.59%</span></div>
+      <div class="sub">Report date: 7 Oct 2026 &nbsp;|&nbsp; Mkt Cap: &#8377;48,996 Cr (MarketSmith) &nbsp;|&nbsp; Book Value: 8.09x &nbsp;|&nbsp; MarketSmith Master Score: A (85)</div>
+    </div>
+  </div>
+  <div class="tagstrip">
+    <div style="color:#2e7d32;background:#ecf6ec">&#9679; Sentiment: Constructive trend, extended</div>
+    <div style="color:#2e7d32;background:#ecf6ec">&#9679; Momentum: Gauges +5 / +3 (1D) strongly bullish</div>
+    <div style="color:#c62828;background:#fdeef0">&#9679; Valuation: Rich (~41x P/E, ~8x P/B)</div>
+    <div style="color:#2e7d32;background:#ecf6ec">&#9679; EPS 95 &middot; Price 91 &middot; Group 8/197</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Pending: &#8377;6,000 Cr raise &middot; Tristar talks</div>
+  </div>
+  <nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Moat</a><a href="#sec03">Event</a><a href="#sec04">Sentiment</a><a href="#sec05">Sector Size</a><a href="#sec06">Shareholding</a><a href="#sec07">Performance</a><a href="#sec08">Financials</a><a href="#sec09">Ratios</a><a href="#sec10">Management</a><a href="#sec11">Guidance</a><a href="#sec12">Consensus</a><a href="#sec13">Volume</a><a href="#sec14">Sector Rotation</a><a href="#sec15">Peers</a><a href="#sec16">Risk</a><a href="#sec17">Technical Ratings</a><a href="#sec18">Elliott Wave</a><a href="#sec19">Recommendation</a></nav>
+
+  <div class="sec">
+    <div class="sec-title" id="sec01"><span class="num">01</span><h2>Company Overview</h2></div>
+    <div class="cols">
+      <div style="flex:1.5">
+        <div class="microhead">What They Do</div>
+        <p>Aegis Logistics is a <b>gas logistics company</b> &mdash; not an LPG distributor only. It <b>sources and sells LPG and other gases</b> (FY26 distribution volume 754,000 MT; logistics throughput 5.152 million MT), runs an <b>autogas</b> retail network, and owns the <b>LPG and liquid terminals</b> business through <b>Aegis Vopak Terminals Ltd (AVTL, NSE: AEGISVOPAK)</b>. AVTL listed on 2 Jun 2025, is <b>consolidated</b> by Aegis, and the FY26 annual report calls it a <b>subsidiary</b> (some sources say &ldquo;joint venture&rdquo;; this report follows the company&rsquo;s wording). Aegis holds <b>44.71%</b> of AVTL after the IPO diluted it from 50.10%; Vopak India BV holds <b>42.23%</b>.</p>
+        <p style="margin-top:7px">FY26 consolidated sales were <b>&#8377;8,333 Cr</b>, operating profit <b>&#8377;1,452 Cr</b> (Screener) and net profit <b>&#8377;1,107 Cr</b>. Q1 FY27 was a record: sales &#8377;2,357 Cr (+37%), operating profit &#8377;714 Cr (30% margin), gas-division EBITDA &#8377;591 Cr (+296%) on a distribution margin of ~&#8377;7,000/MT versus ~&#8377;4,000/MT through FY25. Five terminal and storage regions, six ports (Mumbai, Kandla, Pipavav, Mangalore, Haldia, Kochi).</p>
+        <div class="notebox blue"><b>Key Competitive Advantage:</b> The terminal footprint &mdash; six ports, the only private operator with LPG import terminals at four locations (per source), protected by port leases and environmental/explosives licences &mdash; sitting beside a trading arm with a large LPG import share (company-claimed ~20% of India&rsquo;s LPG imports; unverified). Caveat: India Ratings notes <b>no long-term contractual cash flows</b> in the gas and liquid segments overall, so terminal economics rest mainly on high utilisation, with specific contracted exceptions (see &sect;02).</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">FY26 Segment EBIT Mix (India Ratings, 17 Sep 2026)</div>
+        <svg viewBox="0 0 480 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><path d="M240.0,8.0 A96,96 0 1 1 144.8,116.1 L180.5,111.6 A60,60 0 1 0 240.0,44.0 Z" fill="#1a2a4a"/><text x="298.5" y="159.6" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">73%</text><path d="M144.8,116.1 A96,96 0 0 1 240.0,8.0 L240.0,44.0 A60,60 0 0 0 180.5,111.5 Z" fill="#2e7d32"/><text x="181.5" y="56.4" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">27%</text><text x="240" y="102" text-anchor="middle" font-size="19" font-weight="900" fill="#1a2a4a">&#8377;1,370 Cr</text><text x="240" y="118" text-anchor="middle" font-size="9" letter-spacing="1.2" fill="#8a94a6">FY26 SEGMENT EBIT</text><rect x="26" y="222" width="11" height="11" rx="2" fill="#1a2a4a"/><text x="43" y="232" font-size="10.5" fill="#2a3342" font-weight="700">Gas (LPG sourcing / distribution)</text><text x="43" y="245" font-size="9.3" fill="#8a94a6">FY26 segment EBIT ~&#8377;1,000 Cr (Ind-Ra)</text><rect x="26" y="260" width="11" height="11" rx="2" fill="#2e7d32"/><text x="43" y="270" font-size="10.5" fill="#2a3342" font-weight="700">Liquid logistics (terminals)</text><text x="43" y="283" font-size="9.3" fill="#8a94a6">FY26 segment EBIT ~&#8377;370 Cr (Ind-Ra)</text></svg>
+        <div class="chartcap" style="text-align:center">Gas is ~90% of revenue (lowest-margin, fixed-dollar-spread sourcing) and ~65% of FY26 EBITDA per Ind-Ra; ~73% of segment EBIT here (my arithmetic, 1,000 / 1,370) &mdash; different bases, both shown.</div>
+      </div>
+      <div style="flex:1.05">
+<div class="microhead">Earnings-Quality Rating: Where The Profit Comes From</div>
+<div style="border:1px solid #dde2ea;border-radius:6px;padding:11px 14px;background:#f8f9fb">
+  <div style="font-size:15px;font-weight:900;color:#1a2a4a">Mix rated 3 / 5 <span style="letter-spacing:2px;color:#2e7d32;font-size:13px">&#9632;&#9632;&#9632;</span><span style="letter-spacing:2px;color:#cdd5e0;font-size:13px">&#9632;&#9632;</span></div>
+  <p style="font-size:11px;margin-top:5px"><b>Bull:</b> gas EBIT margin rose from 8.6% (FY24) to 26.4% (Q1 FY27); liquid logistics earns 55&ndash;62% EBIT margins and is the stable, higher-quality leg (EBIT &#8377;370 Cr FY26).</p>
+  <p style="font-size:11px;margin-top:5px"><b>Bear:</b> Q1 FY27 leaned on the lower-quality, non-contracted leg &mdash; gas EBIT &#8377;580 Cr in one quarter vs &#8377;1,000 Cr for all of FY26. The mix moved <i>toward</i> the volatile segment, while the capex runway (below) is aimed at the stable one. Terminalling throughput (&ldquo;changeover&rdquo;) was 21x in FY26 vs 38x in FY25.</p>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec02"><span class="num">02</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
+    <table class="t prose">
+      <tr><th style="text-align:left">Dimension</th><th>Rating</th><th style="text-align:left">Commentary</th></tr>
+      <tr><td style="text-align:left">Brand Strength</td><td><span class="badge b-warn">Moderate</span></td><td style="text-align:left">B2B and local rather than consumer. Company claims ~20% of India&rsquo;s LPG imports and to be the &ldquo;only pan-Indian player in liquid logistics&rdquo; &mdash; company-derived, unverified. Network: 290 LPG distributors / 140 cities / 15 states and 142 autogas stations in 10 states are <b>FY25 figures</b>; current figures not found.</td></tr>
+      <tr><td style="text-align:left">Network Effects</td><td><span class="badge b-bear">Absent</span></td><td style="text-align:left">Not applicable to a sourcing, storage and distribution model.</td></tr>
+      <tr><td style="text-align:left">Switching Costs</td><td><span class="badge b-warn">Mixed</span></td><td style="text-align:left"><b>Terminals:</b> company-specific contracts with HPCL, BPCL, IOCL and Nayara; Pipavav ammonia terminal on a 15-year take-or-pay with Hindustan Zinc; Haldia HPCL agreement through 2038; Jamnagar&ndash;Loni pipeline operational, Kandla&ndash;Gorakhpur expected soon. <b>But</b> India Ratings (17 Sep 2026, primary) states the gas and liquid segments <b>do not have long-term contractual cash flows</b> overall &mdash; the two views are not reconciled here; the take-or-pay share of revenue was not found. <b>Distribution:</b> weak &mdash; dealer sales are only 3.02% of sales across 88 dealers.</td></tr>
+      <tr><td style="text-align:left">Cost Advantage / Barriers</td><td><span class="badge b-bull">Strongest leg</span></td><td style="text-align:left">Six-port terminal footprint, port leases and environmental/explosives licences are real entry barriers (lease tenors and renewals not found). Capacity (newest first): India Ratings FYE26 <b>LPG static 246,800 MT</b> across five gas terminals and <b>liquids 2.1 mn kl</b>. Older company figures: LPG static 247 kt / 225.8 kt; liquids 1.5 / 1.7 mn cbm. Ind-Ra prints FY25/FY24 LPG static as 119,000 / 117,000 MT, which does not reconcile with 246,800 (possibly AVTL-vs-consolidated basis) &mdash; flagged, not resolved.</td></tr>
+      <tr><td style="text-align:left">Patents / Proprietary Tech</td><td><span class="badge b-bear">Absent</span></td><td style="text-align:left">None identified; the edge is physical infrastructure and licences, not IP.</td></tr>
+    </table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">What This Moat Does NOT Protect Against</div>
+        <p style="font-size:11.3px">Trading margin: the sourcing leg earns a fixed-dollar spread with no contracted floor, and OMCs are customers <i>and</i> competitors. Customer concentration: two annual-report notes do not reconcile &mdash; standalone Customer 1 = 12.29% of revenue (FY25 13.01%); the consolidated gas-segment note shows Customer 1 = 22% (FY25 10%) and Customer 2 = 3% (FY25 30%), unnamed. CARE says top-10 customers are 35&ndash;50% of income; 5 trading houses supplied 86.81% of purchases (83.95% prior). Competition: Adani Hazira (720,000 kl) and Mundra liquid terminals, IMC, the GAIL pipeline; new competing capacity not found.</p>
+      </div>
+      <div style="flex:1">
+        <div class="notebox blue"><b>Synthesis:</b> A genuine infrastructure moat in terminals (barriers, port access, ~55-62% segment EBIT margins) attached to a trading business with no moat and a one-off-looking Q1 margin. The market currently pays for the first while earning the second. Rating agency view: India Ratings <b>IND AA / Positive</b> (Stable in Mar 2024, Positive since 27 Jun 2025); a separate secondary summary of CARE AA/A1+ stable (Mar 2026) is unverified and not relied on.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec03"><span class="num">03</span><h2>Q1 FY27 Margin Surge, the AVTL Structure &amp; the Pending Tristar / &#8377;6,000 Cr Raise</h2></div>
+<div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Q1 FY27 Op Profit</div><div style="font-size:18px;font-weight:900;color:#2e7d32">&#8377;714 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">30% margin; company normalised &#8377;727 Cr</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Gas Div. EBITDA</div><div style="font-size:18px;font-weight:900;color:#2e7d32">&#8377;591 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">+296% YoY</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Distribution Vol.</div><div style="font-size:18px;font-weight:900;color:#1a2a4a">277,000 MT</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">+91% YoY (145 tmt Q1 FY26)</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Margin / MT</div><div style="font-size:18px;font-weight:900;color:#2e7d32">~&#8377;7,000</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">vs ~&#8377;4,000 through FY25</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">AVTL Stake</div><div style="font-size:18px;font-weight:900;color:#1a2a4a">44.71%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Vopak India BV 42.23%</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Pending Raise</div><div style="font-size:18px;font-weight:900;color:#e07c00">Up to &#8377;6,000 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">EGM 21 Oct 2026, 4 pm</div></div></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">The Q1 FY27 Margin Surge &mdash; Read It Two Ways</div>
+        <div style="border:2px solid #2e7d32;border-radius:8px;padding:10px 14px;background:linear-gradient(135deg,#eaf7ea,#f6fff4)">
+          <p style="font-size:11.4px"><b>Bull:</b> record quarter &mdash; normalised consolidated EBITDA &#8377;727 Cr (+184%), gas EBIT &#8377;580 Cr (26.4% margin) and India Ratings and management both expect ~&#8377;7,000/MT in FY27 (Ind-Ra FY27 EBITDA expectation ~&#8377;1,800 Cr). Liquids EBITDA &#8377;136 Cr (~76% margin, +28%). FY26 operating cash flow was &#8377;2,028 Cr, helped by favourable working-capital changes (Ind-Ra).</p>
+          <p style="font-size:11.4px;margin-top:7px"><b>Bear:</b> the margin is on non-contracted sourcing volumes, and management itself says part of it is an &ldquo;uncertainty margin&rdquo;; sustainability is the key monitorable. One independent analyst (not a brokerage) puts Q1 economics nearer &#8377;12,000/MT and each &#8377;1,000/MT change at ~&#8377;30 Cr EBITDA. National LPG consumption fell ~15% (April&ndash;Sept FY27 13,797 TMT, &minus;14.93%), and LPG logistics throughput fell ~3% (1,124 vs 1,161 tmt Q1).</p>
+          <div style="font-size:10.3px;color:#8a6d1f;background:#fff9e0;border-radius:4px;padding:6px 9px;margin-top:8px"><b>Conflicts kept:</b> Q1 PAT &#8377;545 Cr (Screener) vs &#8377;484.44 Cr attributable (Sahi / Trade Brains) &mdash; probably pre- vs post-minority interest; EPS &#8377;13.80 looks computed on the attributable figure (~35.1 Cr shares x 13.80 &asymp; &#8377;484 Cr, my arithmetic). Same pattern in FY26: &#8377;1,107 Cr vs ~&#8377;898 Cr implied by EPS &#8377;25.59 (my arithmetic).</div>
+        </div>
+        <div class="microhead">AVTL Snapshot</div>
+        <table class="t fit"><tr><th>AVTL (&#8377; Cr)</th><th>Revenue</th><th>Op Profit</th><th>PAT</th><th>Note</th></tr>
+<tr><td>FY26</td><td>923 (+17%)</td><td>687 (75%)</td><td>342 (+52%)</td><td>EPS &#8377;2.80; borrowings 3,731</td></tr>
+<tr><td>Q1 FY27</td><td>233.8 (+12.4%)</td><td>179.4 (+15.6%)</td><td>66.1 (&minus;6.9%)</td><td>Screener mislabels as &ldquo;Q2 FY2026&rdquo;</td></tr></table>
+        <div class="chartcap">AVTL P/E 123x, P/B 7.55x, ROE 11.0%. Price ~&#8377;298&ndash;300, market cap ~&#8377;33,234 Cr (Screener, same-session, not date-stamped).</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">AVTL Structure &amp; Restructuring</div>
+        <div class="krow"><span class="klab">Listing</span><span class="kval" style="font-size:11px">2 Jun 2025<small>&#8377;2,800 Cr fresh issue only, &#8377;235 issue price; listed 6.4% below, closed &#8377;241.95 upper circuit. Aegis holders received nothing directly (no demerger).</small></span></div>
+        <div class="krow"><span class="klab">Holding</span><span class="kval" style="font-size:11px">44.71% Aegis &middot; 42.23% Vopak India BV<small>Promoter group of AVTL ~86.9%. Vopak shareholders&rsquo; agreement (12 Jul 2021, amended thrice) &mdash; veto terms NOT read.</small></span></div>
+        <div class="krow"><span class="klab">Hindustan Aegis LPG</span><span class="kval" style="font-size:11px">75% bought (Jan 2026)<small>Total &#8377;1,031.8 Cr vs &#8377;1,130 Cr (unresolved); 51% leg &#8377;700 Cr per India Ratings (AGPL sold its 51% to AVTL), &asymp; the &#8377;701.61 Cr reported.</small></span></div>
+        <div class="krow"><span class="klab">Pipavav</span><span class="kval" style="font-size:11px">LPG via BTA; 96% bought at par<small>AVTL then sold 10% to ITOCHU for &#8377;80.32 Cr (96% &rarr; 86%; ITOCHU reportedly targets 25%). ITOCHU took no stake in Aegis Logistics itself.</small></span></div>
+        <div class="krow"><span class="klab">Funding</span><span class="kval" style="font-size:11px">NCDs &#8377;1,690 Cr listed<small>Nov 2025 and Jan 2026; IPO term debt (&#8377;2,020 Cr) repaid June 2025. Earlier: 3.27% of AVTL sold to Vopak India for &#8377;180 Cr (24 Jun 2024).</small></span></div>
+        <div class="krow"><span class="klab">Min. Public Holding</span><span class="kval" style="color:#c62828;font-size:11px">~12% more dilution due<small>AVTL promoters (Aegis, Vopak India) must dilute a further ~12% within 3 yrs of the Jun 2025 IPO (India Ratings) &mdash; Aegis&rsquo;s 44.71% will likely fall. Supply overhang.</small></span></div>
+        <div class="microhead">Pending Events</div>
+        <p style="font-size:11.2px"><b>(a) &#8377;6,000 Cr raise:</b> board approved up to &#8377;6,000 Cr (equity, NCDs, preferential or QIP) and a &#8377;6,000 Cr borrowing limit on 28 Sep 2026; EGM 21 Oct, 4 pm. Instrument, pricing and use of proceeds not disclosed. <b>(b) Tristar (UAE):</b> 18 Aug report (Outlook Business) of advanced exclusive talks for ~$1.5 bn &mdash; refinancing $600 mn of Tristar debt plus $400&ndash;500 mn new debt plus equity; &ldquo;could still fall apart&rdquo;; no definitive agreement found. <b>Any link between (a) and (b) is my inference; neither source states it.</b> India Ratings&rsquo; release (17 Sep) pre-dates the 28 Sep approval, so its reference to a &ldquo;recent fund raise&rdquo; is something else and is not tied to the &#8377;6,000 Cr.</p>
+      </div>
+    </div>
+    <div class="notebox "><b>Arithmetic only &mdash; not a verified SOTP:</b> 44.71% of AVTL&rsquo;s ~&#8377;33,234 Cr market cap &asymp; &#8377;14,860 Cr &asymp; 29% of Aegis&rsquo;s market cap (~&#8377;51,666 Cr Screener / &#8377;48,996 Cr MarketSmith). It combines a stake from the annual report with a market cap that is not date-matched, and it ignores that ~55% of AVTL&rsquo;s earnings already belong to minorities within Aegis&rsquo;s consolidated profit. Results date also conflicts (7 Aug vs 14 Aug vs ~19 Aug in different sources; AGM was 7 Aug).</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec04"><span class="num">04</span><h2>Overall Sentiment &amp; Momentum Prediction</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border:3px solid #e67e22">
+        <div class="plab">Key Watch-Item</div>
+        <div class="pval" style="color:#e67e22;font-size:16px">&#9888; Sustainability of the distribution margin</div>
+        <p style="font-size:11.3px;margin-top:5px">Q2 FY27 (estimated 4 Nov 2026, aggregator estimate, unconfirmed) is the first test of ~&#8377;7,000/MT after a record Q1, against a backdrop of national LPG volumes down ~15%. Near catalyst: <b>EGM 21 Oct 2026</b> on the &#8377;6,000 Cr raise.</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#f4fbf4);border-top:3px solid #2e7d32">
+        <div class="plab">Overall Sentiment</div>
+        <div class="pval" style="color:#2e7d32">CONSTRUCTIVE <span style="font-size:12px;color:#5a6475;font-weight:600">trend</span></div>
+        <p style="font-size:11.3px;margin-top:5px">FII holding rising (16.9% &rarr; 19.54%), MarketSmith Master A, Group Rank 8 of 197. But DII/MF have sold since Mar 2025 (MF 6.10% &rarr; 3.29%), the street average target (~&#8377;1,331, 5 analysts) sits ~5&ndash;10% <i>below</i> the price, and the stock gained 5.59% on volume +239% in one day.</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border-top:3px solid #e67e22">
+        <div class="plab">Momentum Prediction</div>
+        <div class="pval" style="color:#f57f17">STRONG &rarr; EXTENDED</div>
+        <p style="font-size:11.3px;margin-top:5px">Trend Momentum gauges +5 (1D short-term) / +3 (long-term) and +3 / +3 (1H) &mdash; both timeframes aligned. The stock is ~2.5x off its low and ~3.4&ndash;3.7% from its &#8377;1,528.70 high. Momentum this strong is also what precedes exhaustion; a normal wave-4 pullback would be unremarkable.</p>
+      </div>
+    </div>
+    <div class="notebox "><b>Framing note:</b> This is a trend-and-earnings-surge stock at a stretched price, not a value situation. The market is capitalising a quarter whose margin management says is partly an &ldquo;uncertainty margin&rdquo;, while event-risks (distribution margin, Tristar, fund raise, AVTL minimum-public-holding dilution) are unresolved.</div>
+  </div>
+
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1">
+        <div class="sec-title" id="sec05"><span class="num">05</span><h2>Sector Market Size</h2></div>
+        <svg viewBox="0 0 400 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="376" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">TMT</text><rect x="72.0" y="41.0" width="112.0" height="105.0" fill="#8fa3c4" rx="2"/><text x="128.0" y="37.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">16,219</text><text x="128.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Apr&ndash;Sep FY26 (implied)</text><rect x="232.0" y="56.7" width="112.0" height="89.3" fill="#1a2a4a" rx="2"/><text x="288.0" y="52.7" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">13,797</text><text x="288.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Apr&ndash;Sep FY27</text></svg>
+        <div class="chartcap">India LPG consumption, April&ndash;Sept: FY27 13,797 TMT (&minus;14.93%); the FY26 bar is implied from that % (my arithmetic). H1 CY2026 14.74 mt (&minus;8%). PMUY: 33.3 crore active domestic consumers (secondary). Third-party storage: AVTL holds ~25% (single source); total market size and capacity additions not found; tariffs expected to rise $25 &rarr; $28/cbm (IPO-era). Mar 2026 West Asia disruption; ~90% of imports historically via the Gulf/Hormuz.</div>
+        <div class="microhead">Aegis Distribution Volume (tmt)</div>
+        <svg viewBox="0 0 400 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="376" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">Aegis distribution vol. (tmt)</text><rect x="64.0" y="68.0" width="74.7" height="78.0" fill="#1a2a4a" rx="2"/><text x="101.3" y="64.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">560</text><text x="101.3" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><rect x="170.7" y="73.4" width="74.7" height="72.6" fill="#1a2a4a" rx="2"/><text x="208.0" y="69.4" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">521</text><text x="208.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><rect x="277.3" y="41.0" width="74.7" height="105.0" fill="#2a9d8f" rx="2"/><text x="314.7" y="37.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">754</text><text x="314.7" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text></svg>
+        <div class="chartcap">Aegis grew volumes 45% in FY26 while the market shrank; Q1 FY27 277 tmt (+91%).</div>
+      </div>
+      <div style="flex:1.08">
+        <div class="sec-title" id="sec06"><span class="num">06</span><h2>Shareholding — 4 Qtrs</h2></div>
+        <table class="t"><tr><th>Category</th><th>Sep'25</th><th>Dec'25</th><th>Mar'26</th><th>Jun'26</th><th>&Delta;</th></tr>
+<tr><td>Promoters</td><td>58.10%</td><td>58.10%</td><td>58.10%</td><td>58.10%</td><td>flat</td></tr>
+<tr><td>FIIs</td><td>16.9%</td><td>17.9%</td><td>19.56%</td><td><b>19.54%</b></td><td class="pos">&#9650; 2.64pp</td></tr>
+<tr><td>DIIs</td><td>6.3%</td><td>5.4%</td><td>3.7%</td><td>3.6%</td><td class="neg">&#9660; 2.7pp</td></tr>
+<tr><td>&nbsp;&nbsp;of which MFs</td><td>5.92%</td><td>5.08%</td><td>3.36%</td><td>3.29%</td><td class="neg">&#9660; 2.63pp</td></tr>
+<tr><td>Public / other*</td><td>18.7%</td><td>18.6%</td><td>18.6%</td><td>18.8%</td><td>~flat</td></tr></table>
+<div class="chartcap">*Residual, my arithmetic (100 &minus; promoters &minus; FII &minus; DII). Source: Trendlyne. FII was 18.1% in Mar'25. Promoters: Huron Holdings 31.67%, Trans Asia Petroleum 26.43%; <b>pledge 0%</b> (aggregator-reported; the annual report has no pledge disclosure I could find). FPI holders 194 &rarr; 227; Smallcap World Fund 2.49%, Habrok India Master LP 2.16%; Quant Small Cap is the largest MF (2.35%). Minor Huron share-count discrepancy (11,11,60,570 vs 11,11,70,570 at the same 31.67%).</div>
+      </div>
+      <div style="flex:1.05">
+        <div class="sec-title" id="sec07"><span class="num">07</span><h2>Stock Performance</h2></div>
+        <table class="peer"><tr><th>1Y return source</th><th>Date</th><th>1Y</th></tr>
+<tr><td>MarketsMOJO</td><td>n/s</td><td class="pos">+74.85&ndash;75.08%</td></tr>
+<tr><td>Upstox</td><td>6 Jul</td><td class="pos">&gt;83%</td></tr>
+<tr><td>ValueResearch</td><td>28 Aug</td><td class="pos">+97.9%</td></tr>
+<tr><td>Sensex (comparison)</td><td>n/s</td><td class="neg">&minus;9.5%</td></tr></table>
+<div class="chartcap">Different dates, so the spread is not an error. YTD ~+93% only as of 6 Jul; 1M / 3M current: not found. Only Sensex comparisons found (week to 2 Oct: stock +2.46% vs Sensex &minus;3.20%).</div>
+<div class="krow"><span class="klab">52-Wk High</span><span class="kval">&#8377;1,528.70<small>~3.4&ndash;3.7% above price (RSI-88 high, 24 Sep)</small></span></div>
+<div class="krow"><span class="klab">52-Wk Low</span><span class="kval">&#8377;576.10<small>~2.5x off the low</small></span></div>
+<div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0">Path: ~&#8377;811&ndash;833 (10 Jun) &rarr; ~1,171 (29 Jun) &rarr; 1,409 (6 Jul) &rarr; 1,298.75 (28 Aug) &rarr; 1,211 (2 Sep) &rarr; 1,472 (21 Sep) &rarr; ~1,301 (28 Sep, fund-raise day; &minus;4.28% per MarketsMOJO vs &minus;0.55% / &#8377;1,301.35 per Multibagg &mdash; conflict) &rarr; ~1,474 (7 Oct).</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec compact">
+    <div class="sec-title" id="sec08"><span class="num">08</span><h2>Key Financials — YoY &amp; QoQ (&#8377; Crore, Consolidated)</h2></div>
+    <div class="cols" style="margin-bottom:10px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column"><div class="microhead" style="margin-top:0">&#9733; Latest Quarter — Q1 FY27 (Jun'26) &middot; Q2 FY27 (Sep'26) not yet reported</div><div style="border:2px solid #2e7d32;border-radius:8px;padding:8px 14px;background:linear-gradient(135deg,#eaf7ea,#f6fff4 60%,#eefaf0);flex:1">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;2,357 Cr</div><div style="font-size:10.5px;color:#5a6475">Sales <b class="pos">+37% YoY</b> &middot; &minus;9% QoQ</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;714 Cr</div><div style="font-size:10.5px;color:#5a6475">Op. Profit <b class="pos">+198% YoY</b></div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#2e7d32">30%</div><div style="font-size:10.5px;color:#5a6475">OPM vs 14% a year ago</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;545 Cr</div><div style="font-size:10.5px;color:#5a6475">Net profit <b class="pos">+211% YoY</b> (pre-minority)</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;13.80</div><div style="font-size:10.5px;color:#5a6475">EPS <b class="pos">+269%</b> vs &#8377;3.74</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;4,150 Cr</div><div style="font-size:10.5px;color:#5a6475">Borrowings Mar-26 (Screener, incl. leases)</div></div>
+      </div>
+      <div style="font-size:10.4px;color:#33691e;margin-top:8px">Sales were <i>down</i> sequentially from Mar-26 while operating profit rose &mdash; the whole story is margin, not volume of rupees. MarketSmith shows the same quarter as EPS +269%, sales +37%.</div>
+    </div></div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column">
+        <div class="microhead" style="margin-top:0">Valuation &amp; Balance-Sheet Tiles</div>
+    <div class="tiles" style="flex-wrap:wrap;flex:1;align-content:stretch">
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">TTM Sales</div><div class="val ">&#8377;8,970 Cr</div><div class="note">Sum of last 4 quarters; MarketSmith &#8377;8,970.66 Cr</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E (TTM)</div><div class="val warn">~41x</div><div class="note">Screener 41.2x &middot; stockanalysis 39.15x &middot; &ldquo;76.4x&rdquo; unverified, different basis</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Forward P/E</div><div class="val ">~48&ndash;54x</div><div class="note">On MarketSmith FY28e &#8377;30.65 / FY27e &#8377;27.10 (FY27e looks stale)</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/S (TTM)</div><div class="val ">~5.5&ndash;5.8x</div><div class="note">Mkt cap &#8377;48,996&ndash;51,666 Cr &divide; 8,970</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/B</div><div class="val ">8.16x</div><div class="note">MarketSmith Book Value 8.09x</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">ROE / ROCE</div><div class="val ">16.3% / 13.3%</div><div class="note">Screener</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Dividend Yield</div><div class="val ">0.62%</div><div class="note">Screener; MarketSmith 0.48%</div></div>
+      <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">EV / EBITDA</div><div class="val ">not found</div><div class="note">For any company; not computed here</div></div>
+    </div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:6px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Annual P&amp;L — Last 5 Years + TTM (Screener, consolidated)</div>
+        <table class="t fit"><tr><th>Year</th><th>Sales</th><th>Op Profit</th><th>OPM%</th><th>Net Profit</th><th>EPS (&#8377;)</th></tr><tr><td>FY22</td><td>4,631</td><td>535</td><td>12%</td><td>385</td><td>10.19</td></tr><tr><td>FY23</td><td>8,627</td><td>672</td><td>8%</td><td>511</td><td>13.19</td></tr><tr><td>FY24</td><td>7,046</td><td>923</td><td>13%</td><td>672</td><td>16.22</td></tr><tr><td>FY25</td><td>6,764</td><td>1,098</td><td>16%</td><td>787</td><td>18.9</td></tr><tr><td><b>FY26</b></td><td>8,333</td><td>1,452</td><td>17%</td><td>1,107</td><td>25.59</td></tr><tr><td><b>TTM</b></td><td>8,970</td><td>1,926</td><td>21%</td><td>1,477</td><td>35.65</td></tr></table>
+        <div class="chartcap">FY26: other income 326, interest 146, depreciation 199. FY26 EPS &#8377;25.59 implies ~&#8377;898 Cr attributable (my arithmetic) vs reported &#8377;1,107 Cr. TTM = Sep-25 to Jun-26 (my sum).</div>
+        <div class="microhead" style="margin-top:9px">Quarterly Trend — Last 9 Quarters</div>
+        <table class="t fit"><tr><th>Quarter</th><th>Sales</th><th>Op Profit</th><th>OPM%</th><th>Net Profit</th><th>EPS (&#8377;)</th></tr><tr><td>Jun-24</td><td>1,601</td><td>232</td><td>15%</td><td>158</td><td>3.75</td></tr><tr><td>Sep-24</td><td>1,750</td><td>224</td><td>13%</td><td>152</td><td>3.59</td></tr><tr><td>Dec-24</td><td>1,707</td><td>233</td><td>14%</td><td>160</td><td>3.54</td></tr><tr><td>Mar-25</td><td>1,705</td><td>409</td><td>24%</td><td>318</td><td>8.02</td></tr><tr><td>Jun-25</td><td>1,719</td><td>240</td><td>14%</td><td>175</td><td>3.74</td></tr><tr><td>Sep-25</td><td>2,294</td><td>291</td><td>13%</td><td>244</td><td>5.12</td></tr><tr><td>Dec-25</td><td>1,725</td><td>297</td><td>17%</td><td>233</td><td>5.04</td></tr><tr><td>Mar-26</td><td>2,594</td><td>624</td><td>24%</td><td>455</td><td>11.69</td></tr><tr><td><b>Jun-26</b></td><td>2,357</td><td>714</td><td>30%</td><td>545</td><td>13.8</td></tr></table>
+      </div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Sales (&#8377; Cr) — 5 Years + TTM</div>
+        <svg viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="576" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">Rs Cr</text><rect x="61.0" y="91.8" width="60.7" height="54.2" fill="#1a2a4a" rx="2"/><text x="91.3" y="87.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">4,631</text><text x="91.3" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text><rect x="147.7" y="45.0" width="60.7" height="101.0" fill="#1a2a4a" rx="2"/><text x="178.0" y="41.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">8,627</text><text x="178.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text><rect x="234.3" y="63.5" width="60.7" height="82.5" fill="#1a2a4a" rx="2"/><text x="264.7" y="59.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">7,046</text><text x="264.7" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><rect x="321.0" y="66.8" width="60.7" height="79.2" fill="#1a2a4a" rx="2"/><text x="351.3" y="62.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">6,764</text><text x="351.3" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><rect x="407.7" y="48.5" width="60.7" height="97.5" fill="#1a2a4a" rx="2"/><text x="438.0" y="44.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">8,333</text><text x="438.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text><rect x="494.3" y="41.0" width="60.7" height="105.0" fill="#5b7bb5" rx="2"/><text x="524.7" y="37.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">8,970</text><text x="524.7" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">TTM</text></svg>
+        <div class="microhead" style="margin-top:9px">Operating Profit (navy) &amp; Net Profit (green) — &#8377; Cr</div>
+        <svg viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="576" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">Rs Cr</text><rect x="60.1" y="116.8" width="27.7" height="29.2" fill="#1a2a4a" rx="2"/><text x="74.0" y="112.8" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">535</text><rect x="90.9" y="125.0" width="27.7" height="21.0" fill="#2e7d32" rx="2"/><text x="104.7" y="121.0" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">385</text><text x="89.4" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text><rect x="146.8" y="109.4" width="27.7" height="36.6" fill="#1a2a4a" rx="2"/><text x="160.7" y="105.4" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">672</text><rect x="177.5" y="118.1" width="27.7" height="27.9" fill="#2e7d32" rx="2"/><text x="191.4" y="114.1" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">511</text><text x="176.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text><rect x="233.5" y="95.7" width="27.7" height="50.3" fill="#1a2a4a" rx="2"/><text x="247.3" y="91.7" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">923</text><rect x="264.2" y="109.4" width="27.7" height="36.6" fill="#2e7d32" rx="2"/><text x="278.1" y="105.4" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">672</text><text x="262.7" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><rect x="320.1" y="86.1" width="27.7" height="59.9" fill="#1a2a4a" rx="2"/><text x="334.0" y="82.1" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">1,098</text><rect x="350.9" y="103.1" width="27.7" height="42.9" fill="#2e7d32" rx="2"/><text x="364.7" y="99.1" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">787</text><text x="349.4" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><rect x="406.8" y="66.8" width="27.7" height="79.2" fill="#1a2a4a" rx="2"/><text x="420.7" y="62.8" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">1,452</text><rect x="437.5" y="85.6" width="27.7" height="60.4" fill="#2e7d32" rx="2"/><text x="451.4" y="81.6" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">1,107</text><text x="436.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text><rect x="493.5" y="41.0" width="27.7" height="105.0" fill="#1a2a4a" rx="2"/><text x="507.3" y="37.0" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">1,926</text><rect x="524.2" y="65.5" width="27.7" height="80.5" fill="#2e7d32" rx="2"/><text x="538.1" y="61.5" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">1,477</text><text x="522.7" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">TTM</text></svg>
+        <div class="chartcap" style="text-align:center">&#9644; <b style="color:#1a2a4a">Operating Profit</b> &nbsp;&nbsp; &#9644; <b style="color:#2e7d32">Net Profit</b></div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:9px">
+      <div style="flex:1"><div class="notebox green"><b>&#9733; Segment evidence (India Ratings, filled gap):</b> Gas EBIT &#8377;580 Cr in Q1 FY27 (26.4% margin) vs &#8377;130 Cr in Q1 FY26 (8.4%); FY26 &#8377;1,000 Cr (13.0%), FY25 &#8377;610 Cr (10.0%), FY24 &#8377;560 Cr (8.6%). Liquid logistics EBIT &#8377;110 Cr in Q1 (61.5%); FY26 &#8377;370 Cr (57.7%), FY25 &#8377;400 Cr (62.2%), FY24 &#8377;320 Cr (57.3%). Volumes: distribution 754 tmt FY26 (521 FY25, 560 FY24); logistics 5,152 tmt (4,523, 4,105); sourcing 607 tmt (597, 799).</div></div>
+      <div style="flex:1"><div class="notebox blue"><b>&#9733; Operating-profit definitions do not agree (3 sources):</b> FY26 &#8377;1,452 Cr (Screener) = &#8377;14,519 mn (India Ratings) vs company &ldquo;normalised&rdquo; &#8377;1,599 Cr; FY25 &#8377;1,098 Cr (Screener, Ind-Ra &#8377;10,980 mn) vs &#8377;1,173 Cr; Q1 FY27 &#8377;714 Cr / &#8377;713.6 Cr vs &#8377;727 Cr. Other conflicts: Q4 FY26 net profit &#8377;455 Cr (Trade Brains / Screener) vs &#8377;410.37 Cr (Upstox); total assets &#8377;14,269 Cr (Screener FY26; &#8377;11,080 Cr prior) vs &#8377;14,491 Cr / &#8377;11,233 Cr in company slides; LPG logistics throughput Q1 FY27 &ldquo;down 3% to ~1.124 MMT&rdquo; vs &ldquo;flat at 1.14 MMT&rdquo; (India Ratings: 1,124 vs 1,161 tmt, supporting the first).</div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Ratios — Industry-Contextualized</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#f0f7f0;border-color:#2e7d32">
+        <div class="plab">P/CFO &nbsp;·&nbsp; Market Cap &divide; Operating Cash Flow <span class="badge b-bull">Reasonable</span></div>
+        <div class="pval" style="font-size:26px">~24&ndash;25x <span style="font-size:13px;font-weight:600;color:#5a6475">(&#8377;48,996&ndash;51,666 Cr &divide; &#8377;2,028 Cr FY26 OCF)</span></div>
+        <p style="font-size:11.3px;margin-top:6px"><b>Bull:</b> FY26 OCF was ~3.6x FY25 (&#8377;558 Cr) and ~1.8x reported profit; India Ratings attributes it to increased EBITDA and <b>favourable working-capital changes</b> (CFO INR 21.5 bn vs 5.7 bn FY25 and 6.7 bn FY24). Free cash flow was +INR 9.5 bn (Screener&rsquo;s own &ldquo;free CF&rdquo; &#8377;1,212 Cr; definitions differ). Investing &minus;&#8377;2,533 Cr, financing +&#8377;1,606 Cr.</p>
+        <p style="font-size:11.3px;margin-top:6px"><b>Bear:</b> a working-capital inflow can reverse. India Ratings expects <b>FCF to turn negative again in FY27</b> (capex step-up). FY22&ndash;FY25 OCF was &#8377;280 / 358 / 656 / 558 Cr and Screener FCF was negative in three of those four years.</p>
+      </div>
+      <div class="panel" style="background:#fdf0f0;border-color:#c62828">
+        <div class="plab">P/B &amp; Return Ratios <span class="badge b-bear">Rich vs returns</span></div>
+        <div class="pval" style="font-size:26px">8.16x <span style="font-size:13px;font-weight:600;color:#5a6475">(ROE 16.3% &middot; ROCE 13.3%)</span></div>
+        <p style="font-size:11.3px;margin-top:6px">An 8x book multiple on a 16% ROE is a growth-and-quality premium. Listed gas distributors trade at 10&ndash;16x P/E with ROCE of 13&ndash;21%. Interest cover (India Ratings): 15.0x (Q1 FY27) / 10.0x (FY26) / 6.6x (FY25).</p>
+        <p style="font-size:11.3px;margin-top:6px"><b>Leverage, three bases that differ:</b> (i) India Ratings: gross debt ex-leases ~&#8377;2,420 Cr at FYE26 (&#8377;2,880 Cr FY25, &#8377;1,660 Cr FY24), with the company reporting <b>net cash</b> at FYE26 against unencumbered cash &#8377;5,330 Cr plus &#8377;595 Cr deposits against overdraft (&asymp; the company&rsquo;s &#8377;5,939 Cr &ldquo;liquidity reserves&rdquo;; ~&#8377;14 Cr gap). (ii) Screener borrowings &#8377;4,150 Cr &mdash; equals &#8377;2,420 Cr plus ~&#8377;1,730 Cr of lease liability, my arithmetic reconciliation. (iii) MarketSmith LTDebt/Equity 6% and company gearing ~0.6 are different bases again. I do not compute net debt or EV/EBITDA.</p>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1"><div class="notebox "><b>Balance sheet (&#8377; Cr, Mar-22 &rarr; Mar-26):</b> reserves 2,145 / 3,497 / 3,859 / 4,596 / 6,020; borrowings 835 / 1,924 / 2,665 / 4,606 / 4,150; fixed assets 2,376 / 3,661 / 4,139 / 5,086 / 6,363; CWIP 253 / 412 / 697 / 1,308 / 764; investments 0 / 204 / 194 / 0 / 1,745. Equity capital 35 each year.</div></div>
+      <div style="flex:1"><div class="notebox blue"><b>Capex runway (two bases, not reconciled):</b> India Ratings: announced ~&#8377;3,000 Cr over FY27&ndash;28 (annual capex stepping to ~INR 30 bn), with Project GATI at AVTL targeting aggregate USD 1.2 bn by FY27 out of USD 5 bn potential by 2030; Ind-Ra expects debt-funded capex, net leverage &lt;2.5x medium term (&lt;1x FY27); AVTL gearing &lt;0.6x covenant, gross leverage &le;3.5x per the Aegis&ndash;Vopak agreement. A secondary AI summary of an Ind-Ra note reads $1.2 bn (~&#8377;10,000 Cr) as a cumulative Phase 1&ndash;2 target by Mar 2027 and $5 bn by Dec 2030; some sources called $1.2 bn &ldquo;FY27 capex&rdquo;. FY26 capex was INR 8.2 bn (9.5 FY25). The annual report&rsquo;s capital commitments not provided for: &#8377;204.5 Cr vs &#8377;48.6 Cr (a different measure).</div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec10"><span class="num">10</span><h2>Management Metrics</h2></div>
+<div class="tiles">
+  <div class="tile"><div class="lab">MD Pay vs Profit</div><div class="val warn">&#8377;10 Cr</div><div class="note">MD commission &#8377;1,000 lakh FY26 vs &#8377;660 lakh FY25 (+51%; commission only, up to 5% of profits) &mdash; under 1% of &#8377;1,107 Cr PAT. FY26 text says managerial pay rose 2%: inconsistent. Key management compensation &#8377;1,014.33 lakh vs &#8377;672.91 lakh.</div></div>
+  <div class="tile"><div class="lab">Pay-Ratio Disclosure</div><div class="val neg" style="font-size:15px">UNRELIABLE</div><div class="note">FY26 says MD pay is &ldquo;17%&rdquo; of median employee pay; FY25 says &ldquo;83%&rdquo;, for ~413 employees &mdash; internally impossible. I do not pick one.</div></div>
+  <div class="tile"><div class="lab">Chair + MD Combined</div><div class="val" style="font-size:15px">Raj K. Chandaria</div><div class="note">Chairman and MD of Aegis, also MD of AVTL. Son Amal Raj Chandaria (b.1993; CEO Spaghetti Studios) is a non-executive non-independent director who waives sitting fees. Anish Chandaria died in 2021 (aggregator).</div></div>
+  <div class="tile"><div class="lab">Tax Paid % of PBT</div><div class="val" style="font-size:15px">NOT COMPUTED</div><div class="note">PBT series not supplied for this build; no tax red flag identified, none verified.</div></div>
+</div>
+<div class="cols" style="margin-top:10px">
+  <div style="flex:1">
+    <div class="microhead">Board &amp; Key Management</div>
+    <p style="font-size:11.3px">Board of 7 at 31 Mar 2026; my source listed 6 names &mdash; one seat unconfirmed. Non-independent: Raj K. Chandaria, Amal Raj Chandaria, Rahul D. Asthana (independent terms ended 28 May 2024; re-appointed non-independent 29 May 2024). Independents: Raj Kishore Singh, Lars Erik Johansson, Jaideep D. Khimasia, Tasneem Ali (2nd term from 27 Jan 2026). Resignations: Anilkumar M. Chandaria (10 Apr 2024); Kanwaljit S. Nagpal (12 Feb 2025, &ldquo;preoccupation&rdquo;); none in FY26. KMP: Sudhir Malhotra (CEO), Murad Moledina (CFO; an aggregator also lists him as an AVTL director, unverified), Rajiv Chohan and Keshav Shenoy (Presidents), Sneha Parab (CS, appointed 16 May 2025 after the prior CS resigned 8 May 2025). AVTL board per Choice India (Raj Chandaria, Moledina, Wilfred Swee Guan Lim, Raj Kishore Singh, Uma Manoj Mandavgane) vs Aegis&rsquo;s own list naming Lars Johansson as an AVTL independent &mdash; unreconciled.</p>
+    <div class="microhead">Auditor, Dividends &amp; Surveillance</div>
+    <p style="font-size:11.3px">CNK &amp; Associates LLP, second 5-year term to FY Mar-2029; FY26 standalone opinion unmodified, one key audit matter (capitalisation of PPE and CWIP); consolidated opinion unmodified per an aggregator only; fees not found. Dividends/share (FV &#8377;1): FY25 &#8377;7.25 (1.25 + 6.00); FY26 &#8377;8.70 (2.00 + 6.70, record 10 Jul 2026). No buyback. ASM long-term stage I ran 2 Jul&ndash;1 Oct 2026 (earlier episodes 2020 and 2024); GSM never; not active on 7 Oct &mdash; a market-surveillance measure, not an adverse regulatory action. BSE and NSE each fined &#8377;90,000 for late Q4 FY25 results (paid).</p>
+  </div>
+  <div style="flex:1">
+    <div class="microhead">Governance Flags</div>
+    <p style="font-size:11.3px"><b>AGM dissent (68th AGM, FY25):</b> Asthana re-appointment 28.82% of institutional votes against (6.42% overall); Tasneem Ali special resolution 28.10% (6.26%); material RPTs ~0.57%. 69th AGM (7 Aug 2026) results could not be opened. <b>RPTs (indicative; PDF garbled):</b> sales of trading goods ~&#8377;445 Cr to Aegis Gas (LPG) Pvt Ltd (AGPL, 100% subsidiary; FY26 standalone revenue ~&#8377;545 Cr, EBITDA ~&#8377;36 Cr per Ind-Ra, consistent in order of magnitude), ~&#8377;10 Cr to AVTL, &#8377;6.6 Cr to Sea Lord Containers, &#8377;0.16 Cr to CRL Terminals; lease rent received &#8377;3.75 Cr; dividends from subsidiaries &#8377;281 Cr; interim dividend to promoter group &#8377;40.8 Cr; guarantee for Aegis Gas &#8377;24 Cr; all stated arm&rsquo;s length. <b>Vopak governance:</b> shareholders&rsquo; agreement (12 Jul 2021; amended 19 May 2022, 14 Jun 2024, 11 Nov 2024) &mdash; veto/governance terms are in the Red Herring Prospectus and were <b>not read (gap)</b>. Sitting fees &#8377;14.33 lakh total.</p>
+    <div class="notebox "><b>Contingents (&#8377; lakh, Mar-26 vs Mar-25):</b> GST / sales-tax ITC demands 4,502.72 vs 2,559.26; Supreme Court air-pollution matter 14,200 vs 14,200 (&#8377;142 Cr; management expects no significant liability); claims not acknowledged 12; income-tax s.14A dispute amount not found; Sea Lord Containers guarantee &#8377;396 Cr now nil; GST penalty &#8377;11.62 lakh (21 Aug 2026; company: immaterial). Safety: BRSR reports nil injuries/fatalities (self-reported); fire / NGT incident search found nothing &mdash; <b>&ldquo;not found&rdquo;, not &ldquo;clean&rdquo;</b>.</div>
+  </div>
+</div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec11"><span class="num">11</span><h2>Company Guidance — Last 3 Quarters &amp; Credibility Checklist</h2></div>
+<div class="microhead">What Has Been Said &mdash; Management / Rating-Agency Expectations (Full-Year Guidance History Not Found)</div>
+<table class="t">
+  <tr><th>Item</th><th style="text-align:left">Stated</th><th style="text-align:left">Source</th><th>Status</th></tr>
+  <tr><td>Distribution margin FY27</td><td style="text-align:left">~&#8377;7,000/MT (vs ~&#8377;4,000 through FY25)</td><td style="text-align:left">CFO; India Ratings expects the same</td><td><span class="badge b-warn">Q1 delivered; includes &ldquo;uncertainty margin&rdquo;</span></td></tr>
+  <tr><td>FY27 EBITDA</td><td style="text-align:left">~&#8377;1,800 Cr expected</td><td style="text-align:left">India Ratings (17 Sep 2026)</td><td><span class="badge b-neut">Agency view, not guidance</span></td></tr>
+  <tr><td>Capex</td><td style="text-align:left">~&#8377;3,000 Cr over FY27&ndash;28; USD 1.2 bn by FY27 / USD 5 bn by 2030 (Project GATI)</td><td style="text-align:left">India Ratings; secondary AI summary for the &#8377;10,000 Cr / Mar-2027 reading</td><td><span class="badge b-warn">Bases differ</span></td></tr>
+  <tr><td>Leverage</td><td style="text-align:left">Net leverage &lt;1x FY27, &lt;2.5x medium term; AVTL gearing &lt;0.6x</td><td style="text-align:left">India Ratings / Aegis&ndash;Vopak agreement</td><td><span class="badge b-neut">Covenant</span></td></tr>
+  <tr><td>Terminalling throughput</td><td style="text-align:left">Changeover 21x FY26 (38x FY25) expected to moderate in FY27, improve FY28</td><td style="text-align:left">India Ratings</td><td><span class="badge b-warn">Soft near term</span></td></tr>
+</table>
+<div class="cols" style="margin-top:12px">
+  <div style="flex:1.2">
+    <div class="microhead">Project Commitments — Promised vs Achieved</div>
+    <table class="t">
+      <tr><th style="text-align:left">Commitment</th><th style="text-align:left">Outcome found</th><th>&#10003;/&#10007;</th></tr>
+      <tr><td style="text-align:left">Pipavav 36,000 MT ammonia terminal (15-yr take-or-pay, Hindustan Zinc)</td><td style="text-align:left">Commissioned Aug 2026, capex ~&#8377;530 Cr, distribution commenced (India Ratings)</td><td><span class="pos">&#10003;</span></td></tr>
+      <tr><td style="text-align:left">Mumbai 64,000 cbm (~&#8377;125 Cr) in H1 FY27</td><td style="text-align:left">No confirmation it was met</td><td><span class="warn">?</span></td></tr>
+      <tr><td style="text-align:left">Kandla&ndash;Gorakhpur LPG pipeline H1 FY27</td><td style="text-align:left">&ldquo;Complete commissioning in near term&rdquo; (Ind-Ra, 17 Sep) &mdash; not yet complete</td><td><span class="warn">&#8776;</span></td></tr>
+      <tr><td style="text-align:left">JNPA J2 (~&#8377;1,675 Cr: 77,236 MT LPG, 318,100 cbm liquids, 35,000 MTPA bottling; awarded 5 Nov 2025): first 100,000 cbm Q3 FY27</td><td style="text-align:left">India Ratings says commissioning likely FY28 &mdash; <b>conflict, not resolved</b></td><td><span class="warn">&#8776;</span></td></tr>
+      <tr><td style="text-align:left">Also in pipeline: Kandla 94,148 cbm, Haldia 25,000 MT LPG + 226,890 cbm, Kochi 49,577 cbm, Mangalore cryogenic LPG, &#8377;142.5 Cr JNPA propane tank, Pipavav VLGC jetty FY27; Ind-Ra: +~526,000 kl liquids and +77,000 MT LPG over FY27&ndash;28</td><td style="text-align:left">Execution: CARE rates capex risk moderate; Vopak-linked capex ~&#8377;600 Cr/yr vs ~&#8377;300 Cr historically; no specific slippage found</td><td><span class="warn">&#8776;</span></td></tr>
+    </table>
+    <div class="notebox "><b>Gap:</b> the numeric revenue / EBITDA guidance track record (the table the template normally carries) could not be built from the sources read. Funding split (internal accruals, shareholder loans, borrowings) is not disclosed. Segment revenue/EBIT history is now available from India Ratings (see &sect;08). The Vopak shareholder loan of INR 4 bn was repaid in Q1 FY27.</div>
+  </div>
+  <div style="flex:1">
+    <div class="microhead">Management-Quality Red-Flag Checklist</div>
+    <table class="t">
+      <tr><th style="text-align:left">Warning Sign</th><th>Present?</th></tr>
+      <tr><td style="text-align:left">Competitive-share claims unverified (~20% of imports; &ldquo;only pan-Indian&rdquo;)</td><td><span class="badge b-warn">Partial</span></td></tr>
+      <tr><td style="text-align:left">Capacity built ahead of demand</td><td><span class="badge b-warn">Watch</span></td></tr>
+      <tr><td style="text-align:left">Capital-allocation clarity (&#8377;6,000 Cr raise: use undisclosed)</td><td><span class="badge b-bear">&#10003; Yes</span></td></tr>
+      <tr><td style="text-align:left">Disclosure inconsistencies (customer notes, pay ratio)</td><td><span class="badge b-bear">&#10003; Yes</span></td></tr>
+      <tr><td style="text-align:left">Large overseas deal without agreement (Tristar)</td><td><span class="badge b-warn">Watch</span></td></tr>
+      <tr><td style="text-align:left">Working-capital deterioration called temporary</td><td><span class="badge b-bull">&#10007; Not found</span></td></tr>
+      <tr><td style="text-align:left">Pledge / regulatory penalties</td><td><span class="badge b-bull">&#10007; None found</span></td></tr>
+    </table>
+    <div class="chartcap" style="margin-top:6px">Tristar adjacent to the core gas business but would be a ~$1.5 bn bet against a &#8377;48,996 Cr market cap. Pledge 0% is aggregator-reported.</div>
+  </div>
+</div>
+  </div>
+
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec12"><span class="num">12</span><h2>Street Consensus</h2></div>
+        <div class="krow"><span class="klab">Analysts Covering</span><span class="kval">5<small>MarketScreener / StockAnalysis; one snippet says 13 (untraceable)</small></span></div>
+        <div class="krow"><span class="klab">Rating</span><span class="kval">Outperform / Hold<small>Depends on aggregator</small></span></div>
+        <div class="krow"><span class="klab">Avg Price Target</span><span class="kval" style="color:#c62828">&#8377;1,331<small>Range &#8377;988&ndash;1,670 &middot; ~4.7&ndash;9.7% below CMP of &#8377;1,396&ndash;1,474</small></span></div>
+        <div class="krow"><span class="klab">Recent Calls</span><span class="kval">JPM OW &#8377;1,670<small>Aug 2026, primary article unopened &middot; a foreign broker (likely JPM) &#8377;1,150 from &#8377;1,010 on 10 Jun</small></span></div>
+        <div class="krow"><span class="klab">Other Brokers</span><span class="kval">IIFL Add &#8377;1,069<small>Downgraded from Buy 9 Jul (close &#8377;1,270) &middot; JM Financial Buy &#8377;1,200 from &#8377;935 &middot; MOFSL Neutral &#8377;706 (stale, 31 Jan 2026)</small></span></div>
+        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Reading it:</b> Jefferies calls the stock reasonable at 29x FY27E EV/EBITDA (rating and target on the parent not found; its Hold &#8377;255 call was on AVTL). MarketsMOJO&rsquo;s Strong Buy &rarr; Buy is a quant score, not a broker. Stale aggregator targets of &#8377;783 / &#8377;866 / &#8377;1,030 exist. ValuePickr: only a thread last updated Nov 2022; X/Twitter not found.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec13"><span class="num">13</span><h2>Share Volume &amp; Profile</h2></div>
+        <div class="krow"><span class="klab">Volume — 7 Oct</span><span class="kval">992,119<small>+239.49% vs average (implied avg ~292,000, my arithmetic)</small></span></div>
+        <div class="krow"><span class="klab">Float</span><span class="kval">14.74 Cr shares<small>~35.1 Cr shares outstanding implied by EPS (my arithmetic)</small></span></div>
+        <div class="krow"><span class="klab">Funds Holding</span><span class="kval">226<small>+17.10% (MarketSmith)</small></span></div>
+        <div class="krow"><span class="klab">Shares Held by Funds</span><span class="kval">8.12 Cr<small>&minus;0.39% &mdash; more funds, smaller holdings</small></span></div>
+        <div class="krow"><span class="klab">Institutional Flow</span><span class="kval">FII in, DII/MF out<small>FII 16.9% &rarr; 19.54%; MF 5.92% &rarr; 3.29% in 4 qtrs</small></span></div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Not found:</b> F&amp;O status, delivery %, any 2026 bulk/block deal (latest 24 Jan 2025: 17.6 lakh shares at &#8377;719.90). MarketsMOJO technicals: above all major MAs, positive OBV, weekly MACD mildly bearish, monthly RSI bearish.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec14"><span class="num">14</span><h2>Sector Rotation</h2></div>
+        <p style="font-size:11px">Aegis is mapped to the <b>Energy</b> wedge, and the fit is genuine rather than forced: its earnings follow LPG and gas flows &mdash; sourcing spreads, import volumes, terminal throughput &mdash; which is oil-and-gas midstream and gas logistics. MarketSmith tags it &ldquo;Oil &amp; Gas &ndash; Transport / Pipeline&rdquo;; Screener uses &ldquo;Oil Marketing &amp; Distribution&rdquo; (a poor fit for terminals); the official NSE/BSE tag was not found. <b>Why not Utilities:</b> Aegis is not a regulated distributor &mdash; it has no franchised city-gas area or regulated tariff, sells largely at traded spreads and earns terminal tariffs; the Utilities wedge&rsquo;s defensive, rate-regulated logic does not describe it. Energy&rsquo;s &ldquo;commodity cycles and inflation&rdquo; framing does.</p>
+<div class="sector-wheel-compact">
+<div class="relative mt-16 md:mt-[80px] mx-auto w-full max-w-[760px] overflow-visible"><div class="relative mx-auto w-[86vw] md:w-full max-w-[540px] aspect-square overflow-visible"><svg viewBox="-40 -40 620 620" class="absolute inset-0 w-full h-full overflow-visible"><path d="M 270 22 A 248 248 0 0 1 518 270" fill="none" stroke="#0f2f5c" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 518 270 A 248 248 0 0 1 270 518" fill="none" stroke="#8b2e00" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 270 518 A 248 248 0 0 1 22 270.00000000000006" fill="none" stroke="#4c2e8a" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 22 270.00000000000006 A 248 248 0 0 1 269.99999999999994 22" fill="none" stroke="#115e5f" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><g transform="translate(270 22)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#0f2f5c" stroke="#0f2f5c" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(518 270) rotate(90)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#8b2e00" stroke="#8b2e00" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(270 518) rotate(180)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#4c2e8a" stroke="#4c2e8a" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(22 270) rotate(270)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#115e5f" stroke="#115e5f" stroke-width="0.8" stroke-linejoin="round"></path></g><defs><path id="label-early" d="M 93.23 59.34 A 275 275 0 0 1 446.77 59.34"></path><path id="label-late" d="M 480.66 93.23 A 275 275 0 0 1 480.66 446.77"></path><path id="label-slow" d="M 93.23 480.66 A 275 275 0 0 0 446.77 480.66"></path><path id="label-recov" d="M 59.34 446.77 A 275 275 0 0 1 59.34 93.23"></path></defs><text fill="#0f2f5c" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-early" startOffset="50%" text-anchor="middle">EARLY EXPANSION</textPath></text><text fill="#8b2e00" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-late" startOffset="50%" text-anchor="middle">LATE EXPANSION</textPath></text><text fill="#4c2e8a" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-slow" startOffset="50%" text-anchor="middle">SLOWDOWN</textPath></text><text fill="#115e5f" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-recov" startOffset="50%" text-anchor="middle">RECOVERY</textPath></text><g><path d="M 270.0 35.0 A 235 235 0 0 1 408.1295342887312 79.88100632188736 L 334.65637775217203 181.00813061875579 A 110 110 0 0 0 270.0 160.0 Z" fill="#43A047" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.15092303249094 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #43A047; stroke-width: 2.4; stroke-linejoin: round;">TECHNOLOGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">TECHNOLOGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Innovation-led</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">growth</text></g></g><g><path d="M 408.1295342887312 79.88100632188736 A 235 235 0 0 1 493.4982813293611 197.38100632188736 L 374.6162167924669 236.00813061875579 A 110 110 0 0 0 334.65637775217203 181.00813061875579 Z" fill="#C0CA33" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 168.90093660569462)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">DISCRETIONARY</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DISCRETIONARY</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising confidence</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& spending</text></g></g><g><path d="M 493.4982813293611 197.38100632188736 A 235 235 0 0 1 493.49828132936113 342.61899367811264 L 374.6162167924669 303.9918693812442 A 110 110 0 0 0 374.6162167924669 236.00813061875579 Z" fill="#F0A93B" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(442.0 270.0)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F0A93B; stroke-width: 2.4; stroke-linejoin: round;">INDUSTRIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">INDUSTRIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Capital investment</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& infrastructure</text></g></g><g><path d="M 493.49828132936113 342.61899367811264 A 235 235 0 0 1 408.1295342887312 460.1189936781126 L 334.65637775217203 358.9918693812442 A 110 110 0 0 0 374.6162167924669 303.9918693812442 Z" fill="#B5651D" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 371.09906339430535)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #B5651D; stroke-width: 2.4; stroke-linejoin: round;">DEFENSE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DEFENSE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Government spending</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& indigenization</text></g></g><g><path d="M 408.1295342887312 460.1189936781126 A 235 235 0 0 1 270.00000000000006 505.0 L 270.0 380.0 A 110 110 0 0 0 334.65637775217203 358.9918693812442 Z" fill="#2E6DA4" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.150923032491 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #2E6DA4; stroke-width: 2.4; stroke-linejoin: round;">AEROSPACE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">AEROSPACE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Order backlogs</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& export growth</text></g></g><g><path d="M 270.00000000000006 505.0 A 235 235 0 0 1 131.87046571126885 460.11899367811264 L 205.34362224782797 358.9918693812442 A 110 110 0 0 0 270.0 380.0 Z" fill="#F4791A" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.84907696750906 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F4791A; stroke-width: 2.4; stroke-linejoin: round;">ENERGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">ENERGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Commodity cycles</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& inflation</text></g></g><g><path d="M 131.87046571126885 460.11899367811264 A 235 235 0 0 1 46.50171867063892 342.6189936781127 L 165.3837832075331 303.9918693812442 A 110 110 0 0 0 205.34362224782797 358.9918693812442 Z" fill="#9163CB" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.84907696750906 371.0990633943054)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #9163CB; stroke-width: 2.4; stroke-linejoin: round;">UTILITIES</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">UTILITIES</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Defensive demand</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& stability</text></g></g><g><path d="M 46.50171867063892 342.6189936781127 A 235 235 0 0 1 46.501718670638894 197.3810063218874 L 165.3837832075331 236.0081306187558 A 110 110 0 0 0 165.3837832075331 303.9918693812442 Z" fill="#299BD1" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(98.0 270.00000000000006)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">STAPLES</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">STAPLES</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Essential needs</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& resilience</text></g></g><g><path d="M 46.501718670638894 197.3810063218874 A 235 235 0 0 1 131.87046571126876 79.88100632188738 L 205.34362224782794 181.00813061875579 A 110 110 0 0 0 165.3837832075331 236.0081306187558 Z" fill="#16A398" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.849076967509 168.90093660569465)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #16A398; stroke-width: 2.4; stroke-linejoin: round;">HEALTH CARE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">HEALTH CARE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Demographics</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& innovation.</text></g></g><g><path d="M 131.87046571126876 79.88100632188738 A 235 235 0 0 1 269.99999999999994 35.0 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="#7CB342" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.849076967509 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #7CB342; stroke-width: 2.4; stroke-linejoin: round;">FINANCIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">FINANCIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising rates</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& lending growth.</text></g></g><path d="M 270.00000000000006 505.0 A 235 235 0 0 1 131.87046571126885 460.11899367811264 L 205.34362224782797 358.9918693812442 A 110 110 0 0 0 270.0 380.0 Z" fill="none" stroke="#0a2342" stroke-width="3.2" stroke-linejoin="round"></path><circle cx="270" cy="270" r="108.5" fill="#ffffff" stroke="#e7e0d1" stroke-width="1.2"></circle><circle cx="270" cy="270" r="108.5" fill="none" stroke="#000" stroke-opacity="0.04" stroke-width="6"></circle><g transform="translate(270 270)"><text x="0" y="-8" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.5" fill="#0a2342">AEGIS</text><text x="0" y="7" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.3" fill="#0a2342">LOGISTICS</text><text x="0" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400" letter-spacing="0.1">Mapped to Energy —</text><text x="0" y="32.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400">oil and gas midstream</text><path d="M -21.75,92.82 L -36.96,87.87 L -34.30,105.57 Z" fill="#0a2342"></path></g></svg></div><div class="mt-8 md:mt-10 flex justify-center"><div class="h-[1px] w-[72px] bg-[#d9d0bb]/70"></div></div></div>
+        </div>
+        
+        <div class="chartcap" style="text-align:center;margin-top:2px">NSE: AEGISLOG &middot; BSE: 500003 &middot; mapped: Energy (oil &amp; gas midstream / gas logistics)</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec15"><span class="num">15</span><h2>Peer Comparison</h2></div>
+        <table class="peer"><tr><th>Company</th><th>P/E</th><th>ROE %</th><th>ROCE %</th></tr>
+<tr style="background:#eef4fc"><td>&#9733; Aegis Logistics</td><td><b>41.2</b></td><td><b>16.3</b></td><td><b>13.3</b></td></tr>
+<tr><td>Aegis Vopak (AVTL)</td><td>123</td><td>11.0</td><td>n/f</td></tr>
+<tr><td>Gujarat Gas</td><td>15.57</td><td>10.95</td><td>12.37</td></tr>
+<tr><td>IGL</td><td>15.69</td><td>13.47</td><td class="pos">17.20</td></tr>
+<tr><td>MGL</td><td>15.76</td><td>13.09</td><td class="pos">17.37</td></tr>
+<tr><td>Petronet LNG</td><td>10.07</td><td class="pos">17.56</td><td class="pos">21.47</td></tr>
+<tr><td>GAIL</td><td>11.60</td><td>8.51</td><td>8.97</td></tr>
+<tr><td>Adani Total Gas</td><td>113.65</td><td>13.48</td><td>13.38</td></tr></table>
+        <div class="chartcap" style="margin-top:4px">One aggregator, date unconfirmed; directional. EV/EBITDA not found for any company.</div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Reading it:</b> there is <b>no clean comparator</b> for the combination of private LPG sourcing, terminals and autogas. The gas distributors are regulated retail businesses. Aegis trades at ~2.6x their ~15.7x average P/E (10&ndash;16x range) with ROCE <i>below</i> IGL, MGL and Petronet &mdash; the valuation tension. Mitigating: Aegis&rsquo;s trailing earnings are depressed-then-spiked, and AVTL itself is priced at 123x, inflating the group multiple. Adani Total Gas (113.65x) shows the market will pay far more for perceived growth.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec16"><span class="num">16</span><h2>Risk Analysis</h2></div>
+    <table class="t prose">
+      <tr><th style="text-align:left">Category</th><th>Severity</th><th style="text-align:left">Detail</th></tr>
+      <tr><td style="text-align:left">Margin Sustainability</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">Q1 FY27 operating margin 30% vs 13&ndash;17% in prior quarters, on a distribution margin of ~&#8377;7,000/MT versus ~&#8377;4,000. India Ratings and management both expect ~&#8377;7,000/MT in FY27, but the gas segment has no long-term contracted cash flows (Ind-Ra), the margin includes an &ldquo;uncertainty margin&rdquo;, and an independent estimate puts Q1 nearer &#8377;12,000/MT (each &#8377;1,000/MT &asymp; &#8377;30 Cr EBITDA). Sustainability is the key monitorable.</td></tr>
+      <tr><td style="text-align:left">Geopolitics / Supply</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">LPG ~55&ndash;60% imported, ~90% historically via the Gulf/Hormuz; March 2026 West Asia disruption. US supplied 55% of imports in May, UAE back to ~40% by September. Middle East share of Aegis&rsquo;s own sourcing, Saudi CP linkage and unhedged USD share: not found. FX: forward cover, no speculative derivatives. 5 trading houses supplied 86.81% of purchases.</td></tr>
+      <tr><td style="text-align:left">Demand / Policy</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">India LPG consumption H1 CY2026 14.74 mt (&minus;8%); April&ndash;Sept FY27 13,797 TMT (&minus;14.93%). Commercial LPG capped at 20% of OMC supply (12 Mar), later 50% allocation to states; mandatory LPG-to-PNG switching order (24 Mar 2026) is a structural substitution risk, unquantified; 30-day LPG reserve mandate on OMCs (29 May) &mdash; no terminal contract awards found yet. April&rsquo;s fall reported as 16% (Discovery Alert) vs 13% (Down To Earth).</td></tr>
+      <tr><td style="text-align:left">Valuation</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">~41x P/E and ~8x P/B vs 10&ndash;16x P/E for gas distributors; price within ~3.4&ndash;3.7% of the high with both momentum gauges strongly positive. Street average target ~&#8377;1,331 is below the price.</td></tr>
+      <tr><td style="text-align:left">Dilution / Leverage</td><td><span class="badge b-warn">Medium-High</span></td><td style="text-align:left">Board approved up to &#8377;6,000 Cr raise (equity, NCDs, preferential or QIP) and a &#8377;6,000 Cr borrowing limit; EGM 21 Oct; use of proceeds undisclosed. Tristar talks (~$1.5 bn) &mdash; unconfirmed, no definitive agreement. I infer a possible link; neither source states one. Ind-Ra expects debt-funded capex, negative FCF in FY27, and AVTL promoters must dilute a further ~12% for minimum public holding (supply overhang). 55% of AVTL&rsquo;s earnings belong to others.</td></tr>
+      <tr><td style="text-align:left">Concentration / Disclosure</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Customer-concentration notes do not reconcile (12.29% standalone vs 22% consolidated for Customer 1). Pay-ratio disclosure internally impossible. Operating profit is defined three ways (&#8377;1,452 / &#8377;1,599 Cr). OMCs are both customers and competitors.</td></tr>
+      <tr><td style="text-align:left">Credit / Contingent</td><td><span class="badge b-neut">Low-Medium</span></td><td style="text-align:left">India Ratings IND AA / Positive (17 Sep 2026); a secondary CARE AA/A1+ stable (Mar 2026) summary is unverified. GST/ITC demands &#8377;45 Cr (vs &#8377;26 Cr); Supreme Court air-pollution matter &#8377;142 Cr (no liability expected). Competition: Adani Hazira / Mundra, IMC, GAIL pipeline.</td></tr>
+    </table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1"><div class="notebox "><b>Execution unknown:</b> no specific capex slippage found, but the Mumbai H1 FY27 expansion is unconfirmed, JNPA timing conflicts (Q3 FY27 vs FY28), and capex roughly doubles. Safety record: &ldquo;not found&rdquo; for fire/NGT incidents, not &ldquo;clean&rdquo;.</div></div>
+      <div style="flex:1"><div class="notebox green"><b>Caveat on the bear case:</b> India Ratings reports <b>net cash at FYE26</b> and an interest cover of 15x in Q1 FY27; balance-sheet risk is forward-looking (capex, raise, Tristar), not current.</div></div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570);border-top:3px solid #f0b429;border-bottom:3px solid #f0b429;color:#f0b429;padding:9px 26px;font-weight:900;letter-spacing:2.5px;font-size:14px;text-transform:uppercase">Technical Analysis</div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec17"><span class="num">17</span><h2>Technical Ratings &amp; Momentum</h2></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">MarketSmith India Ratings (7 Oct 2026)</div>
+        <table style="width:100%;border-collapse:collapse;border:1px solid #cfd6e2;margin-bottom:10px"><tr><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Master Score</div><div style="font-size:24px;font-weight:900;color:#2e7d32">A</div><div style="font-size:9px;font-weight:700;color:#8a94a6">85 &middot; strong</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">EPS Rating</div><div style="font-size:24px;font-weight:900;color:#2e7d32">95</div><div style="font-size:9px;font-weight:700;color:#8a94a6">GREAT</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Price Strength</div><div style="font-size:24px;font-weight:900;color:#2e7d32">91</div><div style="font-size:9px;font-weight:700;color:#8a94a6">GREAT</div></td></tr><tr><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Acc / Dis Rating</div><div style="font-size:24px;font-weight:900;color:#2e7d32">A</div><div style="font-size:9px;font-weight:700;color:#8a94a6">Buyer Demand GREAT</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Group Rank</div><div style="font-size:24px;font-weight:900;color:#2e7d32">8</div><div style="font-size:9px;font-weight:700;color:#8a94a6">of 197 &middot; GREAT</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Beta</div><div style="font-size:24px;font-weight:900;color:#1a2a4a">1.24</div><div style="font-size:9px;font-weight:700;color:#8a94a6">Alpha 0.28</div></td></tr></table>
+        <p style="font-size:11.5px">The profile &mdash; EPS 95, Price 91, Buyer Demand A, a top-8 industry group out of 197 &mdash; is the classic O&rsquo;Neil leader signature, and here the earnings (Jun-26 EPS &#8377;13.80, +269%) are real and visible. EPS growth rate 27%; annual EPS &#8377;18.90 (FY25) &rarr; &#8377;25.59 (FY26) &rarr; 27.10e (FY27) &rarr; 30.65e (FY28).</p>
+        <p style="font-size:11.5px;margin-top:6px"><b>Flag:</b> MarketSmith&rsquo;s Jun-26 quarterly EPS of &#8377;13.80 is already ~51% of its FY27e of &#8377;27.10, so the FY27 estimate looks <b>stale or conservative</b>. Other data: yield 0.48%, LTDebt/Equity 6% (a different basis from the company&rsquo;s ~0.6 gearing), market cap &#8377;48,996 Cr taken at the lower price print, sales &#8377;8,970.66 Cr.</p>
+        <div class="notebox blue"><b>Synthesis:</b> Master Score <b>A (85)</b>. Funds holding rose 17.10% to 226, but shares held by funds slipped 0.39% to 8.12 Cr &mdash; more funds, smaller holdings &mdash; and the 5.59% / +239% volume day is a momentum print, not an accumulation proof.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">Fund Activity</div>
+        <div style="display:flex;gap:8px"><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">226</div><div style="font-size:8.6px;color:#8a94a6">Funds holding &middot; +17.10%</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">8.12 Cr</div><div style="font-size:8.6px;color:#8a94a6">Shares held by funds &middot; &minus;0.39%</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">1.3</div><div style="font-size:8.6px;color:#8a94a6">U/D Volume Ratio</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">1.24</div><div style="font-size:8.6px;color:#8a94a6">Beta</div></div></div>
+        <div class="microhead" style="margin-top:12px">MarketSmith Guru Screens — Strategy Fit (all six)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 18px"><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">WILLIAM J. O'NEIL</b><b style="color:#7b1fa2">88%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:88%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">BENJAMIN GRAHAM</b><b style="color:#7b1fa2">84%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:84%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">JAMES P. O'SHAUGHNESSY</b><b style="color:#7b1fa2">60%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:60%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">WARREN BUFFETT</b><b style="color:#7b1fa2">75%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:75%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">PETER LYNCH</b><b style="color:#7b1fa2">62%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:62%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">CUSTOM</b><b style="color:#7b1fa2">100%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:100%"></div></div></div></div>
+        <div class="chartcap" style="margin-top:8px">Custom screen 100%, O&rsquo;Neil 88%, Graham 84% (value pass despite ~8x book), Buffett 75%, Lynch 62%, O&rsquo;Shaughnessy 60%.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec18"><span class="num">18</span><h2>Elliott Wave Analysis (MotiveWave)</h2></div>
+    <div class="cols">
+      <div class="imgwrap" style="flex:1"><img src="AEGISLOG_chart.jpg" alt="Aegis Logistics MotiveWave 1H and 1D Elliott Wave chart, 7 Oct 2026" /></div>
+    </div>
+    <div class="microhead" style="margin-top:12px">Wave Structure Interpretation</div>
+    <table class="t prose">
+      <tr><th style="text-align:left">Item</th><th>Stance</th><th style="text-align:left">Read</th></tr>
+      <tr><td style="text-align:left">1D Chart</td><td><span class="badge b-bull">Bullish +5 / +3</span></td><td style="text-align:left">Trend Momentum Buy 0 / Sell 0 with gauges <b>+5 short-term / +3 long-term</b>, both strongly bullish. Count: a large rally off the wave (4)/(y) low near <b>&#8377;576</b> (spring 2026) through waves 1-2-3 toward ~&#8377;1,560&ndash;1,570; wave 3 has extended and a <b>wave-4 correction is projected</b>. Daily fib retracements of wave 3 for the wave-4 zone (chart values): 23.6% = <b>&#8377;1,366.2</b>, 38.2% = <b>&#8377;1,172.4</b>. Daily resistance &#8377;1,488, support &#8377;1,250.</td></tr>
+      <tr><td style="text-align:left">1H Chart</td><td><span class="badge b-bull">Bullish +3 / +3</span></td><td style="text-align:left">Gauges +3 / +3. <b>Buy signal 2026-10-01</b> off the wave (ii) low at &#8377;1,279.8 (RSI 13); an earlier Sell on 2026-09-24 from the RSI-88 high at &#8377;1,528.70. Hourly resistance &#8377;1,499, support &#8377;1,328. Extension targets: 138.2% &#8377;1,536.1, 161.8% &#8377;1,568.2, 200% &#8377;1,620.1, 261.8% &#8377;1,704.1. Price ~&#8377;1,467&ndash;1,475 (MarketSmith &#8377;1,467.00, +5.59%, volume +239.49% vs average).</td></tr>
+      <tr><td style="text-align:left">Bull Case</td><td><span class="badge b-bull">Aligned</span></td><td style="text-align:left">Both timeframes strongly aligned, a fresh hourly Buy, and a breakout above <b>&#8377;1,499</b> opens &#8377;1,536&ndash;1,568 (138.2% / 161.8%), with &#8377;1,620 and &#8377;1,704 as stretch extensions. Fundamentals (record Q1, EPS 95, Group Rank 8) back the trend.</td></tr>
+      <tr><td style="text-align:left">Bear Case</td><td><span class="badge b-bear">Extended</span></td><td style="text-align:left">The stock is ~2.5x off its low and within ~4% of its &#8377;1,528.70 high. A normal wave-4 pullback toward &#8377;1,366 (or &#8377;1,172) would be unremarkable &mdash; and momentum this strong is also what precedes exhaustion. The fundamental inputs (distribution margin, Tristar, &#8377;6,000 Cr raise, AVTL minimum-public-holding dilution) are event-risks that can trigger exactly that pullback; the EGM is 21 Oct.</td></tr>
+      <tr><td style="text-align:left">Invalidation</td><td><span class="badge b-warn">Levels</span></td><td style="text-align:left"><b>Hourly close below &#8377;1,328</b> weakens the near-term count; <b>daily close below &#8377;1,250</b> breaks the structure; a break below <b>&#8377;1,172 (38.2%)</b> would threaten the whole wave-3 count.</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec19"><span class="num">19</span><h2>Recommendation, Support &amp; Resistance</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#f4fbf4;border-color:#2e7d32;flex:1.2">
+        <div class="plab" style="color:#2e7d32">&#9733; Recommendation</div>
+        <div class="pval" style="color:#2e7d32;font-size:19px">CONSTRUCTIVE TREND &mdash; EXTENDED ENTRY, DEFINE LEVELS</div>
+        <p style="font-size:11.4px;margin-top:6px">Not a buy call. Trend, earnings and ratings are strong; entry is extended (~3.4&ndash;3.7% below the high, ~2.5x off the low), the multiple is rich against distributors, and event-risks cluster in the next four weeks. The setup rewards defined levels over conviction.</p>
+        <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#e8f5e9;border-radius:5px"><b style="color:#2e7d32">&#9679; Constructive:</b> hourly close above <b>&#8377;1,499</b> opens &#8377;1,536&ndash;1,568. Pullbacks toward &#8377;1,366 / &#8377;1,328 are the better-defined areas than chasing.</div>
+        <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#fce4ec;border-radius:5px"><b style="color:#c62828">&#9679; Caution:</b> hourly close below &#8377;1,328, daily close below &#8377;1,250, any break of &#8377;1,172.</div>
+        <div style="font-size:11.3px;margin-top:6px"><b>Catalysts:</b> EGM 21 Oct 2026 (4 pm); Q2 FY27 results ~4 Nov (estimated); Tristar definitive agreement or collapse; JNPA phase 1 (Q3 FY27 vs FY28); QIP terms; ITOCHU step-up; distribution margin vs &#8377;7,000/MT.</div>
+      </div>
+      <div class="panel" style="border-color:#1565c0">
+        <div class="plab" style="color:#1565c0">&#128313; Key Support Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>&#8377;1,366</td><td style="text-align:left">Daily 23.6% retrace of wave 3</td><td><span class='badge b-neut'>Fib</span></td></tr>
+          <tr><td>&#8377;1,328</td><td style="text-align:left">1H support &mdash; near-term count</td><td><span class='badge b-neut'>Near</span></td></tr>
+          <tr><td>&#8377;1,250</td><td style="text-align:left">Daily support &mdash; structure</td><td><span class='badge b-bull'>Strong</span></td></tr>
+          <tr><td>&#8377;1,172</td><td style="text-align:left">38.2% retrace &mdash; wave-3 count at risk</td><td><span class='badge b-bear'>Critical</span></td></tr>
+          <tr><td>&#8377;576</td><td style="text-align:left">Spring 2026 wave (4)/(y) low</td><td><span class='badge b-bear'>Floor</span></td></tr>
+        </table>
+      </div>
+      <div class="panel" style="border-color:#2e7d32">
+        <div class="plab" style="color:#2e7d32">&#128312; Key Resistance Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>&#8377;1,488</td><td style="text-align:left">Daily resistance</td><td><span class='badge b-neut'>Near</span></td></tr>
+          <tr><td>&#8377;1,499</td><td style="text-align:left">1H resistance &mdash; breakout level</td><td><span class='badge b-bull'>Signal</span></td></tr>
+          <tr><td>&#8377;1,528.70</td><td style="text-align:left">52-week / RSI-88 high (24 Sep)</td><td><span class='badge b-bull'>High</span></td></tr>
+          <tr><td>&#8377;1,536 &ndash; 1,568</td><td style="text-align:left">1H 138.2% / 161.8% extensions</td><td><span class='badge b-bull'>Target</span></td></tr>
+          <tr><td>&#8377;1,620 / 1,704</td><td style="text-align:left">1H 200% / 261.8% extensions</td><td><span class='badge b-neut'>Stretch</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, BSE, Screener.in, MarketSmith India, Trendlyne, India Ratings and Research (press release 17 Sep 2026, read in full), company annual report and investor material, and other public web sources as of 7 Oct 2026, and from the author's own MotiveWave Elliott Wave analysis. Figures marked "my arithmetic" are the author's calculations. Several data points conflict across sources and are shown, not resolved. Price, volume and financial figures should be independently verified. Ashoke Kumar Seth is not a SEBI-registered research analyst. This is not investment advice; always consult a licensed financial adviser before making investment decisions. All figures in &#8377; Crore unless stated otherwise.</div>
+  <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice. &nbsp;|&nbsp; <span style="opacity:0.6">Template v6</span></div>
+</div>
+</div>
+<script>
+// In-report "New" tags: mark recently-changed content post-publish, auto-hide after 3 days.
+// Usage: <span class="new-tag" data-new-since="YYYY-MM-DD">New</span> right next to the changed content.
+(function(){
+  var NEW_DAYS = 3;
+  function isRecent(iso){
+    if (!iso) return false;
+    var t = Date.parse(iso + "T00:00:00");
+    if (isNaN(t)) return false;
+    var age = Date.now() - t;
+    return age >= 0 && age < NEW_DAYS * 86400000;
+  }
+  var tags = document.querySelectorAll('.new-tag[data-new-since]');
+  for (var i = 0; i < tags.length; i++){
+    if (!isRecent(tags[i].getAttribute('data-new-since'))) tags[i].style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
