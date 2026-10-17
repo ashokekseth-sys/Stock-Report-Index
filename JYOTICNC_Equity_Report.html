@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jyoti CNC Automation Limited (JYOTICNC) — Equity Research Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#ffffff; font-family:'Source Sans 3',Arial,sans-serif; color:#2a3342; font-size:12.5px; line-height:1.5; }
+  .page-wrap { background:#e9edf3; display:flex; justify-content:center; padding:24px 12px 40px; }
+  .page { width:1400px; max-width:100%; margin:0; background:#fff; box-shadow:0 6px 24px rgba(26,42,74,0.18); }
+  /* header */
+  .hdr { background:linear-gradient(135deg,#101c36 0%,#1a2a4a 55%,#2b4570 100%); border-bottom:4px solid; border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1; color:#fff; padding:16px 26px 13px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .hdr .meta { font-size:10.5px; letter-spacing:0.6px; color:#9fb0cf; text-transform:uppercase; }
+  .hdr h1 { font-size:26px; font-weight:900; letter-spacing:0.2px; margin:2px 0 3px; }
+  .hdr .tagline { font-size:11.5px; color:#c7d2e8; }
+  .hdr .pricebox { text-align:right; }
+  .hdr .price { font-size:26px; font-weight:900; }
+  .hdr .chg { color:#ff8a80; font-weight:700; font-size:14px; }
+  .hdr .sub { font-size:10.5px; color:#9fb0cf; margin-top:3px; }
+  .tagstrip { display:flex; gap:0; border-bottom:1px solid #dde2ea; }
+  .tagstrip div { flex:1; text-align:center; padding:6px 4px; font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; border-right:1px solid #dde2ea; }
+  .tagstrip div:last-child { border-right:none; }
+  /* sections */
+  .sec { padding:16px 26px 20px; border-bottom:1px solid #e4e8ef; }
+  .sec-title { display:flex; align-items:center; gap:9px; margin-bottom:12px; padding-bottom:7px; border-bottom:2px solid #f0b429; }
+  .sec-title .num { background:linear-gradient(135deg,#f7b733,#e67e22); color:#1a2a4a; font-size:11px; font-weight:900; padding:2px 7px; border-radius:3px; }
+  .sec-title h2 { font-size:14.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#1a2a4a; }
+  .microhead { font-size:10px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#b07716; margin:10px 0 6px; }
+  /* generic table */
+  table.t { width:100%; border-collapse:collapse; }
+  table.t th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase; padding:6px 9px; text-align:right; font-weight:700; }
+  table.t th:first-child { text-align:left; }
+  table.t td { padding:5.5px 9px; border-bottom:1px solid #edf0f5; text-align:right; font-size:12px; }
+  table.t td:first-child { text-align:left; font-weight:600; }
+  table.t tr:nth-child(even) td { background:#f8f9fb; }
+  .pos { color:#2e7d32; font-weight:700; } .neg { color:#c62828; font-weight:700; }
+  .warn { color:#f57f17; font-weight:700; }
+  /* tiles */
+  .tiles { display:flex; gap:10px; }
+  .tile { flex:1; border:1px solid #dde2ea; border-top:3px solid #2b4570; border-radius:6px; padding:9px 12px; background:linear-gradient(180deg,#fdfefe,#f7f9fc); }
+  .tile .lab { font-size:9.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#8a94a6; }
+  .tile .val { font-size:19px; font-weight:900; margin:2px 0 1px; color:#1a2a4a; }
+  .tile .note { font-size:10.3px; color:#5a6475; line-height:1.35; }
+  /* callout notes */
+  .notebox { border-left:4px solid #f9a825; background:#fffbe8; padding:9px 13px; font-size:11.8px; margin-top:11px; border-radius:0 5px 5px 0; }
+  .notebox.green { border-left-color:#2e7d32; background:#f0f7f0; }
+  .notebox.red { border-left-color:#c62828; background:#fdf0f0; }
+  .notebox.blue { border-left-color:#1565c0; background:#eef4fc; }
+  .badge { display:inline-block; font-size:9.5px; font-weight:900; letter-spacing:0.5px; padding:1.5px 7px; border-radius:9px; text-transform:uppercase; vertical-align:middle; }
+  .new-tag { display:inline-block; font-size:9px; font-weight:900; letter-spacing:0.7px; text-transform:uppercase; background:#f0b429; color:#3d2c00; padding:2px 6px; border-radius:3px; line-height:1.2; vertical-align:middle; margin-left:6px; }
+  .b-bull { background:#e8f5e9; color:#2e7d32; } .b-bear { background:#ffebee; color:#c62828; }
+  .b-neut { background:#e3f2fd; color:#1565c0; } .b-warn { background:#fff9c4; color:#f57f17; }
+  .cols { display:flex; gap:20px; }
+  .panel { flex:1; border:1px solid #dde2ea; border-radius:6px; padding:12px 15px; }
+  .panel .plab { font-size:9.5px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#8a94a6; margin-bottom:3px; }
+  .panel .pval { font-size:21px; font-weight:900; }
+  .chartcap { font-size:10px; color:#8a94a6; margin-top:5px; line-height:1.4; }
+  .imgwrap img { width:100%; border-radius:5px; border:1px solid #23304a; display:block; }
+  .footer-blue { border-top:3px solid #f0b429; background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570); color:#fff; text-align:center; padding:10px 16px; font-size:11px; letter-spacing:0.4px; }
+  .disclaim { font-size:9.8px; color:#8a94a6; padding:12px 26px; line-height:1.5; }
+  table.t[style*='--pad'] td { padding:9px; }
+  .compact { padding:13px 26px 14px; }
+  .compact table.t td { padding:3.5px 8px; font-size:11.3px; }
+  .compact table.t th { padding:5px 8px; }
+  .compact .notebox { padding:7px 11px; font-size:10.8px; margin-top:0; }
+  .compact .microhead { margin:8px 0 4px; }
+  .compact .tile { padding:6px 10px; }
+  .compact .tile .val { font-size:15.5px; margin:1px 0 0; }
+  .compact .tile .note { font-size:9.6px; }
+  .compact .cols { gap:14px; }
+  table.fit { width:100%; table-layout:fixed; }
+  table.fit td, table.fit th { padding:3.5px 11px; white-space:nowrap; overflow:hidden; }
+  table.fit th:first-child, table.fit td:first-child { width:24%; }
+  .krow { display:flex; justify-content:space-between; align-items:baseline; gap:8px; border-bottom:1px solid #edf0f5; padding:5px 2px; }
+  .krow .klab { color:#8a94a6; font-weight:900; font-size:9.3px; text-transform:uppercase; letter-spacing:0.5px; flex:0 0 auto; }
+  .krow .kval { font-weight:900; color:#1a2a4a; font-size:12.5px; text-align:right; }
+  .krow .kval small { display:block; font-weight:600; color:#8a94a6; font-size:9.3px; }
+  .mininote { font-size:10px; color:#5a6475; line-height:1.45; margin-top:8px; padding:7px 9px; border-radius:4px; }
+  table.peer { width:100%; border-collapse:collapse; }
+  table.peer th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:8.6px; letter-spacing:0.3px; text-transform:uppercase; padding:4px 3px; text-align:right; }
+  table.peer th:first-child { text-align:left; }
+  table.peer td { padding:4px 3px; border-bottom:1px solid #edf0f5; text-align:right; font-size:10px; }
+  table.peer td:first-child { text-align:left; font-weight:700; }
+
+    .sector-wheel-compact{width:600px;height:700px;margin:50px auto 0 110px;overflow:visible}
+    .sector-wheel-compact > div{width:540px!important;transform:scale(0.93);transform-origin:top left}
+    .sector-wheel-compact .mt-16,.sector-wheel-compact .md\:mt-\[80px\]{margin-top:0!important}
+    .sector-wheel-compact .mt-8{display:none}
+    .sector-wheel-compact .relative{position:relative}
+    .sector-wheel-compact .absolute{position:absolute}
+    .sector-wheel-compact .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel-compact .pointer-events-none{pointer-events:none}
+    .sector-wheel-compact .z-10{z-index:10}
+    .sector-wheel-compact .flex{display:flex}
+    .sector-wheel-compact .flex-col{flex-direction:column}
+    .sector-wheel-compact .items-center{align-items:center}
+    .sector-wheel-compact .items-start{align-items:flex-start}
+    .sector-wheel-compact .items-end{align-items:flex-end}
+    .sector-wheel-compact .justify-center{justify-content:center}
+    .sector-wheel-compact .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel-compact .leading-none{line-height:1}
+    .sector-wheel-compact .font-black{font-weight:900}
+    .sector-wheel-compact .opacity-90{opacity:.9}
+    .sector-wheel-compact .overflow-visible{overflow:visible}
+    .sector-wheel-compact .aspect-square{aspect-ratio:1/1}
+    .sector-wheel-compact .w-full,.sector-wheel-compact .md\:w-full{width:100%}
+    .sector-wheel-compact .h-full{height:100%}
+    .sector-wheel-compact .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel-compact .ml-\[1px\]{margin-left:1px}
+    .sector-wheel-compact .mr-\[1px\]{margin-right:1px}
+    .sector-wheel-compact .w-\[86vw\]{width:100%}
+    .sector-wheel-compact .max-w-\[540px\]{max-width:540px}
+    .sector-wheel-compact .max-w-\[760px\]{max-width:540px}
+    .sector-wheel-compact .w-\[72px\]{width:72px}
+    .sector-wheel-compact .h-\[1px\]{height:1px}
+    .sector-wheel-compact .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel-compact .text-\[16px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel-compact .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel-compact .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel-compact .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel-compact .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel-compact .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel-compact .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel-compact .gap-\[7px\]{gap:7px}
+    .sector-wheel-compact .gap-\[8px\]{gap:8px}
+    .sector-wheel-compact svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .relative{position:relative}
+    .sector-wheel .absolute{position:absolute}
+    .sector-wheel .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel .pointer-events-none{pointer-events:none}
+    .sector-wheel .z-10{z-index:10}
+    .sector-wheel .flex{display:flex}
+    .sector-wheel .flex-col{flex-direction:column}
+    .sector-wheel .items-center{align-items:center}
+    .sector-wheel .items-start{align-items:flex-start}
+    .sector-wheel .items-end{align-items:flex-end}
+    .sector-wheel .justify-center{justify-content:center}
+    .sector-wheel .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel .leading-none{line-height:1}
+    .sector-wheel .font-black{font-weight:900}
+    .sector-wheel .opacity-90{opacity:.9}
+    .sector-wheel .overflow-visible{overflow:visible}
+    .sector-wheel .aspect-square{aspect-ratio:1/1}
+    .sector-wheel .w-full,.sector-wheel .md\:w-full{width:100%}
+    .sector-wheel .h-full{height:100%}
+    .sector-wheel .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel .mt-16{margin-top:64px}
+    .sector-wheel .mt-8{margin-top:32px}
+    .sector-wheel .md\:mt-10{margin-top:40px}
+    .sector-wheel .md\:mt-\[80px\]{margin-top:64px}
+    .sector-wheel .ml-\[1px\]{margin-left:1px}
+    .sector-wheel .mr-\[1px\]{margin-right:1px}
+    .sector-wheel .w-\[86vw\]{width:100%}
+    .sector-wheel .max-w-\[540px\]{max-width:540px}
+    .sector-wheel .max-w-\[760px\]{max-width:540px}
+    .sector-wheel .w-\[72px\]{width:72px}
+    .sector-wheel .h-\[1px\]{height:1px}
+    .sector-wheel .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel .text-\[16px\]{font-size:15px}
+    .sector-wheel .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel .gap-\[7px\]{gap:7px}
+    .sector-wheel .gap-\[8px\]{gap:8px}
+    .sector-wheel svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .hub-name{font-family:'Fraunces',Georgia,serif}
+
+  /* ===================== RESPONSIVE / MOBILE ===================== */
+  .mobile-jump { display:none; }
+  @media (max-width: 860px) {
+    html { -webkit-text-size-adjust:100%; }
+    body { overflow-x:hidden; }
+    .page { width:100% !important; max-width:100% !important; }
+    .sec, .hdr { padding-left:16px !important; padding-right:16px !important; }
+    .disclaim { padding-left:16px !important; padding-right:16px !important; }
+    .footer-blue { padding-left:16px !important; padding-right:16px !important; }
+
+    .hdr { flex-direction:column !important; align-items:stretch !important; gap:10px; }
+    .hdr .pricebox { text-align:left !important; }
+
+    .tagstrip { flex-direction:column !important; }
+    .tagstrip div { border-right:none !important; border-bottom:1px solid #dde2ea; text-align:left !important; padding:8px 4px !important; }
+    .tagstrip div:last-child { border-bottom:none; }
+
+    .mobile-jump {
+      display:flex !important; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      position:sticky; top:0; z-index:20; background:#1a2a4a; padding:10px 12px;
+      border-bottom:3px solid #f0b429; white-space:nowrap; scrollbar-width:none;
+    }
+    .mobile-jump::-webkit-scrollbar { display:none; }
+    .mobile-jump a {
+      color:#c7d2e8; font-size:11.5px; font-weight:700; text-decoration:none;
+      padding:6px 10px; border-radius:14px; background:rgba(255,255,255,0.08); flex:0 0 auto;
+    }
+    .sec-title { scroll-margin-top:56px; }
+
+    .cols { flex-wrap:wrap !important; }
+    .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
+    .cols { row-gap:16px; }
+
+    .tiles { flex-wrap:wrap !important; row-gap:8px; }
+    .tile { flex:1 1 45% !important; min-width:0 !important; }
+
+    div[style*="flex:1 1 44%"] { flex:1 1 100% !important; }
+    div[style*="flex:1 1 30%"] { flex:1 1 45% !important; }
+
+    table.t:not(.prose), table.fit, table.peer {
+      display:table !important; width:100% !important; table-layout:fixed !important;
+      white-space:normal !important; overflow-x:visible !important; max-width:100%;
+    }
+    table.t:not(.prose) td, table.t:not(.prose) th,
+    table.fit td, table.fit th,
+    table.peer td, table.peer th { white-space:normal !important; word-wrap:break-word; padding:4px 3px !important; font-size:9.6px !important; }
+    table.peer td:first-child, table.peer th:first-child { width:26% !important; }
+    table.prose { display:block !important; }
+    table.prose tr:first-child { display:none !important; }
+    table.prose tr { display:block !important; padding:10px 0 !important; border-bottom:1px solid #e4e8ef; }
+    table.prose tr:last-child { border-bottom:none !important; }
+    table.prose td { display:inline !important; padding:0 !important; border:none !important; text-align:left !important; white-space:normal !important; width:auto !important; word-wrap:break-word; }
+    table.prose td:first-child { font-weight:900; font-size:13px; color:#1a2a4a; }
+    table.prose td:nth-child(2) { margin-left:8px; }
+    table.prose td:nth-child(3) { display:block !important; margin-top:6px; font-size:12.5px; line-height:1.55; color:#2a3342; }
+
+    .metric-strip { flex-wrap:wrap !important; }
+    .metric-strip > div { flex:1 1 50% !important; box-sizing:border-box; border-bottom:1px solid #e7ebf1 !important; }
+    .metric-strip > div:nth-child(even) { border-right:none !important; }
+
+    .krow { flex-wrap:wrap; align-items:flex-start !important; }
+    .krow .klab { flex:1 1 auto !important; }
+    .krow .kval { display:contents !important; }
+    .krow .kval small { flex:1 1 100% !important; order:3; display:block !important; text-align:left !important; margin-top:3px !important; }
+
+    h1 { font-size:21px !important; }
+    .price { font-size:22px !important; }
+
+    .sector-wheel-compact { width:270px !important; height:290px !important; margin:20px auto 0 32px !important; overflow:visible !important; }
+    .sector-wheel-compact > div { width:540px !important; transform:scale(0.5); transform-origin:top left; }
+  }
+
+  @media (max-width: 480px) {
+    .tile { flex:1 1 100% !important; }
+    div[style*="flex:1 1 45%"] { flex:1 1 100% !important; }
+  }
+</style>
+</head>
+<body>
+<style>
+  :root{
+    --navy:#1a2a4a;
+    --navy-2:#243a63;
+    --gold:#c9a24b;
+    --ink:#1a2a4a;
+    --muted:#5c6b85;
+    --hair:#dde2ea;
+    --page-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .cover-wrap{
+    font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    background:#e9edf3;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px;
+  }
+  .cover-page{
+    width:1400px;
+    max-width:100%;
+    min-height:900px;
+    background:var(--page-bg);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 6px 24px rgba(26,42,74,0.18);
+    overflow:hidden;
+  }
+  .top-band{
+    height:14px;
+    background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--gold) 100%);
+    flex-shrink:0;
+  }
+  .brand-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:26px 56px 0 56px;
+    flex-shrink:0;
+  }
+  .brand-bar .doc-type{
+    font-size:12px;
+    letter-spacing:3px;
+    color:var(--muted);
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .brand-bar .doc-date{
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.4px;
+  }
+  .main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    padding:36px 60px 40px 60px;
+  }
+  .logo-wrap{
+    width:auto;
+    max-width:92%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:44px;
+  }
+  .logo-wrap img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .text-logo{
+    font-size:clamp(20px, 6.2vw, 40px);
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--navy);
+    white-space:normal;
+    word-break:break-word;
+    text-align:center;
+    line-height:1.15;
+  }
+  .text-logo span{ color:var(--gold); }
+  .kicker{
+    font-size:15px;
+    letter-spacing:6px;
+    color:var(--gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  h1.report-title{
+    font-size:46px;
+    letter-spacing:1px;
+    color:var(--navy);
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.15;
+  }
+  .divider{
+    width:120px;
+    height:3px;
+    background:var(--gold);
+    margin:26px 0;
+  }
+  .company-name{
+    font-size:34px;
+    font-weight:700;
+    color:var(--navy);
+    letter-spacing:0.3px;
+  }
+  .ticker-row{
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 14px;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .ticker-chip{ text-align:center; }
+  .ticker-chip{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:var(--navy);
+    background:#eef1f7;
+    border:1px solid var(--hair);
+    border-radius:4px;
+    padding:6px 14px;
+  }
+  .sector-line{
+    margin-top:28px;
+    font-size:14px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+    font-style:italic;
+  }
+  .meta-block{
+    margin-top:64px;
+    display:flex;
+    gap:70px;
+    justify-content:center;
+  }
+  .rev-history{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .rev-history-title{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:8px;
+  }
+  .rev-history-table{ border-collapse:collapse; font-size:13px; }
+  .rev-history-table th{
+    text-align:left; padding:2px 28px 4px 0; font-size:10px; letter-spacing:1px;
+    text-transform:uppercase; color:var(--muted); font-weight:600;
+    border-bottom:1px solid #e2e6ee;
+  }
+  .rev-history-table td{ white-space:nowrap; padding:4px 28px 4px 0; color:var(--navy); font-weight:600; }
+  .rev-history-table td.rev-note{ white-space:normal; color:var(--muted); font-weight:400; }
+  .meta-item{
+    text-align:center;
+  }
+  .meta-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .meta-value{
+    font-size:16px;
+    color:var(--navy);
+    font-weight:700;
+  }
+  .prepared-by{
+    margin-top:60px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+  }
+  .prepared-by strong{
+    color:var(--navy);
+  }
+  .footer{
+    flex-shrink:0;
+    background:#ffffff;
+    border-top:1px solid var(--hair);
+    padding:16px 56px;
+    text-align:center;
+  }
+  .footer p{
+    font-size:10.5px;
+    line-height:1.6;
+    color:#8992a6;
+    letter-spacing:0.2px;
+  }
+  .footer strong{
+    color:var(--muted);
+  }
+  @media (max-width: 860px) {
+    .footer { padding:14px 20px !important; text-align:left !important; }
+    .footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .main { padding-top:14px !important; padding-bottom:14px !important; }
+    .logo-wrap { margin-bottom:20px !important; }
+    .meta-block { margin-top:30px !important; }
+  }
+  .bottom-band{
+    height:8px;
+    background:var(--navy);
+    flex-shrink:0;
+  }
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+  <div class="top-band"></div>
+  <div class="brand-bar"></div>
+  <div class="main">
+    <div class="logo-wrap"><div class="text-logo">JYOTI CNC <span>AUTOMATION</span></div></div>
+    <div class="kicker">Equity Research Report</div>
+    <h1 class="report-title">Jyoti CNC Automation Limited</h1>
+    <div class="divider"></div>
+    <div class="ticker-row">
+      <div class="ticker-chip">NSE: JYOTICNC</div>
+      <div class="ticker-chip">BSE: 544081</div>
+      <div class="ticker-chip">Mkt Cap: ₹22,679 Cr</div>
+      <div class="ticker-chip">Master Score: C (58)</div>
+    </div>
+    <div class="sector-line">Industrials — Capital Goods / CNC Machine Tools: turning, milling, multi-axis and 5-axis machines for aerospace &amp; defence, auto, general engineering and EMS; Rajkot (Gujarat), with a French subsidiary chain (Jyoti SAS → Huron Graffenstaden)</div>
+    <div class="meta-block" style="display:block">
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
+      <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">17 October 2026</span>
+    </div>
+    <div class="rev-history">
+      <div class="rev-history-title">Revision History</div>
+      <table class="rev-history-table">
+        <tr><th>Date</th><th>Version</th></tr>
+        <tr><td>17/10/26</td><td class="rev-note">v1 — initial report</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+    <p style="margin-bottom:4px;letter-spacing:0.5px;text-transform:uppercase;font-size:9.5px;color:#8a94a6">Confidential — For Educational Use</p>
+    <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
+  </div>
+  <div class="bottom-band"></div>
+</div>
+</div>
+<div class="page-wrap">
+<div class="page">
+  <div class="hdr">
+    <div>
+      <div class="meta">BSE: 544081 &nbsp;·&nbsp; NSE: JYOTICNC &nbsp;·&nbsp; CNC machine tools &nbsp;·&nbsp; Rajkot, Gujarat</div>
+      <h1>Jyoti CNC Automation Limited</h1>
+      <div class="tagline">Order book ₹4,848 Cr (~2.1x revenue) &nbsp;·&nbsp; Promoters 62.55% (13.08% of all shares pledged at 30 Jun) &nbsp;·&nbsp; Q1 FY27 profit: consolidated −20%, standalone +21% &nbsp;·&nbsp; ~12% below 52-week high (₹1,134.60)</div>
+    </div>
+    <div class="pricebox">
+      <div class="price">₹997.20 <span class="chg" style="color:#a5d6a7">▲ +1.82%</span></div>
+      <div class="sub">Report date: 17 Oct 2026 (close of Fri 16 Oct) &nbsp;|&nbsp; Mkt Cap: ₹22,679 Cr &nbsp;|&nbsp; Book Value: 11.3x &nbsp;|&nbsp; MarketSmith Master Score: C (58)</div>
+    </div>
+  </div>
+  <div class="tagstrip">
+    <div style="color:#e07c00;background:#fff6e6">● Sentiment: Mixed; +96% rally off ₹580 has rolled over</div>
+    <div style="color:#c62828;background:#fdeef0">● Momentum: Gauges +1 / −1 (1D), −3 / −3 (1H); RSI 87 at the top</div>
+    <div style="color:#c62828;background:#fdeef0">● Valuation: Rich (P/E 70.5, P/B 11.3x, EV/EBITDA ~44x) — ROE 18%</div>
+    <div style="color:#e07c00;background:#fff6e6">● EPS 60 · Price 80 · Group 50/197</div>
+    <div style="color:#c62828;background:#fdeef0">● Governance: Huron probe; 13.08% of shares pledged (Jun-26)</div>
+  </div>
+  <nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Moat</a><a href="#sec03">Event</a><a href="#sec04">Sentiment</a><a href="#sec05">Sector Size</a><a href="#sec06">Shareholding</a><a href="#sec07">Performance</a><a href="#sec08">Financials</a><a href="#sec09">Ratios</a><a href="#sec10">Management</a><a href="#sec11">Guidance</a><a href="#sec12">Consensus</a><a href="#sec13">Volume</a><a href="#sec14">Sector Rotation</a><a href="#sec15">Peers</a><a href="#sec16">Risk</a><a href="#sec17">Technical Ratings</a><a href="#sec18">Elliott Wave</a><a href="#sec19">Recommendation</a></nav>
+  <div class="sec">
+    <div class="sec-title" id="sec01"><span class="num">01</span><h2>Company Overview</h2></div>
+    <div class="cols">
+      <div style="flex:1.5">
+        <div class="microhead">What They Do</div>
+        <p><b>Jyoti CNC Automation Limited</b> (Rajkot, Gujarat; founder-MD Parakramsinh Jadeja, in business since 1991) makes <b>CNC machine tools</b>: turning centres, turn-mill, vertical and horizontal machining centres, 3-axis and simultaneous <b>5-axis</b>, and multi-tasking machines — 200+ variants in 44 series (FY26 annual report). It runs two plants, a service centre and an R&amp;D centre at Rajkot and is vertically integrated (own foundry, machine shop, sheet-metal and paint shops, in-house spindles and tool changers). It buys <b>controllers</b> (Siemens; Fanuc as an alternative) with a ~12-month lead time; its own controller is ~2 years from commercialisation, so today it is an integrator, not a controller maker. Units are mostly entry-level (<b>1,349 of 1,406</b> machines in Q1 FY27); high-end machines drive revenue and margin. Management claims a 10–12% domestic share of the high-precision segment (CRISIL: ~10% by volume) and 15,000+ customers.</p>
+        <p style="margin-top:7px"><b>French subsidiary chain:</b> Jyoti SAS (France, 100%) holds Huron Graffenstaden SAS (Strasbourg; bought 2007, control from 1 Jan 2008), which holds Huron Fräsmaschinen GmbH (Germany), Huron Canada and Huron Makina (Turkey). Huron is under a <b>French export-control judicial investigation</b> disclosed on 12 Apr 2026 (§03). No “Condor” entity was found in any source reviewed for this report.</p>
+        <p style="margin-top:7px">FY26 consolidated revenue was <b>₹2,093 Cr (+15.1%)</b>, EBITDA ₹527 Cr (25.2%), net profit ₹336 Cr (+6.3%), EPS ₹14.78; standalone revenue ₹1,949 Cr, EBITDA ₹564 Cr (29%), PAT ₹391 Cr. Q1 FY27 (7 Aug 2026): consolidated revenue ₹508.5 Cr (+24%), EBITDA ₹108.8 Cr (21.4%), <b>PAT ₹57.1 Cr (−20%)</b>; standalone revenue ₹509.1 Cr (+36.7%), EBITDA ₹138.7 Cr (27.2%), <b>PAT ₹87.5 Cr (+21.3%)</b>. <b>Order book ₹4,848 Cr at 30 Jun 2026</b> (₹4,732 Cr + ₹601 Cr intake − ₹485 Cr executed ties; my arithmetic), ~2.1x revenue per CRISIL. CRISIL assigned <b>A+/Stable</b> on 15 Oct 2026.</p>
+        <div class="notebox blue"><b>Key Competitive Advantage:</b> A domestic 5-axis and high-precision capability in a market where ~59% of consumption is imported (IMTMA FY26 via secondary summaries; my arithmetic), delivered through vertical integration that keeps <b>standalone EBITDA at 28–29%</b>, plus a ₹4,848 Cr backlog and a capacity ramp from 6,000 to 16,000 machines a year. The edge is <b>execution, integration and capacity, not legal IP</b> (no patents found), and the imported controller and a Hosur competitor are the pressure points. Detail in §02.</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Order-Book Mix by Segment (30 Jun 2026)</div>
+        <svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><path d="M240.0,8.0 A96,96 0 0 1 305.7,174.0 L268.8,134.6 A42,42 0 0 0 240.0,62.0 Z" fill="#1a2a4a" stroke="#fff" stroke-width="1"/><text x="304.2" y="82.1" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">38%</text><path d="M305.7,174.0 A96,96 0 0 1 193.8,188.1 L219.8,140.8 A42,42 0 0 0 268.8,134.6 Z" fill="#2e7d32" stroke="#fff" stroke-width="1"/><text x="248.6" y="176.0" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">20%</text><path d="M193.8,188.1 A96,96 0 0 1 144.8,92.0 L198.3,98.7 A42,42 0 0 0 219.8,140.8 Z" fill="#e07c00" stroke="#fff" stroke-width="1"/><text x="178.5" y="138.8" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">19%</text><path d="M144.8,92.0 A96,96 0 0 1 183.6,26.3 L215.3,70.0 A42,42 0 0 0 198.3,98.7 Z" fill="#5b7bb5" stroke="#fff" stroke-width="1"/><text x="180.6" y="72.4" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">13%</text><path d="M183.6,26.3 A96,96 0 0 1 204.7,14.7 L224.5,64.9 A42,42 0 0 0 215.3,70.0 Z" fill="#8fa3c4" stroke="#fff" stroke-width="1"/><text x="206.8" y="47.0" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">4%</text><path d="M204.7,14.7 A96,96 0 0 1 240.0,8.0 L240.0,62.0 A42,42 0 0 0 224.5,64.9 Z" fill="#b8c0cc" stroke="#fff" stroke-width="1"/><text x="227.1" y="39.7" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">6%</text><text x="240" y="102" text-anchor="middle" font-size="13" font-weight="900" fill="#1a2a4a">₹4,848 Cr</text><text x="240" y="114" text-anchor="middle" font-size="6.5" letter-spacing="0.6" fill="#8a94a6">ORDER BOOK (30 JUN 2026)</text><rect x="26" y="222" width="11" height="11" rx="2" fill="#1a2a4a"/><text x="43" y="232" font-size="10.5" fill="#2a3342" font-weight="700">Aerospace &amp; defence</text><text x="43" y="245" font-size="9.3" fill="#8a94a6">38% · ≈ ₹1,842 Cr (my arithmetic)</text><rect x="26" y="252" width="11" height="11" rx="2" fill="#2e7d32"/><text x="43" y="262" font-size="10.5" fill="#2a3342" font-weight="700">General engineering</text><text x="43" y="275" font-size="9.3" fill="#8a94a6">20% · ≈ ₹970 Cr</text><rect x="26" y="282" width="11" height="11" rx="2" fill="#e07c00"/><text x="43" y="292" font-size="10.5" fill="#2a3342" font-weight="700">Auto</text><text x="43" y="305" font-size="9.3" fill="#8a94a6">19% · ≈ ₹921 Cr</text><rect x="26" y="312" width="11" height="11" rx="2" fill="#5b7bb5"/><text x="43" y="322" font-size="10.5" fill="#2a3342" font-weight="700">EMS</text><text x="43" y="335" font-size="9.3" fill="#8a94a6">13% · ≈ ₹630 Cr (presentation chart shows 14%)</text><rect x="26" y="342" width="11" height="11" rx="2" fill="#8fa3c4"/><text x="43" y="352" font-size="10.5" fill="#2a3342" font-weight="700">Die &amp; mould</text><text x="43" y="365" font-size="9.3" fill="#8a94a6">4% · ≈ ₹194 Cr</text><rect x="26" y="372" width="11" height="11" rx="2" fill="#b8c0cc"/><text x="43" y="382" font-size="10.5" fill="#2a3342" font-weight="700">Not itemised in sources (flagged)</text><text x="43" y="395" font-size="9.3" fill="#8a94a6">6% · ≈ ₹291 Cr (residual: 100 − 94)</text></svg>
+        <div class="chartcap" style="text-align:center">Order-book mix at 30 Jun 2026 (Q1 FY27 call, 7 Aug 2026): A&amp;D 38 / General engineering 20 / Auto 19 / EMS 13 / Die &amp; mould 4 (%). Those five sum to <b>94%</b>; the remaining 6% is not itemised in the sources and is drawn as a flagged residual slice. The Q4 and Q1 calls state the auto / general-engineering split inconsistently (19/20 vs 20/19) and the transcripts are machine-generated. Revenue mix, Q1 FY27: A&amp;D 37 / Auto 35 / General eng. 17 / EMS 6 / Other 5; FY26: 39 / 26 / 23; FY25 (Infomerics): ~45 / 23 / 20. Machinist.in reported A&amp;D at 41% of the book in Feb 2026 (a different date). Rupee values are share × ₹4,848 Cr (my arithmetic). Management says the book converts over 18–20 months; some outlets reverse intake and execution (the roll-forward supports 601 in, 485 out).</div>
+      </div>
+      <div style="flex:1.05">
+<div class="microhead">Earnings-Quality Rating: Where The Profit Comes From</div>
+<div style="border:1px solid #dde2ea;border-radius:6px;padding:11px 14px;background:#f8f9fb">
+  <div style="font-size:15px;font-weight:900;color:#1a2a4a">Quality rated 2 / 5 <span style="letter-spacing:2px;color:#2e7d32;font-size:13px">■■</span><span style="letter-spacing:2px;color:#cdd5e0;font-size:13px">■■■</span></div>
+  <p style="font-size:11px;margin-top:5px"><b>Bull:</b> standalone margins of 27–29% and standalone PAT ₹391 Cr in FY26 (+26%); a ~2.1x order book; consolidated EBITDA margin of 25.2% in FY26 met the ~25% guide; CRISIL rates liquidity “Strong” with ₹400–500 Cr expected annual cash accrual.</p>
+  <p style="font-size:11px;margin-top:5px"><b>Bear:</b> operating cash flow was only <b>₹54.4 Cr in FY26</b> against PAT of ₹336 Cr (~16%; ₹87.3 Cr before a ₹32.9 Cr customs-seizure item), free cash flow about <b>−₹269 Cr</b> after capex (my arithmetic); cash conversion cycle 359 days (Screener); ₹55 Cr of FY26 standalone profit does not reach the consolidated line (Jyoti SAS contribution (56.65)); and TTM “other income” of ₹44 Cr flatters pre-tax profit (§17).</p>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec02"><span class="num">02</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
+    <table class="t prose"><tr><th style="text-align:left">Dimension</th><th>Rating</th><th style="text-align:left">Commentary</th></tr><tr><td style="text-align:left">Brand Strength</td><td><span class="badge b-warn">3 / 5 · Moderate</span></td><td style="text-align:left">Strong in India’s mid-market (management: 10–12% domestic share of the high-precision segment; CRISIL ~10% by volume; 15,000+ customers; 1,35,000+ installed machines per the annual report). Huron adds a European 5-axis name. But the brand is not a Mazak or DMG Mori equivalent and <b>96% of units are entry-level</b>. Rating is my judgement from the evidence.</td></tr><tr><td style="text-align:left">Network Effects</td><td><span class="badge b-bear">1 / 5 · Absent</span></td><td style="text-align:left">None identified. Service-centre density helps retention but is not a network effect.</td></tr><tr><td style="text-align:left">Switching Costs</td><td><span class="badge b-warn">2–3 / 5 · Low–Moderate</span></td><td style="text-align:left">Operators, fixtures and programs are retrained per platform, and aerospace needs qualification (Infomerics cites marquee repeat orders). But machines are bought one at a time: the IPO summaries flag <b>no long-term purchase contracts</b>, while Infomerics mentions “long term supply agreements” — conflict kept. Sales are direct (dealers 0.32% of sales, BRSR).</td></tr><tr><td style="text-align:left">Cost Advantage / Barriers</td><td><span class="badge b-bull">3–4 / 5 · Moderate–High</span></td><td style="text-align:left">Vertical integration (foundry, spindles, tool changers) supports a <b>28–29% standalone EBITDA margin</b>, high for machine tools. Barriers: capacity (6,000 → 16,000), a 24–30 month backlog and 12-month controller lead times for rivals. Weaknesses: controllers are imported (Siemens / Fanuc, ~30% of components per a Business Standard IPO report), and a competitor with a 10,000-machine plant at Hosur was named on the Q1 call (management declined to comment).</td></tr><tr><td style="text-align:left">Patents / Proprietary Tech</td><td><span class="badge b-bear">2 / 5 · None found</span></td><td style="text-align:left">No patent count or grants found. The in-house controller / HMI is not commercial (~2 years away). The moat is know-how and integration, not legal IP. Competitors named in prospectus summaries and call mentions (LMW, Ace Micromatic, Lokesh Machines, Mac Power CNC; generic: DMG Mori, Mazak, Haas, Makino, Chinese imports) are <b>unverified</b> — no document ranks Jyoti against them.</td></tr></table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">What This Moat Does NOT Protect Against</div>
+        <p style="font-size:11.3px"><b>Concentration:</b> aerospace &amp; defence is ~38% of the book (the annual report itself warns that “an increasing share of revenue and order book is derived from aerospace and defence”), with export-licence exposure on non-EU buyers. Top-10 customers were ~27% of FY26 revenue (CRISIL) against top-3 ~32% in the IPO summary (six months to Sep 2023) — different dates and bases. HAL, BEL and Tata as direct customers: <b>not verified</b> (HAL appears on the Q1 call only as a hypothetical; MBDA orders were mentioned; Tata Electronics came up with no figures). <b>Controller dependence:</b> Japanese and German controllers carry a ~12-month lead time and supplier-government export licences. <b>Capacity race:</b> the Hosur plant and growing Taiwan / Korea imports in heavy machines. <b>Cancellations:</b> none disclosed anywhere (not found); management calls the Huron deferral “not cancellation”. <b>Execution:</b> inventory turnover fell to 1.08x standalone / 1.22x consolidated (from 1.27x / 2.06x) and the operating cycle was 211 days in FY25 (218 a year earlier; Infomerics), with raw material 228 days and WIP 112 days. <b>Foreign exchange:</b> ~26% of revenue is overseas plus euro exposure through Huron; ~₹10 Cr of unrealised forex loss hit Q1 FY27; the hedge ratio is not disclosed. <b>PLI:</b> management says it applied and is eligible (“close to 50%” combined central and state subsidy); I could not verify the scheme terms or the amount. <b>Litigation / tax:</b> a ₹4.46 Cr CGST demand (17 Nov 2025) was reportedly set aside on 29 May 2026 (a summary only); a ₹9.07 Cr TDS compounding payment (2024). No SEBI or exchange penalty found (annual report BRSR: nil); ASM/GSM lists not checked.</p>
+      </div>
+      <div style="flex:0 0 calc(40% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">Litigation &amp; Contingent Liabilities (standalone)</div>
+        <table class="t"><tr><th>Contingent liability (₹ Cr, 31 Mar 2026)</th><th>FY26</th><th>FY25</th></tr><tr><td>Letters of credit &amp; bank guarantees</td><td>176.78</td><td>115.43</td></tr><tr><td>Standby LCs &amp; letters of comfort</td><td>264.34</td><td>167.43</td></tr><tr><td>Disputed indirect-tax items (approx.)</td><td>~24.65–25</td><td>—</td></tr><tr><td>Disputed income tax</td><td>nil</td><td>19.57</td></tr><tr><td>Customer compensation claims</td><td>1.34</td><td>—</td></tr><tr><td>Capital commitments</td><td>55.75</td><td>31.34</td></tr></table>
+        <div class="chartcap">Source: FY26 annual report note 33, standalone. A consolidated contingent-liability note was <b>not located</b>. The two streams label the ~₹25 Cr tax lines differently (one: excise 2.27, CST 15.53, VAT 2.59, GST 4.03; the other: excise 2.27, income tax 4.03, TDS 15.53, CST 2.59, VAT 0.23, total 24.65) — the table is inconsistent between readings, so the total is shown as approximate. The ₹264.34 Cr standby / comfort letters are probably guarantees of subsidiary borrowings (my inference; the note does not say).</div>
+        <div class="notebox blue"><b>Synthesis:</b> A narrow-to-moderate moat built on integration and capacity, not on legal or network barriers. The A+ ratings are real — <b>CRISIL A+/Stable (15 Oct 2026)</b> and <b>Infomerics A+/Stable (standalone)</b> — but a third agency (Brickwork) sits at BB+ “Issuer Not Cooperating”, and India Ratings was not found (§16). Moat ratings are mine.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec03"><span class="num">03</span><h2>Huron Probe &amp; the Standalone–Consolidated Profit Gap, the Promoter Pledge, and Valuation vs Growth (PEG)</h2></div>
+<div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Q1 PAT (cons.)</div><div style="font-size:18px;font-weight:900;color:#c62828">₹57.1 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">−20% YoY on +24% revenue</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Q1 PAT (standalone)</div><div style="font-size:18px;font-weight:900;color:#2e7d32">₹87.5 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">+21.3% YoY</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Parent exposure to Jyoti SAS</div><div style="font-size:18px;font-weight:900;color:#c62828">₹501.7 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">₹341.60 Cr investment + ₹160.11 Cr loans (my sum)</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Promoter shares pledged</div><div style="font-size:18px;font-weight:900;color:#c62828">13.08%</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">of total shares, 30 Jun 2026 (Sep UNVERIFIED)</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">P/E (TTM)</div><div style="font-size:18px;font-weight:900;color:#c62828">70.5x</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">55.8x on standalone EPS ₹17.88 (my arithmetic)</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">PEG (forward, my arithmetic)</div><div style="font-size:18px;font-weight:900;color:#e07c00">≈ 2.3</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">trailing: not meaningful (§09)</div></div></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">Theme 1 — Profit Divergence: India Is Strong, the Group Line Is Not</div>
+        <div style="border:2px solid #c62828;border-radius:8px;padding:10px 14px;background:linear-gradient(135deg,#fdeef0,#fffafa)">
+          <p style="font-size:11.4px"><b>Management view:</b> the parent is “over 85% of group revenue”, demand for Huron machines is intact (no cancellations), revenue is deferred pending export licences and end-user certificates, and there will be “no impairment at all”. Q2 was expected to be better; Q3 / Q4 “lumpy”. CRISIL “has taken note” of the probe, says demand has been “largely unimpacted” and expects limited impact given Huron’s small scale.</p>
+          <p style="font-size:11.4px;margin-top:7px"><b>What the numbers show:</b> in Q1 FY27 standalone PAT rose 21% while consolidated PAT fell 20%; the ₹30.4 Cr gap (my arithmetic) matches the Huron loss of ₹30.33 Cr reported by Cofacto (an AI summary — secondary). For FY26 the ₹55 Cr gap sits beside a Jyoti SAS contribution of <b>(56.65)</b> versus +6.68 in FY25 (annual report consolidation schedule). Consolidated revenue (₹508.5 Cr) was essentially equal to standalone (₹509.1 Cr) in Q1, so after eliminations Huron added almost nothing to group revenue — my inference, consistent with ~₹35 Cr deferred. Consolidated profit also fell because other income dropped to ₹4.0 Cr from ₹20.5 Cr (Q1 FY26 had a ~₹20 Cr forex gain) and finance cost doubled to ₹24.3 Cr (my arithmetic bridge).</p>
+          <div style="font-size:10.3px;color:#8a6d1f;background:#fff9e0;border-radius:4px;padding:6px 9px;margin-top:8px"><b>Conflicts kept:</b> Jyoti SAS net assets are <b>₹(379.53) Cr</b> in the FY25 consolidated note but (111.05) / (53.55) at Mar-26 / Mar-25 in the FY26 consolidation schedule — not resolved. Seized funds: ~€4.0 mn (Infomerics, April) vs €3.02 mn “at present” (audited note). The June internal report’s “85%+ of revenue is unaffected India” line is historical and was true of revenue, not of the consolidated profit.</div>
+        </div>
+        <div class="microhead">Standalone vs Consolidated</div>
+        <table class="t fit"><tr><th>₹ Cr</th><th>Standalone</th><th>Consolidated</th><th>Gap</th></tr><tr><td>FY25 PAT</td><td>310</td><td>316.0</td><td>+6 (cons. higher)</td></tr><tr><td>FY26 PAT</td><td>391</td><td>336.0</td><td><span class="neg">−55</span></td></tr><tr><td>FY26 EBITDA margin</td><td>29%</td><td>25.2%</td><td>−3.8 pts</td></tr><tr><td>Q1 FY27 revenue</td><td>509.1</td><td>508.5</td><td>−0.6</td></tr><tr><td>Q1 FY27 EBITDA (margin)</td><td>138.7 (27.2%)</td><td>108.8 (21.4%)</td><td>−5.8 pts</td></tr><tr><td>Q1 FY27 PAT</td><td>87.5</td><td>57.1</td><td><span class="neg">−30.4</span></td></tr><tr><td>Q1 FY27 finance cost</td><td>20.0 (6.9)</td><td>24.3 (12.2)</td><td>a year ago in brackets</td></tr></table>
+        <div class="chartcap">Sources: Screener standalone and consolidated pages (17 Oct 2026); Q1 FY27 presentation (7 Aug 2026). Standalone and consolidated differences are my arithmetic. Management says the Q1 consolidated EBITDA shortfall is ~₹20–22 Cr from Huron deferral plus ₹10 Cr unrealised forex loss (adjusted consolidated margin 23.4%).</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">Theme 2 — The French Investigation: Facts, Exposure and Accounting</div>
+        <p style="font-size:11.2px"><b>Event:</b> disclosed 12 Apr 2026 — French customs / intelligence authorities (DNRED) opened a judicial investigation into Huron and some employees over export-control documentation for dual-use machinery. The Director General is restricted, about <b>€4.0 mn</b> was seized initially (Infomerics) vs <b>€3.02 mn</b> in the audited note, plus two Jyoti SAS residential properties and customs control of certain machines. The stock fell up to <b>16% intraday on 13 Apr</b> (low ~₹692 from ₹819.20). Management denies the Russia re-export allegations raised on the 29 May call (allegation only), says 50+ European firms face similar probes (<b>unverified</b>) and gave a timeline of “2 years, 3 years, 5 years, we don’t know”. No charges, lifting of seizures or outcome were found.</p>
+        <p style="font-size:11.2px;margin-top:6px"><b>Audit and exposure (FY26 annual report):</b> the standalone auditors’ Emphasis of Matter says Jyoti SAS has accumulated losses, its net worth is eroded, and there is a <b>material uncertainty on its going concern</b>; the opinion is unqualified and no impairment was booked (discounted-cash-flow and “strategic” justification). Parent exposure: investment ₹341.60 Cr + loans ₹160.11 Cr = <b>₹501.7 Cr</b> (my sum), against a standalone net worth of ₹2,000 Cr+. The count of Emphasis of Matter paragraphs (one vs two) differs between sources.</p>
+        <p style="font-size:11.2px;margin-top:6px"><b>Revenue accounting:</b> Q4 FY26 — ₹67 Cr of revenue reversed (~₹40 Cr margin); Q1 FY27 — Huron now books revenue on dispatch / end-user certificate, so ~₹35 Cr of revenue and ₹20–22 Cr of EBITDA were deferred; ~<b>₹100 Cr (7–8 machines)</b> is pending. Part of these figures rests on Substack posts (Madhu Periasamy, Abhinav Mishra) — secondary. Huron FY27 guide: revenue ₹300–325 Cr (₹300–350 Cr on 29 May) at 8–10% EBITDA, PAT-positive.</p>
+        <div class="microhead">Theme 3 — Promoter Pledge: Real, Concentrated, Balance UNVERIFIED</div>
+        <table class="t"><tr><th>Pledge data point</th><th style="text-align:left">Shares / %</th><th style="text-align:left">Basis · source</th></tr><tr><td>Sep 2025 / Mar 2026</td><td style="text-align:left">4.11% / 15.43%</td><td style="text-align:left">secondary summaries (MarketsMOJO) — not the filing</td></tr><tr><td><b>30 Jun 2026</b></td><td style="text-align:left"><b>2,97,52,000 = 20.92% of promoter-group shares = 13.08% of total</b></td><td style="text-align:left">Q1 FY27 shareholding filing (read); all by A. B. Virani (90.55% of his holding); none by Jadeja / the LLP</td></tr><tr><td>Feb / Aug 2026 (reported)</td><td style="text-align:left">70 lakh to HDFC Bank; 15 lakh to Jio Credit (→ 2,17,52,000 = 9.57%)</td><td style="text-align:left">ScanX; releases also reported — not reconciled</td></tr><tr><td>28 Sep 2026 (reported)</td><td style="text-align:left">1,52,40,000 = 6.70% of total (= 10.7% of promoter shares)</td><td style="text-align:left">ScanX; includes 10 lakh to Bajaj Finance; Poonawalla 17.4 lakh unverified</td></tr><tr><td>Sep 2026 (Trendlyne)</td><td style="text-align:left">12.35% (of promoter holding ≈ 1.76 Cr shares ≈ 7.7% of total)</td><td style="text-align:left">different base from ScanX — my arithmetic</td></tr></table>
+        <div class="chartcap">The 30 Jun 2026 figure is from the exchange-format filing; every later figure is a news item on different bases (share of total vs share of promoter holding) and is <b>not reconciled</b>. Lender / purpose not disclosed (“business purposes”). SAST Reg 31 filings were not read. Larger picture: promoters 62.55% (flat), Jadeja 26.91%, Jyoti International LLP 16.16%, Virani 14.45%.</div>
+        <div class="microhead">Theme 4 — Valuation vs Growth</div>
+        <p style="font-size:11.2px">At P/E 70.5 the PEG is about <b>11.2</b> on last year’s EPS growth, <b>1.9</b> on the two-year FY24→FY26 CAGR and <b>≈ 2.3</b> on the only forward datapoint available; trailing quarterly growth is negative, so PEG is not meaningful there (full table and inputs in §09; all my arithmetic).</p>
+      </div>
+    </div>
+    <div class="notebox "><b>Source-quality note:</b> primary reads: the FY26 annual report (BSE, filed 8 Sep 2026), the company investor presentation and the Q1 FY27 call (7 Aug 2026; transcript filed 14 Aug — machine-generated, with errors such as standalone revenue shown as “₹107 Cr”), the CRISIL rationale of 15 Oct 2026, Infomerics of 10 Feb and 21 Apr 2026, the Q1 FY27 shareholding pattern (30 Jun 2026) and Screener (16/17 Oct 2026). News, aggregator and Substack items — pledge movements, Huron detail, the price path, the Cofacto Huron-loss figure — are secondary and <b>must be checked against exchange filings</b>. Items I computed are marked “my arithmetic”.</div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec04"><span class="num">04</span><h2>Overall Sentiment &amp; Momentum Prediction</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border:3px solid #e67e22">
+        <div class="plab">Key Watch-Item</div>
+        <div class="pval" style="color:#e67e22;font-size:16px">⚠ Does the rollover from ₹1,134.6 hold above ₹943 / ₹929 — and what does Q2 FY27 say on Huron revenue?</div>
+        <p style="font-size:11.3px;margin-top:5px">The stock closed ₹997.20 (+1.82%) on 16 Oct on volume of 442,775 (−65% vs average, MarketSmith) — a quiet bounce from ₹979.40, not a conviction move. The fall from the early-Oct top has <b>no news cause found</b> (no negative announcement surfaced; the AGM on 30 Sep passed its resolutions — single source). Q2 FY27 results are not yet dated (Q1 was 7 Aug; early-to-mid November is my inference from past dates). The Sep-26 shareholding filing is due by ~21 Oct.</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff6e8);border-top:3px solid #e07c00">
+        <div class="plab">Overall Sentiment</div>
+        <div class="pval" style="color:#e07c00">MIXED <span style="font-size:12px;color:#5a6475;font-weight:600">rich, but not depressed</span></div>
+        <p style="font-size:11.3px;margin-top:5px">MarketSmith Master Score C (58): EPS 60 FAIR, Price Strength 80 GOOD, Buyer Demand A−, Group Rank 50 of 197. The stock is +96% from the ₹580 low yet −12% from the ₹1,134.6 top. S&amp;P consensus (4 analysts) averages ₹1,058 (+6%); the Bajaj ₹984 target is already exceeded and TipRanks is Neutral at ₹996. Institutions: FIIs 9.9% → 5.3% in four quarters; mutual funds rebuilt to 10.61%.</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fdeef0);border-top:3px solid #c62828">
+        <div class="plab">Momentum Prediction</div>
+        <div class="pval" style="color:#c62828">1H BEARISH · 1D CONTESTED</div>
+        <p style="font-size:11.3px;margin-top:5px">Daily Trend Momentum gauges +1 / −1 (mixed); hourly −3 / −3 (bearish); RSI printed 87 at the ₹1,134.6 top and 19.1 at the ₹971.5 hourly low. The labelled count reads a wave (2) correction with a projected C leg toward ₹791.92 — a reading, not a forecast. Nearest hurdles ₹1,024 (1H) and ₹1,047 (1D); supports ₹943 / ₹929.</p>
+      </div>
+    </div>
+    <div class="notebox "><b>Framing note:</b> A rich-valued, recently re-rated stock whose consolidated profit is shrinking on a subsidiary under investigation, with a high pledge and falling foreign ownership — set against a ₹4,848 Cr order book, 27–29% standalone margins and a new A+ rating from CRISIL. Both the bull case (domestic 5-axis import substitution, ~30% growth guided, capacity 6,000 → 16,000) and the bear case (P/E 70x, P/B 11x, Huron, pledge, cash conversion, a rolling-over chart) are live. The rally’s documented legs are technical (18–21 Sep breakout) and no post-July order win was found.</div>
+  </div>
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1">
+        <div class="sec-title" id="sec05"><span class="num">05</span><h2>Sector Market Size</h2></div>
+        <svg viewBox="0 0 400 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="376" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">₹ Cr</text><rect x="54.0" y="95.9" width="56" height="50.1" fill="#1a2a4a" rx="2"/><text x="82.0" y="91.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">17,387</text><text x="82.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Production</text><rect x="138.0" y="41.0" width="56" height="105.0" fill="#5b7bb5" rx="2"/><text x="166.0" y="37.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">36,419</text><text x="166.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Consumption</text><rect x="222.0" y="83.6" width="56" height="62.4" fill="#c62828" rx="2"/><text x="250.0" y="79.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">21,628</text><text x="250.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Imports</text><rect x="306.0" y="138.5" width="56" height="7.5" fill="#2a9d8f" rx="2"/><text x="334.0" y="134.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">2,596</text><text x="334.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Exports</text></svg>
+        <div class="chartcap">India machine tools, FY26 (₹ Cr; IMTMA via <b>secondary summaries</b> — IMTMA’s own release was not retrieved and the sources disagree): production ₹17,387 Cr revised (₹16,478 Cr first estimate, +19%); consumption ₹36,419 Cr revised (“over ₹35,000 Cr” first); imports ₹21,628 Cr (+16%) = <b>~59% of consumption</b> (my arithmetic: 21,628 ÷ 36,419); exports ₹2,596 Cr (+76%). FY25 (Ken Research, not IMTMA): production ₹14,566 Cr, imports ₹18,686 Cr, consumption ₹31,781 Cr. India ranks 9th in production and 4th in consumption (CECIMO, CY2025). CNC share of the market: IMTMA figure <b>not found</b> (IMARC estimates ~60%, unverified). Auto and components were ~50% of demand in FY25 (Ken Research); defence, aerospace, railways and electronics are growing from a smaller base.</div>
+        <div class="microhead">Machine-Tool Imports by Origin, FY26 (%)</div>
+        <svg viewBox="0 0 400 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="376" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">% of imports</text><rect x="54.0" y="60.9" width="56" height="85.1" fill="#c62828" rx="2"/><text x="82.0" y="56.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">30%</text><text x="82.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">China</text><rect x="138.0" y="86.4" width="56" height="59.6" fill="#e07c00" rx="2"/><text x="166.0" y="82.4" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">21%</text><text x="166.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Japan</text><rect x="222.0" y="111.9" width="56" height="34.1" fill="#5b7bb5" rx="2"/><text x="250.0" y="107.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">12%</text><text x="250.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Germany</text><rect x="306.0" y="41.0" width="56" height="105.0" fill="#8fa3c4" rx="2"/><text x="334.0" y="37.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">37%</text><text x="334.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Others*</text></svg>
+        <div class="chartcap">China 30%, Japan 21%, Germany 12% (63% together, as summarised); *Others 37% is my arithmetic (100 − 63). Largest categories: presses 16%, VMCs 12%, lathes 10%. <b>Europe (Huron’s market):</b> CECIMO — consumption −3.7% in 2025, exports −8.8%, domestic orders −1.7%, the third straight decline; 2026 outlook modest and fragile; Germany (VDW) expects slight production growth. <b>Macro:</b> RBI raised the repo rate 25 bp to 5.50% on 7 Oct 2026 with a “calibrated tightening” stance (secondary; verify against the RBI release) — a headwind for capex buyers and for Jyoti’s own working-capital cost. <b>Tariffs:</b> a Feb 2026 US framework (18% effective) and a temporary 10% Section 122 tariff were the latest found (early July); signed deal or current level <b>not found</b>; direct effect on Jyoti likely small. <b>Anti-dumping:</b> no DGTR duty on CNC machine tools found (duties on Chinese industrial laser machines and plastic-processing machines are related only). <b>Not found:</b> IMTMA FY27 outlook, US / Gardner global-cycle data, PLI-specific data. <b>Sector relative:</b> Nifty Capital Goods 1Y +10.37% (Sep 2026) and P/E 43.2 (16 Oct, indexpe.in); a same-date Jyoti-vs-sector 1Y comparison could not be built.</div>
+      </div>
+      <div style="flex:1.08">
+        <div class="sec-title" id="sec06"><span class="num">06</span><h2>Shareholding — 4 Qtrs</h2></div>
+        <table class="t"><tr><th>Category</th><th>Dec'25</th><th>Mar'26</th><th>Jun'26</th><th>Sep'26*</th><th>Δ (3 qtrs)</th></tr><tr><td>Promoters</td><td>62.55%</td><td>62.55%</td><td>62.55%</td><td><b>62.55%</b></td><td>flat</td></tr><tr><td>FIIs</td><td>9.7%</td><td>9.0%</td><td>6.3%</td><td><b>5.3%</b></td><td class="neg">▼ 4.4pp</td></tr><tr><td>DIIs</td><td>13.4%</td><td>13.7%</td><td>12.6%</td><td><b>12.9%</b></td><td class="neg">▼ 0.5pp</td></tr><tr><td>Public / others</td><td>14.4%</td><td>14.8%</td><td>18.6%</td><td><b>19.3%</b></td><td class="pos">▲ 4.9pp</td></tr><tr><td>Mutual funds (within DIIs)</td><td>12.21%</td><td>11.84%</td><td>9.78%</td><td>10.61%</td><td class="neg">▼ 1.60pp</td></tr></table>
+        <div class="chartcap">Source: Trendlyne (accessed 17 Oct 2026); the Jun-26 row ties to the company’s shareholding filing (MF 9.78%, FPI 6.29%, DII subtotal 12.58%, public 18.58%). Screener’s Sep-26 reads FII 5.26% / DII 12.86% / public 19.33%; Screener’s Mar-26 FII is 8.95% (Trendlyne 9.0%). *The Sep'26 column is labelled that way by Trendlyne, Screener and MarketSmith, but the Sep-2026 pattern is normally filed by ~21 Oct — verify against the exchange. Longer view: FII 5.8% (Sep-24) → 9.9% (Sep-25) → 5.3% (Sep-26); the largest drop came in the quarter containing the 12 Apr Huron disclosure. Shareholders: 90,476 (62,550 at Mar-25). FPI-limit utilisation fell from 10.69% to 7.1% (filing). Aggregator errors ignored: Anand Rathi FII −3.49%; EquitiesIndia promoter 67.69%. <b>Pledge:</b> 13.08% of all shares at 30 Jun 2026, all by one promoter-group holder — see §03 and §10.</div>
+        <div class="microhead">Major Holders (MarketSmith, Sep-26*; HSBC from the Jun-26 filing)</div>
+        <table class="peer"><tr><th>Holder</th><th>Stake</th></tr><tr><td>Parakramsinh G. Jadeja (promoter, Chairman &amp; MD)</td><td>26.91%</td></tr><tr><td>Jyoti International LLP (promoter)</td><td>16.16%</td></tr><tr><td>Anilkumar B. Virani (promoter group; pledgor)</td><td>14.45%</td></tr><tr><td>HSBC Small Cap Fund (Jun-26 filing)</td><td>6.51%</td></tr><tr><td>Kotak Mahindra Trustee — Kotak Multi…</td><td>2.99%</td></tr><tr><td>Sahdevsinh L. Jadeja (promoter)</td><td>2.94%</td></tr><tr><td>Paresh Mohanlal Parekh</td><td>2.39%</td></tr></table>
+        <div class="chartcap">The Parekh family sold 6.02% for ₹1,489 Cr in a block on 30 Jun 2025 (holding 10.82% → 4.8%; Kotak MF bought 1.66%, ₹412 Cr), and two individuals sold 4.2% for ₹1,079 Cr on 29 Jul 2024. Promoter holding was 72.13% before the Jan 2024 IPO (Substack; fresh issue, no promoter sale). No 2026 bulk or block deal found.</div>
+      </div>
+      <div style="flex:1.05">
+        <div class="sec-title" id="sec07"><span class="num">07</span><h2>Stock Performance</h2></div>
+        <table class="peer"><tr><th>Return</th><th>Source</th><th>Value</th></tr>
+<tr><td>52-wk low → high (₹580.10 → ₹1,134.60)</td><td>My arithmetic</td><td class="pos">+96%</td></tr>
+<tr><td>1 year (price CAGR line)</td><td>Screener</td><td class="pos">≈ +8%</td></tr>
+<tr><td>Since 13 Apr low (₹691.90)</td><td>My arithmetic</td><td class="pos">+44.1%</td></tr>
+<tr><td>Since mid-Jun (₹656, Bajaj note)</td><td>My arithmetic</td><td class="pos">+52.0%</td></tr>
+<tr><td>Since 25 Jun (₹758)</td><td>My arithmetic</td><td class="pos">+31.5%</td></tr>
+<tr><td>From ₹1,134.60 top</td><td>My arithmetic</td><td class="neg">−12.1%</td></tr>
+<tr><td>Nifty Capital Goods 1Y (Sep 2026)</td><td>indexpe.in</td><td>+10.37%</td></tr></table>
+        <div class="chartcap">Different vendors and dates; not averaged. An exact 1-year price return and a same-date sector-relative return were <b>not found</b>.</div>
+        <div class="krow"><span class="klab">52-Wk High</span><span class="kval">₹1,134.60<small>Tickertape / Kotak Neo / Screener ₹1,135. Price is ~12% below (MarketSmith OH −12.11%). Aggregators showing ₹1,504.30 (Simply Wall St, ClearMarket) look stale: ₹1,504 equals MarketSmith’s FY24 price high (FY24: 1,504 / 368; FY25: 1,408 / 750) — my reading</small></span></div>
+        <div class="krow"><span class="klab">52-Wk Low</span><span class="kval">₹580.10<small>Price is ~72% above (MarketSmith OL +71.90%). ClearMarket ₹368 and Simply Wall St ₹750.10 are older-year lows (the same FY24 / FY25 MarketSmith figures)</small></span></div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Path:</b> 13 Apr ₹691.90 low (−16% intraday from ₹819.20 on the Huron probe) → ~₹656 mid-June → ₹758 (25 Jun) → ~₹784 (about 7 Aug, results) → ₹839 (13 Aug) → ₹1,066 new high (18 Sep) → ₹1,113.60 close (21 Sep, +6.03% on the day) → ₹1,065.70 (25 Sep) → <b>₹1,134.60 top (early Oct)</b> → ₹979.40 (15 Oct) → <b>₹997.20 (16 Oct, +1.82%)</b>. Early-September daily levels conflict across sources (₹1,029.25 on ~28 Aug vs ₹967.05 close on 17 Sep vs an aggregator ₹980.25 dated 18 Sep) and are treated as unverified.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec compact">
+    <div class="sec-title" id="sec08"><span class="num">08</span><h2>Key Financials — YoY &amp; QoQ (₹ Crore, Consolidated)</h2></div>
+    <div class="cols" style="margin-bottom:10px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column"><div class="microhead" style="margin-top:0">★ Latest Quarter — Q1 FY27 (Jun'26) · Q2 FY27 (Sep'26) not yet reported</div><div style="border:2px solid #e07c00;border-radius:8px;padding:8px 14px;background:linear-gradient(135deg,#fff6e8,#fffdf6 60%,#fff8ec);flex:1">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹508.5 Cr</div><div style="font-size:10.5px;color:#5a6475">Revenue <b class="pos">+24% YoY</b> · −15% QoQ · standalone ₹509.1 Cr (+36.7%)</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹108.8 Cr</div><div style="font-size:10.5px;color:#5a6475">EBITDA · adjusted ₹118.8 Cr (23.4%) before ₹10 Cr unrealised forex loss</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#c62828">21.4%</div><div style="font-size:10.5px;color:#5a6475">EBITDA margin vs ~25% FY27 guide (standalone 27.2%)</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#c62828">₹57.1 Cr</div><div style="font-size:10.5px;color:#5a6475">PAT <b class="neg">−20.0% YoY</b> · standalone ₹87.5 Cr (+21.3%)</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹73.4 Cr</div><div style="font-size:10.5px;color:#5a6475">PBT <b class="neg">−23.8%</b> · standalone ₹110.5 Cr</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹2.51</div><div style="font-size:10.5px;color:#5a6475">EPS vs ₹3.14 · standalone ₹3.85</div></div>
+      </div>
+      <div style="font-size:10.4px;color:#8a6d1f;margin-top:8px">Finance cost: consolidated ₹24.3 Cr (₹12.2 Cr a year ago), standalone ₹20.0 Cr (₹6.9 Cr). Other income ₹4.0 Cr vs ₹20.5 Cr (Q1 FY26 had a ~₹20 Cr forex gain). Machines sold 1,406 vs 1,117 (entry 1,349, mid 33, high-end 24); average realisation ₹34.56 lakh vs ₹34.41 lakh; utilisation 86% of 6,000 a year. QoQ is my arithmetic (508.5 vs 599). Management put the Huron shortfall at ~₹35 Cr revenue and ₹20–22 Cr EBITDA.</div>
+    </div></div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column">
+        <div class="microhead" style="margin-top:0">Valuation &amp; Balance-Sheet Tiles</div>
+    <div class="tiles" style="flex-wrap:wrap;flex:1;align-content:stretch"><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">TTM Sales</div><div class="val " >₹2,191 Cr</div><div class="note">Screener; MarketSmith ₹2,191.43 Cr (consistent)</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E (TTM)</div><div class="val " >70.5x</div><div class="note">Screener 70.5 · MarketSmith 71 · TTM EPS ₹14.14 · on standalone TTM EPS ₹17.88 = 55.8x (my arithmetic) · 5-yr P/E range 57–145 (MarketSmith)</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Forward P/E</div><div class="val " >~39.6x</div><div class="note">₹997.20 ÷ implied FY28E EPS ₹25.2 (Bajaj, 13 Aug: ₹984 = 39x; my arithmetic). MarketSmith shows <b>no FY27e / FY28e rows</b></div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/B</div><div class="val " >11.3x</div><div class="note">Screener (BV ₹88.0); MarketSmith 11.33x</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">ROE / ROCE</div><div class="val " >18.2% / 21.3%</div><div class="note">Screener; MarketSmith ROE 17% in the ratings table and 16% in the narrative</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Dividend Yield</div><div class="val " >0%</div><div class="note">Nil every year FY19–FY26; all profit retained</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">EV / EBITDA</div><div class="val " >~43.7x</div><div class="note">(₹22,679 Cr + borrowings ₹853 Cr − cash &amp; bank ₹137.2 Cr = ₹23,395 Cr) ÷ TTM EBITDA ₹535 Cr (my arithmetic); ~44.4x on FY26 EBITDA ₹527 Cr</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Debt / Equity</div><div class="val " >0.42x</div><div class="note">Borrowings ₹849.7 Cr ÷ equity ₹2,001.3 Cr, Mar-26 (my arithmetic); standalone 0.25x; MarketSmith LT debt / equity 20%</div></div></div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:6px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Annual P&amp;L — FY22–FY26 + TTM (company presentation; TTM Screener; consolidated)</div>
+        <table class="t fit"><tr><th>Year</th><th>Sales</th><th>EBITDA</th><th>OPM%</th><th>Other inc.</th><th>Interest</th><th>Net Profit</th><th>EPS (₹)</th></tr><tr><td>FY22</td><td>746</td><td>73</td><td>9.7%</td><td>4</td><td>82</td><td><span class="neg">−48</span></td><td>−3.28</td></tr><tr><td>FY23</td><td>929</td><td>97</td><td>10.5%</td><td>23.3 / 54*</td><td>89.7</td><td>15.1* / −5</td><td>1.02* / −0.33</td></tr><tr><td>FY24</td><td>1,338</td><td>301</td><td>22.5%</td><td>6.5</td><td>89.7</td><td>150.9</td><td>7.89* / 6.63</td></tr><tr><td>FY25</td><td>1,818</td><td>491</td><td>27.0%</td><td>14.5 / 5*</td><td>42.1</td><td>316.0</td><td>13.90</td></tr><tr><td><b>FY26</b></td><td>2,093</td><td>527</td><td>25.2%</td><td>60.5</td><td>69.8</td><td>336.0</td><td>14.78</td></tr><tr><td><b>TTM Jun-26</b></td><td>2,191</td><td>535</td><td>24%</td><td>44</td><td>82</td><td>322</td><td>14.14</td></tr></table>
+        <div class="chartcap">*Conflicts shown, not resolved: FY23 other income 23.3 (presentation) vs 54 (Screener); FY23 net profit +15.1 vs −5 (Screener; the internal June report had −5.5) and EPS 1.02 vs −0.33; FY24 EPS 7.89 vs 6.63 (Screener); FY25 other income 14.5 vs 5. FY23 and FY24 interest are both printed as 89.7 in the presentation — identical, possibly a duplication. Exceptional items: FY23 +30.5; FY25 “+9.1” in the presentation vs a <b>₹9.07 Cr TDS compounding payment</b> in the annual report (sign looks inconsistent); FY26 nil in the P&amp;L but a <b>₹32.91 Cr “amount under customs seizure”</b> outflow in cash flow. FY26 tax: ₹131.2 Cr in the presentation and 28% on Screener — consistent if PBT ≈ ₹467 Cr (336.0 + 131.2; my arithmetic, PBT itself not seen). FilingReader’s FY26 “revenue ₹2,153.61 Cr (vs ₹1,832.18 Cr)” equals sales plus other income (2,093 + 60.5), i.e. total income (my arithmetic). FY26 vs FY25: sales +15.1%, EBITDA +7.3%, net profit +6.3%, EPS +6.3%.</div>
+        <div class="microhead" style="margin-top:9px">Quarterly Trend — Last 9 Quarters (Screener, consolidated)</div>
+        <table class="t fit"><tr><th>Quarter</th><th>Sales</th><th>EBITDA</th><th>OPM%</th><th>Other inc.</th><th>Net Profit</th><th>EPS (₹)</th></tr><tr><td>Jun-24</td><td>362</td><td>85</td><td>23%</td><td>4</td><td>51</td><td>2.24</td></tr><tr><td>Sep-24</td><td>431</td><td>107</td><td>25%</td><td>11</td><td>76</td><td>3.34</td></tr><tr><td>Dec-24</td><td>450</td><td>113</td><td>25%</td><td>0</td><td>80</td><td>3.53</td></tr><tr><td>Mar-25</td><td>576</td><td>178</td><td>31%</td><td>0</td><td>109</td><td>4.79</td></tr><tr><td>Jun-25</td><td>410</td><td>100</td><td>24%</td><td>20</td><td>71</td><td>3.14</td></tr><tr><td>Sep-25</td><td>508</td><td>125</td><td>25%</td><td>9</td><td>86</td><td>3.76</td></tr><tr><td>Dec-25</td><td>576</td><td>155</td><td>27%</td><td>6</td><td>89</td><td>3.89</td></tr><tr><td>Mar-26</td><td>599</td><td>147</td><td>25%</td><td>25</td><td>91</td><td>3.98</td></tr><tr><td><b>Jun-26</b></td><td>508</td><td>109</td><td>21%</td><td>4</td><td>57</td><td>2.51</td></tr></table>
+        <div class="chartcap">Screener, 17 Oct 2026. The internal June report’s quarterly series (e.g. Q4 FY25 ₹530 Cr, Q1 FY26 ₹431 Cr, margins 25–27%) differs from Screener and appears to mix standalone and consolidated; not reconciled and not used.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Sales (₹ Cr) — FY22–FY26 + TTM</div>
+        <svg viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="576" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">₹ Cr</text><rect x="48.4" y="110.2" width="39.2" height="35.8" fill="#1a2a4a" rx="2"/><text x="68.0" y="106.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">746</text><text x="68.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text><rect x="104.4" y="101.5" width="39.2" height="44.5" fill="#1a2a4a" rx="2"/><text x="124.0" y="97.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">929</text><text x="124.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text><rect x="160.4" y="81.9" width="39.2" height="64.1" fill="#1a2a4a" rx="2"/><text x="180.0" y="77.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">1,338</text><text x="180.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><rect x="216.4" y="58.9" width="39.2" height="87.1" fill="#1a2a4a" rx="2"/><text x="236.0" y="54.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">1,818</text><text x="236.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><rect x="272.4" y="45.7" width="39.2" height="100.3" fill="#1a2a4a" rx="2"/><text x="292.0" y="41.7" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">2,093</text><text x="292.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text><rect x="328.4" y="41.0" width="39.2" height="105.0" fill="#5b7bb5" rx="2"/><text x="348.0" y="37.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">2,191</text><text x="348.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">TTM</text></svg>
+        <div class="microhead" style="margin-top:9px">EBITDA (navy) &amp; Net Profit (green) — ₹ Cr</div>
+        <svg viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="576" y2="146" stroke="#dde2ea"/><text x="10" y="14" font-size="9" fill="#8a94a6">₹ Cr</text><rect x="53.4" y="131.7" width="28.6" height="14.3" fill="#1a2a4a" rx="2"/><text x="67.7" y="127.7" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">73</text><rect x="85.0" y="144" width="28.6" height="2" fill="#c62828" rx="1"/><text x="99.3" y="139" text-anchor="middle" font-size="9" font-weight="700" fill="#c62828">−48</text><text x="83.9" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text><rect x="142.8" y="127.0" width="28.6" height="19.0" fill="#1a2a4a" rx="2"/><text x="157.1" y="123.0" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">97</text><rect x="174.3" y="143.0" width="28.6" height="3.0" fill="#2e7d32" rx="2"/><text x="188.7" y="139.0" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">15</text><text x="173.2" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text><rect x="232.1" y="86.9" width="28.6" height="59.1" fill="#1a2a4a" rx="2"/><text x="246.4" y="82.9" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">301</text><rect x="263.7" y="116.4" width="28.6" height="29.6" fill="#2e7d32" rx="2"/><text x="278.0" y="112.4" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">151</text><text x="262.6" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><rect x="321.4" y="49.6" width="28.6" height="96.4" fill="#1a2a4a" rx="2"/><text x="335.7" y="45.6" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">491</text><rect x="353.0" y="84.0" width="28.6" height="62.0" fill="#2e7d32" rx="2"/><text x="367.3" y="80.0" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">316</text><text x="351.9" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><rect x="410.8" y="42.6" width="28.6" height="103.4" fill="#1a2a4a" rx="2"/><text x="425.1" y="38.6" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">527</text><rect x="442.4" y="80.1" width="28.6" height="65.9" fill="#2e7d32" rx="2"/><text x="456.7" y="76.1" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">336</text><text x="441.3" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text><rect x="500.1" y="41.0" width="28.6" height="105.0" fill="#1a2a4a" rx="2"/><text x="514.4" y="37.0" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">535</text><rect x="531.8" y="82.8" width="28.6" height="63.2" fill="#2e7d32" rx="2"/><text x="546.0" y="78.8" text-anchor="middle" font-size="9" font-weight="700" fill="#2e7d32">322</text><text x="530.6" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">TTM</text></svg>
+        <div class="chartcap" style="text-align:center">▬ <b style='color:#1a2a4a'>EBITDA</b> &nbsp;&nbsp; ▬ <b style='color:#2e7d32'>Net Profit</b> (FY22 net loss −48 shown as a red stub)</div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:9px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Annual P&amp;L — Standalone (Screener, 17 Oct 2026)</div>
+        <table class="t fit"><tr><th>Year</th><th>Sales</th><th>EBITDA</th><th>OPM%</th><th>Other inc.</th><th>Interest</th><th>Net Profit</th><th>EPS (₹)</th></tr><tr><td>FY22</td><td>678</td><td>109</td><td>16%</td><td>8</td><td>65</td><td>19</td><td>1.31</td></tr><tr><td>FY23</td><td>828</td><td>117</td><td>14%</td><td>32</td><td>71</td><td>39</td><td>2.39</td></tr><tr><td>FY24</td><td>1,190</td><td>272</td><td>23%</td><td>8</td><td>66</td><td>140</td><td>6.16</td></tr><tr><td>FY25</td><td>1,615</td><td>458</td><td>28%</td><td>7</td><td>17</td><td>310</td><td>13.63</td></tr><tr><td><b>FY26</b></td><td>1,949</td><td>564</td><td>29%</td><td>54</td><td>53</td><td>391</td><td>17.20</td></tr><tr><td><b>TTM</b></td><td>2,086</td><td>604</td><td>29%</td><td>43</td><td>67</td><td>407</td><td>17.88</td></tr></table>
+        <div class="chartcap">Standalone FY25 ties to Infomerics (income 1,615.03; EBITDA 458.28; PAT 310.06). FY26 standalone PAT 391 vs consolidated 336: the ₹55 Cr gap is my arithmetic (Jyoti SAS contribution (56.65) per the annual report).</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Quarterly — Standalone, Last 9 Quarters</div>
+        <table class="t fit"><tr><th>Quarter</th><th>Sales</th><th>EBITDA</th><th>OPM%</th><th>Net Profit</th></tr><tr><td>Jun-24</td><td>310</td><td>75</td><td>24%</td><td>41</td></tr><tr><td>Sep-24</td><td>376</td><td>95</td><td>25%</td><td>70</td></tr><tr><td>Dec-24</td><td>400</td><td>112</td><td>28%</td><td>77</td></tr><tr><td>Mar-25</td><td>529</td><td>176</td><td>33%</td><td>122</td></tr><tr><td>Jun-25</td><td>372</td><td>99</td><td>26%</td><td>72</td></tr><tr><td>Sep-25</td><td>448</td><td>111</td><td>25%</td><td>79</td></tr><tr><td>Dec-25</td><td>530</td><td>164</td><td>31%</td><td>105</td></tr><tr><td>Mar-26</td><td>599</td><td>191</td><td>32%</td><td>135</td></tr><tr><td><b>Jun-26</b></td><td>509</td><td>139</td><td>27%</td><td>87</td></tr></table>
+        <div class="chartcap">Standalone margins ran 24–33% through the nine quarters; Q1 FY27 standalone PAT ₹87.5 Cr is +21.3% on ₹72.1 Cr.</div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:9px">
+      <div style="flex:1"><div class="notebox green"><b>★ Margin and growth read (my arithmetic):</b> consolidated revenue grew from ₹746 Cr (FY22) to ₹2,093 Cr (FY26), a 4-year CAGR of ~29%, and EBITDA margin from 9.7% to a peak of 27.0% (FY25). Since then it has eased: 25.2% in FY26 and 21.4% in Q1 FY27 (23.4% adjusted). FY26 net profit grew only 6.3% on 15.1% revenue growth because interest rose 66% (₹42.1 Cr → ₹69.8 Cr) and the Huron drag arrived; the pre-tax margin looks high (~22%) because depreciation (~₹50 Cr, implied) and interest are small against a 25% EBITDA margin, plus ₹60.5 Cr of other income (~13% of implied PBT) — see §17.</div></div>
+      <div style="flex:1"><div class="notebox blue"><b>★ Cross-checks:</b> MarketSmith market cap ₹22,678.62 Cr ÷ ₹997.20 = 22.74 Cr shares, consistent with the filing’s 22,74,23,096 shares. TTM EPS (Sep-25 to Jun-26) = 3.76 + 3.89 + 3.98 + 2.51 = ₹14.14 → P/E 70.5 (matches MarketSmith 71). TTM EPS is 4.3% below FY26’s ₹14.78 (my arithmetic). MarketSmith’s “annual revenue growth +18%” (rated outstanding) and “EPS growth rate 108%” sit beside latest-two-quarter EPS declines of −20% and −17% — the headline growth is backward-looking.</div></div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Ratios — Industry-Contextualized</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fff6e8;border-color:#e07c00">
+        <div class="plab">P/CFO &nbsp;·&nbsp; Market Cap ÷ Operating Cash Flow <span class="badge b-warn">NOT MEANINGFUL (thin FY26 OCF)</span></div>
+        <div class="pval" style="font-size:22px">FY26 operating cash flow ₹54.4 Cr</div>
+        <p style="font-size:11.3px;margin-top:6px">Consolidated operating cash flow: FY24 −77.0 (presentation) vs −48 (Screener) — conflict; FY25 <b>−105.4</b>; FY26 <b>+54.4</b> (₹87.3 Cr before the ₹32.9 Cr customs-seizure item), after a ₹125.4 Cr tax outflow (₹86.8 Cr in FY25) and a ₹309.1 Cr working-capital drag (₹522.5 Cr in FY25). P/CFO = 22,679 ÷ 54.4 ≈ <b>417x</b> (≈ 260x on ₹87.3 Cr); FY25 is negative (my arithmetic). Capex including capital advances ₹309.8 Cr (FY25) and ₹323.2 Cr (FY26), so free cash flow was about <b>−₹415 Cr and −₹269 Cr</b>. MarketSmith cash-flow rating −4.64. Management guides FY27 operating cash flow to ~50% of EBITDA.</p>
+        <p style="font-size:11.3px;margin-top:6px"><b>Working-capital days (Screener, Mar-26):</b> debtors 104, inventory 453, payables 198, cash-conversion cycle <b>359</b>; CRISIL says inventory 426 days and gross current assets 443 days, partly from Huron machines awaiting export licences.</p>
+      </div>
+      <div class="panel" style="background:#fdeef0;border-color:#c62828">
+        <div class="plab">P/B &amp; Return Ratios <span class="badge b-bear">Rich vs book; good returns</span></div>
+        <div class="pval" style="font-size:26px">11.3x <span style="font-size:13px;font-weight:600;color:#5a6475">(ROE 18.2% · ROCE 21.3%)</span></div>
+        <p style="font-size:11.3px;margin-top:6px">The market pays ₹997 for ₹88 of book, 11.3x, on an ROE of 18.2% — returns are good but the multiple prices years of compounding. MarketSmith ROE reads 17% (ratings table) and 16% (narrative): conflict kept. Peer P/B: Grindwell Norton 8.26x, Kennametal India 10.6x, LMW 5.99x (§15).</p>
+        <p style="font-size:11.3px;margin-top:6px"><b>Leverage, bases that differ:</b> consolidated borrowings ₹849.7 Cr (₹410.2 Cr + ₹439.5 Cr) → debt / equity 0.42x (0.29x in FY25), standalone 0.25x (0.10x); net debt ≈ <b>₹713 Cr</b> (849.7 − 137.2; my arithmetic; an analyst put it near ₹700 Cr on the Q1 call); net debt / FY26 EBITDA ≈ 1.35x (my arithmetic) against a policy cap of ~2x EBITDA. Interest cover 7.54x consolidated (11.14x), 10.55x standalone (25.5x). CRISIL: adjusted gearing 0.4x, interest cover 9.3x, and its text gives NCAAD as both “9.45 times” and “0.45 time” — internal inconsistency kept.</p>
+      </div>
+    </div>
+    <div class="microhead" style="margin-top:12px">PEG — Price/Earnings to Growth (my arithmetic, P/E 70.5 on TTM EPS ₹14.14)</div>
+    <div style="border:2px solid #1565c0;border-radius:8px;padding:10px 14px;background:linear-gradient(135deg,#eef4fc,#fbfdff)">
+      <table class="t"><tr><th>Growth basis</th><th style="text-align:left">Inputs</th><th style="text-align:left">Growth</th><th>PEG @ P/E 70.5</th><th style="text-align:left">Read</th></tr><tr><td>(1) Last-year EPS growth</td><td style="text-align:left">FY26 ₹14.78 vs FY25 ₹13.90</td><td style="text-align:left">+6.3%</td><td><b>≈ 11.2</b></td><td style="text-align:left">Far above any “fair” PEG; FY26 profit growth lagged revenue growth</td></tr><tr><td>(2) 2-year EPS CAGR, FY24→FY26</td><td style="text-align:left">₹7.89 → ₹14.78</td><td style="text-align:left">+36.9%</td><td><b>≈ 1.9</b></td><td style="text-align:left">Flattered by a low base; with Screener’s FY24 EPS of ₹6.63 the CAGR is +49.3% and PEG ≈ 1.4 (conflict kept)</td></tr><tr><td>(3) Forward (Bajaj, 13 Aug 2026)</td><td style="text-align:left">Target ₹984 = 39x FY28E EPS → FY28E EPS ≈ ₹25.2; CAGR from ₹14.78</td><td style="text-align:left">+30.6% (2 yrs)</td><td><b>≈ 2.3</b> (≈ 1.3 on Bajaj’s own 39x)</td><td style="text-align:left">Only forward datapoint; at ₹997.20 the stock is already ~39.6x that FY28E EPS</td></tr><tr><td>(4) Trailing quarters</td><td style="text-align:left">EPS −20% (Jun-26) and −17% (Mar-26) YoY; TTM ₹14.14 vs FY26 ₹14.78 (−4.3%)</td><td style="text-align:left">negative</td><td><b>not meaningful</b></td><td style="text-align:left">Latest growth is below zero while revenue grows</td></tr></table>
+      <div class="chartcap" style="margin-top:6px"><b>Inputs and limits:</b> MarketSmith’s annual-EPS table has <b>no FY27e / FY28e rows</b>, so there is no consensus-style forward EPS in the supplied data. The Bajaj Broking BUY (13 Aug 2026) is a promotional MTF-desk piece; its CMP was ₹839 and its ₹984 target is already exceeded, so basis (3) is one house’s number, not a consensus (FY28E EPS = ₹984 ÷ 39 ≈ ₹25.2; 2-year CAGR = (25.2 ÷ 14.78)^0.5 − 1 ≈ 30.6%; whether Bajaj’s EPS is consolidated is not stated). Management’s own FY27 guide (revenue +25–30%, margin ~25%) is of the same order. PEG reads: ≈ 2.3 on today’s multiple means the price already assumes roughly 30% EPS growth for two years just to reach a PEG near 2; the number moves sharply with the base year, which is why all four bases are shown.</div>
+    </div>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1"><div class="notebox "><b>Balance sheet (₹ Cr, Mar-24 → Mar-25 → Mar-26, consolidated, 7 Aug presentation):</b> total equity 1,364.6 / 1,686.2 / 2,001.3 (CRISIL adjusted net worth ₹1,949 Cr at Mar-26 — conflict); borrowings 303.8 / 496.9 / 849.7 (+71% in FY26); inventory 866.0 / 900.5 / 1,166.0; trade receivables 249.1 / 486.5 / 599.1; trade payables 371.5 / 410.1 / 509.8; cash 302.3 / 13.4 / 52.9 and other bank balances 83.3 / 111.9 / 84.3 (sum ₹137.2 Cr at Mar-26; CRISIL says ~₹170 Cr cash &amp; bank with only ₹52–53 Cr unencumbered — it writes both ₹52 and ₹53 Cr); other current financial assets 180.7 / 538.2 / 624.4 (not itemised). Inventory +29% and receivables +23% in FY26 (my arithmetic). Intangibles ₹25.7 Cr; no separate goodwill line found.</div></div>
+      <div style="flex:1"><div class="notebox blue"><b>Capex, capacity and dividends:</b> a 10,000-machine Rajkot plant taking capacity from 6,000 to 16,000 a year: cost ₹425.83 Cr (Infomerics) vs ~₹450 Cr (call / CRISIL), funded by a ₹300 Cr Union Bank term loan (repayment from FY27; maturity Jun 2034 / Sep 2033 across sources) plus accruals; ₹317 Cr spent to 15 Dec 2025; commissioning Sep 2026 (call) vs Oct 2026 (Infomerics, CRISIL), foundry ~1 month late — <b>commissioning confirmation not found</b>. FY27 capex guide ₹200–250 Cr; debt flat vs March; a 2x-EBITDA cap on FY26 EBITDA is ~₹1,054 Cr, leaving ~₹205 Cr of headroom over borrowings (my arithmetic). Dividend: <b>nil every year FY19–FY26</b>. No capital raise since the Jan 2024 IPO found.</div></div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec10"><span class="num">10</span><h2>Management Metrics</h2></div>
+<div class="tiles">
+  <div class="tile"><div class="lab">Promoter Pay vs Profit</div><div class="val warn">₹2.34 Cr</div><div class="note">FY25 executive pay: Jadeja ₹1.20 Cr, S. Jadeja ₹0.72 Cr, Rana ₹0.42 Cr — ~0.75% of standalone FY25 PAT ₹310 Cr (my arithmetic). FY26 remuneration: not found.</div></div>
+  <div class="tile"><div class="lab">Independent Directors</div><div class="val warn" style="font-size:15px">3 of 6 (FY25) · now unconfirmed</div><div class="note">FY25: 3 executives + 3 independents (Dholakia, Mehta, Naga). Naga resigned 26 Oct 2025; Prafulla Shenoy joined 19 Jan 2026. Current composition and audit-committee make-up not confirmed; MarketSmith lists five names.</div></div>
+  <div class="tile"><div class="lab">Chairman &amp; Managing Director</div><div class="val " style="font-size:15px">Parakramsinh Jadeja</div><div class="note">Founder, heads the company since 1991; promoter. No separate CEO is listed in the annual report (one blog calls him CEO). CFO Kamlesh Solanki; CS Maulik Gandhi. No succession plan found.</div></div>
+  <div class="tile"><div class="lab">Implied Tax Paid % of PBT</div><div class="val " style="font-size:15px">~28% (FY26)</div><div class="note">₹131.2 Cr ÷ (₹336.0 Cr + ₹131.2 Cr) = 28.1% (my arithmetic; PBT derived, not seen). Tax paid in cash ₹125.4 Cr. No tax red flag identified.</div></div>
+</div>
+<div class="cols" style="margin-top:10px">
+  <div style="flex:1">
+    <div class="microhead">Board &amp; Key Management</div>
+    <p style="font-size:11.3px">Executive directors, all promoters: Parakramsinh G. Jadeja (Chairman &amp; MD, DIN 00125050), Sahdevsinh L. Jadeja and Vikramsinh R. Rana (whole-time directors). Independents (FY25): Pravinchandra R. Dholakia, Jignasa P. Mehta, Prasad P. Naga. Senior staff: Marc Paul Troia (listed as Director General of Huron Graffenstaden in the FY25 annual report; whether he is the restricted DG is not stated), Hiren Jadeja, Vikas Raj Taneja (President, Marketing), Vijaysinh Zala (Executive Head, Design; also a promoter-group shareholder). Relatives are hired as junior engineers under AGM approvals. <b>Churn:</b> independents Kathrecha and Paranjape ceased 30 Sep 2024; Yudhvir Singh Jain died 30 Oct 2024; Naga appointed 14 Nov 2024 (term to 2029) and resigned 26 Oct 2025 (stated reason not confirmed — an exit within 12 months is worth asking about); Shenoy appointed 19 Jan 2026. Three of six directors are executive; key-person dependence is high.</p>
+    <div class="microhead">Auditor</div>
+    <p style="font-size:11.3px">G.K. Choksi &amp; Co., Chartered Accountants, Mumbai (FRN 125442W); first five-year term from the 30 Sep 2022 AGM, so to about the 2027 AGM. FY25: opinion unmodified with an <b>Emphasis of Matter</b> that Jyoti SAS has accumulated losses, eroded net worth and a material uncertainty on going concern, with no impairment (Ind AS 115 revenue recognition was the key audit matter). FY26: unqualified opinion; the going-concern emphasis continues on the subsidiary (stream read of the annual report); Substack posts count two Emphasis of Matter paragraphs and others one — the exact FY26 audit-report wording and key audit matters were not fully read here. Analysts on the 7 Aug call asked about changing the auditor and about negative social-media perception (as asked, not verified). Secretarial auditor N.S. Dave &amp; Associates; cost auditor Mitesh Suvagiya &amp; Co.</p>
+  </div>
+  <div style="flex:1">
+    <div class="microhead">Promoter Holding, Pledge &amp; Insider Activity</div>
+    <p style="font-size:11.3px">Promoters and promoter group 62.55% (14,22,46,495 shares across six holders), flat since Mar-24. <b>Pledge: 2,97,52,000 shares at 30 Jun 2026 = 20.92% of promoter-group shares = 13.08% of the total, all by Anilkumar Virani</b> (90.55% of his holding); none by Jadeja or Jyoti International LLP; no non-disposal undertakings; lender and purpose not disclosed. Later movements (ScanX: HDFC Bank, Jio Credit, Bajaj Finance, partial releases; 6.70% of total on 28 Sep; Trendlyne 12.35% of promoter holding for Sep) are secondary and conflict on bases (§03). No warrants, convertibles or ESOPs; no preferential issue or QIP; promoter buys / sells: none found in filings (one Substack post calls Jadeja a modest open-market buyer, undated and unverified).</p>
+    <div class="microhead">Related-Party Transactions (FY25 annual report, note 34)</div>
+    <p style="font-size:11.3px">Promoter-linked entities named: Jyoti International LLP, Jyoti Enterprise, Neo Rajkot Foundation, Favourite Fabtech, Kiya Products, Favourite Engineering, Nextn Equipments, Spectre; amounts not extracted. Subsidiary flows at Mar-25: Huron revenue ₹40.60 Cr, trade receivable ₹26.75 Cr, <b>supplier advance ₹141.74 Cr</b> (₹130.94 Cr a year earlier), guarantee commission ₹2.00 Cr. Promoter loans: Jadeja lent ₹74.87 Cr in FY24, repaid ₹25.29 Cr and <b>converted ₹60.06 Cr into equity</b> (premium ₹135 per share per the AGM resolutions); none in FY25. FY26: sales to related parties 4.86% (2.46%), purchases 0.87% (1.40%); related-party loans &amp; advances 92.82% of the total (mostly the ~₹160 Cr to Jyoti SAS). A Substack post cites a ₹81 Cr corporate guarantee (unverified); the annual report states no related-party transaction with a conflict of interest and arm’s-length approval by the audit committee.</p>
+    <div class="notebox "><b>AGM and record:</b> the 35th AGM was reportedly held on 30 Sep 2026 and approved the FY26 accounts and Jadeja’s reappointment (TipRanks, single source); voting percentages and dissent: <b>not found</b>. No dividend ever declared. FY25 annual report: no penalties since the Jan 2024 listing; no SEBI / exchange action, ASM/GSM listing, ED or SFIO action found (surveillance lists not checked directly).</div>
+    <div class="notebox blue"><b>Not found (not the same as clean):</b> FY26 remuneration and board attendance, the Sep-26 shareholding filing, SAST Reg 31 pledge filings, the full FY26 audit report, AGM voting results, surveillance-list status, the reason for the pledge and the quantum of promoter loans after FY24.</div>
+  </div>
+</div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec11"><span class="num">11</span><h2>Company Guidance — Last 3 Quarters &amp; Credibility Checklist</h2></div>
+<div class="microhead">What Has Been Said — FY27 Guidance (7 Aug 2026 Call) and Rating-Agency Expectations</div>
+<table class="t"><tr><th>Item</th><th style="text-align:left">Stated</th><th style="text-align:left">Source</th><th>Status</th></tr><tr><td>FY27 consolidated revenue</td><td style="text-align:left">+25–30% (Q1 delivered +24%)</td><td style="text-align:left">Q1 FY27 call, 7 Aug</td><td><span class="badge b-warn">Q1 slight miss</span></td></tr><tr><td>FY27 EBITDA margin</td><td style="text-align:left">~25% (Q1: 21.4%; 23.4% adjusted)</td><td style="text-align:left">Q1 FY27 call</td><td><span class="badge b-bear">Q1 miss</span></td></tr><tr><td>FY27 machines</td><td style="text-align:left">&gt;8,000 (FY26 ~5,550; Q1 1,406)</td><td style="text-align:left">Q1 FY27 call</td><td><span class="badge b-warn">Steep ramp</span></td></tr><tr><td>FY27 order intake</td><td style="text-align:left">₹2,500–3,000 Cr (Q1 ₹601 Cr = 20–24% of range)</td><td style="text-align:left">Q1 FY27 call</td><td><span class="badge b-neut">On pace?</span></td></tr><tr><td>FY27 operating cash flow</td><td style="text-align:left">~50% of EBITDA</td><td style="text-align:left">Q1 FY27 call</td><td><span class="badge b-warn">FY26: ~10%</span></td></tr><tr><td>FY27 capex</td><td style="text-align:left">₹200–250 Cr (₹200–225 Cr on the new project + ~₹150 Cr balance / maintenance, as stated)</td><td style="text-align:left">Q1 FY27 call</td><td><span class="badge b-neut">On plan</span></td></tr><tr><td>Debt</td><td style="text-align:left">Flat vs March; policy cap ~2x EBITDA</td><td style="text-align:left">Q1 FY27 call</td><td><span class="badge b-warn">Pending</span></td></tr><tr><td>Huron FY27</td><td style="text-align:left">Revenue ₹300–325 Cr (₹300–350 Cr on 29 May); EBITDA 8–10%; PAT-positive</td><td style="text-align:left">Q1 FY27 / Q4 FY26 calls</td><td><span class="badge b-bear">Q1 Huron loss</span></td></tr><tr><td>FY28 guidance</td><td style="text-align:left">None found</td><td style="text-align:left">—</td><td><span class="badge b-neut">Not found</span></td></tr><tr><td>CRISIL expectations</td><td style="text-align:left">Upgrade: sustained double-digit growth with 25–27% margin; downgrade: margin &lt;18% sustained</td><td style="text-align:left">CRISIL, 15 Oct 2026</td><td><span class="badge b-neut">Agency view</span></td></tr><tr><td>Infomerics expectations</td><td style="text-align:left">Upgrade: larger scale at sustained margins, better operating cycle; downgrade: falling income / margins, debt-funded capex</td><td style="text-align:left">Infomerics, 10 Feb 2026</td><td><span class="badge b-neut">Agency view</span></td></tr></table>
+<div class="chartcap">Machines: to reach &gt;8,000 the company needs ~2,198 a quarter over the remaining three (my arithmetic: (8,000 − 1,406) ÷ 3) against current capacity of 6,000 a year (1,500 a quarter) — it depends on the new plant. Q4 FY26 executed ~1,750 machines (above rated capacity). FY26 operating cash flow ÷ EBITDA = 54.4 ÷ 527 ≈ 10% (my arithmetic). Q2 FY27 board-meeting date: not announced.</div>
+<div class="microhead" style="margin-top:12px">Guidance Track Record — Guided vs Actual</div>
+<table class="t"><tr><th>Item</th><th style="text-align:left">Guided</th><th style="text-align:left">Actual</th><th>Result</th></tr><tr><td>FY26 EBITDA margin</td><td style="text-align:left">~25%</td><td style="text-align:left">25.2% consolidated</td><td><span class="badge b-bull">Met</span></td></tr><tr><td>16,000-machine capacity</td><td style="text-align:left">Original timing Q4 FY26 (earlier, internal report); then Sep 2026</td><td style="text-align:left">Foundry ~1 month late; Oct 2026 per CRISIL / Infomerics; commissioning not confirmed</td><td><span class="badge b-bear">Slipped</span></td></tr><tr><td>FY27 Q1 revenue growth / margin</td><td style="text-align:left">+25–30% / ~25%</td><td style="text-align:left">+24% / 21.4%</td><td><span class="badge b-warn">Slight miss / miss</span></td></tr><tr><td>FY26 revenue guidance</td><td style="text-align:left">Not found in primary documents</td><td style="text-align:left">FY26 +15.1%</td><td><span class="badge b-neut">Not found</span></td></tr><tr><td>Quarterly revenue ranges</td><td style="text-align:left">The ranges in the 25 Jun internal report are <b>UNVERIFIED</b> in primary filings and are not stated here</td><td style="text-align:left">—</td><td><span class="badge b-neut">Unverified</span></td></tr><tr><td>Huron revenue recognition</td><td style="text-align:left">Q4 FY26: ₹67 Cr reversed; Q1 FY27: ₹35 Cr deferred; Q2 “better”, Q3 / Q4 “lumpy”</td><td style="text-align:left">Pending</td><td><span class="badge b-warn">Open</span></td></tr></table>
+<div class="chartcap">One clean hit (FY26 margin) and one clear slip (capacity timing); Q1 FY27 is below both the growth and margin guide, and the Huron items are open. Two years do not make a pattern.</div>
+<div class="cols" style="margin-top:12px">
+  <div style="flex:1.2">
+    <div class="microhead">Project Commitments — Promised vs Achieved</div>
+    <table class="t"><tr><th>Commitment</th><th style="text-align:left">Outcome found</th><th>✓/✗</th></tr><tr><td>10,000-machine Rajkot plant (6,000 → 16,000)</td><td style="text-align:left">~90% built and 80% machinery installed at 15 Dec 2025; Sep 2026 target; commissioning confirmation not found</td><td><span class="warn">?</span></td></tr><tr><td>Foundry / backward integration</td><td style="text-align:left">Oct 2026, ~1 month late (Q1 call)</td><td><span class="warn">≈</span></td></tr><tr><td>Huron export licences (≈ ₹100 Cr, 7–8 machines)</td><td style="text-align:left">Expected “very soon”, not “in one or two months”</td><td><span class="warn">?</span></td></tr><tr><td>“No impairment at all” on Jyoti SAS (₹501.7 Cr exposure)</td><td style="text-align:left">Auditors flag going-concern uncertainty; management relies on DCF</td><td><span class="warn">?</span></td></tr><tr><td>Own CNC controller / HMI</td><td style="text-align:left">HMI ready; commercialisation ~2 years</td><td><span class="warn">≈</span></td></tr><tr><td>PLI eligibility (“close to 50%” subsidy)</td><td style="text-align:left">Claimed; terms and amount unverified</td><td><span class="warn">?</span></td></tr><tr><td>Tumakuru (Karnataka) service / technology hub</td><td style="text-align:left">20 acres of land held</td><td><span class="pos">✓</span></td></tr></table>
+    <div class="notebox "><b>Gap:</b> FY28 guidance does not exist; the FY26 revenue guide was not found; CNC controller and PLI claims are unverified. Huron history: bought 2007, control from 1 Jan 2008; Huron Fräsmaschinen GmbH, Huron Canada and Huron Makina (Turkey, set up 3 Feb 2023). A Substack post flags a discrepancy on Huron’s ownership history (2007 wholly owned vs a March 2023 70% stake) — unresolved.</div>
+  </div>
+  <div style="flex:1">
+    <div class="microhead">Management-Quality Red-Flag Checklist</div>
+    <table class="t"><tr><th>Warning Sign</th><th>Present?</th></tr><tr><td>Consolidated profit falling while standalone rises (Q1: −20% vs +21%)</td><td><span class="badge b-bear">✓ Yes</span></td></tr><tr><td>Auditor going-concern emphasis on a subsidiary; no impairment</td><td><span class="badge b-bear">✓ Yes</span></td></tr><tr><td>Promoter pledge (13.08% of all shares at 30 Jun)</td><td><span class="badge b-bear">✓ Yes</span></td></tr><tr><td>Operating cash flow far below profit; FCF negative</td><td><span class="badge b-bear">✓ Yes</span></td></tr><tr><td>Cash conversion cycle 359 days</td><td><span class="badge b-bear">✓ Yes</span></td></tr><tr><td>FII holding halved in a year (9.9% → 5.3%)</td><td><span class="badge b-bear">✓ Yes</span></td></tr><tr><td>A rating agency in “Issuer Not Cooperating” status (Brickwork)</td><td><span class="badge b-warn">Yes (2025)</span></td></tr><tr><td>Independent-director churn (2 exits Sep 2024, 1 death, 1 resignation)</td><td><span class="badge b-warn">Watch</span></td></tr><tr><td>Related-party advances / loans to subsidiary (~₹160 Cr loan, ₹141.74 Cr supplier advance)</td><td><span class="badge b-warn">Watch</span></td></tr><tr><td>Regulatory penalties / SEBI action (since listing)</td><td><span class="badge b-neut">None per annual report</span></td></tr><tr><td>Capital raised at depressed prices</td><td><span class="badge b-neut">None found</span></td></tr></table>
+    <div class="chartcap" style="margin-top:6px">‘Not found’ means the search did not surface it, not that it does not exist.</div>
+  </div>
+</div>
+  </div>
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec12"><span class="num">12</span><h2>Street Consensus</h2></div>
+        <div class="krow"><span class="klab">S&amp;P (via StockAnalysis, 16 Oct)</span><span class="kval">4 analysts: 3 Strong Buy, 1 Buy<small>Average and median ₹1,058 (+6.1% vs ₹997.20, my arithmetic), high ₹1,275, low ₹840. An earlier snapshot (late July) showed 2 analysts, average ₹724 — conflict; Simply Wall St cites ₹724 to ~₹985 with high ₹1,215, low ₹840</small></span></div><div class="krow"><span class="klab">Bajaj Broking</span><span class="kval" style="color:#2e7d32">BUY, target ₹984<small>13 Aug 2026; 39x FY28E EPS; CMP ₹839 then. <b>Already exceeded</b> at ₹997.20. Earlier BUY ₹736 (33x FY28E, CMP ₹656, ~June). A promotional MTF-desk note that discloses possible positions</small></span></div><div class="krow"><span class="klab">Yes Securities</span><span class="kval">BUY, target ₹1,090<small>Oct 2025, CMP ₹921 — a year old</small></span></div><div class="krow"><span class="klab">TipRanks</span><span class="kval">Neutral, ₹996<small>Automated / quant score, not a broker rating</small></span></div><div class="krow"><span class="klab">Value Research</span><span class="kval">P/E ~48x, P/B ~8.8x<small>Stale mid-year snapshot (1-year return −29% then); both well above peer medians</small></span></div><div class="krow"><span class="klab">Sharekhan poll</span><span class="kval">64% Buy / 29% Sell / 7% Hold<small>14 votes — not meaningful</small></span></div><div class="krow"><span class="klab">Other brokers</span><span class="kval">No research notes found<small>Motilal, ICICI Direct, Kotak etc.: quote pages only. Broker targets quoted in the 25 Jun internal report could not be verified and are not used</small></span></div>
+        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Reading it:</b> the S&amp;P average sits only ~6% above the price and one named target is already exceeded; the older targets were set when the stock was ₹650–840. Treat targets as history, not support. Bulk / block deals in 2026: none found.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec13"><span class="num">13</span><h2>Share Volume &amp; Profile</h2></div>
+        <div class="krow"><span class="klab">Volume — 16 Oct</span><span class="kval">442,775<small>−65.45% vs average (MarketSmith), i.e. ~34.5% of a ~1.28 mn-share average (my arithmetic)</small></span></div><div class="krow"><span class="klab">Delivery %, F&amp;O status, OI</span><span class="kval" style="color:#c62828">NOT FOUND<small>Last-session delivery, F&amp;O listing and open interest were not found; ValuePickr / Reddit / X and ScoutQuest / FinQ items not found</small></span></div><div class="krow"><span class="klab">Float</span><span class="kval">8.41 Cr shares<small>MarketSmith; ~37% of 22.74 Cr shares, consistent with 62.55% promoters (my arithmetic: 22.74 × 37.45% = 8.52 Cr)</small></span></div><div class="krow"><span class="klab">Funds Holding</span><span class="kval">129<small>−1.53% (MarketSmith)</small></span></div><div class="krow"><span class="klab">Shares Held by Funds</span><span class="kval">4.29 Cr<small><b>−16.57%</b> — narrative text says ‘institutional holding up last quarter’: conflict kept. 4.29 Cr is ~18.9% of shares outstanding (my arithmetic); mutual funds alone were 10.61% at Sep-26</small></span></div><div class="krow"><span class="klab">Institutional Flow</span><span class="kval">FII down, MF rebuilding<small>FII 9.9% (Sep-25) → 5.3% (Sep-26); MF 9.78% (Jun-26) → 10.61% (Sep-26*)</small></span></div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Technical read:</b> RSI printed 87 at the ₹1,134.6 top and 19.1 at the ₹971.5 hourly low (user’s chart); TipRanks (page of 16 Oct, 07:09) shows RSI(14) 49.3, ADX 19.9 (weak trend), MACD 9.24 and ROC −7.77 — and an internal price inconsistency (₹803 in text vs ~₹1,000 implied by its averages), so it is cross-check only (§18). Upcoming: Q2 FY27 results (date not announced); Sep-26 shareholding (due ~21 Oct); U/D volume ratio 1.7 (MarketSmith).</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec14"><span class="num">14</span><h2>Sector Rotation</h2></div>
+        <p style="font-size:11px">Jyoti CNC is mapped to the <b>Industrials</b> wedge (capital goods / machine tools). Screener files it under Industrials &gt; Capital Goods &gt; Industrial Manufacturing &gt; Industrial Products (the same tag as LMW, Kennametal India and HMT); MarketSmith’s group tag is ‘NSE-Machinery-Gen Industrial’ (Group Rank 50 of 197). <b>NSE’s own classification was not found.</b> It is not mapped to Defense or Aerospace: aerospace &amp; defence is ~38% of the order book (37% of Q1 revenue), but the business is cyclical capital equipment sold into auto, general engineering and EMS as well, not a defence prime; nor to Technology — electronics / EMS demand is a driver, not the business. The wheel marks the sector slot only; it is not a view on this stock’s timing.</p>
+<div class="sector-wheel-compact">
+<div class="relative mt-16 md:mt-[80px] mx-auto w-full max-w-[760px] overflow-visible"><div class="relative mx-auto w-[86vw] md:w-full max-w-[540px] aspect-square overflow-visible"><svg viewBox="-40 -40 620 620" class="absolute inset-0 w-full h-full overflow-visible"><path d="M 270 22 A 248 248 0 0 1 518 270" fill="none" stroke="#0f2f5c" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 518 270 A 248 248 0 0 1 270 518" fill="none" stroke="#8b2e00" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 270 518 A 248 248 0 0 1 22 270.00000000000006" fill="none" stroke="#4c2e8a" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 22 270.00000000000006 A 248 248 0 0 1 269.99999999999994 22" fill="none" stroke="#115e5f" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><g transform="translate(270 22)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#0f2f5c" stroke="#0f2f5c" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(518 270) rotate(90)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#8b2e00" stroke="#8b2e00" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(270 518) rotate(180)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#4c2e8a" stroke="#4c2e8a" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(22 270) rotate(270)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#115e5f" stroke="#115e5f" stroke-width="0.8" stroke-linejoin="round"></path></g><defs><path id="label-early" d="M 93.23 59.34 A 275 275 0 0 1 446.77 59.34"></path><path id="label-late" d="M 480.66 93.23 A 275 275 0 0 1 480.66 446.77"></path><path id="label-slow" d="M 93.23 480.66 A 275 275 0 0 0 446.77 480.66"></path><path id="label-recov" d="M 59.34 446.77 A 275 275 0 0 1 59.34 93.23"></path></defs><text fill="#0f2f5c" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-early" startOffset="50%" text-anchor="middle">EARLY EXPANSION</textPath></text><text fill="#8b2e00" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-late" startOffset="50%" text-anchor="middle">LATE EXPANSION</textPath></text><text fill="#4c2e8a" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-slow" startOffset="50%" text-anchor="middle">SLOWDOWN</textPath></text><text fill="#115e5f" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-recov" startOffset="50%" text-anchor="middle">RECOVERY</textPath></text><g><path d="M 270.0 35.0 A 235 235 0 0 1 408.1295342887312 79.88100632188736 L 334.65637775217203 181.00813061875579 A 110 110 0 0 0 270.0 160.0 Z" fill="#43A047" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.15092303249094 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #43A047; stroke-width: 2.4; stroke-linejoin: round;">TECHNOLOGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">TECHNOLOGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Innovation-led</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">growth</text></g></g><g><path d="M 408.1295342887312 79.88100632188736 A 235 235 0 0 1 493.4982813293611 197.38100632188736 L 374.6162167924669 236.00813061875579 A 110 110 0 0 0 334.65637775217203 181.00813061875579 Z" fill="#C0CA33" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 168.90093660569462)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">DISCRETIONARY</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DISCRETIONARY</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising confidence</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; spending</text></g></g><g><path d="M 493.4982813293611 197.38100632188736 A 235 235 0 0 1 493.49828132936113 342.61899367811264 L 374.6162167924669 303.9918693812442 A 110 110 0 0 0 374.6162167924669 236.00813061875579 Z" fill="#F0A93B" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(442.0 270.0)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F0A93B; stroke-width: 2.4; stroke-linejoin: round;">INDUSTRIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">INDUSTRIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Capital investment</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; infrastructure</text></g></g><g><path d="M 493.49828132936113 342.61899367811264 A 235 235 0 0 1 408.1295342887312 460.1189936781126 L 334.65637775217203 358.9918693812442 A 110 110 0 0 0 374.6162167924669 303.9918693812442 Z" fill="#B5651D" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 371.09906339430535)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #B5651D; stroke-width: 2.4; stroke-linejoin: round;">DEFENSE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DEFENSE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Government spending</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; indigenization</text></g></g><g><path d="M 408.1295342887312 460.1189936781126 A 235 235 0 0 1 270.00000000000006 505.0 L 270.0 380.0 A 110 110 0 0 0 334.65637775217203 358.9918693812442 Z" fill="#2E6DA4" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.150923032491 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #2E6DA4; stroke-width: 2.4; stroke-linejoin: round;">AEROSPACE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">AEROSPACE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Order backlogs</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; export growth</text></g></g><g><path d="M 270.00000000000006 505.0 A 235 235 0 0 1 131.87046571126885 460.11899367811264 L 205.34362224782797 358.9918693812442 A 110 110 0 0 0 270.0 380.0 Z" fill="#F4791A" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.84907696750906 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F4791A; stroke-width: 2.4; stroke-linejoin: round;">ENERGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">ENERGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Commodity cycles</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; inflation</text></g></g><g><path d="M 131.87046571126885 460.11899367811264 A 235 235 0 0 1 46.50171867063892 342.6189936781127 L 165.3837832075331 303.9918693812442 A 110 110 0 0 0 205.34362224782797 358.9918693812442 Z" fill="#9163CB" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.84907696750906 371.0990633943054)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #9163CB; stroke-width: 2.4; stroke-linejoin: round;">UTILITIES</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">UTILITIES</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Defensive demand</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; stability</text></g></g><g><path d="M 46.50171867063892 342.6189936781127 A 235 235 0 0 1 46.501718670638894 197.3810063218874 L 165.3837832075331 236.0081306187558 A 110 110 0 0 0 165.3837832075331 303.9918693812442 Z" fill="#299BD1" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(98.0 270.00000000000006)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">STAPLES</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">STAPLES</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Essential needs</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; resilience</text></g></g><g><path d="M 46.501718670638894 197.3810063218874 A 235 235 0 0 1 131.87046571126876 79.88100632188738 L 205.34362224782794 181.00813061875579 A 110 110 0 0 0 165.3837832075331 236.0081306187558 Z" fill="#16A398" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.849076967509 168.90093660569465)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #16A398; stroke-width: 2.4; stroke-linejoin: round;">HEALTH CARE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">HEALTH CARE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Demographics</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; innovation.</text></g></g><g><path d="M 131.87046571126876 79.88100632188738 A 235 235 0 0 1 269.99999999999994 35.0 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="#7CB342" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.849076967509 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #7CB342; stroke-width: 2.4; stroke-linejoin: round;">FINANCIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">FINANCIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising rates</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">&amp; lending growth.</text></g></g><path d="M 493.4982813293611 197.38100632188736 A 235 235 0 0 1 493.49828132936113 342.61899367811264 L 374.6162167924669 303.9918693812442 A 110 110 0 0 0 374.6162167924669 236.00813061875579 Z" fill="none" stroke="#0a2342" stroke-width="3.2" stroke-linejoin="round"></path><circle cx="270" cy="270" r="108.5" fill="#ffffff" stroke="#e7e0d1" stroke-width="1.2"></circle><circle cx="270" cy="270" r="108.5" fill="none" stroke="#000" stroke-opacity="0.04" stroke-width="6"></circle><g transform="translate(270 270)"><text x="0" y="-8" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.5" fill="#0a2342">JYOTI CNC</text><text x="0" y="7" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.3" fill="#0a2342">AUTOMATION</text><text x="0" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400" letter-spacing="0.1">Mapped to Industrials —</text><text x="0" y="32.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400">machine tools</text><path d="M 94.97,-8.00 L 110.97,0.00 L 94.97,8.01 Z" fill="#0a2342"></path></g></svg></div><div class="mt-8 md:mt-10 flex justify-center"><div class="h-[1px] w-[72px] bg-[#d9d0bb]/70"></div></div></div>
+        </div>
+        <div class="chartcap" style="text-align:center;margin-top:2px">NSE: JYOTICNC · BSE: 544081 · mapped: Industrials (Screener: Industrials &gt; Capital Goods &gt; Industrial Manufacturing)</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec15"><span class="num">15</span><h2>Peer Comparison</h2></div>
+        <table class="peer"><tr><th>Company</th><th>Mcap ₹ Cr</th><th>P/E (Scr / price÷EPS)</th><th>P/B</th><th>ROE %</th><th>ROCE %</th><th>TTM Sales ₹ Cr</th><th>Sales gr. / OPM</th></tr>
+<tr style="background:#eef4fc"><td>★ Jyoti CNC (₹997)</td><td><b>22,679</b></td><td><b>70.5 (70.5)</b></td><td><b>11.3</b></td><td><b>18.2</b></td><td><b>21.3</b></td><td><b>2,191</b></td><td><b>17% / 24%</b></td></tr>
+<tr><td>LMW (₹16,060)</td><td>17,157</td><td>93.9 (98.2)</td><td>5.99</td><td>4.05</td><td>5.58</td><td>3,374</td><td>11% / 6%</td></tr>
+<tr><td>Kennametal India (₹4,122)</td><td>9,060</td><td>46.2 (46.2)</td><td>10.6</td><td class="pos">24.5</td><td class="pos">33.2</td><td>~1,511*</td><td>~29%* / 20%</td></tr>
+<tr><td>Grindwell Norton (₹1,880)</td><td>20,814</td><td>48.0 (48.0)</td><td>8.26</td><td>16.1</td><td>21.2</td><td>3,126</td><td>14% / 19%</td></tr></table>
+        <div class="chartcap" style="margin-top:4px">Screener, fetched 17 Oct 2026 at the 16 Oct close — one source, one date; Jyoti on the consolidated page. P/E is Screener’s stock P/E, with my price ÷ TTM EPS in brackets (Jyoti ₹14.14; LMW ₹163.61; Grindwell ₹39.17). *Kennametal’s TTM sales and EPS (~₹89.18) were summed from four quarters, not stated on the page. LMW: Screener 93.9 vs my 98.2 — unresolved; its header ROE is 4.05% (a 3-year average of 7.02% is in the text) and 3-year sales growth is −12%. Screener’s own peers table did not load, so each peer came from its own page.</div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Why these three:</b> none is a pure listed CNC peer. LMW is the closest capital-goods name (mostly textile machinery with a smaller machine-tool arm; margins 6%); Kennametal India sells metal-cutting tooling into the same users (consumable, less cyclical); Grindwell Norton (abrasives and ceramics) is a manufacturing-capex proxy with a similar 21% ROCE. <b>Excluded references:</b> HMT (P/E 123, OPM −152%, TTM sales ₹25 Cr — not a comparable scale) and Wendt India (mcap ₹1,574 Cr, P/E 61.0, ROCE 11.9%, OPM 20%, sales growth 3% — too small). Ace Micromatic: listing not confirmed. Nifty Capital Goods P/E 43.2 (16 Oct).</div>
+        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Reading it:</b> on Screener P/E Jyoti (70.5) is ~47% above the three-peer median of 48.0 (my arithmetic) and above the Nifty Capital Goods P/E of 43.2; on P/B (11.3x vs median 8.26x) it is ~37% above. Its ROE (18.2%) is above the peer median of 16.1% and its growth (17%) and margin (24%) are strong — so the premium has a basis, but the peers are not like-for-like and the premium is large.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec16"><span class="num">16</span><h2>Risk Analysis</h2></div>
+    <table class="t prose"><tr><th style="text-align:left">Category</th><th>Severity</th><th style="text-align:left">Detail</th></tr><tr><td style="text-align:left">Huron Probe / Legal</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">French judicial investigation (disclosed 12 Apr 2026); seizures of ~€3.0–4.0 mn and two properties; DG restricted; customs control of certain machines; outcome and timeline unknown (“2, 3, 5 years”). Parent exposure ₹501.7 Cr (investment ₹341.60 Cr + loans ₹160.11 Cr) against an auditor’s going-concern uncertainty at Jyoti SAS and no impairment. Russia re-export allegations are allegation only (management denies). Possible fines, criminal liability, impairment, loss of export licences.</td></tr><tr><td style="text-align:left">Valuation</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">P/E 70.5 (55.8x on standalone EPS), P/B 11.3x, EV/EBITDA ~43.7x, market cap ~10.3x sales (my arithmetic); PEG ≈ 11.2 / 1.9 / 2.3 on three bases; ~47% P/E premium to the peer median. A de-rating on any delay needs only a modest earnings disappointment: TTM EPS is already below FY26’s.</td></tr><tr><td style="text-align:left">Promoter Pledge</td><td><span class="badge b-bear">High (balance UNVERIFIED)</span></td><td style="text-align:left">13.08% of all shares (20.92% of promoter shares) pledged at 30 Jun 2026, all by one promoter-group holder (90.55% of his stake); reported later pledges to Jio Credit, Bajaj Finance and others with partial releases; September balance conflicts across sources (6.70% / ~7.7% of total); purpose and lenders not disclosed. A margin-call overhang on a stock that has just rolled over.</td></tr><tr><td style="text-align:left">Working Capital / Cash Conversion</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">Cash-conversion cycle 359 days; inventory 426–453 days; FY26 operating cash flow ₹54.4 Cr vs PAT ₹336 Cr; free cash flow about −₹269 Cr (FY25 −₹415 Cr); borrowings +71% in FY26 to ₹849.7 Cr (net debt ≈ ₹713 Cr); finance cost doubled in Q1. Huron machines awaiting licences add to inventory.</td></tr><tr><td style="text-align:left">Capacity Ramp / Execution</td><td><span class="badge b-warn">Medium–High</span></td><td style="text-align:left">6,000 → 16,000 machines: timing already slipped; foundry ~1 month late; commissioning not confirmed. FY27 needs &gt;8,000 machines and +25–30% revenue; Q1 delivered +24% at a 21.4% margin (guide ~25%). Term-loan repayment starts in FY27.</td></tr><tr><td style="text-align:left">Concentration / Export Licences</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Aerospace &amp; defence ~38% of orders; licences for non-EU buyers (China, Turkey, Ukraine orders pending); EMS book ~₹700 Cr “static” for 1.5–2 years with customers delaying capex. Top-10 customers ~27% of FY26 revenue (CRISIL).</td></tr><tr><td style="text-align:left">Import Dependence</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Controllers from Siemens / Fanuc with a ~12-month lead time and supplier-government export licences; Taiwan / Korea heavy-machine imports; the Hosur competitor’s 10,000-machine capacity; ~59% of Indian machine-tool consumption is imported.</td></tr><tr><td style="text-align:left">Governance / Disclosure</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Brickwork “Issuer Not Cooperating” (BB+ vs A+ elsewhere); auditor emphasis of matter; board and independent-director churn; high founder dependence; related-party loans and advances (92.82% of loans &amp; advances to related parties); voting results and FY26 remuneration not found; analysts asked about the auditor and social-media perception.</td></tr><tr><td style="text-align:left">Cyclicality / Rates / Europe</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Capital-goods demand is cyclical (CRISIL’s first weakness); RBI repo +25 bp to 5.50% on 7 Oct 2026 (secondary); European machine-tool consumption fell 3.7% in 2025; ~26% overseas revenue and euro exposure (₹10 Cr unrealised forex loss in Q1; hedge ratio undisclosed).</td></tr><tr><td style="text-align:left">Technical / Count</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Hourly gauges −3 / −3; daily +1 / −1; RSI 87 blow-off at ₹1,134.6; price ~12% below the top; a projected C leg to ₹791.92 (−20.6%) if the count is right. Counts are interpretations, not forecasts.</td></tr></table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1.1">
+        <div class="microhead" style="margin-top:0">Credit Rating Details — CRISIL (15 Oct 2026)</div>
+        <table class="t"><tr><th>Item</th><th style="text-align:left">CRISIL Ratings — rationale of 15 Oct 2026 (read in full)</th></tr><tr><td>Ratings</td><td style="text-align:left"><b>Crisil A+/Stable</b> (long term) and <b>Crisil A1</b> (short term) <b>assigned</b> on ₹1,415 Cr of bank debt; suspension (since 27 Jun 2016) revoked</td></tr><tr><td>Facilities</td><td style="text-align:left">Cash credit ₹460 Cr; term loan ₹300 Cr (to 30 Sep 2033); proposed long-term ₹230.89 Cr; LC ₹160 Cr (A1); standby LC ₹264.11 Cr (A1) — sum ₹1,415 Cr (my sum)</td></tr><tr><td>Approach</td><td style="text-align:left">Consolidated (Jyoti SAS, Huron Graffenstaden, Huron GmbH, Canada, Turkey); lenders SBI, Union Bank, Axis</td></tr><tr><td>Positives</td><td style="text-align:left">~10% volume share, 15,000+ customers, top-10 ~27% of FY26 revenue; order book ₹4,848 Cr (~2.1x); margin ~11% (FY22) → ~27% (FY26); capacity 6,000 → 16,000 on ~₹450 Cr capex (Oct 2026); adjusted gearing 0.4x, interest cover 9.3x; no dividend</td></tr><tr><td>Negatives</td><td style="text-align:left">Cyclical end-markets; capex execution; working-capital intensity (3–6 months entry, ~9 months mid, 12–18 months high-end build cycles; inventory 426 days, GCA 443 days)</td></tr><tr><td>Liquidity</td><td style="text-align:left">“Strong”: bank-limit utilisation 82% of ₹460 Cr (12 months to Jun 2026); expected cash accrual ₹400–500 Cr a year</td></tr><tr><td>On Huron</td><td style="text-align:left">“Has taken note”; demand “largely unimpacted”, no cancellations; limited impact expected given small scale; will monitor timelines and revenue-recognition, profit and cash-flow impact</td></tr><tr><td>Upgrade / downgrade</td><td style="text-align:left">Upgrade: sustained double-digit growth with 25–27% margin plus better cash generation. Downgrade: margin &lt;18% sustained; significant fall in revenue / order book; higher working capital or debt-funded capex</td></tr><tr><td>Inconsistencies</td><td style="text-align:left">NCAAD written as both “9.45 times” and “0.45 time”; net worth ₹1,949 Cr (adjusted) vs ₹2,001.3 Cr balance sheet; unencumbered cash “₹52 crore” and “₹53 crore”; says Brickwork classified JCAL non-cooperative on 23 Aug 2023</td></tr></table>
+      </div>
+      <div style="flex:1.1">
+        <div class="microhead" style="margin-top:0">Credit Rating Details — Infomerics, Brickwork, India Ratings, Others</div>
+        <table class="t"><tr><th>Item</th><th style="text-align:left">Infomerics, Brickwork, India Ratings, others</th></tr><tr><td>Infomerics</td><td style="text-align:left"><b>IVR A+/Stable and IVR A1</b>, <b>standalone</b> (Huron excluded). 10 Feb 2026 rationale (full): rated ₹1,259.11 Cr (₹449.11 Cr non-fund + ₹810 Cr long term); reaffirmed 21 Apr 2026 after the Huron event (short material-event update: no adverse impact expected, “will monitor”). History: BBB+ (Apr 2023) → A- (Jun 2024) → A+ (Jul 2025)</td></tr><tr><td>Infomerics metrics</td><td style="text-align:left">Income ₹1,189.72 / 1,615.03 / 1,350.31 Cr (FY24 / FY25 / 9M FY26); EBITDA margin 22.87% / 28.38% / 27.63%; interest cover 4.14x / 26.40x / 10.95x; operating cycle 211 days (FY25); ~26% overseas revenue</td></tr><tr><td>Capex</td><td style="text-align:left">₹425.83 Cr: ₹300 Cr Union Bank term loan (Sep 2025) + ₹125.83 Cr accruals; ₹317.32 Cr spent to 15 Dec 2025; COD Oct 2026</td></tr><tr><td><b>Brickwork</b></td><td style="text-align:left"><b>BWR BB+/Stable and BWR A4+, “Issuer Not Cooperating”</b>, 20 May 2025, on ₹699.27 Cr — based on “best available information” (no information or monthly no-default statements provided); no forward-looking component. <b>Conflict with A+ at CRISIL / Infomerics shown, not resolved.</b> Later Brickwork action: not found</td></tr><tr><td>India Ratings</td><td style="text-align:left"><b>Not found</b> — site search returned “Page not found” and a Google site: search found no page (not exhausted)</td></tr><tr><td>ICRA / CARE / Acuité</td><td style="text-align:left">Not found in web searches (their own sites not checked)</td></tr><tr><td>Perimeters</td><td style="text-align:left">CRISIL ₹1,415 Cr (consolidated) vs Infomerics ₹1,259.11 Cr (standalone) vs Brickwork ₹699.27 Cr — different perimeters and dates</td></tr></table>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1"><div class="notebox blue"><b>Conflicts to show:</b> Brickwork BB+ (non-cooperating) vs A+ at CRISIL and Infomerics; Huron seizure €4.0 mn vs €3.02 mn; Jyoti SAS net assets ₹(379.53) Cr vs (111.05) / (53.55); capex ₹425.83 Cr vs ~₹450 Cr and commissioning Oct vs Sep 2026; net worth ₹1,949 Cr (CRISIL) vs ₹2,001.3 Cr; FY26 EoM count one vs two.</div></div>
+      <div style="flex:1"><div class="notebox green"><b>Caveat on the bear case:</b> CRISIL (consolidated, 15 Oct 2026) and Infomerics both hold A+/Stable, CRISIL calls liquidity strong, standalone margins are 27–29% and gearing is modest (0.42x consolidated). The A+ is a credit view, not an equity-valuation view: the risks above are mostly about price (P/E 70x), the Huron outcome, the pledge and cash conversion rather than near-term solvency.</div></div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570);border-top:3px solid #f0b429;border-bottom:3px solid #f0b429;color:#f0b429;padding:9px 26px;font-weight:900;letter-spacing:2.5px;font-size:14px;text-transform:uppercase">Technical Analysis</div>
+  <div class="sec">
+    <div class="sec-title" id="sec17"><span class="num">17</span><h2>Technical Ratings &amp; Momentum</h2></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">MarketSmith India Ratings (17 Oct 2026)</div>
+        <table style="width:100%;border-collapse:collapse;border:1px solid #cfd6e2;margin-bottom:10px"><tr><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Master Score</div><div style="font-size:24px;font-weight:900;color:#e07c00">58</div><div style="font-size:9px;font-weight:700;color:#8a94a6">Letter C · fair</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">EPS Rating</div><div style="font-size:24px;font-weight:900;color:#e07c00">60</div><div style="font-size:9px;font-weight:700;color:#8a94a6">FAIR</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Price Strength</div><div style="font-size:24px;font-weight:900;color:#2e7d32">80</div><div style="font-size:9px;font-weight:700;color:#8a94a6">GOOD · RS rating 79 in narrative</div></td></tr><tr><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Acc / Dis Rating</div><div style="font-size:24px;font-weight:900;color:#2e7d32">A−</div><div style="font-size:9px;font-weight:700;color:#8a94a6">Buyer Demand GREAT</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Group Rank</div><div style="font-size:24px;font-weight:900;color:#e07c00">50</div><div style="font-size:9px;font-weight:700;color:#8a94a6">of 197 · FAIR (narrative 49)</div></td><td style="border:1px solid #cfd6e2;padding:10px 6px;text-align:center;width:33.33%"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Beta</div><div style="font-size:24px;font-weight:900;color:#c62828">1.66</div><div style="font-size:9px;font-weight:700;color:#8a94a6">Alpha 0.11</div></td></tr></table>
+        <p style="font-size:11.5px">A mixed profile: Master Score <b>C (58)</b>, EPS Rating 60 FAIR, Price Strength 80 GOOD, Acc/Dis A− (Buyer Demand GREAT), Group Rank 50 of 197 (NSE-Machinery-Gen Industrial) FAIR. Chart readout: OH −12.11%, OL +71.90%; the stock trades close to its 50-day average and ~17% above its 200-day average, and MarketSmith says it “needs to take support around the 50 DMA”. Other ratings-table items: EPS growth rate 108%, Earnings Stability 59, P/E 71 (5-year range 57–145), ROE 17%, cash flow −4.64, annual revenue growth +18% (‘outstanding’), debt / equity 20% (‘reasonable’).</p>
+        <p style="font-size:11.5px;margin-top:6px"><b>Conflicts kept:</b> (1) Price Strength 80 in the grid vs an RS Rating of 79 in the narrative; (2) Group Rank 50 vs 49; (3) ROE 17% (ratings table) vs 16% (narrative; Screener 18.2%); (4) the narrative says institutional holding was ‘up last quarter’ while shares held by funds are <b>−16.57%</b> and funds holding −1.53% — internal conflict (mutual-fund percentage did rise 9.78% → 10.61%, so it may be a different perimeter); (5) EPS growth rate 108% against the latest two quarters at −20% / −17%; (6) the annual-EPS table carries no FY27e / FY28e rows.</p>
+        <p style="font-size:11.5px;margin-top:6px"><b>Why a 22% pre-tax margin?</b> The narrative calls it ‘great’, which looks unusually high for a machine-tool maker. It is explainable (my arithmetic): FY26 consolidated EBITDA margin 25.2% (standalone 29%), implied depreciation only ~₹50 Cr (2.4% of sales) and interest ₹69.8 Cr (3.3%), plus <b>other income of ₹60.5 Cr</b> (~13% of implied PBT; with it stripped out the pre-tax margin is ~19%). Part of other income is forex gains (Q1 FY26 had ~₹20 Cr), which are not recurring; on a TTM basis other income is ₹44 Cr. Standalone, not consolidated, margins drive the figure.</p>
+        <table class="t fit"><tr><th>MarketSmith EPS (₹)</th><th>EPS</th><th>Price hi / lo</th><th style="text-align:left">Note</th></tr><tr><td>FY26</td><td>14.78</td><td>1,135 / 580</td><td style="text-align:left">+6.3%*</td></tr><tr><td>FY25</td><td>13.90</td><td>1,408 / 750</td><td style="text-align:left">+76.2%*</td></tr><tr><td>FY24</td><td>7.89</td><td>1,504 / 368</td><td style="text-align:left">n.m. (low base)</td></tr><tr><td>FY23</td><td>1.02</td><td>—</td><td style="text-align:left">—</td></tr><tr><td>FY22</td><td>−3.28</td><td>—</td><td style="text-align:left">—</td></tr><tr><td>FY21</td><td>−4.75</td><td>—</td><td style="text-align:left">—</td></tr><tr><td>FY20</td><td>3.09</td><td>—</td><td style="text-align:left">—</td></tr><tr><td>FY19</td><td>11.80</td><td>—</td><td style="text-align:left">—</td></tr><tr><td>FY27e / FY28e</td><td>—</td><td>—</td><td style="text-align:left">no estimate rows shown</td></tr></table><table class="t fit"><tr><th>Quarter</th><th>EPS</th><th>EPS YoY</th><th>Sales ₹ Cr</th><th>Sales YoY</th></tr><tr><td>Jun-26</td><td>2.51</td><td><span class="neg">−20%</span></td><td>508.5</td><td>+24%</td></tr><tr><td>Mar-26</td><td>3.98</td><td><span class="neg">−17%</span></td><td>599.2</td><td>+4%</td></tr><tr><td>Dec-25</td><td>3.89</td><td>+10%</td><td>575.9</td><td>+28%</td></tr><tr><td>Sep-25</td><td>3.76</td><td>+13%</td><td>507.9</td><td>+18%</td></tr><tr><td>Jun-25</td><td>3.14</td><td>+40%</td><td>410.2</td><td>+13%</td></tr><tr><td>Mar-25</td><td>4.79</td><td>+8%</td><td>575.7</td><td>+28%</td></tr><tr><td>Dec-24</td><td>3.53</td><td>+44%</td><td>449.5</td><td>+19%</td></tr><tr><td>Sep-24</td><td>3.33</td><td>+287%</td><td>430.7</td><td>+43%</td></tr></table>
+        <div class="chartcap">*My arithmetic from the MarketSmith EPS column (FY26 14.78 ÷ 13.90; FY25 13.90 ÷ 7.89). TTM EPS (Sep-25 to Jun-26) = 3.76 + 3.89 + 3.98 + 2.51 = ₹14.14 → P/E ≈ 70.5 at ₹997.20 (matches MarketSmith 71). FY23–FY24 EPS differ from Screener (1.02 vs −0.33; 7.89 vs 6.63). Latest two quarters: sales +24% and +4% but EPS −20% and −17%.</div>
+        <div class="notebox blue"><b>Synthesis:</b> Price Strength 80 and Acc/Dis A− describe the rally; EPS 60 and a 20% year-on-year profit fall describe the earnings. The ratings capture the damage and strength already printed, not what happens next.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">Fund Activity</div>
+        <div style="display:flex;gap:8px"><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">129</div><div style="font-size:8.6px;color:#8a94a6">Funds holding · −1.53%</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">4.29 Cr</div><div style="font-size:8.6px;color:#8a94a6">Shares held by funds · −16.57%</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">1.7</div><div style="font-size:8.6px;color:#8a94a6">U/D Volume Ratio</div></div><div style="flex:1;text-align:center;border:1px solid #dde2ea;border-radius:5px;padding:5px 4px;background:#fafbfd"><div style="font-size:13px;font-weight:900;color:#1a2a4a">1.66</div><div style="font-size:8.6px;color:#8a94a6">Beta</div></div></div>
+        <p style="font-size:11.2px;margin-top:8px">The number of funds and the shares they hold both fell (129 funds, −1.53%; 4.29 Cr shares, −16.57%), the opposite of the narrative’s ‘institutional holding up’. Other MarketSmith data: market cap ₹22,678.62 Cr, sales ₹2,191.43 Cr, float 8.41 Cr shares, yield N/A, book value 11.33x, LT debt / equity 20%, alpha 0.11, beta 1.66 (a high-beta stock), price ₹997.20 (+₹17.80, +1.82%), volume 442,775 (−65.45% vs average). Mkt cap ÷ sales ≈ 10.3x and mkt cap ÷ price ≈ 22.7 Cr shares (my arithmetic).</p>
+        <div class="microhead" style="margin-top:12px">MarketSmith Guru Screens — Strategy Fit (all six)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 18px"><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">WILLIAM J. O'NEIL</b><b style="color:#7b1fa2">55%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:55%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">BENJAMIN GRAHAM</b><b style="color:#7b1fa2">53%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:53%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">JAMES P. O'SHAUGHNESSY</b><b style="color:#7b1fa2">40%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:40%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">WARREN BUFFETT</b><b style="color:#7b1fa2">68%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:68%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">PETER LYNCH</b><b style="color:#7b1fa2">37%</b></div><div style="background:#eee3f3;border-radius:2px;height:5px;margin-top:2px"><div style="background:#7b1fa2;height:5px;border-radius:2px;width:37%"></div></div></div><div style="flex:1 1 44%;min-width:44%"><div style="display:flex;justify-content:space-between;font-size:10px"><b style="letter-spacing:0.3px">CUSTOM</b><b style="color:#8a94a6">not set</b></div><div style="background:#e6e9ef;border-radius:2px;height:5px;margin-top:2px"></div></div></div>
+        <div class="chartcap" style="margin-top:8px">Buffett 68% is the strongest fit (quality / returns), then O’Neil 55% and Graham 53%; O’Shaughnessy 40% and Lynch 37% are weaker — the pattern of a high-return, richly priced growth stock. The Custom screen is not set (empty bar, not 0%).</div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Source note:</b> MarketSmith India screenshots supplied by the author on 17 Oct 2026 (evaluation page and summary page). Snapshot-time differences versus other vendors are flagged in §08.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec18"><span class="num">18</span><h2>Elliott Wave Analysis (MotiveWave)</h2></div>
+    <div class="cols">
+      <div class="imgwrap" style="flex:1"><img src="JYOTICNC_chart.jpg" alt="Jyoti CNC Automation MotiveWave 1H and 1D Elliott Wave chart, 17 Oct 2026" /></div>
+    </div>
+    <div class="microhead" style="margin-top:12px">Wave Structure Interpretation</div>
+    <table class="t prose"><tr><th style="text-align:left">Item</th><th>Stance</th><th style="text-align:left">Read</th></tr><tr><td style="text-align:left">1D Chart</td><td><span class="badge b-warn">Mixed +1 / −1</span></td><td style="text-align:left">Price ₹997.20 (chart label ₹1,008.00 above). Trend Momentum Buy 0 / Sell 0 with gauges <b>+1 short-term / −1 long-term</b> (mixed). Resistance <b>₹1,047</b> (+5.0%), support <b>₹943</b> (−5.4%). Count (my read of the user’s labels): a large a–b–c decline to a trough around June 2026 (the ₹580.10 52-week low), then a five-wave advance 1–2–3–4–5 to <b>₹1,134.6</b> (orange (1)), with RSI <b>87</b> at that top; now a wave (2) correction whose early A / B levels read about ₹1,030(?) and ₹1,080 and whose falling sub-structure (circled i near ₹970, ii, with projected iii–iv–v) points toward C. The daily A / B levels are approximate.</td></tr><tr><td style="text-align:left">1H Chart</td><td><span class="badge b-bear">Bearish −3 / −3</span></td><td style="text-align:left">Gauges <b>−3 short / −3 long</b> (bearish), Buy 0 / Sell 0. Resistance <b>₹1,024</b> (+2.7%), support <b>₹929</b> (−6.8%). The 5 sits at the ₹1,134 top (RSI extreme), A near ₹1,010, B near ₹1,075 (approximate), and the C leg is under way with circled i–ii–iii–iv–v projected into early November; the ₹971.5 low carries <b>RSI 19.1</b> (−2.6%). The ₹971.5 → ~₹790 projection is the labelled C leg, not a certainty.</td></tr><tr><td style="text-align:left">Fibonacci Target</td><td><span class="badge b-bear">₹791.92 · −20.6%</span></td><td style="text-align:left">‘2 vs 1’ 61.8% = <b>₹791.92</b> is the projected wave (2) / C target, about <b>21% below ₹997.20</b> (my arithmetic: 791.92 ÷ 997.20 − 1 = −20.6%). It is consistent with a 61.8% retracement of a ₹580.10 → ₹1,134.6 wave (1): 1,134.6 − 0.618 × 554.5 = 791.9 (my check). It is a target for a correction that has not yet shown that depth.</td></tr><tr><td style="text-align:left">Cross-check: TipRanks</td><td><span class="badge b-neut">Mixed</span></td><td style="text-align:left">TipRanks technicals (page of 16 Oct 07:09, likely the 15 Oct close): RSI(14) <b>49.3</b>, MACD 9.24 (buy), ADX 19.9 (weak trend), Stochastic 33.75, ROC −7.77 (sell); SMA5 / 10 / 20 / 50 / 100 / 200 at ₹1,012.6 / 1,030.0 / <b>1,042.2</b> / <b>980.1</b> / 856.1 / 834.2; overall Buy (10 bullish, 5 neutral, 7 bearish), short-term Sell (price below SMA10 and SMA20). <b>That page has an internal price inconsistency</b> (₹803 in text vs ~₹1,000 implied by its averages), so use it as a cross-check only. It agrees with the chart: RSI has cooled from 87 to ~49; SMA20 ₹1,042 sits near the ₹1,047 / ₹1,024 resistance; SMA50 ₹980 and the ₹943 / ₹929 supports bracket the price; price is ~19.5% above SMA200 ₹834 (my arithmetic; MarketSmith says ~17%).</td></tr><tr><td style="text-align:left">Volume &amp; Price</td><td><span class="badge b-neut">Quiet bounce +1.82%</span></td><td style="text-align:left">16 Oct close ₹997.20 (+₹17.80) from ₹979.40 on volume 442,775 (−65% vs average, MarketSmith). A low-volume bounce inside a falling hourly structure; one day cannot tell a pause from a reversal. The cause of the early-October decline is <b>not found</b>.</td></tr><tr><td style="text-align:left">Count Status</td><td><span class="badge b-neut">One count</span></td><td style="text-align:left">This is <b>one labelled count</b> and the wave labels are the user’s own; it is an interpretation, not a forecast. Alternative: the correction is shallower or already done (a sideways wave (2) or flat), the ₹1,134.6 top is a wave-3 of a larger advance, or the larger drop to ₹791.92 never occurs because a new high comes first. The A / B values quoted above are approximate readings of the labels.</td></tr><tr><td style="text-align:left">Bull Case</td><td><span class="badge b-bull">Possible</span></td><td style="text-align:left">Daily gauge +1, price above the ₹943 / ₹929 supports and above the SMA50 / 100 / 200 cluster; RSI reset from 87 to ~49; a close above <b>₹1,047</b> would invalidate the immediate C-leg read and open a retest of <b>₹1,075–1,135</b>; the fundamental backdrop (₹4,848 Cr order book, standalone margins 27–29%, a new CRISIL A+) supports dips.</td></tr><tr><td style="text-align:left">Bear Case</td><td><span class="badge b-bear">Live</span></td><td style="text-align:left">Both hourly gauges −3 / −3; price below the 1H resistance ₹1,024; a blow-off RSI 87 followed by a lower-high sequence; ADX 19.9 (weak trend); P/E 70x leaves little cushion; a projected C leg to ₹791.92 (−20.6%) would still leave the stock above the ₹580 low and ~36% above the old pre-rally base (my arithmetic: 791.92 ÷ 580.10 − 1 = +36.5%).</td></tr><tr><td style="text-align:left">Invalidation</td><td><span class="badge b-warn">Levels</span></td><td style="text-align:left">Down: a break of <b>₹929 / ₹943</b> confirms the leg (next ₹791.92). Up: <b>₹1,047</b> first, then <b>₹1,075</b>; a close above ₹1,047 voids the immediate C-leg read. Counts change; use levels, not labels.</td></tr></table>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec19"><span class="num">19</span><h2>Recommendation, Support &amp; Resistance</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fff6e8;border-color:#e07c00;flex:1.2">
+        <div class="plab" style="color:#e07c00">★ Recommendation</div>
+        <div class="pval" style="color:#e07c00;font-size:19px">NO BUY CALL — RICH, ROLLING OVER, HURON UNRESOLVED; DEFINE LEVELS</div>
+        <p style="font-size:11.4px;margin-top:6px">Not a buy call. The business case is real: a ₹4,848 Cr order book (~2.1x revenue), standalone margins of 27–29%, domestic 5-axis import substitution, a 6,000 → 16,000 capacity ramp, a fresh CRISIL A+/Stable (15 Oct) and ~30% growth guided. Against that, the stock trades at P/E 70.5, P/B 11.3x and EV/EBITDA ~44x with a PEG of ≈ 11.2 / 1.9 / 2.3 on three bases (trailing growth is negative, so not meaningful; §09); consolidated profit fell 20% in Q1 while standalone rose 21%; the Huron probe carries ₹501.7 Cr of parent exposure and a going-concern note; 13.08% of shares were pledged at 30 Jun; FIIs fell from 9.9% to 5.3%; cash conversion is poor; and a +96% rally from ₹580 has rolled over from an RSI-87 top with hourly gauges at −3 / −3 and a labelled C-leg target of ₹791.92 (−20.6%). Both sides are live; the setup rewards defined levels over conviction.</p>
+        <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#e8f5e9;border-radius:5px"><b style="color:#2e7d32">● Constructive:</b> a close above <b>₹1,047</b> (1D resistance), then <b>₹1,075</b> and a retest of <b>₹1,134.6</b>, would void the immediate C-leg read; holding <b>₹943 / ₹929</b> keeps the daily structure intact; Q2 FY27 showing Huron licences released and consolidated margin back toward 25% would address the main bear point.</div>
+        <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#fce4ec;border-radius:5px"><b style="color:#c62828">● Caution:</b> a break of <b>₹929 / ₹943</b> confirms the correction leg toward <b>₹791.92</b>; rejection at ₹1,024 / ₹1,047 on rising volume; a further pledge or a Huron escalation (charges, new seizures, licence refusals).</div>
+        <div style="font-size:11.3px;margin-top:6px"><b>Catalysts:</b> Q2 FY27 results (date not announced; Q1 was 7 Aug, early-to-mid November plausible — my inference); Sep-26 shareholding and pledge filings (due by ~21 Oct); Huron export licences and the release of ~₹100 Cr of deferred revenue; confirmation that the 10,000-machine plant and foundry are commissioned; order intake against ₹2,500–3,000 Cr; the probe’s outcome; management’s ~25% margin recovery. No order wins since July were found.</div>
+      </div>
+      <div class="panel" style="border-color:#1565c0">
+        <div class="plab" style="color:#1565c0">🔹 Key Support Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>₹980</td><td style="text-align:left">TipRanks SMA50 ₹980.1 (−1.7%; page has a price inconsistency)</td><td><span class='badge b-neut'>Near</span></td></tr><tr><td>₹971.5</td><td style="text-align:left">1H low · RSI 19.1 (−2.6%)</td><td><span class='badge b-neut'>Near</span></td></tr><tr><td>₹943</td><td style="text-align:left">1D support (−5.4%)</td><td><span class='badge b-bull'>Key</span></td></tr><tr><td>₹929</td><td style="text-align:left">1H support (−6.8%) — invalidation</td><td><span class='badge b-bear'>Floor</span></td></tr><tr><td>₹791.92</td><td style="text-align:left">‘2 vs 1’ 61.8% projected (2)/C target (−20.6%)</td><td><span class='badge b-bear'>Target</span></td></tr>
+        </table>
+      </div>
+      <div class="panel" style="border-color:#2e7d32">
+        <div class="plab" style="color:#2e7d32">🔸 Key Resistance Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>₹1,008</td><td style="text-align:left">chart label above price (+1.1%)</td><td><span class='badge b-neut'>Near</span></td></tr><tr><td>₹1,024</td><td style="text-align:left">1H resistance (+2.7%)</td><td><span class='badge b-bull'>Signal</span></td></tr><tr><td>₹1,047</td><td style="text-align:left">1D resistance (+5.0%)</td><td><span class='badge b-bull'>Signal</span></td></tr><tr><td>₹1,075</td><td style="text-align:left">approx. B-wave high (+7.8%)</td><td><span class='badge b-neut'>Level</span></td></tr><tr><td>₹1,134.6</td><td style="text-align:left">52-week high · RSI 87 (+13.8%)</td><td><span class='badge b-neut'>Top</span></td></tr><tr><td>₹1,058 / ₹1,275</td><td style="text-align:left">S&amp;P average / high target (+6.1% / +27.9%)</td><td><span class='badge b-neut'>Broker</span></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="notebox "><b>Source quality:</b> primary documents read: the FY26 annual report (BSE, filed 8 Sep 2026), the company investor presentation and the Q1 FY27 call (7 Aug 2026; transcript filed 14 Aug, machine-generated, with errors such as standalone revenue shown as ₹107 Cr), the CRISIL rationale of 15 Oct 2026, Infomerics of 10 Feb and 21 Apr 2026, the Q1 FY27 shareholding pattern (30 Jun 2026) and Screener (16/17 Oct 2026). Secondary: Trendlyne, StockAnalysis, TipRanks, indexpe.in, IMTMA figures via summaries, MarketSmith India and MotiveWave screenshots supplied by the author. News, aggregator and Substack items — pledge movements, Huron detail (€3.02 mn / €4.0 mn, ₹67 Cr, ~₹100 Cr), the price path — are secondary and <b>must be checked against exchange filings</b>; the <b>September pledge balance and the Sep-26 shareholding are unverified</b>. India Ratings was not found. Conflicts are shown, not resolved.</div>
+  </div>
+
+  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, BSE, Screener.in, MarketSmith India, the CRISIL Ratings (15 Oct 2026) and Infomerics (10 Feb and 21 Apr 2026) rating rationales, the company’s FY26 annual report, investor presentation and Q1 FY27 call transcript, the Q1 FY27 shareholding pattern, and other public web sources as of 17 Oct 2026, and from the author's own MotiveWave Elliott Wave analysis. Figures marked "my arithmetic" are the author's calculations. Several data points conflict across sources and are shown, not resolved. Price, volume and financial figures should be independently verified. Ashoke Kumar Seth is not a SEBI-registered research analyst. This is not investment advice; always consult a licensed financial adviser before making investment decisions. All figures in ₹ Crore unless stated otherwise.</div>
+  <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice. &nbsp;|&nbsp; <span style="opacity:0.6">Template v6</span></div>
+</div>
+</div>
+<script>
+// In-report "New" tags: mark recently-changed content post-publish, auto-hide after 3 days.
+// Usage: <span class="new-tag" data-new-since="YYYY-MM-DD">New</span> right next to the changed content.
+(function(){
+  var NEW_DAYS = 3;
+  function isRecent(iso){
+    if (!iso) return false;
+    var t = Date.parse(iso + "T00:00:00");
+    if (isNaN(t)) return false;
+    var age = Date.now() - t;
+    return age >= 0 && age < NEW_DAYS * 86400000;
+  }
+  var tags = document.querySelectorAll('.new-tag[data-new-since]');
+  for (var i = 0; i < tags.length; i++){
+    if (!isRecent(tags[i].getAttribute('data-new-since'))) tags[i].style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
