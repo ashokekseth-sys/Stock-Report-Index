@@ -1,0 +1,1000 @@
+<!-- TEMPLATE VERSION: v6 (8 Sep 2026) — Replaced the single "Report Version" cover-page field with a growable "Revision History" table (Date | Version columns, one row per version so far, e.g. "29 Jul 2026 | v1 — Original", "8 Sep 2026 | v2 — Updated") — per user instruction "because there will be more changes": a fixed two-line display would not have scaled to a 3rd/4th future refresh, a table does. Sits directly below the "Generated On" meta-block. On any future refresh, append one new <tr> row with that refresh's date and next integer version — never overwrite/remove prior rows. -->
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0f1b33">
+<title>Manappuram Finance — Equity Research Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#ffffff; font-family:'Source Sans 3',Arial,sans-serif; color:#2a3342; font-size:12.5px; line-height:1.5; }
+  .page-wrap { background:#e9edf3; display:flex; justify-content:center; padding:24px 12px 40px; }
+  .page { width:1400px; max-width:100%; margin:0; background:#fff; box-shadow:0 6px 24px rgba(26,42,74,0.18); }
+  /* header */
+  .hdr { background:linear-gradient(135deg,#101c36 0%,#1a2a4a 55%,#2b4570 100%); border-bottom:4px solid; border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1; color:#fff; padding:16px 26px 13px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .hdr .meta { font-size:10.5px; letter-spacing:0.6px; color:#9fb0cf; text-transform:uppercase; }
+  .hdr h1 { font-size:26px; font-weight:900; letter-spacing:0.2px; margin:2px 0 3px; }
+  .hdr .tagline { font-size:11.5px; color:#c7d2e8; }
+  .hdr .pricebox { text-align:right; }
+  .hdr .price { font-size:26px; font-weight:900; }
+  .hdr .chg { color:#ff8a80; font-weight:700; font-size:14px; }
+  .hdr .sub { font-size:10.5px; color:#9fb0cf; margin-top:3px; }
+  .tagstrip { display:flex; gap:0; border-bottom:1px solid #dde2ea; }
+  .tagstrip div { flex:1; text-align:center; padding:6px 4px; font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; border-right:1px solid #dde2ea; }
+  .tagstrip div:last-child { border-right:none; }
+  /* sections */
+  .sec { padding:16px 26px 20px; border-bottom:1px solid #e4e8ef; }
+  .sec-title { display:flex; align-items:center; gap:9px; margin-bottom:12px; padding-bottom:7px; border-bottom:2px solid #f0b429; }
+  .sec-title .num { background:linear-gradient(135deg,#f7b733,#e67e22); color:#1a2a4a; font-size:11px; font-weight:900; padding:2px 7px; border-radius:3px; }
+  .sec-title h2 { font-size:14.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#1a2a4a; }
+  .microhead { font-size:10px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#b07716; margin:10px 0 6px; }
+  /* generic table */
+  table.t { width:100%; border-collapse:collapse; }
+  table.t th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase; padding:6px 9px; text-align:right; font-weight:700; }
+  table.t th:first-child { text-align:left; }
+  table.t td { padding:5.5px 9px; border-bottom:1px solid #edf0f5; text-align:right; font-size:12px; }
+  table.t td:first-child { text-align:left; font-weight:600; }
+  table.t tr:nth-child(even) td { background:#f8f9fb; }
+  .pos { color:#2e7d32; font-weight:700; } .neg { color:#c62828; font-weight:700; }
+  .warn { color:#f57f17; font-weight:700; }
+  /* tiles */
+  .tiles { display:flex; gap:10px; }
+  .tile { flex:1; border:1px solid #dde2ea; border-top:3px solid #2b4570; border-radius:6px; padding:9px 12px; background:linear-gradient(180deg,#fdfefe,#f7f9fc); }
+  .tile .lab { font-size:9.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#6b7587; }
+  .tile .val { font-size:19px; font-weight:900; margin:2px 0 1px; color:#1a2a4a; }
+  .tile .note { font-size:10.3px; color:#5a6475; line-height:1.35; }
+  /* callout notes */
+  .notebox { border-left:4px solid #f9a825; background:#fffbe8; padding:9px 13px; font-size:11.8px; margin-top:11px; border-radius:0 5px 5px 0; }
+  .notebox.green { border-left-color:#2e7d32; background:#f0f7f0; }
+  .notebox.red { border-left-color:#c62828; background:#fdf0f0; }
+  .notebox.blue { border-left-color:#1565c0; background:#eef4fc; }
+  .badge { display:inline-block; font-size:9.5px; font-weight:900; letter-spacing:0.5px; padding:1.5px 7px; border-radius:9px; text-transform:uppercase; vertical-align:middle; }
+  .new-tag { display:inline-block; font-size:9px; font-weight:900; letter-spacing:0.7px; text-transform:uppercase; background:#f0b429; color:#3d2c00; padding:2px 6px; border-radius:3px; line-height:1.2; vertical-align:middle; margin-left:6px; }
+  .b-bull { background:#e8f5e9; color:#2e7d32; } .b-bear { background:#ffebee; color:#c62828; }
+  .b-neut { background:#e3f2fd; color:#1565c0; } .b-warn { background:#fff9c4; color:#f57f17; }
+  .cols { display:flex; gap:20px; }
+  .panel { flex:1; border:1px solid #dde2ea; border-radius:6px; padding:12px 15px; }
+  .panel .plab { font-size:9.5px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#6b7587; margin-bottom:3px; }
+  .panel .pval { font-size:21px; font-weight:900; }
+  .chartcap { font-size:10px; color:#6b7587; margin-top:5px; line-height:1.4; }
+  .imgwrap img { width:100%; border-radius:5px; border:1px solid #23304a; display:block; }
+  .footer-blue { border-top:3px solid #f0b429; background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570); color:#fff; text-align:center; padding:10px 16px; font-size:11px; letter-spacing:0.4px; }
+  .disclaim { font-size:9.8px; color:#6b7587; padding:12px 26px; line-height:1.5; }
+  table.t[style*='--pad'] td { padding:9px; }
+  .compact { padding:13px 26px 14px; }
+  .compact table.t td { padding:3.5px 8px; font-size:11.3px; }
+  .compact table.t th { padding:5px 8px; }
+  .compact .notebox { padding:7px 11px; font-size:10.8px; margin-top:0; }
+  .compact .microhead { margin:8px 0 4px; }
+  .compact .tile { padding:6px 10px; }
+  .compact .tile .val { font-size:15.5px; margin:1px 0 0; }
+  .compact .tile .note { font-size:9.6px; }
+  .compact .cols { gap:14px; }
+  table.fit { width:100%; table-layout:fixed; }
+  table.fit td, table.fit th { padding:3.5px 11px; white-space:nowrap; overflow:hidden; }
+  table.fit th:first-child, table.fit td:first-child { width:24%; }
+  .krow { display:flex; justify-content:space-between; align-items:baseline; gap:8px; border-bottom:1px solid #edf0f5; padding:5px 2px; }
+  .krow .klab { color:#6b7587; font-weight:900; font-size:9.3px; text-transform:uppercase; letter-spacing:0.5px; flex:0 0 auto; }
+  .krow .kval { font-weight:900; color:#1a2a4a; font-size:12.5px; text-align:right; }
+  .krow .kval small { display:block; font-weight:600; color:#6b7587; font-size:9.3px; }
+  .mininote { font-size:10px; color:#5a6475; line-height:1.45; margin-top:8px; padding:7px 9px; border-radius:4px; }
+  table.peer { width:100%; border-collapse:collapse; }
+  table.peer th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:8.6px; letter-spacing:0.3px; text-transform:uppercase; padding:4px 3px; text-align:right; }
+  table.peer th:first-child { text-align:left; }
+  table.peer td { padding:4px 3px; border-bottom:1px solid #edf0f5; text-align:right; font-size:10px; }
+  table.peer td:first-child { text-align:left; font-weight:700; }
+
+    .sector-wheel-compact{width:600px;height:700px;margin:50px auto 0 110px;overflow:visible}
+    .sector-wheel-compact > div{width:540px!important;transform:scale(0.93);transform-origin:top left}
+    .sector-wheel-compact .mt-16,.sector-wheel-compact .md\:mt-\[80px\]{margin-top:0!important}
+    .sector-wheel-compact .mt-8{display:none}
+    .sector-wheel-compact .relative{position:relative}
+    .sector-wheel-compact .absolute{position:absolute}
+    .sector-wheel-compact .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel-compact .pointer-events-none{pointer-events:none}
+    .sector-wheel-compact .z-10{z-index:10}
+    .sector-wheel-compact .flex{display:flex}
+    .sector-wheel-compact .flex-col{flex-direction:column}
+    .sector-wheel-compact .items-center{align-items:center}
+    .sector-wheel-compact .items-start{align-items:flex-start}
+    .sector-wheel-compact .items-end{align-items:flex-end}
+    .sector-wheel-compact .justify-center{justify-content:center}
+    .sector-wheel-compact .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel-compact .leading-none{line-height:1}
+    .sector-wheel-compact .font-black{font-weight:900}
+    .sector-wheel-compact .opacity-90{opacity:.9}
+    .sector-wheel-compact .overflow-visible{overflow:visible}
+    .sector-wheel-compact .aspect-square{aspect-ratio:1/1}
+    .sector-wheel-compact .w-full,.sector-wheel-compact .md\:w-full{width:100%}
+    .sector-wheel-compact .h-full{height:100%}
+    .sector-wheel-compact .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel-compact .ml-\[1px\]{margin-left:1px}
+    .sector-wheel-compact .mr-\[1px\]{margin-right:1px}
+    .sector-wheel-compact .w-\[86vw\]{width:100%}
+    .sector-wheel-compact .max-w-\[540px\]{max-width:540px}
+    .sector-wheel-compact .max-w-\[760px\]{max-width:540px}
+    .sector-wheel-compact .w-\[72px\]{width:72px}
+    .sector-wheel-compact .h-\[1px\]{height:1px}
+    .sector-wheel-compact .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel-compact .text-\[16px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel-compact .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel-compact .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel-compact .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel-compact .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel-compact .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel-compact .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel-compact .gap-\[7px\]{gap:7px}
+    .sector-wheel-compact .gap-\[8px\]{gap:8px}
+    .sector-wheel-compact svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .relative{position:relative}
+    .sector-wheel .absolute{position:absolute}
+    .sector-wheel .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel .pointer-events-none{pointer-events:none}
+    .sector-wheel .z-10{z-index:10}
+    .sector-wheel .flex{display:flex}
+    .sector-wheel .flex-col{flex-direction:column}
+    .sector-wheel .items-center{align-items:center}
+    .sector-wheel .items-start{align-items:flex-start}
+    .sector-wheel .items-end{align-items:flex-end}
+    .sector-wheel .justify-center{justify-content:center}
+    .sector-wheel .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel .leading-none{line-height:1}
+    .sector-wheel .font-black{font-weight:900}
+    .sector-wheel .opacity-90{opacity:.9}
+    .sector-wheel .overflow-visible{overflow:visible}
+    .sector-wheel .aspect-square{aspect-ratio:1/1}
+    .sector-wheel .w-full,.sector-wheel .md\:w-full{width:100%}
+    .sector-wheel .h-full{height:100%}
+    .sector-wheel .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel .mt-16{margin-top:64px}
+    .sector-wheel .mt-8{margin-top:32px}
+    .sector-wheel .md\:mt-10{margin-top:40px}
+    .sector-wheel .md\:mt-\[80px\]{margin-top:64px}
+    .sector-wheel .ml-\[1px\]{margin-left:1px}
+    .sector-wheel .mr-\[1px\]{margin-right:1px}
+    .sector-wheel .w-\[86vw\]{width:100%}
+    .sector-wheel .max-w-\[540px\]{max-width:540px}
+    .sector-wheel .max-w-\[760px\]{max-width:540px}
+    .sector-wheel .w-\[72px\]{width:72px}
+    .sector-wheel .h-\[1px\]{height:1px}
+    .sector-wheel .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel .text-\[16px\]{font-size:15px}
+    .sector-wheel .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel .gap-\[7px\]{gap:7px}
+    .sector-wheel .gap-\[8px\]{gap:8px}
+    .sector-wheel svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .hub-name{font-family:'Fraunces',Georgia,serif}
+
+  /* ===================== RESPONSIVE / MOBILE ===================== */
+  .mobile-jump { display:none; }
+  @media (max-width: 860px) {
+    html { -webkit-text-size-adjust:100%; }
+    body { overflow-x:hidden; }
+    .page { width:100% !important; max-width:100% !important; }
+    .sec, .hdr { padding-left:16px !important; padding-right:16px !important; }
+    .disclaim { padding-left:16px !important; padding-right:16px !important; }
+    .footer-blue { padding-left:16px !important; padding-right:16px !important; }
+
+    .hdr { flex-direction:column !important; align-items:stretch !important; gap:10px; }
+    .hdr .pricebox { text-align:left !important; }
+
+    .tagstrip { flex-direction:column !important; }
+    .tagstrip div { border-right:none !important; border-bottom:1px solid #dde2ea; text-align:left !important; padding:8px 4px !important; }
+    .tagstrip div:last-child { border-bottom:none; }
+
+    .mobile-jump {
+      display:flex !important; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      position:sticky; top:0; z-index:20; background:#1a2a4a; padding:10px 12px;
+      border-bottom:3px solid #f0b429; white-space:nowrap; scrollbar-width:none;
+    }
+    .mobile-jump::-webkit-scrollbar { display:none; }
+    .mobile-jump a {
+      color:#c7d2e8; font-size:11.5px; font-weight:700; text-decoration:none;
+      padding:6px 10px; border-radius:14px; background:rgba(255,255,255,0.08); flex:0 0 auto;
+    }
+    .sec-title { scroll-margin-top:56px; }
+
+    .cols { flex-wrap:wrap !important; }
+    .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
+    .cols { row-gap:16px; }
+
+    .tiles { flex-wrap:wrap !important; row-gap:8px; }
+    .tile { flex:1 1 45% !important; min-width:0 !important; }
+
+    div[style*="flex:1 1 44%"] { flex:1 1 100% !important; }
+    div[style*="flex:1 1 30%"] { flex:1 1 45% !important; }
+
+    table.t:not(.prose), table.fit, table.peer {
+      display:table !important; width:100% !important; table-layout:fixed !important;
+      white-space:normal !important; overflow-x:visible !important; max-width:100%;
+    }
+    table.t:not(.prose) td, table.t:not(.prose) th,
+    table.fit td, table.fit th,
+    table.peer td, table.peer th { white-space:normal !important; word-wrap:break-word; padding:4px 3px !important; font-size:9.6px !important; }
+    table.peer td:first-child, table.peer th:first-child { width:26% !important; }
+    table.prose { display:block !important; }
+    table.prose tr:first-child { display:none !important; }
+    table.prose tr { display:block !important; padding:10px 0 !important; border-bottom:1px solid #e4e8ef; }
+    table.prose tr:last-child { border-bottom:none !important; }
+    table.prose td { display:inline !important; padding:0 !important; border:none !important; text-align:left !important; white-space:normal !important; width:auto !important; word-wrap:break-word; }
+    table.prose td:first-child { font-weight:900; font-size:13px; color:#1a2a4a; }
+    table.prose td:nth-child(2) { margin-left:8px; }
+    table.prose td:nth-child(3) { display:block !important; margin-top:6px; font-size:12.5px; line-height:1.55; color:#2a3342; }
+
+    .metric-strip { flex-wrap:wrap !important; }
+    .metric-strip > div { flex:1 1 50% !important; box-sizing:border-box; border-bottom:1px solid #e7ebf1 !important; }
+    .metric-strip > div:nth-child(even) { border-right:none !important; }
+
+    .krow { flex-wrap:wrap; align-items:flex-start !important; }
+    .krow .klab { flex:1 1 auto !important; }
+    .krow .kval { display:contents !important; }
+    .krow .kval small { flex:1 1 100% !important; order:3; display:block !important; text-align:left !important; margin-top:3px !important; }
+
+    h1 { font-size:21px !important; }
+    .price { font-size:22px !important; }
+
+    .sector-wheel-compact { width:270px !important; height:290px !important; margin:20px auto 0 32px !important; overflow:visible !important; }
+    .sector-wheel-compact > div { width:540px !important; transform:scale(0.5); transform-origin:top left; }
+  }
+
+  @media (max-width: 480px) {
+    .tile { flex:1 1 100% !important; }
+    div[style*="flex:1 1 45%"] { flex:1 1 100% !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#sec01">Skip to report</a>
+<style>
+  :root{
+    --navy:#1a2a4a;
+    --navy-2:#243a63;
+    --gold:#c9a24b;
+    --ink:#1a2a4a;
+    --muted:#5c6b85;
+    --hair:#dde2ea;
+    --page-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .cover-wrap{
+    font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    background:#e9edf3;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px;
+  }
+  .cover-page{
+    width:1400px;
+    max-width:100%;
+    min-height:900px;
+    background:var(--page-bg);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 6px 24px rgba(26,42,74,0.18);
+    overflow:hidden;
+  }
+  .top-band{
+    height:14px;
+    background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--gold) 100%);
+    flex-shrink:0;
+  }
+  .brand-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:26px 56px 0 56px;
+    flex-shrink:0;
+  }
+  .brand-bar .doc-type{
+    font-size:12px;
+    letter-spacing:3px;
+    color:var(--muted);
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .brand-bar .doc-date{
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.4px;
+  }
+  .main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    padding:36px 60px 40px 60px;
+  }
+  .logo-wrap{
+    width:auto;
+    max-width:92%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:44px;
+  }
+  .logo-wrap img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .text-logo{
+    font-size:clamp(20px, 6.2vw, 40px);
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--navy);
+    white-space:normal;
+    word-break:break-word;
+    text-align:center;
+    line-height:1.15;
+  }
+  .text-logo span{ color:var(--gold); }
+  .kicker{
+    font-size:15px;
+    letter-spacing:6px;
+    color:var(--gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  h1.report-title{
+    font-size:46px;
+    letter-spacing:1px;
+    color:var(--navy);
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.15;
+  }
+  .divider{
+    width:120px;
+    height:3px;
+    background:var(--gold);
+    margin:26px 0;
+  }
+  .company-name{
+    font-size:34px;
+    font-weight:700;
+    color:var(--navy);
+    letter-spacing:0.3px;
+  }
+  .ticker-row{
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 14px;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .ticker-chip{ text-align:center; }
+  .ticker-chip{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:var(--navy);
+    background:#eef1f7;
+    border:1px solid var(--hair);
+    border-radius:4px;
+    padding:6px 14px;
+  }
+  .sector-line{
+    margin-top:28px;
+    font-size:14px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+    font-style:italic;
+  }
+  .meta-block{
+    margin-top:64px;
+    display:flex;
+    gap:70px;
+    justify-content:center;
+  }
+  .rev-history{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .rev-history-title{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:8px;
+  }
+  .rev-history-table{ border-collapse:collapse; font-size:13px; }
+  .rev-history-table th{
+    text-align:left; padding:2px 28px 4px 0; font-size:10px; letter-spacing:1px;
+    text-transform:uppercase; color:var(--muted); font-weight:600;
+    border-bottom:1px solid #e2e6ee;
+  }
+  .rev-history-table td{ white-space:nowrap; padding:4px 28px 4px 0; color:var(--navy); font-weight:600; }
+  .rev-history-table td.rev-note{ white-space:normal; color:var(--muted); font-weight:400; }
+  .meta-item{
+    text-align:center;
+  }
+  .meta-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .meta-value{
+    font-size:16px;
+    color:var(--navy);
+    font-weight:700;
+  }
+  .prepared-by{
+    margin-top:60px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+  }
+  .prepared-by strong{
+    color:var(--navy);
+  }
+  .footer{
+    flex-shrink:0;
+    background:#ffffff;
+    border-top:1px solid var(--hair);
+    padding:16px 56px;
+    text-align:center;
+  }
+  .footer p{
+    font-size:10.5px;
+    line-height:1.6;
+    color:#8992a6;
+    letter-spacing:0.2px;
+  }
+  .footer strong{
+    color:var(--muted);
+  }
+  @media (max-width: 860px) {
+    .footer { padding:14px 20px !important; text-align:left !important; }
+    .footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .main { padding-top:14px !important; padding-bottom:14px !important; }
+    .logo-wrap { margin-bottom:20px !important; }
+    .meta-block { margin-top:30px !important; }
+  }
+  .bottom-band{
+    height:8px;
+    background:var(--navy);
+    flex-shrink:0;
+  }
+
+  /* a11y pass 1 Nov 2026 (Web Interface Guidelines) */
+  .skip-link{position:absolute;left:-9999px;top:0;background:#0f1b33;color:#fff;padding:8px 12px;z-index:100}
+  .skip-link:focus{left:8px;top:8px}
+  a:focus-visible{outline:2px solid #c9a24b;outline-offset:2px}
+  .sec-title{scroll-margin-top:56px}
+  table.t td,table.t th,table.peer td,table.peer th,.rev-history-table td{font-variant-numeric:tabular-nums}
+  h1,h2{text-wrap:balance}
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+  <div class="top-band"></div>
+  <div class="brand-bar"></div>
+  <div class="main">
+    <div class="logo-wrap"><div class="text-logo">MANAPPURAM <span>FINANCE</span></div></div>
+    <div class="kicker">Equity Research Report</div>
+    <h1 class="report-title">Manappuram Finance Limited</h1>
+    <div class="divider"></div>
+    <div class="ticker-row">
+      <div class="ticker-chip">NSE: MANAPPURAM</div>
+      <div class="ticker-chip">Mkt Cap: ₹27,543–30,566 Cr (sources differ)</div>
+      <div class="ticker-chip">Master Score: B (67)</div>
+      <div class="ticker-chip">Price: ₹325.40 (6 Nov 2026)</div>
+    </div>
+    <div class="sector-line">Financials — Gold-Loan NBFC (with Asirvad microfinance and a housing subsidiary)</div>
+    <div class="meta-block" style="display:block">
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
+      <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">7 November 2026</span>
+    </div>
+    <div class="rev-history">
+      <div class="rev-history-title">Revision History</div>
+      <table class="rev-history-table">
+        <tr><th scope="col">Date</th><th scope="col">Version</th></tr>
+        <tr><td>07/11/26</td><td class="rev-note">v1 &mdash; Original</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+    <p style="margin-bottom:4px;letter-spacing:0.5px;text-transform:uppercase;font-size:9.5px;color:#6b7587">Confidential — For Educational Use</p>
+    <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
+  </div>
+  <div class="bottom-band"></div>
+</div>
+</div>
+
+
+<div class="page-wrap">
+<div class="page">
+  <div class="hdr">
+    <div>
+      <div class="meta">NSE: MANAPPURAM &nbsp;·&nbsp; Financials — Gold-Loan NBFC &nbsp;·&nbsp; Valapad, Thrissur, Kerala</div>
+      <h1>Manappuram Finance Limited</h1>
+      <div class="tagline">Gold-loan NBFC with Bain Capital as joint-control investor &nbsp;·&nbsp; Q1 FY27 PAT ₹585 Cr vs ₹132 Cr (base effect) &nbsp;·&nbsp; Q2 FY27 results due 12 Nov &nbsp;·&nbsp; Price ₹325.40: header shows +12.6%, the Related table and Screener show about 0.18%</div>
+    </div>
+    <div class="pricebox">
+      <div class="price">₹325.40 <span class="chg" style="color:#ffcc80">&#9888; +₹36.40 (+12.6%)? conflict</span></div>
+      <div class="sub">Report date: 7 Nov 2026 (prices of 6 Nov close) &nbsp;|&nbsp; Mkt Cap: ₹27,543 Cr (MarketSmith) / ₹30,566 Cr (Screener) &nbsp;|&nbsp; Book Value: ₹171/sh (Screener) &nbsp;|&nbsp; MarketSmith Master Score: B (67)</div>
+    </div>
+  </div>
+  <div class="tagstrip">
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Sentiment: Mixed — brokers split, targets undated</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Asset quality: Stage 3 1.60% vs 3.00%, LTV up to 65.6%</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Valuation: P/E ~20x on depressed ROE 6–7%</div>
+    <div style="color:#2e7d32;background:#ecf6ec">&#9679; RS 67 · EPS Rating 73 · Master B</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Q2 FY27 not yet reported (12 Nov)</div>
+  </div>
+<nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Moat</a><a href="#sec03">Q1 &amp; Price</a><a href="#sec04">Gold-Loan Defaults</a><a href="#sec05">Sentiment</a><a href="#sec06">Sector Size</a><a href="#sec07">Shareholding</a><a href="#sec08">Performance</a><a href="#sec09">Financials</a><a href="#sec10">Ratios</a><a href="#sec11">Management</a><a href="#sec12">Guidance</a><a href="#sec13">Consensus</a><a href="#sec14">Volume</a><a href="#sec15">Sector Rotation</a><a href="#sec16">Peers</a><a href="#sec17">Risk</a><a href="#sec18">Technical Ratings</a><a href="#sec19">Elliott Wave</a><a href="#sec20">Recommendation</a></nav>
+  <div class="sec">
+    <div class="sec-title" id="sec01"><span class="num">01</span><h2>Company Overview</h2></div>
+    <div class="cols">
+      <div style="flex:1.5">
+        <div class="microhead">What They Do</div>
+        <p>Manappuram Finance is a Kerala-based <b>non-banking finance company that lends against gold jewellery</b>. In plain English: a customer pledges gold ornaments, the company lends a fraction of their value (the loan-to-value, LTV) and earns interest; if the loan is not repaid the gold can be auctioned. Gold price is therefore the key external variable. The group also owns <b>Asirvad Microfinance</b> (unsecured group loans, which went through a stress year in FY25–FY26) and a housing-finance arm, and has historically run vehicle and other loans. Since March 2026 <b>Bain Capital</b> is a joint-control investor (section 07).</p>
+        <p style="margin-top:7px">FY26 consolidated revenue was <b>₹9,509 Cr (−5%)</b> and EPS <b>₹11.72</b> (₹14.22 in FY25, ₹25.96 in FY24, MarketSmith). The latest reported quarter is <b>Q1 FY27 (Jun-26)</b>: revenue ₹3,034 Cr (+34%), PAT ₹585 Cr against ₹132 Cr a year earlier. That jump is largely a <b>base effect</b> from a very weak Q1 FY26. Trailing-twelve-month revenue is ₹10,285 Cr (MarketSmith) and TTM EPS ₹16.39 (my arithmetic from MarketSmith quarters; ~₹15.97 on Screener's quarters). Consolidated AUM was ₹69,635 Cr (+57% YoY), of which gold ₹57,006 Cr (+98%).</p>
+        <div class="notebox blue" style="margin-top:10px"><b>Key Competitive Advantage:</b> a long-established gold-loan franchise (5,328 branches at Jun-26), AA funding access (CRISIL) and a record of collateral recovery, now with a global private-equity partner. The flip side: gold is a volatile commodity, banks and Muthoot compete hard, the RBI's 1 Apr 2026 framework removes discretion on LTV and auctions, and AUM growth of +98% in gold is partly price-driven (section 04).</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">AUM Mix (30 Jun 2026)</div>
+        <svg role="img" aria-label="Donut chart: consolidated AUM mix, gold versus other" viewBox="0 0 480 290" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><path d="M240.0,8.0 A96,96 0 1 1 153.1,63.1 L202.0,86.1 A42,42 0 1 0 240.0,62.0 Z" fill="#1a2a4a" stroke="#fff" stroke-width="1"/><text x="309.0" y="108.0" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">82%</text><path d="M153.1,63.1 A96,96 0 0 1 240.0,8.0 L240.0,62.0 A42,42 0 0 0 202.0,86.1 Z" fill="#8fa3c4" stroke="#fff" stroke-width="1"/><text x="203.0" y="49.7" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">18%</text><text x="240" y="102" text-anchor="middle" font-size="13" font-weight="900" fill="#1a2a4a">₹69,635 Cr</text><text x="240" y="114" text-anchor="middle" font-size="6.5" letter-spacing="0.6" fill="#8a94a6">CONSOL AUM JUN-26</text><rect x="26" y="222" width="11" height="11" rx="2" fill="#1a2a4a"/><text x="43" y="232" font-size="10.5" fill="#2a3342" font-weight="700">Gold loans (consolidated)</text><text x="43" y="245" font-size="9.3" fill="#8a94a6">₹57,006 Cr · 81.9% (my arithmetic)</text><rect x="26" y="252" width="11" height="11" rx="2" fill="#8fa3c4"/><text x="43" y="262" font-size="10.5" fill="#2a3342" font-weight="700">Non-gold (Asirvad MFI, housing, vehicle, other)</text><text x="43" y="275" font-size="9.3" fill="#8a94a6">₹12,629 Cr · 18.1% (my arithmetic)</text></svg>
+      </div>
+      <div style="flex:1.05">
+        <div class="microhead">Revenue-Mix Diversification</div>
+        <div style="border:1px solid #dde2ea;border-radius:6px;padding:11px 14px;background:#f8f9fb">
+          <div style="font-size:15px;font-weight:900;color:#1a2a4a">Rated 2 / 5
+            <span style="letter-spacing:2px;color:#2e7d32;font-size:13px">&#9632;&#9632;</span><span style="letter-spacing:2px;color:#cdd5e0;font-size:13px">&#9632;&#9632;&#9632;</span></div>
+          <p style="font-size:11px;margin-top:5px">My rating, not a sourced one. Gold is ~82% of AUM (CRISIL: ~80%, versus 47% non-gold in Mar-24, so the book has become <i>more</i> concentrated, not less). Non-gold (~18%) is mostly Asirvad, where core microfinance AUM fell 12.9% YoY and the unit is moving into gold (₹2,344 Cr of its ₹7,188 Cr book).</p>
+          <p style="font-size:11px;margin-top:5px"><b>What would lift it:</b> stable asset quality in non-gold and a sustained non-gold share above ~25% (CRISIL's upgrade trigger centres on returns: ROMA above 4%). South India holds ~63% of branches (CRISIL).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec02"><span class="num">02</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
+    <table class="t prose">
+      <tr><th style="text-align:left" scope="col">Dimension</th><th scope="col">Rating</th><th style="text-align:left" scope="col">Commentary</th></tr>
+      <tr><td style="text-align:left">Brand / Trust</td><td><span class="badge b-bull">Strong</span></td><td style="text-align:left">A long-running gold-loan brand in a trust-sensitive product. Customer count was not found. Muthoot is the larger brand; Manappuram is the clear number two among NBFCs (Rajya Sabha reply, Mar-25: gold NPAs ₹436 Cr vs Muthoot ₹3,369 Cr, an absolute figure that mostly reflects book size and is not current).</td></tr>
+      <tr><td style="text-align:left">Network Effects</td><td><span class="badge b-warn">Weak / Branch-density</span></td><td style="text-align:left">No platform dynamics; the equivalent is branch density. 5,328 branches at Jun-26 with ~500 new gold branches planned in FY27 (an older Motilal note says 500–550). Tonnage ~67 t (single source, unverified).</td></tr>
+      <tr><td style="text-align:left">Switching Costs</td><td><span class="badge b-warn">Low</span></td><td style="text-align:left">A short collateralised loan is easy to take elsewhere; speed, proximity and trust hold customers. Banks offer lower rates to those who can wait.</td></tr>
+      <tr><td style="text-align:left">Cost / Scale Advantage</td><td><span class="badge b-warn">Moderate</span></td><td style="text-align:left">CRISIL AA/Stable (a notch below Muthoot's AA+ in my earlier Muthoot work, so funding costs are structurally higher). Q1 FY27 finance cost rose 48.95% against revenue +34%. Cost-to-income improved 920 bps YoY to 42.97% (cofacto.ai). NIM, yield, CRAR and credit cost for Q1 FY27 were <b>not found</b> (the NSE press release timed out).</td></tr>
+      <tr><td style="text-align:left">Regulation as a Barrier</td><td><span class="badge b-warn">Mixed</span></td><td style="text-align:left">RBI's gold-loan framework (effective 1 Apr 2026) applies to banks and NBFCs alike: LTV caps of 85% / 80% / 75% by loan size, auction reserve price 90% of market value (85% after two failed auctions). It narrows the NBFC edge. Manappuram's own guidance page still cited 75% (predates the final rules; conflict).</td></tr>
+      <tr><td style="text-align:left">Market Share</td><td><span class="badge b-warn">Conflicting</span></td><td style="text-align:left">Top-4 NBFC share of NBFC gold assets fell to ~70% (Mar-26) from ~90% (Mar-22) (AskFuzz via sector stream); public-sector banks ~62% of retail gold loan balances and NBFCs ~11% (Finnable, Dec-25) vs NBFCs 40% (Whalesbook). Bases differ and are not merged.</td></tr>
+    </table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">What This Moat Does NOT Protect Against</div>
+        <p style="font-size:11.3px">Branches and brand protect share, not the collateral. They do not stop gold falling, do not stop customers moving to banks, and do not protect the unsecured Asirvad book, which cost the group a loss-making year. Q1 FY27 gold AUM of +98% YoY is largely a function of gold price (higher gold per loan) and so is pro-cyclical: the same price driver lifts growth on the way up and strains LTV on the way down.</p>
+      </div>
+      <div style="flex:1">
+        <div class="notebox blue" style="margin-top:0"><b>Synthesis:</b> the moat is <b>real but narrower than a ~20x P/E would suggest</b>. The franchise is solid, but the return on equity (6–7%) is the lowest in its peer group (section 16), Asirvad is still recovering, and gold-price dependence is high. The market is paying for recovery that the Q1 base effect makes look larger than it is.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec03"><span class="num">03</span><h2>Q1 FY27 Results (Jun-26) &amp; the Price-Move Conflict</h2></div>
+    <div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Q1 FY27 Revenue</div><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹3,034 Cr</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">+34% YoY</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Net Profit (consol.)</div><div style="font-size:18px;font-weight:900;color:#2e7d32">₹585 Cr</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">vs ₹132 Cr · +341% (+47% in one source)</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">EPS (qtr)</div><div style="font-size:18px;font-weight:900;color:#2e7d32">₹6.23</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">vs ₹1.57 (MarketSmith)</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Finance Cost</div><div style="font-size:18px;font-weight:900;color:#e07c00">₹1,274 Cr</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">+48.95% YoY · 42.0% of revenue</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Consol. AUM</div><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹69,635 Cr</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">+57% YoY · +9.1% QoQ</div></div></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">Reading the Quarter — Big Headline, Low Base</div>
+        <div style="border:2px solid #e07c00;border-radius:8px;padding:10px 14px;background:linear-gradient(135deg,#fff8ee,#fffdf7);height:calc(100% - 24px)">
+          <p style="font-size:11.4px"><b>The good side:</b> PPOP ₹1,007 Cr (+49.5%), cost-to-income 42.97% (−920 bps), gold-loan-and-other PBT ₹754 Cr (+40%, a record), Asirvad back to a small profit (₹21 Cr PAT; segment PBT ₹27.7 Cr against a ₹437 Cr loss, which does not reconcile with the ₹269 Cr loss quoted for PAT), interim dividend ₹1.00 (₹0.50 before). Consolidated PAT rose 44.8% over Mar-26's ₹404 Cr (my arithmetic).</p>
+          <p style="font-size:11.4px;margin-top:7px"><b>The weaker side:</b> the YoY growth is flattering. Q1 FY26 was the trough of the Asirvad stress year (PAT ₹132 Cr, EPS ₹1.57), so +341% (Dhanam/Kotak Neo) is mostly a base effect; another source says +47%, which does not fit the arithmetic (585 ÷ 132 = 4.4x). A one-off ECL model revision cost ₹125 Cr (standalone ₹114 Cr). Finance cost grew faster than revenue (+49% vs +34%). The company also appointed a new MD &amp; CEO headline (Ashish Singh, upstox) that conflicts with other 2026 coverage naming V P Nandakumar (section 11).</p>
+          <p style="font-size:11.4px;margin-top:7px"><b>Source caveat:</b> the NSE press release / investor presentation was <b>not read</b>. NIM, yield, CRAR, NNPA and credit cost are not found. Q2 FY27 results are due <b>12 Nov 2026</b> (board also considers an interim dividend), so this report predates them.</p>
+          <div style="font-size:10.3px;color:#8a6d1f;background:#fff9e0;border-radius:4px;padding:6px 9px;margin-top:8px"><b>Gold AUM conflict kept:</b> ₹57,006 Cr (consolidated) vs ₹54,655 Cr (standalone) vs a headline of ₹50,953 Cr (+99%) whose date and basis are unclear (CRISIL used the same ₹50,953 Cr for the Mar-26 position, which fits a ~12% QoQ rise to ₹57,006 Cr).</div>
+        </div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">PRICE-MOVE CONFLICT — +12.6% in the header, about 0.18% elsewhere</div>
+<div class="krow"><span class="klab">6 Nov Close</span><span class="kval" style="color:#1a2a4a">₹325.40<small>MarketSmith header: +₹36.40 (+12.6%), volume 2,68,23,407 shares (+32.30% vs average)</small></span></div><div class="krow"><span class="klab">Other Sources</span><span class="kval" style="color:#c62828">about 0.18%<small>MarketSmith's own Related table shows 0.18%; Screener shows −0.18% for 6 Nov (an earlier intraday snapshot read ₹322, −1.46%)</small></span></div><div class="krow"><span class="klab">Implied Base</span><span class="kval" style="color:#e07c00">₹289<small>₹325.40 − ₹36.40 = ₹289.00 (my arithmetic), which would be a price from about a week earlier, not 5 Nov</small></span></div><div class="krow"><span class="klab">My Reading</span><span class="kval" style="color:#e07c00">Probably a one-WEEK change<small>As with earlier reports, the header figure is most likely a weekly change, so I do <b>not</b> treat it as a one-day move. Not confirmed against the NSE bhavcopy.</small></span></div><div class="krow"><span class="klab">5 Nov Context</span><span class="kval">Gold lenders rallied together<small>Manappuram ~+4.55%, Muthoot +4.1%, IIFL ~+3% as spot gold rose 1.9% to ~$4,135. No Bain-specific news found for the period.</small></span></div><div class="krow"><span class="klab">52-Wk Range</span><span class="kval">₹245 – ₹382<small>FY26 high/low (MarketSmith) and Screener's 52-week; the chart's pink top near ₹385 is a few rupees above (daily-bar versus close, unreconciled)</small></span></div>        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Why it matters:</b> if the +12.6% were a single-day move, the price would have jumped on unreported news; if it is weekly, the stock is up sharply over a week with a flat 6 Nov, and the 5 Nov gold rally explains part of it. Verify the live price and the NSE record before acting.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec" style="border:3px solid #c62828;background:linear-gradient(180deg,#fffafa,#ffffff)">
+    <div class="sec-title" id="sec04"><span class="num">04</span><h2>Gold-Loan Defaults &amp; Asset Quality — Priority Section</h2></div>
+    <div class="notebox red" style="margin-top:0"><b>The article (user-supplied photo of the printed page):</b> Times News Network (Times of India), Mumbai, around 6 Nov 2026, <b>"Gold loan defaults see almost 2x rise in 5 mths"</b>, based on the TransUnion CIBIL report <i>Lending Unlocked: Gold Loans</i> (Nov 2026). It reports that defaults <b>nearly doubled in five months</b> while outstanding gold loans tripled over three years to a record <b>₹22.5 lakh crore (Aug 2026)</b>. <b>Read the base:</b> loans overdue more than 90 days were <b>0.3% of the portfolio in Aug 2026, up from 0.2% in Mar 2026</b>, a rise of 0.1 percentage point on rounded figures; "almost 2x" describes a very small base. The report also says gold loans sanctioned rose 12% YoY to ₹8.2 lakh crore in the three months to Jun 2026 even though the number of loans originated fell 15% (about 3.7 crore loans; unique borrowers broadly stable at 2.4 crore), which points to larger-ticket loans rather than lower participation; Gen Z borrowers were up 19% over the preceding five months (Bhavesh Jain, MD &amp; CEO, TransUnion CIBIL). <b>It names no lender, so it is industry-wide and says nothing specific about Manappuram.</b> (A UNI India wire item of 5 Nov 2026 carried the same report, paywalled.)</div>
+    <div class="notebox" style="margin-top:8px"><b>An older comparison that is NOT current:</b> "₹436 Cr (Manappuram) vs ₹3,369 Cr (Muthoot)" are gross gold-loan NPAs <b>as of 31 Mar 2025</b> from a Rajya Sabha reply (IANS, 29 Jul 2025). They are absolute rupee amounts, not ratios, and are not comparable with the figures below.</div>
+    <div class="tiles" style="flex-wrap:wrap;margin-top:12px">
+<div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Stage 3 (Q1 FY27, cofacto.ai)</div><div class="val pos" style="font-size:15px">1.60% vs 3.00%</div><div class="note">Versus a year earlier. <b>Basis conflict:</b> cofacto calls it standalone, another aggregator 'consolidated GNPA'. NNPA, credit cost, CRAR not found.</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Average LTV (standalone)</div><div class="val warn" style="font-size:15px">65.6% vs 57.3%</div><div class="note">Q1 FY27 vs Q4 FY26. Thinner cushion, partly because gold fell while loans were outstanding (multibagg).</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Asirvad GNPA</div><div class="val warn" style="font-size:15px">4.8% (NNPA 1.4%)</div><div class="note">Flat QoQ; CRISIL: down from 8.5% largely on write-offs. Asirvad missed the RBI qualifying-asset minimum for microfinance lenders in Q1.</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Industry >90 DPD (CIBIL)</div><div class="val warn" style="font-size:15px">0.3% vs 0.2%</div><div class="note">Aug 2026 vs Mar 2026 on a ₹22.5 lakh crore book. Industry-wide, not Manappuram.</div></div>    </div>
+    <div class="cols" style="margin-top:12px">
+      <div style="flex:1.1">
+        <div class="microhead">Manappuram Asset-Quality Trail (definitions differ — read across with care)</div>
+        <table class="t">
+          <tr><th style="text-align:left" scope="col">Point in time</th><th scope="col">Measure</th><th scope="col">Value</th><th style="text-align:left" scope="col">Source / status</th></tr>
+          <tr><td style="text-align:left">Mar-25</td><td>Gold GNPA (absolute)</td><td>₹436 Cr</td><td style="text-align:left">Rajya Sabha reply via IANS; not current</td></tr>
+          <tr><td style="text-align:left">Q1 FY26 (Jun-25)</td><td>Stage 3</td><td>3.00%</td><td style="text-align:left">cofacto.ai (year-ago comparator)</td></tr>
+          <tr><td style="text-align:left">Q2 FY26 (Sep-25)</td><td>Consol. GNPA</td><td>2.97%</td><td style="text-align:left">Investor presentation (read via search)</td></tr>
+          <tr><td style="text-align:left"><b>Q1 FY27 (Jun-26)</b></td><td>Stage 3</td><td class="pos"><b>1.60%</b></td><td style="text-align:left">cofacto.ai; standalone vs consolidated label conflict</td></tr>
+          <tr><td style="text-align:left">Cross-check</td><td>1.60% × ₹69,635 Cr</td><td>~₹1,114 Cr</td><td style="text-align:left">My arithmetic, only if the 1.60% were on the consolidated book; not a reported number</td></tr>
+        </table>
+        <div class="chartcap">Univest (opinion piece, 2026) argues Manappuram's NPA stress comes from unsecured microfinance and vehicle loans rather than gold. Auction volumes, loss on auction and Q1 consolidated Stage 3 were not found. Manappuram's auction policy (Jun 2026) targets auctions within about 90 days of tenure completion.</div>
+        <div class="microhead" style="margin-top:10px">What the CIBIL Data Does and Does Not Say</div>
+        <p style="font-size:11.3px">The rise in industry delinquency is real but starts from a very low level (0.2% to 0.3%), while ticket sizes are growing and loan counts falling. For Manappuram the relevant risks are different: loans written near the January price peak at high LTV, and the mix shift to larger tickets. The company-level data that would answer it (Stage 3 by ticket size, auction recoveries) was not found. Manappuram's Stage 3 improved YoY, not deteriorated, in the one number found.</p>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Gold Price Path — Sources Conflict (not reconciled)</div>
+        <table class="t">
+          <tr><th style="text-align:left" scope="col">Source (date)</th><th scope="col">Level / move</th></tr>
+          <tr><td style="text-align:left">MCX 24K, 5 Oct 2026 (Bajaj Broking)</td><td>₹1,49,180 /10g</td></tr>
+          <tr><td style="text-align:left">MCX 24K, ~2 Nov 2026 (PSU Connect, retail, single source)</td><td class="neg">~₹1,39,000 (−6.8% vs 5 Oct, my arithmetic)</td></tr>
+          <tr><td style="text-align:left">Spot gold, 5 Nov 2026</td><td>~$4,135 (+1.9% on the day)</td></tr>
+          <tr><td style="text-align:left">Jun 2026 headlines</td><td class="neg">MCX below ₹1.5 lakh; 'drops ₹31,720 in 2026'</td></tr>
+          <tr><td style="text-align:left">vs Nov 2025 (~₹1.27 lakh, Angel One)</td><td class="pos">+9.4% (my arithmetic)</td></tr>
+          <tr><td style="text-align:left">'Down 13–17% from the January peak'</td><td class="warn"><b>UNVERIFIED</b> (sources conflict)</td></tr>
+        </table>
+        <div class="chartcap"><b>I cannot confirm the 13–17% fall from the January peak:</b> the peak level was not retrieved and one dated source puts gold ~9% above Nov 2025. Both views are shown; I have not picked a side. Gold can also rebound fast (+₹2,930 in one day on 6 Jul 2026).</div>
+        <div class="microhead" style="margin-top:10px">Regulation</div>
+        <p style="font-size:11.1px"><b>RBI framework effective 1 Apr 2026:</b> LTV caps 85% (up to ₹2.5 lakh), 80% (to ₹5 lakh), 75% above; LTV must hold through the tenor; bullet loans capped at 12 months with LTV on the total repayment including interest; auction reserve price 90% of market value, 85% after two failed auctions. Not re-verified: earlier RBI actions on Manappuram (Asirvad lending restrictions Oct 2024; penalties).</p>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="notebox"><b>My arithmetic — how much gold fall does it take?</b> At 65.6% average LTV the collateral must fall about 34% (1 − 0.656) before the average loan is uncovered, before accrued interest. A further 20% fall would lift the average to ~82% (65.6 ÷ 0.80), close to the 85% cap, so recent high-LTV loans would be underwater first. From 57.3% to 65.6% is a 14.5% rise in ratio (my arithmetic); I cannot split it between price and loan mix.</div>
+      </div>
+      <div style="flex:1">
+        <div class="notebox green"><b>Two-sided read:</b> <span style="font-weight:700">Comfort</span> — Stage 3 fell to 1.60% from 3.00% in the one number found, CRISIL rates AA/Stable, and the industry delinquency base is tiny. <span style="font-weight:700">Concern</span> — LTV is rising, gold AUM doubled (price-led), larger tickets are growing, Asirvad GNPA is 4.8%, and the article's "almost 2x" signals a turn in direction even if the level is small.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec05"><span class="num">05</span><h2>Overall Sentiment &amp; Momentum Prediction</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff8ee);border:3px solid #e07c00">
+        <div class="plab">Key Watch-Item</div>
+        <div class="pval" style="color:#e07c00;font-size:16px">&#9888; Q2 FY27 on 12 Nov &amp; Gold LTV</div>
+        <p style="font-size:11.3px;margin-top:5px">Q2 FY27 results arrive on 12 Nov (with a possible interim dividend). The year-on-year comparison stays easy in Q2 (Sep-25 EPS was ₹2.57) but fades by Q4. <b>Watch:</b> Stage 3, LTV above 65.6%, Asirvad's core AUM, NIM and credit cost, and any update on the Bain tranche.</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff8ee);border-top:3px solid #e07c00">
+        <div class="plab">Overall Sentiment</div>
+        <div class="pval" style="color:#e07c00">MIXED <span style="font-size:12px;color:#5a6475;font-weight:600">Brokers split</span></div>
+        <p style="font-size:11.3px;margin-top:5px">Jefferies Buy (₹430 dated 23 Sep, or ₹360 undated), Motilal Neutral (₹315, older; another undated site gives ₹390). Consensus ~₹370 across 15 analysts, undated. MarketSmith's estimates tab is locked. Mutual funds raised their holding to 15.76% from 12.84% in a quarter.</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff8ee);border-top:3px solid #e07c00">
+        <div class="plab">Momentum Prediction</div>
+        <div class="pval" style="color:#e07c00">COILED — NOT CONFIRMED</div>
+        <p style="font-size:11.3px;margin-top:5px">The user's wave count reads as a set-up for a sharp move (section 19), but the daily gauges are flat (trend 0 / −1, OI 0 / −2, no signal). The 1-hour gauge is positive (+3 / +1). Price is at the ₹325.40 resistance line. Confirmation would be a daily close above it with the gauges turning up.</p>
+      </div>
+    </div>
+    <div class="notebox"><b>Framing note:</b> this is a <b>recovering earnings story priced on recovery</b>: P/E ~20x, ROE only 6–7% and EPS Rating 73. The bull case is gold AUM +98%, Asirvad back in profit and Bain's capital and control. The bear case is that Q1 is a base effect (FY26 EPS ₹11.72 is below FY25's ₹14.22 and FY24's ₹25.96), gold price is volatile, and the valuation already prices the turnaround.</div>
+  </div>
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1">
+        <div class="sec-title" id="sec06"><span class="num">06</span><h2>Sector Market Size</h2></div>
+        <svg role="img" aria-label="Bar chart: ₹ lakh Cr" viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="570" y2="146" stroke="#dde2ea"/><text x="10" y="18" font-size="9" fill="#6b7587">₹ lakh Cr</text><rect x="49.0" y="99.2" width="56" height="46.8" fill="#8fa3c4" rx="2"/><text x="77.0" y="95.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">11.9</text><text x="77.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Whalesbook FY26</text><rect x="129.7" y="87.0" width="56" height="59.0" fill="#8fa3c4" rx="2"/><text x="157.7" y="83.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">15</text><text x="157.7" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">IANS FY26</text><rect x="210.3" y="84.6" width="56" height="61.4" fill="#8fa3c4" rx="2"/><text x="238.3" y="80.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">15.6</text><text x="238.3" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FPJ Mar-26</text><rect x="291.0" y="75.2" width="56" height="70.8" fill="#1a2a4a" rx="2"/><text x="319.0" y="71.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">18</text><text x="319.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">ICRA now</text><rect x="371.7" y="72.8" width="56" height="73.2" fill="#1a2a4a" rx="2"/><text x="399.7" y="68.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">18.6</text><text x="399.7" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Kotak MF Mar-26</text><rect x="452.3" y="57.5" width="56" height="88.5" fill="#e07c00" rx="2"/><text x="480.3" y="53.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">22.5</text><text x="480.3" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">CIBIL Aug-26</text><rect x="533.0" y="28.0" width="56" height="118.0" fill="#2a9d8f" rx="2"/><text x="561.0" y="24.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">30</text><text x="561.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">ICRA FY28e</text></svg>
+        <div class="chartcap"><b>Gold-loan market size estimates conflict:</b> ₹11.9 lakh Cr (Whalesbook), ₹15 lakh Cr (IANS, organised FY26), ₹15.6 trn (Free Press Journal, Mar-26), ~₹18 lakh Cr now and &gt;₹30 lakh Cr by FY28 (ICRA via Business Today, 29 Jul 2026), ₹18.6 trn (Kotak MF), and a record ₹22.5 lakh crore at Aug 2026 (TransUnion CIBIL, in the Times of India article). Different bases and dates; not merged. Growth: NBFC gold loans +69.3% YoY in Jun-26 (RBI data via Outlook Business). ICRA's FY28 figure is a projection.</div>
+      </div>
+      <div style="flex:1.08">
+        <div class="sec-title" id="sec07"><span class="num">07</span><h2>Shareholding — Available Quarters</h2></div>
+        <table class="t">
+          <tr><th scope="col">Category</th><th scope="col">Dec'25</th><th scope="col">Mar'26</th><th scope="col">Jun'26</th><th scope="col">Sep'26</th></tr>
+          <tr><td>Promoters</td><td>35.25%</td><td>31.77%</td><td>41.66%</td><td>41.66%</td></tr>
+          <tr><td>Mutual funds</td><td>9.09%</td><td>10.97%</td><td>12.84%</td><td>15.76%</td></tr>
+          <tr><td>FIIs (Screener)</td><td>n/c</td><td>n/c</td><td>n/c</td><td>21.04%</td></tr>
+          <tr><td>DIIs (Screener)</td><td>n/c</td><td>n/c</td><td>n/c</td><td>17.56%</td></tr>
+          <tr><td>Public (Screener)</td><td>n/c</td><td>n/c</td><td>n/c</td><td>19.76%</td></tr>
+        </table>
+        <div class="chartcap">n/c = not collected. Promoter 41.66% includes, probably, Bain's vehicle <b>BC Asia Investments XXV Ltd 9.89%</b> (unverified): the V P Nandakumar family 26.18% + 5.11% = 31.29%, plus 9.89% = 41.18%, leaving ~0.5pp for other promoter-group holders (my arithmetic). Other large holders (Sep-26): Smallcap World Fund 5.04%, Quant Small Cap 3.32%, SBI ELSS Tax Saver 3.13%. Other aggregators: FII 22.3%, DII 14.8%, public 21.2% (Jun-26) and MF 15.8% (undated); definitions differ. MarketSmith: 260 funds hold 34.89 Cr shares (+2.61%), unreconciled with the MF line. <b>Pledge: not found</b> (MarketSmith surveillance panel shows no red flags). Equity capital rose from ₹169 Cr to ₹188 Cr (FV ₹2), about 9.5 Cr new shares, close to 9.89% of ~94 Cr shares (my arithmetic).</div>
+      </div>
+      <div style="flex:1.05">
+        <div class="sec-title" id="sec08"><span class="num">08</span><h2>Stock Performance</h2></div>
+        <table class="peer">
+          <tr><th scope="col">Reference</th><th scope="col">Price (₹)</th><th scope="col">To ₹325.40</th></tr>
+          <tr style="background:#eef4fc"><td>&#9733; 6 Nov close</td><td>325.40</td><td>—</td></tr>
+          <tr><td>Implied base (header)</td><td>289.00</td><td class="pos">+12.6%</td></tr>
+          <tr><td>Bain price (open offer)</td><td>236.00</td><td class="pos">+37.9%</td></tr>
+          <tr><td>52-wk high (FY26)</td><td>382</td><td class="neg">−14.8%</td></tr>
+          <tr><td>Chart top (pink i)</td><td>~385</td><td class="neg">−15.5%</td></tr>
+          <tr><td>Pink ii low</td><td>270.9</td><td class="pos">+20.1%</td></tr>
+          <tr><td>52-wk low (FY26)</td><td>245</td><td class="pos">+32.8%</td></tr>
+        </table>
+        <div class="chartcap">Percentages are my arithmetic. MarketSmith: trading ~2% above its 50-DMA and ~4% above its 200-DMA; beta 1.44; weekly base forming, ~14% from the pivot point. 1M/3M/YTD and index comparisons were not collected.</div>
+        <div class="krow"><span class="klab">Dividend Yield</span><span class="kval">0.77% / 0.61%<small>MarketSmith / Screener. Interim dividend ₹1.00 for Q1 (₹0.50 before) is 0.3% of the price (my arithmetic)</small></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sec compact">
+    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Financials — YoY &amp; QoQ (₹ Crore, Consolidated)</h2></div>
+    <div class="cols" style="margin-bottom:10px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column"><div class="microhead" style="margin-top:0">&#9733; Latest Quarter — Q1 FY27 (Jun'26)</div><div style="border:2px solid #e07c00;border-radius:8px;padding:8px 14px;background:linear-gradient(135deg,#fff8ee,#fffdf7 60%,#fff9ee);box-shadow:0 2px 8px rgba(224,124,0,0.12);flex:1;margin-bottom:0">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹3,034 Cr</div><div style="font-size:10.5px;color:#5a6475">Revenue &nbsp;<b class="pos">+34% YoY</b> · +16.1% QoQ</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹782 Cr</div><div style="font-size:10.5px;color:#5a6475">Pre-tax · 25.8% of revenue (my arithmetic)</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#2e7d32">₹585 Cr</div><div style="font-size:10.5px;color:#5a6475">Net profit &nbsp;<b class="pos">+322%</b> (MarketSmith) · tax ~25%</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹6.23</div><div style="font-size:10.5px;color:#5a6475">EPS (qtr) &nbsp;<b class="pos">+297%</b> (₹1.57)</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#e07c00">₹1,274 Cr</div><div style="font-size:10.5px;color:#5a6475">Finance cost · +48.95% YoY · 42.0% of revenue</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">19.3%</div><div style="font-size:10.5px;color:#5a6475">Net margin (my arithmetic) · 6.1% in Jun-25</div></div>
+      </div>
+      <div style="font-size:10.4px;color:#8a6d1f;margin-top:8px">Growth % differs by source: PAT +341% (₹584.77 Cr vs ₹132.47 Cr), +322% (MarketSmith ₹584.58 Cr vs ₹138.38 Cr), and +47% in one outlier. Q2 FY27 is due 12 Nov and is not in this report.</div>
+    </div></div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column">
+        <div class="microhead" style="margin-top:0">Valuation &amp; Balance-Sheet Tiles</div>
+    <div class="tiles" style="flex-wrap:wrap;flex:1;align-content:stretch"><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">TTM Revenue</div><div class="val " style="font-size:15px">₹10,285 Cr</div><div class="note">Sum of four quarters (my arithmetic) · MarketSmith ₹10,284.59 Cr · FY26 ₹9,509 Cr</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E (TTM)</div><div class="val warn" style="font-size:15px">~20x</div><div class="note">₹325.40 ÷ ₹16.39 = 19.9x (my arithmetic) · ₹15.97 → 20.4x · Screener 21.1x · MarketSmith 20</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E 5-yr range</div><div class="val " style="font-size:15px">6–69x</div><div class="note">MarketSmith: wide because earnings swung; today sits mid-range on depressed EPS</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Forward P/E</div><div class="val warn" style="font-size:15px">n/m</div><div class="note">No forward estimates found (MarketSmith estimates tab locked)</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">PEG Ratio</div><div class="val warn" style="font-size:15px">n/m / ~0.5</div><div class="note">Growth negative or a base effect, see table below</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Borrowings</div><div class="val " style="font-size:15px">₹57,837 Cr</div><div class="note">Mar-26 (Screener) vs ₹36,077 Cr Mar-25 · net worth ₹16,051 Cr → 3.6x (my arithmetic; CRISIL gearing 3.6x)</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/B · ROE</div><div class="val warn" style="font-size:15px">1.9x · 6–7%</div><div class="note">BV ₹171 (Screener) · ROE 6% MarketSmith vs 6.97% Screener vs 11.9% 3-yr</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Mkt Cap · Beta</div><div class="val " style="font-size:15px">27,543 vs 30,566</div><div class="note">Cr. The gap equals ~84.6 Cr vs ~94 Cr shares (cap ÷ price): MarketSmith probably uses the pre-Bain share count (my arithmetic). Beta 1.44</div></div></div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:6px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Annual P&amp;L — FY24 to TTM</div>
+        <table class="t fit">
+          <tr><th scope="col">Year</th><th scope="col">Revenue</th><th scope="col">Interest</th><th scope="col">PBT</th><th scope="col">Net Profit</th><th scope="col">EPS (₹)</th><th scope="col">Payout</th></tr>
+          <tr><td>FY24</td><td>8,848</td><td>2,866</td><td>2,960</td><td>2,197</td><td>25.96</td><td>13%</td></tr>
+          <tr><td>FY25</td><td>10,012</td><td>3,541</td><td>1,666</td><td>1,204</td><td>14.22</td><td>28%</td></tr>
+          <tr><td><b>FY26</b></td><td><b>9,509</b></td><td><b>3,786</b></td><td><b>1,270</b></td><td><b>993</b></td><td><b class="neg">11.72</b></td><td><b>19%</b></td></tr>
+          <tr><td><b>TTM</b></td><td><b>10,285</b></td><td>—</td><td>—</td><td><b>1,445</b></td><td><b>16.39</b></td><td>—</td></tr>
+        </table>
+        <div class="chartcap">Revenue, interest, PBT, net profit and payout: Screener consolidated; EPS: MarketSmith. Screener EPS differs (25.86 / 14.37 / 10.68) and MarketSmith FY25 revenue is ₹10,006.69 Cr vs Screener ₹10,012 Cr: conflicts kept. TTM net profit ₹1,445 Cr (Screener) vs ₹1,449 Cr from MarketSmith quarters (my arithmetic). ROE FY26 6.25%, FY25 9.78%, FY24 18.95% (MarketSmith); pre-tax margin 13.35% / 16.64% / 33.44%.</div>
+        <div class="microhead" style="margin-top:9px">Quarterly Trend — Last 5 Quarters (MarketSmith)</div>
+        <table class="t fit">
+          <tr><th scope="col">Quarter</th><th scope="col">Revenue</th><th scope="col">QoQ</th><th scope="col">Net Profit</th><th scope="col">EPS (₹)</th><th scope="col">Net margin</th></tr>
+          <tr><td>Q1 FY26 (Jun'25)</td><td>2,262</td><td>—</td><td>138</td><td>1.57</td><td>6.1%</td></tr>
+          <tr><td>Q2 FY26 (Sep'25)</td><td>2,284</td><td>+0.9%</td><td>220</td><td>2.57</td><td>9.6%</td></tr>
+          <tr><td>Q3 FY26 (Dec'25)</td><td>2,353</td><td>+3.0%</td><td>241</td><td>2.82</td><td>10.2%</td></tr>
+          <tr><td>Q4 FY26 (Mar'26)</td><td>2,614</td><td>+11.1%</td><td>404</td><td>4.77</td><td>15.5%</td></tr>
+          <tr><td><b>Q1 FY27 (Jun'26)</b></td><td><b>3,034</b></td><td><b>+16.1%</b></td><td><b class="pos">585</b></td><td><b class="pos">6.23</b></td><td><b>19.3%</b></td></tr>
+        </table>
+        <div class="chartcap">Net margin and QoQ are my arithmetic. Screener's quarters differ slightly (Jun-25 PAT 132, EPS 1.63; Mar-26 EPS 4.30 vs MarketSmith 4.77; Jun-26 EPS 6.22), so TTM EPS is ₹16.39 (MarketSmith) or ₹15.97 (Screener). Profit has risen every quarter since Jun-25 but remains below Sep-24 (₹572 Cr, EPS 6.74).</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Revenue — 3 Years + TTM (₹ Cr)</div>
+        <svg role="img" aria-label="Bar chart: Rs Cr" viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="570" y2="146" stroke="#dde2ea"/><text x="10" y="18" font-size="9" fill="#6b7587">Rs Cr</text><rect x="49.0" y="44.5" width="68" height="101.5" fill="#1a2a4a" rx="2"/><text x="83.0" y="40.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">8,848</text><text x="83.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><rect x="206.3" y="31.1" width="68" height="114.9" fill="#1a2a4a" rx="2"/><text x="240.3" y="27.1" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">10,012</text><text x="240.3" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><rect x="363.7" y="36.9" width="68" height="109.1" fill="#1a2a4a" rx="2"/><text x="397.7" y="32.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">9,509</text><text x="397.7" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text><rect x="521.0" y="28.0" width="68" height="118.0" fill="#5b7bb5" rx="2"/><text x="555.0" y="24.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">10,285</text><text x="555.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">TTM</text></svg>
+        <div class="microhead" style="margin-top:9px">EPS — 5 Years + TTM (₹)</div>
+        <svg role="img" aria-label="Bar chart: EPS ₹" viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="570" y2="146" stroke="#dde2ea"/><text x="10" y="18" font-size="9" fill="#6b7587">EPS ₹</text><rect x="49.0" y="74.6" width="56" height="71.4" fill="#8fa3c4" rx="2"/><text x="77.0" y="70.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">15.70</text><text x="77.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text><rect x="145.8" y="65.5" width="56" height="80.5" fill="#8fa3c4" rx="2"/><text x="173.8" y="61.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">17.72</text><text x="173.8" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text><rect x="242.6" y="28.0" width="56" height="118.0" fill="#1a2a4a" rx="2"/><text x="270.6" y="24.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">25.96</text><text x="270.6" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><rect x="339.4" y="81.4" width="56" height="64.6" fill="#1a2a4a" rx="2"/><text x="367.4" y="77.4" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">14.22</text><text x="367.4" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><rect x="436.2" y="92.7" width="56" height="53.3" fill="#c62828" rx="2"/><text x="464.2" y="88.7" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">11.72</text><text x="464.2" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text><rect x="533.0" y="71.5" width="56" height="74.5" fill="#5b7bb5" rx="2"/><text x="561.0" y="67.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">16.39</text><text x="561.0" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">TTM</text></svg>
+        <div class="chartcap" style="text-align:center">&#9644; <b style="color:#1a2a4a">Actual</b> &nbsp;&nbsp; &#9644; <b style="color:#c62828">FY26 (trough)</b> &nbsp;&nbsp; &#9644; <b style="color:#5b7bb5">TTM Sep-25 to Jun-26</b></div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:9px">
+      <div style="flex:1.15"><div class="notebox blue"><b>&#9733; Labelled PEG — three bases (my arithmetic):</b>
+        <table class="t">
+          <tr><th style="text-align:left" scope="col">PEG basis</th><th scope="col">Growth</th><th scope="col">P/E used</th><th scope="col">PEG</th></tr>
+          <tr><td style="text-align:left">A. Trailing: FY25 → FY26 EPS (14.22 → 11.72)</td><td class="neg">−17.6%</td><td>27.8x (₹325.40 ÷ 11.72)</td><td><b>n/m</b></td></tr>
+          <tr><td style="text-align:left">B. TTM vs FY26 EPS (11.72 → 16.39; 15.97 on Screener)</td><td class="pos">+39.8% (+36.3%)</td><td>19.9x (20.4x)</td><td><b>~0.50 (~0.56)</b> <span style="font-size:9.5px;color:#8a6d1f">flagged</span></td></tr>
+          <tr><td style="text-align:left">C. Forward growth</td><td>no estimates found</td><td>—</td><td><b>n/m</b></td></tr>
+        </table>
+        <div style="margin-top:6px;font-size:10.4px"><b>Why B is flagged:</b> TTM against FY26 is a <b>base effect</b>, not a trend: quarterly EPS went ₹1.57 → ₹6.23 in four quarters because the Asirvad stress year dropped out, and FY26 itself is below FY24 (−32.8% a year over two years, FY24 → FY26, so a 2-year basis is n/m too). A PEG of ~0.5 would normally look cheap, but it divides by growth that will not repeat once the comparison base normalises.</div></div></div>
+      <div style="flex:1"><div class="notebox"><b>&#9733; Earnings quality — what to weigh:</b> earnings recovered through a stronger gold book, lower cost-to-income and an Asirvad turnaround, but a one-off ECL model change of ₹125 Cr hit Q1, so the underlying figure is somewhat higher. Borrowings rose from ₹36,077 Cr to ₹57,837 Cr (+60%) in FY26 while revenue fell 5%, partly funding the gold-book surge that shows up in Q1 FY27. Interest absorbed 40% of FY26 revenue (3,786 ÷ 9,509, my arithmetic). Cash flow is shown by MarketSmith as ₹−215.45 (basis unclear).</div></div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec10"><span class="num">10</span><h2>Key Ratios — Industry-Contextualized</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fffbe8;border-color:#f9a825">
+        <div class="plab">P/B &nbsp;·&nbsp; ROE <span class="badge b-warn">Conflict</span></div>
+        <div class="pval" style="font-size:26px">1.9x <span style="font-size:13px;font-weight:600;color:#5a6475">(P/B) · ROE 6–7%</span></div>
+        <p style="font-size:11.3px;margin-top:6px"><b>Conflicts kept:</b> ROE 6% (MarketSmith) vs 6.97% (Screener) vs 11.9% 3-yr (Screener); ROCE 8.25%. Price ÷ BV ₹171 = 1.90x. ROE history (MarketSmith): 18.95% FY24, 9.78% FY25, 6.25% FY26. A 1.9x book on a 6–7% ROE means the price already discounts a sizeable earnings recovery: Muthoot earns about 31% on 2.6x book (section 16).</p>
+      </div>
+      <div class="panel" style="background:#f2f6fc;border-color:#1565c0">
+        <div class="plab">Leverage &amp; Funding <span class="badge b-neut">Rising</span></div>
+        <div class="pval" style="font-size:26px">~3.6x <span style="font-size:13px;font-weight:600;color:#5a6475">(borrowings ÷ net worth, Mar-26)</span></div>
+        <p style="font-size:11.3px;margin-top:6px"><b>Note:</b> ₹57,837 Cr ÷ ₹16,051 Cr (my arithmetic; Screener) agrees with CRISIL's consolidated gearing of 3.6x and net worth of ₹16,058 Cr; CRISIL's downgrade trigger is gearing above 5x, and CAR is ~21%. Mar-25 was 2.9x. Bain's ₹4,385 Cr commitment (first tranche ₹2,740 Cr on 27 Mar 2026) is a cushion; CRISIL cited liquidity of ₹3,142 Cr at 31 May 2026. CRISIL's text is internally inconsistent about the size of the infusion (₹4,385 Cr vs ~₹1,600 Cr additional equity).</p>
+      </div>
+      <div class="panel" style="background:#fdf0f0;border-color:#c62828">
+        <div class="plab">Returns on Assets <span class="badge b-bear">Low</span></div>
+        <div class="pval" style="font-size:26px">ROMA 1.8% <span style="font-size:13px;font-weight:600;color:#5a6475">(FY26, CRISIL; 2.4% before)</span></div>
+        <p style="font-size:11.3px;margin-top:6px">CRISIL's upgrade trigger is ROMA above 4%. Q1 FY27 NIM, yield, credit cost and CRAR were <b>not found</b>; a secondary source puts gold yield at ~18%. Cost-to-income 42.97%. P/CFO is not computed: operating cash flow was not collected and for a lender it mostly reflects loan growth.</p>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec11"><span class="num">11</span><h2>Management, Governance &amp; Credit Ratings</h2></div>
+<div class="tiles" style="flex-wrap:wrap">
+<div class="tile" style="flex:0 0 calc(33.3% - 7px)"><div class="lab">Leadership (conflict)</div><div class="val " style="font-size:15px">V P NANDAKUMAR, MD &amp; CEO</div><div class="note">Coverage through Mar 2026 names V P Nandakumar as MD &amp; CEO; MarketSmith also lists him as 'Chairman &amp; Managing Director' (designation conflict), with Dr Shailesh Mehta as independent Chairman and Dr Sumitha Nandan as Vice Chairman &amp; ED. An upstox headline on Q1 FY27 says Ashish Singh was appointed MD &amp; CEO: <b>unreconciled</b>, check the exchange filing.</div></div><div class="tile" style="flex:0 0 calc(33.3% - 7px)"><div class="lab">Promoters</div><div class="val " style="font-size:15px">41.66%</div><div class="note">Up from 31.77% in Mar-26, probably including Bain's 9.89% (BC Asia Investments XXV). Nandakumar family 31.29%. <b>Pledge: not found.</b> Bain has two nominee directors and will nominate to Asirvad and the housing arm (RBI approval pending for subsidiaries per CRISIL).</div></div><div class="tile" style="flex:0 0 calc(33.3% - 7px)"><div class="lab">Mgmt Remuneration as % of PAT</div><div class="val warn" style="font-size:15px">Not found</div><div class="note">FY26 annual report not read. Related-party transactions, auditors and ESG scores: <b>not found</b>.</div></div><div class="tile" style="flex:0 0 calc(33.3% - 7px)"><div class="lab">Tax as % of PBT</div><div class="val " style="font-size:15px">~22% FY26 · ~25% Q1</div><div class="note">FY26 tax rate 22% (Screener); Q1 FY27 (782 − 585) ÷ 782 = 25.2% (my arithmetic). FY24 was 26% and FY25 28%.</div></div><div class="tile" style="flex:0 0 calc(33.3% - 7px)"><div class="lab">Regulatory Record</div><div class="val " style="font-size:15px">Not re-verified</div><div class="note">Asirvad lending restrictions (Oct 2024) and penalties were <b>not re-verified</b> in this pass. The RBI's microfinance 'qualifying asset' minimum was missed by Asirvad in Q1 FY27. No SEBI action found (not specifically searched).</div></div><div class="tile" style="flex:0 0 calc(33.3% - 7px)"><div class="lab">Bain Capital Deal</div><div class="val " style="font-size:15px">₹4,385 Cr for ~18%</div><div class="note">At ₹236/share; RBI approval Feb–Mar 2026; first tranche ₹2,740 Cr on 27 Mar 2026; balance on warrant conversion in 4–18 months (CRISIL). Open offer for 26% at ₹236 ran 6–20 Apr 2026: size ₹5,764 Cr (Outlook) vs ₹6,064 Cr (Whalesbook); zero tendered on 6 Apr because the market price was above the offer; <b>final outcome not found</b>. Bain could reach up to 41.7%.</div></div></div>
+<div class="notebox green" style="margin-top:12px"><b>Credit ratings — India Ratings and other agencies:</b> <b>CRISIL AA/Stable (long-term) and A1+ (short-term)</b>, reaffirmed <b>16 Jun 2026</b> (bank loans ₹15,000 Cr; CP programme enlarged from ₹4,000 to ₹6,000 Cr; ~₹5,000 Cr NCDs outstanding; consolidated net worth ₹16,058 Cr; gearing 3.6x; CAR ~21%; liquidity ₹3,142 Cr; upgrade trigger ROMA above 4%, downgrade trigger gearing above 5x). <b>CARE AA/Stable</b> on ₹19,000 Cr bank facilities (press release ~19 Jun 2026): <b>from a search snippet only; the PDF was binary and not read in full</b>, and the amount differs from CRISIL's ₹15,000 Cr (different agencies, may be legitimate). <b>Asirvad:</b> CRISIL AA/Stable vs AA-/Stable appears in different snippets (unclear) with A1+; parent support, ₹500 Cr equity infusion in Q1 FY26. Fitch BB-/Stable on USD secured notes is an old 2024 notice. <b>India Ratings (Ind-Ra): not found. ICRA (parent): only an old withdrawn NCD rating found, no current one. Acuite: not found.</b> Absence in a web search is not proof of no rating.</div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec12"><span class="num">12</span><h2>Company Guidance — Recent Quarters &amp; Credibility Checklist</h2></div>
+<div class="microhead">What Management Has Said vs. What the Numbers Show</div>
+<table class="t">
+  <tr><th style="text-align:left" scope="col">Claim / Guidance</th><th style="text-align:left" scope="col">Evidence to date</th><th scope="col">Status</th></tr>
+  <tr><td style="text-align:left">Gold-loan growth of ~30% in FY27</td><td style="text-align:left">Gold AUM already ₹50,953 Cr (Mar-26) → ₹57,006 Cr (Jun-26) = +11.9% in one quarter (my arithmetic), so the guide looks easy to meet if gold price holds; price versus tonnage split not disclosed.</td><td><span class="badge b-warn">Price-led risk</span></td></tr>
+  <tr><td style="text-align:left">~500 new gold branches in FY27 (Motilal note: 500–550)</td><td style="text-align:left">Branches stood at 5,328 at Jun-26; the pace of Q1 openings was not found.</td><td><span class="badge b-neut">In progress</span></td></tr>
+  <tr><td style="text-align:left">Asirvad recovery and shift to gold</td><td style="text-align:left">Q1 PAT ₹21 Cr vs a ₹269 Cr loss a year ago; core microfinance AUM −12.9% YoY, gold ₹2,344 Cr; GNPA 4.8%; missed RBI qualifying-asset minimum.</td><td><span class="badge b-warn">Recovering, shrinking core</span></td></tr>
+  <tr><td style="text-align:left">Bain Capital partnership: capital and control</td><td style="text-align:left">First tranche ₹2,740 Cr received 27 Mar 2026; balance via warrants over 4–18 months; open-offer outcome not found.</td><td><span class="badge b-neut">Part done</span></td></tr>
+  <tr><td style="text-align:left">Interim dividend</td><td style="text-align:left">₹1.00 for Q1 (₹0.50 earlier); board to consider another on 12 Nov with Q2 results.</td><td><span class="badge b-neut">Pending</span></td></tr>
+</table>
+<div class="cols" style="margin-top:12px">
+  <div style="flex:1.2">
+    <div class="microhead">AUM Trend (₹ Cr)</div>
+    <table class="t">
+      <tr><th style="text-align:left" scope="col">Period</th><th scope="col">Consol. AUM</th><th scope="col">Gold AUM</th></tr>
+      <tr><td style="text-align:left">Jun'25</td><td>~44,300 (derived)</td><td>28,802</td></tr>
+      <tr><td style="text-align:left">Sep'25</td><td>n/c</td><td>31,505</td></tr>
+      <tr><td style="text-align:left">Mar'26</td><td>~63,800 (derived)</td><td>50,953</td></tr>
+      <tr><td style="text-align:left">Jun'26</td><td>69,635 (+57.2% YoY, +9.1% QoQ)</td><td>57,006 (+97.9% YoY)</td></tr>
+    </table>
+    <div class="notebox" style="margin-top:10px"><b>Conflict kept:</b> derived AUM for Jun-25 and Mar-26 is back-solved from the reported growth rates (69,635 ÷ 1.572 and ÷ 1.091, my arithmetic). The 98% gold growth is partly price-driven, the same variable behind the LTV risk in section 04. Prior-year guidance and the Q1 concall were not found, so a guided-versus-delivered record could not be built.</div>
+  </div>
+  <div style="flex:1">
+    <div class="microhead">Management-Quality Red-Flag Checklist</div>
+    <table class="t">
+      <tr><th style="text-align:left" scope="col">Warning Sign</th><th scope="col">Present?</th></tr>
+      <tr><td style="text-align:left">Unsecured / non-core diversification losses</td><td><span class="badge b-warn">&#10003; Asirvad</span></td></tr>
+      <tr><td style="text-align:left">Regulatory action on record</td><td><span class="badge b-warn">Not re-verified</span></td></tr>
+      <tr><td style="text-align:left">Designation / appointment confusion</td><td><span class="badge b-warn">&#10003; Conflict</span></td></tr>
+      <tr><td style="text-align:left">Disclosure gaps (NIM, CRAR, auctions)</td><td><span class="badge b-warn">&#10003; Not found</span></td></tr>
+      <tr><td style="text-align:left">Promoter pledge</td><td><span class="badge b-neut">Not found</span></td></tr>
+      <tr><td style="text-align:left">Related-party overlap</td><td><span class="badge b-neut">Not assessed</span></td></tr>
+    </table>
+    <div class="chartcap" style="margin-top:6px">My judgements, not sourced scores. Asirvad FY26 loss was about ₹580 Cr (FY25 ₹639 Cr) per CRISIL.</div>
+  </div>
+</div>
+  </div>
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec13"><span class="num">13</span><h2>Street Consensus</h2></div>
+<div class="krow"><span class="klab">Analysts Covering</span><span class="kval">15 (undated)<small>MarketScreener consensus count; MarketSmith's estimates tab is locked, so no MarketSmith consensus</small></span></div><div class="krow"><span class="klab">Avg Price Target</span><span class="kval" style="color:#e07c00">~₹370<small>MarketScreener (undated): +13.7% vs ₹325.40 (my arithmetic)</small></span></div><div class="krow"><span class="klab">Jefferies</span><span class="kval" style="color:#2e7d32">Buy · ₹430 vs ₹360<small>₹430 dated 23 Sep 2026 (+32.1%) vs ₹360 upgrade from ₹285, undated (+10.6%): <b>conflict</b></small></span></div><div class="krow"><span class="klab">Motilal Oswal</span><span class="kval" style="color:#e07c00">Neutral ₹315 vs ₹390<small>₹315 (−3.2%) from an older note, ~23% AUM CAGR FY26–28E; a ₹390 target (+19.8%) on an undated aggregator: <b>conflict</b></small></span></div><div class="krow"><span class="klab">Nuvama</span><span class="kval">Not found<small></small></span></div>        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Conflicts:</b> targets are undated or pre-Q1 and none can be tied to the 6 Nov price. Q2 FY27 on 12 Nov will likely reset them. No consensus EPS was found, so forward P/E and forward PEG are n/m.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec14"><span class="num">14</span><h2>Share Volume &amp; Profile</h2></div>
+<div class="krow"><span class="klab">Volume — 6 Nov</span><span class="kval" style="color:#e07c00">2,68,23,407 shares<small>+32.30% vs average (MarketSmith) → implied average ~2.03 Cr; value ~₹873 Cr (my arithmetic)</small></span></div><div class="krow"><span class="klab">Float</span><span class="kval">49.09 Cr shares<small>MarketSmith; today's volume ≈ 5.5% of float (my arithmetic)</small></span></div><div class="krow"><span class="klab">Institutional Mix</span><span class="kval">MF 15.76% · FII 21.04%<small>Screener, Sep-26; funds holding 260 (−3.70%), shares held +2.61%</small></span></div><div class="krow"><span class="klab">Bulk / Block Deals</span><span class="kval">None in 2026<small>Last items are Goldman Sachs offsetting pairs (Aug–Sep 2025, e.g. 5 Sep 2025 28.3 lakh shares at ₹284.10), likely arbitrage and not directional; March 2025 bulk deals (Graviton, HRTI, BofA)</small></span></div><div class="krow"><span class="klab">Free-Float Profile</span><span class="kval">Promoters 41.66%<small>Pledge not found; surveillance panel clear</small></span></div>        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Reading it:</b> volume ~32% above average supports interest in the stock but does not explain the price conflict: heavy volume with a flat day (0.18%) and with a +12.6% weekly move are both consistent. The Bain stake is part of the 41.66% promoter holding, so the free float is smaller than the share register suggests.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec15"><span class="num">15</span><h2>Sector Rotation</h2></div>
+        <p style="font-size:11px">Manappuram's sector — <b>Financials</b> — sits in the wheel's lending-growth wedge, at the boundary of recovery and early expansion in the usual framework. As a collateral lender its results track <b>gold price</b> as much as the credit cycle, so the generic phase is a weak guide. The phase call is a framework, not a sourced forecast.</p>
+        <div class="sector-wheel-compact">
+<div class="relative mt-16 md:mt-[80px] mx-auto w-full max-w-[760px] overflow-visible"><div class="relative mx-auto w-[86vw] md:w-full max-w-[540px] aspect-square overflow-visible"><svg role="img" aria-label="Sector rotation wheel with the mapped sector highlighted" viewBox="-40 -40 620 620" class="absolute inset-0 w-full h-full overflow-visible"><path d="M 270 22 A 248 248 0 0 1 518 270" fill="none" stroke="#0f2f5c" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 518 270 A 248 248 0 0 1 270 518" fill="none" stroke="#8b2e00" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 270 518 A 248 248 0 0 1 22 270.00000000000006" fill="none" stroke="#4c2e8a" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 22 270.00000000000006 A 248 248 0 0 1 269.99999999999994 22" fill="none" stroke="#115e5f" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><g transform="translate(270 22)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#0f2f5c" stroke="#0f2f5c" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(518 270) rotate(90)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#8b2e00" stroke="#8b2e00" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(270 518) rotate(180)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#4c2e8a" stroke="#4c2e8a" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(22 270) rotate(270)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#115e5f" stroke="#115e5f" stroke-width="0.8" stroke-linejoin="round"></path></g><defs><path id="label-early" d="M 93.23 59.34 A 275 275 0 0 1 446.77 59.34"></path><path id="label-late" d="M 480.66 93.23 A 275 275 0 0 1 480.66 446.77"></path><path id="label-slow" d="M 93.23 480.66 A 275 275 0 0 0 446.77 480.66"></path><path id="label-recov" d="M 59.34 446.77 A 275 275 0 0 1 59.34 93.23"></path></defs><text fill="#0f2f5c" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-early" startOffset="50%" text-anchor="middle">EARLY EXPANSION</textPath></text><text fill="#8b2e00" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-late" startOffset="50%" text-anchor="middle">LATE EXPANSION</textPath></text><text fill="#4c2e8a" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-slow" startOffset="50%" text-anchor="middle">SLOWDOWN</textPath></text><text fill="#115e5f" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-recov" startOffset="50%" text-anchor="middle">RECOVERY</textPath></text><g><path d="M 270.0 35.0 A 235 235 0 0 1 408.1295342887312 79.88100632188736 L 334.65637775217203 181.00813061875579 A 110 110 0 0 0 270.0 160.0 Z" fill="#43A047" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.15092303249094 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #43A047; stroke-width: 2.4; stroke-linejoin: round;">TECHNOLOGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">TECHNOLOGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Innovation-led</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">growth</text></g></g><g><path d="M 408.1295342887312 79.88100632188736 A 235 235 0 0 1 493.4982813293611 197.38100632188736 L 374.6162167924669 236.00813061875579 A 110 110 0 0 0 334.65637775217203 181.00813061875579 Z" fill="#C0CA33" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 168.90093660569462)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">DISCRETIONARY</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DISCRETIONARY</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising confidence</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& spending</text></g></g><g><path d="M 493.4982813293611 197.38100632188736 A 235 235 0 0 1 493.49828132936113 342.61899367811264 L 374.6162167924669 303.9918693812442 A 110 110 0 0 0 374.6162167924669 236.00813061875579 Z" fill="#F0A93B" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(442.0 270.0)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F0A93B; stroke-width: 2.4; stroke-linejoin: round;">INDUSTRIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">INDUSTRIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Capital investment</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& infrastructure</text></g></g><g><path d="M 131.87046571126876 79.88100632188736 A 235 235 0 0 1 269.99999999999994 35.000000000000085 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="#B5651D" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 371.09906339430535)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #B5651D; stroke-width: 2.4; stroke-linejoin: round;">DEFENSE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DEFENSE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Government spending</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& indigenization</text></g></g><g><path d="M 408.1295342887312 460.1189936781126 A 235 235 0 0 1 270.00000000000006 505.0 L 270.0 380.0 A 110 110 0 0 0 334.65637775217203 358.9918693812442 Z" fill="#2E6DA4" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.150923032491 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #2E6DA4; stroke-width: 2.4; stroke-linejoin: round;">AEROSPACE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">AEROSPACE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Order backlogs</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& export growth</text></g></g><g><path d="M 270.00000000000006 505.0 A 235 235 0 0 1 131.87046571126885 460.11899367811264 L 205.34362224782797 358.9918693812442 A 110 110 0 0 0 270.0 380.0 Z" fill="#F4791A" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.84907696750906 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F4791A; stroke-width: 2.4; stroke-linejoin: round;">ENERGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">ENERGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Commodity cycles</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& inflation</text></g></g><g><path d="M 131.87046571126885 460.11899367811264 A 235 235 0 0 1 46.50171867063892 342.6189936781127 L 165.3837832075331 303.9918693812442 A 110 110 0 0 0 205.34362224782797 358.9918693812442 Z" fill="#9163CB" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.84907696750906 371.0990633943054)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #9163CB; stroke-width: 2.4; stroke-linejoin: round;">UTILITIES</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">UTILITIES</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Defensive demand</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& stability</text></g></g><g><path d="M 46.50171867063892 342.6189936781127 A 235 235 0 0 1 46.501718670638894 197.3810063218874 L 165.3837832075331 236.0081306187558 A 110 110 0 0 0 165.3837832075331 303.9918693812442 Z" fill="#299BD1" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(98.0 270.00000000000006)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">STAPLES</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">STAPLES</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Essential needs</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& resilience</text></g></g><g><path d="M 46.501718670638894 197.3810063218874 A 235 235 0 0 1 131.87046571126876 79.88100632188738 L 205.34362224782794 181.00813061875579 A 110 110 0 0 0 165.3837832075331 236.0081306187558 Z" fill="#16A398" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.849076967509 168.90093660569465)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #16A398; stroke-width: 2.4; stroke-linejoin: round;">HEALTH CARE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">HEALTH CARE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Demographics</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& innovation.</text></g></g><g><path d="M 131.87046571126876 79.88100632188738 A 235 235 0 0 1 269.99999999999994 35.0 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="#7CB342" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.849076967509 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #7CB342; stroke-width: 2.4; stroke-linejoin: round;">FINANCIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">FINANCIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising rates</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& lending growth.</text></g></g><path d="M 131.87046571126876 79.88100632188736 A 235 235 0 0 1 269.99999999999994 35.000000000000085 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="none" stroke="#0a2342" stroke-width="3.2" stroke-linejoin="round"></path><circle cx="270" cy="270" r="108.5" fill="#ffffff" stroke="#e7e0d1" stroke-width="1.2"></circle><circle cx="270" cy="270" r="108.5" fill="none" stroke="#000" stroke-opacity="0.04" stroke-width="6"></circle><g transform="translate(270 270)"><text x="0" y="-8" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.5" fill="#0a2342">MANAPPURAM</text><text x="0" y="7" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.3" fill="#0a2342">FINANCE</text><text x="0" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400" letter-spacing="0.1">Mapped to Financials</text><text x="0" y="32.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400">Gold-loan NBFC (collateral lender)</text><path d="M -36.97,-87.88 L -21.75,-92.82 L -34.30,-105.57 Z" fill="#0a2342"></path></g></svg></div><div class="mt-8 md:mt-10 flex justify-center"><div class="h-[1px] w-[72px] bg-[#d9d0bb]/70"></div></div></div>
+        </div>
+        <div class="chartcap" style="text-align:center;margin-top:2px">NSE: MANAPPURAM &middot; mapped: Financials &middot; phase: recovery-to-early expansion (framework, unsourced)</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec16"><span class="num">16</span><h2>Peer Comparison</h2></div>
+        <table class="peer">
+          <tr><th scope="col">Company</th><th scope="col">MCap</th><th scope="col">TTM NP</th><th scope="col">P/E (calc)</th><th scope="col">P/E (Scr.)</th><th scope="col">P/B (derived)</th><th scope="col">ROCE</th><th scope="col">ROE</th></tr>
+          <tr style="background:#eef4fc"><td>&#9733; Manappuram</td><td><b>30,566</b></td><td><b>1,445</b></td><td><b>20.4x</b></td><td><b>21.1x</b></td><td><b>1.90x</b></td><td><b>8.3%</b></td><td class="neg"><b>7.0%</b></td></tr>
+          <tr><td>Muthoot Finance</td><td>1,15,181</td><td>12,324</td><td>9.4x</td><td>9.44x</td><td>2.62x</td><td>15.8%</td><td>30.9%</td></tr>
+          <tr><td>IIFL Finance</td><td>26,720</td><td>2,643</td><td>10.7x</td><td>10.7x</td><td>1.73x</td><td>10.9%</td><td>12.6%</td></tr>
+          <tr><td>Shriram Finance</td><td>2,26,167</td><td>12,687</td><td>16.1x</td><td>17.8x</td><td>2.03x</td><td>11.5%</td><td>16.4%</td></tr>
+        </table>
+        <div class="chartcap" style="margin-top:4px">₹ Cr / TTM. One source (Screener consolidated pages), fetched 7 Nov 2026, price = 6 Nov close. P/E (calc) = price ÷ TTM EPS; Screener's P/E shown to preserve conflicts (Manappuram 21.1x vs 20.4x, Shriram 17.8x vs 16.1x, unresolved). P/B is derived (price ÷ book value). <b>Not like-for-like:</b> Manappuram's TTM ends Jun-26 while the three peers' TTM already include Sep-26 (their results are out); Manappuram's TTM will shift after 12 Nov.</div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Reading it:</b> Manappuram has the <b>lowest ROE (7%) and ROCE of the group but the highest P/E (~20x)</b> and a mid P/B (1.9x). Peers: Muthoot (the gold-loan leader), IIFL Finance (gold loans are its largest segment) and Shriram Finance (secured lender of similar scale to Muthoot). Muthoot earns ~31% ROE at 9.4x earnings; the premium on Manappuram is for recovery from depressed earnings, not for quality. Muthoot's 30.9% ROE looks high against its 15.8% ROCE and should be verified. MarketSmith's own group peers (Bajaj Finance, Cholamandalam, Canfin Homes) are consumer-loan companies and not used.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec17"><span class="num">17</span><h2>Risk Analysis</h2></div>
+    <table class="t prose">
+      <tr><th style="text-align:left" scope="col">Category</th><th scope="col">Severity</th><th style="text-align:left" scope="col">Detail</th></tr>
+      <tr><td style="text-align:left">Gold Price / Collateral</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">Gold is ~82% of AUM, and gold AUM growth of +98% is largely price-led. Average LTV rose to 65.6% from 57.3%; a further 20% price fall takes the average near 82%, against RBI caps of 75–85%. MCX 24K was ~₹1.39 lakh on 2 Nov vs ₹1.49 lakh on 5 Oct (−6.8%); the claimed 13–17% fall from January is unverified.</td></tr>
+      <tr><td style="text-align:left">Asset Quality</td><td><span class="badge b-warn">Medium-High</span></td><td style="text-align:left">Stage 3 1.60% vs 3.00% (basis conflict). The Times of India / CIBIL report shows industry >90 DPD at 0.3% vs 0.2% (Mar to Aug 2026), a small base but a turn. Asirvad GNPA 4.8%; core MFI AUM −12.9%; qualifying-asset minimum missed in Q1.</td></tr>
+      <tr><td style="text-align:left">Earnings Durability</td><td><span class="badge b-warn">Medium-High</span></td><td style="text-align:left">Q1 FY27 PAT growth is a base effect; FY26 EPS ₹11.72 is below FY24's ₹25.96. Finance cost +49% vs revenue +34%. A ₹125 Cr ECL model change in Q1 shows estimate risk.</td></tr>
+      <tr><td style="text-align:left">Regulatory / Competition</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">RBI's gold-loan framework removes pricing and LTV discretion; banks and Muthoot compete; top-4 NBFC share fell to ~70% from ~90%. RBI past actions on Asirvad were not re-verified.</td></tr>
+      <tr><td style="text-align:left">Control / Governance</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Bain Capital has joint control and two nominee directors; the open-offer outcome and Bain's final stake are not confirmed; conflicting MD &amp; CEO coverage (Nandakumar vs Ashish Singh headline); pledge, related-party transactions and remuneration not found.</td></tr>
+      <tr><td style="text-align:left">Funding / Leverage</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Gearing 3.6x vs CRISIL's 5x downgrade trigger; borrowings +60% in FY26; rated AA (a notch below Muthoot). Bain's capital is a cushion.</td></tr>
+      <tr><td style="text-align:left">Data Quality</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Q1 press release unread (NIM, CRAR, NNPA missing); price-move conflict (+12.6% vs 0.18%); market cap ₹27,543 vs ₹30,566 Cr; ROE 6% vs 6.97%; group rank 93/197 on this MarketSmith page vs 104 on the Muthoot page (different capture dates likely); broker targets undated; CARE rating from a snippet. Q2 FY27 results are due 12 Nov.</td></tr>
+    </table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="notebox"><b>Two-sided check:</b> the balance sheet is stronger after Bain's first tranche, stage 3 improved YoY, and the gold book is growing quickly. The risks are collateral price, a valuation (~20x) that already assumes recovery on a 6–7% ROE, and a base effect that flatters the next few quarters.</div>
+      </div>
+      <div style="flex:1">
+        <div class="notebox red"><b>What would change my view:</b> a Q2 FY27 rise in Stage 3 or LTV above ~70%, a sharp gold fall, weaker Asirvad collections, or news that Bain stops at its first tranche. Conversely, Stage 3 staying near 1.6% with NIM holding would support the recovery reading.</div>
+      </div>
+    </div>
+  </div>
+  <div style="background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570);border-top:3px solid #f0b429;border-bottom:3px solid #f0b429;color:#f0b429;padding:9px 26px;font-weight:900;letter-spacing:2.5px;font-size:14px;text-transform:uppercase">Technical Analysis</div>
+  <div class="sec">
+    <div class="sec-title" id="sec18"><span class="num">18</span><h2>Technical Ratings &amp; Momentum</h2></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">Relative Strength Rating (MarketSmith India)</div>
+        <div style="font-size:56px;font-weight:900;color:#e07c00;line-height:1">67</div>
+        <div style="font-size:11px;color:#5a6475;margin:2px 0 8px">Out of 99 — <b class="warn">Above average</b></div>
+        <p style="font-size:11.5px">An RS of 67 means the stock has outperformed about two-thirds of the market over the rating window; EPS Rating is 73 (FAIR) and earnings stability is 54, with EPS growth rate −13%. Price is ~15% below its high and ~33% above its low; MarketSmith sees a weekly base forming about 14% from the pivot point.</p>
+        <div class="notebox blue" style="margin-top:10px"><b>Synthesis:</b> Master Score <b>B</b> (shown as 67 in the table: letter versus number, same score), Buyer Demand B+, Acc/Dis B+, group rank <b>93 of 197</b> (Finance-Consumer Loans; the Muthoot page showed 104, likely a different capture date, so treat as a snapshot). Reasonable price leadership, middling earnings quality.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">William O'Neil Score Breakdown</div>
+<div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">EPS Rating</div><div style="font-size:18px;font-weight:900;color:#e07c00">73</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">FAIR</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Price Strength (RS)</div><div style="font-size:18px;font-weight:900;color:#e07c00">67</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">ABOVE AVG</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Acc / Dis</div><div style="font-size:18px;font-weight:900;color:#2e7d32">B+</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">ACCUMULATION</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Group Rank</div><div style="font-size:18px;font-weight:900;color:#e07c00">93 / 197</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">MIDDLE</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Master Score</div><div style="font-size:18px;font-weight:900;color:#e07c00">B (67)</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">GOOD</div></div></div>
+        <div class="microhead" style="margin-top:10px">MotiveWave Trend-Momentum Gauges (6 Nov 2026)</div>
+        <table class="t">
+          <tr><th style="text-align:left" scope="col">Timeframe</th><th scope="col">Trend (Short / Long)</th><th scope="col">OI (Short / Long)</th><th scope="col">Signals</th></tr>
+          <tr><td style="text-align:left">Daily</td><td class="neg">0 / −1</td><td class="neg">0 / −2</td><td>Buy 0 / Sell 0</td></tr>
+          <tr><td style="text-align:left">1-hour</td><td class="pos">+3 / +1</td><td class="neg">0 / −2</td><td>Buy 0 / Sell 0</td></tr>
+        </table>
+        <div class="chartcap">Scale −5 to +5 (your gauges screen). The daily gauges are flat to slightly negative with no signal; the 1-hour trend is positive. The two timeframes disagree, which fits a stock sitting under resistance.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec19"><span class="num">19</span><h2>Elliott Wave Analysis (MotiveWave)</h2></div>
+    <div class="notebox blue" style="margin-top:0;margin-bottom:10px"><b>Degree count (the user's legend, applied exactly as labelled):</b> <span style="color:#e67e22;font-weight:900">orange = Intermediate</span> &nbsp;·&nbsp; <span style="color:#2e7d32;font-weight:900">green = Minor</span> &nbsp;·&nbsp; <b>circled roman = Minute</b> &nbsp;·&nbsp; <b>circled numbers = Primary</b>. On the daily chart the labels read: <b>circled "1" then circled "2" (Primary)</b> with the Primary 2 low near ₹80 (the tool's '2 vs 1' 61.8% marker at ₹80.53 on the reference view); then <span style="color:#e67e22;font-weight:900">orange (1)</span> near ₹230 and <span style="color:#e67e22;font-weight:900">orange (2)</span> with a low near ₹138 (Intermediate); then <span style="color:#2e7d32;font-weight:900">green 1</span> near ₹345 (Jan 2026) and <span style="color:#2e7d32;font-weight:900">green 2</span> near ₹245 (Minor); then a pink circled lowercase <b>i</b> (top near ₹385) and pink <b>ii</b> (low ₹270.9, RSI tag 17). <b>This is the user's count, not an independent one.</b> The pink circled lowercase i / ii are not in the stated legend (circled <i>roman</i> = Minute): I read them as <b>Minute</b> degree, wave i and wave ii of Minor 3. <b>Please confirm.</b></div>
+    <div class="cols">
+      <div class="imgwrap" style="flex:1"><img width="2000" height="1238" loading="lazy" src="MANAPPURAM_chart.jpg" alt="MotiveWave Elliott Wave daily chart and trend-momentum gauges for MANAPPURAM on 6 Nov 2026"></div>
+    </div>
+    <div class="microhead" style="margin-top:12px">Wave Structure Interpretation</div>
+    <table class="t prose">
+      <tr><td style="width:90px;vertical-align:top"><b>1D Count</b></td><td style="text-align:left">On the user's count, <b>Primary 2, Intermediate 2, Minor 2 and Minute 2 are all complete</b>, so the stock sits at the start of a wave 3 nested inside wave 3 of wave 3 of wave 3 (3 of 3 of 3 of 3), the pattern that, if it unfolds, tends to be the strongest leg. He reads the stock as <b>coiled for a sharp move</b>. <b>This is his read; the daily gauges (trend 0 / −1, OI 0 / −2, no signal) do not yet confirm it.</b> <b>Observations I would ask you to check (my arithmetic):</b> (i) taking Minor 1 at ~₹345 from the ~₹138 low, Minor 2 at ~₹245 retraced about 48% (100 ÷ 207); (ii) taking Minute i from ~₹245 to ~₹385, the Minute ii low of ₹270.9 retraced about 81% of it (114 ÷ 140), deep for a wave 2 though short of 100%, so the ₹245 low is the invalidation level for the whole count; (iii) the pink top (~₹385) is a few rupees above the FY26 high of ₹382, probably a bar high versus a close. Neither point contradicts the count. The projected (iii), (iv), (v) labels on the 1-hour chart (small yellow (i), (ii) with projections to the right) have no degree assigned.</td></tr>
+      <tr><td style="vertical-align:top"><b>Tool Marks</b></td><td style="text-align:left">No Fibonacci tool marks are drawn on this chart. Horizontal markers and lines, with distance from ₹325.40 (my arithmetic):
+        <table class="t" style="margin-top:6px">
+          <tr><th scope="col">Level</th><th scope="col">Price</th><th style="text-align:left" scope="col">Label</th><th scope="col">vs ₹325.40</th></tr>
+          <tr><td>Pink i top</td><td>₹~385</td><td style="text-align:left">Minute i high (chart)</td><td>+18.3%</td></tr>
+          <tr><td>Resistance line</td><td>₹325.40</td><td style="text-align:left">price at the resistance line (the close)</td><td>0.0%</td></tr>
+          <tr><td>Red marker</td><td>₹315.65</td><td style="text-align:left">below price</td><td>−3.0%</td></tr>
+          <tr><td>Pink ii low</td><td>₹270.9</td><td style="text-align:left">Minute ii low (RSI tag 17)</td><td>−16.7%</td></tr>
+          <tr><td>Green 2 low</td><td>₹~245</td><td style="text-align:left">Minor 2 low = FY26 low</td><td>−24.7%</td></tr>
+          <tr><td>Horizontal</td><td>₹220.25</td><td style="text-align:left">horizontal line</td><td>−32.3%</td></tr>
+          <tr><td>2 vs 1 marker</td><td>₹80.53</td><td style="text-align:left">Primary 2 (reference view)</td><td>−75.3%</td></tr>
+        </table></td></tr>
+      <tr><td style="vertical-align:top"><b>Synthesis</b></td><td style="text-align:left">On the user's count the set-up is for a wave 3 of 3 of 3 of 3, which would be the most powerful leg available, but the technical confirmation is missing: both daily gauges are flat and the stock is pressed against the ₹325.40 resistance line. Two-stage discipline: this is neither PINK (anticipation: gauges positive) nor GREEN. The 1-hour trend is positive (+3 / +1) but the daily is not. Confirmation I would want: a daily close above ₹325.40 with the daily trend gauge moving positive, then a move through the Jan 2026 area (~₹345). A close below ₹315.65 would weaken the near-term view, and a break below ₹270.9 and then ₹245 would put the count in doubt. No wave-projection targets are computed here.</td></tr>
+    </table>
+  </div>
+  <div class="sec">
+    <div class="sec-title" id="sec20"><span class="num">20</span><h2>Recommendation, Support &amp; Resistance</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fff8f0;border-color:#e67e22;flex:1.2">
+        <div class="plab" style="color:#e67e22">&#9733; Recommendation</div>
+        <div class="pval" style="color:#e67e22;font-size:19px">WAIT — SET-UP BUILDING, NO CONFIRMATION; RESULTS 12 NOV</div>
+        <p style="font-size:11.4px;margin-top:6px"><b>Bull case:</b> the user's count points to a wave 3 of 3 of 3 of 3; gold AUM +98%; Q1 PAT ₹585 Cr; Stage 3 down to 1.60%; Asirvad back in profit; Bain Capital's ₹4,385 Cr and joint control; RS 67 and Buyer Demand B+; mutual funds raised to 15.76%. <b>Bear case:</b> the Q1 growth is a base effect, ROE is only 6–7% against ~20x P/E, LTV is rising (65.6%) with gold volatile, industry delinquency has turned up (0.2% to 0.3%), daily gauges are flat, the price-move data conflict (+12.6% vs 0.18%) is unresolved, and Q2 results are due within days.</p>
+        <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#fce4ec;border-radius:5px"><b style="color:#d81b60">&#9679; PINK (not yet):</b> would be the daily trend gauge turning positive while price tests ₹325.40; today the daily is 0 / −1.</div>
+        <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#e8f5e9;border-radius:5px"><b style="color:#2e7d32">&#9679; GREEN (trigger):</b> a daily close above <b>₹325.40</b> with positive daily gauges and follow-through toward the Jan area (~₹345) and the ~₹385 top. Failure: a close below ₹315.65 and, decisively, below ₹270.9 / ₹245.</div>
+        <div style="font-size:11.3px;margin-top:6px"><b>Next catalysts:</b> Q2 FY27 results and a possible interim dividend on 12 Nov (note that peers' TTM already include Sep-26 and Manappuram's does not), Stage 3 and LTV trend, the Bain tranche and open-offer outcome, gold price, Asirvad collections.</div>
+      </div>
+      <div class="panel" style="border-color:#1565c0">
+        <div class="plab" style="color:#1565c0">&#128313; Key Support Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>₹315.65</td><td style="text-align:left">Red marker on chart</td><td><span class="badge b-neut">Near</span></td></tr>
+          <tr><td>₹270.9</td><td style="text-align:left">Minute ii low (RSI tag 17)</td><td><span class="badge b-bear">Key</span></td></tr>
+          <tr><td>₹245</td><td style="text-align:left">Minor 2 low = FY26 low · <b>count invalidation</b></td><td><span class="badge b-bear">Critical</span></td></tr>
+          <tr><td>₹236</td><td style="text-align:left">Bain Capital issue / open-offer price</td><td><span class="badge b-neut">Reference</span></td></tr>
+          <tr><td>₹220.25</td><td style="text-align:left">Horizontal line on chart</td><td><span class="badge b-neut">Deep</span></td></tr>
+        </table>
+      </div>
+      <div class="panel" style="border-color:#2e7d32">
+        <div class="plab" style="color:#2e7d32">&#128312; Key Resistance Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>₹325.40</td><td style="text-align:left">Resistance line at the close · <b>GREEN trigger</b></td><td><span class="badge b-bull">Signal</span></td></tr>
+          <tr><td>~₹345</td><td style="text-align:left">Minor 1 high (Jan 2026)</td><td><span class="badge b-bull">Major</span></td></tr>
+          <tr><td>₹382–385</td><td style="text-align:left">FY26 / 52-wk high · Minute i top on chart</td><td><span class="badge b-neut">Supply</span></td></tr>
+          <tr><td>~₹370</td><td style="text-align:left">Consensus target (undated); Jefferies ₹430 / ₹360</td><td><span class="badge b-neut">Broker</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, Screener.in, MarketSmith India (the author's own screens, prices as of 6 Nov 2026 close), CRISIL, CARE (search snippet), Times of India / TransUnion CIBIL (the article, supplied as a photo), UNI India, IANS, Dhanam, Kotak Neo, cofacto.ai, multibagg, Business Today, Outlook Business, Whalesbook and other public web sources as of 7 Nov 2026, and from the author's own MotiveWave Elliott Wave analysis. Q2 FY27 results (due 12 Nov 2026) are not included. Several figures (Stage 3 basis, LTV, gold price path, market-size estimates, broker targets, the group rank and the price move) come from secondary or unverified sources and are flagged where used; the Q1 press release and the CARE PDF were not read in full. Price, volume and financial figures should be independently verified. Credit ratings: CRISIL AA/Stable and A1+ (16 Jun 2026) and CARE AA/Stable (snippet) were found; India Ratings, ICRA (parent) and Acuite ratings were not found (absence in a web search is not proof of no rating). Ashoke Kumar Seth is not a SEBI-registered research analyst. This is not investment advice; always consult a licensed financial adviser before making investment decisions. All figures in ₹ Crore unless stated otherwise.</div>
+  <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice. &nbsp;|&nbsp; <span style="opacity:0.6">Template v6</span></div>
+</div>
+</div>
+<script>
+// In-report "New" tags: mark recently-changed content post-publish, auto-hide after 3 days.
+// Usage: <span class="new-tag" data-new-since="YYYY-MM-DD">New</span> right next to the changed content.
+(function(){
+  var NEW_DAYS = 3;
+  function isRecent(iso){
+    if (!iso) return false;
+    var t = Date.parse(iso + "T00:00:00");
+    if (isNaN(t)) return false;
+    var age = Date.now() - t;
+    return age >= 0 && age < NEW_DAYS * 86400000;
+  }
+  var tags = document.querySelectorAll('.new-tag[data-new-since]');
+  for (var i = 0; i < tags.length; i++){
+    if (!isRecent(tags[i].getAttribute('data-new-since'))) tags[i].style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
