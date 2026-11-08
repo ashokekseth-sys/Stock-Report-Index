@@ -1,0 +1,971 @@
+<!-- TEMPLATE VERSION: v6 (8 Sep 2026) — Replaced the single "Report Version" cover-page field with a growable "Revision History" table (Date | Version columns, one row per version so far, e.g. "29 Jul 2026 | v1 — Original", "8 Sep 2026 | v2 — Updated") — per user instruction "because there will be more changes": a fixed two-line display would not have scaled to a 3rd/4th future refresh, a table does. Sits directly below the "Generated On" meta-block. On any future refresh, append one new <tr> row with that refresh's date and next integer version — never overwrite/remove prior rows. -->
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0f1b33">
+<title>ROLEXRINGS — Equity Research Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#ffffff; font-family:'Source Sans 3',Arial,sans-serif; color:#2a3342; font-size:12.5px; line-height:1.5; }
+  .page-wrap { background:#e9edf3; display:flex; justify-content:center; padding:24px 12px 40px; }
+  .page { width:1400px; max-width:100%; margin:0; background:#fff; box-shadow:0 6px 24px rgba(26,42,74,0.18); }
+  /* header */
+  .hdr { background:linear-gradient(135deg,#101c36 0%,#1a2a4a 55%,#2b4570 100%); border-bottom:4px solid; border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1; color:#fff; padding:16px 26px 13px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .hdr .meta { font-size:10.5px; letter-spacing:0.6px; color:#9fb0cf; text-transform:uppercase; }
+  .hdr h1 { font-size:26px; font-weight:900; letter-spacing:0.2px; margin:2px 0 3px; }
+  .hdr .tagline { font-size:11.5px; color:#c7d2e8; }
+  .hdr .pricebox { text-align:right; }
+  .hdr .price { font-size:26px; font-weight:900; }
+  .hdr .chg { color:#ff8a80; font-weight:700; font-size:14px; }
+  .hdr .sub { font-size:10.5px; color:#9fb0cf; margin-top:3px; }
+  .tagstrip { display:flex; gap:0; border-bottom:1px solid #dde2ea; }
+  .tagstrip div { flex:1; text-align:center; padding:6px 4px; font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; border-right:1px solid #dde2ea; }
+  .tagstrip div:last-child { border-right:none; }
+  /* sections */
+  .sec { padding:16px 26px 20px; border-bottom:1px solid #e4e8ef; }
+  .sec-title { display:flex; align-items:center; gap:9px; margin-bottom:12px; padding-bottom:7px; border-bottom:2px solid #f0b429; }
+  .sec-title .num { background:linear-gradient(135deg,#f7b733,#e67e22); color:#1a2a4a; font-size:11px; font-weight:900; padding:2px 7px; border-radius:3px; }
+  .sec-title h2 { font-size:14.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#1a2a4a; }
+  .microhead { font-size:10px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#b07716; margin:10px 0 6px; }
+  /* generic table */
+  table.t { width:100%; border-collapse:collapse; }
+  table.t th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase; padding:6px 9px; text-align:right; font-weight:700; }
+  table.t th:first-child { text-align:left; }
+  table.t td { padding:5.5px 9px; border-bottom:1px solid #edf0f5; text-align:right; font-size:12px; }
+  table.t td:first-child { text-align:left; font-weight:600; }
+  table.t tr:nth-child(even) td { background:#f8f9fb; }
+  .pos { color:#2e7d32; font-weight:700; } .neg { color:#c62828; font-weight:700; }
+  .warn { color:#f57f17; font-weight:700; }
+  /* tiles */
+  .tiles { display:flex; gap:10px; }
+  .tile { flex:1; border:1px solid #dde2ea; border-top:3px solid #2b4570; border-radius:6px; padding:9px 12px; background:linear-gradient(180deg,#fdfefe,#f7f9fc); }
+  .tile .lab { font-size:9.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#6b7587; }
+  .tile .val { font-size:19px; font-weight:900; margin:2px 0 1px; color:#1a2a4a; }
+  .tile .note { font-size:10.3px; color:#5a6475; line-height:1.35; }
+  /* callout notes */
+  .notebox { border-left:4px solid #f9a825; background:#fffbe8; padding:9px 13px; font-size:11.8px; margin-top:11px; border-radius:0 5px 5px 0; }
+  .notebox.green { border-left-color:#2e7d32; background:#f0f7f0; }
+  .notebox.red { border-left-color:#c62828; background:#fdf0f0; }
+  .notebox.blue { border-left-color:#1565c0; background:#eef4fc; }
+  .badge { display:inline-block; font-size:9.5px; font-weight:900; letter-spacing:0.5px; padding:1.5px 7px; border-radius:9px; text-transform:uppercase; vertical-align:middle; }
+  .new-tag { display:inline-block; font-size:9px; font-weight:900; letter-spacing:0.7px; text-transform:uppercase; background:#f0b429; color:#3d2c00; padding:2px 6px; border-radius:3px; line-height:1.2; vertical-align:middle; margin-left:6px; }
+  .b-bull { background:#e8f5e9; color:#2e7d32; } .b-bear { background:#ffebee; color:#c62828; }
+  .b-neut { background:#e3f2fd; color:#1565c0; } .b-warn { background:#fff9c4; color:#f57f17; }
+  .cols { display:flex; gap:20px; }
+  .panel { flex:1; border:1px solid #dde2ea; border-radius:6px; padding:12px 15px; }
+  .panel .plab { font-size:9.5px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#6b7587; margin-bottom:3px; }
+  .panel .pval { font-size:21px; font-weight:900; }
+  .chartcap { font-size:10px; color:#6b7587; margin-top:5px; line-height:1.4; }
+  .imgwrap img { width:100%; border-radius:5px; border:1px solid #23304a; display:block; }
+  .footer-blue { border-top:3px solid #f0b429; background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570); color:#fff; text-align:center; padding:10px 16px; font-size:11px; letter-spacing:0.4px; }
+  .disclaim { font-size:9.8px; color:#6b7587; padding:12px 26px; line-height:1.5; }
+  table.t[style*='--pad'] td { padding:9px; }
+  .compact { padding:13px 26px 14px; }
+  .compact table.t td { padding:3.5px 8px; font-size:11.3px; }
+  .compact table.t th { padding:5px 8px; }
+  .compact .notebox { padding:7px 11px; font-size:10.8px; margin-top:0; }
+  .compact .microhead { margin:8px 0 4px; }
+  .compact .tile { padding:6px 10px; }
+  .compact .tile .val { font-size:15.5px; margin:1px 0 0; }
+  .compact .tile .note { font-size:9.6px; }
+  .compact .cols { gap:14px; }
+  table.fit { width:100%; table-layout:fixed; }
+  table.fit td, table.fit th { padding:3.5px 11px; white-space:nowrap; overflow:hidden; }
+  table.fit th:first-child, table.fit td:first-child { width:24%; }
+  .krow { display:flex; justify-content:space-between; align-items:baseline; gap:8px; border-bottom:1px solid #edf0f5; padding:5px 2px; }
+  .krow .klab { color:#6b7587; font-weight:900; font-size:9.3px; text-transform:uppercase; letter-spacing:0.5px; flex:0 0 auto; }
+  .krow .kval { font-weight:900; color:#1a2a4a; font-size:12.5px; text-align:right; }
+  .krow .kval small { display:block; font-weight:600; color:#6b7587; font-size:9.3px; }
+  .mininote { font-size:10px; color:#5a6475; line-height:1.45; margin-top:8px; padding:7px 9px; border-radius:4px; }
+  table.peer { width:100%; border-collapse:collapse; }
+  table.peer th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:8.6px; letter-spacing:0.3px; text-transform:uppercase; padding:4px 3px; text-align:right; }
+  table.peer th:first-child { text-align:left; }
+  table.peer td { padding:4px 3px; border-bottom:1px solid #edf0f5; text-align:right; font-size:10px; }
+  table.peer td:first-child { text-align:left; font-weight:700; }
+
+    .sector-wheel-compact{width:600px;height:700px;margin:50px auto 0 110px;overflow:visible}
+    .sector-wheel-compact > div{width:540px!important;transform:scale(0.93);transform-origin:top left}
+    .sector-wheel-compact .mt-16,.sector-wheel-compact .md\:mt-\[80px\]{margin-top:0!important}
+    .sector-wheel-compact .mt-8{display:none}
+    .sector-wheel-compact .relative{position:relative}
+    .sector-wheel-compact .absolute{position:absolute}
+    .sector-wheel-compact .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel-compact .pointer-events-none{pointer-events:none}
+    .sector-wheel-compact .z-10{z-index:10}
+    .sector-wheel-compact .flex{display:flex}
+    .sector-wheel-compact .flex-col{flex-direction:column}
+    .sector-wheel-compact .items-center{align-items:center}
+    .sector-wheel-compact .items-start{align-items:flex-start}
+    .sector-wheel-compact .items-end{align-items:flex-end}
+    .sector-wheel-compact .justify-center{justify-content:center}
+    .sector-wheel-compact .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel-compact .leading-none{line-height:1}
+    .sector-wheel-compact .font-black{font-weight:900}
+    .sector-wheel-compact .opacity-90{opacity:.9}
+    .sector-wheel-compact .overflow-visible{overflow:visible}
+    .sector-wheel-compact .aspect-square{aspect-ratio:1/1}
+    .sector-wheel-compact .w-full,.sector-wheel-compact .md\:w-full{width:100%}
+    .sector-wheel-compact .h-full{height:100%}
+    .sector-wheel-compact .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel-compact .ml-\[1px\]{margin-left:1px}
+    .sector-wheel-compact .mr-\[1px\]{margin-right:1px}
+    .sector-wheel-compact .w-\[86vw\]{width:100%}
+    .sector-wheel-compact .max-w-\[540px\]{max-width:540px}
+    .sector-wheel-compact .max-w-\[760px\]{max-width:540px}
+    .sector-wheel-compact .w-\[72px\]{width:72px}
+    .sector-wheel-compact .h-\[1px\]{height:1px}
+    .sector-wheel-compact .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel-compact .text-\[16px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel-compact .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel-compact .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel-compact .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel-compact .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel-compact .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel-compact .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel-compact .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel-compact .gap-\[7px\]{gap:7px}
+    .sector-wheel-compact .gap-\[8px\]{gap:8px}
+    .sector-wheel-compact svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .relative{position:relative}
+    .sector-wheel .absolute{position:absolute}
+    .sector-wheel .inset-0{top:0;right:0;bottom:0;left:0}
+    .sector-wheel .pointer-events-none{pointer-events:none}
+    .sector-wheel .z-10{z-index:10}
+    .sector-wheel .flex{display:flex}
+    .sector-wheel .flex-col{flex-direction:column}
+    .sector-wheel .items-center{align-items:center}
+    .sector-wheel .items-start{align-items:flex-start}
+    .sector-wheel .items-end{align-items:flex-end}
+    .sector-wheel .justify-center{justify-content:center}
+    .sector-wheel .whitespace-nowrap{white-space:nowrap}
+    .sector-wheel .leading-none{line-height:1}
+    .sector-wheel .font-black{font-weight:900}
+    .sector-wheel .opacity-90{opacity:.9}
+    .sector-wheel .overflow-visible{overflow:visible}
+    .sector-wheel .aspect-square{aspect-ratio:1/1}
+    .sector-wheel .w-full,.sector-wheel .md\:w-full{width:100%}
+    .sector-wheel .h-full{height:100%}
+    .sector-wheel .mx-auto{margin-left:auto;margin-right:auto}
+    .sector-wheel .mt-16{margin-top:64px}
+    .sector-wheel .mt-8{margin-top:32px}
+    .sector-wheel .md\:mt-10{margin-top:40px}
+    .sector-wheel .md\:mt-\[80px\]{margin-top:64px}
+    .sector-wheel .ml-\[1px\]{margin-left:1px}
+    .sector-wheel .mr-\[1px\]{margin-right:1px}
+    .sector-wheel .w-\[86vw\]{width:100%}
+    .sector-wheel .max-w-\[540px\]{max-width:540px}
+    .sector-wheel .max-w-\[760px\]{max-width:540px}
+    .sector-wheel .w-\[72px\]{width:72px}
+    .sector-wheel .h-\[1px\]{height:1px}
+    .sector-wheel .bg-\[\#d9d0bb\]\/70{background:rgba(217,208,187,.7)}
+    .sector-wheel .text-\[16px\]{font-size:15px}
+    .sector-wheel .md\:text-\[21px\]{font-size:15px}
+    .sector-wheel .md\:text-\[22px\]{font-size:16px}
+    .sector-wheel .tracking-\[0\.12em\]{letter-spacing:.12em}
+    .sector-wheel .tracking-\[0\.14em\]{letter-spacing:.14em}
+    .sector-wheel .text-\[\#0f2f5c\]{color:#0f2f5c}
+    .sector-wheel .text-\[\#8b2e00\]{color:#8b2e00}
+    .sector-wheel .text-\[\#4c2e8a\]{color:#4c2e8a}
+    .sector-wheel .text-\[\#115e5f\]{color:#115e5f}
+    .sector-wheel .gap-\[7px\]{gap:7px}
+    .sector-wheel .gap-\[8px\]{gap:8px}
+    .sector-wheel svg text{font-family:'Inter','Source Sans 3',sans-serif}
+    .sector-wheel .hub-name{font-family:'Fraunces',Georgia,serif}
+
+  /* ===================== RESPONSIVE / MOBILE ===================== */
+  .mobile-jump { display:none; }
+  @media (max-width: 860px) {
+    html { -webkit-text-size-adjust:100%; }
+    body { overflow-x:hidden; }
+    .page { width:100% !important; max-width:100% !important; }
+    .sec, .hdr { padding-left:16px !important; padding-right:16px !important; }
+    .disclaim { padding-left:16px !important; padding-right:16px !important; }
+    .footer-blue { padding-left:16px !important; padding-right:16px !important; }
+
+    .hdr { flex-direction:column !important; align-items:stretch !important; gap:10px; }
+    .hdr .pricebox { text-align:left !important; }
+
+    .tagstrip { flex-direction:column !important; }
+    .tagstrip div { border-right:none !important; border-bottom:1px solid #dde2ea; text-align:left !important; padding:8px 4px !important; }
+    .tagstrip div:last-child { border-bottom:none; }
+
+    .mobile-jump {
+      display:flex !important; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      position:sticky; top:0; z-index:20; background:#1a2a4a; padding:10px 12px;
+      border-bottom:3px solid #f0b429; white-space:nowrap; scrollbar-width:none;
+    }
+    .mobile-jump::-webkit-scrollbar { display:none; }
+    .mobile-jump a {
+      color:#c7d2e8; font-size:11.5px; font-weight:700; text-decoration:none;
+      padding:6px 10px; border-radius:14px; background:rgba(255,255,255,0.08); flex:0 0 auto;
+    }
+    .sec-title { scroll-margin-top:56px; }
+
+    .cols { flex-wrap:wrap !important; }
+    .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
+    .cols { row-gap:16px; }
+
+    .tiles { flex-wrap:wrap !important; row-gap:8px; }
+    .tile { flex:1 1 45% !important; min-width:0 !important; }
+
+    div[style*="flex:1 1 44%"] { flex:1 1 100% !important; }
+    div[style*="flex:1 1 30%"] { flex:1 1 45% !important; }
+
+    table.t:not(.prose), table.fit, table.peer {
+      display:table !important; width:100% !important; table-layout:fixed !important;
+      white-space:normal !important; overflow-x:visible !important; max-width:100%;
+    }
+    table.t:not(.prose) td, table.t:not(.prose) th,
+    table.fit td, table.fit th,
+    table.peer td, table.peer th { white-space:normal !important; word-wrap:break-word; padding:4px 3px !important; font-size:9.6px !important; }
+    table.peer td:first-child, table.peer th:first-child { width:26% !important; }
+    table.prose { display:block !important; }
+    table.prose tr:first-child { display:none !important; }
+    table.prose tr { display:block !important; padding:10px 0 !important; border-bottom:1px solid #e4e8ef; }
+    table.prose tr:last-child { border-bottom:none !important; }
+    table.prose td { display:inline !important; padding:0 !important; border:none !important; text-align:left !important; white-space:normal !important; width:auto !important; word-wrap:break-word; }
+    table.prose td:first-child { font-weight:900; font-size:13px; color:#1a2a4a; }
+    table.prose td:nth-child(2) { margin-left:8px; }
+    table.prose td:nth-child(3) { display:block !important; margin-top:6px; font-size:12.5px; line-height:1.55; color:#2a3342; }
+
+    .metric-strip { flex-wrap:wrap !important; }
+    .metric-strip > div { flex:1 1 50% !important; box-sizing:border-box; border-bottom:1px solid #e7ebf1 !important; }
+    .metric-strip > div:nth-child(even) { border-right:none !important; }
+
+    .krow { flex-wrap:wrap; align-items:flex-start !important; }
+    .krow .klab { flex:1 1 auto !important; }
+    .krow .kval { display:contents !important; }
+    .krow .kval small { flex:1 1 100% !important; order:3; display:block !important; text-align:left !important; margin-top:3px !important; }
+
+    h1 { font-size:21px !important; }
+    .price { font-size:22px !important; }
+
+    .sector-wheel-compact { width:270px !important; height:290px !important; margin:20px auto 0 32px !important; overflow:visible !important; }
+    .sector-wheel-compact > div { width:540px !important; transform:scale(0.5); transform-origin:top left; }
+  }
+
+  @media (max-width: 480px) {
+    .tile { flex:1 1 100% !important; }
+    div[style*="flex:1 1 45%"] { flex:1 1 100% !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#sec01">Skip to report</a>
+<style>
+  :root{
+    --navy:#1a2a4a;
+    --navy-2:#243a63;
+    --gold:#c9a24b;
+    --ink:#1a2a4a;
+    --muted:#5c6b85;
+    --hair:#dde2ea;
+    --page-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .cover-wrap{
+    font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    background:#e9edf3;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px;
+  }
+  .cover-page{
+    width:1400px;
+    max-width:100%;
+    min-height:900px;
+    background:var(--page-bg);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 6px 24px rgba(26,42,74,0.18);
+    overflow:hidden;
+  }
+  .top-band{
+    height:14px;
+    background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--gold) 100%);
+    flex-shrink:0;
+  }
+  .brand-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:26px 56px 0 56px;
+    flex-shrink:0;
+  }
+  .brand-bar .doc-type{
+    font-size:12px;
+    letter-spacing:3px;
+    color:var(--muted);
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .brand-bar .doc-date{
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.4px;
+  }
+  .main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    padding:36px 60px 40px 60px;
+  }
+  .logo-wrap{
+    width:auto;
+    max-width:92%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:44px;
+  }
+  .logo-wrap img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .text-logo{
+    font-size:clamp(20px, 6.2vw, 40px);
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--navy);
+    white-space:normal;
+    word-break:break-word;
+    text-align:center;
+    line-height:1.15;
+  }
+  .text-logo span{ color:var(--gold); }
+  .kicker{
+    font-size:15px;
+    letter-spacing:6px;
+    color:var(--gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  h1.report-title{
+    font-size:46px;
+    letter-spacing:1px;
+    color:var(--navy);
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.15;
+  }
+  .divider{
+    width:120px;
+    height:3px;
+    background:var(--gold);
+    margin:26px 0;
+  }
+  .company-name{
+    font-size:34px;
+    font-weight:700;
+    color:var(--navy);
+    letter-spacing:0.3px;
+  }
+  .ticker-row{
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 14px;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .ticker-chip{ text-align:center; }
+  .ticker-chip{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:var(--navy);
+    background:#eef1f7;
+    border:1px solid var(--hair);
+    border-radius:4px;
+    padding:6px 14px;
+  }
+  .sector-line{
+    margin-top:28px;
+    font-size:14px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+    font-style:italic;
+  }
+  .meta-block{
+    margin-top:64px;
+    display:flex;
+    gap:70px;
+    justify-content:center;
+  }
+  .rev-history{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .rev-history-title{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--muted);font-weight:600;margin-bottom:8px;
+  }
+  .rev-history-table{ border-collapse:collapse; font-size:13px; }
+  .rev-history-table th{
+    text-align:left; padding:2px 28px 4px 0; font-size:10px; letter-spacing:1px;
+    text-transform:uppercase; color:var(--muted); font-weight:600;
+    border-bottom:1px solid #e2e6ee;
+  }
+  .rev-history-table td{ white-space:nowrap; padding:4px 28px 4px 0; color:var(--navy); font-weight:600; }
+  .rev-history-table td.rev-note{ white-space:normal; color:var(--muted); font-weight:400; }
+  .meta-item{
+    text-align:center;
+  }
+  .meta-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .meta-value{
+    font-size:16px;
+    color:var(--navy);
+    font-weight:700;
+  }
+  .prepared-by{
+    margin-top:60px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+  }
+  .prepared-by strong{
+    color:var(--navy);
+  }
+  .footer{
+    flex-shrink:0;
+    background:#ffffff;
+    border-top:1px solid var(--hair);
+    padding:16px 56px;
+    text-align:center;
+  }
+  .footer p{
+    font-size:10.5px;
+    line-height:1.6;
+    color:#8992a6;
+    letter-spacing:0.2px;
+  }
+  .footer strong{
+    color:var(--muted);
+  }
+  @media (max-width: 860px) {
+    .footer { padding:14px 20px !important; text-align:left !important; }
+    .footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .main { padding-top:14px !important; padding-bottom:14px !important; }
+    .logo-wrap { margin-bottom:20px !important; }
+    .meta-block { margin-top:30px !important; }
+  }
+  .bottom-band{
+    height:8px;
+    background:var(--navy);
+    flex-shrink:0;
+  }
+
+  /* a11y pass 1 Nov 2026 (Web Interface Guidelines) */
+  .skip-link{position:absolute;left:-9999px;top:0;background:#0f1b33;color:#fff;padding:8px 12px;z-index:100}
+  .skip-link:focus{left:8px;top:8px}
+  a:focus-visible{outline:2px solid #c9a24b;outline-offset:2px}
+  .sec-title{scroll-margin-top:56px}
+  table.t td,table.t th,table.peer td,table.peer th,.rev-history-table td{font-variant-numeric:tabular-nums}
+  h1,h2{text-wrap:balance}
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+  <div class="top-band"></div>
+  <div class="brand-bar"></div>
+  <div class="main">
+    <div class="logo-wrap"><div class="text-logo">ROLEX <span>RINGS</span></div></div>
+    <div class="kicker">Equity Research Report</div>
+    <h1 class="report-title">Rolex Rings Ltd</h1>
+    <div class="divider"></div>
+    <div class="ticker-row">
+      <div class="ticker-chip">NSE: ROLEXRINGS</div>
+      <div class="ticker-chip">Mkt Cap: ₹5,417 Cr</div>
+      <div class="ticker-chip">Master Score: C / B / 61 (conflict)</div>
+      <div class="ticker-chip">Price: ₹211.90 (MarketSmith) · ₹203.81 (MotiveWave)</div>
+    </div>
+    <div class="sector-line">Forged and machined bearing rings and auto components — debt-free, promoter 54.24%</div>
+    <div class="meta-block" style="display:block">
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
+      <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">8 November 2026</span>
+    </div>
+    <div class="rev-history">
+      <div class="rev-history-title">Revision History</div>
+      <table class="rev-history-table">
+        <tr><th scope="col">Date</th><th scope="col">Version</th></tr>
+        <tr><td>08/11/26</td><td class="rev-note">v1 &mdash; Initial report</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="footer">
+    <p style="margin-bottom:4px;letter-spacing:0.5px;text-transform:uppercase;font-size:9.5px;color:#6b7587">Confidential — For Educational Use</p>
+    <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
+  </div>
+  <div class="bottom-band"></div>
+</div>
+</div>
+
+
+<div class="page-wrap">
+<div class="page">
+  <div class="hdr">
+    <div>
+      <div class="meta">NSE: ROLEXRINGS &nbsp;·&nbsp; Forged Bearing Rings &amp; Auto Components</div>
+      <h1>Rolex Rings Ltd</h1>
+      <div class="tagline">Debt-free forger of bearing rings and auto components &nbsp;·&nbsp; Q2 FY27 PAT ₹73.94 Cr (+67% YoY) includes a ~₹18 Cr one-off-like customs-duty refund &nbsp;·&nbsp; Mar-26 quarter PAT was −₹0.15 Cr (PBT ₹0.17 Cr) &nbsp;·&nbsp; Price ₹211.90 (MarketSmith) vs ₹203.81 (MotiveWave label): not reconciled</div>
+    </div>
+    <div class="pricebox">
+      <div class="price">₹211.90 <span class="chg" style="color:#a5d6a7">&#9650; +₹11.40 (+5.69%) per MarketSmith</span></div>
+      <div class="sub">Report date: 8 Nov 2026 (latest session as read from the author's screens) &nbsp;|&nbsp; Mkt Cap: ₹5,417 Cr &nbsp;|&nbsp; TTM EPS ₹6.73, P/E 31.5x (my arithmetic; MarketSmith 31) &nbsp;|&nbsp; Master Score: C (header) / B (text) / 61 (table)</div>
+    </div>
+  </div>
+  <div class="tagstrip">
+    <div style="color:#2e7d32;background:#f0f7f0">&#9679; Momentum: daily gauges +4 / +2, 1h +3 / +1; sharp up day</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Earnings quality: Mar-26 PBT ₹0.17 Cr; Sep-26 includes ~₹18 Cr refund</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Valuation: P/E 31.5x vs 50–72x for forging peers</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; EPS Rating 40 / 41 · RS 91 / 92 · Master C / B / 61</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; WAIT / PINK-WATCH: GREEN needs confirmation (chase risk)</div>
+  </div>
+
+<nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Moat</a><a href="#sec03">Q2 &amp; Price</a><a href="#sec04">Earnings Quality</a><a href="#sec05">Sentiment</a><a href="#sec06">Volume Scale</a><a href="#sec07">Shareholding</a><a href="#sec08">Performance</a><a href="#sec09">Financials</a><a href="#sec10">Ratios</a><a href="#sec11">Management</a><a href="#sec12">Guidance</a><a href="#sec13">Consensus</a><a href="#sec14">Volume</a><a href="#sec15">Sector Rotation</a><a href="#sec16">Peers</a><a href="#sec17">Risk</a><a href="#sec18">Technical Ratings</a><a href="#sec19">Elliott Wave</a><a href="#sec20">Recommendation</a></nav>
+<div class="sec">
+    <div class="sec-title" id="sec01"><span class="num">01</span><h2>Company Overview</h2></div>
+    <div class="cols">
+      <div style="flex:1.5">
+        <div class="microhead">What They Do</div>
+        <p>Rolex Rings makes <b>forged and machined steel rings and components</b>: bearing rings (the races inside ball and roller bearings) and auto components, sold to bearing and automotive customers in India and abroad (17+ countries per the Aug 2026 investor presentation). It is listed on the NSE and reports a <b>single segment</b>; the product split below is from a call summary (FY26 about 47% bearing rings, 45% auto components, 8% other). <b>57 customers</b> are named in the Aug 2026 presentation; a secondary TradingView post puts the top-10 at about 80% of revenue (low confidence). Named customers, forging-technology detail, wind, EV and steel pass-through terms were <b>not found</b>.</p>
+        <p style="margin-top:7px">Reported figures: FY26 sales <b>₹1,143.50 Cr (MarketSmith) / ₹1,144 Cr (stockscans)</b>, PAT about ₹141 Cr; TTM sales <b>₹1,274 Cr</b>; TTM EPS <b>₹6.73 (my arithmetic: 1.75 − 0.01 + 2.21 + 2.78)</b>. <b>Basis warning:</b> MarketSmith's annual EPS (FY26 51.81) is on the pre-split share basis and its quarterly EPS (~₹2) on the post-split basis; the two must not be mixed (a 1:10 split, FV ₹10 to Re 1, board-approved 4 Sep 2025; record date <b>conflicting: 19 Sep, 4 Oct or 17 Oct 2025</b>). The balance sheet has <b>no borrowings and ₹72.9 Cr of cash (Sep-26)</b>; a ₹180 Cr buyback was completed (timing and price not found).</p>
+        <div class="notebox blue" style="margin-top:10px"><b>Key Competitive Advantage:</b> a debt-free, cash-generative forging business with EBIT margins of 20–21% for five years (MarketSmith) and a growing export and auto-component mix. The flip side: bearing rings were flat in H1 FY27, capacity utilisation is only about 63–65%, a very large part of revenue sits with a few customers (low-confidence source), and the latest quarter carries a ~₹18 Cr refund inside revenue and EBITDA (section 03).</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Product Mix (FY26, call summary)</div>
+        <svg role="img" aria-label="Donut chart: ~₹1,144 Cr" viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><path d="M240.0,8.0 A96,96 0 0 1 258.0,198.3 L247.9,145.3 A42,42 0 0 0 240.0,62.0 Z" fill="#1a2a4a" stroke="#fff" stroke-width="1"/><text x="308.7" y="101.5" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">47%</text><path d="M258.0,198.3 A96,96 0 0 1 193.8,19.9 L219.8,67.2 A42,42 0 0 0 247.9,145.3 Z" fill="#8fa3c4" stroke="#fff" stroke-width="1"/><text x="175.1" y="131.4" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">45%</text><path d="M193.8,19.9 A96,96 0 0 1 240.0,8.0 L240.0,62.0 A42,42 0 0 0 219.8,67.2 Z" fill="#b07716" stroke="#fff" stroke-width="1"/><text x="222.8" y="41.2" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">8%</text><text x="240" y="102" text-anchor="middle" font-size="13" font-weight="900" fill="#1a2a4a">~₹1,144 Cr</text><text x="240" y="114" text-anchor="middle" font-size="6.5" letter-spacing="0.6" fill="#8a94a6">FY26 SALES (MARKETSMITH)</text><rect x="26" y="222" width="11" height="11" rx="2" fill="#1a2a4a"/><text x="43" y="232" font-size="10.5" fill="#2a3342" font-weight="700">Bearing rings</text><text x="43" y="245" font-size="9.3" fill="#8a94a6">~47% of FY26 revenue (call summary; one source)</text><rect x="26" y="252" width="11" height="11" rx="2" fill="#8fa3c4"/><text x="43" y="262" font-size="10.5" fill="#2a3342" font-weight="700">Auto components</text><text x="43" y="275" font-size="9.3" fill="#8a94a6">~45% of FY26 revenue (same source)</text><rect x="26" y="282" width="11" height="11" rx="2" fill="#b07716"/><text x="43" y="292" font-size="10.5" fill="#2a3342" font-weight="700">Other</text><text x="43" y="305" font-size="9.3" fill="#8a94a6">~8% (scrap, incentives, other; same source)</text></svg>
+      </div>
+      <div style="flex:1.05">
+        <div class="microhead">Revenue-Mix Diversification</div>
+        <div style="border:1px solid #dde2ea;border-radius:6px;padding:11px 14px;background:#f8f9fb">
+          <div style="font-size:15px;font-weight:900;color:#1a2a4a">Rated 2 / 5
+            <span style="letter-spacing:2px;color:#2e7d32;font-size:13px">&#9632;&#9632;</span><span style="letter-spacing:2px;color:#cdd5e0;font-size:13px">&#9632;&#9632;&#9632;</span></div>
+          <p style="font-size:11px;margin-top:5px">My rating, not a sourced one. Two product families (rings and auto components) in one steel-forging process, split roughly evenly, and exports of 44% (Aug 2026 presentation) to about 47% (9M FY26 call) of revenue across 17+ countries. Against that: one raw material (steel), 57 customers and, per a low-confidence source, a top-10 near 80%.</p>
+          <p style="font-size:11px;margin-top:5px"><b>Q2 FY27 split (multibagg.ai, from the investor presentation):</b> auto components ₹177 Cr (+67.7%), bearing rings ₹153 Cr (+6.2%); the two add to ₹330 Cr against ₹389.18 Cr revenue, leaving ~₹59 Cr (scrap, export incentives, the refund; my arithmetic). <b>What would lift the rating:</b> the defence / aerospace revenue management expects within 12 months, or a disclosed customer-concentration figure that is lower than 80%.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="sec">
+    <div class="sec-title" id="sec02"><span class="num">02</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
+    <table class="t prose">
+      <tr><th style="text-align:left" scope="col">Dimension</th><th scope="col">Rating</th><th style="text-align:left" scope="col">Commentary</th></tr>
+      <tr><td style="text-align:left">Brand / Trust</td><td><span class="badge b-neut">Neutral</span></td><td style="text-align:left">A components supplier sold on quality approvals, delivery and price. The A- / Stable CARE and IND A / Stable Ind-Ra ratings (section 11) show lenders are comfortable, but a rating is not a brand.</td></tr>
+      <tr><td style="text-align:left">Network Effects</td><td><span class="badge b-warn">None</span></td><td style="text-align:left">No platform dynamics in forged rings.</td></tr>
+      <tr><td style="text-align:left">Switching Costs</td><td><span class="badge b-warn">Low-Moderate</span></td><td style="text-align:left">I infer (not sourced) that bearing and auto customers need to qualify a new forging vendor, which creates some stickiness. Against it: 57 customers, no named customer or contract tenor was found, and management says the Q1 FY27 constraint was labour, not demand, which suggests orders are available but not locked in. Steel pass-through terms: <b>not found</b>.</td></tr>
+      <tr><td style="text-align:left">Cost / Scale Advantage</td><td><span class="badge b-bull">Moderate</span></td><td style="text-align:left">EBIT margin 21.28% (FY26), 19.80% (FY25), 20% (FY24), 21.46% (FY23), 21.12% (FY22) per MarketSmith: consistent. Zero long-term debt since FY23. But utilisation is only ~62–63% (9M FY26) and ~63–65% (Q2 FY27 commentary), and forging capacity is <b>conflicting</b>: 165,000 MTPA (one summary) vs 105,000–115,000 MTPA (Q3 FY26 call summary). Not reconciled.</td></tr>
+      <tr><td style="text-align:left">Regulation / Trade as a Barrier</td><td><span class="badge b-warn">Exposed</span></td><td style="text-align:left">Not a regulatory moat: the business is exposed to US tariff policy. Management says tariffs have not cost it a customer, and Q2 FY27 revenue includes a ~₹18 Cr customs-duty refund tied to the US tariffs; Q1 FY26 exports of bearing rings fell 21% and auto components 15% on tariff uncertainty (quartr summary). China+1 commentary: <b>not found</b>.</td></tr>
+      <tr><td style="text-align:left">Market Share</td><td><span class="badge b-warn">Incomplete</span></td><td style="text-align:left">No market-share figure or industry size was found; Indian forging peer comparison is limited to the Screener table in section 16.</td></tr>
+    </table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">What This Moat Does NOT Protect Against</div>
+        <p style="font-size:11.3px">An approval-based forging position does not protect against a tariff change, a freight-cost spike (ocean freight up nearly 3x after the West Asia escalation), a labour shortage (it hit Q1 FY27), a customer re-sourcing, or a weak bearing cycle. It also does not make a one-off customs refund recur.</p>
+      </div>
+      <div style="flex:1">
+        <div class="notebox blue" style="margin-top:0"><b>Synthesis:</b> a <b>narrow, process-and-approval moat with an unusually clean balance sheet</b>. Returns have fallen from the FY22–23 peak (ROCE 33.17% and 31.29% to 19.18% in FY26; ROE 24.20% / 26.66% to 11.62%) because sales have been flat for four years (FY23 ₹1,178.95 Cr to FY26 ₹1,143.50 Cr) on a larger equity base. The H1 FY27 acceleration is the first real test of whether that is changing.</div>
+      </div>
+    </div>
+  </div>
+
+<div class="sec">
+    <div class="sec-title" id="sec03"><span class="num">03</span><h2>Q2 FY27 Results (Sep-26) &amp; the Price Conflict</h2></div>
+<div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Revenue (Q2 FY27)</div><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹389.18 Cr</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">+43.41% YoY from ₹271.38 Cr</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Operating Profit</div><div style="font-size:18px;font-weight:900;color:#2e7d32">₹94.31 Cr</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">+71.97% · OPM 24.2% (univest)</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">PBT</div><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹99.63 Cr</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">MarketSmith · EBIT ₹100.33 Cr</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Net Profit</div><div style="font-size:18px;font-weight:900;color:#2e7d32">₹73.94 Cr</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">+66.76% (univest) · NPM 19.0%</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">EPS (qtr)</div><div style="font-size:18px;font-weight:900;color:#2e7d32">₹2.78</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">vs ₹1.73 · +61% (MarketSmith)</div></div></div>
+    <div class="notebox red" style="margin-top:0;margin-bottom:10px"><b>WHAT IS CONFIRMED AND WHAT IS NOT.</b> MarketSmith (the author's screen) confirms revenue ₹389.2 Cr and PAT ₹73.9 Cr. The growth rates, operating profit and segment split come from univest.in, multibagg.ai and sahi.com (Nov 2026), which summarise the company's results and investor presentation; <b>I have not read the NSE filing or the Q2 presentation PDF</b>. Results approval is dated 4 Nov in some sources and 5 Nov in the screener announcement list (not reconciled). The Q1 FY27 call transcript and presentation (Aug 2026) were also not opened; no Q2 call transcript was found.</div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">Reading the Quarter — Strong, but Part of It Is a Refund</div>
+        <div style="border:2px solid #e07c00;border-radius:8px;padding:10px 14px;background:linear-gradient(135deg,#fff8ee,#fffdf7);height:calc(100% - 24px)">
+          <p style="font-size:11.4px"><b>The good side:</b> revenue +43.4% YoY and +27.9% on Jun-26 (389.18 ÷ 304.3, my arithmetic); auto components +67.7%; H1 FY27 revenue ₹694 Cr (+23.2%), EBITDA ₹163 Cr (+40%), PAT ₹134 Cr (+43.8%) per the multibagg summary; labour availability is back to normal since the start of Q2; order book averaging ₹120–125 Cr a month.</p>
+          <p style="font-size:11.4px;margin-top:7px"><b>The weaker side:</b> a <b>~₹18 Cr customs-duty refund</b> (US-tariff related) is booked inside revenue, gross profit and EBITDA, and the company did not give ex-refund numbers. <b>My arithmetic (unverified):</b> revenue ex-refund ₹371 Cr (+36.8% YoY); operating profit ex-refund ~₹76 Cr (94.31 − 18) vs ₹54.84 Cr (+39%), margin ~20.6%; PAT lower by ~₹13.4 Cr after tax at the quarter's 25.8% effective rate (1 − 73.94 ÷ 99.63), so ex-refund PAT is ~₹60.5 Cr, which is <b>level with Jun-26 (₹60.14 Cr)</b>. In other words, on this arithmetic the entire sequential PAT rise is the refund.</p>
+          <p style="font-size:11.4px;margin-top:7px"><b>Cross-check (my arithmetic):</b> NI +67% (73.94 ÷ 44.34) vs reported EPS +61% (2.78 ÷ 1.73): the implied weighted share counts are 25.6 Cr (Sep-25) and 26.6 Cr (Sep-26), a rise that is hard to square with a buyback; MarketSmith's quarterly EPS basis is not reconciled.</p>
+          <div style="font-size:10.3px;color:#8a6d1f;background:#fff9e0;border-radius:4px;padding:6px 9px;margin-top:8px"><b>Margin conflict kept:</b> gross margin 59.8% (+820 bps) in the detailed statements vs 55% (+220 bps) in the Chairman's message (multibagg). Unexplained. The Rs 18 Cr treatment ("not labelled exceptional") is also the company's, not mine. EBITDA ₹94 Cr (univest) vs EBIT ₹100.33 Cr (MarketSmith): different definitions, both kept.</div>
+        </div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead" style="margin-top:0">PRICE CONFLICT — ₹211.90 vs ₹203.81 on the author's own screens</div><div class="krow"><span class="klab">MarketSmith</span><span class="kval" style="color:#1a2a4a">₹211.90<small>Header +₹11.40 (+5.69%), implying a base of ₹200.50 (my arithmetic). Volume 23,62,379 shares (−84.49% vs average).</small></span></div><div class="krow"><span class="klab">MotiveWave Labels</span><span class="kval" style="color:#e07c00">₹203.81 · ₹214.50 · ₹212.16<small>Red label 203.81; blue labels 214.50 and 212.16; the daily spike high is ~₹214.5. <b>Unreconciled:</b> whether 203.81 is an earlier close, a different timeframe's last price, or a live tick is not known; one-day vs multi-day for the +5.69% is also unconfirmed.</small></span></div><div class="krow"><span class="klab">Market Cap</span><span class="kval">₹5,417 Cr vs ₹5,566 Cr<small>MarketSmith ₹5,417.18 Cr (= ~25.6 Cr shares at ₹211.90, my arithmetic) vs stockscans ₹5,566 Cr at ₹212.16 (= ~26.2 Cr shares). Equity capital ₹27 Cr (Mar-26) to ₹26 Cr (Sep-26) at ~Re 1 face value.</small></span></div><div class="krow"><span class="klab">Rally Context</span><span class="kval">₹148 → ₹211.90<small>+43.2% from ~₹148 on 5 Aug (my arithmetic, bulk-deal price); +31.3% from ₹161.44 on 26 Oct (Investing.com page). MarketSmith chart text: +31% from the pivot in 14 weeks. The cause of the Aug–Nov rally was <b>not found</b>.</small></span></div><div class="krow"><span class="klab">Stock Reaction to Q2</span><span class="kval">Not found<small>No article on the post-results price reaction was located.</small></span></div>        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Why it matters:</b> the ₹206 level (1h resistance) sits between the two prices: ₹203.81 is below it, ₹211.90 is above it. Every distance in sections 18–20 is computed on ₹211.90 and flagged where the other price would change the reading.</div>
+      </div>
+    </div>
+  </div>
+
+<div class="sec" style="border:3px solid #e07c00;background:linear-gradient(180deg,#fffaf3,#ffffff)">
+    <div class="sec-title" id="sec04"><span class="num">04</span><h2>Earnings Quality: Mar-26 Hole, Sep-26 Jump &amp; the Holding Shift — Priority Section</h2></div>
+    <div class="notebox" style="margin-top:0"><b>The question:</b> Rolex's reported profit has two holes and one bump: <b>Mar-26 PBT ₹0.17 Cr</b> on EBIT of ₹49.72 Cr (PAT −₹0.15 Cr), a sharp <b>Sep-26 PAT jump</b> (₹73.94 Cr) that includes a ~₹18 Cr refund, and a <b>promoter holding that rose 2.0 points</b> (52.24% to 54.24%) while <b>mutual funds fell from 28.58% (Dec-25) to 24.57% (Sep-26)</b>. Which of these is noise and which is signal? TTM PAT is ₹181.7 Cr (my sum of the last four quarters: 47.75 − 0.15 + 60.14 + 73.94; stockscans shows ₹182 Cr).</div>
+    <div class="cols" style="margin-top:12px">
+      <div style="flex:1.05">
+        <div class="microhead">Quarterly: EBIT vs PBT (₹ Cr, MarketSmith)</div><table class="t fit"><tr><th scope="col">Quarter</th><th scope="col">EBIT</th><th scope="col">PBT</th><th scope="col">EBIT − PBT*</th><th scope="col">PAT</th><th scope="col">PAT ÷ PBT</th></tr><tr><td>Dec'24</td><td>45.39</td><td>26.63</td><td><span class="neg">18.76</span></td><td>20.19</td><td>76%</td></tr><tr><td>Mar'25</td><td>50.46</td><td>49.33</td><td>1.13</td><td>54.64</td><td>111%</td></tr><tr><td>Jun'25</td><td>68.18</td><td>68.00</td><td>0.18</td><td>49.16</td><td>72%</td></tr><tr><td>Sep'25</td><td>59.87</td><td>59.09</td><td>0.78</td><td>44.34</td><td>75%</td></tr><tr><td>Dec'25</td><td>65.60</td><td>63.03</td><td>2.57</td><td>47.75</td><td>76%</td></tr><tr><td>Mar'26</td><td>49.72</td><td>0.17</td><td><span class="neg">49.55</span></td><td>-0.15</td><td>n/m</td></tr><tr><td>Jun'26</td><td>79.52</td><td>79.28</td><td>0.24</td><td>60.14</td><td>76%</td></tr><tr><td>Sep'26</td><td>100.33</td><td>99.63</td><td>0.70</td><td>73.94</td><td>74%</td></tr></table>
+        <div class="chartcap">*Gap = EBIT minus pre-tax profit, my arithmetic: interest (~₹1 Cr a year in FY26) cannot explain a gap of ₹18.76 Cr (Dec-24) or ₹49.55 Cr (Mar-26). Outside those two quarters the gap is ₹0.2–2.6 Cr and PAT ÷ PBT sits at 72–76% (a normal tax rate). Mar-25 PAT (₹54.64 Cr) exceeds PBT (₹49.33 Cr), a tax credit of ~₹5.3 Cr (my arithmetic). Annual cross-check: FY26 EBIT margin 21.28% minus pre-tax margin 16.64% = 4.64 points of ₹1,143.50 Cr = ~₹53 Cr, which fits the Mar-26 hole.</div>
+        <div class="microhead" style="margin-top:9px">Shareholding Movement (Dec'25 to Sep'26)</div><table class="t fit"><tr><th scope="col">Holder</th><th scope="col">Dec'25</th><th scope="col">Mar'26</th><th scope="col">Jun'26</th><th scope="col">Sep'26</th><th scope="col">Change</th></tr><tr><td>Promoters (MarketSmith)</td><td>53.37%</td><td>52.24%</td><td>52.24%</td><td>54.24%</td><td><span class="pos">+2.00pp</span> (Jun→Sep)</td></tr><tr><td>Mutual funds (MarketSmith)</td><td>28.58%</td><td>28.76%</td><td>26.95%</td><td>24.57%</td><td><span class="neg">−4.01pp</span> (Dec→Sep)</td></tr><tr><td>DIIs (Screener)</td><td>n/c</td><td>30.27%</td><td>n/c</td><td>25.74%</td><td><span class="neg">−4.53pp</span></td></tr><tr><td>FIIs (Screener)</td><td>n/c</td><td>6.01%</td><td>n/c</td><td>6.44%</td><td>+0.43pp</td></tr><tr><td>Public (Screener)</td><td>n/c</td><td>11.49%</td><td>n/c</td><td>13.59%</td><td>+2.10pp</td></tr></table>
+        <div class="chartcap">n/c = not collected. Shareholders 75,066 to 87,452 (+16.5%, Screener, my arithmetic). Trendlyne gives promoters 53.35% at Sep-25 and 55.25% at Jun-24: <b>conflicts with the MarketSmith / Screener series, not reconciled.</b></div>
+      </div>
+      <div style="flex:1.15">
+        <div class="microhead">Working Through Each Item (my arithmetic, unconfirmed)</div><table class="t"><tr><th scope="col">Item</th><th scope="col">Working</th></tr><tr><td><b>Mar-26 hole</b></td><td>EBIT ₹49.72 Cr to PBT ₹0.17 Cr leaves ~₹49.55 Cr below EBIT. stockscans says the company paid a final 'Right of Recompense' obligation of <b>₹101 Cr</b> to lenders in Mar 2026 (CDR-era dues) and is now debt-free. <b>Whether it was expensed in the quarter is not confirmed</b> (no filing or transcript found; the call transcript fetch timed out). Also, ₹49.55 Cr (Mar-26) + ₹18.76 Cr (Dec-24) = ₹68.3 Cr, which does not equal ₹101 Cr. I cannot reconcile the two.</td></tr><tr><td><b>Mar-26 ex-gap</b></td><td>If the whole ₹49.55 Cr gap is one-off and the rest taxed at ~25%, Mar-26 PAT would be ~₹37 Cr instead of −₹0.15 Cr (illustrative).</td></tr><tr><td><b>Sep-26 jump</b></td><td>PAT +₹13.8 Cr on Jun-26 (+22.9%). The refund is worth ~₹13.4 Cr after tax, so ex-refund PAT ≈ ₹60.5 Cr, flat on Jun-26. H1 refund was ~₹21.7 Cr in total (multibagg), so Q1 carried ~₹3.7 Cr too.</td></tr><tr><td><b>Promoter +2.0pp</b></td><td><b>No filing, warrant issue, preferential issue or open-market purchase was found.</b> One hypothesis of mine, not sourced: the ₹180 Cr buyback (completed; date and price not found) shrank the share count while promoters did not tender. Promoters at 52.24% would reach 54.24% if shares fell ~3.7% (52.24 ÷ 54.24 = 0.963), about 1.0 Cr of ~27 Cr; at ₹180 Cr that implies ~₹180 a share, inside the ₹148–212 range, and equity capital fell from ₹27 Cr to ₹26 Cr. The arithmetic fits, but it is a fit, not evidence.</td></tr><tr><td><b>MF 28.58% to 24.57%</b></td><td>Funds' shares fell 9.24% to 8.44 Cr even as the fund count rose 6.56% to 65 (MarketSmith): fewer shares, more holders. Consistent with MFs tendering into the buyback or selling into the rally (not sourced); Mirae MF bought 9.3 lakh shares on 14 Aug 2026 at ₹178.59 (~₹16.6 Cr, my arithmetic). Kotak MF's holding fell to ~3.93% (23 Apr 2026, whalesbook).</td></tr></table>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="notebox"><b>Normalised P/E range (my arithmetic, illustrative):</b> on market cap ÷ TTM PAT the headline is ₹5,417 ÷ ₹181.7 Cr = <b>29.8x</b> (price ÷ EPS gives 31.5x; the gap reflects the share count). Adding back Mar-26 (+₹37.4 Cr) lifts PAT to ~₹219 Cr and the multiple falls to ~<b>24.7x</b>; also removing the Sep-26 refund (−₹13.4 Cr) gives ~₹205.6 Cr and ~<b>26.3x</b>. These assume a ~25% tax rate, that the whole Mar-26 gap and the whole refund are non-recurring, and nothing else changes. The honest range is roughly 26x to 31x.</div>
+      </div>
+      <div class="notebox green" style="flex:1;margin:0"><b>Two-sided read:</b> <span style="font-weight:700">Comfort</span> — outside the Dec-24 and Mar-26 quarters, EBIT converts to PBT almost one for one; debt-free; the Mar-26 payment (if it is what stockscans says) is a lender obligation that is now finished. <span style="font-weight:700">Concern</span> — the cause of the Mar-26 hole is not confirmed; the Sep-26 step-up is a refund, not a run-rate; and the promoter rise and MF fall are unexplained by any filing I found.</div>
+    </div>
+  </div>
+
+<div class="sec">
+    <div class="sec-title" id="sec05"><span class="num">05</span><h2>Overall Sentiment &amp; Momentum Prediction</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff8ee);border:3px solid #e07c00">
+        <div class="plab">Key Watch-Item</div>
+        <div class="pval" style="color:#e07c00;font-size:16px">&#9888; Refund, Mar-26 cause &amp; chase risk</div>
+        <p style="font-size:11.3px;margin-top:5px">Confirm in the NSE filing and the Q2 presentation how the ~₹18 Cr refund and the Mar-26 below-EBIT item were booked, and whether the promoter rise came from the buyback. Watch whether price holds ₹197 (daily support) after the spike and whether a daily close clears ₹222.</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#f0f7f0);border-top:3px solid #2e7d32">
+        <div class="plab">Overall Sentiment</div>
+        <div class="pval" style="color:#2e7d32">POSITIVE, BUT STRETCHED <span style="font-size:12px;color:#5a6475;font-weight:600">above stale targets</span></div>
+        <p style="font-size:11.3px;margin-top:5px">All analysts found are Buy or equivalent (Investing.com: 3 analysts, average ₹202, range ₹188–221; JM Financial Buy ₹184.6; YES Securities Add ₹169; IndiaNivesh Neutral ₹152.5), but none is dated after the Q2 results and ₹211.90 is above the average. MarketSmith: institutional holding up last quarter. Retail and social sentiment: not found.</p>
+      </div>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fff8ee);border-top:3px solid #e07c00">
+        <div class="plab">Momentum Prediction</div>
+        <div class="pval" style="color:#e07c00">STRONG, NOT YET CONFIRMED</div>
+        <p style="font-size:11.3px;margin-top:5px">The author's call is a third-of-third wave, supported by today's sharp up move (section 19). Gauges are +4 / +2 daily and +3 / +1 on the 1-hour, with a daily Buy on 5 Nov. That is already strong momentum, so the open risk is entering after the spike. GREEN needs a daily close above ₹222 (my proposal).</p>
+      </div>
+    </div>
+    <div class="notebox"><b>Framing note:</b> this is a <b>debt-free forger priced at ~31x trailing earnings after a ~43% rally in three months</b>, with earnings that include a refund and a prior-quarter hole. The bull case is H1 FY27 growth of +23% in revenue and +44% in PAT, new customer plants from Q3 FY27, and a clean balance sheet. The bear case is that PAT growth is partly a refund, sales were flat for four years before this, and the price is above every analyst target dated before the results.</div>
+  </div>
+
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1">
+        <div class="sec-title" id="sec06"><span class="num">06</span><h2>Sector Size &amp; Volume Scale</h2></div>
+        <svg role="img" aria-label="Bar chart: Quarterly sales, ₹ Cr (MarketSmith)" viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="570" y2="146" stroke="#dde2ea"/><text x="10" y="18" font-size="9" fill="#6b7587">Quarterly sales, ₹ Cr (MarketSmith)</text><rect x="49.0" y="67.2" width="42" height="78.8" fill="#8fa3c4" rx="2"/><text x="69.9" y="63.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">259.9</text><text x="69.9" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Dec'24</text><rect x="116.5" y="59.9" width="42" height="86.1" fill="#1a2a4a" rx="2"/><text x="137.4" y="55.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">283.9</text><text x="137.4" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Mar'25</text><rect x="184.0" y="57.6" width="42" height="88.4" fill="#8fa3c4" rx="2"/><text x="204.9" y="53.6" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">291.6</text><text x="204.9" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Jun'25</text><rect x="251.5" y="63.7" width="42" height="82.3" fill="#1a2a4a" rx="2"/><text x="272.4" y="59.7" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">271.4</text><text x="272.4" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Sep'25</text><rect x="319.0" y="62.7" width="42" height="83.3" fill="#8fa3c4" rx="2"/><text x="339.9" y="58.7" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">274.8</text><text x="339.9" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Dec'25</text><rect x="386.5" y="53.3" width="42" height="92.7" fill="#1a2a4a" rx="2"/><text x="407.4" y="49.3" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">305.7</text><text x="407.4" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Mar'26</text><rect x="454.0" y="53.7" width="42" height="92.3" fill="#8fa3c4" rx="2"/><text x="474.9" y="49.7" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">304.3</text><text x="474.9" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Jun'26</text><rect x="521.5" y="28.0" width="42" height="118.0" fill="#e07c00" rx="2"/><text x="542.4" y="24.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">389.2</text><text x="542.4" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Sep'26</text></svg>
+        <div class="chartcap"><b>Quarterly sales, ₹ Cr:</b> Sep-26 389.2 (+43% YoY) is the first quarter above ₹310 Cr in the series; the nearest, Mar-26 (305.7) and Jun-26 (304.3), were up 8% and 4%. TTM 274.8 + 305.7 + 304.3 + 389.2 = 1,274.0 (my arithmetic, ties to MarketSmith). The Sep-26 bar (orange) includes the ~₹18 Cr refund. <b>Industry size, bearing-ring demand and the AIFI (forging association) outlook were not found; I have not guessed them.</b> Capacity: 165,000 MTPA vs 105,000–115,000 MTPA conflict (not reconciled); utilisation ~62–63% in 9M FY26, target 72–75%. Sector context found is mostly 2025-dated steel-price and tariff commentary; the current steel price level and the US tariff status on Indian auto parts were not found.</div>
+      </div>
+      <div style="flex:1.08">
+        <div class="sec-title" id="sec07"><span class="num">07</span><h2>Shareholding — Available Quarters</h2></div>
+        <svg role="img" aria-label="Donut chart: SEP-26" viewBox="0 0 480 350" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><path d="M240.0,8.0 A96,96 0 1 1 214.8,196.6 L229.0,144.5 A42,42 0 1 0 240.0,62.0 Z" fill="#1a2a4a" stroke="#fff" stroke-width="1"/><text x="284.4" y="55.1" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">54.24%</text><path d="M214.8,196.6 A96,96 0 0 1 148.6,74.5 L200.0,91.1 A42,42 0 0 0 229.0,144.5 Z" fill="#5b7bb5" stroke="#fff" stroke-width="1"/><text x="179.3" y="140.8" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">25.74%</text><path d="M148.6,74.5 A96,96 0 0 1 167.6,40.9 L208.3,76.4 A42,42 0 0 0 200.0,91.1 Z" fill="#8fa3c4" stroke="#fff" stroke-width="1"/><text x="179.9" y="74.0" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">6.44%</text><path d="M167.6,40.9 A96,96 0 0 1 240.0,8.0 L240.0,62.0 A42,42 0 0 0 208.3,76.4 Z" fill="#b07716" stroke="#fff" stroke-width="1"/><text x="211.4" y="45.2" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">13.59%</text><text x="240" y="102" text-anchor="middle" font-size="13" font-weight="900" fill="#1a2a4a">SEP-26</text><text x="240" y="114" text-anchor="middle" font-size="6.5" letter-spacing="0.6" fill="#8a94a6">SHAREHOLDING (SCREENER)</text><rect x="26" y="222" width="11" height="11" rx="2" fill="#1a2a4a"/><text x="43" y="232" font-size="10.5" fill="#2a3342" font-weight="700">Promoters</text><text x="43" y="245" font-size="9.3" fill="#8a94a6">Madeka family; up from 52.24% (Jun-26)</text><rect x="26" y="252" width="11" height="11" rx="2" fill="#5b7bb5"/><text x="43" y="262" font-size="10.5" fill="#2a3342" font-weight="700">DIIs</text><text x="43" y="275" font-size="9.3" fill="#8a94a6">includes mutual funds 24.57% (MarketSmith)</text><rect x="26" y="282" width="11" height="11" rx="2" fill="#8fa3c4"/><text x="43" y="292" font-size="10.5" fill="#2a3342" font-weight="700">FIIs</text><text x="43" y="305" font-size="9.3" fill="#8a94a6">Screener, Sep-26</text><rect x="26" y="312" width="11" height="11" rx="2" fill="#b07716"/><text x="43" y="322" font-size="10.5" fill="#2a3342" font-weight="700">Public</text><text x="43" y="335" font-size="9.3" fill="#8a94a6">Screener, Sep-26 (MarketSmith bar: 11 + 4)</text></svg>
+        <div class="chartcap">The promoter slice is above 50%, so its label sits mid-ring on the slice itself rather than at the angle midpoint. Slices use Screener's Sep-26 figures (sum 100.01 from rounding); mutual funds are a subset of DIIs. <b>Top holders (MarketSmith):</b> Rupesh D Madeka 10.39%, Pinakin D Madeka 10.33%, Jiten D Madeka 10.25%, Manesh D Madeka 9.91%, Bhautik D Madeka 9.03% (these five add to 49.91%, my arithmetic, of the 54.24% promoter stake); ICICI Prudential Flexi Cap Fund 5.99%. <b>Pledge: not found</b> (a Trendlyne Jun-24 snapshot showed 36.20% pledged or locked, possibly IPO lock-in; unverified, not relied on). Bulk deals (NSE): Mirae MF bought 9,30,425 shares at ₹178.59 on 14 Aug 2026 and Bayerninvest 8,98,703 at ₹170.59 on 11 Aug; other rows are same-day buy / sell pairs by trading firms, ~zero net.</div>
+      </div>
+      <div style="flex:1.05">
+        <div class="sec-title" id="sec08"><span class="num">08</span><h2>Stock Performance</h2></div>
+        <table class="peer">
+          <tr><th scope="col">Reference</th><th scope="col">Price (₹)</th><th scope="col">To ₹211.90</th></tr>
+          <tr style="background:#eef4fc"><td>&#9733; MarketSmith price</td><td>211.90</td><td>—</td></tr>
+          <tr><td>MotiveWave blue (spike)</td><td>214.50</td><td><span class="neg">−1.2%</span></td></tr>
+          <tr><td>MotiveWave blue 2</td><td>212.16</td><td><span class="neg">−0.1%</span></td></tr>
+          <tr><td>MotiveWave red label</td><td>203.81</td><td><span class="pos">+4.0%</span></td></tr>
+          <tr><td>Implied prior base</td><td>200.50</td><td><span class="pos">+5.7%</span></td></tr>
+          <tr><td>14 Aug (Mirae buy)</td><td>178.59</td><td><span class="pos">+18.7%</span></td></tr>
+          <tr><td>11 Aug (Bayerninvest)</td><td>170.59</td><td><span class="pos">+24.2%</span></td></tr>
+          <tr><td>26 Oct (Investing.com)</td><td>161.44</td><td><span class="pos">+31.3%</span></td></tr>
+          <tr><td>5 Aug (bulk-deal px)</td><td>~148</td><td><span class="pos">+43.2%</span></td></tr>
+          <tr><td>19 Jun (StockAnalysis)</td><td>143.15</td><td><span class="pos">+48.0%</span></td></tr>
+        </table>
+        <div class="chartcap">"To ₹211.90" = how far the reference moved to reach the MarketSmith price; percentages are my arithmetic. MarketSmith: beta 0.94, alpha 0.46; 65 funds hold 8.44 Cr shares. <b>52-week high / low and the annual hi / lo are not usable:</b> MarketSmith's annual price range (FY26 hi 1,350 / lo 114) is on the pre-split basis. Dividend history and yield: <b>not found</b> (MarketSmith yield N/A).</div>
+      </div>
+    </div>
+  </div>
+
+<div class="sec compact">
+    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Financials — YoY &amp; QoQ (₹ Crore, Standalone per MarketSmith)</h2></div>
+    <div class="cols" style="margin-bottom:10px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column"><div class="microhead" style="margin-top:0">&#9733; Latest Quarter — Q2 FY27 (Sep'26, <span style="color:#c62828">filing not read</span>)</div><div style="border:2px solid #e07c00;border-radius:8px;padding:8px 14px;background:linear-gradient(135deg,#fff8ee,#fffdf7 60%,#fff9ee);box-shadow:0 2px 8px rgba(224,124,0,0.12);flex:1;margin-bottom:0">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹389.18 Cr</div><div style="font-size:10.5px;color:#5a6475">Revenue &nbsp;<b class="pos">+43.4% YoY</b> · +27.9% QoQ (my arithmetic)</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹94.31 Cr</div><div style="font-size:10.5px;color:#5a6475">Op profit · OPM 24.2% (univest; MarketSmith EBIT ₹100.33 Cr)</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">₹99.63 Cr</div><div style="font-size:10.5px;color:#5a6475">Pre-tax · tax ~25.8% (my arithmetic)</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#2e7d32">₹73.94 Cr</div><div style="font-size:10.5px;color:#5a6475">Net profit &nbsp;<b class="pos">+66.76%</b> vs ₹44.34 Cr · ex-refund ~₹60.5 Cr (mine)</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#2e7d32">₹2.78</div><div style="font-size:10.5px;color:#5a6475">EPS (qtr, post-split) vs ₹1.73 · H1 ₹4.99 (2.21 + 2.78, mine)</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">19.0%</div><div style="font-size:10.5px;color:#5a6475">Net margin (73.94 ÷ 389.18, mine) · 16.3% a year ago</div></div>
+      </div>
+      <div style="font-size:10.4px;color:#8a6d1f;margin-top:8px">The ~₹18 Cr refund sits inside revenue and EBITDA. Cash ₹72.9 Cr, no borrowings (Sep-26). H1 FY27: revenue ₹694 Cr (+23.2%), EBITDA ₹163 Cr (+40%), PAT ₹134 Cr (+43.8%) (multibagg).</div>
+    </div></div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column">
+        <div class="microhead" style="margin-top:0">Valuation &amp; Balance-Sheet Tiles</div>
+    <div class="tiles" style="flex-wrap:wrap;flex:1;align-content:stretch"><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">TTM Sales</div><div class="val" style="font-size:15px">₹1,274 Cr</div><div class="note">274.8 + 305.7 + 304.3 + 389.2 = 1,274.0 (my arithmetic) · MarketSmith ₹1,274.05 Cr</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E (TTM)</div><div class="val warn" style="font-size:15px">31.5x</div><div class="note">₹211.90 ÷ ₹6.73 (my arithmetic) · <b>MarketSmith 31</b> · at ₹203.81: 30.3x</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/E 5-yr range</div><div class="val" style="font-size:15px">6–50x</div><div class="note">MarketSmith (not re-verified)</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Forward P/E</div><div class="val warn" style="font-size:15px">25.2x</div><div class="note">₹211.90 ÷ MarketSmith 2027e EPS ₹8.40 · estimate count and date unknown; looks stale (see PEG note)</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">PEG Ratio</div><div class="val warn" style="font-size:15px">see table</div><div class="note">Three bases below; two are n/m</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Borrowings</div><div class="val" style="font-size:15px">Nil</div><div class="note">Debt-free (stockscans, univest); FY26 interest ~₹1 Cr; LT debt / equity 0 since FY23 (MarketSmith); cash ₹72.9 Cr (Sep-26)</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">P/B · ROE</div><div class="val warn" style="font-size:15px">n/m · 11.6–12.4%</div><div class="note">MarketSmith shows 'book value 0.46x' (odd, unverified, not used). <b>ROE conflict:</b> 12% (table) / 11% (text) / 11.62% (annual FY26) / 12.35% (univest)</div></div><div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Mkt Cap · Beta</div><div class="val" style="font-size:15px">₹5,417 Cr · 0.94</div><div class="note">MarketSmith ₹5,417.18 Cr; stockscans ₹5,566 Cr at ₹212.16; float 1.28 Cr shares (MarketSmith)</div></div></div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:6px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Annual — FY22 to TTM (MarketSmith; PAT is my arithmetic = sales × after-tax margin)</div><table class="t fit"><tr><th scope="col">Year</th><th scope="col">Sales</th><th scope="col">YoY</th><th scope="col">EBIT %</th><th scope="col">Pre-tax %</th><th scope="col">PAT</th><th scope="col">PAT %</th><th scope="col">ROCE</th><th scope="col">ROE</th></tr><tr><td>FY22</td><td>1,016.71</td><td>+65%</td><td>21.12%</td><td>19.11%</td><td>131.9</td><td>12.97%</td><td>33.17%</td><td>24.20%</td></tr><tr><td>FY23</td><td>1,178.95</td><td>+16%</td><td>21.46%</td><td>20.63%</td><td>198.1</td><td>16.80%</td><td>31.29%</td><td>26.66%</td></tr><tr><td>FY24</td><td>1,221.76</td><td>+4%</td><td>20.00%</td><td>17.16%</td><td>156.0</td><td>12.77%</td><td>25.46%</td><td>17.37%</td></tr><tr><td>FY25</td><td>1,154.80</td><td>−5%</td><td>19.80%</td><td>17.98%</td><td>173.9</td><td>15.06%</td><td>20.52%</td><td>16.22%</td></tr><tr><td><b>FY26</b></td><td><b>1,143.50</b></td><td><b>−1%</b></td><td><b>21.28%</b></td><td><b>16.64%</b></td><td><b>141.0</b></td><td><b>12.33%</b></td><td><b>19.18%</b></td><td><b>11.62%</b></td></tr><tr><td><b>TTM</b></td><td><b>1,274.0</b></td><td>—</td><td><b>23.2%</b></td><td><b>19.0%</b></td><td><b>181.7</b></td><td><b>14.3%</b></td><td>n/c</td><td>n/c</td></tr></table>
+        <div class="chartcap"><b>Conflicts kept:</b> FY26 ROCE 19.18% (MarketSmith) vs 16.67% (univest; ROE 12.35%, FY25 20.98% / 17.66%) vs 15.8% (stockscans). Annual revenue growth 1% (MarketSmith text) vs −1% (table). FY26 PAT ₹141 Cr and TTM ₹182 Cr agree with stockscans. TTM row: EBIT and PBT are my sums of MarketSmith quarters (65.60 + 49.72 + 79.52 + 100.33 = 295.17; 63.03 + 0.17 + 79.28 + 99.63 = 242.11). MarketSmith's financial-statement pages show "no consolidated data", so the figures are standalone.</div>
+        <div class="microhead" style="margin-top:9px">Quarterly Trend — Last 8 Quarters (MarketSmith)</div><table class="t fit"><tr><th scope="col">Quarter</th><th scope="col">Sales</th><th scope="col">EBIT</th><th scope="col">PBT</th><th scope="col">PAT</th><th scope="col">EPS (₹)</th><th scope="col">EBIT %</th></tr><tr><td>Dec'24</td><td>259.9</td><td>45.39</td><td>26.63</td><td>20.19</td><td>7.41*</td><td>17.5%</td></tr><tr><td>Mar'25</td><td>283.9</td><td>50.46</td><td>49.33</td><td>54.64</td><td>20.06*</td><td>17.8%</td></tr><tr><td>Jun'25</td><td>291.6</td><td>68.18</td><td>68.00</td><td>49.16</td><td>18.05*</td><td>23.4%</td></tr><tr><td>Sep'25</td><td>271.4</td><td>59.87</td><td>59.09</td><td>44.34</td><td>1.73</td><td>22.1%</td></tr><tr><td>Dec'25</td><td>274.8</td><td>65.60</td><td>63.03</td><td>47.75</td><td>1.75</td><td>23.9%</td></tr><tr><td>Mar'26</td><td>305.7</td><td>49.72</td><td>0.17</td><td>-0.15</td><td>-0.01</td><td>16.3%</td></tr><tr><td>Jun'26</td><td>304.3</td><td>79.52</td><td>79.28</td><td>60.14</td><td>2.21</td><td>26.1%</td></tr><tr><td>Sep'26</td><td>389.2</td><td>100.33</td><td>99.63</td><td>73.94</td><td>2.78</td><td>25.8%</td></tr></table>
+        <div class="chartcap">*EPS on the <b>old pre-split share basis</b> (Jun-25 and earlier), shown as MarketSmith prints it; dividing by 10 gives ~₹1.81 for Jun-25, but the split ratio and dates are unconfirmed. Sum of the last four quarterly EPS on the new basis: 1.75 − 0.01 + 2.21 + 2.78 = 6.73. EBIT % is my arithmetic; Sep-26 ex-refund ~22.2% (82.33 ÷ 371.18).</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Sales — FY21 to TTM (₹ Cr, MarketSmith)</div><svg role="img" aria-label="Bar chart: Rs Cr" viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="570" y2="146" stroke="#dde2ea"/><text x="10" y="18" font-size="9" fill="#6b7587">Rs Cr</text><rect x="49.0" y="88.9" width="48" height="57.1" fill="#8fa3c4" rx="2"/><text x="72.9" y="84.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">616</text><text x="72.9" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY21</text><rect x="126.1" y="51.8" width="48" height="94.2" fill="#1a2a4a" rx="2"/><text x="150.1" y="47.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">1,017</text><text x="150.1" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY22</text><rect x="203.3" y="36.8" width="48" height="109.2" fill="#8fa3c4" rx="2"/><text x="227.2" y="32.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">1,179</text><text x="227.2" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY23</text><rect x="280.4" y="32.8" width="48" height="113.2" fill="#1a2a4a" rx="2"/><text x="304.3" y="28.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">1,222</text><text x="304.3" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY24</text><rect x="357.6" y="39.0" width="48" height="107.0" fill="#8fa3c4" rx="2"/><text x="381.5" y="35.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">1,155</text><text x="381.5" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY25</text><rect x="434.7" y="40.1" width="48" height="105.9" fill="#1a2a4a" rx="2"/><text x="458.6" y="36.1" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">1,144</text><text x="458.6" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">FY26</text><rect x="511.9" y="28.0" width="48" height="118.0" fill="#e07c00" rx="2"/><text x="535.8" y="24.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">1,274</text><text x="535.8" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">TTM</text></svg>
+        <div class="microhead" style="margin-top:9px">Net Profit by Quarter — Dec'24 to Sep'26 (₹ Cr)</div><svg role="img" aria-label="Bar chart: Rs Cr (MarketSmith)" viewBox="0 0 600 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto"><line x1="40" y1="146" x2="570" y2="146" stroke="#dde2ea"/><text x="10" y="18" font-size="9" fill="#6b7587">Rs Cr (MarketSmith)</text><rect x="49.0" y="113.8" width="42" height="32.2" fill="#8fa3c4" rx="2"/><text x="69.9" y="109.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">20.2</text><text x="69.9" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Dec'24</text><rect x="116.5" y="58.8" width="42" height="87.2" fill="#1a2a4a" rx="2"/><text x="137.4" y="54.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">54.6</text><text x="137.4" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Mar'25</text><rect x="184.0" y="67.5" width="42" height="78.5" fill="#8fa3c4" rx="2"/><text x="204.9" y="63.5" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">49.2</text><text x="204.9" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Jun'25</text><rect x="251.5" y="75.2" width="42" height="70.8" fill="#1a2a4a" rx="2"/><text x="272.4" y="71.2" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">44.3</text><text x="272.4" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Sep'25</text><rect x="319.0" y="69.8" width="42" height="76.2" fill="#8fa3c4" rx="2"/><text x="339.9" y="65.8" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">47.8</text><text x="339.9" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Dec'25</text><rect x="386.5" y="145.0" width="42" height="1.0" fill="#1a2a4a" rx="2"/><text x="407.4" y="141.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">-0.1</text><text x="407.4" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Mar'26</text><rect x="454.0" y="50.0" width="42" height="96.0" fill="#8fa3c4" rx="2"/><text x="474.9" y="46.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">60.1</text><text x="474.9" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Jun'26</text><rect x="521.5" y="28.0" width="42" height="118.0" fill="#e07c00" rx="2"/><text x="542.4" y="24.0" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1a2a4a">73.9</text><text x="542.4" y="161" text-anchor="middle" font-size="9.5" fill="#5a6475">Sep'26</text></svg>
+        <div class="chartcap" style="text-align:center">&#9644; <b style="color:#1a2a4a">Actual</b> &nbsp;&nbsp; &#9644; <b style="color:#e07c00">Latest (Sep-26 includes the ~₹18 Cr refund)</b>. The Mar-26 bar is −₹0.15 Cr (a sliver). EPS is not charted because annual and quarterly EPS are on different share bases.</div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:9px">
+      <div style="flex:1.15"><div class="notebox blue"><b>&#9733; Labelled PEG — three bases (my arithmetic):</b><table class="t"><tr><th scope="col">PEG basis</th><th scope="col">Growth</th><th scope="col">P/E used</th><th scope="col">PEG</th></tr><tr><td>A. Trailing: FY25 → FY26 EPS (63.89 → 51.81, old share basis)</td><td><span class="neg">−18.9%</span> (MarketSmith shows −24%)</td><td>31.5x</td><td><b>n/m</b></td></tr><tr><td>B. H1 FY27 PAT growth (+43.8%, multibagg summary)</td><td><span class="pos">+43.8%</span> (includes ~₹21.7 Cr refund; Mar-26 base distorted)</td><td>31.5x</td><td><b>n/m</b> <span style="font-size:9.5px;color:#8a6d1f">mechanical 0.72, not used</span></td></tr><tr><td>C. Forward: MarketSmith 2028e vs 2027e EPS (9.90 vs 8.40)</td><td>+17.9%</td><td>25.2x (211.90 ÷ 8.40)</td><td><b>~1.4</b> <span style="font-size:9.5px;color:#8a6d1f">flagged: estimate source, count and date unknown</span></td></tr></table>
+        <div style="margin-top:6px;font-size:10.4px"><b>Why A is n/m:</b> growth is negative (FY26 EPS fell) and FY26 contains the Mar-26 hole. <b>B</b> rests on a half-year that includes the refund and a depressed Mar-26 base, so it flatters growth; the mechanical result (31.5 ÷ 43.8) is 0.72 but I do not use it. <b>C</b> is usable only as a rough marker: 2027e EPS of ₹8.40 against H1 FY27 EPS of ₹4.99 implies only ₹3.41 for H2 (my arithmetic), below H1 despite management saying H2 should be stronger, so the estimates look stale or conservative. MarketSmith's estimate column also shows 83.79% growth for 2027e, which I cannot tie to any base; kept as a conflict.</div></div></div>
+      <div style="flex:1"><div class="notebox"><b>&#9733; Earnings quality — what to weigh:</b> TTM PAT of ₹181.7 Cr excludes nothing: it includes the ~₹18 Cr refund (Sep-26) and bears the Mar-26 hole (section 04). Balance-sheet quality is not in doubt (no borrowings, ₹72.9 Cr cash, ₹180 Cr buyback done), but cash flow was <b>not found</b> beyond MarketSmith's "cash flow 69.62" (basis unclear, not used), and capex, working-capital days and other income share were not found.</div></div>
+    </div>
+  </div>
+
+<div class="sec">
+    <div class="sec-title" id="sec10"><span class="num">10</span><h2>Key Ratios — Industry-Contextualized</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fffbe8;border-color:#f9a825">
+        <div class="plab">ROE &nbsp;·&nbsp; ROCE <span class="badge b-warn">Conflict</span></div>
+        <div class="pval" style="font-size:26px">11.6–12.4% <span style="font-size:13px;font-weight:600;color:#5a6475">(ROE, FY26) · ROCE 15.8–19.2%</span></div>
+        <p style="font-size:11.3px;margin-top:6px"><b>Conflicts kept:</b> ROE 11.62% (MarketSmith annual) / 12% (table) / 11% (text) / 12.35% (univest); ROCE 19.18% (MarketSmith) / 16.67% (univest) / 15.8% (stockscans). Both fell sharply from FY22–23 (ROCE 33.17% and 31.29%; ROE 24.20% and 26.66%) because equity grew while sales stayed near ₹1,150–1,220 Cr. MarketSmith's 5-year P/E range is 6–50x.</p>
+      </div>
+      <div class="panel" style="background:#f2f6fc;border-color:#1565c0">
+        <div class="plab">Leverage &amp; Cash <span class="badge b-bull">Clean</span></div>
+        <div class="pval" style="font-size:26px">Nil <span style="font-size:13px;font-weight:600;color:#5a6475">(no borrowings; cash ₹72.9 Cr, Sep-26)</span></div>
+        <p style="font-size:11.3px;margin-top:6px">Long-term debt to equity has been 0 since FY23 (3.75 in FY22, 5.99 in FY21), FY26 interest was ~₹1 Cr and the Mar-26 'Right of Recompense' payment (stockscans) closed the old lender obligations. The ₹180 Cr buyback is in the numbers. Capex, working-capital days and cash flow were <b>not found</b>; MarketSmith's book-value ratio (0.46x) looks wrong and is not used.</p>
+      </div>
+      <div class="panel" style="background:#f0f7f0;border-color:#2e7d32">
+        <div class="plab">Margins <span class="badge b-bull">Consistent</span></div>
+        <div class="pval" style="font-size:26px">EBIT 21.3% <span style="font-size:13px;font-weight:600;color:#5a6475">(FY26) · pre-tax 16.6% · after-tax 12.3%</span></div>
+        <p style="font-size:11.3px;margin-top:6px">EBIT margin has held at 19.8–21.5% for five years. The pre-tax and after-tax margins fell in FY26 because of the Mar-26 hole (4.64 points of EBIT-to-PBT leakage, my arithmetic). The latest quarter shows EBIT 25.8% (22.2% ex-refund, mine). Management's FY27 margin guide is <b>conflicting</b>: 21–22% (sahi headline) vs 22–22.5% (an April headline).</p>
+      </div>
+    </div>
+  </div>
+
+<div class="sec">
+    <div class="sec-title" id="sec11"><span class="num">11</span><h2>Management, Governance &amp; Credit Ratings</h2></div>
+<div class="tiles" style="flex-wrap:wrap">
+<div class="tile" style="flex:0 0 calc(33.3% - 7px)"><div class="lab">Chairman &amp; MD</div><div class="val" style="font-size:15px">Manesh D Madeka (CMD)</div><div class="note">MarketSmith. Executive directors Bhautik D Madeka and Mihir Rupeshkumar Madeka (WTD); independent directors Pravinchandra Ratilal Dholakia and Jignasa Pravinchandra Mehta (woman ID). Other directors, CFO and board changes: <b>not found</b>.</div></div><div class="tile" style="flex:0 0 calc(33.3% - 7px)"><div class="lab">Promoter</div><div class="val" style="font-size:15px">54.24%</div><div class="note">Madeka family (five members hold 49.91%, my arithmetic). Up from 52.24% (Jun-26): <b>unexplained by any filing found</b> (section 04). Trendlyne 53.35% (Sep-25) and 55.25% (Jun-24) conflict. <b>Pledge: not found.</b></div></div><div class="tile" style="flex:0 0 calc(33.3% - 7px)"><div class="lab">Corporate Actions</div><div class="val" style="font-size:15px">1:10 split · ₹180 Cr buyback</div><div class="note">Split (FV ₹10 to Re 1): board 4 Sep 2025, AGM approval; <b>record date conflicting: 19 Sep / 4 Oct / 17 Oct 2025</b> (latest sources say 17 Oct). Buyback ₹180 Cr completed; date and price not found. IPO 28–30 Jul 2021 at ₹900 (Business Standard says 27–29 Jul), listed 9 Aug 2021 (BS: 8 Aug), 130.43x subscribed. Bonus: not found.</div></div><div class="tile" style="flex:0 0 calc(33.3% - 7px)"><div class="lab">Dividend</div><div class="val warn" style="font-size:15px">Not found</div><div class="note">Dividend history and current yield: <b>not found</b> (MarketSmith yield N/A).</div></div><div class="tile" style="flex:0 0 calc(33.3% - 7px)"><div class="lab">Auditor, Related Parties, Regulatory</div><div class="val warn" style="font-size:15px">Not found</div><div class="note">Auditor name, qualifications, related-party transactions, SEBI or other regulatory action, and IPO-proceeds utilisation reports were <b>not found</b>. Remuneration: not found.</div></div><div class="tile" style="flex:0 0 calc(33.3% - 7px)"><div class="lab">IPO Objects (one source)</div><div class="val" style="font-size:15px">Working capital</div><div class="note">Long-term working capital ~₹45 Cr and general corporate purposes ~₹7.96 Cr (Chittorgarh / Trendlyne). Utilisation reports not found.</div></div>
+</div>
+<div class="notebox green" style="margin-top:12px"><b>Credit ratings — all agencies:</b> <b>CARE: CARE A- / Stable (long term), A2+ (short term)</b>, reaffirmed in the CARE press release of <b>4 Aug 2025</b> (rated facilities cut to ₹14.99 Cr from ₹25.99 Cr, from a search summary; the PDF was not decoded); a Feb 2025 CARE update was also A- / Stable, A2+. A later CARE action (a rating update dated 30 Oct 2026 appears only as an unread lead) is <b>not confirmed</b>. <b>India Ratings (Ind-Ra): upgraded to IND A / Stable</b> (from IND A- / Positive), short term IND A1, per indiainfoline and whalesbook; the <b>date is not confirmed</b> (an NSE filing name suggests about 19 Jun 2026; the fetch timed out). <b>CRISIL: not found. ICRA: not found. Acuite: not found. Brickwork: not found.</b> Absence in a web search is not proof there is no rating. The rated bank facilities are small (₹15 Cr), consistent with a debt-free company.</div>
+  </div>
+
+<div class="sec">
+    <div class="sec-title" id="sec12"><span class="num">12</span><h2>Company Guidance — Recent Quarters &amp; Credibility Checklist</h2></div>
+<div class="microhead">What Management Has Said vs. What the Numbers Show</div>
+<table class="t">
+  <tr><th style="text-align:left" scope="col">Claim / Guidance</th><th style="text-align:left" scope="col">Evidence to date</th><th scope="col">Status</th></tr>
+  <tr><td style="text-align:left">FY27 revenue growth 15–18% (Feb 2026 headline, after the US tariff resolution)</td><td style="text-align:left">On FY26 ₹1,143.50 Cr that is ₹1,315–1,349 Cr (my arithmetic). H1 FY27 is already ₹694 Cr (+23.2%), so H2 needs only ₹621–655 Cr against H1 ₹694 Cr: the guide looks conservative, or was set before the refund and the Q2 step-up. Headline only; the primary guidance was not read.</td><td><span class="badge b-bull">Ahead in H1</span></td></tr>
+  <tr><td style="text-align:left">FY27 EBITDA margin 21–22% (sahi headline) vs 22–22.5% (April headline)</td><td style="text-align:left">Q2 FY27 EBITDA margin 24.2% includes the ~₹18 Cr refund; ex-refund ~20.6% (my arithmetic). Ocean freight is up nearly 3x and fuel and consumable costs are higher.</td><td><span class="badge b-warn">Conflicting guide</span></td></tr>
+  <tr><td style="text-align:left">H2 FY27 stronger than H1: 1–2 new customer plants start in Q3 FY27</td><td style="text-align:left">Order book averaging ₹120–125 Cr a month (if monthly orders, that annualises to ₹1,440–1,500 Cr vs TTM sales ₹1,274 Cr, my arithmetic; the wording is ambiguous). MarketSmith's 2027e EPS of ₹8.40 implies H2 below H1 (section 09).</td><td><span class="badge b-neut">Cannot test</span></td></tr>
+  <tr><td style="text-align:left">Capacity utilisation to 72–75% next year (Q3 FY26 call)</td><td style="text-align:left">~62–63% in 9M FY26 and ~63–65% in Q2 FY27 commentary. Forging capacity itself is conflicting (165,000 vs 105,000–115,000 MTPA).</td><td><span class="badge b-warn">Not yet</span></td></tr>
+  <tr><td style="text-align:left">Defence / aerospace revenue within 12 months; talks with a large European OEM on CV and industrial products</td><td style="text-align:left">Registrations and initial approvals in hand (management). No customer, order value or timeline found.</td><td><span class="badge b-warn">Aspiration</span></td></tr>
+  <tr><td style="text-align:left">Tariffs have not cost a customer; exports normalise from Q1 FY27 (Q3 FY26 call)</td><td style="text-align:left">Q1 FY26 bearing-ring exports −21% and auto −15% on tariff uncertainty; H1 FY27 exports 50.1% of revenue vs 44.1% in FY26 (multibagg); US auto revenue more than doubled in Q2. But the Aug 2026 presentation shows 56% domestic / 44% export: <b>conflicting export shares, different periods, both kept</b>.</td><td><span class="badge b-neut">Mixed</span></td></tr>
+</table>
+<div class="cols" style="margin-top:12px">
+  <div style="flex:1.2">
+    <div class="microhead">Pipeline &amp; Operating Facts (as named in sources)</div>
+    <table class="t">
+      <tr><th style="text-align:left" scope="col">Item</th><th scope="col">Detail</th></tr>
+      <tr><td style="text-align:left">Auto components, Q2 FY27</td><td>₹177 Cr, +67.7%; 73% of its revenue from outside India; exports +89%</td></tr>
+      <tr><td style="text-align:left">Bearing rings, Q2 FY27</td><td>₹153 Cr, +6.2%; 75% domestic / 25% export</td></tr>
+      <tr><td style="text-align:left">Labour</td><td>Fully normalised from the start of Q2 (was the Q1 FY27 constraint)</td></tr>
+      <tr><td style="text-align:left">Capex</td><td>Not found</td></tr>
+    </table>
+    <div class="notebox" style="margin-top:10px"><b>Conflict kept:</b> a CARE and Ind-Ra positive rating trend (section 11) and a tariff refund coexist with flat bearing-ring sales; the Q1 FY27 call (6 / 12 Aug 2026) is not read, so management's own words on Q1 and Q2 are second-hand.</div>
+  </div>
+  <div style="flex:1">
+    <div class="microhead">Management-Quality Red-Flag Checklist</div>
+    <table class="t">
+      <tr><th style="text-align:left" scope="col">Warning Sign</th><th scope="col">Present?</th></tr>
+      <tr><td style="text-align:left">Profit leaning on one-offs</td><td><span class="badge b-warn">&#10003; Refund in Q2</span></td></tr>
+      <tr><td style="text-align:left">Unexplained quarterly hole</td><td><span class="badge b-bear">&#10003; Mar-26</span></td></tr>
+      <tr><td style="text-align:left">Unexplained promoter stake change</td><td><span class="badge b-warn">&#10003; +2.0pp</span></td></tr>
+      <tr><td style="text-align:left">Disclosure gaps (capex, customers)</td><td><span class="badge b-warn">&#10003; Not found</span></td></tr>
+      <tr><td style="text-align:left">Promoter pledge</td><td><span class="badge b-neut">Not found</span></td></tr>
+      <tr><td style="text-align:left">Related-party overlap</td><td><span class="badge b-neut">Not assessed</span></td></tr>
+    </table>
+    <div class="chartcap" style="margin-top:6px">My judgements, not sourced scores.</div>
+  </div>
+</div>
+  </div>
+
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec13"><span class="num">13</span><h2>Street Consensus</h2></div><div class="krow"><span class="klab">Investing.com</span><span class="kval" style="color:#2e7d32">3 analysts, all Buy<small>Average target ₹202 (−4.7% vs ₹211.90), high ₹221 (+4.3%), low ₹188 (−11.3%); page shows 26 Oct 2026 at a price of ₹161.44, i.e. <b>before the Q2 results</b>. Broker names not shown.</small></span></div><div class="krow"><span class="klab">Univest note (23 Jun 2026)</span><span class="kval">JM Fin Buy ₹184.6<small>YES Securities Add ₹169.0, IndiaNivesh Neutral ₹152.5; consensus ₹168.7 (−20.4% vs ₹211.90, my arithmetic). Targets are 12.9%, 20.2% and 28.0% below ₹211.90.</small></span></div><div class="krow"><span class="klab">StockAnalysis / S&amp;P Global</span><span class="kval">2 analysts, Strong Buy<small>Average ₹170 (165–175), June 2026 at ₹143.15; target data last updated 11 Feb 2026, so possibly stale.</small></span></div><div class="krow"><span class="klab">AlphaSpread</span><span class="kval" style="color:#c62828">₹138.21<small>Undated average 1-year target; <b>conflicts</b> with the above and is treated as stale. An old Indmoney ₹2,294 average is pre-split and not comparable.</small></span></div>        <div class="mininote" style="background:#fffbe8;border-left:3px solid #f9a825"><b>Conflicts / gaps:</b> ₹211.90 is above every target found except the Investing.com high (₹221); no broker note dated after the Q2 results was found, so the street may be behind the price. MarketSmith estimates: 2027e EPS ₹8.40, 2028e ₹9.90 (basis and count unknown).</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec14"><span class="num">14</span><h2>Share Volume &amp; Profile</h2></div><div class="krow"><span class="klab">Volume (MarketSmith)</span><span class="kval" style="color:#c62828">23,62,379 shares<small><b>−84.49% vs average</b> (implied average ~1.52 Cr shares, my arithmetic). Window unclear: a part-day or a different basis would explain it, but it does not show buying volume behind a +5.69% day.</small></span></div><div class="krow"><span class="klab">Float</span><span class="kval">1.28 Cr shares<small>MarketSmith. <b>Conflict:</b> non-promoter holders own 45.76% of ~25.6 Cr shares = ~11.7 Cr (my arithmetic), nine times the stated float; unreconciled.</small></span></div><div class="krow"><span class="klab">Funds</span><span class="kval">65 funds, 8.44 Cr shares<small>Fund count +6.56% but shares held −9.24% (MarketSmith): more funds, fewer shares each.</small></span></div><div class="krow"><span class="klab">Bulk / Block Deals</span><span class="kval">Mirae MF, Bayerninvest buys<small>14 Aug: Mirae Asset MF bought 9,30,425 at ₹178.59 (~₹16.6 Cr). 11 Aug: Bayerninvest 8,98,703 at ₹170.59 (~₹15.3 Cr). Other rows are same-day pairs (HRTI, QE Securities, Junomoneta, Microcurves, NK Securities, Jump Trading, Irage, Marwadi Chandarana), ~zero net.</small></span></div><div class="krow"><span class="klab">Volume Spike Cause</span><span class="kval">Not found<small>No news explaining the Aug–Nov rally or today's move was found.</small></span></div>        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Reading it:</b> up / down volume ratio 2 means the recent period saw more volume on up days than down days, but today's volume as read is far below average. I draw no conclusion from one reading with an unclear window; it is a reason to ask for volume confirmation rather than a bearish signal.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec15"><span class="num">15</span><h2>Sector Rotation</h2></div>
+        <p style="font-size:11px">Rolex Rings makes forged steel rings for bearings and auto parts. The wheel has no forging wedge; I map it to <b>Industrials</b> (capital goods and engineering, "capital investment and infrastructure"). Its auto-component half could equally sit under Consumer Discretionary, and MarketSmith classes it in the NSE Machinery-General Industrial group, which has a group rank of <b>101 (tile) vs 90 of 197 (table and text)</b>, a conflict, and is called a poor industry group. The mapping is my judgement and I have not assigned a cycle phase.</p>
+        <div class="sector-wheel-compact">
+<div class="relative mt-16 md:mt-[80px] mx-auto w-full max-w-[760px] overflow-visible"><div class="relative mx-auto w-[86vw] md:w-full max-w-[540px] aspect-square overflow-visible"><svg role="img" aria-label="Sector rotation wheel with the mapped sector highlighted" viewBox="-40 -40 620 620" class="absolute inset-0 w-full h-full overflow-visible"><path d="M 270 22 A 248 248 0 0 1 518 270" fill="none" stroke="#0f2f5c" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 518 270 A 248 248 0 0 1 270 518" fill="none" stroke="#8b2e00" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 270 518 A 248 248 0 0 1 22 270.00000000000006" fill="none" stroke="#4c2e8a" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><path d="M 22 270.00000000000006 A 248 248 0 0 1 269.99999999999994 22" fill="none" stroke="#115e5f" stroke-width="2.6" stroke-dasharray="8 8" stroke-linecap="round" opacity="1"></path><g transform="translate(270 22)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#0f2f5c" stroke="#0f2f5c" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(518 270) rotate(90)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#8b2e00" stroke="#8b2e00" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(270 518) rotate(180)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#4c2e8a" stroke="#4c2e8a" stroke-width="0.8" stroke-linejoin="round"></path></g><g transform="translate(22 270) rotate(270)"><path d="M -9 -7 L 10 0 L -9 7 Z" fill="#115e5f" stroke="#115e5f" stroke-width="0.8" stroke-linejoin="round"></path></g><defs><path id="label-early" d="M 93.23 59.34 A 275 275 0 0 1 446.77 59.34"></path><path id="label-late" d="M 480.66 93.23 A 275 275 0 0 1 480.66 446.77"></path><path id="label-slow" d="M 93.23 480.66 A 275 275 0 0 0 446.77 480.66"></path><path id="label-recov" d="M 59.34 446.77 A 275 275 0 0 1 59.34 93.23"></path></defs><text fill="#0f2f5c" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-early" startOffset="50%" text-anchor="middle">EARLY EXPANSION</textPath></text><text fill="#8b2e00" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-late" startOffset="50%" text-anchor="middle">LATE EXPANSION</textPath></text><text fill="#4c2e8a" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-slow" startOffset="50%" text-anchor="middle">SLOWDOWN</textPath></text><text fill="#115e5f" font-family="Inter, sans-serif" font-weight="800" font-size="15" letter-spacing="1.5px" text-transform="uppercase"><textPath href="#label-recov" startOffset="50%" text-anchor="middle">RECOVERY</textPath></text><g><path d="M 270.0 35.0 A 235 235 0 0 1 408.1295342887312 79.88100632188736 L 334.65637775217203 181.00813061875579 A 110 110 0 0 0 270.0 160.0 Z" fill="#43A047" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.15092303249094 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #43A047; stroke-width: 2.4; stroke-linejoin: round;">TECHNOLOGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">TECHNOLOGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Innovation-led</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">growth</text></g></g><g><path d="M 408.1295342887312 79.88100632188736 A 235 235 0 0 1 493.4982813293611 197.38100632188736 L 374.6162167924669 236.00813061875579 A 110 110 0 0 0 334.65637775217203 181.00813061875579 Z" fill="#C0CA33" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 168.90093660569462)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #C0CA33; stroke-width: 2.4; stroke-linejoin: round;">DISCRETIONARY</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DISCRETIONARY</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising confidence</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& spending</text></g></g><g><path d="M 493.4982813293611 197.38100632188736 A 235 235 0 0 1 493.49828132936113 342.61899367811264 L 374.6162167924669 303.9918693812442 A 110 110 0 0 0 374.6162167924669 236.00813061875579 Z" fill="#F0A93B" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(442.0 270.0)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F0A93B; stroke-width: 2.4; stroke-linejoin: round;">INDUSTRIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">INDUSTRIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Capital investment</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& infrastructure</text></g></g><g><path d="M 493.49828132936113 197.38100632188736 A 235 235 0 0 1 493.498281329361 342.6189936781126 L 374.6162167924669 303.9918693812442 A 110 110 0 0 0 374.6162167924669 236.00813061875579 Z" fill="#B5651D" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(409.15092303249094 371.09906339430535)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #B5651D; stroke-width: 2.4; stroke-linejoin: round;">DEFENSE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">DEFENSE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Government spending</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& indigenization</text></g></g><g><path d="M 408.1295342887312 460.1189936781126 A 235 235 0 0 1 270.00000000000006 505.0 L 270.0 380.0 A 110 110 0 0 0 334.65637775217203 358.9918693812442 Z" fill="#2E6DA4" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(323.150923032491 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #2E6DA4; stroke-width: 2.4; stroke-linejoin: round;">AEROSPACE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">AEROSPACE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Order backlogs</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& export growth</text></g></g><g><path d="M 270.00000000000006 505.0 A 235 235 0 0 1 131.87046571126885 460.11899367811264 L 205.34362224782797 358.9918693812442 A 110 110 0 0 0 270.0 380.0 Z" fill="#F4791A" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.84907696750906 433.5817208027664)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #F4791A; stroke-width: 2.4; stroke-linejoin: round;">ENERGY</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">ENERGY</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Commodity cycles</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& inflation</text></g></g><g><path d="M 131.87046571126885 460.11899367811264 A 235 235 0 0 1 46.50171867063892 342.6189936781127 L 165.3837832075331 303.9918693812442 A 110 110 0 0 0 205.34362224782797 358.9918693812442 Z" fill="#9163CB" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.84907696750906 371.0990633943054)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #9163CB; stroke-width: 2.4; stroke-linejoin: round;">UTILITIES</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">UTILITIES</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Defensive demand</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& stability</text></g></g><g><path d="M 46.50171867063892 342.6189936781127 A 235 235 0 0 1 46.501718670638894 197.3810063218874 L 165.3837832075331 236.0081306187558 A 110 110 0 0 0 165.3837832075331 303.9918693812442 Z" fill="#299BD1" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(98.0 270.00000000000006)"><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">CONSUMER</text><text x="0" y="-19.76" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">CONSUMER</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #299BD1; stroke-width: 2.4; stroke-linejoin: round;">STAPLES</text><text x="0" y="-5.26" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">STAPLES</text><text x="0" y="15.86" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Essential needs</text><text x="0" y="27.06" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& resilience</text></g></g><g><path d="M 46.501718670638894 197.3810063218874 A 235 235 0 0 1 131.87046571126876 79.88100632188738 L 205.34362224782794 181.00813061875579 A 110 110 0 0 0 165.3837832075331 236.0081306187558 Z" fill="#16A398" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(130.849076967509 168.90093660569465)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #16A398; stroke-width: 2.4; stroke-linejoin: round;">HEALTH CARE</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">HEALTH CARE</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Demographics</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& innovation.</text></g></g><g><path d="M 131.87046571126876 79.88100632188738 A 235 235 0 0 1 269.99999999999994 35.0 L 270.0 160.0 A 110 110 0 0 0 205.34362224782794 181.00813061875579 Z" fill="#7CB342" stroke="#fdf9f0" stroke-width="2.2" stroke-linejoin="round"></path><g transform="translate(216.849076967509 106.4182791972336)"><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342" style="paint-order: stroke; stroke: #7CB342; stroke-width: 2.4; stroke-linejoin: round;">FINANCIALS</text><text x="0" y="-12.51" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="700" font-size="14.5" letter-spacing="0.4" fill="#0a2342">FINANCIALS</text><text x="0" y="8.61" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">Rising rates</text><text x="0" y="19.81" text-anchor="middle" font-family="Inter, ui-sans-serif" font-weight="400" font-size="10.6" fill="#1e2a3a" opacity="0.85">& lending growth.</text></g></g><path d="M 493.49828132936113 197.38100632188736 A 235 235 0 0 1 493.498281329361 342.6189936781126 L 374.6162167924669 303.9918693812442 A 110 110 0 0 0 374.6162167924669 236.00813061875579 Z" fill="none" stroke="#0a2342" stroke-width="3.2" stroke-linejoin="round"></path><circle cx="270" cy="270" r="108.5" fill="#ffffff" stroke="#e7e0d1" stroke-width="1.2"></circle><circle cx="270" cy="270" r="108.5" fill="none" stroke="#000" stroke-opacity="0.04" stroke-width="6"></circle><g transform="translate(270 270)"><text x="0" y="-8" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.5" fill="#0a2342">ROLEX</text><text x="0" y="7" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="14" letter-spacing="0.3" fill="#0a2342">RINGS LTD</text><text x="0" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400" letter-spacing="0.1">Mapped to Industrials</text><text x="0" y="32.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="7.4" fill="#5a6778" font-weight="400">Forged rings / auto parts</text><path d="M 95.00,-8.00 L 95.00,8.00 L 111.00,-0.00 Z" fill="#0a2342"></path></g></svg></div><div class="mt-8 md:mt-10 flex justify-center"><div class="h-[1px] w-[72px] bg-[#d9d0bb]/70"></div></div></div>
+        </div>
+        <div class="chartcap" style="text-align:center;margin-top:2px">NSE: ROLEXRINGS &middot; mapped: Industrials (judgement, nearest fit) &middot; phase: not assigned</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="sec-title" id="sec16"><span class="num">16</span><h2>Peer Comparison</h2></div>
+        <table class="peer">
+          <tr><th scope="col">Company</th><th scope="col">MCap</th><th scope="col">TTM PAT</th><th scope="col">P/E (calc)</th><th scope="col">P/E (Scr.)</th><th scope="col">ROCE</th><th scope="col">D/E</th><th scope="col">3y Sales CAGR</th></tr>
+          <tr style="background:#eef4fc"><td>&#9733; Rolex Rings*</td><td><b>5,417</b></td><td><b>182</b></td><td><b>31.5x</b></td><td><b>n/c</b></td><td><b>15.8–19.2%</b></td><td><b>0.00</b></td><td><b>−1%</b></td></tr>
+          <tr><td>Happy Forgings</td><td>17,490</td><td>351</td><td>49.7x</td><td>49.8x</td><td>18.0%</td><td>0.24</td><td>9%</td></tr>
+          <tr><td>Ramkrishna Forgings</td><td>13,426</td><td>187</td><td>71.0x</td><td>68.8x</td><td>5.6%</td><td>0.64</td><td>10%</td></tr>
+          <tr><td>Sansera Engineering</td><td>27,598</td><td>388</td><td>71.7x</td><td>67.5x</td><td>14.5%</td><td>0.24</td><td>14%</td></tr>
+        </table>
+        <div class="chartcap" style="margin-top:4px">₹ Cr / TTM. <b>Peers: one source, Screener.in consolidated pages fetched 8 Nov 2026</b> (balance sheet = Sep 2026 column). P/E (calc) = price ÷ TTM EPS: Happy ₹1,853 ÷ 37.25; Ramkrishna ₹724 ÷ 10.20; Sansera ₹4,422 ÷ 61.70; Rolex ₹211.90 ÷ 6.73. For Ramkrishna and Sansera my P/E and Screener's differ (Screener likely uses a different earnings basis or minority interest); both kept. Ramkrishna ROCE 5.6% (6% at Mar-26), Sansera 14.5% (15% at Mar-26). Peer D/E: borrowings ÷ equity (Happy 543 / 2,285; Ramkrishna 2,299 / 3,595; Sansera 793 / 3,271).<br><b>*Rolex row is NOT the same source:</b> its Screener page rendered blank, so price, market cap and EPS come from the author's MarketSmith screen (TTM PAT ₹182 Cr is my sum of MarketSmith quarters; 3-year sales CAGR is my arithmetic on MarketSmith annual sales, ₹1,178.95 Cr FY23 to ₹1,143.50 Cr FY26; ROCE is the MarketSmith / univest / stockscans range; D/E nil per MarketSmith). Rolex P/E (Screener) not collected. The peer set was chosen by me as the closest forged and machined auto-industrial names.</div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0"><b>Reading it:</b> Rolex trades at 31.5x, about half the peer average of 64.1x (49.7, 71.0, 71.7; my arithmetic), with no debt (peers 0.24–0.64) and a ROCE in the same band as Happy Forgings (18.0%) and Sansera (14.5%). The discount sits alongside a growth gap: Rolex's three-year sales CAGR is about −1% against 9–14% for the peers. The market is paying peers for growth Rolex has not yet shown on a three-year view; the H1 FY27 acceleration is what would close it. Peers are 3 to 5 times larger by market cap, which can also explain part of the multiple.</div>
+      </div>
+    </div>
+  </div>
+
+<div class="sec">
+    <div class="sec-title" id="sec17"><span class="num">17</span><h2>Risk Analysis</h2></div>
+    <table class="t prose">
+      <tr><th style="text-align:left" scope="col">Category</th><th scope="col">Severity</th><th style="text-align:left" scope="col">Detail</th></tr>
+      <tr><td style="text-align:left">Earnings Quality</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">Mar-26 PBT ₹0.17 Cr on EBIT ₹49.72 Cr (cause unconfirmed); Sep-26 PAT includes a ~₹18 Cr refund (ex-refund PAT ~₹60.5 Cr, level with Jun-26, my arithmetic); P/E 31.5x on trailing earnings that carry both.</td></tr>
+      <tr><td style="text-align:left">Customer Concentration</td><td><span class="badge b-bear">High</span></td><td style="text-align:left">Top-10 customers ~80% of revenue (TradingView post, low confidence); 57 customers in total (Aug 2026 presentation). No named customer found.</td></tr>
+      <tr><td style="text-align:left">Tariffs / Export Policy</td><td><span class="badge b-warn">Medium-High</span></td><td style="text-align:left">Exports are 44–50% of revenue; the Q2 FY27 revenue includes a US-tariff-related refund. Management says no customer was lost; Q1 FY26 exports fell 15–21% on tariff uncertainty. Current US tariff status on Indian auto parts: not found.</td></tr>
+      <tr><td style="text-align:left">Input Cost / Labour</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Ocean freight up nearly 3x; higher fuel and consumables; labour shortage hit Q1 FY27 (normalised from Q2). Steel pass-through terms not found.</td></tr>
+      <tr><td style="text-align:left">Growth Track Record</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Sales were flat to down for four years (FY23 ₹1,178.95 Cr, FY26 ₹1,143.50 Cr); bearing rings were flat in H1 FY27; ROCE fell from 33% to ~19%. H1 FY27 is the first break from that.</td></tr>
+      <tr><td style="text-align:left">Valuation / Price vs Targets</td><td><span class="badge b-warn">Medium-High</span></td><td style="text-align:left">₹211.90 is above every analyst target found except ₹221; all are dated before Q2. Price is +43% from ~₹148 in early August.</td></tr>
+      <tr><td style="text-align:left">Governance / Disclosure</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Promoter +2.0pp unexplained; ratings read from search summaries only; related-party, auditor, pledge and dividend data not found; Ind-Ra date unconfirmed.</td></tr>
+      <tr><td style="text-align:left">Data Quality</td><td><span class="badge b-warn">Medium</span></td><td style="text-align:left">Price ₹211.90 vs ₹203.81; Master Score C / B / 61; EPS Rating 40 vs 41; RS 91 vs 92; Buyer Demand B+ vs A-; group rank 101 vs 90; ROE 12 / 11 / 11.62%; annual EPS vs post-split quarterly EPS; split record date 19 Sep / 4 Oct / 17 Oct 2025; capacity 165,000 vs 105,000–115,000 MTPA; gross margin 59.8% vs 55%; revenue growth 1% vs −1%.</td></tr>
+    </table>
+    <div class="cols" style="margin-top:10px">
+      <div style="flex:1">
+        <div class="notebox"><b>Two-sided check:</b> the business has no debt, steady 20–21% EBIT margins, H1 growth of 23% in revenue and 44% in PAT, new customer plants from Q3 FY27 and a ₹180 Cr buyback behind it. The risks are that part of the latest profit is a refund, that the Mar-26 hole is still explained only by a secondary source, that customers are concentrated, and that the price has run 43% in three months to above the targets that exist.</div>
+      </div>
+      <div style="flex:1">
+        <div class="notebox red"><b>What would change my view:</b> the NSE filing showing the refund or the Mar-26 item differently; Q3 FY27 revenue failing to build on Q2 after the new customer plants start; a daily close below ~₹187 or below the green 2 low (~₹146, section 19); a filing explaining the promoter rise; or a daily close above ₹222 with the gauges still positive (my GREEN trigger).</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570);border-top:3px solid #f0b429;border-bottom:3px solid #f0b429;color:#f0b429;padding:9px 26px;font-weight:900;letter-spacing:2.5px;font-size:14px;text-transform:uppercase">Technical Analysis</div>
+
+<div class="sec">
+    <div class="sec-title" id="sec18"><span class="num">18</span><h2>Technical Ratings &amp; Momentum</h2></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">Relative Strength Rating (MarketSmith India)</div>
+        <div style="font-size:56px;font-weight:900;color:#2e7d32;line-height:1">91 / 92</div>
+        <div style="font-size:11px;color:#5a6475;margin:2px 0 8px">Out of 99 — <b class="pos">Strong</b> (tile 91; table and text 92: conflict)</div>
+        <p style="font-size:11.5px">An RS near 91–92 means the stock has outperformed about 91% of the market over the rating window. EPS Rating is <b>40 (text) vs 41 (table)</b>, labelled POOR, EPS growth rate −24%, earnings stability 74. Buyer Demand is <b>B+ (tile) vs A- (text and Acc/Dis table)</b>. Chart text: +31% from the pivot in 14 weeks. Beta 0.94, alpha 0.46, up / down volume 2. P/E 31 (MarketSmith) vs 31.5 (mine).</p>
+        <div class="notebox blue" style="margin-top:10px"><b>Conflicts kept:</b> the <b>Master Score is shown three ways</b>: letter <b>C</b> in the header, "<b>B</b> is close to being the best" in the paragraph, and the number <b>61</b> in the table. <b>Group rank is 101 (tile) vs 90 of 197 (table and text)</b>, group NSE-Machinery-General Industrial ("poor industry group"). Price strength is strong and earnings strength poor, which is the normal shape after a price run that has outrun trailing EPS. Guru scores: O'Neil 33%, Graham 61%, O'Shaughnessy 40%, Buffett 75%, Lynch 50%.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">William O'Neil Score Breakdown</div>
+<div class="metric-strip" style="border:1px solid #dde2ea;border-top:3px solid #2b4570;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">EPS Rating</div><div style="font-size:18px;font-weight:900;color:#c62828">40 / 41</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">POOR (CONFLICT)</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Price Strength (RS)</div><div style="font-size:18px;font-weight:900;color:#2e7d32">91 / 92</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">STRONG</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Buyer Demand</div><div style="font-size:18px;font-weight:900;color:#2e7d32">B+ / A-</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">CONFLICT</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Group Rank</div><div style="font-size:18px;font-weight:900;color:#e07c00">101 / 90 of 197</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">CONFLICT</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#6b7587;text-transform:uppercase">Master Score</div><div style="font-size:18px;font-weight:900;color:#e07c00">C / B / 61</div><div style="font-size:8.8px;font-weight:700;color:#6b7587">CONFLICT</div></div></div>
+        <div class="microhead" style="margin-top:10px">MotiveWave Trend-Momentum Gauges (8 Nov 2026 screen)</div>
+        <table class="t">
+          <tr><th style="text-align:left" scope="col">Timeframe</th><th scope="col">Trend Momentum (Short / Long)</th><th scope="col">Signals</th></tr>
+          <tr><td style="text-align:left">Daily</td><td class="pos">+4 / +2 (both bullish)</td><td>Buy 1 / Sell 1</td></tr>
+          <tr><td style="text-align:left">1-hour</td><td class="pos">+3 / +1</td><td>Buy 0 / Sell 0</td></tr>
+        </table>
+        <div class="chartcap">From your gauges screen. Daily signals: <b>Sell 22 Oct 2026 09:00, Buy 5 Nov 2026 09:00</b> (the Buy is the latest). Daily support ₹197, resistance ₹222; 1-hour support ₹182, resistance ₹206. Both timeframes agree on direction, and a short-term gauge of +4 on a scale that ends at +5 is already near the top: that is a description of strength, not a forecast of a reversal, but it is why I treat new entries here as chase risk.</div>
+      </div>
+    </div>
+  </div>
+
+<div class="sec">
+    <div class="sec-title" id="sec19"><span class="num">19</span><h2>Elliott Wave Analysis (MotiveWave)</h2></div>
+    <div class="notebox blue" style="margin-top:0;margin-bottom:10px"><b>HIS CALL (the user, in his words): "it a 3 of 3 of 3 - which is supported by sharp up move today".</b> My reading of that: green 2 (low ~₹146) is complete and price is now in a wave 3 of 3 of 3 (nested third waves), with the sharp up day (+5.69% per MarketSmith, spike to ~₹214.5) as his supporting evidence. He sees the move as an extension of a third wave, not a top. <b>Degree of each 3 not specified by user</b>; I have not assigned degrees to the nested threes beyond what the chart labels show. <b>His degree legend:</b> <span style="color:#e67e22;font-weight:900">orange = Intermediate</span> &nbsp;·&nbsp; <span style="color:#2e7d32;font-weight:900">green = Minor</span> &nbsp;·&nbsp; <b>circled roman = Minute</b> &nbsp;·&nbsp; <b>circled numbers = Primary</b>. <b>What the labels show (read off the screenshot; levels approximate):</b> <b>DAILY</b> — a Primary <b>circled 2</b> completes near ₹100 (orange (C), green 5 inside it); then <span style="color:#e67e22;font-weight:900">orange (1)</span> tops near ₹187 (labelled 5) and <span style="color:#e67e22;font-weight:900">orange (2)</span> bottoms near ₹137 (labelled C); then <span style="color:#2e7d32;font-weight:900">green 1</span> near ₹187-190 and <span style="color:#2e7d32;font-weight:900">green 2</span> at a low near ₹146, with small pink circled a / b / c inside it (a ~₹173, b a spike ~₹203, c ~₹147). The latest bar spikes to ~₹214. <b>1-HOUR</b> — orange (2) low ~₹137, green 1 ~₹187, green 2 ~₹146, price now ~₹203 on that chart's label. <b>This is his count, not an independent one; my checks below are arithmetic and do not overrule it.</b></div>
+    <div class="cols">
+      <div class="imgwrap" style="flex:1"><img width="2000" height="1238" loading="lazy" src="ROLEXRINGS_chart.jpg" alt="MotiveWave Elliott Wave charts, 1-hour (left) and daily (right), with trend-momentum gauges for ROLEXRINGS, 8 Nov 2026"></div>
+    </div>
+    <div class="microhead" style="margin-top:12px">Wave Structure Interpretation</div>
+    <table class="t prose">
+      <tr><th style="text-align:left" scope="col">Item</th><th style="text-align:left" scope="col">Reading</th></tr>
+      <tr><td style="width:90px;vertical-align:top"><b>His Count</b></td><td style="text-align:left"><b>A third wave of a third wave of a third wave, now extending after green 2 (~₹146).</b> This is the strongest part of an impulse in theory, and the gauges agree on direction (daily +4 / +2, 1h +3 / +1, daily Buy 5 Nov). The sharp up move is his supporting evidence. <b>Degree of each 3 not specified by user.</b> Honest context from me: a third-of-third is where momentum is meant to be highest, and the gauges are already at +4 / +3, so the question that remains is not "is it strong" but "how to enter after a spike without chasing"; the next section keeps the two-stage logic for that reason. Volume as read is −84.49% vs average (window unclear), so the strength is in price, not yet in the volume reading.</td></tr>
+      <tr><td style="vertical-align:top"><b>My Arithmetic</b></td><td style="text-align:left"><b>Labelled checks, not a re-count; chart levels are approximate reads.</b> (i) Green 2 retraced ~82% of green 1 ((187 − 146) ÷ (187 − 137) = 41 ÷ 50): a deep but valid wave 2, above the wave-1 start. (ii) From the ₹146 low, ₹211.90 is +45.1% and the ~₹214.5 spike +46.9%. (iii) Measured against green 1 (₹50): price at ₹211.90 has gone 1.32x of wave 1 above the wave-2 low; common Fibonacci projections of a wave 3 from ₹146 would be 1.0x = ₹196, 1.618x = ₹226.9 and 2.618x = ₹276.9 (these are standard ratios, <b>not his marks</b>). (iv) Day move: +₹11.40 (+5.69%) from an implied ₹200.50; the spike high ₹214.5 is +7.0% above that base. (v) Distances from ₹211.90: ₹222 daily resistance +4.8%; ₹206 (1h resistance) −2.8%; ₹197 daily support −7.0%; ₹182 (1h support) −14.1%; ₹187 (green 1 top) −11.8%; ₹146 (green 2 low) −31.1%. At the MotiveWave red label of ₹203.81 instead, price is below ₹206 and 8.2% below ₹222 (222 ÷ 203.81).</td></tr>
+      <tr><td style="vertical-align:top"><b>Tool Marks</b></td><td style="text-align:left">Horizontal lines on his chart, with distance from ₹211.90 (my arithmetic):
+        <table class="t" style="margin-top:6px">
+          <tr><th scope="col">Level</th><th scope="col">Price</th><th style="text-align:left" scope="col">Label</th><th scope="col">vs ₹211.90</th></tr>
+          <tr><td>Daily resistance</td><td>₹222</td><td style="text-align:left">horizontal line 'Resistance 222'</td><td><span class="pos">+4.8%</span></td></tr>
+          <tr><td>Spike high</td><td>~₹214.5</td><td style="text-align:left">daily upper wick / blue label 214.50</td><td><span class="pos">+1.2%</span></td></tr>
+          <tr><td>&#9733; MarketSmith price</td><td>₹211.90</td><td style="text-align:left">price (MotiveWave blue 212.16)</td><td>—</td></tr>
+          <tr><td>1h resistance</td><td>₹206</td><td style="text-align:left">horizontal line 'Resistance 206'</td><td><span class="neg">−2.8%</span></td></tr>
+          <tr><td>MotiveWave red label</td><td>₹203.81</td><td style="text-align:left">last-price label, conflicts with ₹211.90</td><td><span class="neg">−3.8%</span></td></tr>
+          <tr><td>Daily support</td><td>₹197</td><td style="text-align:left">horizontal line 'Support 197'</td><td><span class="neg">−7.0%</span></td></tr>
+          <tr><td>Green 1 top</td><td>~₹187</td><td style="text-align:left">Minor 1 / orange (1) top (read from chart)</td><td><span class="neg">−11.8%</span></td></tr>
+          <tr><td>1h support</td><td>₹182</td><td style="text-align:left">horizontal line 'Support 182'</td><td><span class="neg">−14.1%</span></td></tr>
+          <tr><td>Green 2 low</td><td>~₹146</td><td style="text-align:left">Minor 2 low, <b>invalidation</b> (read from chart)</td><td><span class="neg">−31.1%</span></td></tr>
+        </table></td></tr>
+      <tr><td style="vertical-align:top"><b>Synthesis</b></td><td style="text-align:left">His call is a third-of-third, and the sharp up day is the evidence he cites. I do not dispute the count; I add the entry question. <b>Two-stage discipline:</b> the <b>PINK (anticipation) stage is met on both timeframes</b> (his count, gauges +4 / +2 and +3 / +1, daily Buy on 5 Nov). <b>GREEN (confirmation) is not met</b>: I propose a daily close above ₹222 (the daily resistance) with the gauges still positive, noting ₹206 (1h resistance) is already above the MarketSmith price but below the ₹203.81 label, so only the ₹222 close counts. A <b>pullback that holds above ₹197 (daily support) or ₹182 (1h support) and then turns up is, in my view, a better-risk zone than buying the spike</b> (my proposal). <b>Invalidation: a close below the green 2 low ~₹146</b> (a wave-2 low must hold). Standard EW rule, not a view: once a green 4 forms it should not overlap green 1's territory (~₹187); note ₹182 (1h support) sits just below ₹187, so a pullback that reaches it would put that rule in question.</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title" id="sec20"><span class="num">20</span><h2>Recommendation, Support &amp; Resistance</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fff8f0;border-color:#e67e22;flex:1.2">
+        <div class="plab" style="color:#e67e22">&#9733; Recommendation</div>
+        <div class="pval" style="color:#e67e22;font-size:19px">WAIT — PINK-WATCH; GREEN NOT MET; DO NOT CHASE THE SPIKE</div>
+        <p style="font-size:11.4px;margin-top:6px"><b>Bull case:</b> his count is a third-of-third after green 2 (~₹146), supported by a sharp up day; daily gauges +4 / +2 and 1h +3 / +1 with a daily Buy on 5 Nov; RS 91 / 92; H1 FY27 revenue +23% and PAT +44%; no debt, ₹72.9 Cr cash, ₹180 Cr buyback done; new customer plants from Q3 FY27; P/E 31.5x against 50–72x for forging peers. <b>Bear case:</b> a ~₹18 Cr refund inside Q2 (ex-refund PAT ~₹60.5 Cr, flat on Jun-26, my arithmetic); Mar-26 PBT ₹0.17 Cr not confirmed as a one-off; price +43% in three months and above the analyst targets found; volume as read −84.49% vs average; EPS Rating 40 / 41, Master Score C / B / 61; customer concentration; momentum already at +4 / +3, so a late entry has a long way to fall to the nearest invalidation (₹146 is 31.1% below).</p>
+        <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#fce4ec;border-radius:5px"><b style="color:#d81b60">&#9679; PINK (anticipation) — met on both timeframes:</b> his third-of-third count, daily +4 / +2 and 1h +3 / +1, daily Buy 5 Nov 2026, price above the 1h ₹206 line on the MarketSmith price. Watch, do not chase.</div>
+        <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#e8f5e9;border-radius:5px"><b style="color:#2e7d32">&#9679; GREEN (confirmation) — not met (my proposal):</b> a <b>daily close above ₹222</b> (the daily resistance) with the gauges still positive; ₹206 (1h resistance) is the first line, already passed on ₹211.90 but not on ₹203.81, so it does not count alone. <b>Better-risk zone (my proposal):</b> a pullback that holds above ₹197 (daily) or ₹182 (1h support) and then turns up. <b>Invalidation:</b> a close below the green 2 low ~₹146 (approximate, read from the chart); a daily close below ~₹187 would put the green 1 overlap rule in question (standard EW rule).</div>
+        <div style="font-size:11.3px;margin-top:6px"><b>Next catalysts:</b> the NSE Q2 filing and presentation (how the refund and the Mar-26 item were booked); the Q2 call transcript (not found); H2 volumes from the new customer plants; the unread CARE update (30 Oct 2026 lead); any filing on the promoter rise.</div>
+      </div>
+      <div class="panel" style="border-color:#1565c0">
+        <div class="plab" style="color:#1565c0">&#128313; Key Support Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>₹206 (1h)</td><td style="text-align:left">1h resistance, now first support if cleared</td><td><span class="badge b-neut">Near</span></td></tr>
+          <tr><td>₹197</td><td style="text-align:left">Daily support line · better-risk zone</td><td><span class="badge b-neut">Key</span></td></tr>
+          <tr><td>~₹187</td><td style="text-align:left">Green 1 top (overlap line)</td><td><span class="badge b-neut">Watch</span></td></tr>
+          <tr><td>₹182</td><td style="text-align:left">1h support line</td><td><span class="badge b-neut">Next</span></td></tr>
+          <tr><td>~₹146</td><td style="text-align:left">Green 2 low · <b>invalidation</b></td><td><span class="badge b-bear">Critical</span></td></tr>
+        </table>
+      </div>
+      <div class="panel" style="border-color:#2e7d32">
+        <div class="plab" style="color:#2e7d32">&#128312; Key Resistance Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>₹206</td><td style="text-align:left">1h resistance line</td><td><span class="badge b-neut">Near</span></td></tr>
+          <tr><td>~₹214.5</td><td style="text-align:left">Spike high (daily wick)</td><td><span class="badge b-neut">Near</span></td></tr>
+          <tr><td>₹222</td><td style="text-align:left">Daily resistance · <b>GREEN trigger (close above)</b></td><td><span class="badge b-bull">Signal</span></td></tr>
+          <tr><td>₹226.9</td><td style="text-align:left">1.618x of green 1 from ₹146 (my projection, not his)</td><td><span class="badge b-neut">Projection</span></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="notebox" style="margin-top:12px"><b>What I could not find (honest gaps):</b> the <b>cause of the Aug–Nov rally</b> and of today's move; the <b>NSE Q2 filing and presentation</b> themselves (figures here are from secondary summaries and MarketSmith); a <b>Q2 call transcript</b>; the <b>cause of the Mar-26 PBT collapse</b> in a primary document; the <b>reason for the promoter rise to 54.24%</b> and the buyback date and price; <b>dividend history</b>, <b>pledge</b>, <b>auditor</b>, <b>related-party dealings</b> and <b>regulatory actions</b>; <b>customer names</b>, capex, steel pass-through terms, and a China+1 or defence-order detail; <b>capacity</b> (two conflicting figures); the <b>split record date</b> (19 Sep / 4 Oct / 17 Oct 2025) and exact ratio from NSE; the <b>Ind-Ra rating date</b> and any 2026 CARE action; <b>CRISIL, ICRA, Acuite and Brickwork ratings</b>; the <b>post-results analyst targets</b>; and <b>cash flow</b>, working-capital days and other-income share.</div>
+  </div>
+
+
+  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, Screener.in (peer pages, 8 Nov 2026), MarketSmith India (the author's own screens, read 8 Nov 2026), univest.in, multibagg.ai, sahi.com, stockscans.in, Trendlyne, Investing.com, StockAnalysis, AlphaSpread, CARE Ratings, India Ratings (via indiainfoline and whalesbook) and other public web sources as of 8 Nov 2026, and from the author's own MotiveWave Elliott Wave analysis. The Q2 FY27 (Sep-26) figures come from MarketSmith and secondary summaries and have not been confirmed against the exchange filing; the Rs 18 Cr refund and the cause of the Mar-26 profit collapse are as reported by secondary sources or are the research reading and are unconfirmed. Several figures (price, Master Score, EPS Rating, RS, group rank, ROE and ROCE, EPS bases, split record date, capacity, export share, gross margin) conflict between sources and are flagged where used. Credit ratings: CARE A- / Stable (4 Aug 2025) and Ind-Ra IND A / Stable (date unconfirmed) were found from search summaries; CRISIL, ICRA, Acuite and Brickwork were not found (absence in a web search is not proof of no rating). Peer figures are from one source and date; the Rolex row is from MarketSmith and my arithmetic. Price, volume and financial figures should be independently verified. Ashoke Kumar Seth is not a SEBI-registered research analyst. This is not investment advice; always consult a licensed financial adviser before making investment decisions. All figures in ₹ Crore unless stated otherwise.</div>
+  <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice. &nbsp;|&nbsp; <span style="opacity:0.6">Template v6</span></div>
+</div>
+</div>
+<script>
+// In-report "New" tags: mark recently-changed content post-publish, auto-hide after 3 days.
+// Usage: <span class="new-tag" data-new-since="YYYY-MM-DD">New</span> right next to the changed content.
+(function(){
+  var NEW_DAYS = 3;
+  function isRecent(iso){
+    if (!iso) return false;
+    var t = Date.parse(iso + "T00:00:00");
+    if (isNaN(t)) return false;
+    var age = Date.now() - t;
+    return age >= 0 && age < NEW_DAYS * 86400000;
+  }
+  var tags = document.querySelectorAll('.new-tag[data-new-since]');
+  for (var i = 0; i < tags.length; i++){
+    if (!isRecent(tags[i].getAttribute('data-new-since'))) tags[i].style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
